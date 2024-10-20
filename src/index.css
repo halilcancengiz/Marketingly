@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'THICCBOI';
+  src: url('./assets/fonts/TTF/THICCCBOI-Black.ttf') format('truetype');
+  font-weight: 900;
+  /* Black */
+}
+
+@font-face {
+  font-family: 'THICCBOI';
+  src: url('./assets/fonts/TTF/THICCCBOI-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  /* Extrabold */
+}
+
+@font-face {
+  font-family: 'THICCBOI';
+  src: url('./assets/fonts/TTF/THICCBOI-Bold.ttf') format('truetype');
+  font-weight: 700;
+  /* Bold */
+}
+
+@font-face {
+  font-family: 'THICCBOI';
+  src: url('./assets/fonts/TTF/THICCCBOI-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  /* semibold */
+}
+
+@font-face {
+  font-family: 'THICCBOI';
+  src: url('./assets/fonts/TTF/THICCCBOI-Medium.ttf') format('truetype');
+  font-weight: 500;
+  /* medium */
+}
+
+@font-face {
+  font-family: 'THICCBOI';
+  src: url('./assets/fonts/TTF/THICCCBOI-Regular.ttf') format('truetype');
+  font-weight: 400;
+  /* Regular */
+}
+
+@font-face {
+  font-family: 'THICCBOI';
+  src: url('./assets/fonts/TTF/THICCCBOI-Light.ttf') format('truetype');
+  font-weight: 300;
+  /* Light */
+}
+
+@font-face {
+  font-family: 'THICCBOI';
+  src: url('./assets/fonts/TTF/THICCCBOI-ThicccAF.ttf') format('truetype');
+  font-weight: 200;
+  /* extralight */
+}
+
+@font-face {
+  font-family: 'THICCBOI';
+  src: url('./assets/fonts/TTF/THICCCBOI-Thin.ttf') format('truetype');
+  font-weight: 100;
+  /* thin */
+}
+
+html,
+body,
+#root {
+  font-family: 'THICCBOI', sans-serif;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.hover-up {
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up:hover {
+  transform: translateY(-3px);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
