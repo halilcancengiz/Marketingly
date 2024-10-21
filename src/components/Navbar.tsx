@@ -8,7 +8,7 @@ import { useRef, useState, useEffect } from "react";
 const Navbar = () => {
     const mobileNavbarRef = useRef<HTMLElement | null>(null);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-    const [setIsLgScreen] = useState(window.innerWidth >= 1024);
+    const [isLgScreen, setIsLgScreen] = useState(window.innerWidth >= 1024);
 
     const toggleMobileNav = () => {
         setIsMobileNavOpen((prevState) => !prevState);
@@ -27,7 +27,7 @@ const Navbar = () => {
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, []);
+    }, [isLgScreen]);
 
     return (
         <header className="flex items-center bg-neutral-100 gap-5 text-neutral-600 p-6 border-b-[1px] border-neutral-300 relative">
