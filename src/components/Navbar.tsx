@@ -30,7 +30,7 @@ const Navbar = () => {
     }, [isLgScreen]);
 
     return (
-        <header className="flex items-center bg-neutral-100 gap-5 text-neutral-600 p-6 border-b-[1px] border-neutral-300 relative">
+        <header className="flex items-center bg-neutral-100 gap-5 text-neutral-600 py-6 border-b-[1px] border-neutral-300 relative">
             <div className="mx-auto max-w-[1221px] w-full flex items-center text-[18px] px-6 leading-[20px] justify-between font-medium">
                 <Logo />
                 <nav className="md:flex hidden items-center gap-x-8">
