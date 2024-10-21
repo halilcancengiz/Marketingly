@@ -21,6 +21,14 @@ export default {
         'neutral-300': '#EFF0F6',
         'neutral-200': '#F8F9FF',
         'neutral-100': '#FFFFFF',
+      },
+      screens: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '992px', //animasyonlar devreye giriyor
+        'xl': '1280px', //animasyonlar devreye giriyor
+        '2xl': '1536px',
+        '3xl': '1920px',
       }
     },
   },

@@ -81,3 +81,39 @@ body,
   transform: translateY(-3px);
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
+
+.hover-down {
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-down:hover {
+  transform: translateY(3px);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.mobile-navbar-shadow {
+  box-shadow: rgba(74, 58, 255, 0.18) 0px 4px 10px 0px;
+}
+
+.footer-card-shadow {
+  box-shadow: rgba(20, 20, 43, 0.09) 0px 2px 2px 0px;
+}
+
+.homev1-hero-section-shadow {
+  box-shadow: rgba(20, 20, 43, 0.07) 0px 18px 54px 0px;
+}
+
+.homev1-card-shadow {
+  box-shadow: rgba(8, 15, 52, 0.03) 0px 4px 22px 0px;
+}
+
+.card{
+  max-width: 374px!important;
+}
+
+@media screen and (max-width:836px) {
+  .card{
+    max-width: 100%!important;
+    width: 100%;
+  }
+}

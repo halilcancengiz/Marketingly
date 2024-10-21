@@ -1,11 +1,13 @@
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import { AppRoutes } from './routes/AppRoutes'
 
 const Layout = () => {
   return (
-    <div className='gap-2 flex flex-col'>
+    <div className='flex flex-col'>
       <Navbar />
       <AppRoutes />
+      <Footer />
     </div>
   )
 }

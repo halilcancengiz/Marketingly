@@ -19,7 +19,7 @@ const Button = ({
         console.log(variant, size);
     }, [variant, size]);
 
-    const baseClasses = 'flex items-center justify-center rounded-[10px] transition-all duration-300 hover-up';
+    const baseClasses = 'flex items-center justify-center rounded-[10px] transition-all duration-300 hover-up font-bold';
 
     const sizeClasses = {
         small: 'h-12 py-[14px] px-6 text-[16px]',
@@ -29,7 +29,7 @@ const Button = ({
 
     const variantClasses = {
         primary: 'border border-primary bg-primary text-white hover:bg-secondary1',
-        secondary: 'border border-primary bg-transparent text-primary hover:bg-primary hover:text-white hover:border-secondary1',
+        secondary: 'border border-primary bg-transparent text-primary hover:bg-primary hover:text-white hover:border-secondary1 font-medium',
     };
 
     const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
