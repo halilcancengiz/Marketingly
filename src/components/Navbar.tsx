@@ -8,7 +8,7 @@ import { useRef, useState, useEffect } from "react";
 const Navbar = () => {
     const mobileNavbarRef = useRef<HTMLElement | null>(null);
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-    const [isLgScreen, setIsLgScreen] = useState(window.innerWidth >= 1024);
+    const [setIsLgScreen] = useState(window.innerWidth >= 1024);
 
     const toggleMobileNav = () => {
         setIsMobileNavOpen((prevState) => !prevState);

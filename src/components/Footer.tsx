@@ -1,10 +1,6 @@
-import React from 'react'
 import { Logo } from '../assets/svg/Logo'
 
-
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer = () => {
     return (
         <div className="mx-auto max-w-[1173px] w-full flex items-center justify-between text-[18px] leading-[20px] font-medium px-6 text-neutral-600">
 
