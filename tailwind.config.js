@@ -26,10 +26,11 @@ export default {
         'sm': '640px',
         'md': '768px',
         'lg': '992px', //animasyonlar devreye giriyor
+        'hxl': '1135px',
         'xl': '1280px', //animasyonlar devreye giriyor
         '2xl': '1536px',
         '3xl': '1920px',
-      }
+      },
     },
   },
   plugins: [],

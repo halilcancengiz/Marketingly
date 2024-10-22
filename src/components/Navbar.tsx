@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <header className="flex items-center bg-neutral-100 gap-5 text-neutral-600 py-6 border-b-[1px] border-neutral-300 relative">
-            <div className="mx-auto max-w-[1221px] w-full flex items-center text-[18px] px-6 leading-[20px] justify-between font-medium">
+            <div className="mx-auto max-w-[1221px] w-full flex items-center text-[18px] px-6 leading-[20px] justify-between tb-medium">
                 <Logo />
                 <nav className="md:flex hidden items-center gap-x-8">
                     <NavLink
@@ -102,7 +102,7 @@ const Navbar = () => {
                 ref={mobileNavbarRef}
                 className={`mobile-navbar-shadow z-10 lg:hidden absolute left-0 top-full w-full bg-neutral-100 transition-[max-height] duration-300 ease-in-out overflow-hidden border-b-[1px] border-neutral-300 ${isMobileNavOpen ? "max-h-96" : "max-h-0"}`}
             >
-                <div className="w-full h-full flex flex-col p-6 text-[20px] font-medium">
+                <div className="w-full h-full flex flex-col p-6 text-[20px] tb-medium">
                     <NavLink
                         className="flex items-center gap-1 hover:text-primary transition-all duration-300 py-[15px]"
                         to="/"

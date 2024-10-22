@@ -3,66 +3,36 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'THICCBOI';
-  src: url('./assets/fonts/TTF/THICCCBOI-Black.ttf') format('truetype');
-  font-weight: 900;
-  /* Black */
+  font-family: 'ThicccBoi-bold';
+  src: url('/src/assets/fonts/TTF/THICCCBOI-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCBOI';
-  src: url('./assets/fonts/TTF/THICCCBOI-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  /* Extrabold */
-}
-
-@font-face {
-  font-family: 'THICCBOI';
-  src: url('./assets/fonts/TTF/THICCBOI-Bold.ttf') format('truetype');
-  font-weight: 700;
-  /* Bold */
-}
-
-@font-face {
-  font-family: 'THICCBOI';
-  src: url('./assets/fonts/TTF/THICCCBOI-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  /* semibold */
-}
-
-@font-face {
-  font-family: 'THICCBOI';
-  src: url('./assets/fonts/TTF/THICCCBOI-Medium.ttf') format('truetype');
+  font-family: 'ThicccBoi-medium';
+  src: url('/src/assets/fonts/TTF/THICCCBOI-Medium.ttf') format('truetype');
   font-weight: 500;
-  /* medium */
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'THICCBOI';
-  src: url('./assets/fonts/TTF/THICCCBOI-Regular.ttf') format('truetype');
+  font-family: 'ThicccBoi-reqular';
+  src: url('/src/assets/fonts/TTF/THICCCBOI-Regular.ttf') format('truetype');
   font-weight: 400;
-  /* Regular */
+  font-style: normal;
 }
 
-@font-face {
-  font-family: 'THICCBOI';
-  src: url('./assets/fonts/TTF/THICCCBOI-Light.ttf') format('truetype');
-  font-weight: 300;
-  /* Light */
+* {
+  font-family: 'ThicccBoi-reqular' !important;
 }
 
-@font-face {
-  font-family: 'THICCBOI';
-  src: url('./assets/fonts/TTF/THICCCBOI-ThicccAF.ttf') format('truetype');
-  font-weight: 200;
-  /* extralight */
+.tb-medium {
+  font-family: 'ThicccBoi-medium' !important;
 }
 
-@font-face {
-  font-family: 'THICCBOI';
-  src: url('./assets/fonts/TTF/THICCCBOI-Thin.ttf') format('truetype');
-  font-weight: 100;
-  /* thin */
+.tb-bold {
+  font-family: 'ThicccBoi-bold' !important;
 }
 
 html,
@@ -79,6 +49,15 @@ body,
 
 .hover-up:hover {
   transform: translateY(-3px);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up-lg {
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up-lg:hover {
+  transform: translateY(-10px);
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
@@ -107,13 +86,17 @@ body,
   box-shadow: rgba(8, 15, 52, 0.03) 0px 4px 22px 0px;
 }
 
-.card{
-  max-width: 374px!important;
+.homev1-services-shadow {
+  box-shadow: rgba(8, 15, 52, 0.07) 0px 4px 22px 0px;
+}
+
+.card {
+  max-width: 374px !important;
 }
 
 @media screen and (max-width:836px) {
-  .card{
-    max-width: 100%!important;
+  .card {
+    max-width: 100% !important;
     width: 100%;
   }
 }

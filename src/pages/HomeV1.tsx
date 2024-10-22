@@ -4,6 +4,8 @@ import chart from "../assets/images/chart.png"
 import analytics from "../assets/images/analytics.png"
 import search from "../assets/images/search.png"
 import system from "../assets/images/system.png"
+import services from "../assets/images/homev1-services-image.png"
+import check from "../assets/images/check.png"
 
 
 export const HomeV1 = () => {
@@ -12,8 +14,8 @@ export const HomeV1 = () => {
             <section className="flex items-center justify-center h-full relative">
                 <div className="max-w-[1221px] h-full w-full mx-auto lg:py-[116px] py-[60px] px-6 grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:gap-8 gap-20 relative ">
                     <div className="col-span-1 lg:max-w-auto max-w-[460px] lg:mx-0 mx-auto lg:text-start text-center flex flex-col lg:mr-10">
-                        <div className="text-primary uppercase mb-5 font-medium text-base tracking-[1.6px]">Marketing Agentur</div>
-                        <div className="lg:text-[54px] text-[45px] lg:leading-[61px] leading-[50.85px] font-bold mb-5 text-neutral-800">Maximaler Erfolg mit Google!</div>
+                        <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Marketing Agentur</div>
+                        <div className="lg:text-[54px] text-[45px] lg:leading-[61px] leading-[50.85px] tb-bold mb-5 text-neutral-800">Maximaler Erfolg mit Google!</div>
                         <div className="leading-[30px] text-neutral-600 mb-12 text-[18px]">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.</div>
                         <div className="flex items-center gap-7">
                             <Button className="w-full" variant="primary" size="default">Kontakt</Button>
@@ -70,10 +72,11 @@ export const HomeV1 = () => {
                     </div>
                 </div>
             </section>
-            <section className="max-w-[1221px] px-6 w-full mx-auto lg:py-[176px] md:py-[140px] py-[113px] flex flex-col">
-                <div className="text-primary uppercase mb-5 font-medium text-base lg:text-start text-center tracking-[1.6px]">Unsere Dienstleistungen</div>
+
+            <section className="max-w-[1221px] w-full mx-auto px-6 lg:py-[176px] md:py-[140px] py-[113px] flex flex-col">
+                <div className="text-primary uppercase mb-5 tb-medium text-base lg:text-start text-center tracking-[1.6px]">Unsere Dienstleistungen</div>
                 <div className="grid lg:grid-cols-2 grid-cols-1 items-end mb-[60px] lg:text-start text-center">
-                    <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] font-bold text-neutral-800 lg:mb-0 mb-7">Mit uns an deiner Seite maximierst du deine Sichtbarkeit!</div>
+                    <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 lg:mb-0 mb-7">Mit uns an deiner Seite maximierst du deine Sichtbarkeit!</div>
                     <div className="col-span-1">
                         <div className="flex items-center gap-7">
                             <Button className="w-full whitespace-nowrap" variant="primary" size="default">Kontakt</Button>
@@ -86,16 +89,16 @@ export const HomeV1 = () => {
                     <div className="card rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="" />
-                            <div className="md:text-[24px] text-[22px] font-bold">Google Ads</div>
-                            <div className="text-neutral-600 text-[18px] font-medium leading-[30px]">Bezahlte Google Marketingkampagnen – für maximale Reichweite</div>
+                            <div className="md:text-[24px] text-[22px] tb-bold">Google Ads</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google Marketingkampagnen – für maximale Reichweite</div>
                         </div>
                         <div className="w-[109px] bg-secondary2 h-[2px]"></div>
                     </div>
                     <div className="card rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img className="object-contain size-[86px] rounded-[10px]" src={search} alt="" />
-                            <div className="md:text-[24px] text-[22px] font-bold">Seo</div>
-                            <div className="text-neutral-600 text-[18px] font-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen</div>
+                            <div className="md:text-[24px] text-[22px] tb-bold">Seo</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen</div>
                         </div>
 
                         <div className="w-[109px] bg-primary h-[2px]"></div>
@@ -103,12 +106,48 @@ export const HomeV1 = () => {
                     <div className="card rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img className="object-contain size-[86px] rounded-[10px]" src={system} alt="" />
-                            <div className="md:text-[24px] text-[22px] font-bold">Unternehmenslistung</div>
-                            <div className="text-neutral-600 text-[18px] font-medium leading-[30px]">Sichbarkeit optimieren durch Google-Unternehmenslistung</div>
+                            <div className="md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichbarkeit optimieren durch Google-Unternehmenslistung</div>
                         </div>
 
                         <div className="w-[109px] bg-secondary2 h-[2px]"></div>
                     </div>
+                </div>
+            </section>
+
+            <section className="max-w-[1221px] w-full mx-auto px-6 lg:py-[176px] md:py-[140px] py-[113px]">
+                <div className="flex lg:flex-row flex-col w-full items-center mb-[86px]  ">
+                    <div className="lg:max-w-[574px] max-w-[660px] lg:min-w-[480px] hxl:mr-20 lg:mr-10 mr-0 w-full lg:order-1 order-2 transition-all duration-300 relative">
+                        <img className="homev1-services-shadow border-[1px] rounded-[24px] border-neutral-300 z-[10]" src={services} alt="" />
+                        <div className="absolute bg-[#F9F5E5] max-w-[248px] w-full aspect-square rounded-full lg:-left-20 lg:right-auto -right-20 lg:-top-20 -top-16 z-[-1]"></div>
+                    </div>
+                    <div className="flex flex-col lg:order-2 order-1 w-full mx-auto lg:max-w-auto max-w-[660px] lg:mb-0 mb-20">
+                        <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Performance Marketing</div>
+
+                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Wieso Google Ads?</div>
+
+                        <div className="leading-[30px] text-neutral-600 mb-10 text-[18px] tb-medium">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.</div>
+
+                        <div className="flex flex-col gap-[15px] lg:mb-[60px] md:mb-[50px] mb-10">
+                            <div className="flex items-center gap-[13px]">
+                                <img className="size-6 rounded-full" src={check} alt="" />
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-bold">Optimale Reichweite</div>
+                            </div>
+                            <div className="flex items-center gap-[13px]">
+                                <img className="size-6 rounded-full" src={check} alt="" />
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-bold">Messbare Erfolge</div>
+                            </div>
+                            <div className="flex items-center gap-[13px]">
+                                <img className="size-6 rounded-full" src={check} alt="" />
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-bold">Schnelle Ergebnisse</div>
+                            </div>
+                        </div>
+                        <div>
+                            <Button className="">Details</Button>
+                        </div>
+                    </div>
+
+
                 </div>
             </section>
         </main>
