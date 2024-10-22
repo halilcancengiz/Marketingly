@@ -126,7 +126,7 @@ export const HomeV1 = () => {
 
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Wieso Google Ads?</div>
 
-                        <div className="leading-[30px] text-neutral-600 mb-10 text-[18px] tb-medium">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.</div>
+                        <div className="leading-[30px] text-neutral-600 mb-10 text-[18px] tb-medium">Mit bezahlter Werbung auf Google  erscheint Ihre digitale Anzeige genau in dem Moment, in dem jemand nach Produkten, Dienstleistungen oder Karrieremöglichkeiten wie Ihren sucht.</div>
 
                         <div className="flex flex-col gap-[15px] lg:mb-[60px] md:mb-[50px] mb-10">
                             <div className="flex items-center gap-[13px]">
