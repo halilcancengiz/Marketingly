@@ -6,6 +6,7 @@ import search from "../assets/images/search.png"
 import system from "../assets/images/system.png"
 import services from "../assets/images/homev1-services-image.png"
 import check from "../assets/images/check.png"
+import womanImage from "../assets/images/card-woman-image.jpeg"
 
 
 export const HomeV1 = () => {
@@ -116,7 +117,7 @@ export const HomeV1 = () => {
             </section>
 
             <section className="max-w-[1221px] w-full mx-auto px-6 lg:py-[176px] md:py-[140px] py-[113px]">
-                <div className="flex lg:flex-row flex-col w-full items-center mb-[86px]  ">
+                <div className="flex lg:flex-row flex-col w-full items-center mb-[86px]">
                     <div className="lg:max-w-[574px] max-w-[660px] lg:min-w-[480px] hxl:mr-20 lg:mr-10 mr-0 w-full lg:order-1 order-2 transition-all duration-300 relative">
                         <img className="homev1-services-shadow border-[1px] rounded-[24px] border-neutral-300 z-[10]" src={services} alt="" />
                         <div className="absolute bg-[#F9F5E5] max-w-[248px] w-full aspect-square rounded-full lg:-left-20 lg:right-auto -right-20 lg:-top-20 -top-16 z-[-1]"></div>
@@ -148,8 +149,61 @@ export const HomeV1 = () => {
                             <Button className="">Details</Button>
                         </div>
                     </div>
+                </div>
 
+                <div className="flex lg:flex-row flex-col w-full items-center gap-y-[80px]">
 
+                    <div className="flex flex-col order-2 w-full mx-auto lg:max-w-auto max-w-[660px] lg:mb-0 mb-20">
+                        <img className="homev1-services-shadow border-[1px] rounded-[24px] border-neutral-300 z-[10]" src={womanImage} alt="" />
+                    </div>
+
+                    <div className="lg:max-w-[574px] max-w-[660px] lg:min-w-[480px] pr-10 w-full order-1 transition-all duration-300 relative">
+                        <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Nachhaltige Reichweite</div>
+
+                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Warum ist eine SEO Optimierung wichtig?</div>
+
+                        <div className="leading-[30px] text-neutral-600 mb-10 text-[18px] tb-medium">
+                            Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen.
+                            Somit ermöglicht es SEO, die Sichtbarkeit Ihrer Webseite nachhaltig zu steigern – ganz ohne zusätzliche Werbeausgaben.
+                        </div>
+
+                        <div>
+                            <Button className="">Details</Button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section className="bg-primary xl:py-[220px] lg:py-[176px] md:py-[140px] py-[113px] overflow-hidden flex items-center justify-center relative">
+                <div className="max-w-[1221px] w-full mx-auto px-6 flex flex-col gap-5 z-[5]">
+                    <div className="max-w-[527px] w-full md:text-[38px] md:leading-[50px] text-[32px] leading-[42px] tb-bold text-white">
+                        Lassen Sie uns gemeinsam starten!
+                    </div>
+                    <div className="max-w-[527px] w-full leading-[30px] text-neutral-100 mb-5 text-[18px] tb-medium">
+                        Mit bezahlter Werbung auf Google erscheint Ihre digitale Anzeige genau in dem Moment, in dem jemand nach Produkten, Dienstleistungen oder Karrieremöglichkeiten wie Ihren sucht.
+                    </div>
+                    <div className="max-w-[527px] w-full flex items-center gap-7">
+                        <Button className="w-full whitespace-nowrap !text-primary tb-bold bg-white hover:bg-secondary3 hover:!text-white" variant="primary" size="default">Kontakt</Button>
+                        <Button className="w-full whitespace-nowrap border-white text-white hover:bg-secondary3 font-medium" variant="secondary" size="default">Dienstleistungen</Button>
+                    </div>
+                </div>
+                <div className="absolute right-0 w-full h-full z-[4]">
+                    <div className="relative w-full h-full">
+
+                        <div className="absolute lg:right-0 -right-10 lg:top-0 -top-10 bg-secondary2 w-[26.55%] max-w-[348px] z-[2] aspect-square rounded-full"></div>
+                        
+                        <div className="absolute right-0 bottom-0 bg-secondary1 z-[1] w-[21.91%] aspect-[100/95.3]"></div>
+
+                        <div style={{clipPath:"polygon(100% 0, 0% 100%, 100% 100%)"}} className="absolute md:visible invisible right-0 -top-5 bg-secondary1 z-[1] w-[26%] max-w-[397px] xl:mr-[27%] lg:mr-[28%] md:mr-[25%] mr-[20%] aspect-square"></div>
+                        
+                        <div className="absolute right-0 bottom-0 bg-transparent z-[3] w-[18%] aspect-square mr-[18%]">
+                            <div className="relative w-full h-full">
+                                <div className="absolute bottom-0 left-0 w-full h-1/2 bg-secondary3 rounded-b-full"></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </section>
         </div>
