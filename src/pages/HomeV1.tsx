@@ -10,7 +10,7 @@ import check from "../assets/images/check.png"
 
 export const HomeV1 = () => {
     return (
-        <main className="flex flex-col">
+        <div className="flex flex-col">
             <section className="flex items-center justify-center h-full relative">
                 <div className="max-w-[1221px] h-full w-full mx-auto lg:py-[116px] py-[60px] px-6 grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:gap-8 gap-20 relative ">
                     <div className="col-span-1 lg:max-w-auto max-w-[460px] lg:mx-0 mx-auto lg:text-start text-center flex flex-col lg:mr-10">
@@ -126,7 +126,9 @@ export const HomeV1 = () => {
 
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Wieso Google Ads?</div>
 
-                        <div className="leading-[30px] text-neutral-600 mb-10 text-[18px] tb-medium">Mit bezahlter Werbung auf Google  erscheint Ihre digitale Anzeige genau in dem Moment, in dem jemand nach Produkten, Dienstleistungen oder Karrieremöglichkeiten wie Ihren sucht.</div>
+                        <div className="leading-[30px] text-neutral-600 mb-10 text-[18px] tb-medium">
+                            Mit bezahlter Werbung auf Google erscheint Ihre digitale Anzeige genau in dem Moment, in dem jemand nach Produkten, Dienstleistungen oder Karrieremöglichkeiten wie Ihren sucht.
+                        </div>
 
                         <div className="flex flex-col gap-[15px] lg:mb-[60px] md:mb-[50px] mb-10">
                             <div className="flex items-center gap-[13px]">
@@ -150,8 +152,8 @@ export const HomeV1 = () => {
 
                 </div>
             </section>
-        </main>
-
+        </div>
     )
 }
 
+export default HomeV1
