@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const Test = (props: Props) => {
+const Test = () => {
     return (
         <section
             className="section bg-primary-1 position-relative"

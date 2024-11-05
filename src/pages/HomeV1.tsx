@@ -13,7 +13,6 @@ import { useRef } from "react";
 import blueCardImage from "../assets/images/blue.png"
 import yellowCardImage from "../assets/images/yellow.png"
 import redCardImage from "../assets/images/red.png"
-import emailImage from "../assets/images/email.png"
 
 export const HomeV1 = () => {
 
