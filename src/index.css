@@ -41,6 +41,8 @@ body,
   font-family: 'THICCBOI', sans-serif;
   height: 100% !important;
   width: 100% !important;
+  scroll-behavior: smooth;
+
 }
 
 .hover-up {

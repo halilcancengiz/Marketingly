@@ -9,16 +9,23 @@ import check from "../assets/images/check.png";
 import womanImage from "../assets/images/card-woman-image.jpeg";
 import * as motion from "framer-motion/client";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import blueCardImage from "../assets/images/blue.png"
 import yellowCardImage from "../assets/images/yellow.png"
 import redCardImage from "../assets/images/red.png"
+import { NavLink, useNavigate } from "react-router-dom";
+
 
 export const HomeV1 = () => {
-
+    const navigate = useNavigate()
     // firstSectionAnimations
     const fSectionParagraphArea = useRef<HTMLDivElement | null>(null)
     const isInViewFSectionParagraphArea = useInView(fSectionParagraphArea, { margin: "300px", once: true });
+
+    useEffect(() => {
+        // Sayfa yüklendiğinde kaydırmayı en üste al
+        window.scrollTo(0, 0);
+    }, []);
 
     const container = {
         hidden: { opacity: 1, scale: 0 },
@@ -64,8 +71,13 @@ export const HomeV1 = () => {
                         <motion.div variants={item} className="lg:text-[54px] text-[45px] lg:leading-[61px] leading-[50.85px] tb-bold mb-5 text-neutral-800">Maximaler Erfolg mit Google!</motion.div>
                         <motion.div variants={item} className="leading-[30px] text-neutral-600 mb-12 text-[18px] tb-medium">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.</motion.div>
                         <motion.div variants={item} className="flex items-center gap-7">
-                            <Button className="w-full" variant="primary" size="default">Kontakt</Button>
-                            <Button className="w-full" variant="secondary" size="default">Mehr Infos</Button>
+                            <NavLink to="contact">
+                                <Button className="w-full" variant="primary" size="default">Kontakt</Button>
+                            </NavLink>
+                            <a href="#unsereDienstleistungen">
+                                <Button className="w-full" variant="secondary" size="default">Mehr Infos</Button>
+                            </a>
+
                         </motion.div>
                     </motion.div>
                     {/* lg images */}
@@ -118,8 +130,8 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] py-[113px]  flex flex-col bg-white">
-                <div className="flex flex-col max-w-[1173px] w-full mx-auto">
+            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px]  flex flex-col bg-white">
+                <div id="unsereDienstleistungen" className="flex flex-col max-w-[1173px] w-full mx-auto">
                     <div className="text-primary uppercase mb-5 tb-medium text-base lg:text-start text-center tracking-[1.6px]">Unsere Dienstleistungen</div>
                     <div className="grid lg:grid-cols-2 grid-cols-1 items-end mb-[60px] lg:text-start text-center">
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 lg:mb-0 mb-7">Mit uns an deiner Seite maximierst du deine Sichtbarkeit!</div>
@@ -161,7 +173,7 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] py-[113px]  bg-white">
+            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px]  bg-white">
                 <div className="flex flex-col max-w-[1173px] w-full mx-auto ">
                     <div className="flex lg:flex-row flex-col w-full items-center mb-[86px]">
                         <motion.div
@@ -243,7 +255,7 @@ export const HomeV1 = () => {
 
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] py-[113px] bg-primary  overflow-hidden flex items-center justify-center relative">
+            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] bg-primary  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex flex-col gap-5 z-[5]">
                     <div className="max-w-[527px] w-full md:text-[38px] md:leading-[50px] text-[32px] leading-[42px] tb-bold text-white">
                         Lassen Sie uns gemeinsam starten!
@@ -275,7 +287,7 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] py-[113px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
                     <div className="lg:mr-10 flex lg:max-w-[587px] max-w-[660px] lg:min-w-[488px] w-full relative lg:order-1 order-2 lg:my-0 my-20">
                         <img src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf97fa40916d9d2a267_image-1-about-v2-marketing-template-p-800.jpeg" className="block max-w-[71%] lg:ml-auto w-full rounded-[24px] homev1-card-shadow" />
@@ -304,7 +316,7 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] py-[113px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
 
                     <div className="lg:max-w-[436px] max-w-[660px] lg:mb-0 mb-20 lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10">
@@ -350,7 +362,7 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] py-[113px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex flex-col items-center ">
                     <div className="flex flex-col items-center justify-center max-w-[452px] w-full mb-[60px]">
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Unser Prozess</div>
@@ -394,7 +406,7 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] px-6 lg:py-[176px] md:py-[140px] py-[113px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:py-[220px] px-6 lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-center  justify-between">
                     <div className="max-w-[487px] lg:mb-0 mb-20 mt-66px lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10 ">
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Kontakt</div>
@@ -430,23 +442,20 @@ export const HomeV1 = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="mt-10 lg:flex hidden">
-                            <Button className="">Abenden</Button>
-                        </div>
                     </div>
                     <div className="lg:max-w-[600px] lg:min-w-[542px] border border-gray-200/60 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] section-6-shadow rounded-[24px] bg-white z-[2]">
-                        <form className="grid grid-cols-2 gap-[30px]">
+                        <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px]">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">Vorname</div>
-                                <input placeholder="Max" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input required placeholder="Max" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">Name</div>
-                                <input placeholder="Mustermann" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input required placeholder="Mustermann" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">E-Mail</div>
-                                <input placeholder="name@domain.de" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input required placeholder="name@domain.de" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">Telefonnummer</div>
@@ -475,8 +484,11 @@ export const HomeV1 = () => {
                             </div>
 
                             <div className="col-span-2 flex items-start gap-3">
-                                <input className="size-6 border-none outline-none ring-0" type="checkbox" />
+                                <input required className="size-6 border-none outline-none ring-0" type="checkbox" />
                                 <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap">Mit dem Absenden des Formulars akzeptieren Sie die <span className="text-primary cursor-pointer">Datenschutzerkärung</span></div>
+                            </div>
+                            <div className="lg:flex hidden">
+                                <Button type="submit" className="">Abenden</Button>
                             </div>
                         </form>
                     </div>
@@ -484,14 +496,14 @@ export const HomeV1 = () => {
                 <div className="absolute lg:visible invisible right-0 h-full bg-primary 2xl:w-[45%] lg:w-[32%] z-[1]">
                     <div className="w-full h-full relative">
                         <div className="absolute lg:w-[65%] w-full aspect-square rounded-full right-0 max-w-[318px] bg-secondary2"></div>
-                        <div style={{clipPath:"polygon(100% 0, 0 100%, 100% 100%)"}} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></div>
+                        <div style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></div>
                         <div className="absolute lg:w-[57%] w-full aspect-square right-[87%] bottom-0 max-w-[290px] bg-secondary1"></div>
                     </div>
                 </div>
                 <div className="absolute lg:invisible visible bottom-0 bg-primary 2xl:w-[45%] lg:w-[32%] w-full lg:h-full h-1/2 z-[1]">
                     <div className="w-full h-full relative">
                         <div className="absolute md:w-[65%] w-[40%] aspect-square rounded-full left-0 bottom-0 max-w-[318px]  bg-secondary2"></div>
-                        <div style={{clipPath:"polygon(100% 0, 0 100%, 100% 100%)"}} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></div>
+                        <div style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></div>
                         <div className="absolute lg:w-[57%] md: w-full aspect-square left-0 top-0 max-w-[290px] bg-secondary1"></div>
                     </div>
                 </div>

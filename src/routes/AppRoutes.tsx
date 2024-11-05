@@ -4,6 +4,9 @@ import { HomeV2 } from "../pages/HomeV2";
 import { StyleGuidePage } from "../pages/StyleGuidePage";
 import Test from "../pages/Test";
 import NotFound from "../pages/NotFound";
+import Thankyou from "../pages/Thankyou";
+import TermAndConditions from "../pages/TermAndConditions";
+import Contact from "../pages/Contact";
 
 export const AppRoutes = () => {
     return (
@@ -12,7 +15,10 @@ export const AppRoutes = () => {
             <Route path="/homev2" element={<HomeV2 />} />
             <Route path="/styleguide" element={<StyleGuidePage />} />
             <Route path="/test" element={<Test />} />
+            <Route path="/thank-you-page" element={<Thankyou />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/datenschutz" element={<TermAndConditions />} />
+            <Route path="/contact" element={<Contact />} />
         </Routes>
     );
 };

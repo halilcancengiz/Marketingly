@@ -7,12 +7,18 @@ import youtubeIcon from "../assets/images/youtube.png"
 import whatsappIcon from "../assets/images/whatsapp.png"
 import { NavLink } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 
 const Footer = () => {
     const footerRef = useRef<HTMLDivElement | null>(null)
     const isInViewFooterRef = useInView(footerRef, { once: true });
+
+    useEffect(() => {
+        // Sayfa yüklendiğinde kaydırmayı en üste al
+        window.scrollTo(0, 0);
+    }, []);
+    
     return (
         <motion.div
             ref={footerRef}
@@ -54,7 +60,7 @@ const Footer = () => {
             <div className='mt-20 border-b w-full md:flex-row flex-col gap-y-6 flex items-center justify-between border-neutral-400 pb-2'>
                 <div className='flex items-center gap-7'>
                     <NavLink to="/" className='hover:text-primary transition-all duration-300'>Impressum</NavLink>
-                    <NavLink to="/" className='hover:text-primary transition-all duration-300'>Datenschutz</NavLink>
+                    <NavLink to="/datenschutz" className='hover:text-primary transition-all duration-300'>Datenschutz</NavLink>
                 </div>
                 <div className='flex gap-4 md:max-w-[311px] w-full xs:min-w-[311px] items-center justify-center md:pb-0 pb-4'>
                     <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
