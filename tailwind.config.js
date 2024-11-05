@@ -23,12 +23,13 @@ export default {
         'neutral-100': '#FFFFFF',
       },
       screens: {
+        'xs': '501px', //488 olacak
         'sm': '640px',
         'md': '768px',
         'lg': '992px', //animasyonlar devreye giriyor
         'hxl': '1135px',
         'xl': '1280px', //animasyonlar devreye giriyor
-        '2xl': '1536px',
+        '2xl': '1537px',
         '3xl': '1920px',
       },
     },

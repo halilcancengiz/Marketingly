@@ -31,17 +31,17 @@ const Navbar = () => {
 
     return (
         <header className="flex items-center bg-neutral-100 gap-5 text-neutral-600 py-6 border-b-[1px] border-neutral-300 relative">
-            <div className="mx-auto max-w-[1221px] w-full flex items-center text-[18px] px-6 leading-[20px] justify-between tb-medium">
+            <div className="mx-auto max-w-[1221px] w-full flex items-center text-[18px] px-6 leading-[20px] justify-between">
                 <Logo />
                 <nav className="md:flex hidden items-center gap-x-8">
                     <NavLink
-                        className="flex items-center gap-1 hover:text-primary transition-all duration-300"
+                        className="flex items-center gap-1 hover:text-primary transition-all duration-300 tb-medium"
                         to="/"
                     >
                         Start
                     </NavLink>
                     <NavLink
-                        className="hover:text-primary transition-all duration-300"
+                        className="hover:text-primary transition-all duration-300 tb-medium"
                         to="/homev2"
                     >
                         Dienstleistungen
@@ -50,7 +50,7 @@ const Navbar = () => {
                         className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative"
                         to="/homev2"
                     >
-                        <div>Pläne</div>
+                        <div className="tb-medium">Pläne</div>
                         <IoIosArrowDown
                             className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300"
                             size={16}
