@@ -6,12 +6,15 @@ import intagramIcon from "../assets/images/instagram.png"
 import linkedinIcon from "../assets/images/linkedin.png"
 import youtubeIcon from "../assets/images/youtube.png"
 import whatsappIcon from "../assets/images/whatsapp.png"
-import { IoIosArrowDown } from "../assets/icons/icons"
 import Accordion from "../components/Accordion"
+import { useEffect } from "react"
 
 
 const Contact = () => {
-
+    useEffect(() => {
+        // Sayfa yüklendiğinde kaydırmayı en üste al
+        window.scrollTo(0, 0);
+    }, []);
     const navigate = useNavigate()
 
     return (

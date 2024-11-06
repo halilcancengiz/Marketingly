@@ -7,6 +7,7 @@ import NotFound from "../pages/NotFound";
 import Thankyou from "../pages/Thankyou";
 import TermAndConditions from "../pages/TermAndConditions";
 import Contact from "../pages/Contact";
+import ProductDetail from "../pages/ProductDetail";
 
 export const AppRoutes = () => {
     return (
@@ -19,6 +20,7 @@ export const AppRoutes = () => {
             <Route path="*" element={<NotFound />} />
             <Route path="/datenschutz" element={<TermAndConditions />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/product-detail" element={<ProductDetail />} />
         </Routes>
     );
 };
