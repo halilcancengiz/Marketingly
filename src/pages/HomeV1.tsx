@@ -22,10 +22,10 @@ export const HomeV1 = () => {
     const fSectionParagraphArea = useRef<HTMLDivElement | null>(null)
     const isInViewFSectionParagraphArea = useInView(fSectionParagraphArea, { margin: "300px", once: true });
 
-    // useEffect(() => {
-    //     // Sayfa yüklendiğinde kaydırmayı en üste al
-    //     window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+        // Sayfa yüklendiğinde kaydırmayı en üste al
+        window.scrollTo(0, 0);
+    }, []);
 
     const container = {
         hidden: { opacity: 1, scale: 0 },
