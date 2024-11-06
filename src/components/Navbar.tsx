@@ -81,7 +81,7 @@ const Navbar = () => {
                 </nav>
 
                 <div className="flex items-center gap-x-8">
-                    <NavLink className="md:flex hidden" to="/">
+                    <NavLink className="md:flex hidden" to="/contact">
                         <Button variant="primary" size="small">
                             Kontakt
                         </Button>

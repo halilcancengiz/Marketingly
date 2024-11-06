@@ -54,6 +54,15 @@ body,
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
+.hover-up-md {
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.hover-up-md:hover {
+  transform: translateY(-5px);
+  transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
 .hover-up-lg {
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
