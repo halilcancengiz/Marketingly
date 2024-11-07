@@ -14,6 +14,7 @@ import blueCardImage from "../assets/images/blue.png"
 import yellowCardImage from "../assets/images/yellow.png"
 import redCardImage from "../assets/images/red.png"
 import { NavLink, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet"
 
 
 export const HomeV1 = () => {
@@ -60,6 +61,9 @@ export const HomeV1 = () => {
     const isInViewHomeV1SecondParagraph = useInView(homeV1SecondParagraph, { margin: "-0px", once: true });
     return (
         <main className="flex flex-col overflow-x-hidden">
+            <Helmet>
+
+            </Helmet>
             <section className="3xl:py-[145px] lg:py-[116px] py-[60px] flex items-center px-6 justify-center h-full relative ">
                 <div className="max-w-[1173px] h-full w-full mx-auto  grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:gap-8 gap-20 relative ">
                     <motion.div
@@ -137,8 +141,12 @@ export const HomeV1 = () => {
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 lg:mb-0 mb-7">Mit uns an deiner Seite maximierst du deine Sichtbarkeit!</div>
                         <div className="col-span-1">
                             <div className="flex items-center gap-7">
-                                <Button className="w-full whitespace-nowrap" variant="primary" size="default">Kontakt</Button>
-                                <Button className="w-full whitespace-nowrap" variant="secondary" size="default">Mehr Details</Button>
+                                <NavLink to="/contact" className="w-full">
+                                    <Button className="w-full whitespace-nowrap" variant="primary" size="default">Kontakt</Button>
+                                </NavLink>
+                                <NavLink to="/services" className="w-full">
+                                    <Button className="w-full whitespace-nowrap" variant="secondary" size="default">Mehr Details</Button>
+                                </NavLink>
                             </div>
                         </div>
                     </div>
@@ -213,9 +221,9 @@ export const HomeV1 = () => {
                                     <div className="leading-[20px] text-neutral-800 text-[18px] tb-bold">Schnelle Ergebnisse</div>
                                 </div>
                             </div>
-                            <div>
+                            <NavLink to="/ads-plan">
                                 <Button className="">Details</Button>
-                            </div>
+                            </NavLink>
                         </motion.div>
                     </div>
 
@@ -245,9 +253,9 @@ export const HomeV1 = () => {
                                 Somit ermöglicht es SEO, die Sichtbarkeit Ihrer Webseite nachhaltig zu steigern – ganz ohne zusätzliche Werbeausgaben.
                             </div>
 
-                            <div>
+                            <NavLink to="/seo-plan">
                                 <Button className="">Details</Button>
-                            </div>
+                            </NavLink>
                         </motion.div>
 
                     </div>
@@ -267,7 +275,9 @@ export const HomeV1 = () => {
                         <NavLink className="w-full" to="/contact">
                             <Button className="w-full whitespace-nowrap !text-primary tb-bold bg-white hover:bg-secondary3 hover:!text-white" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
-                        <Button className="w-full whitespace-nowrap border-white text-white hover:bg-secondary3 font-medium" variant="secondary" size="default">Dienstleistungen</Button>
+                        <NavLink className="w-full" to="services">
+                            <Button className="w-full whitespace-nowrap border-white text-white hover:bg-secondary3 font-medium" variant="secondary" size="default">Dienstleistungen</Button>
+                        </NavLink>
                     </div>
                 </div>
                 <div className="absolute right-0 w-full h-full z-[4]">
@@ -312,7 +322,9 @@ export const HomeV1 = () => {
                             </div>
                         </div>
                         <div>
-                            <Button className="">Dienstleistungen</Button>
+                            <NavLink to="/services">
+                                <Button className="">Dienstleistungen</Button>
+                            </NavLink>
                         </div>
                     </div>
                 </div>
@@ -376,7 +388,7 @@ export const HomeV1 = () => {
                                 <img src={blueCardImage} alt="" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
-                                <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px]">1.Erstkontakt</div>
+                                <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">1. Erstkontakt</div>
                                 <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir beginnen mit einem persönlichen Gespräch, um Ihre Bedürfnisse und Ziele zu verstehen.</div>
 
                             </div>
@@ -386,7 +398,7 @@ export const HomeV1 = () => {
                                 <img src={yellowCardImage} alt="" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
-                                <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px]">2.Planung</div>
+                                <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">2. Planung</div>
                                 <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir entwickeln eine maßgeschneiderte Strategie für Ihren Erfolg.</div>
 
                             </div>
@@ -396,7 +408,7 @@ export const HomeV1 = () => {
                                 <img src={redCardImage} alt="" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
-                                <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px]">3.Durchführung</div>
+                                <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">3. Durchführung</div>
                                 <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Unsere Experten setzen die Planung präzise und effizient um.</div>
 
                             </div>

@@ -1,12 +1,26 @@
+import { NavLink } from "react-router-dom";
 import analytics from "../assets/images/analytics.png";
 import search from "../assets/images/search.png";
 import system from "../assets/images/system.png";
 import Button from "../components/Button";
+import { Helmet } from "react-helmet";
 
 const Services = () => {
+    console.log(`${import.meta.env.VITE_BASE_URL}/services`)
     return (
         <div className="flex flex-col">
-            <section className="relative overflow-hidden z-[1] 2xl:h-[469px] md:h-[362px] h-[265px] flex items-center justify-center bg-secondary1 w-full 3xl:pt-[142px] lg:pt-[114px] md:pt-[91px] xs:pt-[72px] pt-[54px] 3xl:pb-[196px]  lg:pb-[118px] md:pb-[140px] xs:pb-[88px] pb-[100px] px-6">
+            <Helmet>
+                <title>Dienstleistungen - Unsere Services</title>
+                <meta name="description" content="Unsere Dienstleistungen auf einen Blick. Google Ads, SEO und Unternehmenslistung für maximale Reichweite und Sichtbarkeit." />
+                <meta property="og:title" content="Dienstleistungen - Unsere Services" />
+                <meta property="og:description" content="Erfahren Sie mehr über unsere Google Ads Kampagnen, SEO-Optimierung und Unternehmenslistung für maximale Reichweite und Sichtbarkeit." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}services`} />
+                {/* <meta property="og:image" content="https://www.yourwebsite.com/path-to-your-image.jpg" /> */}
+                <meta name="robots" content="index, follow" />
+            </Helmet>
+
+            <section className="relative overflow-hidden z-[1] 2xl:h-[469px] md:h-[362px] h-[265px] flex items-center justify-center bg-secondary4 w-full 3xl:pt-[142px] lg:pt-[114px] md:pt-[91px] xs:pt-[72px] pt-[54px] 3xl:pb-[196px]  lg:pb-[118px] md:pb-[140px] xs:pb-[88px] pb-[100px] px-6">
                 <div className="max-w-[540px] w-full flex flex-col text-white z-[3]">
                     <div className="mb-[10px] text-center tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px]">Dienstleistungen</div>
                     <div className="text-center text-[18px] tb-medium">Unsere Dienstleistungen auf einen Blick:</div>
@@ -14,7 +28,7 @@ const Services = () => {
                 <div className="absolute right-0 md:top-0 top-[-60px] lg:w-[170px] md:w-[150px] w-[120px] aspect-square bg-primary flex items-center justify-center">
                     <div className="w-full h-full bg-secondary2 rounded-full"></div>
                 </div>
-                <div style={{clipPath:"polygon(0 0, 0% 100%, 100% 100%)"}} className="absolute left-0 md:top-0 top-[-25px] lg:w-[170px] md:w-[150px] w-[120px] aspect-square bg-secondary4 flex items-center justify-center z-[1]"></div>
+                <div style={{ clipPath: "polygon(0 0, 0% 100%, 100% 100%)" }} className="absolute left-0 md:top-0 top-[-25px] lg:w-[170px] md:w-[150px] w-[120px] aspect-square bg-secondary4 flex items-center justify-center z-[1]"></div>
                 <div className="absolute lg:-left-[104px] md:-left-[104px] -left-[104px] md:-bottom-0 -bottom-[100px] lg:w-[230px] md:w-[200px] w-[180px] aspect-square bg-secondary3 rounded-full flex items-center justify-center z-[2]"></div>
             </section>
 
@@ -29,7 +43,10 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <Button className="">Details</Button>
+                            <NavLink to="/seo-plan">
+                                <Button className="">Details</Button>
+                            </NavLink>
+
                         </div>
 
                     </div>
@@ -42,7 +59,9 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
-                            <Button className="">Details</Button>
+                            <NavLink to="/ads-plan">
+                                <Button className="">Details</Button>
+                            </NavLink>
                         </div>
 
                     </div>
@@ -55,13 +74,14 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <Button className="">Details</Button>
+                            <NavLink to="/company-listing-plan">
+                                <Button className="">Details</Button>
+                            </NavLink>
                         </div>
 
                     </div>
 
                 </div>
-
             </section>
 
         </div>

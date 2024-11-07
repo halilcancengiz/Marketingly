@@ -19,7 +19,7 @@ const Button = ({
         console.log(variant, size);
     }, [variant, size]);
 
-    const baseClasses = 'flex items-center justify-center rounded-[10px] transition-all duration-300 hover-up font-bold';
+    const baseClasses = 'flex items-center justify-center rounded-[10px] transition-all duration-300 hover-up tb-bold';
 
     const sizeClasses = {
         small: 'h-12 py-[14px] px-6 text-[16px]',

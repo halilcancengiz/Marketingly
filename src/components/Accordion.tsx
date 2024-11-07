@@ -31,7 +31,7 @@ const Accordion = ({ title = "title", content = "content" }: Props) => {
                 className={`overflow-hidden transition-all duration-300 ${isOpen ? "max-h-[1000px]" : "max-h-0"}`}
                 style={{ maxHeight: isOpen ? contentRef.current?.scrollHeight : 0 }}
             >
-                <div className={`pt-5 text-[18px] text-neutral-600 transition-all duration-300 ${isOpen ? "opacity-1 scale-100" : "opacity-0 scale-95"}`}>
+                <div className={`pt-5 text-[18px] text-neutral-600 tb-medium transition-all duration-300 ${isOpen ? "opacity-1 scale-100" : "opacity-0 scale-95"}`}>
                     {content}
                 </div>
             </div>

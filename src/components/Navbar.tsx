@@ -34,50 +34,29 @@ const Navbar = () => {
             <div className="mx-auto max-w-[1221px] w-full flex items-center text-[18px] px-6 leading-[20px] justify-between">
                 <Logo />
                 <nav className="md:flex hidden items-center gap-x-8">
-                    <NavLink
-                        className="flex items-center gap-1 hover:text-primary transition-all duration-300 tb-medium"
-                        to="/"
-                    >
+                    <NavLink className="flex items-center gap-1 hover:text-primary transition-all duration-300 tb-medium" to="/" >
                         Start
                     </NavLink>
-                    <NavLink
-                        className="hover:text-primary transition-all duration-300 tb-medium"
-                        to="/homev2"
-                    >
+                    <NavLink className="hover:text-primary transition-all duration-300 tb-medium" to="/services" >
                         Dienstleistungen
                     </NavLink>
-                    <NavLink
-                        className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative"
-                        to="/homev2"
-                    >
+                    <div className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative">
                         <div className="tb-medium">Pläne</div>
-                        <IoIosArrowDown
-                            className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300"
-                            size={16}
-                        />
+                        <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
                         <div className="absolute invisible opacity-0 translate-y-[10px] z-[11] pt-[13px] group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out -left-1/2 top-full  text-neutral-600">
                             <div className="flex flex-col gap-8 rounded-3xl px-[66px] py-[64px] border-[1px] border-net bg-neutral-100">
-                                <NavLink
-                                    className="hover:text-primary transition-all duration-300 flex items-center gap-1"
-                                    to="/homev2"
-                                >
+                                <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1" to="/ads-plan" >
                                     <TbPointFilled /> Google Ads
                                 </NavLink>
-                                <NavLink
-                                    className="hover:text-primary transition-all duration-300 flex items-center gap-1"
-                                    to="/homev2"
-                                >
+                                <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1" to="/seo-plan" >
                                     <TbPointFilled /> SEO
                                 </NavLink>
-                                <NavLink
-                                    className="hover:text-primary transition-all duration-300 flex items-center gap-1"
-                                    to="/homev2"
-                                >
+                                <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1" to="/company-listing-plan">
                                     <TbPointFilled /> Unternehmenslistung
                                 </NavLink>
                             </div>
                         </div>
-                    </NavLink>
+                    </div>
                 </nav>
 
                 <div className="flex items-center gap-x-8">
@@ -98,32 +77,17 @@ const Navbar = () => {
                 </div>
             </div>
             {/* mobile navbar */}
-            <nav
-                ref={mobileNavbarRef}
-                className={`mobile-navbar-shadow z-10 lg:hidden absolute left-0 top-full w-full bg-neutral-100 transition-[max-height] duration-300 ease-in-out overflow-hidden border-b-[1px] border-neutral-300 ${isMobileNavOpen ? "max-h-96" : "max-h-0"}`}
-            >
+            <nav ref={mobileNavbarRef} className={`mobile-navbar-shadow z-10 lg:hidden absolute left-0 top-full w-full bg-neutral-100 transition-[max-height] duration-300 ease-in-out overflow-hidden border-b-[1px] border-neutral-300 ${isMobileNavOpen ? "max-h-96" : "max-h-0"}`}>
                 <div className="w-full h-full flex flex-col p-6 text-[20px] tb-medium">
-                    <NavLink
-                        className="flex items-center gap-1 hover:text-primary transition-all duration-300 py-[15px]"
-                        to="/"
-                    >
+                    <NavLink className="flex items-center gap-1 hover:text-primary transition-all duration-300 py-[15px]" to="/" >
                         Start
                     </NavLink>
-                    <NavLink
-                        className="hover:text-primary transition-all duration-300 py-[15px]"
-                        to="/homev2"
-                    >
+                    <NavLink className="hover:text-primary transition-all duration-300 py-[15px]" to="/homev2" >
                         Dienstleistungen
                     </NavLink>
-                    <NavLink
-                        className="flex items-center gap-1 group hover:text-primary transition-colors duration-300 py-[15px]"
-                        to="/homev2"
-                    >
+                    <NavLink className="flex items-center gap-1 group hover:text-primary transition-colors duration-300 py-[15px]" to="/homev2">
                         Pläne
-                        <IoIosArrowDown
-                            className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300"
-                            size={16}
-                        />
+                        <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
                     </NavLink>
                     <div className="py-[15px] mt-[60px]">
                         <NavLink to="/">

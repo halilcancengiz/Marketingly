@@ -9,6 +9,9 @@ import TermAndConditions from "../pages/TermAndConditions";
 import Contact from "../pages/Contact";
 import ProductDetail from "../pages/ProductDetail";
 import Services from "../pages/Services";
+import SeoPlan from "../pages/SeoPlan";
+import AdsPlan from "../pages/AdsPlan";
+import CompanyListingPlan from "../pages/CompanyListingPlan";
 
 export const AppRoutes = () => {
     return (
@@ -23,6 +26,9 @@ export const AppRoutes = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/product-detail" element={<ProductDetail />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/seo-plan" element={<SeoPlan />} />
+            <Route path="/ads-plan" element={<AdsPlan />} />
+            <Route path="/company-listing-plan" element={<CompanyListingPlan />} />
         </Routes>
     );
 };
