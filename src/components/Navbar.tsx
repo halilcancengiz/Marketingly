@@ -33,7 +33,7 @@ const Navbar = () => {
         <header className="flex items-center bg-neutral-100 gap-5 text-neutral-600 py-6 border-b-[1px] border-neutral-300 relative">
             <div className="mx-auto max-w-[1221px] w-full flex items-center text-[18px] px-6 leading-[20px] justify-between">
                 <Logo />
-                <nav className="md:flex hidden items-center gap-x-8">
+                <nav className="lg:flex hidden items-center gap-x-8 mr-[100px]">
                     <NavLink className="flex items-center gap-1 hover:text-primary transition-all duration-300 tb-medium" to="/" >
                         Start
                     </NavLink>
@@ -45,13 +45,13 @@ const Navbar = () => {
                         <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
                         <div className="absolute invisible opacity-0 translate-y-[10px] z-[11] pt-[13px] group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out -left-1/2 top-full  text-neutral-600">
                             <div className="flex flex-col gap-8 rounded-3xl px-[66px] py-[64px] border-[1px] border-net bg-neutral-100">
-                                <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1" to="/ads-plan" >
+                                <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1 tb-medium" to="/ads-plan" >
                                     <TbPointFilled /> Google Ads
                                 </NavLink>
-                                <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1" to="/seo-plan" >
+                                <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1 tb-medium" to="/seo-plan" >
                                     <TbPointFilled /> SEO
                                 </NavLink>
-                                <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1" to="/company-listing-plan">
+                                <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1 tb-medium" to="/company-listing-plan">
                                     <TbPointFilled /> Unternehmenslistung
                                 </NavLink>
                             </div>
@@ -61,7 +61,7 @@ const Navbar = () => {
 
                 <div className="flex items-center gap-x-8">
                     <NavLink className="md:flex hidden" to="/contact">
-                        <Button variant="primary" size="small">
+                        <Button className="tb-bold" variant="primary" size="small">
                             Kontakt
                         </Button>
                     </NavLink>
@@ -91,7 +91,7 @@ const Navbar = () => {
                     </NavLink>
                     <div className="py-[15px] mt-[60px]">
                         <NavLink to="/">
-                            <Button className="w-full h-16 text-base" variant="primary" size="default">
+                            <Button className="w-full h-16 text-base tb-bold" variant="primary" size="default">
                                 Kontakt
                             </Button>
                         </NavLink>

@@ -119,11 +119,13 @@ const Contact = () => {
                             </div>
 
                             <div className="col-span-2 flex items-start gap-3">
-                                <input required className="size-7 border-none outline-none ring-0" type="checkbox" />
-                                <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap">Mit dem Absenden des Formulars akzeptieren Sie die <span className="text-primary cursor-pointer">Datenschutzerkärung</span></div>
+                                <label>
+                                    <input required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
+                                </label>
+                                <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
                             </div>
                             <div className="lg:flex hidden">
-                                <Button type="submit" className="">Abenden</Button>
+                                <Button type="submit" className="tb-bold">Abenden</Button>
                             </div>
                         </form>
                     </div>

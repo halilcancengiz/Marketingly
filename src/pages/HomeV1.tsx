@@ -23,10 +23,10 @@ export const HomeV1 = () => {
     const fSectionParagraphArea = useRef<HTMLDivElement | null>(null)
     const isInViewFSectionParagraphArea = useInView(fSectionParagraphArea, { margin: "300px", once: true });
 
-    useEffect(() => {
-        // Sayfa yüklendiğinde kaydırmayı en üste al
-        window.scrollTo(0, 0);
-    }, []);
+    // useEffect(() => {
+    //     // Sayfa yüklendiğinde kaydırmayı en üste al
+    //     window.scrollTo(0, 0);
+    // }, []);
 
     const container = {
         hidden: { opacity: 1, scale: 0 },
@@ -76,10 +76,10 @@ export const HomeV1 = () => {
                         <motion.div variants={item} className="leading-[30px] text-neutral-600 mb-12 text-[18px] tb-medium">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.</motion.div>
                         <motion.div variants={item} className="flex items-center gap-7">
                             <NavLink to="contact">
-                                <Button className="w-full" variant="primary" size="default">Kontakt</Button>
+                                <Button className="w-full tb-bold" variant="primary" size="default">Kontakt</Button>
                             </NavLink>
                             <a href="#unsereDienstleistungen">
-                                <Button className="w-full" variant="secondary" size="default">Mehr Infos</Button>
+                                <Button className="w-full tb-medium" variant="secondary" size="default">Mehr Infos</Button>
                             </a>
 
                         </motion.div>
@@ -142,10 +142,10 @@ export const HomeV1 = () => {
                         <div className="col-span-1">
                             <div className="flex items-center gap-7">
                                 <NavLink to="/contact" className="w-full">
-                                    <Button className="w-full whitespace-nowrap" variant="primary" size="default">Kontakt</Button>
+                                    <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
                                 </NavLink>
                                 <NavLink to="/services" className="w-full">
-                                    <Button className="w-full whitespace-nowrap" variant="secondary" size="default">Mehr Details</Button>
+                                    <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
                                 </NavLink>
                             </div>
                         </div>
@@ -222,7 +222,7 @@ export const HomeV1 = () => {
                                 </div>
                             </div>
                             <NavLink to="/ads-plan">
-                                <Button className="">Details</Button>
+                                <Button className="tb-bold">Details</Button>
                             </NavLink>
                         </motion.div>
                     </div>
@@ -254,7 +254,7 @@ export const HomeV1 = () => {
                             </div>
 
                             <NavLink to="/seo-plan">
-                                <Button className="">Details</Button>
+                                <Button className="tb-bold">Details</Button>
                             </NavLink>
                         </motion.div>
 
@@ -276,7 +276,7 @@ export const HomeV1 = () => {
                             <Button className="w-full whitespace-nowrap !text-primary tb-bold bg-white hover:bg-secondary3 hover:!text-white" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
                         <NavLink className="w-full" to="services">
-                            <Button className="w-full whitespace-nowrap border-white text-white hover:bg-secondary3 font-medium" variant="secondary" size="default">Dienstleistungen</Button>
+                            <Button className="w-full whitespace-nowrap border-white text-white hover:bg-secondary3 tb-medium" variant="secondary" size="default">Dienstleistungen</Button>
                         </NavLink>
                     </div>
                 </div>
@@ -323,7 +323,7 @@ export const HomeV1 = () => {
                         </div>
                         <div>
                             <NavLink to="/services">
-                                <Button className="">Dienstleistungen</Button>
+                                <Button className="tb-bold">Dienstleistungen</Button>
                             </NavLink>
                         </div>
                     </div>
@@ -338,7 +338,7 @@ export const HomeV1 = () => {
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Wieso Sie mit uns abreiten sollten?</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</div>
                         <NavLink to="/contact" className="mt-10">
-                            <Button className="">Kontakt</Button>
+                            <Button className="tb-bold">Kontakt</Button>
                         </NavLink>
                     </div>
 
@@ -415,7 +415,7 @@ export const HomeV1 = () => {
                         </div>
                     </div>
                     <NavLink to="/contact" className="mt-10">
-                        <Button className="">Kontakt</Button>
+                        <Button className="tb-bold">Kontakt</Button>
                     </NavLink>
                 </div>
             </section>
@@ -491,12 +491,12 @@ export const HomeV1 = () => {
 
                             <div className="col-span-2 flex items-start gap-3">
                                 <label>
-                                    <input required className="size-7 border-none outline-none ring-0 !accent-red-400" type="checkbox" />
+                                    <input required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </label>
-                                <div className="text-[18px] text-neutral-600 flex-wrap">Mit dem Absenden des Formulars akzeptieren Sie die <span className="text-primary cursor-pointer">Datenschutzerkärung</span></div>
+                                <div className="text-[18px] text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
                             </div>
                             <div className="col-span-2">
-                                <Button type="submit" className="md:w-auto w-full">Abenden</Button>
+                                <Button type="submit" className="md:w-auto w-full tb-bold">Abenden</Button>
                             </div>
                         </form>
                     </div>
