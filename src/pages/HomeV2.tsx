@@ -71,7 +71,7 @@ export const HomeV2 = () => {
                     <div className="lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] tb-bold text-white text-center mb-[10px]">Maximaler Erfolg mit <br /> <span className="whitespace-nowrap tb-bold">Google!</span></div>
                     <div className="leading-[30px] text-white text-center mb-10 text-[18px] tb-medium">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.</div>
                     <div className="flex xs:flex-row flex-col items-center justify-center gap-7 pb-3.5">
-                        <NavLink className="xs:w-auto w-full" to="contact">
+                        <NavLink className="xs:w-auto w-full" to="/contact">
                             <Button className="xs:w-auto w-full tb-bold !text-primary bg-white hover:!bg-secondary3 hover:!text-white" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
                         <a className="xs:w-auto w-full" href="#unsereDienstleistungen">
