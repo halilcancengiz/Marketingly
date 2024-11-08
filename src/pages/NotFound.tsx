@@ -42,7 +42,6 @@ const NotFound = () => {
                         <div className='absolute bottom-0 right-0 bg-secondary4 z-[2] w-1/2 h-full transform text-white'></div>
                         <div className='absolute bottom-0 bg-secondary3 z-[1] w-full h-1/2  text-white'></div>
                     </div>
-
                 </div>
                 <div className='absolute left-0 lg:-bottom-[35%] -bottom-[25%] -translate-y-1/2 w-[25%] max-w-[307px] aspect-square rounded-full bg-secondary2'></div>
             </div>

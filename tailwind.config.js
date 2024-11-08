@@ -23,7 +23,7 @@ export default {
         'neutral-100': '#FFFFFF',
       },
       screens: {
-        'xs': '501px', //488 olacak
+        'xs': '480px', //488 olacak
         'sm': '640px',
         'md': '768px',
         'lg': '992px', //animasyonlar devreye giriyor
