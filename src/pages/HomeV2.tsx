@@ -21,33 +21,33 @@ import homeV2Chart2Image from "../assets/images/homev2chart2.png"
 export const HomeV2 = () => {
     const navigate = useNavigate()
     // firstSectionAnimations
-    const fSectionParagraphArea = useRef<HTMLDivElement | null>(null)
-    const isInViewFSectionParagraphArea = useInView(fSectionParagraphArea, { margin: "300px", once: true });
+    // const fSectionParagraphArea = useRef<HTMLDivElement | null>(null)
+    // const isInViewFSectionParagraphArea = useInView(fSectionParagraphArea, { margin: "300px", once: true });
 
     useEffect(() => {
         // Sayfa yüklendiğinde kaydırmayı en üste al
         window.scrollTo(0, 0);
     }, []);
 
-    const container = {
-        hidden: { opacity: 1, scale: 0 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                delayChildren: 0.2,
-                staggerChildren: 0.05
-            }
-        }
-    }
+    // const container = {
+    //     hidden: { opacity: 1, scale: 0 },
+    //     visible: {
+    //         opacity: 1,
+    //         scale: 1,
+    //         transition: {
+    //             delayChildren: 0.2,
+    //             staggerChildren: 0.05
+    //         }
+    //     }
+    // }
 
-    const item = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1
-        }
-    }
+    // const item = {
+    //     hidden: { y: 20, opacity: 0 },
+    //     visible: {
+    //         y: 0,
+    //         opacity: 1
+    //     }
+    // }
 
     // secondSectionAnimations
 
