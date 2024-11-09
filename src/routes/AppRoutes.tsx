@@ -18,8 +18,8 @@ export const AppRoutes = () => {
         <Routes>
             <Route path="/" element={<HomeV1 />} />
             <Route path="/homev2" element={<HomeV2 />} />
-            <Route path="/styleguide" element={<StyleGuidePage />} />
-            <Route path="/test" element={<Test />} />
+            {/* <Route path="/styleguide" element={<StyleGuidePage />} /> */}
+            {/* <Route path="/test" element={<Test />} /> */}
             <Route path="/thank-you-page" element={<Thankyou />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/datenschutz" element={<TermAndConditions />} />
