@@ -5,10 +5,20 @@ import check from "../assets/images/check.png";
 import Accordion from "../components/Accordion";
 import Button from "../components/Button";
 import { NavLink } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const CompanyListingPlan = () => {
   return (
     <div className="flex flex-col">
+      <Helmet>
+        <title>Company Listing Plan - Flexible Lösungen für Unternehmen | MARKETINGLY X</title>
+        <meta name="description" content="Unsere Company Listing Pläne bieten maßgeschneiderte Lösungen für jede Unternehmensgröße. Maximieren Sie Ihre Reichweite mit MARKETINGLY X." />
+        <meta property="og:title" content="Company Listing Plan - Flexible Lösungen für Unternehmen | MARKETINGLY X" />
+        <meta property="og:description" content="Entdecken Sie unsere flexiblen Preismodelle für Unternehmenslistungen. Erreichen Sie Ihre Marketingziele und maximieren Sie Ihre Sichtbarkeit!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}company-listing-plan`} />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px]">
         <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
           <div className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">Unsere Pläne</div>

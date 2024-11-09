@@ -16,7 +16,6 @@ const Services = () => {
                 <meta property="og:description" content="Erfahren Sie mehr über unsere Google Ads Kampagnen, SEO-Optimierung und Unternehmenslistung für maximale Reichweite und Sichtbarkeit." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}services`} />
-                {/* <meta property="og:image" content="https://www.yourwebsite.com/path-to-your-image.jpg" /> */}
                 <meta name="robots" content="index, follow" />
             </Helmet>
 

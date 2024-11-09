@@ -8,6 +8,7 @@ import youtubeIcon from "../assets/images/youtube.png"
 import whatsappIcon from "../assets/images/whatsapp.png"
 import Accordion from "../components/Accordion"
 import { useEffect } from "react"
+import { Helmet } from "react-helmet"
 
 
 const Contact = () => {
@@ -19,6 +20,15 @@ const Contact = () => {
 
     return (
         <div className="flex flex-col">
+            <Helmet>
+                <title>Kontakt - Erreichen Sie Uns | MARKETINGLY X</title>
+                <meta name="description" content="Kontaktieren Sie MARKETINGLY X für maßgeschneiderte Marketinglösungen und individuelle Beratung. Wir sind hier, um Ihre Fragen zu beantworten." />
+                <meta property="og:title" content="Kontakt - Erreichen Sie Uns | MARKETINGLY X" />
+                <meta property="og:description" content="Lassen Sie uns gemeinsam Ihre Marketingziele erreichen. Kontaktieren Sie MARKETINGLY X für eine maßgeschneiderte Lösung." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}contact`} />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
             <section className="3xl:pt-[120px] lg:pt-[96px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] px-6  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">
                     <div className="max-w-[487px] lg:mb-0 mb-20 mt-[66px] lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10 ">

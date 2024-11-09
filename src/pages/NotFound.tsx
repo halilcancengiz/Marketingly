@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet'
 import Button from '../components/Button'
 import { NavLink } from 'react-router-dom'
 
@@ -6,7 +7,15 @@ const NotFound = () => {
     return (
 
         <div className='3xl:py-[220px] lg:py-[176px] md:py-[140px] py-[113px] bg-secondary1 flex flex-col items-center justify-center px-6 relative overflow-hidden'>
-
+            <Helmet>
+                <title>404 - Seite nicht gefunden | MARKETINGLY X</title>
+                <meta name="description" content="Die gesuchte Seite ist nicht verfügbar. Bitte gehen Sie zurück zur Startseite oder nutzen Sie die Navigation." />
+                <meta property="og:title" content="404 - Seite nicht gefunden" />
+                <meta property="og:description" content="Oh, es scheint so, als ob da etwas schiefgelaufen ist. Gehen Sie zurück zur Startseite." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}not-found`} />
+                <meta name="robots" content="noindex, nofollow" />
+            </Helmet>
             <div className='flex flex-col z-[2]'>
                 <div className='text-center md:text-[164px] md:leading-[131px] xs:text-[131px] xs:leading-[104px] text-[105px] leading-[84px] lg:mb-[50px] md:mb-10 xs:mb-[30px] mb-5 tb-bold text-white transition-all duration-300'>
                     404

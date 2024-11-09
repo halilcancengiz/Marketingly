@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const TermAndConditions = () => {
     useEffect(() => {
@@ -8,6 +9,16 @@ const TermAndConditions = () => {
     return (
 
         <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] px-6 relative bg-[#F8F9FF]">
+
+            <Helmet>
+                <title>AGB und Datenschutz | MARKETINGLY X</title>
+                <meta name="description" content="Erfahren Sie mehr über die Allgemeinen Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen von MARKETINGLY X." />
+                <meta property="og:title" content="AGB und Datenschutz" />
+                <meta property="og:description" content="Detaillierte Informationen zu unseren Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}terms-and-conditions`} />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex relative">
 
                 <div id="menuItems" className="mt-[63px] mr-10 min-w-[274px] flex flex-col gap-[15px] h-full sticky top-5">

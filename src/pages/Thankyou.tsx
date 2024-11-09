@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
 import shapes from "../assets/images/thankspage.png";
 import check from "../assets/images/thankcheck.png";
+import { Helmet } from "react-helmet";
 
 const Thankyou = () => {
     useEffect(() => {
@@ -38,6 +39,15 @@ const Thankyou = () => {
 
     return (
         <div className='3xl:pt-[95px] lg:pt-[76px] md:pt-[60px] xs:pt-[50px] pt-10 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] bg-white flex flex-col items-center justify-center px-6 relative overflow-hidden'>
+            <Helmet>
+                <title>Vielen Dank | MARKETINGLY X</title>
+                <meta name="description" content="Vielen Dank für Ihre Nachricht! Unser Team wird sich schnellstmöglich bei Ihnen melden." />
+                <meta property="og:title" content="Vielen Dank für Ihre Nachricht" />
+                <meta property="og:description" content="Das MARKETINGLY X Team wird sich bald bei Ihnen melden. Vielen Dank für Ihr Interesse!" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}thank-you`} />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
             <div className="max-w-[540px] aspect-[5/3.9] w-full mx-auto lg:mb-[86px] md:mb-[72px] xs:mb-[60px] mb-[50px] relative flex items-center justify-center">
                 {/* Shape Image Container */}
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">

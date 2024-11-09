@@ -62,7 +62,13 @@ export const HomeV1 = () => {
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
-
+                <title>Home - Maximaler Erfolg mit Google! | MARKETINGLY X</title>
+                <meta name="description" content="Erreichen Sie Ihre Zielgruppe mit maßgeschneiderten Google Ads, SEO-Optimierungen und Unternehmenslistungen. Kontaktieren Sie MARKETINGLY X für maximale Reichweite." />
+                <meta property="og:title" content="Home - Maximaler Erfolg mit Google! | MARKETINGLY X" />
+                <meta property="og:description" content="Nutzen Sie Google Ads, SEO und Unternehmenslistungen für maximale Reichweite und Sichtbarkeit." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}`} />
+                <meta name="robots" content="index, follow" />
             </Helmet>
             <section className="3xl:py-[145px] lg:py-[116px] py-[60px] flex items-center px-6 justify-center h-full relative ">
                 <div className="max-w-[1173px] h-full w-full mx-auto  grid lg:grid-cols-2 grid-cols-1 items-center justify-center lg:gap-8 gap-20 relative ">

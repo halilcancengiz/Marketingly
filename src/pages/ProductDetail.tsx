@@ -2,10 +2,20 @@ import circlesImage from "../assets/images/circles.png"
 import check from "../assets/images/check.png";
 import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
+import { Helmet } from "react-helmet";
 
 const ProductDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
+            <Helmet>
+                <title>Premium-Paket - Detaillierte Informationen | MARKETINGLY X</title>
+                <meta name="description" content="Entdecken Sie unser Premium-Paket für umfassende Marketinglösungen, inklusive Content-Marketing und erweiterter Analytik." />
+                <meta property="og:title" content="Premium-Paket - MARKETINGLY X" />
+                <meta property="og:description" content="Unser Premium-Paket bietet umfassende Lösungen für fortgeschrittenes Marketing, von Content-Marketing bis hin zu erweiterten Analysen." />
+                <meta property="og:type" content="product" />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}product-detail`} />
+                <meta name="robots" content="index, follow" />
+            </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
                 <div className="lg:mr-10 lg:mb-0 md:mb-[70px] mb-[60px] flex flex-col lg:max-w-[621.69px] max-w-[660px] lg:min-w-[491px] w-full">
                     <div className="size-[90px] border border-neutral-300 md:mb-8 xs:mb-[28px] mb-[25px] rounded-[25px] flex items-center justify-center overflow-hidden">
