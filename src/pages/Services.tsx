@@ -36,7 +36,7 @@ const Services = () => {
 
                     <div className="col-span-1 w-full bg-white rounded-[18px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6 ">
-                            <img className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="" />
+                            <img className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="analytics" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Google Ads</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google Marketingkampagnen – für maximale Reichweite</div>
                         </div>
@@ -52,7 +52,7 @@ const Services = () => {
 
                     <div className="col-span-1 w-full bg-white rounded-[18px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
-                            <img className="object-contain size-[86px] rounded-[10px]" src={search} alt="" />
+                            <img className="object-contain size-[86px] rounded-[10px]" src={search} alt="search" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Seo</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen</div>
                         </div>
@@ -67,7 +67,7 @@ const Services = () => {
 
                     <div className="col-span-1 w-full bg-white rounded-[18px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
-                            <img className="object-contain size-[86px] rounded-[10px]" src={system} alt="" />
+                            <img className="object-contain size-[86px] rounded-[10px]" src={system} alt="system" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Sichbarkeit optimieren durch Google-Unternehmenslistung</div>
                         </div>

@@ -33,7 +33,7 @@ const CompanyListingPlan = () => {
           <NavLink to="/product-detail" className="invisible lg:flex hidden col-span-1 w-full max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
 
             <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
-              <img className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="" />
+              <img className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
             </div>
 
             <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
@@ -43,19 +43,19 @@ const CompanyListingPlan = () => {
             <hr className="w-full my-[35px]" />
             <div className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
               </div>
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
               </div>
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
               </div>
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
               </div>
             </div>
@@ -66,7 +66,7 @@ const CompanyListingPlan = () => {
           <NavLink to="/product-detail" className="col-span-1 shadow-sm min-w-[373px] w-full max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
 
             <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
-              <img className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="" />
+              <img className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
             </div>
             <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
               Premium
@@ -75,19 +75,19 @@ const CompanyListingPlan = () => {
             <hr className="w-full my-[35px]" />
             <div className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
               </div>
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
               </div>
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
               </div>
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
               </div>
             </div>
@@ -98,7 +98,7 @@ const CompanyListingPlan = () => {
           <NavLink to="/product-detail" className="invisible lg:flex hidden col-span-1 w-full max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
 
             <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
-              <img className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="" />
+              <img className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
             </div>
             <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
               Deluxe
@@ -107,19 +107,19 @@ const CompanyListingPlan = () => {
             <hr className="w-full my-[35px]" />
             <div className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
               </div>
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
               </div>
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
               </div>
               <div className="flex items-center gap-[13px]">
-                <img className="size-6 rounded-full" src={check} alt="" />
+                <img className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
               </div>
             </div>

@@ -51,11 +51,11 @@ const Thankyou = () => {
             <div className="max-w-[540px] aspect-[5/3.9] w-full mx-auto lg:mb-[86px] md:mb-[72px] xs:mb-[60px] mb-[50px] relative flex items-center justify-center">
                 {/* Shape Image Container */}
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <img id="shapeImage" src={shapes} alt="" className="w-full h-full object-cover" />
+                    <img id="shapeImage" src={shapes} alt="shapes" className="w-full h-full object-cover" />
                 </div>
                 {/* Check Image Container */}
                 <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <img id="checkImage" className="z-[2] max-w-[320px] object-cover" src={check} alt="" />
+                    <img id="checkImage" className="z-[2] max-w-[320px] object-cover" src={check} alt="check" />
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center max-w-[640px] w-full">

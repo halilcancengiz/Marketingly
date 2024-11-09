@@ -19,7 +19,7 @@ const ProductDetail = () => {
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
                 <div className="lg:mr-10 lg:mb-0 md:mb-[70px] mb-[60px] flex flex-col lg:max-w-[621.69px] max-w-[660px] lg:min-w-[491px] w-full">
                     <div className="size-[90px] border border-neutral-300 md:mb-8 xs:mb-[28px] mb-[25px] rounded-[25px] flex items-center justify-center overflow-hidden">
-                        <img src={circlesImage} alt="" />
+                        <img src={circlesImage} alt="circle" />
                     </div>
                     <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
                         Premium Package
@@ -29,19 +29,19 @@ const ProductDetail = () => {
                     </div>
                     <div className="flex flex-col gap-[15px] mb-10">
                         <div className="flex items-center gap-[13px]">
-                            <img className="size-6 rounded-full" src={check} alt="" />
+                            <img className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">All in Standard Plan</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
-                            <img className="size-6 rounded-full" src={check} alt="" />
+                            <img className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Content Marketing</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
-                            <img className="size-6 rounded-full" src={check} alt="" />
+                            <img className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Advanced Analytics</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
-                            <img className="size-6 rounded-full" src={check} alt="" />
+                            <img className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Premium Support</div>
                         </div>
                     </div>

@@ -94,14 +94,14 @@ export const HomeV1 = () => {
                     <div className="col-span-1 lg:flex hidden justify-end  relative lg:pl-[62px]">
                         <img src={chart} className="homev1-hero-section-shadow rounded-[18px] w-full border-[1px] border-neutral-300" alt="chart" />
                         <div className="absolute w-full top-1/2 -translate-y-1/2 flex pr-[333px]">
-                            <img src={contactPeopleImage} className="homev1-hero-section-shadow rounded-[18px] min-w-[180px] object-contain" alt="dsa" />
+                            <img src={contactPeopleImage} className="homev1-hero-section-shadow rounded-[18px] min-w-[180px] object-contain" alt="humans" />
                         </div>
                     </div>
                     {/* mobile images */}
                     <div className="lg:hidden flex max-w-[660px] w-full mx-auto relative pr-20">
                         <img src={chart} className="homev1-hero-section-shadow rounded-[18px] max-w-[500px] w-full border-[1px] border-neutral-300" alt="chart" />
                         <div className="absolute w-full top-1/2 -translate-y-1/2 flex right-0 pl-60 justify-end">
-                            <img src={contactPeopleImage} className="homev1-hero-section-shadow rounded-[18px] min-w-[180px] max-w-[277px] object-contain" alt="dsa" />
+                            <img src={contactPeopleImage} className="homev1-hero-section-shadow rounded-[18px] min-w-[180px] max-w-[277px] object-contain" alt="humans" />
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@ export const HomeV1 = () => {
                 <div className="gap-6 flex items-start justify-center flex-wrap">
                     <div className="card rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
-                            <img className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="" />
+                            <img className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="analytics" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Google Ads</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google Marketingkampagnen – für maximale Reichweite</div>
                         </div>
@@ -168,7 +168,7 @@ export const HomeV1 = () => {
                     </div>
                     <div className="card rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
-                            <img className="object-contain size-[86px] rounded-[10px]" src={search} alt="" />
+                            <img className="object-contain size-[86px] rounded-[10px]" src={search} alt="search" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Seo</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen</div>
                         </div>
@@ -177,7 +177,7 @@ export const HomeV1 = () => {
                     </div>
                     <div className="card rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
-                            <img className="object-contain size-[86px] rounded-[10px]" src={system} alt="" />
+                            <img className="object-contain size-[86px] rounded-[10px]" src={system} alt="system" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichbarkeit optimieren durch Google-Unternehmenslistung</div>
                         </div>
@@ -196,7 +196,7 @@ export const HomeV1 = () => {
                             animate={isInViewHomeV1FirstImageRef ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.3, ease: "easeIn" }}
                             className="lg:max-w-[574px] max-w-[660px] lg:min-w-[480px] hxl:mr-20 lg:mr-10 mr-0 w-full lg:order-1 order-2 transition-all duration-300 relative">
-                            <img className="homev1-services-shadow border-[1px] rounded-[24px] border-neutral-300 z-[10]" src={services} alt="" />
+                            <img className="homev1-services-shadow border-[1px] rounded-[24px] border-neutral-300 z-[10]" src={services} alt="services" />
                             <div className="absolute bg-[#F9F5E5] max-w-[248px] w-full aspect-square rounded-full lg:-left-20 lg:right-auto -right-20 lg:-top-20 -top-16 z-[-1]"></div>
                         </motion.div>
                         <motion.div
@@ -215,15 +215,15 @@ export const HomeV1 = () => {
 
                             <div className="flex flex-col gap-[15px] lg:mb-[60px] md:mb-[50px] mb-10">
                                 <div className="flex items-center gap-[13px]">
-                                    <img className="size-6 rounded-full" src={check} alt="" />
+                                    <img className="size-6 rounded-full" src={check} alt="check" />
                                     <div className="leading-[20px] text-neutral-800 text-[18px] tb-bold">Optimale Reichweite</div>
                                 </div>
                                 <div className="flex items-center gap-[13px]">
-                                    <img className="size-6 rounded-full" src={check} alt="" />
+                                    <img className="size-6 rounded-full" src={check} alt="check" />
                                     <div className="leading-[20px] text-neutral-800 text-[18px] tb-bold">Messbare Erfolge</div>
                                 </div>
                                 <div className="flex items-center gap-[13px]">
-                                    <img className="size-6 rounded-full" src={check} alt="" />
+                                    <img className="size-6 rounded-full" src={check} alt="check" />
                                     <div className="leading-[20px] text-neutral-800 text-[18px] tb-bold">Schnelle Ergebnisse</div>
                                 </div>
                             </div>
@@ -241,7 +241,7 @@ export const HomeV1 = () => {
                             animate={isInViewHomeV1SecondImageRef ? { opacity: 1, y: 0 } : {}}
                             transition={{ duration: 0.3, ease: "easeIn" }}
                             className="flex flex-col order-2 w-full mx-auto lg:max-w-auto max-w-[660px] lg:mb-0 mb-20">
-                            <img className="homev1-services-shadow border-[1px] rounded-[24px] border-neutral-300 z-[10]" src={womanImage} alt="" />
+                            <img className="homev1-services-shadow border-[1px] rounded-[24px] border-neutral-300 z-[10]" src={womanImage} alt="woman" />
                         </motion.div>
 
                         <motion.div
@@ -308,8 +308,8 @@ export const HomeV1 = () => {
             <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
                     <div className="lg:mr-10 flex lg:max-w-[587px] max-w-[660px] lg:min-w-[488px] w-full relative lg:order-1 order-2 lg:my-0 my-20">
-                        <img src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf97fa40916d9d2a267_image-1-about-v2-marketing-template-p-800.jpeg" className="block max-w-[71%] lg:ml-auto w-full rounded-[24px] homev1-card-shadow" />
-                        <img style={{ overflowClipMargin: "content-box", overflowX: "clip", overflowY: "clip", verticalAlign: "middle" }} src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf9a96ef17d725a04f5_image-2-about-v2-marketing-template-p-800.jpeg" className="max-w-[70%] w-full absolute -bottom-20 lg:left-0 right-0 rounded-[24px]" alt="" />
+                        <img src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf97fa40916d9d2a267_image-1-about-v2-marketing-template-p-800.jpeg" className="block max-w-[71%] lg:ml-auto w-full rounded-[24px] homev1-card-shadow" alt="woman" />
+                        <img style={{ overflowClipMargin: "content-box", overflowX: "clip", overflowY: "clip", verticalAlign: "middle" }} src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf9a96ef17d725a04f5_image-2-about-v2-marketing-template-p-800.jpeg" className="max-w-[70%] w-full absolute -bottom-20 lg:left-0 right-0 rounded-[24px]" alt="humans" />
                     </div>
                     <div className="lg:max-w-[504px] max-w-[660px] flex flex-col pl-5 lg:order-2 order-1">
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Zielgruppe</div>
@@ -391,7 +391,7 @@ export const HomeV1 = () => {
                     <div className="flex lg:flex-row flex-col w-full gap-[26px]">
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img src={blueCardImage} alt="" />
+                                <img src={blueCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">1. Erstkontakt</div>
@@ -401,7 +401,7 @@ export const HomeV1 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img src={yellowCardImage} alt="" />
+                                <img src={yellowCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">2. Planung</div>
@@ -411,7 +411,7 @@ export const HomeV1 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img src={redCardImage} alt="" />
+                                <img src={redCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">3. Durchführung</div>
