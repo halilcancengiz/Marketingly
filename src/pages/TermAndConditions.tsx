@@ -72,9 +72,9 @@ const TermAndConditions = () => {
                     id="menuItems"
                     className="lg:mt-[63px] lg:mb-0 mb-10 lg:mr-10 min-w-[274px] grid grid-cols-3 gap-[15px] h-full lg:sticky lg:top-5">
 
-                    <a href="#terms-and-conditions" className={`lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] lg:text-start text-center px-5 hover:text-primary shadow-lg hover-down bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer hover:shadow-md transition-all border border-white duration-300 ${activeSection === "terms-and-conditions" ? "text-primary" : "text-neutral-800"}`}> Terms and Conditions</a>
-                    <a href="#privacy-policy" className={`lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] px-5 lg:text-start text-center hover:text-primary shadow-lg hover-down bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer hover:shadow-md transition-all border border-white duration-300 ${activeSection === "privacy-policy" ? "text-primary" : "text-neutral-800"}`}> Privacy Policy</a>
-                    <a href="#user-policy" className={`lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] px-5 lg:text-start text-center hover:text-primary shadow-lg hover-down bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer hover:shadow-md transition-all border border-white duration-300 ${activeSection === "user-policy" ? "text-primary" : "text-neutral-800"}`}> User Policy</a>
+                    <a href="#terms-and-conditions" className={`menuItemShadow lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] lg:text-start text-center px-5 hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "terms-and-conditions" ? "text-primary" : "text-neutral-800"}`}> Terms and Conditions</a>
+                    <a href="#privacy-policy" className={`menuItemShadow lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] px-5 lg:text-start text-center hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "privacy-policy" ? "text-primary" : "text-neutral-800"}`}> Privacy Policy</a>
+                    <a href="#user-policy" className={`menuItemShadow lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] px-5 lg:text-start text-center hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "user-policy" ? "text-primary" : "text-neutral-800"}`}> User Policy</a>
                 </motion.div>
 
                 <motion.div
@@ -82,8 +82,9 @@ const TermAndConditions = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
+                    style={{ boxShadow: '0px 4px 22px 0px rgba(8, 15, 52, 0.03)' }}
                     transition={{ delay: 0.50, duration: 0.3 }}
-                    className="flex flex-col h-full rounded-[24px] shadow-lg bg-white w-full lg:pt-[80px] lg:px-[91px] lg:pb-[108px] md:pt-[70px] md:px-[76px] md:pb-[90px] xs:pt-[50px] xs:px-[25px] xs:pb-[63px] border border-neutral-300">
+                    className="flex flex-col h-full rounded-[24px] bg-white w-full lg:pt-[80px] lg:px-[91px] lg:pb-[108px] md:pt-[70px] md:px-[76px] md:pb-[90px] xs:pt-[50px] xs:px-[25px] xs:pb-[63px] border border-neutral-300">
                     <div id="terms-and-conditions" className="flex flex-col">
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Terms and Conditions</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua massa sed elementum tempus egestas sed sed risus pretium quam amet nulla facilisi morbi tempus iaculis urna <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">et malesuada</a> fames ac turpis egestas sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.</div>
