@@ -47,8 +47,6 @@ body,
   height: 100% !important;
   width: 100% !important;
   scroll-behavior: smooth;
-  overflow-x:hidden;
-
 }
 
 .hover-up {
