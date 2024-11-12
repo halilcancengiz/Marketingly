@@ -1,14 +1,26 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-
+import { motion } from "framer-motion"
 const TermAndConditions = () => {
+
+    const fadeInAnimationVariant = {
+        initial: {
+            opacity: 0,
+            y: 20
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+        }
+    }
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
 
-        <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] px-6 relative bg-[#F8F9FF]">
+        <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] 3xl:pt-[123px] 3xl:pb-[123px] px-6 relative bg-[#F8F9FF]">
 
             <Helmet>
                 <title>AGB und Datenschutz | MARKETINGLY X</title>
@@ -21,14 +33,27 @@ const TermAndConditions = () => {
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex relative">
 
-                <div id="menuItems" className="mt-[63px] mr-10 min-w-[274px] flex flex-col gap-[15px] h-full sticky top-5">
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.15, duration: 0.3 }}
+                    id="menuItems"
+                    className="mt-[63px] mr-10 min-w-[274px] flex flex-col gap-[15px] h-full sticky top-5">
                     <a href="#terms-and-conditions" className="p-[25px] shadow-lg hover-down text-primary bg-white rounded-[10px] xs:text-[18px] text-base tb-bold cursor-pointer hover:shadow-md transition-all duration-300 hover:text-primary">Terms and Conditions</a>
                     <a href="#privacy-policy" className="p-[25px] shadow-lg hover-down text-neutral-800 bg-white rounded-[10px] xs:text-[18px] text-base tb-bold cursor-pointer hover:shadow-md transition-all duration-300 hover:text-primary">Privacy Policy</a>
                     <a href="#user-policy" className="p-[25px] shadow-lg hover-down text-neutral-800 bg-white rounded-[10px] xs:text-[18px] text-base tb-bold cursor-pointer hover:shadow-md transition-all duration-300 hover:text-primary">User Policy</a>
-                </div>
+                </motion.div>
 
 
-                <div className="flex flex-col h-full rounded-[24px] shadow-lg bg-white w-full lg:pt-[80px] lg:px-[91px] lg:pb-[108px] md:pt-[70px] md:px-[76px] md:pb-[90px] xs:pt-[50px] xs:px-[25px] xs:pb-[63px]">
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.50, duration: 0.3 }}
+                    className="flex flex-col h-full rounded-[24px] shadow-lg bg-white w-full lg:pt-[80px] lg:px-[91px] lg:pb-[108px] md:pt-[70px] md:px-[76px] md:pb-[90px] xs:pt-[50px] xs:px-[25px] xs:pb-[63px] border border-neutral-300">
                     <div id="terms-and-conditions" className="flex flex-col">
                         <div className="text-neutral-800 tb-bold lg:text-[38px] xs:text-[32px] text-[26px] md:mb-4 mb-[10px]">Terms and Conditions</div>
                         <div className="text-neutral-600 xs:text-[18px] tb-medium text-base md:mb-8 mb-[26px] leading-[30px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua massa sed elementum tempus egestas sed sed risus pretium quam amet nulla facilisi morbi tempus iaculis urna <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">et malesuada</a> fames ac turpis egestas sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.</div>
@@ -63,7 +88,7 @@ const TermAndConditions = () => {
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Quam lacus suspendisse posuere lorem.</li>
                         </ul>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
 

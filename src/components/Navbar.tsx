@@ -40,6 +40,10 @@ const Navbar = () => {
                     <NavLink className="hover:text-primary transition-all duration-300 tb-medium" to="/services" >
                         Dienstleistungen
                     </NavLink>
+                    <NavLink className="hover:text-primary transition-all duration-300 tb-medium" to="/thank-you-page" >
+                        thanks
+                    </NavLink>
+
                     <div className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative">
                         <div className="tb-medium">Pläne</div>
                         <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
@@ -79,6 +83,7 @@ const Navbar = () => {
             {/* mobile navbar */}
             <nav ref={mobileNavbarRef} className={`mobile-navbar-shadow z-10 lg:hidden absolute left-0 top-full w-full bg-neutral-100 transition-[max-height] duration-300 ease-in-out overflow-hidden border-b-[1px] border-neutral-300 ${isMobileNavOpen ? "max-h-[600px]" : "max-h-0"}`}>
                 <div className="w-full h-full flex flex-col p-6 text-[20px] tb-medium">
+
                     <NavLink className="flex items-center gap-1 hover:text-primary transition-all duration-300 py-[15px]" to="/" >
                         Start
                     </NavLink>
