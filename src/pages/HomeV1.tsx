@@ -18,13 +18,12 @@ import { Helmet } from "react-helmet"
 
 
 export const HomeV1 = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate() 
     // firstSectionAnimations
     const fSectionParagraphArea = useRef<HTMLDivElement | null>(null)
     const isInViewFSectionParagraphArea = useInView(fSectionParagraphArea, { margin: "300px", once: true });
 
     useEffect(() => {
-        // Sayfa yüklendiğinde kaydırmayı en üste al
         window.scrollTo(0, 0);
     }, []);
 
