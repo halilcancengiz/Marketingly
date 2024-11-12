@@ -1,7 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
+
 const TermAndConditions = () => {
+
+    const [activeSection, setActiveSection] = useState<string>("");
 
     const fadeInAnimationVariant = {
         initial: {
@@ -12,10 +15,37 @@ const TermAndConditions = () => {
             opacity: 1,
             y: 0,
         }
-    }
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
+    }, []);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+
+        const handleScrollSpy = (entries: IntersectionObserverEntry[]) => {
+            entries.forEach((entry: IntersectionObserverEntry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        };
+
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5, // Görünürlüğün %50'si aktif olması için yeterli
+        };
+
+        const observer = new IntersectionObserver(handleScrollSpy, options);
+
+        const sections = document.querySelectorAll("section div[id]");
+        sections.forEach((section) => observer.observe(section));
+
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
     }, []);
 
     return (
@@ -40,10 +70,17 @@ const TermAndConditions = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.15, duration: 0.3 }}
                     id="menuItems"
-                    className="mt-[63px] mr-10 min-w-[274px] flex flex-col gap-[15px] h-full sticky top-5">
-                    <a href="#terms-and-conditions" className="p-[25px] shadow-lg hover-down text-primary bg-white rounded-[10px] xs:text-[18px] text-base tb-bold cursor-pointer hover:shadow-md transition-all duration-300 hover:text-primary">Terms and Conditions</a>
-                    <a href="#privacy-policy" className="p-[25px] shadow-lg hover-down text-neutral-800 bg-white rounded-[10px] xs:text-[18px] text-base tb-bold cursor-pointer hover:shadow-md transition-all duration-300 hover:text-primary">Privacy Policy</a>
-                    <a href="#user-policy" className="p-[25px] shadow-lg hover-down text-neutral-800 bg-white rounded-[10px] xs:text-[18px] text-base tb-bold cursor-pointer hover:shadow-md transition-all duration-300 hover:text-primary">User Policy</a>
+                    className="mt-[63px] mr-10 min-w-[274px] flex flex-col gap-[15px] h-full sticky top-5"
+                >
+                    <a href="#terms-and-conditions" className={`p-[25px] hover:text-primary shadow-lg hover-down bg-white rounded-[10px] xs:text-[18px] text-base tb-bold cursor-pointer hover:shadow-md transition-all duration-300 ${activeSection === "terms-and-conditions" ? "text-primary" : "text-neutral-800"}`}>
+                        Terms and Conditions
+                    </a>
+                    <a href="#privacy-policy" className={`p-[25px] hover:text-primary shadow-lg hover-down bg-white rounded-[10px] xs:text-[18px] text-base tb-bold cursor-pointer hover:shadow-md transition-all duration-300 ${activeSection === "privacy-policy" ? "text-primary" : "text-neutral-800"}`}>
+                        Privacy Policy
+                    </a>
+                    <a href="#user-policy" className={`p-[25px] hover:text-primary shadow-lg hover-down bg-white rounded-[10px] xs:text-[18px] text-base tb-bold cursor-pointer hover:shadow-md transition-all duration-300 ${activeSection === "user-policy" ? "text-primary" : "text-neutral-800"}`}>
+                        User Policy
+                    </a>
                 </motion.div>
 
 

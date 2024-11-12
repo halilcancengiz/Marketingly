@@ -10,6 +10,7 @@ const Layout = () => {
   const [contentVisible, setContentVisible] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
   const [previousWidth, setPreviousWidth] = useState(window.innerWidth);
+  const [previousPathname, setPreviousPathname] = useState(location.pathname);
 
   const breakpoints = [480, 768, 992];
 
@@ -34,10 +35,13 @@ const Layout = () => {
     };
   }, []);
 
-  // URL değiştiğinde animasyonu başlat
+  // URL değiştiğinde animasyonu başlat, sayfa içi yönlendirmeleri hariç tut
   useEffect(() => {
-    startAnimation();
-  }, [location]);
+    if (location.pathname !== previousPathname) {
+      startAnimation();
+      setPreviousPathname(location.pathname);
+    }
+  }, [location.pathname, previousPathname]);
 
   // Breakpoint kontrolü ve animasyon tetikleme
   useEffect(() => {
@@ -72,7 +76,7 @@ const Layout = () => {
           className="h-[4px] bg-secondary4 absolute top-0 left-0"
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
-          transition={{ duration: 0.5, delay: 0.03 }} // Gecikme kaldırıldı
+          transition={{ duration: 0.5, delay: 0.03 }}
           style={{ zIndex: 10 }}
           onAnimationComplete={() => setContentVisible(true)}
         />
