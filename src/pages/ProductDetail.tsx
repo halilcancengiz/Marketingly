@@ -21,52 +21,52 @@ const ProductDetail = () => {
                     <div className="size-[90px] border border-neutral-300 md:mb-8 xs:mb-[28px] mb-[25px] rounded-[25px] flex items-center justify-center overflow-hidden">
                         <img src={circlesImage} alt="circle" />
                     </div>
-                    <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
+                    <div className="whitespace-nowrap text-neutral-800 font-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
                         Premium Package
                     </div>
-                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
+                    <div className="leading-[30px] text-neutral-600 text-[18px] font-medium mb-[28px]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
                     </div>
                     <div className="flex flex-col gap-[15px] mb-10">
                         <div className="flex items-center gap-[13px]">
                             <img className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">All in Standard Plan</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">All in Standard Plan</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Content Marketing</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Content Marketing</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Advanced Analytics</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Advanced Analytics</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Premium Support</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Premium Support</div>
                         </div>
                     </div>
-                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit nunc donec vel sem ut ipsum odio duis vel sem et ornare consequat. Bibendum nibh et eget magna at habitant mauris nisi <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">pellentesque morbi massa</a> in eleifend tempus pellentesque sed pellentesque ridiculus aliquam maecenas turpis vulputate pellentesque maecenas egestas platea dictumst.
+                    <div className="leading-[30px] text-neutral-600 text-[18px] font-medium">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit nunc donec vel sem ut ipsum odio duis vel sem et ornare consequat. Bibendum nibh et eget magna at habitant mauris nisi <a href="#" className="hover:text-secondary3 underline text-primary font-medium transition-all duration-300">pellentesque morbi massa</a> in eleifend tempus pellentesque sed pellentesque ridiculus aliquam maecenas turpis vulputate pellentesque maecenas egestas platea dictumst.
                     </div>
                     <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Mollis aliquam ut porttitor leo a diam.</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Enim nec dui nunc mattis enim.</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Vulputate eu scelerisque felis fermentum leo vel.</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Quam lacus suspendisse posuere lorem.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 font-medium leading-[30px] mb-2">Mollis aliquam ut porttitor leo a diam.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 font-medium leading-[30px] mb-2">Enim nec dui nunc mattis enim.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 font-medium leading-[30px] mb-2">Vulputate eu scelerisque felis fermentum leo vel.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 font-medium leading-[30px] mb-2">Quam lacus suspendisse posuere lorem.</li>
                     </ul>
-                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
+                    <div className="leading-[30px] text-neutral-600 text-[18px] font-medium mb-[28px]">
                         Lorem ipsum dolor sit amet consectetur adipiscing elit faucibus elit fermentum adipiscing facilisi eu massa habitant penatibus vitae sed lorem sem facilisi dolor. Faucibus at mattis montes aliquam Iaculis ut morbi nullam enim hac ut donec.
                     </div>
                 </div>
                 <div className="bg-white md:px-[45px] xs:px-[35px] px-[25px] lg:py-[65px] md:py-[60px] xs:py-[50px] py-[42px] lg:max-w-[503px] max-w-[660px] lg:min-w-[395.79px] w-full border rounded-[20px] sticky top-3">
                     <div className="flex flex-col">
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Order your package today</div>
-                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] font-bold mb-[10px] text-neutral-800">Order your package today</div>
+                        <div className="leading-[30px] text-neutral-600 text-[18px] font-medium mb-[28px]">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[20px] text-neutral-800">$ 2,500.00 USD</div>
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] font-bold mb-[20px] text-neutral-800">$ 2,500.00 USD</div>
                         <NavLink to="/contact">
-                            <Button className="w-full tb-bold" variant="primary" size="default">Kontakt</Button>
+                            <Button className="w-full font-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
                     </div>
                 </div>

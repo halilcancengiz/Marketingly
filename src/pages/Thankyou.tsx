@@ -77,7 +77,7 @@ const Thankyou = () => {
                     whileInView="animate"
                     viewport={{ once: true }}
                     transition={{ delay: 0.15, duration: 0.3 }}
-                    className="3xl:text-[58px] lg:text-[48px] text-[41px] text-center lg:leading-[59px] md:leading-[49px] leading-[41px] tb-bold mb-5 text-neutral-800">
+                    className="3xl:text-[58px] lg:text-[48px] text-[41px] text-center lg:leading-[59px] md:leading-[49px] leading-[41px] font-bold mb-5 text-neutral-800">
                     Danke!
                 </motion.div>
                 <motion.div
@@ -86,7 +86,7 @@ const Thankyou = () => {
                     whileInView="animate"
                     viewport={{ once: true }}
                     transition={{ delay: 0.30, duration: 0.3 }}
-                    className="leading-[30px] text-neutral-600 text-[18px] text-center tb-medium">
+                    className="leading-[30px] text-neutral-600 text-[18px] text-center font-medium">
                     Vielen Dank für deine Nachricht unser Team wird sich schnellst möglich bei Ihnen melden.
                 </motion.div>
             </div>
@@ -100,7 +100,7 @@ const Thankyou = () => {
                 className="mt-10"
             >
                 <NavLink to="/">
-                    <Button className="tb-bold">Zurück</Button>
+                    <Button className="font-bold">Zurück</Button>
                 </NavLink>
             </motion.div>
         </div>

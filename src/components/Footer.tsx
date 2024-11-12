@@ -26,12 +26,12 @@ const Footer = () => {
                 initial={{ opacity: 0 }}
                 animate={isInViewFooterRef ? { opacity: 1 } : {}}
                 transition={{ duration: 0.5, ease: "easeIn" }}
-                className="mx-auto max-w-[1221px] w-full flex flex-col items-center justify-between text-[18px] px-6 leading-[20px] tb-medium pt-20 mb-10 text-neutral-600">
+                className="mx-auto max-w-[1221px] w-full flex flex-col items-center justify-between text-[18px] px-6 leading-[20px] font-medium pt-20 mb-10 text-neutral-600">
 
                 <div className='flex lg:flex-nowrap justify-between flex-wrap w-full'>
                     <div className='flex flex-col mr-10 lg:mb-[15px] mb-[35px] max-w-[357px] w-full items-start'>
                         <Logo />
-                        <div className='leading-[30px] mt-[10px] tb-medium'>
+                        <div className='leading-[30px] mt-[10px] font-medium'>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id veniam voluptate blanditiis.
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                                 <img src="https://cdn.prod.website-files.com/6160c9819f1e5978b56545d6/6165df0bde91472c9eeaad9f_icon-3-contact-links-marketing-template.svg" loading="eager" alt="Email Icon" className="w-[37px] bg-primary" />
                             </div>
                             <div className='flex flex-col text-white'>
-                                <div className='tb-bold'>Send us an email</div>
+                                <div className='font-bold'>Send us an email</div>
                                 <div className='text-base truncate'>contact@marketingly.com</div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ const Footer = () => {
                                 <img src="https://cdn.prod.website-files.com/6160c9819f1e5978b56545d6/6164b381a174dab8087b5eca_icon-2-contact-links-marketing-template.svg" loading="eager" alt="Phone Icon" className="w-[37px] bg-white" />
                             </div>
                             <div className='flex flex-col'>
-                                <div className='text-neutral-800 tb-bold group-hover:text-primary'>Give us a call</div>
+                                <div className='text-neutral-800 font-bold group-hover:text-primary'>Give us a call</div>
                                 <div className='text-neutral-600 text-base'>(414) 809 - 2567</div>
                             </div>
                         </div>
@@ -60,8 +60,8 @@ const Footer = () => {
 
                 <div className='mt-20 border-b w-full md:flex-row flex-col gap-y-6 flex items-center justify-between border-neutral-400 pb-2'>
                     <div className='flex items-center gap-7'>
-                        <NavLink to="/" className='hover:text-primary transition-all duration-300 tb-medium'>Impressum</NavLink>
-                        <NavLink to="/datenschutz" className='hover:text-primary transition-all duration-300 tb-medium'>Datenschutz</NavLink>
+                        <NavLink to="/" className='hover:text-primary transition-all duration-300 font-medium'>Impressum</NavLink>
+                        <NavLink to="/datenschutz" className='hover:text-primary transition-all duration-300 font-medium'>Datenschutz</NavLink>
                     </div>
                     <div className='flex gap-4 md:max-w-[311px] w-full xs:min-w-[311px] items-center justify-center md:pb-0 pb-4'>
                         <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>

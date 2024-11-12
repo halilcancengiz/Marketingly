@@ -29,7 +29,7 @@ const Button = ({
 
     const variantClasses = {
         primary: 'border border-primary bg-primary text-white hover:bg-secondary1',
-        secondary: 'border border-primary bg-transparent text-primary hover:bg-primary hover:text-white hover:border-secondary1 tb-medium',
+        secondary: 'border border-primary bg-transparent text-primary hover:bg-primary hover:text-white hover:border-secondary1 font-medium',
     };
 
     const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;

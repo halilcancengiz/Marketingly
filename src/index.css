@@ -2,38 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
-  font-family: 'ThicccBoi-bold';
-  src: url('/src/assets/fonts/TTF/THICCCBOI-Bold.ttf') format('truetype');
-  font-weight: bold;
+  font-family: 'Thicccboi';
+  src: url('./assets/fonts/THICCCBOI-thin.ttf') format('truetype');
+  font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ThicccBoi-medium';
-  src: url('/src/assets/fonts/TTF/THICCCBOI-Medium.ttf') format('truetype');
+  font-family: 'Thicccboi';
+  src: url('./assets/fonts/THICCCBOI-ThicccAF.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('./assets/fonts/THICCCBOI-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('./assets/fonts/THICCCBOI-Reqular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('./assets/fonts/THICCCBOI-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ThicccBoi-reqular';
-  src: url('/src/assets/fonts/TTF/THICCCBOI-Regular.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Thicccboi';
+  src: url('./assets/fonts/THICCCBOI-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('./assets/fonts/THICCCBOI-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('./assets/fonts/THICCCBOI-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Thicccboi';
+  src: url('./assets/fonts/THICCCBOI-Black.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
 }
 
 * {
-  font-family: 'ThicccBoi-reqular' !important;
+  font-family: 'Thicccboi' !important;
 }
 
-.tb-medium {
-  font-family: 'ThicccBoi-medium' !important;
-}
-
-.tb-bold {
-  font-family: 'ThicccBoi-bold' !important;
-}
 
 html,
 body,

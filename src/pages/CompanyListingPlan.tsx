@@ -21,11 +21,11 @@ const CompanyListingPlan = () => {
       </Helmet>
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px]">
         <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
-          <div className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">Unsere Pläne</div>
-          <div className="mb-[15px] lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] tb-bold lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] ">
+          <div className="md:mb-5 xs:mb-[15px] mb-[10px] font-medium text-base leading-[18px] uppercase">Unsere Pläne</div>
+          <div className="mb-[15px] lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] font-bold lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] ">
             Pläne für jeden Bedarf
           </div>
-          <div className="tb-medium text-[18px] leading-[30.006px]">Unsere Preismodelle bieten flexible Lösungen für jedes Budget und jeden Bedarf.</div>
+          <div className="font-medium text-[18px] leading-[30.006px]">Unsere Preismodelle bieten flexible Lösungen für jedes Budget und jeden Bedarf.</div>
         </div>
       </div>
       <section className="md:-mt-28 -mt-20 z-[2] px-6 flex flex-col">
@@ -36,30 +36,30 @@ const CompanyListingPlan = () => {
               <img className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
             </div>
 
-            <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+            <div className="font-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
               Standard
             </div>
-            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </div>
+            <div className="text-[18px] leading-[30.006px] text-neutral-600 font-medium">Basis-Paket für den Start.<span className="lg:flex hidden"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </div>
             <hr className="w-full my-[35px]" />
             <div className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Social Media Marketing</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Paid Advertising</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">SEO: Search Engine Optimization</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Normal Support</div>
               </div>
             </div>
-            <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
+            <div className="lg:text-[24px] xs:text-[22px] text-[20px] font-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
 
           </NavLink>
 
@@ -68,30 +68,30 @@ const CompanyListingPlan = () => {
             <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
               <img className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
             </div>
-            <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+            <div className="font-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
               Premium
             </div>
-            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
+            <div className="text-[18px] leading-[30.006px] text-neutral-600 font-medium">Ideales Paket für ambitionierte Ziele.</div>
             <hr className="w-full my-[35px]" />
             <div className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Social Media Marketing</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Paid Advertising</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">SEO: Search Engine Optimization</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Normal Support</div>
               </div>
             </div>
-            <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
+            <div className="lg:text-[24px] xs:text-[22px] text-[20px] font-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
 
           </NavLink>
 
@@ -100,48 +100,48 @@ const CompanyListingPlan = () => {
             <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
               <img className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
             </div>
-            <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+            <div className="font-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
               Deluxe
             </div>
-            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Umfassende Lösung für maximale Ergebnisse.</div>
+            <div className="text-[18px] leading-[30.006px] text-neutral-600 font-medium">Umfassende Lösung für maximale Ergebnisse.</div>
             <hr className="w-full my-[35px]" />
             <div className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Social Media Marketing</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Paid Advertising</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">SEO: Search Engine Optimization</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                <div className="leading-[20px] text-neutral-800 text-[18px] font-medium">Normal Support</div>
               </div>
             </div>
-            <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
+            <div className="lg:text-[24px] xs:text-[22px] text-[20px] font-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
 
           </NavLink>
         </div>
       </section>
       <section className="3xl:pb-[200px] lg:pb-[160px] md:pb-[128px] xs:pb-[102px] pb-[88px] px-6 max-w-[419px] w-full mx-auto flex flex-col items-center justify-center text-center lg:mt-[60px] mt-10">
-        <div className="text-neutral-800 mb-[15px] tb-bold lg:text-[24px] md:text-[22px] text-[20px] lg:leading-[34.008px] md:leading-[31.174px] leading-[28.34px]">Haben wir Ihr Interesse geweckt?</div>
-        <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] tb-medium">Wir freuen uns zusammen mit Ihnen Ihre Ziele zu erfüllen.</div>
+        <div className="text-neutral-800 mb-[15px] font-bold lg:text-[24px] md:text-[22px] text-[20px] lg:leading-[34.008px] md:leading-[31.174px] leading-[28.34px]">Haben wir Ihr Interesse geweckt?</div>
+        <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] font-medium">Wir freuen uns zusammen mit Ihnen Ihre Ziele zu erfüllen.</div>
         <div>
-          <Button className="tb-bold" variant="primary">Kontakt</Button>
+          <Button className="font-bold" variant="primary">Kontakt</Button>
         </div>
       </section>
 
       <section className="3xl:py-[170px] lg:py-[136px] md:py-[110px] xs:py-[88px] py-[70px] px-6 overflow-hidden flex items-center justify-center relative bg-neutral-200">
         <div className="flex flex-col max-w-[660px] w-full mx-auto">
           <div className="max-w-[660px] mb-10 lg:w-auto w-full min-w-[288px] text-center flex flex-col lg:mr-10 px-6">
-            <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Häufig gestellte Fragen</div>
-            <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Sie haben Fragen, wir haben die Antworten</div>
-            <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Ihre Frage ist nicht dabei? Kontaktieren Sie uns und wir antworten Ihnen unverzüglich</div>
+            <div className="text-primary uppercase mb-5 font-medium text-base tracking-[1.6px]">Häufig gestellte Fragen</div>
+            <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] font-bold text-neutral-800 mb-5">Sie haben Fragen, wir haben die Antworten</div>
+            <div className="leading-[30px] text-neutral-600 text-[18px] font-medium">Ihre Frage ist nicht dabei? Kontaktieren Sie uns und wir antworten Ihnen unverzüglich</div>
           </div>
           <div className="flex flex-col gap-4">
             <Accordion
