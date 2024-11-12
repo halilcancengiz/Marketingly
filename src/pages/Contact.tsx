@@ -32,9 +32,9 @@ const Contact = () => {
             <section className="3xl:pt-[120px] lg:pt-[96px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] px-6  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">
                     <div className="max-w-[487px] lg:mb-0 mb-20 mt-[66px] lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10 ">
-                        <div className="text-primary uppercase mb-5 font-medium text-base tracking-[1.6px]">Kontakt</div>
-                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] font-bold text-neutral-800 mb-5">Jetzt Anfragen</div>
-                        <div className="leading-[30px] text-neutral-600 text-[18px] font-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
+                        <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Kontakt</div>
+                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Jetzt Anfragen</div>
+                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
                         <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap mb-[60px]'>
                             <div style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 0px 0px" }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
                                 <div className="bg-[#E4E2FF] size-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group/parent">
@@ -45,7 +45,7 @@ const Contact = () => {
                                 </div>
 
                                 <div className='flex flex-col text-white'>
-                                    <div className='font-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>contact@marketingly.com </div>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>contact@marketingly.com </div>
                                 </div>
                             </div>
                             <div style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 0px 0px" }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
@@ -65,12 +65,12 @@ const Contact = () => {
                                 </div>
 
                                 <div className='flex flex-col text-white'>
-                                    <div className='font-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>(414) 809 - 2567</div>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>(414) 809 - 2567</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="text-[24px] font-bold mb-[30px]">
+                        <div className="text-[24px] tb-bold mb-[30px]">
                             Folge uns!
                         </div>
 
@@ -99,32 +99,32 @@ const Contact = () => {
                     <div className="lg:max-w-[600px] lg:min-w-[542px] border border-gray-200/60 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] section-6-shadow rounded-[24px] bg-white z-[2]">
                         <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px]">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base font-bold">E-Mail</div>
-                                <input required placeholder="name@domain.de" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base font-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">E-Mail</div>
+                                <input required placeholder="name@domain.de" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base font-bold">Telefonnummer</div>
-                                <input placeholder="0123 4567890" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base font-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Telefonnummer</div>
+                                <input placeholder="0123 4567890" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base font-bold">Firma</div>
-                                <input placeholder="Mustermann GmbH" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base font-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Firma</div>
+                                <input placeholder="Mustermann GmbH" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base font-bold">Straße, Nr.</div>
-                                <input placeholder="Musterstraße 1" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base font-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Straße, Nr.</div>
+                                <input placeholder="Musterstraße 1" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base font-bold">PLZ</div>
-                                <input placeholder="12345" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base font-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">PLZ</div>
+                                <input placeholder="12345" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base font-bold">Ort</div>
-                                <input placeholder="Musterstadt" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base font-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Ort</div>
+                                <input placeholder="Musterstadt" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
 
                             <div className="col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base font-bold">Nachricht</div>
+                                <div className="xs:text-[18px] text-base tb-bold">Nachricht</div>
                                 <textarea placeholder="Nachricht" className="focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300" name="" id=""></textarea>
                             </div>
 
@@ -132,10 +132,10 @@ const Contact = () => {
                                 <label>
                                     <input required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </label>
-                                <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap font-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer font-medium">Datenschutzerkärung</NavLink></div>
+                                <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
                             </div>
                             <div className="lg:flex hidden">
-                                <Button type="submit" className="font-bold">Abenden</Button>
+                                <Button type="submit" className="tb-bold">Abenden</Button>
                             </div>
                         </form>
                     </div>
@@ -158,9 +158,9 @@ const Contact = () => {
             <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] px-6 overflow-hidden flex items-center justify-center relative bg-neutral-200">
                 <div className="flex flex-col max-w-[660px] w-full mx-auto">
                     <div className="max-w-[660px] mb-10 lg:w-auto w-full min-w-[288px] text-center flex flex-col lg:mr-10 px-6">
-                        <div className="text-primary uppercase mb-5 font-medium text-base tracking-[1.6px]">Häufig gestellte Fragen</div>
-                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] font-bold text-neutral-800 mb-5">Sie haben Fragen, wir haben die Antworten</div>
-                        <div className="leading-[30px] text-neutral-600 text-[18px] font-medium">Ihre Frage ist nicht dabei? Kontaktieren Sie uns und wir antworten Ihnen unverzüglich</div>
+                        <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Häufig gestellte Fragen</div>
+                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Sie haben Fragen, wir haben die Antworten</div>
+                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Ihre Frage ist nicht dabei? Kontaktieren Sie uns und wir antworten Ihnen unverzüglich</div>
                     </div>
                     <div className="flex flex-col gap-4">
                         <Accordion

@@ -17,17 +17,17 @@ const NotFound = () => {
                 <meta name="robots" content="noindex, nofollow" />
             </Helmet>
             <div className='flex flex-col z-[2]'>
-                <div className='text-center md:text-[164px] md:leading-[131px] xs:text-[131px] xs:leading-[104px] text-[105px] leading-[84px] lg:mb-[50px] md:mb-10 xs:mb-[30px] mb-5 font-bold text-white transition-all duration-300'>
+                <div className='text-center md:text-[164px] md:leading-[131px] xs:text-[131px] xs:leading-[104px] text-[105px] leading-[84px] lg:mb-[50px] md:mb-10 xs:mb-[30px] mb-5 tb-bold text-white transition-all duration-300'>
                     404
                 </div>
-                <div className='text-center lg:text-[54px] md:text-[45px] xs:[38px] text-[32px] text-white font-bold transition-all duration-300'>
+                <div className='text-center lg:text-[54px] md:text-[45px] xs:[38px] text-[32px] text-white tb-bold transition-all duration-300'>
                     Die Seite ist nicht verfügbar!
                 </div>
-                <div className='text-center text-white font-medium text-[18px] mb-10 transition-all duration-300'>
+                <div className='text-center text-white tb-medium text-[18px] mb-10 transition-all duration-300'>
                     Oh, es scheint so, als ob da etwas schiefgelaufen ist.
                 </div>
                 <NavLink className="mx-auto" to="/">
-                    <Button className='bg-white !text-primary font-bold hover:!text-white hover:bg-secondary3' variant='primary' size='default'>Zurück</Button>
+                    <Button className='bg-white !text-primary tb-bold hover:!text-white hover:bg-secondary3' variant='primary' size='default'>Zurück</Button>
                 </NavLink>
             </div>
 
