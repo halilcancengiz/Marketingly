@@ -40,9 +40,6 @@ const Navbar = () => {
                     <NavLink className="hover:text-primary transition-all duration-300 tb-medium" to="/services" >
                         Dienstleistungen
                     </NavLink>
-                    <NavLink className="hover:text-primary transition-all duration-300 tb-medium" to="/thank-you-page" >
-                        thanks
-                    </NavLink>
 
                     <div className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative">
                         <div className="tb-medium">Pläne</div>
