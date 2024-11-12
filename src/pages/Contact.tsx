@@ -34,10 +34,10 @@ const Contact = () => {
         }
     };
 
-    // useEffect(() => {
-    //     // Sayfa yüklendiğinde kaydırmayı en üste al
-    //     window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+        // Sayfa yüklendiğinde kaydırmayı en üste al
+        window.scrollTo(0, 0);
+    }, []);
     const navigate = useNavigate()
 
     return (
