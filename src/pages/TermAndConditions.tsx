@@ -20,7 +20,7 @@ const TermAndConditions = () => {
 
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
-        const yOffset = -80; // Boşluk bırakmak istediğiniz piksel değeri
+        const yOffset = -80;
 
         if (element) {
             const yPosition = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
@@ -30,7 +30,7 @@ const TermAndConditions = () => {
 
 
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
 
         const handleScrollSpy = (entries: IntersectionObserverEntry[]) => {
             entries.forEach((entry: IntersectionObserverEntry) => {
@@ -90,8 +90,8 @@ const TermAndConditions = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    style={{ boxShadow: '0px 4px 22px 0px rgba(8, 15, 52, 0.03)' }}
                     transition={{ delay: 0.50, duration: 0.3 }}
+                    style={{ boxShadow: '0px 4px 22px 0px rgba(8, 15, 52, 0.03)' }}
                     className="flex flex-col h-full rounded-[24px] bg-white w-full lg:pt-[80px] lg:px-[91px] lg:pb-[108px] md:pt-[70px] md:px-[76px] md:pb-[90px] xs:pt-[50px] xs:px-[25px] xs:pb-[63px] border border-neutral-300">
                     <div id="terms-and-conditions" className="flex flex-col">
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Terms and Conditions</div>

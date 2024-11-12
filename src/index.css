@@ -24,6 +24,10 @@
   font-style: normal;
 }
 
+textarea::placeholder{
+  font-weight: bold!important;
+}
+
 * {
   font-family: 'ThicccBoi-reqular' !important;
 }

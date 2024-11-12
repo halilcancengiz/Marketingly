@@ -15,9 +15,9 @@ const Accordion = ({ title = "title", content = "content" }: Props) => {
     };
 
     return (
-        <div onClick={toggleAccordion} className="cursor-pointer bg-white shadow md:pt-[42px] xs:pt-[35px] pt-[30px] md:pb-[45px] xs:pb-[38px] pb-[32px] xs:px-[34px] px-[25px] border border-neutral-300 md:rounded-[24px] xs:rounded-[20px] rounded-[15px]">
+        <div style={{ boxShadow: "0px 4px 22px 0px rgba(8, 15, 52, 0.03)" }} onClick={toggleAccordion} className="cursor-pointer bg-white md:pt-[42px] xs:pt-[35px] pt-[30px] md:pb-[45px] xs:pb-[38px] pb-[32px] xs:px-[34px] px-[25px] border border-neutral-300 md:rounded-[24px] xs:rounded-[20px] rounded-[15px]">
             <div className="flex items-center justify-between">
-                <h3 className="md:text-[22px] xs:text-[20px] text-[18px] mr-[10px] tb-bold text-neutral-800">{title}</h3>
+                <h3 className="md:text-[22px] xs:text-[20px] text-[18px] md:leading-[28.006px] xs:leading-[25.46px] leading-[22.914px] mr-[10px] tb-bold text-neutral-800">{title}</h3>
                 <div className={`size-[34px] flex transition-all duration-300 items-center justify-center rounded-[8px] ${isOpen ? "bg-primary rotate-90" : "bg-[#EDEBFF] rotate-0"} `}>
                     <IoIosArrowDown
                         size="24"

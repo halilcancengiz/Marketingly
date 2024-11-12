@@ -9,13 +9,35 @@ import whatsappIcon from "../assets/images/whatsapp.png"
 import Accordion from "../components/Accordion"
 import { useEffect } from "react"
 import { Helmet } from "react-helmet"
-
+import { motion } from "framer-motion"
 
 const Contact = () => {
-    useEffect(() => {
-        // Sayfa yüklendiğinde kaydırmayı en üste al
-        window.scrollTo(0, 0);
-    }, []);
+    const fadeInAnimationVariant = {
+        initial: {
+            opacity: 0,
+            y: 10
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+        }
+    };
+
+    const scaleAnimationVariant = {
+        initial: {
+            opacity: 0,
+            scale: 0.7
+        },
+        animate: {
+            opacity: 1,
+            scale: 1
+        }
+    };
+
+    // useEffect(() => {
+    //     // Sayfa yüklendiğinde kaydırmayı en üste al
+    //     window.scrollTo(0, 0);
+    // }, []);
     const navigate = useNavigate()
 
     return (
@@ -31,7 +53,13 @@ const Contact = () => {
             </Helmet>
             <section className="3xl:pt-[120px] lg:pt-[96px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] px-6  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">
-                    <div className="max-w-[487px] lg:mb-0 mb-20 mt-[66px] lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10 ">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.40, duration: 0.3 }}
+                        className="max-w-[487px] lg:mb-0 mb-20 mt-[66px] lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10 ">
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Kontakt</div>
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Jetzt Anfragen</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
@@ -95,37 +123,43 @@ const Contact = () => {
                             </NavLink>
                         </div>
 
-                    </div>
-                    <div className="lg:max-w-[600px] lg:min-w-[542px] border border-gray-200/60 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] section-6-shadow rounded-[24px] bg-white z-[2]">
+                    </motion.div>
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.80, duration: 0.3 }}
+                        className="lg:max-w-[600px] lg:min-w-[542px] border border-gray-200/60 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] section-6-shadow rounded-[24px] bg-white z-[2]">
                         <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px]">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">E-Mail</div>
-                                <input required placeholder="name@domain.de" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input required placeholder="name@domain.de" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">Telefonnummer</div>
-                                <input placeholder="0123 4567890" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input placeholder="0123 4567890" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">Firma</div>
-                                <input placeholder="Mustermann GmbH" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input placeholder="Mustermann GmbH" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">Straße, Nr.</div>
-                                <input placeholder="Musterstraße 1" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input placeholder="Musterstraße 1" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">PLZ</div>
-                                <input placeholder="12345" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input placeholder="12345" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">Ort</div>
-                                <input placeholder="Musterstadt" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input placeholder="Musterstadt" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
 
                             <div className="col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">Nachricht</div>
-                                <textarea placeholder="Nachricht" className="focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300" name="" id=""></textarea>
+                                <textarea placeholder="Nachricht" className="placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300" name="" id=""></textarea>
                             </div>
 
                             <div className="col-span-2 flex items-start gap-3">
@@ -138,31 +172,91 @@ const Contact = () => {
                                 <Button type="submit" className="tb-bold">Abenden</Button>
                             </div>
                         </form>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className="absolute lg:visible invisible right-0 top-0 h-full bg-primary 2xl:w-[45%] lg:w-[32%] z-[1]">
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    className="absolute lg:visible invisible right-0 top-0 h-full bg-primary 2xl:w-[45%] lg:w-[32%] z-[1]">
                     <div className="w-full h-full relative">
-                        <div className="absolute lg:w-[65%] w-full aspect-square rounded-full right-0 max-w-[318px] bg-secondary2"></div>
-                        <div style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></div>
-                        <div className="absolute lg:w-[57%] w-full aspect-square right-[87%] bottom-0 max-w-[290px] bg-secondary1"></div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1, duration: 0.3 }}
+                            className="absolute lg:w-[65%] w-full aspect-square rounded-full right-0 max-w-[318px] bg-secondary2"></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1, duration: 0.3 }}
+                            style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1, duration: 0.3 }}
+                            className="absolute lg:w-[57%] w-full aspect-square right-[87%] bottom-0 max-w-[290px] bg-secondary1"></motion.div>
                     </div>
-                </div>
-                <div className="absolute lg:invisible visible bottom-0 bg-primary 2xl:w-[45%] lg:w-[32%] w-full lg:h-full h-1/2 z-[1]">
+                </motion.div>
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute lg:invisible visible bottom-0 bg-primary 2xl:w-[45%] lg:w-[32%] w-full lg:h-full h-1/2 z-[1]">
                     <div className="w-full h-full relative">
-                        <div className="absolute md:w-[65%] w-[40%] aspect-square rounded-full left-0 bottom-0 max-w-[318px]  bg-secondary2"></div>
-                        <div style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></div>
-                        <div className="absolute lg:w-[57%] md: w-full aspect-square left-0 top-0 max-w-[290px] bg-secondary1"></div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1, duration: 0.3 }}
+                            className="absolute md:w-[65%] w-[40%] aspect-square rounded-full left-0 bottom-0 max-w-[318px]  bg-secondary2"></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1, duration: 0.3 }}
+                            style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1, duration: 0.3 }}
+                            className="absolute lg:w-[57%] md: w-full aspect-square left-0 top-0 max-w-[290px] bg-secondary1"></motion.div>
                     </div>
-                </div>
+                </motion.div>
             </section>
             <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] px-6 overflow-hidden flex items-center justify-center relative bg-neutral-200">
                 <div className="flex flex-col max-w-[660px] w-full mx-auto">
-                    <div className="max-w-[660px] mb-10 lg:w-auto w-full min-w-[288px] text-center flex flex-col lg:mr-10 px-6">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.50, duration: 0.3 }}
+                        className="max-w-[660px] mb-10 lg:w-auto w-full min-w-[288px] text-center flex flex-col lg:mr-10 px-6">
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Häufig gestellte Fragen</div>
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Sie haben Fragen, wir haben die Antworten</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Ihre Frage ist nicht dabei? Kontaktieren Sie uns und wir antworten Ihnen unverzüglich</div>
-                    </div>
-                    <div className="flex flex-col gap-4">
+                    </motion.div>
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.50, duration: 0.3 }}
+                        className="flex flex-col gap-4">
                         <Accordion
                             title="Könnt ihr auch kleinen Startups helfen?"
                             content="Ja, wir unterstützen Unternehmen jeder Größe, einschließlich Neugründungen." />
@@ -195,7 +289,7 @@ const Contact = () => {
                             content="Wir fokussieren uns aktuell auf Suchmaschinenoptimierung (SEO), bezahlte Anzeigen (Ads) und Unternehmenslistungen." />
 
 
-                    </div>
+                    </motion.div>
                 </div>
             </section>
         </div>
