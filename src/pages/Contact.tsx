@@ -64,7 +64,7 @@ const Contact = () => {
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Jetzt Anfragen</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
                         <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap mb-[60px]'>
-                            <div style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 0px 0px" }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
+                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
                                 <div className="bg-[#E4E2FF] size-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group/parent">
                                     <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                         <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="#4A3AFF" />
@@ -76,7 +76,7 @@ const Contact = () => {
                                     <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>contact@marketingly.com </div>
                                 </div>
                             </div>
-                            <div style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 0px 0px" }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
+                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
                                 <div className="bg-[#FFE8E8] size-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group">
                                     <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                         <g clip-path="url(#clip0)">
@@ -130,36 +130,46 @@ const Contact = () => {
                         whileInView="animate"
                         viewport={{ once: true }}
                         transition={{ delay: 0.80, duration: 0.3 }}
-                        className="lg:max-w-[600px] lg:min-w-[542px] border border-gray-200/60 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] section-6-shadow rounded-[24px] bg-white z-[2]">
-                        <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px]">
+                        style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
+                        className="lg:max-w-[600px] max-w-[660px] mx-auto lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
+                    >
+                        <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px] bg-white">
+                            <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
+                                <div className="xs:text-[18px] text-base tb-bold">Vorname</div>
+                                <input required placeholder="Max" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                            </div>
+                            <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
+                                <div className="xs:text-[18px] text-base tb-bold">Name</div>
+                                <input required placeholder="Mustermann" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                            </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <div className="xs:text-[18px] text-base tb-bold">E-Mail</div>
-                                <input required placeholder="name@domain.de" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input required placeholder="name@domain.de" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="email" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base tb-bold">Telefonnummer</div>
-                                <input placeholder="0123 4567890" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Telefonnummer<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
+                                <input placeholder="0123 4567890" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="number" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base tb-bold">Firma</div>
+                                <div className="xs:text-[18px] text-base tb-bold">Firma<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
                                 <input placeholder="Mustermann GmbH" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base tb-bold">Straße, Nr.</div>
+                                <div className="xs:text-[18px] text-base tb-bold">Straße, Nr.<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
                                 <input placeholder="Musterstraße 1" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base tb-bold">PLZ</div>
-                                <input placeholder="12345" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">PLZ<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
+                                <input placeholder="12345" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="number" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base tb-bold">Ort</div>
+                                <div className="xs:text-[18px] text-base tb-bold">Ort<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
                                 <input placeholder="Musterstadt" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
 
                             <div className="col-span-2 flex flex-col gap-3">
-                                <div className="xs:text-[18px] text-base tb-bold">Nachricht</div>
-                                <textarea placeholder="Nachricht" className="placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300" name="" id=""></textarea>
+                                <div className="xs:text-[18px] text-base tb-bold">Nachricht<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
+                                <textarea placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300" name="" id=""></textarea>
                             </div>
 
                             <div className="col-span-2 flex items-start gap-3">
@@ -168,74 +178,27 @@ const Contact = () => {
                                 </label>
                                 <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
                             </div>
-                            <div className="lg:flex hidden">
+                            <div>
                                 <Button type="submit" className="tb-bold">Absenden</Button>
                             </div>
                         </form>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            style={{ clipPath: "polygon(0 0, 0% 100%, 100% 0)" }} className="absolute -left-[36px] -top-[49px] size-[205px] z-[-1] bg-secondary2"></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.8, duration: 0.3 }}
+                            className="absolute -right-[81px] -bottom-[67px] size-[208px] z-[-1] bg-primary"></motion.div>
+
                     </motion.div>
                 </div>
-                <motion.div
-                    variants={fadeInAnimationVariant}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.9, duration: 0.3 }}
-                    className="absolute lg:visible invisible right-0 top-0 h-full bg-primary 2xl:w-[45%] lg:w-[32%] z-[1]">
-                    <div className="w-full h-full relative">
-                        <motion.div
-                            variants={scaleAnimationVariant}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }}
-                            transition={{ delay: 1, duration: 0.3 }}
-                            className="absolute lg:w-[65%] w-full aspect-square rounded-full right-0 max-w-[318px] bg-secondary2"></motion.div>
-                        <motion.div
-                            variants={scaleAnimationVariant}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }}
-                            transition={{ delay: 1, duration: 0.3 }}
-                            style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></motion.div>
-                        <motion.div
-                            variants={scaleAnimationVariant}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }}
-                            transition={{ delay: 1, duration: 0.3 }}
-                            className="absolute lg:w-[57%] w-full aspect-square right-[87%] bottom-0 max-w-[290px] bg-secondary1"></motion.div>
-                    </div>
-                </motion.div>
-                <motion.div
-                    variants={fadeInAnimationVariant}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
-                    className="absolute lg:invisible visible bottom-0 bg-primary 2xl:w-[45%] lg:w-[32%] w-full lg:h-full h-1/2 z-[1]">
-                    <div className="w-full h-full relative">
-                        <motion.div
-                            variants={scaleAnimationVariant}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }}
-                            transition={{ delay: 1, duration: 0.3 }}
-                            className="absolute md:w-[65%] w-[40%] aspect-square rounded-full left-0 bottom-0 max-w-[318px]  bg-secondary2"></motion.div>
-                        <motion.div
-                            variants={scaleAnimationVariant}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }}
-                            transition={{ delay: 1, duration: 0.3 }}
-                            style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }} className="absolute lg:w-[57%] w-full aspect-square right-0 bottom-0 max-w-[290px] bg-secondary3"></motion.div>
-                        <motion.div
-                            variants={scaleAnimationVariant}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }}
-                            transition={{ delay: 1, duration: 0.3 }}
-                            className="absolute lg:w-[57%] md: w-full aspect-square left-0 top-0 max-w-[290px] bg-secondary1"></motion.div>
-                    </div>
-                </motion.div>
             </section>
             <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] px-6 overflow-hidden flex items-center justify-center relative bg-neutral-200">
                 <div className="flex flex-col max-w-[660px] w-full mx-auto">

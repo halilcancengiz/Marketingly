@@ -24,8 +24,18 @@
   font-style: normal;
 }
 
-textarea::placeholder{
-  font-weight: bold!important;
+.bplaceholder::placeholder{
+  font-weight: 500 !important;
+  font-family: 'ThicccBoi-medium' !important;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 * {

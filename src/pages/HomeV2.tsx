@@ -467,45 +467,53 @@ export const HomeV2 = () => {
                         </div>
                     </div>
                     <div className="lg:max-w-[600px] lg:min-w-[542px] border border-gray-200/60 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] section-6-shadow rounded-[24px] bg-white z-[2]">
-                        <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px]">
+                        <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px] bg-white">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="text-[18px] tb-bold">E-Mail</div>
-                                <input required placeholder="name@domain.de" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none text-[18px] tb-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Vorname</div>
+                                <input required placeholder="Max" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="text-[18px] tb-bold">Telefonnummer</div>
-                                <input placeholder="0123 4567890" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none text-[18px] tb-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Name</div>
+                                <input required placeholder="Mustermann" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="text-[18px] tb-bold">Firma</div>
-                                <input placeholder="Mustermann GmbH" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none text-[18px] tb-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">E-Mail</div>
+                                <input required placeholder="name@domain.de" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="email" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="text-[18px] tb-bold">Straße, Nr.</div>
-                                <input placeholder="Musterstraße 1" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none text-[18px] tb-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Telefonnummer<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
+                                <input placeholder="0123 4567890" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="number" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="text-[18px] tb-bold">PLZ</div>
-                                <input placeholder="12345" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none text-[18px] tb-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Firma<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
+                                <input placeholder="Mustermann GmbH" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <div className="text-[18px] tb-bold">Ort</div>
-                                <input placeholder="Musterstadt" className="py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none text-[18px] tb-medium" type="text" />
+                                <div className="xs:text-[18px] text-base tb-bold">Straße, Nr.<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
+                                <input placeholder="Musterstraße 1" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                            </div>
+                            <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
+                                <div className="xs:text-[18px] text-base tb-bold">PLZ<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
+                                <input placeholder="12345" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="number" />
+                            </div>
+                            <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
+                                <div className="xs:text-[18px] text-base tb-bold">Ort<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
+                                <input placeholder="Musterstadt" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
 
                             <div className="col-span-2 flex flex-col gap-3">
-                                <div className="text-[18px] tb-bold">Nachricht</div>
-                                <textarea placeholder="Nachricht" className="focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 text-[18px] resize-none hover:border-primary focus:border-primary transition-colors duration-300" name="" id=""></textarea>
+                                <div className="xs:text-[18px] text-base tb-bold">Nachricht<span className="tb-medium text-neutral-600 ml-1">(optional)</span></div>
+                                <textarea placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300" name="" id=""></textarea>
                             </div>
 
                             <div className="col-span-2 flex items-start gap-3">
                                 <label>
                                     <input required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </label>
-                                <div className="text-[18px] text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
+                                <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
                             </div>
-                            <div className="col-span-2">
-                                <Button type="submit" className="md:w-auto w-full tb-bold">Absenden</Button>
+                            <div>
+                                <Button type="submit" className="tb-bold">Absenden</Button>
                             </div>
                         </form>
                     </div>
