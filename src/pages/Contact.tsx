@@ -72,9 +72,9 @@ const Contact = () => {
                                     </svg>
                                 </div>
 
-                                <div className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>contact@marketingly.com </div>
-                                </div>
+                                <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${import.meta.env.VITE_CONTACT_EMAIL}`}</div>
+                                </a>
                             </div>
                             <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
                                 <div className="bg-[#FFE8E8] size-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group">
@@ -92,9 +92,9 @@ const Contact = () => {
                                     </svg>
                                 </div>
 
-                                <div className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>(414) 809 - 2567</div>
-                                </div>
+                                <a href={`tel:${import.meta.env.VITE_CONTACT_PHONE}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${import.meta.env.VITE_CONTACT_PHONE}`}</div>
+                                </a>
                             </div>
                         </div>
 

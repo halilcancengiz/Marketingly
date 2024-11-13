@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
 
                     <div className='flex gap-x-[32px] md:gap-y-0 gap-y-4 md:flex-nowrap flex-wrap '>
-                        <div className='footer-card-shadow gap-x-[17px] xs:max-h-[124px] xs:py-10 py-[33px] xs:px-8 px-[25px] md:max-w-[311px] w-full xs:min-w-[311px] gap-y-3 flex xs:flex-row flex-col xs:items-center bg-primary rounded-[10px] hover:bg-secondary1 hover-down'>
+                        <a href='mailto:contact@marketingly.com' className='footer-card-shadow gap-x-[17px] xs:max-h-[124px] xs:py-10 py-[33px] xs:px-8 px-[25px] md:max-w-[311px] w-full xs:min-w-[311px] gap-y-3 flex xs:flex-row flex-col xs:items-center bg-primary rounded-[10px] hover:bg-secondary1 hover-down'>
                             <div className='min-w-[37px]'>
                                 <img src="https://cdn.prod.website-files.com/6160c9819f1e5978b56545d6/6165df0bde91472c9eeaad9f_icon-3-contact-links-marketing-template.svg" loading="eager" alt="Email Icon" className="w-[37px] bg-primary" />
                             </div>
@@ -45,8 +45,8 @@ const Footer = () => {
                                 <div className='tb-bold'>Send us an email</div>
                                 <div className='text-base truncate'>contact@marketingly.com</div>
                             </div>
-                        </div>
-                        <div className='footer-card-shadow group gap-x-[17px] xs:max-h-[124px] xs:py-10 py-[33px] xs:px-8 px-[25px] md:max-w-[311px] w-full xs:min-w-[311px] gap-y-3 flex xs:flex-row flex-col xs:items-center border-[1px] border-neutral-300 rounded-[10px] hover-down'>
+                        </a>
+                        <a href='tel:(414) 809 - 2567' className='footer-card-shadow group gap-x-[17px] xs:max-h-[124px] xs:py-10 py-[33px] xs:px-8 px-[25px] md:max-w-[311px] w-full xs:min-w-[311px] gap-y-3 flex xs:flex-row flex-col xs:items-center border-[1px] border-neutral-300 rounded-[10px] hover-down'>
                             <div className='min-w-[37px]'>
                                 <img src="https://cdn.prod.website-files.com/6160c9819f1e5978b56545d6/6164b381a174dab8087b5eca_icon-2-contact-links-marketing-template.svg" loading="eager" alt="Phone Icon" className="w-[37px] bg-white" />
                             </div>
@@ -54,7 +54,7 @@ const Footer = () => {
                                 <div className='text-neutral-800 tb-bold group-hover:text-primary'>Give us a call</div>
                                 <div className='text-neutral-600 text-base'>(414) 809 - 2567</div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
