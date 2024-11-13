@@ -107,7 +107,7 @@ const Navbar = () => {
 
 
                     <div className="py-[15px] mt-[60px]">
-                        <NavLink to="/">
+                        <NavLink to="/contact">
                             <Button className="w-full h-16 text-base tb-bold" variant="primary" size="default">
                                 Kontakt
                             </Button>
