@@ -16,7 +16,7 @@ const Button = ({
     children,
 }: Props) => {
     useEffect(() => {
-        console.log(variant, size);
+
     }, [variant, size]);
 
     const baseClasses = 'flex items-center justify-center rounded-[8px] transition-all duration-300 hover-up';

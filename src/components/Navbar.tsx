@@ -40,7 +40,7 @@ const Navbar = () => {
                     <NavLink className="hover:text-primary transition-all duration-300 tb-medium" to="/services" >
                         Dienstleistungen
                     </NavLink>
-                   
+
                     <div className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative">
                         <div className="tb-medium">Pläne</div>
                         <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
@@ -88,7 +88,7 @@ const Navbar = () => {
                         Dienstleistungen
                     </NavLink>
 
-                    <NavLink className="flex flex-col items-start gap-1 group transition-colors duration-300 py-[15px]" to="/">
+                    <div className="flex flex-col items-start gap-1 group transition-colors duration-300 py-[15px]" >
                         <div className="flex items-center gap-1 group-hover:text-primary">
                             Pläne <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
                         </div>
@@ -103,7 +103,7 @@ const Navbar = () => {
                                 <TbPointFilled /> Unternehmenslistung
                             </NavLink>
                         </div>
-                    </NavLink>
+                    </div>
 
 
                     <div className="py-[15px] mt-[60px]">

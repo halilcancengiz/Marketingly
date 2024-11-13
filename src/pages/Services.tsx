@@ -6,7 +6,6 @@ import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 
 const Services = () => {
-    console.log(`${import.meta.env.VITE_BASE_URL}/services`)
     return (
         <div className="flex flex-col">
             <Helmet>
