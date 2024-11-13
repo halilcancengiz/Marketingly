@@ -47,7 +47,7 @@ const NotFound = () => {
                 <div className='text-center tracking-tight md:text-[164px] md:leading-[131px] xs:text-[131px] xs:leading-[104px] text-[105px] leading-[84px] lg:mb-[50px] md:mb-10 xs:mb-[30px] mb-5 tb-bold text-white transition-all duration-300'>
                     404
                 </div>
-                <div className='text-center lg:text-[54px] md:text-[45px] xs:[38px] text-[32px] lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] text-white tb-bold transition-all duration-300'>
+                <div className='text-center lg:text-[54px] md:text-[45px] xs:[38px] text-[32px] lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] text-white tb-bold transition-all duration-300 mb-[15px]'>
                     Die Seite ist nicht verfügbar!
                 </div>
                 <div className='text-center text-white tb-medium text-[18px] mb-10 transition-all duration-300'>
