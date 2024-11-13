@@ -169,7 +169,7 @@ const Contact = () => {
                                 <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
                             </div>
                             <div className="lg:flex hidden">
-                                <Button type="submit" className="tb-bold">Abenden</Button>
+                                <Button type="submit" className="tb-bold">Absenden</Button>
                             </div>
                         </form>
                     </motion.div>

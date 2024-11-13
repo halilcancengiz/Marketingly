@@ -505,7 +505,7 @@ export const HomeV2 = () => {
                                 <div className="text-[18px] text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
                             </div>
                             <div className="col-span-2">
-                                <Button type="submit" className="md:w-auto w-full tb-bold">Abenden</Button>
+                                <Button type="submit" className="md:w-auto w-full tb-bold">Absenden</Button>
                             </div>
                         </form>
                     </div>
