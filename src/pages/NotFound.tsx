@@ -37,28 +37,46 @@ const NotFound = () => {
                 <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}not-found`} />
                 <meta name="robots" content="noindex, nofollow" />
             </Helmet>
-            <motion.div
-                variants={fadeInAnimationVariant}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                transition={{ delay: 0.15, duration: 0.3 }}
-                className='flex flex-col z-[10] max-w-[750px] w-full mx-auto'>
-                <div className='text-center tracking-tight md:text-[164px] md:leading-[131px] xs:text-[131px] xs:leading-[104px] text-[105px] leading-[84px] lg:mb-[50px] md:mb-10 xs:mb-[30px] mb-5 tb-bold text-white transition-all duration-300'>
+            <div className='flex flex-col z-[10] max-w-[750px] w-full mx-auto'>
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.15, duration: 0.3 }}
+                    className='text-center tracking-tight md:text-[164px] md:leading-[131px] xs:text-[131px] xs:leading-[104px] text-[105px] leading-[84px] lg:mb-[50px] md:mb-10 xs:mb-[30px] mb-5 tb-bold text-white'>
                     404
-                </div>
-                <div className='text-center lg:text-[54px] md:text-[45px] xs:[38px] text-[32px] lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] text-white tb-bold transition-all duration-300 mb-[15px]'>
+                </motion.div>
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3, duration: 0.3 }}
+                    className='text-center lg:text-[54px] md:text-[45px] xs:[38px] text-[32px] lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] text-white tb-bold mb-[15px]'>
                     Die Seite ist nicht verfügbar!
-                </div>
-                <div className='text-center text-white tb-medium text-[18px] mb-10 transition-all duration-300'>
+                </motion.div>
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.3 }}
+                    className='text-center text-white tb-medium text-[18px] mb-10 '>
                     Oh, es scheint so, als ob da etwas schiefgelaufen ist.
-                </div>
-                <div className='z-[10]'>
+                </motion.div>
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5, duration: 0.3 }}
+                    className='z-[10]'>
                     <NavLink className="mx-auto  w-full flex items-center justify-center" to="/">
                         <Button className='bg-white !text-primary tb-bold hover:!text-white hover:bg-secondary3 xs:w-auto w-full !border-neutral-300 hover:!border-secondary3' variant='primary' size='default'>Zurück</Button>
                     </NavLink>
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
 
 
             {/* <div className='absolute w-full h-full z-[1]'>
@@ -92,14 +110,14 @@ const NotFound = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.7, duration: 0.3 }}
                         className='absolute top-0 right-0 3xl:max-w-auto 3xl:w-[307px] 3xl:h-[298px] bg-primary flex items-center justify-center'></motion.div>
                     <motion.div
                         variants={scaleAnimationVariant}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.7, duration: 0.3 }}
                         className='absolute top-[298px] right-0 size-[332px] rounded-full  overflow-hidden'>
                         <div className='relative w-full h-full'>
                             <div className='absolute bottom-0 h-1/2 w-full bg-secondary3'></div>
@@ -111,21 +129,21 @@ const NotFound = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.7, duration: 0.3 }}
                         className='absolute left-0 top-0 3xl:w-[307px] 3xl:h-[269px] bg-primary z-[2]'></motion.div>
                     <motion.div
                         variants={scaleAnimationVariant}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.7, duration: 0.3 }}
                         style={{ clipPath: "polygon(100% 0, 0% 100%, 100% 100%)" }} className='absolute left-0 top-[265px] 3xl:w-[307px] 3xl:h-[298px] bg-secondary4'></motion.div>
                     <motion.div
                         variants={scaleAnimationVariant}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.7, duration: 0.3 }}
                         className='absolute left-0 -bottom-[153.5px] size-[307px] bg-secondary2 rounded-full'></motion.div>
                 </div>
             </div>
@@ -137,14 +155,14 @@ const NotFound = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.7, duration: 0.3 }}
                         className='absolute top-0 right-0 w-[18%] aspect-square bg-primary flex items-center justify-center'></motion.div>
                     <motion.div
                         variants={scaleAnimationVariant}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.7, duration: 0.3 }}
                         className='absolute bottom-0 right-0 w-[23%] aspect-square rounded-full  overflow-hidden'>
                         <div className='relative w-full h-full'>
                             <div className='absolute bottom-0 h-1/2 w-full bg-secondary3'></div>
@@ -156,7 +174,7 @@ const NotFound = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.7, duration: 0.3 }}
                         className='absolute left-0 top-0 aspect-square w-[21%] '>
                         <div className='relative h-full w-full'>
                             <div className='absolute top-0 h-1/2 w-full bg-primary'></div>
@@ -168,7 +186,7 @@ const NotFound = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.5, duration: 0.3 }}
+                        transition={{ delay: 0.7, duration: 0.3 }}
                         className='absolute left-0 -bottom-[13.2%] w-[21%] aspect-square bg-secondary2 rounded-full'></motion.div>
 
                 </div>
@@ -180,14 +198,14 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute top-0 right-0 w-[18%] aspect-square bg-primary flex items-center justify-center'></motion.div>
                 <motion.div
                     variants={scaleAnimationVariant}
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute bottom-0 right-0 w-[23%] aspect-square rounded-full  overflow-hidden'>
                     <div className='relative w-full h-full'>
                         <div className='absolute bottom-0 h-1/2 w-full bg-secondary3'></div>
@@ -199,7 +217,7 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute left-0 top-0 aspect-square w-[21%] '>
                     <div className='relative h-full w-full'>
                         <div className='absolute top-0 h-1/2 w-full bg-primary'></div>
@@ -211,7 +229,7 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute left-0 bottom-0 w-[21%] aspect-square bg-secondary2 rounded-full'></motion.div>
             </div>
             {/* md / xs */}
@@ -221,14 +239,14 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute top-0 right-0 w-[20%] aspect-square bg-primary flex items-center justify-center'></motion.div>
                 <motion.div
                     variants={scaleAnimationVariant}
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute -bottom-[6.4%] -right-[4%] w-[208px] aspect-square rounded-full  overflow-hidden'>
                     <div className='relative w-full h-full'>
                         <div className='absolute bottom-0 h-1/2 w-full bg-secondary3'></div>
@@ -240,7 +258,7 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute left-0 top-0 aspect-square w-[25%] '>
                     <div className='relative h-full w-full'>
                         <div className='absolute top-0 h-1/2 w-full bg-primary'></div>
@@ -252,7 +270,7 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute -left-[20%] -bottom-[40%] w-[64.167%] max-w-[308px] aspect-square bg-secondary2 rounded-full'></motion.div>
             </div>
             {/* xs / xs- */}
@@ -262,7 +280,7 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute top-0 right-0 w-[20%] aspect-square bg-primary flex items-center justify-center'></motion.div>
 
                 <motion.div
@@ -270,7 +288,7 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute -bottom-[1%] -right-[4%] w-[25%] aspect-square rounded-full  overflow-hidden'>
                     <div className='relative w-full h-full'>
                         <div className='absolute bottom-0 h-1/2 w-full bg-secondary3'></div>
@@ -283,7 +301,7 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute left-0 top-0 aspect-square w-[25%] '>
                     <div className='relative h-full w-full'>
                         <div className='absolute top-0 h-1/2 w-full bg-primary'></div>
@@ -296,7 +314,7 @@ const NotFound = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className='absolute left-0 -bottom-0 w-[25.535%] max-w-[308px] aspect-square bg-secondary2 rounded-full'></motion.div>
 
             </div>
