@@ -6,8 +6,30 @@ import Accordion from "../components/Accordion";
 import Button from "../components/Button";
 import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { motion } from "framer-motion"
 
 const AdsPlan = () => {
+    const fadeInAnimationVariant = {
+        initial: {
+            opacity: 0,
+            y: 10
+        },
+        animate: {
+            opacity: 1,
+            y: 0,
+        }
+    };
+
+    const scaleAnimationVariant = {
+        initial: {
+            opacity: 0,
+            scale: 0.8
+        },
+        animate: {
+            opacity: 1,
+            scale: 1
+        }
+    };
     return (
         <div className="flex flex-col">
             <Helmet>
@@ -19,7 +41,7 @@ const AdsPlan = () => {
                 <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}ads-plan`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
-            <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px]">
+            <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
                 <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
                     <div className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">Unsere Pläne</div>
                     <div className="mb-[15px] lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] tb-bold lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] ">
@@ -27,9 +49,108 @@ const AdsPlan = () => {
                     </div>
                     <div className="tb-medium text-[18px] leading-[30.006px]">Unsere Preismodelle bieten flexible Lösungen für jedes Budget und jeden Bedarf.</div>
                 </div>
+
+                {/* shapes start */}
+                {/* 3xl / lg */}
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute left-0 top-0 size-[208px] z-[2] lg:visible invisible">
+                    <div className="relative w-full h-full bg-secondary1 ">
+                        <div className="absolute top-0 right-0 w-full h-full bg-primary" style={{ clipPath: "polygon(100% 0, 100% 100%, 0 0)" }}></div>
+                    </div>
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute right-0 top-0 size-[208px] z-[2] lg:visible invisible">
+                    <div className="relative w-full h-full bg-primary ">
+                        <div className="absolute top-0 left-0 w-full h-full bg-secondary1" style={{ clipPath: "polygon(100% 0, 0% 100%, 0 0)" }}></div>
+                    </div>
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute 3xl:top-[116px] lg:top-[101px] right-0 size-[208px] bg-secondary2 rounded-full lg:visible invisible">
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute -left-[10%] top-[205px] z-[3] size-[310px] bg-secondary2 rounded-full lg:visible invisible">
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute right-0 3xl:top-[324px] lg:top-[311px] size-[208px] bg-secondary3 rounded-full lg:visible invisible">
+                </motion.div>
+
+                {/* lg / md */}
+
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute -left-[104px] top-0 size-[208px] z-[2]">
+                    <div className="relative w-full h-full bg-secondary1 lg:invisible md:visible invisible">
+                        <div className="absolute top-0 right-0 w-full h-full bg-primary" style={{ clipPath: "polygon(100% 0, 100% 100%, 0 0)" }}></div>
+                    </div>
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute -right-[104px] top-0 size-[208px] z-[2]">
+                    <div className="relative w-full h-full bg-primary ">
+                        <div className="absolute top-0 left-0 w-full h-full bg-secondary1 lg:invisible md:visible invisible" style={{ clipPath: "polygon(100% 0, 0% 100%, 0 0)" }}></div>
+                    </div>
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute 3xl:top-[116px] lg:top-[101px] right-0 size-[208px] bg-secondary2 rounded-full lg:invisible md:visible invisible">
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute -left-[10%] top-[205px] z-[3] size-[310px] bg-secondary2 rounded-full lg:invisible md:visible invisible">
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 1, duration: 0.3 }}
+                    className="absolute right-0 3xl:top-[324px] lg:top-[311px] size-[208px] bg-secondary3 rounded-full lg:invisible md:visible invisible">
+                </motion.div>
+
             </div>
-            <section className="md:-mt-28 -mt-20 z-[2] px-6 flex flex-col">
-                <div className="grid lg:grid-cols-3 grid-cols-1 items-start max-w-[1173px] gap-[26px] w-full mx-auto">
+            <section className="md:-mt-28 -mt-20 px-6 flex flex-col z-[6]">
+                <div className="grid lg:grid-cols-3 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
                     <NavLink to="/product-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
 
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
@@ -130,7 +251,7 @@ const AdsPlan = () => {
             </section>
             <section className="3xl:pb-[200px] lg:pb-[160px] md:pb-[128px] xs:pb-[102px] pb-[88px] px-6 max-w-[419px] w-full mx-auto flex flex-col items-center justify-center text-center lg:mt-[60px] mt-10">
                 <div className="text-neutral-800 mb-[15px] tb-bold lg:text-[24px] md:text-[22px] text-[20px] lg:leading-[34.008px] md:leading-[31.174px] leading-[28.34px]">Haben wir Ihr Interesse geweckt?</div>
-                <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px]">Wir freuen uns zusammen mit Ihnen Ihre Ziele zu erfüllen.</div>
+                <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] tb-medium">Wir freuen uns zusammen mit Ihnen Ihre Ziele zu erfüllen.</div>
                 <div>
                     <Button className="tb-bold" variant="primary">Kontakt</Button>
                 </div>
@@ -138,9 +259,9 @@ const AdsPlan = () => {
 
             <section className="3xl:py-[170px] lg:py-[136px] md:py-[110px] xs:py-[88px] py-[70px] px-6 overflow-hidden flex items-center justify-center relative bg-neutral-200">
                 <div className="flex flex-col max-w-[660px] w-full mx-auto">
-                    <div className="max-w-[660px] mb-10 lg:w-auto w-full min-w-[288px] text-center flex flex-col lg:mr-10 px-6">
-                        <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Häufig gestellte Fragen</div>
-                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Sie haben Fragen, wir haben die Antworten</div>
+                    <div className="max-w-[660px] mb-10 lg:w-auto w-full text-center flex flex-col lg:mr-10 md:px-6">
+                        <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Häufig gestellte Fragen</div>
+                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-[10px] flex flex-wrap">Sie haben Fragen, wir haben die Antworten</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Ihre Frage ist nicht dabei? Kontaktieren Sie uns und wir antworten Ihnen unverzüglich</div>
                     </div>
                     <div className="flex flex-col gap-4">
