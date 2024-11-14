@@ -306,7 +306,7 @@ const Services = () => {
                 </motion.div>
             </section>
 
-            <section className="3xl:pb-[160px] lg:pb-[128px] md:pb-[102px] xs:pb-[82px] pb-[66px] 3xl:mt-20 lg:mt-16 md:mt-[60px] px-6">
+            <section className="3xl:pb-[160px] lg:pb-[128px] md:pb-[102px] xs:pb-[82px] pb-[66px] 3xl:mt-20 lg:mt-16 md:mt-[60px] md:pt-0 pt-[60px] px-6">
                 <motion.div
                     variants={scaleAnimationVariant}
                     initial="initial"
