@@ -48,15 +48,15 @@ const Services = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.3 }}
                         className="mb-[10px] text-center tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px]">Dienstleistungen</motion.div>
-                    {/* <motion.div
+                    <motion.div
                         variants={fadeInAnimationVariant}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
                         transition={{ delay: 0.4, duration: 0.3 }}
                         className="text-center text-[18px] tb-medium">Unsere Dienstleistungen auf einen Blick:
-                    </motion.div> */}
-                    <div className="text-center text-[18px] leading-[30.006px] tb-medium">Lorem ipsum dolor sit amet consectetur adipiscing elit feugiat nun eget massa velit eros etiam nunc.</div>
+                    </motion.div>
+                    {/* <div className="text-center text-[18px] leading-[30.006px] tb-medium">Lorem ipsum dolor sit amet consectetur adipiscing elit feugiat nun eget massa velit eros etiam nunc.</div> */}
                 </div>
 
                 {/* 3xl+ */}
