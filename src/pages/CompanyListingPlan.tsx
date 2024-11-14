@@ -1,6 +1,4 @@
 import circlesImage from "../assets/images/circles.png"
-import trianglesImage from "../assets/images/triangles.png"
-import squaresImage from "../assets/images/squares.png"
 import check from "../assets/images/check.png";
 import Accordion from "../components/Accordion";
 import Button from "../components/Button";
