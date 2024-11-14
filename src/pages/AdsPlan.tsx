@@ -9,16 +9,16 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 
 const AdsPlan = () => {
-    const fadeInAnimationVariant = {
-        initial: {
-            opacity: 0,
-            y: 10
-        },
-        animate: {
-            opacity: 1,
-            y: 0,
-        }
-    };
+    // const fadeInAnimationVariant = {
+    //     initial: {
+    //         opacity: 0,
+    //         y: 10
+    //     },
+    //     animate: {
+    //         opacity: 1,
+    //         y: 0,
+    //     }
+    // };
 
     const scaleAnimationVariant = {
         initial: {
