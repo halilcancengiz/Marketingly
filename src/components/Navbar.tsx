@@ -84,7 +84,7 @@ const Navbar = () => {
                     <NavLink className="flex items-center gap-1 hover:text-primary transition-all duration-300 py-[15px]" to="/" >
                         Start
                     </NavLink>
-                    <NavLink className="hover:text-primary transition-all duration-300 py-[15px]" to="/homev2" >
+                    <NavLink className="hover:text-primary transition-all duration-300 py-[15px]" to="/services" >
                         Dienstleistungen
                     </NavLink>
 
