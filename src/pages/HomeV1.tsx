@@ -142,8 +142,8 @@ export const HomeV1 = () => {
             <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px]  flex flex-col bg-white">
                 <div id="unsereDienstleistungen" className="flex flex-col max-w-[1173px] w-full mx-auto">
                     <div className="text-primary uppercase mb-5 tb-medium text-base lg:text-start text-center tracking-[1.6px]">Unsere Dienstleistungen</div>
-                    <div className="grid lg:grid-cols-2 grid-cols-1 items-end mb-[60px] lg:text-start text-center">
-                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 lg:mb-0 mb-7">Mit uns an Ihrer Seite maximierst du deine Sichtbarkeit!</div>
+                    <div className="grid lg:grid-cols-2 grid-cols-1 items-end mb-[60px] lg:text-start text-center gap-x-4">
+                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold w-full text-neutral-800 lg:mb-0 mb-7">Mit uns an Ihrer Seite maximierst du deine Sichtbarkeit!</div>
                         <div className="col-span-1">
                             <div className="flex items-center gap-7">
                                 <NavLink to="/contact" className="w-full">
