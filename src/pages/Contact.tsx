@@ -188,14 +188,16 @@ const Contact = () => {
                             whileInView="animate"
                             viewport={{ once: true }}
                             transition={{ delay: 1.2, duration: 0.3 }}
-                            style={{ clipPath: "polygon(0 0, 0% 100%, 100% 0)" }} className="absolute -left-[36px] -top-[49px] size-[205px] z-[-1] bg-secondary2"></motion.div>
+                            style={{ clipPath: "polygon(0 0, 0% 100%, 100% 0)" }} className="absolute -left-[36px] -top-[49px] size-[205px] z-[-1] bg-secondary2">
+                        </motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
                             transition={{ delay: 0.5, duration: 0.3 }}
-                            className="absolute -right-[81px] -bottom-[67px] size-[208px] z-[-1] bg-primary"></motion.div>
+                            className="absolute -right-[81px] -bottom-[67px] size-[208px] z-[-1] bg-primary">
+                        </motion.div>
 
                     </motion.div>
                 </div>

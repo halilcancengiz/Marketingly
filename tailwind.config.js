@@ -27,7 +27,8 @@ export default {
         'sm': '640px',
         'md': '768px',
         'lg': '992px', //animasyonlar devreye giriyor
-        'hxl': '1135px',
+        'hxl': '1192px',
+        'hxxl': '1220px',
         'xl': '1280px', //animasyonlar devreye giriyor
         '2xl': '1537px',
         '3xl': '1920px',
