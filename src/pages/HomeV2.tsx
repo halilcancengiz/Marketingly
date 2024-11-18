@@ -6,8 +6,8 @@ import services from "../assets/images/homev1-services-image.png";
 import check from "../assets/images/check.png";
 import womanImage from "../assets/images/card-woman-image.jpeg";
 import * as motion from "framer-motion/client";
-import { useInView, useScroll, useSpring, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useScroll, useSpring, useTransform } from "framer-motion";
+import { useEffect } from "react";
 import blueCardImage from "../assets/images/blue.png"
 import yellowCardImage from "../assets/images/yellow.png"
 import redCardImage from "../assets/images/red.png"
@@ -43,25 +43,13 @@ export const HomeV2 = () => {
         }
     };
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const { scrollY }: { scrollY: any } = useScroll();
 
-    const translateY: any = useTransform(scrollY, (value: number) => value / 20);
-    const translateYReverse: any = useTransform(scrollY, (value: number) => -value / 40);
     const firstImageTranslateY: any = useTransform(scrollY, (value: number) => value / 20);
     const firstImageTranslateYReverse: any = useTransform(scrollY, (value: number) => -value / 40);
-
-    const smoothTranslateY: any = useSpring(translateY, {
-        stiffness: 100,
-        damping: 20,
-    });
-
-    const smoothTranslateYReverse: any = useSpring(translateYReverse, {
-        stiffness: 100,
-        damping: 20,
-    });
 
 
     const smoothFirstImageTranslateY: any = useSpring(firstImageTranslateY, {

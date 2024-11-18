@@ -14,7 +14,7 @@ import yellowCardImage from "../assets/images/yellow.png"
 import redCardImage from "../assets/images/red.png"
 import { NavLink, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet"
-import { MotionValue, useScroll, useSpring, useTransform } from "framer-motion";
+import { useScroll, useSpring, useTransform } from "framer-motion";
 
 
 export const HomeV1 = () => {
@@ -42,9 +42,9 @@ export const HomeV1 = () => {
         }
     };
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const { scrollY }: { scrollY: any } = useScroll();
 
     const translateY: any = useTransform(scrollY, (value: number) => value / 20);
