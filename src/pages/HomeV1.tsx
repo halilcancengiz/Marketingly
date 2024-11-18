@@ -85,7 +85,7 @@ export const HomeV1 = () => {
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <section className="3xl:pt-[145px] 3xl:pb-[145px] lg:pt-[116px] lg:pb-[116px] md:pt-[60px] md:pb-[93px] xs:pt-[50px] xs:pb-[74px] pt-[40px] pb-[60px] relative">
-                <div className="w-full h-full px-6">
+                <div className="w-full h-full xs:px-6 px-4">
                     <div className="max-w-[1173px] w-full mx-auto lg:flex-row flex-col flex lg:items-center items-start justify-between z-[3]">
                         <div className="lg:mr-10 lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px] flex flex-col max-w-[547px] w-full mx-auto lg:text-start xs:text-center text-start">
                             <motion.div
@@ -94,7 +94,7 @@ export const HomeV1 = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2, duration: 0.3 }}
-                                className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-base leading-[18px] uppercase tb-medium text-primary tracking-[1.6px]">
+                                className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.5px]">
                                 Marketing Agentur
                             </motion.div>
                             <motion.div
@@ -136,7 +136,7 @@ export const HomeV1 = () => {
                             whileInView="animate"
                             viewport={{ once: true }}
                             transition={{ delay: 0.70, duration: 0.3 }}
-                            className="lg:max-w-[565px] max-w-[660px] mx-auto w-full relative">
+                            className="lg:max-w-[565px] max-w-[660px] mx-auto w-full relative lg:ml-5">
                             <motion.img
                                 style={{
                                     boxShadow: "rgba(20, 20, 43, 0.07) 0px 18px 54px 0px",
@@ -160,10 +160,86 @@ export const HomeV1 = () => {
                     </div>
                 </div>
 
-                <div className="absolute lg:right-0 lg:top-0 lg:bottom-auto bottom-0 bg-primary 3xl:w-[45%] lg:w-[38%] w-full lg:h-full h-[35.719%] -z-[1]"></div>
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.80, duration: 0.3 }}
+                    className="absolute lg:right-0 lg:top-0 lg:bottom-auto bottom-0 bg-primary 3xl:w-[45%] lg:w-[38%] w-full lg:h-full h-[35.719%] -z-[1]">
+                    <div className="relative w-full h-full">
+                        {/* 3xl+ / lg*/}
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} className="bg-secondary3 lg:visible invisible absolute right-0 top-0 aspect-square 3xl:w-[284px] lg:w-[50%] "></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            className="lg:visible invisible absolute right-0 bottom-0 bg-secondary1 aspect-square 3xl:w-[50%] 3xl:h-[50%] lg:w-[50%]"></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            className="lg:visible invisible absolute left-0 top-0 bg-secondary1 aspect-square 3xl:w-[50%] 3xl:h-[50%] lg:w-[50%]"></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            className="lg:visible invisible absolute 3xl:-left-[11.8%] 3xl:-bottom-[21%] lg:-left-auto lg:-bottom-[27.6%] 3xl:mr-auto lg:-ml-[116px] bg-secondary2 aspect-square 3xl:w-[375px] w-[69%] rounded-full"></motion.div>
+                        {/* lg / xs */}
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} className="bg-secondary3 lg:invisible xs:visible invisible absolute right-0 top-0 aspect-square w-[27%] "></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            className="absolute left-0 top-0 bg-secondary1 aspect-square w-[27%] lg:invisible xs:visible invisible"></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            className="absolute left-0 -bottom-[20%] aspect-square w-[38%] bg-secondary2 rounded-full lg:invisible xs:visible invisible"></motion.div>
+                        {/* xs- */}
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} className="bg-secondary3 xs:invisible visible absolute right-0 top-0 aspect-square w-[27%] "></motion.div>
+                        <motion.div
+                            variants={scaleAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 1.2, duration: 0.3 }}
+                            className="absolute left-0 bottom-0 aspect-square w-[38%] bg-secondary2 rounded-full xs:invisible visible"></motion.div>
+
+                    </div>
+                </motion.div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] px-6 flex flex-col bg-white">
+            <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] xs:px-6 px-4 flex flex-col bg-white">
                 <motion.div
                     variants={fadeInAnimationVariant}
                     initial="initial"
@@ -221,7 +297,7 @@ export const HomeV1 = () => {
                 </motion.div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] px-6 bg-neutral-200">
+            <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] xs:px-6 px-4 bg-neutral-200">
                 <div className="max-w-[1176px] w-full mx-auto flex flex-col lg:gap-y-[86px] md:gap-y-[200px] xs:gap-y-[160px] gap-y-[128px]">
                     <div className="flex lg:flex-row flex-col items-center justify-between">
                         <motion.div
@@ -299,7 +375,7 @@ export const HomeV1 = () => {
 
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] bg-primary  overflow-hidden flex items-center justify-center relative">
+            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] bg-primary  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex flex-col z-[5]">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -507,7 +583,7 @@ export const HomeV1 = () => {
 
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -562,7 +638,7 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200">
+            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
 
                     <motion.div
@@ -631,7 +707,7 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex flex-col items-center ">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -687,7 +763,7 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] px-6 lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200 z-10">
+            <section className="3xl:py-[220px] xs:px-6 px-4 lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200 z-10">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">
                     <motion.div
                         variants={fadeInAnimationVariant}
