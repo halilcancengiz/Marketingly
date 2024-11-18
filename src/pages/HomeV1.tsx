@@ -125,9 +125,9 @@ export const HomeV1 = () => {
                                 <NavLink to="/contact" className="xs:w-auto w-full">
                                     <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
                                 </NavLink>
-                                <NavLink to="/services" className="xs:w-auto w-full">
+                                <a href="#unsereDienstleistungen" className="xs:w-auto w-full">
                                     <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
-                                </NavLink>
+                                </a>
                             </motion.div>
                         </div>
                         <motion.div
