@@ -81,7 +81,7 @@ const TermAndConditions = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.15, duration: 0.3 }}
                     id="menuItems"
-                    className="lg:mt-[63px] lg:mb-0 mb-10 lg:mr-10 min-w-[274px] grid grid-cols-3 gap-[15px] h-full lg:sticky lg:top-5">
+                    className="lg:mt-[63px] lg:mb-0 mb-10 lg:mr-10 min-w-[274px] grid grid-cols-3 gap-[15px] lg:sticky lg:top-5 lg:h-full md:h-[72px] h-[246px]">
 
                     <div onClick={() => scrollToSection("terms-and-conditions")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] lg:text-start text-center px-5 hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "terms-and-conditions" ? "text-primary" : "text-neutral-800"}`}> Terms and Conditions</div>
                     <div onClick={() => scrollToSection("privacy-policy")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] px-5 lg:text-start text-center hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "privacy-policy" ? "text-primary" : "text-neutral-800"}`}> Privacy Policy</div>
