@@ -194,100 +194,117 @@ const AdsPlan = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.6, duration: 0.3 }}
                     className="grid lg:grid-cols-3 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
-                    <NavLink to="/product-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
+                    {/* Basis */}
+                    <NavLink to="/basic-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
 
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
                         </div>
 
                         <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                            Standard
+                            Basis
                         </div>
                         <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </div>
                         <hr className="w-full my-[35px]" />
                         <div className="flex flex-col gap-[16px] mb-10">
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 1.500 €</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einrichtung und grundlegende Verwaltung von Google Ads-Kampagnen</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliches Reporting mit den wichtigsten Leistungskennzahlen</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Umfassender Support per E-Mail und Telefon während der Geschäftszeiten</div>
+                            </div>
+                            <div className="flex items-start gap-[13px]">
+                                <img className="size-6 rounded-full" src={check} alt="check" />
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einfache Keyword-Recherche und Anzeigenerstellung</div>
                             </div>
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">349 € pro Monat</div>
 
                     </NavLink>
 
-                    <NavLink to="/product-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
+
+                    {/* Standart */}
+                    <NavLink to="/standart-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
 
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
                         </div>
                         <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                            Premium
+                            Standard
                         </div>
                         <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
                         <hr className="w-full my-[35px]" />
                         <div className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-center gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 3.500 €</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Umfassende Kampagnenverwaltung mit regelmäßigen Optimierungen</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Detailliertes monatliches Reporting und Analyse der Kampagnenleistung</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Persönlicher Ansprechpartner für individuelle Betreuung</div>
+                            </div>
+                            <div className="flex items-center gap-[13px]">
+                                <img className="size-6 rounded-full" src={check} alt="check" />
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Erweiterte Keyword-Recherche und Erstellung zielgerichteter Anzeigen</div>
                             </div>
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">499 € pro Monat</div>
 
                     </NavLink>
 
-                    <NavLink to="/product-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
+
+                    {/* Premium */}
+                    <NavLink to="/premium-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
 
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
                         </div>
                         <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                            Deluxe
+                            Premium
                         </div>
                         <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Umfassende Lösung für maximale Ergebnisse.</div>
                         <hr className="w-full my-[35px]" />
                         <div className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-center gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung unbegrenzter Werbebudgets</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Individuelle Kampagnenstrategien und fortlaufende Optimierungen</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliches Reporting mit tiefgehenden Analysen und Handlungsempfehlungen</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Priorisierter Support mit persönlichem Ansprechpartner</div>
+                            </div>
+                            <div className="flex items-center gap-[13px]">
+                                <img className="size-6 rounded-full" src={check} alt="check" />
+                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Umfassende Markt- und Wettbewerbsanalysen</div>
                             </div>
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">Preis auf Anfrage</div>
 
                     </NavLink>
                 </motion.div>

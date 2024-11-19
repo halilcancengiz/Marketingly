@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 
-const ProductDetail = () => {
+const BasicPackageDetail = () => {
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,
@@ -52,12 +52,12 @@ const ProductDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
-                <title>Premium-Paket - Detaillierte Informationen | MARKETINGLY X</title>
-                <meta name="description" content="Entdecken Sie unser Premium-Paket für umfassende Marketinglösungen, inklusive Content-Marketing und erweiterter Analytik." />
-                <meta property="og:title" content="Premium-Paket - MARKETINGLY X" />
-                <meta property="og:description" content="Unser Premium-Paket bietet umfassende Lösungen für fortgeschrittenes Marketing, von Content-Marketing bis hin zu erweiterten Analysen." />
+                <title>Basis-Paket - Detaillierte Informationen | MARKETINGLY X</title>
+                <meta name="description" content="Das Basis-Paket von MARKETINGLY X bietet den idealen Einstieg ins digitale Marketing. Perfekt für Unternehmen, die gezielte Werbekampagnen mit einfacher Einrichtung und verlässlicher Betreuung starten möchten." />
+                <meta property="og:title" content="Basis-Paket - MARKETINGLY X" />
+                <meta property="og:description" content="Erleben Sie das Basis-Paket: Effektive Verwaltung kleiner Budgets, Einrichtung erster Kampagnen und zuverlässiger Support für einen erfolgreichen Start ins digitale Marketing." />
                 <meta property="og:type" content="product" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}product-detail`} />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}basic-package-detail`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
@@ -72,41 +72,43 @@ const ProductDetail = () => {
                         <img src={circlesImage} alt="circle" />
                     </div>
                     <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
-                        Premium Package
+                        Basis-Paket
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                        Das Basis-Paket bietet Ihnen den idealen Einstieg ins digitale Marketing. Es richtet sich an Unternehmen, die eine solide Grundlage schaffen und erste Erfahrungen mit gezielten Werbekampagnen sammeln möchten. Mit einfacher Einrichtung und verlässlicher Betreuung helfen wir Ihnen, Ihre Zielgruppe effektiv zu erreichen.
                     </div>
                     <div className="flex flex-col gap-[15px] mb-10">
-                        <div className="flex items-center gap-[13px]">
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
+                        <div className="flex items-start gap-[13px]">
                             <img className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">All in Standard Plan</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 1.500 €</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Content Marketing</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einrichtung und Optimierung Ihrer ersten Google Ads-Kampagnen</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Advanced Analytics</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliche Berichte mit den wichtigsten Erkenntnissen und Empfehlungen</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Premium Support</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verlässlicher Support per E-Mail und Telefon</div>
+                        </div>
+                        <div className="flex items-start gap-[13px]">
+                            <img className="size-6 rounded-full" src={check} alt="check" />
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Recherche und Erstellung passender Schlagworte und Anzeigentexte</div>
                         </div>
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit nunc donec vel sem ut ipsum odio duis vel sem et ornare consequat. Bibendum nibh et eget magna at habitant mauris nisi <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">pellentesque morbi massa</a> in eleifend tempus pellentesque sed pellentesque ridiculus aliquam maecenas turpis vulputate pellentesque maecenas egestas platea dictumst.
-                    </div>
+                        Wir stellen sicher, dass Ihre Kampagnen gut starten und langfristig stabil bleiben. So können Sie Ihre Reichweite Schritt für Schritt ausbauen und erste Erfolge sicherstellen.                    </div>
                     <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Mollis aliquam ut porttitor leo a diam.</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Enim nec dui nunc mattis enim.</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Vulputate eu scelerisque felis fermentum leo vel.</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Quam lacus suspendisse posuere lorem.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Effiziente Verwaltung Ihres Budgets</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Verständliche Darstellung der Kampagnenergebnisse</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Schnelle Anpassungen bei Bedarf</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Transparente Kommunikation mit unserem Team</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Regelmäßige Überwachung zur Sicherstellung optimaler Ergebnisse</li>
                     </ul>
-                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit faucibus elit fermentum adipiscing facilisi eu massa habitant penatibus vitae sed lorem sem facilisi dolor. Faucibus at mattis montes aliquam Iaculis ut morbi nullam enim hac ut donec.
-                    </div>
                 </motion.div>
                 <motion.div
                     variants={fadeInAnimationVariant}
@@ -117,11 +119,10 @@ const ProductDetail = () => {
                     style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }}
                     className="bg-white md:px-[45px] xs:px-[35px] px-[25px] lg:py-[65px] md:py-[60px] xs:py-[50px] py-[42px] lg:max-w-[503px] max-w-[660px] lg:min-w-[395.79px] w-full border border-neutral-300 rounded-[20px] sticky top-3">
                     <div className="flex flex-col">
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Order your package today</div>
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Kontaktieren Sie uns noch heute!</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna
-                        </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[20px] text-neutral-800">$ 2,500.00 USD</div>
+                            Wir helfen Ihnen, Ihre Marketingziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.                        </div>
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[20px] text-neutral-800">Preis: 349 € pro Monat </div>
                         <NavLink to="/contact">
                             <Button className="w-full tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
@@ -205,4 +206,4 @@ const ProductDetail = () => {
     )
 }
 
-export default ProductDetail
+export default BasicPackageDetail
