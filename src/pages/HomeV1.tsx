@@ -42,9 +42,9 @@ export const HomeV1 = () => {
         }
     };
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
     const { scrollY }: { scrollY: any } = useScroll();
 
     const translateY: any = useTransform(scrollY, (value: number) => value / 20);
@@ -79,7 +79,7 @@ export const HomeV1 = () => {
         const element = document.getElementById(id);
         const yOffset = -80;
         console.log(element)
-    
+
         if (element) {
             const yPosition = element.getBoundingClientRect().top + window.scrollY + yOffset;
             console.log(yPosition)
@@ -311,9 +311,9 @@ export const HomeV1 = () => {
                 </motion.div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] xs:px-6 px-4 bg-neutral-200">
-                <div className="max-w-[1176px] w-full mx-auto flex flex-col lg:gap-y-[86px] md:gap-y-[200px] xs:gap-y-[160px] gap-y-[128px]">
-                    <div className="flex lg:flex-row flex-col items-center justify-between">
+            <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] xs:px-6 px-4 bg-neutral-200 z-[1]">
+                <div className="max-w-[1176px] w-full mx-auto flex flex-col lg:gap-y-[86px] md:gap-y-[200px] xs:gap-y-[160px] gap-y-[128px] z-[2]">
+                    <div className="flex lg:flex-row flex-col items-center justify-between z-[3]">
                         <motion.div
                             variants={fadeInAnimationVariant}
                             initial="initial"
@@ -321,7 +321,11 @@ export const HomeV1 = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.3, duration: 0.3 }}
                             className="relative lg:mr-10 lg:order-1 order-2">
-                            <img style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300" src={services} alt="" />
+                            <div className="w-full h-full z-10">
+                                <img style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
+                                <div className="absolute lg:-left-20 left-auto lg:right-auto -right-12 lg:-top-20 -top-16 bg-[#F9F5E5] size-[248px] -z-[1] rounded-full"></div>
+                            </div>
+
                         </motion.div>
                         <motion.div
                             variants={fadeInAnimationVariant}
@@ -891,7 +895,7 @@ export const HomeV1 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 0.5, duration: 0.3 }}
+                            transition={{ delay:0.1 ,duration: 0.3 }}
                             className="absolute -right-[81px] -bottom-[67px] size-[208px] z-[-1] bg-primary">
                         </motion.div>
 
