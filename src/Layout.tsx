@@ -27,6 +27,7 @@ const Layout = () => {
 
   // Sayfa yüklendiğinde animasyonu başlat
   useEffect(() => {
+    animationStarted ? "" : ""
     const handleLoad = () => {
       startAnimation();
     };
@@ -70,19 +71,16 @@ const Layout = () => {
     };
   }, [previousWidth, breakpoints]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setContentVisible(true)
+    }, 500)
+
+  }, [contentVisible])
+
   return (
     <div className="flex flex-col relative">
-      {/* {animationStarted && !contentVisible && (
-        <motion.div
-          key={`fadeOut-${animationKey}`}
-          className="h-[4px] bg-primary absolute top-0 left-0"
-          initial={{ width: '100%' }}
-          animate={{ width: '0%' }}
-          transition={{ duration: 0.001, delay: 0.5 }}
-          style={{ zIndex: 10 }}
-          onAnimationStart={() => setTimeout(() => setContentVisible(true), 1000)}
-        />
-      )} */}
+
 
       <motion.div
         key={`fadeIn-${animationKey}`}
@@ -96,7 +94,6 @@ const Layout = () => {
           if (element) {
             element.style.opacity = '0';
           }
-          setContentVisible(true)
         }}
       />
 
@@ -104,8 +101,9 @@ const Layout = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
         >
+
           <Navbar />
           <AppRoutes />
           <Footer />

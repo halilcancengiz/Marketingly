@@ -50,6 +50,9 @@ export const HomeV2 = () => {
 
     const firstImageTranslateY: any = useTransform(scrollY, (value: number) => value / 20);
     const firstImageTranslateYReverse: any = useTransform(scrollY, (value: number) => -value / 40);
+    const jumbotronMainImage: any = useTransform(scrollY, (value: number) => -value / 40);
+    const jumbotronSideImages: any = useTransform(scrollY, (value: number) => value / 20);
+
 
 
     const smoothFirstImageTranslateY: any = useSpring(firstImageTranslateY, {
@@ -58,6 +61,16 @@ export const HomeV2 = () => {
     });
 
     const smoothFirstImageTranslateYReverse: any = useSpring(firstImageTranslateYReverse, {
+        stiffness: 100,
+        damping: 20,
+    });
+
+    const smoothJumbotronMainImageTranslateY: any = useSpring(jumbotronMainImage, {
+        stiffness: 100,
+        damping: 20,
+    });
+
+    const smoothJumbotronSideImagesTranslateY: any = useSpring(jumbotronSideImages, {
         stiffness: 100,
         damping: 20,
     });
@@ -75,9 +88,27 @@ export const HomeV2 = () => {
 
             <section className="homeV2Container 3xl:pt-[167px] lg:pt-[134px] md:pt-[60px] xs:pt-[50px] pt-10 flex flex-col items-start px-6 3xl:h-[795px] lg:h-[735px] md:h-[657px] xs:h-[515px] h-[599px]  relative bg-secondary1 z-[1]">
                 <div className="max-w-[632px] w-full mx-auto flex flex-col lg:mb-[86px] md:mb-[72px] xs:mb-[60px] mb-[50px] bg-transparent z-[3]">
-                    <div className="lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] tb-bold text-white text-center mb-[10px]">Maximaler Erfolg mit <br /> <span className="whitespace-nowrap tb-bold">Google!</span></div>
-                    <div className="leading-[30px] text-white text-center mb-10 text-[18px] tb-medium">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.</div>
-                    <div className="flex xs:flex-row flex-col items-center justify-center gap-7 pb-3.5">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.20, duration: 0.3 }}
+                        className="lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] tb-bold text-white text-center mb-[10px]">Maximaler Erfolg mit <br /> <span className="whitespace-nowrap tb-bold">Google!</span></motion.div>
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.40, duration: 0.3 }}
+                        className="leading-[30px] text-white text-center mb-10 text-[18px] tb-medium">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.</motion.div>
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.50, duration: 0.3 }}
+                        className="flex xs:flex-row flex-col items-center justify-center gap-6 pb-3.5">
                         <NavLink className="xs:w-auto w-full" to="/contact">
                             <Button className="xs:w-auto w-full tb-bold !text-primary bg-white hover:!bg-secondary3 hover:!text-white" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
@@ -85,64 +116,148 @@ export const HomeV2 = () => {
                             <Button className="w-full tb-medium border-white text-white hover:!bg-secondary3" variant="secondary" size="default">Mehr Infos</Button>
                         </a>
 
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* 3xl üstü */}
-
-                <div style={{ clipPath: "polygon(0 0, 0% 100%, 100% 100%)" }} className="3xl:visible invisible absolute top-[300px] left-0 3xl:w-[333px] aspect-square bg-secondary4 z-[2]"></div>
-                <div className='rounded-full aspect-square overflow-hidden 3xl:w-[307px] 3xl:visible invisible absolute bottom-[346px] right-0'>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    className="3xl:visible invisible absolute top-0 left-0 lg:w-[307px] aspect-square bg-primary z-[1]">
+                    <div className="h-[50%] rounded-b-full bg-secondary2"></div>
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    style={{ clipPath: "polygon(0 0, 0% 100%, 100% 100%)" }} className="3xl:visible invisible absolute top-[300px] left-0 3xl:w-[333px] aspect-square bg-secondary4 z-[2]"></motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    className='rounded-full aspect-square overflow-hidden 3xl:w-[307px] 3xl:visible invisible absolute bottom-[346px] right-0'>
                     <div className='w-full h-full relative'>
                         <div className='absolute bottom-0 right-0 bg-secondary4 z-[2] w-1/2 h-full transform text-white'></div>
                         <div className='absolute bottom-0 bg-secondary3 z-[1] w-full h-1/2  text-white'></div>
                     </div>
-                </div>
-                <div className="3xl:visible invisible absolute bottom-0 right-0 3xl:w-[333px] aspect-square bg-primary"></div>
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    className="3xl:visible invisible absolute bottom-0 right-0 3xl:w-[333px] aspect-square bg-primary"></motion.div>
 
 
                 {/* lg 3xl arası */}
-                <div className="3xl:invisible visible absolute top-0 left-0 lg:w-[20.21%] aspect-square bg-primary z-[1]">
-                    <div className="h-[50%] -mt-[20%] rounded-b-full bg-secondary2"></div>
-                </div>
-                <div style={{ clipPath: "polygon(0 0, 0% 100%, 100% 100%)" }} className="3xl:invisible visible absolute top-[300px] left-0 lg:w-[24%] aspect-square bg-secondary4 z-[2]"></div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    className="3xl:invisible visible absolute top-0 left-0 lg:w-[20.21%] aspect-square bg-primary z-[1]">
+                    <div className="h-[50%] rounded-b-full bg-secondary2"></div>
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    style={{ clipPath: "polygon(0 0, 0% 100%, 100% 100%)" }} className="3xl:invisible visible absolute top-[300px] left-0 lg:w-[24%] aspect-square bg-secondary4 z-[2]"></motion.div>
 
-                <div className='rounded-full aspect-square overflow-hidden lg:w-[22%] lg:visible 3xl:invisible absolute top-[15%] -right-10'>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    className='rounded-full aspect-square overflow-hidden lg:w-[22%] lg:visible 3xl:invisible absolute top-[15%] -right-10'>
                     <div className='w-full h-full relative'>
                         <div className='absolute bottom-0 right-0 bg-secondary4 z-[2] w-1/2 h-full transform text-white'></div>
                         <div className='absolute bottom-0 bg-secondary3 z-[1] w-full h-1/2  text-white'></div>
                     </div>
-                </div>
-                <div className="absolute bottom-0 right-0 w-[24.001%] aspect-square bg-primary 3xl:invisible visible"></div>
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    className="absolute bottom-0 right-0 w-[24.001%] aspect-square bg-primary 3xl:invisible visible"></motion.div>
 
-                {/* md lg arası */}
-                <div className="lg:invisible visible absolute top-0 -left-[10%] w-[20.21%] aspect-square bg-primary z-[1]">
-                    <div className="h-[50%] -mt-[20%] rounded-b-full bg-secondary2"></div>
-                </div>
-                <div style={{ clipPath: "polygon(0 0, 0% 100%, 100% 100%)" }} className="lg:invisible visible absolute top-[300px] left-0 w-[24%] aspect-square bg-secondary4 z-[2]"></div>
+                {/* lg md arası */}
 
-                <div className='rounded-full aspect-square overflow-hidden w-[22%] visible lg:invisible absolute top-[21%] -right-10'>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    style={{ clipPath: "polygon(0 0, 0% 100%, 100% 100%)" }} className="lg:invisible visible absolute xs:top-[300px] xs:bottom-auto bottom-[10%] left-0 w-[24%] aspect-square bg-secondary4 z-[2]"></motion.div>
+
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    className='rounded-full aspect-square overflow-hidden w-[22%] invisible xs:visible lg:invisible absolute top-[21%] -right-10'>
                     <div className='w-full h-full relative'>
                         <div className='absolute bottom-0 right-0 bg-secondary4 z-[2] w-1/2 h-full transform text-white'></div>
                         <div className='absolute bottom-0 bg-secondary3 z-[1] w-full h-1/2  text-white'></div>
                     </div>
-                </div>
-                <div className="absolute bottom-0 right-0 w-[24.001%] aspect-square bg-primary lg:invisible visible"></div>
+                </motion.div>
+                <motion.div
+                    variants={scaleAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, duration: 0.3 }}
+                    className="absolute bottom-0 right-0 w-[24.001%] aspect-square bg-primary lg:invisible visible"></motion.div>
 
             </section>
 
-            <section className="homeV2FirstSection lg:-mt-[230px] md:-mt-[260px] xs:-mt-[130px] -mt-[120px] max-w-[1173px] w-full mx-auto relative z-[2]">
-                <img className="w-full" src={homeV2HeroImage} alt="meeting" />
+            <motion.section
+                variants={fadeInAnimationVariant}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                transition={{ delay: 0.50, duration: 0.3 }}
+                className="homeV2FirstSection lg:-mt-[230px] md:-mt-[260px] xs:-mt-[130px] -mt-[120px] max-w-[1173px] w-full mx-auto relative z-[2]">
+                <motion.img
+                    style={{
+                        y: smoothJumbotronMainImageTranslateY
+                    }}
+                    className="w-full"
+                    src={homeV2HeroImage}
+                    alt="meeting" />
                 <div className="absolute top-[40%] -translate-y-[45%]  flex items-center justify-between w-full px-6">
-                    <img className="max-w-[21.896%] w-full md:rounded-[19px] rounded-[10px] border border-neutral-300 shadow" src={homeV2Chart1Image} alt="chart" />
-                    <img className="max-w-[22.9%] md:rounded-[19px] rounded-[10px] border border-neutral-300 shadow" src={homeV2Chart2Image} alt="chart" />
+                    <motion.img
+                        style={{
+                            y: smoothJumbotronSideImagesTranslateY
+                        }}
+                        className="max-w-[21.896%] w-full md:rounded-[19px] rounded-[10px] border border-neutral-300 shadow"
+                        src={homeV2Chart1Image}
+                        alt="chart" />
+                    <motion.img
+                        style={{
+                            y: smoothJumbotronSideImagesTranslateY
+                        }}
+                        className="max-w-[22.9%] md:rounded-[19px] rounded-[10px] border border-neutral-300 shadow"
+                        src={homeV2Chart2Image}
+                        alt="chart" />
                 </div>
-            </section>
-
-
-
-
-
-
+            </motion.section>
 
 
             <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] px-6 flex flex-col bg-white">
@@ -783,7 +898,7 @@ export const HomeV2 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay:0.1, duration: 0.3 }}
+                            transition={{ delay: 0.1, duration: 0.3 }}
                             className="absolute -right-[81px] -bottom-[67px] size-[208px] z-[-1] bg-primary">
                         </motion.div>
 

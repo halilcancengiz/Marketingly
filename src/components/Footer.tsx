@@ -59,7 +59,7 @@ const Footer = () => {
                 </div>
 
                 <div className='mt-20 border-b w-full md:flex-row flex-col gap-y-6 flex items-center justify-between border-neutral-400 pb-2'>
-                    <div className='flex items-center gap-7'>
+                    <div className='flex items-center gap-6'>
                         <NavLink to="/impressum" className='hover:text-primary transition-all duration-300 tb-medium'>Impressum</NavLink>
                         <NavLink to="/datenschutz" className='hover:text-primary transition-all duration-300 tb-medium'>Datenschutz und AGBs</NavLink>
                     </div>
