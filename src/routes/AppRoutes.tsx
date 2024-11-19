@@ -12,6 +12,7 @@ import Services from "../pages/Services";
 import SeoPlan from "../pages/SeoPlan";
 import AdsPlan from "../pages/AdsPlan";
 import CompanyListingPlan from "../pages/CompanyListingPlan";
+import Impressum from "../pages/Impressum";
 
 export const AppRoutes = () => {
     return (
@@ -23,6 +24,7 @@ export const AppRoutes = () => {
             <Route path="/thank-you-page" element={<Thankyou />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/datenschutz" element={<TermAndConditions />} />
+            <Route path="/impressum" element={<Impressum />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/product-detail" element={<ProductDetail />} />
             <Route path="/services" element={<Services />} />
