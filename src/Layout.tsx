@@ -72,7 +72,7 @@ const Layout = () => {
 
   return (
     <div className="flex flex-col relative">
-      {animationStarted && !contentVisible && (
+      {/* {animationStarted && !contentVisible && (
         <motion.div
           key={`fadeOut-${animationKey}`}
           className="h-[4px] bg-primary absolute top-0 left-0"
@@ -82,20 +82,21 @@ const Layout = () => {
           style={{ zIndex: 10 }}
           onAnimationStart={() => setTimeout(() => setContentVisible(true), 1000)}
         />
-      )}
+      )} */}
 
       <motion.div
         key={`fadeIn-${animationKey}`}
         className="h-[4px] bg-primary absolute top-0 left-0"
         initial={{ width: '0%' }}
         animate={{ width: '100%' }}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
         style={{ zIndex: 10 }}
         onAnimationComplete={() => {
           const element = document.querySelector('.bg-primary') as HTMLDivElement;
           if (element) {
             element.style.opacity = '0';
           }
+          setContentVisible(true)
         }}
       />
 

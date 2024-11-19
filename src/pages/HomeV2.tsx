@@ -783,7 +783,7 @@ export const HomeV2 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 0.5, duration: 0.3 }}
+                            transition={{ delay:0.1, duration: 0.3 }}
                             className="absolute -right-[81px] -bottom-[67px] size-[208px] z-[-1] bg-primary">
                         </motion.div>
 
