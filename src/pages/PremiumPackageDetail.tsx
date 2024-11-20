@@ -121,7 +121,7 @@ const PremiumPackageDetail = () => {
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
                             Wir helfen Ihnen, Ihre Marketingziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.                        </div>
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[20px] text-neutral-800">Preis: Auf Anfrage</div>
-                        <NavLink to="/contact">
+                        <NavLink aria-label="Open contact page" to="/contact">
                             <Button className="w-full tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
                     </div>

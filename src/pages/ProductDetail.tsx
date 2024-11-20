@@ -122,7 +122,7 @@ const ProductDetail = () => {
                             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna
                         </div>
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[20px] text-neutral-800">$ 2,500.00 USD</div>
-                        <NavLink to="/contact">
+                        <NavLink aria-label="Open contact page" to="/contact">
                             <Button className="w-full tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
                     </div>

@@ -267,7 +267,7 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink to="/seo-plan">
+                            <NavLink aria-label="Open seo plan page" to="/seo-plan">
                                 <Button className="tb-bold">Details</Button>
                             </NavLink>
 
@@ -283,7 +283,7 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
-                            <NavLink to="/ads-plan">
+                            <NavLink aria-label="Open google ads plan page" to="/ads-plan">
                                 <Button className="tb-bold">Details</Button>
                             </NavLink>
                         </div>
@@ -298,7 +298,7 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink to="/company-listing-plan">
+                            <NavLink aria-label="Open company listing page" to="/company-listing-plan">
                                 <Button className="tb-bold">Details</Button>
                             </NavLink>
                         </div>

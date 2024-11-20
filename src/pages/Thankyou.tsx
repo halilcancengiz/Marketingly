@@ -99,7 +99,7 @@ const Thankyou = () => {
                 transition={{ delay: 0.4, duration: 0.3 }}
                 className="mt-10"
             >
-                <NavLink to="/">
+                <NavLink aria-label="Back to home page" to="/">
                     <Button className="tb-bold">Zurück</Button>
                 </NavLink>
             </motion.div>

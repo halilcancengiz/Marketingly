@@ -53,7 +53,18 @@ export const HomeV2 = () => {
     const jumbotronMainImage: any = useTransform(scrollY, (value: number) => -value / 40);
     const jumbotronSideImages: any = useTransform(scrollY, (value: number) => value / 20);
 
+    const scrollToSection = (id: string) => {
+        console.log("tıklandı");
+        const element = document.getElementById(id);
+        const yOffset = -80;
+        console.log(element)
 
+        if (element) {
+            const yPosition = element.getBoundingClientRect().top + window.scrollY + yOffset;
+            console.log(yPosition)
+            window.scrollTo({ top: yPosition, behavior: 'smooth' });
+        }
+    };
 
     const smoothFirstImageTranslateY: any = useSpring(firstImageTranslateY, {
         stiffness: 100,
@@ -109,12 +120,12 @@ export const HomeV2 = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.50, duration: 0.3 }}
                         className="flex xs:flex-row flex-col items-center justify-center gap-6 pb-3.5">
-                        <NavLink className="xs:w-auto w-full" to="/contact">
+                        <NavLink aria-label="Open contact page" className="xs:w-auto w-full" to="/contact">
                             <Button className="xs:w-auto w-full tb-bold !text-primary bg-white hover:!bg-secondary3 hover:!text-white" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
-                        <a className="xs:w-auto w-full" href="#unsereDienstleistungen">
-                            <Button className="w-full tb-medium border-white text-white hover:!bg-secondary3" variant="secondary" size="default">Mehr Infos</Button>
-                        </a>
+                        <div aria-label="Scroll to next section" onClick={() => scrollToSection("unsereDienstleistungen")} className="xs:w-auto w-full">
+                            <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
+                        </div>
 
                     </motion.div>
                 </div>
@@ -274,10 +285,10 @@ export const HomeV2 = () => {
                         <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">Mit uns an Ihrer Seite maximierst du deine Sichtbarkeit!</div>
                     </div>
                     <div className="flex xs:flex-row flex-col items-center justify-center gap-6 xs:w-auto w-full">
-                        <NavLink to="/contact" className="xs:w-auto w-full">
+                        <NavLink aria-label="Open contact page" to="/contact" className="xs:w-auto w-full">
                             <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
-                        <NavLink to="/services" className="xs:w-auto w-full">
+                        <NavLink aria-label="Open services page" to="/services" className="xs:w-auto w-full">
                             <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
                         </NavLink>
                     </div>
@@ -360,7 +371,7 @@ export const HomeV2 = () => {
                                     <div className="text-[18px] tb-bold text-neutral-800">Schnelle Ergebnisse</div>
                                 </div>
                             </div>
-                            <NavLink to="/ads-plan" className="xs:w-auto w-full">
+                            <NavLink aria-label="Open google ads plan page" to="/ads-plan" className="xs:w-auto w-full">
                                 <Button className="tb-bold xs:w-auto w-full">Details</Button>
                             </NavLink>
                         </motion.div>
@@ -378,7 +389,7 @@ export const HomeV2 = () => {
                             <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Warum ist eine SEO Optimierung wichtig?</div>
                             <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen. Somit ermöglicht es SEO, die Sichtbarkeit Ihrer Webseite nachhaltig zu steigern – ganz ohne zusätzliche Werbeausgaben.</div>
 
-                            <NavLink to="/seo-plan" className="xs:w-auto w-full">
+                            <NavLink aria-label="Open seo plan page" to="/seo-plan" className="xs:w-auto w-full">
                                 <Button className="tb-bold xs:w-auto w-full">Details</Button>
                             </NavLink>
                         </motion.div>
@@ -423,10 +434,10 @@ export const HomeV2 = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.3 }}
                         className="max-w-[527px] w-full flex xs:flex-row flex-col items-center gap-6">
-                        <NavLink className="xs:w-auto w-full" to="/contact">
+                        <NavLink  aria-label="Open contact page" className="xs:w-auto w-full" to="/contact">
                             <Button className="w-full whitespace-nowrap !text-primary tb-bold bg-white hover:bg-secondary3 hover:!text-white" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
-                        <NavLink className="xs:w-auto w-full" to="services">
+                        <NavLink aria-label="Open services page" className="xs:w-auto w-full" to="services">
                             <Button className="w-full whitespace-nowrap border-white text-white hover:bg-secondary3 tb-medium" variant="secondary" size="default">Dienstleistungen</Button>
                         </NavLink>
                     </motion.div>
@@ -651,7 +662,7 @@ export const HomeV2 = () => {
                             </div>
                         </div>
                         <div className="xs:w-auto w-full">
-                            <NavLink className="xs:w-auto w-full" to="/services">
+                            <NavLink aria-label="Open services page" className="xs:w-auto w-full" to="/services">
                                 <Button className="tb-bold xs:w-auto w-full">Dienstleistungen</Button>
                             </NavLink>
                         </div>
@@ -672,7 +683,7 @@ export const HomeV2 = () => {
                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso MARKETINGLY X</div>
                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Wieso Sie mit uns abreiten sollten?</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</div>
-                        <NavLink to="/contact" className="mt-10 xs:w-auto w-full">
+                        <NavLink aria-label="Open contact page" to="/contact" className="mt-10 xs:w-auto w-full">
                             <Button className="tb-bold xs:w-auto w-full">Kontakt</Button>
                         </NavLink>
                     </motion.div>
@@ -778,7 +789,7 @@ export const HomeV2 = () => {
                             </div>
                         </div>
                     </motion.div>
-                    <NavLink to="/contact" className="mt-10">
+                    <NavLink aria-label="Open contact page" to="/contact" className="mt-10">
                         <Button className="tb-bold">Kontakt</Button>
                     </NavLink>
                 </div>
@@ -879,7 +890,7 @@ export const HomeV2 = () => {
                                 <div>
                                     <input id="termandconditions" required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </div>
-                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></label>
+                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></label>
                             </div>
                             <div className="col-span-2">
                                 <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>

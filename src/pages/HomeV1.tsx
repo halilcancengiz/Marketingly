@@ -139,8 +139,8 @@ export const HomeV1 = () => {
                                 <NavLink aria-label="Open contact page" to="/contact" className="xs:w-auto w-full">
                                     <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
                                 </NavLink>
-                                <div onClick={() => scrollToSection("unsereDienstleistungen")} className="xs:w-auto w-full">
-                                    <Button aria-label="Scroll to next section" className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
+                                <div aria-label="Scroll to next section" onClick={() => scrollToSection("unsereDienstleistungen")} className="xs:w-auto w-full">
+                                    <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
                                 </div>
                             </motion.div>
                         </div>
@@ -898,7 +898,7 @@ export const HomeV1 = () => {
                                 <div>
                                     <input id="termandconditions" required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </div>
-                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></label>
+                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></label>
                             </div>
                             <div className="col-span-2">
                                 <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>

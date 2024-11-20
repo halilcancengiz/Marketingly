@@ -72,7 +72,7 @@ const NotFound = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.5, duration: 0.3 }}
                     className='z-[10]'>
-                    <NavLink className="mx-auto  w-full flex items-center justify-center" to="/">
+                    <NavLink aria-label="Back to home page" className="mx-auto  w-full flex items-center justify-center" to="/">
                         <Button className='bg-white !text-primary tb-bold hover:!text-white hover:bg-secondary3 xs:w-auto w-full !border-neutral-300 hover:!border-secondary3' variant='primary' size='default'>Zurück</Button>
                     </NavLink>
                 </motion.div>

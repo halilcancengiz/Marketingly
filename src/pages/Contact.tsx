@@ -103,22 +103,22 @@ const Contact = () => {
                         </div>
 
                         <div className='flex gap-4 md:max-w-[311px] w-full xs:min-w-[311px] items-center justify-center md:pb-0 pb-4'>
-                            <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <NavLink aria-label="Open facebook" to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={facebookIcon} alt="facebook" />
                             </NavLink>
-                            <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <NavLink aria-label="Open x" to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={xIcon} alt="x" />
                             </NavLink>
-                            <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <NavLink aria-label="Open instagram" to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={intagramIcon} alt="instagram" />
                             </NavLink>
-                            <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <NavLink aria-label="Open linkedin" to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={linkedinIcon} alt="linkedin" />
                             </NavLink>
-                            <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <NavLink aria-label="Open youtube" to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={youtubeIcon} alt="youtube" />
                             </NavLink>
-                            <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <NavLink aria-label="Open whatsapp" to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={whatsappIcon} alt="whatsapp" />
                             </NavLink>
                         </div>
@@ -176,7 +176,7 @@ const Contact = () => {
                                 <div>
                                     <input id="termandconditions" required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </div>
-                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></label>
+                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></label>
                             </div>
                             <div className="col-span-2">
                                 <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>
