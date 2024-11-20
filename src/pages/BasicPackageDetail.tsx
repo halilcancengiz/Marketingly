@@ -69,7 +69,7 @@ const BasicPackageDetail = () => {
                     transition={{ delay: 0.3, duration: 0.2 }}
                     className="lg:mr-10 lg:mb-0 md:mb-[70px] mb-[60px] flex flex-col lg:max-w-[621.69px] max-w-[660px] lg:min-w-[491px] w-full">
                     <div className="size-[90px] border border-neutral-300 md:mb-8 xs:mb-[28px] mb-[25px] rounded-[25px] flex items-center justify-center overflow-hidden">
-                        <img src={circlesImage} alt="circle" />
+                        <img loading="lazy" src={circlesImage} alt="circle" />
                     </div>
                     <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
                         Basis-Paket
@@ -80,23 +80,23 @@ const BasicPackageDetail = () => {
                     <div className="flex flex-col gap-[15px] mb-10">
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
                         <div className="flex items-start gap-[13px]">
-                            <img className="size-6 rounded-full" src={check} alt="check" />
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 1.500 €</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
-                            <img className="size-6 rounded-full" src={check} alt="check" />
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einrichtung und Optimierung Ihrer ersten Google Ads-Kampagnen</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
-                            <img className="size-6 rounded-full" src={check} alt="check" />
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliche Berichte mit den wichtigsten Erkenntnissen und Empfehlungen</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
-                            <img className="size-6 rounded-full" src={check} alt="check" />
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verlässlicher Support per E-Mail und Telefon</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
-                            <img className="size-6 rounded-full" src={check} alt="check" />
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Recherche und Erstellung passender Schlagworte und Anzeigentexte</div>
                         </div>
                     </div>

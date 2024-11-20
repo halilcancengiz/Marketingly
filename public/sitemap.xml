@@ -21,7 +21,15 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://marketingly.vercel.app/product-detail</loc>
+    <loc>https://marketingly.vercel.app/basic-package-detail</loc>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://marketingly.vercel.app/standart-package-detail</loc>
+    <priority>0.6</priority>
+  </url>
+   <url>
+    <loc>https://marketingly.vercel.app/premium-package-detail</loc>
     <priority>0.6</priority>
   </url>
   <url>

@@ -104,22 +104,22 @@ const Contact = () => {
 
                         <div className='flex gap-4 md:max-w-[311px] w-full xs:min-w-[311px] items-center justify-center md:pb-0 pb-4'>
                             <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
-                                <img className='size-[37px] object-contain' src={facebookIcon} alt="facebook" />
+                                <img loading="lazy" className='size-[37px] object-contain' src={facebookIcon} alt="facebook" />
                             </NavLink>
                             <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
-                                <img className='size-[37px] object-contain' src={xIcon} alt="x" />
+                                <img loading="lazy" className='size-[37px] object-contain' src={xIcon} alt="x" />
                             </NavLink>
                             <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
-                                <img className='size-[37px] object-contain' src={intagramIcon} alt="instagram" />
+                                <img loading="lazy" className='size-[37px] object-contain' src={intagramIcon} alt="instagram" />
                             </NavLink>
                             <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
-                                <img className='size-[37px] object-contain' src={linkedinIcon} alt="linkedin" />
+                                <img loading="lazy" className='size-[37px] object-contain' src={linkedinIcon} alt="linkedin" />
                             </NavLink>
                             <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
-                                <img className='size-[37px] object-contain' src={youtubeIcon} alt="youtube" />
+                                <img loading="lazy" className='size-[37px] object-contain' src={youtubeIcon} alt="youtube" />
                             </NavLink>
                             <NavLink to="/" className='rounded-full flex items-center justify-center hover-up-lg'>
-                                <img className='size-[37px] object-contain' src={whatsappIcon} alt="whatsapp" />
+                                <img loading="lazy" className='size-[37px] object-contain' src={whatsappIcon} alt="whatsapp" />
                             </NavLink>
                         </div>
 
