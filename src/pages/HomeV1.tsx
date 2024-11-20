@@ -1,17 +1,17 @@
 import Button from "../components/Button";
-import contactPeopleImage from "../assets/images/homeV1-hero-section-small.png";
-import chart from "../assets/images/chart.png";
-import analytics from "../assets/images/analytics.png";
-import search from "../assets/images/search.png";
-import system from "../assets/images/system.png";
-import services from "../assets/images/homev1-services-image.png";
-import check from "../assets/images/check.png";
-import womanImage from "../assets/images/card-woman-image.jpeg";
+import contactPeopleImage from "../assets/images/homeV1-hero-section-small.webp";
+import chart from "../assets/images/chart.webp";
+import analytics from "../assets/images/analytics.webp";
+import search from "../assets/images/search.webp";
+import system from "../assets/images/system.webp";
+import services from "../assets/images/homev1-services-image.webp";
+import check from "../assets/images/check.webp";
+import womanImage from "../assets/images/card-woman-image.webp";
 import * as motion from "framer-motion/client";
 import { useEffect } from "react";
-import blueCardImage from "../assets/images/blue.png"
-import yellowCardImage from "../assets/images/yellow.png"
-import redCardImage from "../assets/images/red.png"
+import blueCardImage from "../assets/images/blue.webp"
+import yellowCardImage from "../assets/images/yellow.webp"
+import redCardImage from "../assets/images/red.webp"
 import { NavLink, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet"
 import { useScroll, useSpring, useTransform } from "framer-motion";

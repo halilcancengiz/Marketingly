@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import analytics from "../assets/images/analytics.png";
-import search from "../assets/images/search.png";
-import system from "../assets/images/system.png";
+import analytics from "../assets/images/analytics.webp";
+import search from "../assets/images/search.webp";
+import system from "../assets/images/system.webp";
 import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"

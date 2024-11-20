@@ -1,5 +1,5 @@
-import circlesImage from "../assets/images/circles.png"
-import check from "../assets/images/check.png";
+import circlesImage from "../assets/images/circles.webp"
+import check from "../assets/images/check.webp";
 import Accordion from "../components/Accordion";
 import Button from "../components/Button";
 import { NavLink } from "react-router-dom";

@@ -1,21 +1,21 @@
 import Button from "../components/Button";
-import analytics from "../assets/images/analytics.png";
-import search from "../assets/images/search.png";
-import system from "../assets/images/system.png";
-import services from "../assets/images/homev1-services-image.png";
-import check from "../assets/images/check.png";
-import womanImage from "../assets/images/card-woman-image.jpeg";
+import analytics from "../assets/images/analytics.webp";
+import search from "../assets/images/search.webp";
+import system from "../assets/images/system.webp";
+import services from "../assets/images/homev1-services-image.webp";
+import check from "../assets/images/check.webp";
+import womanImage from "../assets/images/card-woman-image.webp";
 import * as motion from "framer-motion/client";
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect } from "react";
-import blueCardImage from "../assets/images/blue.png"
-import yellowCardImage from "../assets/images/yellow.png"
-import redCardImage from "../assets/images/red.png"
+import blueCardImage from "../assets/images/blue.webp"
+import yellowCardImage from "../assets/images/yellow.webp"
+import redCardImage from "../assets/images/red.webp"
 import { NavLink, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet"
-import homeV2HeroImage from "../assets/images/homev2hero.png"
-import homeV2Chart1Image from "../assets/images/homev2chart1.png"
-import homeV2Chart2Image from "../assets/images/homev2chart2.png"
+import homeV2HeroImage from "../assets/images/homev2hero.webp"
+import homeV2Chart1Image from "../assets/images/homev2chart1.webp"
+import homeV2Chart2Image from "../assets/images/homev2chart2.webp"
 
 
 export const HomeV2 = () => {

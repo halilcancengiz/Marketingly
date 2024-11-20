@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
-import shapes from "../assets/images/thankspage.png";
-import check from "../assets/images/thankcheck.png";
+import shapes from "../assets/images/thankspage.webp";
+import check from "../assets/images/thankcheck.webp";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 

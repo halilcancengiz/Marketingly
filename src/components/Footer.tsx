@@ -1,10 +1,10 @@
 import { Logo } from '../assets/svg/Logo'
-import facebookIcon from "../assets/images/facebook.png"
-import xIcon from "../assets/images/x.png"
-import intagramIcon from "../assets/images/instagram.png"
-import linkedinIcon from "../assets/images/linkedin.png"
-import youtubeIcon from "../assets/images/youtube.png"
-import whatsappIcon from "../assets/images/whatsapp.png"
+import facebookIcon from "../assets/images/facebook.webp"
+import xIcon from "../assets/images/x.webp"
+import intagramIcon from "../assets/images/instagram.webp"
+import linkedinIcon from "../assets/images/linkedin.webp"
+import youtubeIcon from "../assets/images/youtube.webp"
+import whatsappIcon from "../assets/images/whatsapp.webp"
 import { NavLink } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
 import { useEffect, useRef } from 'react'
