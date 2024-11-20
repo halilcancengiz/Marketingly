@@ -15,6 +15,7 @@ import Impressum from "../pages/Impressum";
 import StandartPackageDetail from "../pages/StandartPackageDetail";
 import PremiumPackageDetail from "../pages/PremiumPackageDetail";
 import BasicPackageDetail from "../pages/BasicPackageDetail";
+import { HomeV3 } from "../pages/HomeV3";
 
 
 
@@ -23,6 +24,7 @@ export const AppRoutes = () => {
         <Routes>
             <Route path="/" element={<HomeV1 />} />
             <Route path="/homev2" element={<HomeV2 />} />
+            <Route path="/homev3" element={<HomeV3 />} />
             {/* <Route path="/styleguide" element={<StyleGuidePage />} /> */}
             {/* <Route path="/test" element={<Test />} /> */}
             <Route path="/thank-you-page" element={<Thankyou />} />
