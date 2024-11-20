@@ -68,6 +68,7 @@ const Navbar = () => {
                     </NavLink>
                     <div className={`${isMobileNavOpen ? "bg-secondary3" : "bg-primary"} rounded-[10px] hover:bg-secondary3 transition-all duration-300 lg:hidden`}>
                         <Hamburger
+                            aria-label="Toggle mobile navbar"
                             toggled={isMobileNavOpen}
                             toggle={toggleMobileNav}
                             size={20}
