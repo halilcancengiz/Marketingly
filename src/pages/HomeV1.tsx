@@ -107,7 +107,7 @@ export const HomeV1 = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.2, duration: 0.3 }}
+                                transition={{ delay: 0.7, duration: 0.3 }}
                                 className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.5px]">
                                 Marketing Agentur
                             </motion.div>
@@ -116,7 +116,7 @@ export const HomeV1 = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.3, duration: 0.3 }}
+                                transition={{ delay: 0.7, duration: 0.3 }}
                                 className="lg:mb-[22px] md:mb-[20px] xs:mb-[15px] mb-[10px] text-neutral-800 tb-bold lg:text-[54px] lg:leading-[61.02px] md:text-[45px] md:leading-[50.85px] xs:text-[38px] xs:leading-[42.94px] text-[32px] leading-[36.16px]">
                                 Maximaler Erfolg mit Google!
                             </motion.div>
@@ -125,7 +125,7 @@ export const HomeV1 = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.4, duration: 0.3 }}
+                                transition={{ delay: 0.7, duration: 0.3 }}
                                 className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">
                                 Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.
                             </motion.div>
@@ -134,7 +134,7 @@ export const HomeV1 = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: 0.3 }}
+                                transition={{ delay: 0.7, duration: 0.3 }}
                                 className="flex xs:flex-row flex-col gap-6 lg:justify-start justify-center">
                                 <NavLink aria-label="Open contact page" to="/contact" className="xs:w-auto w-full">
                                     <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
@@ -181,7 +181,7 @@ export const HomeV1 = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.80, duration: 0.3 }}
+                    transition={{ delay: 0.7, duration: 0.3 }}
                     className="absolute lg:right-0 lg:top-0 lg:bottom-auto bottom-0 bg-primary 3xl:w-[45%] lg:w-[38%] w-full lg:h-full h-[35.719%] -z-[1]">
                     <div className="relative w-full h-full">
                         {/* 3xl+ / lg*/}
@@ -190,28 +190,28 @@ export const HomeV1 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.3 }}
                             style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} className="bg-secondary3 lg:visible invisible absolute right-0 top-0 aspect-square 3xl:w-[284px] lg:w-[50%] "></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.3 }}
                             className="lg:visible invisible absolute right-0 bottom-0 bg-secondary1 aspect-square 3xl:w-[50%] 3xl:h-[50%] lg:w-[50%]"></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.3 }}
                             className="lg:visible invisible absolute left-0 top-0 bg-secondary1 aspect-square 3xl:w-[50%] 3xl:h-[50%] lg:w-[50%]"></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.3 }}
                             className="lg:visible invisible absolute 3xl:-left-[11.8%] 3xl:-bottom-[21%] lg:-left-auto lg:-bottom-[27.6%] 3xl:mr-auto lg:-ml-[116px] bg-secondary2 aspect-square 3xl:w-[375px] w-[69%] rounded-full"></motion.div>
                         {/* lg / xs */}
                         <motion.div
@@ -219,21 +219,21 @@ export const HomeV1 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.3 }}
                             style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} className="bg-secondary3 lg:invisible xs:visible invisible absolute right-0 top-0 aspect-square w-[27%] "></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.3 }}
                             className="absolute left-0 top-0 bg-secondary1 aspect-square w-[27%] lg:invisible xs:visible invisible"></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.3 }}
                             className="absolute left-0 -bottom-[20%] aspect-square w-[38%] bg-secondary2 rounded-full lg:invisible xs:visible invisible"></motion.div>
                         {/* xs- */}
                         <motion.div
@@ -241,14 +241,14 @@ export const HomeV1 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.3 }}
                             style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} className="bg-secondary3 xs:invisible visible absolute right-0 top-0 aspect-square w-[27%] "></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.7, duration: 0.3 }}
                             className="absolute left-0 bottom-0 aspect-square w-[38%] bg-secondary2 rounded-full xs:invisible visible"></motion.div>
 
                     </div>
