@@ -136,11 +136,11 @@ export const HomeV1 = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.5, duration: 0.3 }}
                                 className="flex xs:flex-row flex-col gap-6 lg:justify-start justify-center">
-                                <NavLink to="/contact" className="xs:w-auto w-full">
-                                    <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
+                                <NavLink aria-label="Open contact page" to="/contact" className="xs:w-auto w-full">
+                                    <Button  className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
                                 </NavLink>
                                 <div onClick={() => scrollToSection("unsereDienstleistungen")} className="xs:w-auto w-full">
-                                    <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
+                                    <Button aria-label="Scroll to next section" className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
                                 </div>
                             </motion.div>
                         </div>
@@ -267,10 +267,10 @@ export const HomeV1 = () => {
                         <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">Mit uns an Ihrer Seite maximierst du deine Sichtbarkeit!</div>
                     </div>
                     <div className="flex xs:flex-row flex-col items-center justify-center gap-6 xs:w-auto w-full">
-                        <NavLink to="/contact" className="xs:w-auto w-full">
+                        <NavLink aria-label="Open contact page" to="/contact" className="xs:w-auto w-full">
                             <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
-                        <NavLink to="/services" className="xs:w-auto w-full">
+                        <NavLink aria-label="Open services page" to="/services" className="xs:w-auto w-full">
                             <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
                         </NavLink>
                     </div>
@@ -357,7 +357,7 @@ export const HomeV1 = () => {
                                     <div className="text-[18px] tb-bold text-neutral-800">Schnelle Ergebnisse</div>
                                 </div>
                             </div>
-                            <NavLink to="/ads-plan" className="xs:w-auto w-full">
+                            <NavLink aria-label="Open google ads plan page" to="/ads-plan" className="xs:w-auto w-full">
                                 <Button className="tb-bold xs:w-auto w-full">Details</Button>
                             </NavLink>
                         </motion.div>
@@ -375,7 +375,7 @@ export const HomeV1 = () => {
                             <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Warum ist eine SEO Optimierung wichtig?</div>
                             <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen. Somit ermöglicht es SEO, die Sichtbarkeit Ihrer Webseite nachhaltig zu steigern – ganz ohne zusätzliche Werbeausgaben.</div>
 
-                            <NavLink to="/seo-plan" className="xs:w-auto w-full">
+                            <NavLink aria-label="Open seo plan page" to="/seo-plan" className="xs:w-auto w-full">
                                 <Button className="tb-bold xs:w-auto w-full">Details</Button>
                             </NavLink>
                         </motion.div>
@@ -420,10 +420,10 @@ export const HomeV1 = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.3 }}
                         className="max-w-[527px] w-full flex xs:flex-row flex-col items-center gap-6">
-                        <NavLink className="xs:w-auto w-full" to="/contact">
+                        <NavLink aria-label="Open contact page" className="xs:w-auto w-full" to="/contact">
                             <Button className="w-full whitespace-nowrap !text-primary tb-bold bg-white hover:bg-secondary3 hover:!text-white" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
-                        <NavLink className="xs:w-auto w-full" to="services">
+                        <NavLink aria-label="Open services page" className="xs:w-auto w-full" to="services">
                             <Button className="w-full whitespace-nowrap border-white text-white hover:bg-secondary3 tb-medium" variant="secondary" size="default">Dienstleistungen</Button>
                         </NavLink>
                     </motion.div>
@@ -648,7 +648,7 @@ export const HomeV1 = () => {
                             </div>
                         </div>
                         <div className="xs:w-auto w-full">
-                            <NavLink className="xs:w-auto w-full" to="/services">
+                            <NavLink aria-label="Open services page" className="xs:w-auto w-full" to="/services">
                                 <Button className="tb-bold xs:w-auto w-full">Dienstleistungen</Button>
                             </NavLink>
                         </div>
@@ -669,7 +669,7 @@ export const HomeV1 = () => {
                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso MARKETINGLY X</div>
                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Wieso Sie mit uns abreiten sollten?</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</div>
-                        <NavLink to="/contact" className="mt-10 xs:w-auto w-full">
+                        <NavLink aria-label="Open contact page" to="/contact" className="mt-10 xs:w-auto w-full">
                             <Button className="tb-bold xs:w-auto w-full">Kontakt</Button>
                         </NavLink>
                     </motion.div>
@@ -775,7 +775,7 @@ export const HomeV1 = () => {
                             </div>
                         </div>
                     </motion.div>
-                    <NavLink to="/contact" className="mt-10">
+                    <NavLink aria-label="Open contact page" to="/contact" className="mt-10">
                         <Button className="tb-bold">Kontakt</Button>
                     </NavLink>
                 </div>
@@ -879,7 +879,7 @@ export const HomeV1 = () => {
                                 <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
                             </div>
                             <div className="col-span-2">
-                                <Button type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>
+                                <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>
                             </div>
                         </form>
                         <motion.div
@@ -895,7 +895,7 @@ export const HomeV1 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay:0.1 ,duration: 0.3 }}
+                            transition={{ delay: 0.1, duration: 0.3 }}
                             className="absolute -right-[81px] -bottom-[67px] size-[208px] z-[-1] bg-primary">
                         </motion.div>
 

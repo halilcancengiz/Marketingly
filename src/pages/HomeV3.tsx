@@ -14,7 +14,7 @@ import yellowCardImage from "../assets/images/yellow.png"
 import redCardImage from "../assets/images/red.png"
 import { NavLink, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet"
-import { color, useScroll, useSpring, useTransform } from "framer-motion";
+import { useScroll, useSpring, useTransform } from "framer-motion";
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 
 
@@ -766,7 +766,7 @@ export const HomeV3 = () => {
                         className="flex lg:flex-row flex-col w-full gap-[26px]">
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img  loading="lazy" src={blueCardImage} alt="card" />
+                                <img loading="lazy" src={blueCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">1. Erstkontakt</div>
@@ -776,7 +776,7 @@ export const HomeV3 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img  loading="lazy" src={yellowCardImage} alt="card" />
+                                <img loading="lazy" src={yellowCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">2. Planung</div>
@@ -786,7 +786,7 @@ export const HomeV3 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img  loading="lazy" src={redCardImage} alt="card" />
+                                <img loading="lazy" src={redCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">3. Durchführung</div>
