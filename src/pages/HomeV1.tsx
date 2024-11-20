@@ -656,7 +656,7 @@ export const HomeV1 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 bg-red-400 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200">
+            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
 
                     <motion.div
