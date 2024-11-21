@@ -25,26 +25,26 @@ export const HomeV3 = () => {
     const jumbotronBoldText = "Google!"
     const jumbotronTextSplit = splitStringUsingRegex(jumbotronBoldText)
 
-    const charVariants1 = { hidden: { opacity: 0, y: 20 }, reveal: { opacity: 1, y: 0 } }; // Dikey Geçiş
-    const charVariants2 = { hidden: { opacity: 0, x: -20 }, reveal: { opacity: 1, x: 0 } }; // Yatay Geçiş
-    const charVariants3 = { hidden: { opacity: 0, rotate: -90 }, reveal: { opacity: 1, rotate: 0 } }; // Dönme
-    const charVariants4 = { hidden: { opacity: 0, scale: 0.5 }, reveal: { opacity: 1, scale: 1 } }; // Büyüyerek Geçiş
-    const charVariants5 = { hidden: { opacity: 0 }, reveal: { opacity: 1 } }; // Yavaş Yavaş Görünme
-    const charVariants6 = { hidden: { opacity: 0, y: 30 }, reveal: { opacity: 1, y: [0, -10, 0] } }; // Sıçrayarak Geçiş
-    const charVariants7 = { hidden: { opacity: 0, scale: 0.5, rotate: -45 }, reveal: { opacity: 1, scale: 1, rotate: 0 } }; // Yavaş Dönüş ve Büyüme
-    const charVariants8 = { hidden: { opacity: 0, x: -20, y: 20 }, reveal: { opacity: 1, x: 0, y: 0 } }; // Yukarı ve Sağa Hareket
+    // const charVariants1 = { hidden: { opacity: 0, y: 20 }, reveal: { opacity: 1, y: 0 } }; // Dikey Geçiş
+    // const charVariants2 = { hidden: { opacity: 0, x: -20 }, reveal: { opacity: 1, x: 0 } }; // Yatay Geçiş
+    // const charVariants3 = { hidden: { opacity: 0, rotate: -90 }, reveal: { opacity: 1, rotate: 0 } }; // Dönme
+    // const charVariants4 = { hidden: { opacity: 0, scale: 0.5 }, reveal: { opacity: 1, scale: 1 } }; // Büyüyerek Geçiş
+    // const charVariants5 = { hidden: { opacity: 0 }, reveal: { opacity: 1 } }; // Yavaş Yavaş Görünme
+    // const charVariants6 = { hidden: { opacity: 0, y: 30 }, reveal: { opacity: 1, y: [0, -10, 0] } }; // Sıçrayarak Geçiş
+    // const charVariants7 = { hidden: { opacity: 0, scale: 0.5, rotate: -45 }, reveal: { opacity: 1, scale: 1, rotate: 0 } }; // Yavaş Dönüş ve Büyüme
+    // const charVariants8 = { hidden: { opacity: 0, x: -20, y: 20 }, reveal: { opacity: 1, x: 0, y: 0 } }; // Yukarı ve Sağa Hareket
     const charVariants9 = { hidden: { opacity: 0, color: "#4A3AFF", rotateY: 0,scale: 0.5, }, reveal: { opacity: 1, color: "#14142B", rotateY: 360,scale: 1, } }; // Renk Değiştirme ile Geçiş
-    const charVariants10 = { hidden: { opacity: 0, x: -10 }, reveal: { opacity: 1, x: [0, -5, 5, 0] } }; // Titreşimli Geçiş
-    const charVariants11 = { hidden: { opacity: 0, y: 50, rotateY: 90 }, reveal: { opacity: 1, y: 0, rotateY: 0, transition: { damping: 10 } } }; // Alttan Gelip Damping ile Y Ekseni Dönüş
-    const charVariants12 = { hidden: { opacity: 0, scale: 0 }, reveal: { opacity: 1, scale: 1.2, transition: { yoyo: Infinity, duration: 0.5 } } }; // Nabız Gibi Büyüme ve Küçülme
-    const charVariants13 = { hidden: { opacity: 0, skewX: 45 }, reveal: { opacity: 1, skewX: 0 } }; // Yanlara Eğilerek Geçiş
-    const charVariants14 = { hidden: { opacity: 0, rotateX: -90 }, reveal: { opacity: 1, rotateX: 0 } }; // X Ekseni Dönüş
-    const charVariants15 = { hidden: { opacity: 0, y: 20, rotateZ: -30 }, reveal: { opacity: 1, y: 0, rotateZ: 0 } }; // Z Ekseni Dönüşle Yukarıya Hareket
-    const charVariants16 = { hidden: { opacity: 0, y: 40, scale: 0.8 }, reveal: { opacity: 1, y: 0, scale: 1.1 } }; // Alttan Gelip Hafifçe Büyüme
-    const charVariants17 = { hidden: { opacity: 0, x: -50, rotate: -45 }, reveal: { opacity: 1, x: 0, rotate: 0 } }; // Dönerken Yandan Gelen
-    const charVariants18 = { hidden: { opacity: 0, y: -20 }, reveal: { opacity: 1, y: 0, transition: { ease: "backOut" } } }; // Üstten Gelip Hafifçe Geri Sekme
-    const charVariants19 = { hidden: { opacity: 0, y: 30, rotateY: 0, color: "#4A3AFF" }, reveal: { opacity: 1, y: 0, rotateY: 360, color: "#14142B", transition: { type: "spring", stiffness: 100 } } }; // Yay Etkisiyle Alttan Geçiş
-    const charVariants20 = { hidden: { opacity: 0, scale: 0.5, rotateY: 180 }, reveal: { opacity: 1, scale: 1, rotateY: 0, transition: { duration: 0.6 } } }; // Y Ekseni Dönüş ile Küçükten Büyüğe
+    // const charVariants10 = { hidden: { opacity: 0, x: -10 }, reveal: { opacity: 1, x: [0, -5, 5, 0] } }; // Titreşimli Geçiş
+    // const charVariants11 = { hidden: { opacity: 0, y: 50, rotateY: 90 }, reveal: { opacity: 1, y: 0, rotateY: 0, transition: { damping: 10 } } }; // Alttan Gelip Damping ile Y Ekseni Dönüş
+    // const charVariants12 = { hidden: { opacity: 0, scale: 0 }, reveal: { opacity: 1, scale: 1.2, transition: { yoyo: Infinity, duration: 0.5 } } }; // Nabız Gibi Büyüme ve Küçülme
+    // const charVariants13 = { hidden: { opacity: 0, skewX: 45 }, reveal: { opacity: 1, skewX: 0 } }; // Yanlara Eğilerek Geçiş
+    // const charVariants14 = { hidden: { opacity: 0, rotateX: -90 }, reveal: { opacity: 1, rotateX: 0 } }; // X Ekseni Dönüş
+    // const charVariants15 = { hidden: { opacity: 0, y: 20, rotateZ: -30 }, reveal: { opacity: 1, y: 0, rotateZ: 0 } }; // Z Ekseni Dönüşle Yukarıya Hareket
+    // const charVariants16 = { hidden: { opacity: 0, y: 40, scale: 0.8 }, reveal: { opacity: 1, y: 0, scale: 1.1 } }; // Alttan Gelip Hafifçe Büyüme
+    // const charVariants17 = { hidden: { opacity: 0, x: -50, rotate: -45 }, reveal: { opacity: 1, x: 0, rotate: 0 } }; // Dönerken Yandan Gelen
+    // const charVariants18 = { hidden: { opacity: 0, y: -20 }, reveal: { opacity: 1, y: 0, transition: { ease: "backOut" } } }; // Üstten Gelip Hafifçe Geri Sekme
+    // const charVariants19 = { hidden: { opacity: 0, y: 30, rotateY: 0, color: "#4A3AFF" }, reveal: { opacity: 1, y: 0, rotateY: 360, color: "#14142B", transition: { type: "spring", stiffness: 100 } } }; // Yay Etkisiyle Alttan Geçiş
+    // const charVariants20 = { hidden: { opacity: 0, scale: 0.5, rotateY: 180 }, reveal: { opacity: 1, scale: 1, rotateY: 0, transition: { duration: 0.6 } } }; // Y Ekseni Dönüş ile Küçükten Büyüğe
 
     const fadeInAnimationVariantExample = {
         hidden: { opacity: 0, y: 20 },
