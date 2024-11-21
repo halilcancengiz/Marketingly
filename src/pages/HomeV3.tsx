@@ -22,13 +22,43 @@ import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 
 export const HomeV3 = () => {
     const navigate = useNavigate()
-    const jumbotronBoldText = "Maximaler Erfolg mit Google!"
+    const jumbotronBoldText = "Google!"
     const jumbotronTextSplit = splitStringUsingRegex(jumbotronBoldText)
 
-    const charVariants = {
-        hidden: { opacity: 0 },
-        reveal: { opacity: 1 }
-    }
+    const charVariants1 = { hidden: { opacity: 0, y: 20 }, reveal: { opacity: 1, y: 0 } }; // Dikey Geçiş
+    const charVariants2 = { hidden: { opacity: 0, x: -20 }, reveal: { opacity: 1, x: 0 } }; // Yatay Geçiş
+    const charVariants3 = { hidden: { opacity: 0, rotate: -90 }, reveal: { opacity: 1, rotate: 0 } }; // Dönme
+    const charVariants4 = { hidden: { opacity: 0, scale: 0.5 }, reveal: { opacity: 1, scale: 1 } }; // Büyüyerek Geçiş
+    const charVariants5 = { hidden: { opacity: 0 }, reveal: { opacity: 1 } }; // Yavaş Yavaş Görünme
+    const charVariants6 = { hidden: { opacity: 0, y: 30 }, reveal: { opacity: 1, y: [0, -10, 0] } }; // Sıçrayarak Geçiş
+    const charVariants7 = { hidden: { opacity: 0, scale: 0.5, rotate: -45 }, reveal: { opacity: 1, scale: 1, rotate: 0 } }; // Yavaş Dönüş ve Büyüme
+    const charVariants8 = { hidden: { opacity: 0, x: -20, y: 20 }, reveal: { opacity: 1, x: 0, y: 0 } }; // Yukarı ve Sağa Hareket
+    const charVariants9 = { hidden: { opacity: 0, color: "#4A3AFF", rotateY: 0,scale: 0.5, }, reveal: { opacity: 1, color: "#14142B", rotateY: 360,scale: 1, } }; // Renk Değiştirme ile Geçiş
+    const charVariants10 = { hidden: { opacity: 0, x: -10 }, reveal: { opacity: 1, x: [0, -5, 5, 0] } }; // Titreşimli Geçiş
+    const charVariants11 = { hidden: { opacity: 0, y: 50, rotateY: 90 }, reveal: { opacity: 1, y: 0, rotateY: 0, transition: { damping: 10 } } }; // Alttan Gelip Damping ile Y Ekseni Dönüş
+    const charVariants12 = { hidden: { opacity: 0, scale: 0 }, reveal: { opacity: 1, scale: 1.2, transition: { yoyo: Infinity, duration: 0.5 } } }; // Nabız Gibi Büyüme ve Küçülme
+    const charVariants13 = { hidden: { opacity: 0, skewX: 45 }, reveal: { opacity: 1, skewX: 0 } }; // Yanlara Eğilerek Geçiş
+    const charVariants14 = { hidden: { opacity: 0, rotateX: -90 }, reveal: { opacity: 1, rotateX: 0 } }; // X Ekseni Dönüş
+    const charVariants15 = { hidden: { opacity: 0, y: 20, rotateZ: -30 }, reveal: { opacity: 1, y: 0, rotateZ: 0 } }; // Z Ekseni Dönüşle Yukarıya Hareket
+    const charVariants16 = { hidden: { opacity: 0, y: 40, scale: 0.8 }, reveal: { opacity: 1, y: 0, scale: 1.1 } }; // Alttan Gelip Hafifçe Büyüme
+    const charVariants17 = { hidden: { opacity: 0, x: -50, rotate: -45 }, reveal: { opacity: 1, x: 0, rotate: 0 } }; // Dönerken Yandan Gelen
+    const charVariants18 = { hidden: { opacity: 0, y: -20 }, reveal: { opacity: 1, y: 0, transition: { ease: "backOut" } } }; // Üstten Gelip Hafifçe Geri Sekme
+    const charVariants19 = { hidden: { opacity: 0, y: 30, rotateY: 0, color: "#4A3AFF" }, reveal: { opacity: 1, y: 0, rotateY: 360, color: "#14142B", transition: { type: "spring", stiffness: 100 } } }; // Yay Etkisiyle Alttan Geçiş
+    const charVariants20 = { hidden: { opacity: 0, scale: 0.5, rotateY: 180 }, reveal: { opacity: 1, scale: 1, rotateY: 0, transition: { duration: 0.6 } } }; // Y Ekseni Dönüş ile Küçükten Büyüğe
+
+    const fadeInAnimationVariantExample = {
+        hidden: { opacity: 0, y: 20 },
+        reveal: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.3,
+                duration: 0.4,
+                staggerChildren: 0.05,
+                delayChildren: 0.7,
+            },
+        },
+    };
 
     const fadeInAnimationVariant = {
         initial: {
@@ -114,32 +144,37 @@ export const HomeV3 = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.2, duration: 0.3 }}
+                                transition={{ delay: 0.3, duration: 0.3 }}
                                 className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.5px]">
                                 Marketing Agentur
                             </motion.div>
+
+
                             <motion.div
-                                variants={fadeInAnimationVariant}
+                                variants={fadeInAnimationVariantExample}
                                 initial="hidden"
                                 whileInView="reveal"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.3, duration: 0.3, staggerChildren: 0.05 }}
-                                className="lg:mb-[22px] md:mb-[20px] xs:mb-[15px] mb-[10px] text-neutral-800 tb-bold lg:text-[54px] lg:leading-[61.02px] md:text-[45px] md:leading-[50.85px] xs:text-[38px] xs:leading-[42.94px] text-[32px] leading-[36.16px]">
-                                {
-                                    jumbotronTextSplit.map((char, index) => (
-                                        <motion.span className="tb-bold" key={index} transition={{ duration: 0.5 }} variants={charVariants}>
-                                            {char}
-                                        </motion.span>
-                                    ))
-                                }
-
+                                className="lg:mb-[22px] md:mb-[20px] xs:mb-[15px] mb-[10px] text-neutral-800 tb-bold lg:text-[54px] lg:leading-[61.02px] md:text-[45px] md:leading-[50.85px] xs:text-[38px] xs:leading-[42.94px] text-[32px] leading-[36.16px]"
+                            >
+                                Maximaler Erfolg mit&nbsp;
+                                {jumbotronTextSplit.map((char, index) => (
+                                    <motion.span
+                                        key={index}
+                                        className="tb-bold inline-block"
+                                        variants={charVariants9}
+                                        transition={{ duration: 0.5 }}
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))}
                             </motion.div>
                             <motion.div
                                 variants={fadeInAnimationVariant}
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.4, duration: 0.3 }}
+                                transition={{ delay: 0.3, duration: 0.3 }}
                                 className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">
                                 Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.
                             </motion.div>
@@ -148,7 +183,7 @@ export const HomeV3 = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: 0.3 }}
+                                transition={{ delay: 0.3, duration: 0.3 }}
                                 className="flex xs:flex-row flex-col gap-6 lg:justify-start justify-center">
                                 <NavLink to="/contact" className="xs:w-auto w-full">
                                     <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
@@ -163,7 +198,7 @@ export const HomeV3 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 0.70, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             className="lg:max-w-[565px] max-w-[660px] mx-auto w-full relative lg:ml-5">
                             <motion.img
                                 style={{
@@ -195,7 +230,7 @@ export const HomeV3 = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.80, duration: 0.3 }}
+                    transition={{ delay: 0.3, duration: 0.3 }}
                     className="absolute lg:right-0 lg:top-0 lg:bottom-auto bottom-0 bg-primary 3xl:w-[45%] lg:w-[38%] w-full lg:h-full h-[35.719%] -z-[1]">
                     <div className="relative w-full h-full">
                         {/* 3xl+ / lg*/}
@@ -204,28 +239,28 @@ export const HomeV3 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} className="bg-secondary3 lg:visible invisible absolute right-0 top-0 aspect-square 3xl:w-[284px] lg:w-[50%] "></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             className="lg:visible invisible absolute right-0 bottom-0 bg-secondary1 aspect-square 3xl:w-[50%] 3xl:h-[50%] lg:w-[50%]"></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             className="lg:visible invisible absolute left-0 top-0 bg-secondary1 aspect-square 3xl:w-[50%] 3xl:h-[50%] lg:w-[50%]"></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             className="lg:visible invisible absolute 3xl:-left-[11.8%] 3xl:-bottom-[21%] lg:-left-auto lg:-bottom-[27.6%] 3xl:mr-auto lg:-ml-[116px] bg-secondary2 aspect-square 3xl:w-[375px] w-[69%] rounded-full"></motion.div>
                         {/* lg / xs */}
                         <motion.div
@@ -233,21 +268,21 @@ export const HomeV3 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} className="bg-secondary3 lg:invisible xs:visible invisible absolute right-0 top-0 aspect-square w-[27%] "></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             className="absolute left-0 top-0 bg-secondary1 aspect-square w-[27%] lg:invisible xs:visible invisible"></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             className="absolute left-0 -bottom-[20%] aspect-square w-[38%] bg-secondary2 rounded-full lg:invisible xs:visible invisible"></motion.div>
                         {/* xs- */}
                         <motion.div
@@ -255,14 +290,14 @@ export const HomeV3 = () => {
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             style={{ clipPath: "polygon(100% 0, 0 0, 100% 100%)" }} className="bg-secondary3 xs:invisible visible absolute right-0 top-0 aspect-square w-[27%] "></motion.div>
                         <motion.div
                             variants={scaleAnimationVariant}
                             initial="initial"
                             whileInView="animate"
                             viewport={{ once: true }}
-                            transition={{ delay: 1.2, duration: 0.3 }}
+                            transition={{ delay: 0.3, duration: 0.3 }}
                             className="absolute left-0 bottom-0 aspect-square w-[38%] bg-secondary2 rounded-full xs:invisible visible"></motion.div>
 
                     </div>

@@ -78,30 +78,6 @@ const NotFound = () => {
                 </motion.div>
             </div>
 
-
-            {/* <div className='absolute w-full h-full z-[1]'>
-                <div className='absolute left-0 top-0 w-[25%] max-w-[280px] bg-transparent'>
-                    <div className='w-full max-w-[280px] aspect-square bg-primary'>
-
-                    </div>
-                    <div style={{ clipPath: "polygon(100% 0, 0 100%, 100% 100%)" }} className='w-full max-w-[280px] aspect-square bg-secondary4'>
-
-                    </div>
-                </div>
-                <div className='absolute right-0 top-0 w-[25%] max-w-[280px] bg-transparent'>
-                    <div className='w-full max-w-[280px] aspect-square bg-primary'>
-
-                    </div>
-                </div>
-                <div className='rounded-full aspect-square overflow-hidden w-[25%] max-w-[280px] absolute 3xl:top-[33.5%] top-auto 3xl:bottom-auto bottom-0  right-0'>
-                    <div className='w-full h-full relative'>
-                        <div className='absolute bottom-0 right-0 bg-secondary4 z-[2] w-1/2 h-full transform text-white'></div>
-                        <div className='absolute bottom-0 bg-secondary3 z-[1] w-full h-1/2  text-white'></div>
-                    </div>
-                </div>
-                <div className='absolute left-0 lg:-bottom-[35%] -bottom-[25%] -translate-y-1/2 w-[25%] max-w-[307px] aspect-square rounded-full bg-secondary2'></div>
-            </div> */}
-
             {/* 3xl / 3xl+ */}
             <div className='3xl:visible invisible absolute top-0 left-0 w-full h-full'>
                 <div className='relative w-full h-full'>

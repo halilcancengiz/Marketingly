@@ -209,26 +209,29 @@ const AdsPlan = () => {
                         <div className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 1.500 €</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 1.500 €</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einrichtung und grundlegende Verwaltung von Google Ads-Kampagnen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und grundlegende Verwaltung von Google Ads-Kampagnen</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliches Reporting mit den wichtigsten Leistungskennzahlen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Monatliches Reporting mit den wichtigsten Leistungskennzahlen</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Umfassender Support per E-Mail und Telefon während der Geschäftszeiten</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Umfassender Support per E-Mail und Telefon während der Geschäftszeiten</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einfache Keyword-Recherche und Anzeigenerstellung</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einfache Keyword-Recherche und Anzeigenerstellung</div>
                             </div>
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">349 € pro Monat</div>
+                        <div className="lg:text-[32px] xs:text-[24px] text-[20px] tb-bold mb-[15px] text-neutral-800">
+                            <div className="lg:text-[38px] xs:text-[32px] text-[24px] lg:leading-[40px] xs:leading-[36.16px] leading-[32px] tb-bold">349 €</div>
+                            <span className="text-neutral-600 text-[18px] leading-[20px] tb-medium">pro Monat (zzgl. Mwst.)</span>
+                        </div>
 
                     </NavLink>
 
@@ -247,27 +250,29 @@ const AdsPlan = () => {
                         <div className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 3.500 €</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 3.500 €</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Umfassende Kampagnenverwaltung mit regelmäßigen Optimierungen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Umfassende Kampagnenverwaltung mit regelmäßigen Optimierungen</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Detailliertes monatliches Reporting und Analyse der Kampagnenleistung</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Detailliertes monatliches Reporting und Analyse der Kampagnenleistung</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Persönlicher Ansprechpartner für individuelle Betreuung</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Persönlicher Ansprechpartner für individuelle Betreuung</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Erweiterte Keyword-Recherche und Erstellung zielgerichteter Anzeigen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erweiterte Keyword-Recherche und Erstellung zielgerichteter Anzeigen</div>
                             </div>
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">499 € pro Monat</div>
-
+                        <div className="lg:text-[32px] xs:text-[24px] text-[20px] tb-bold mb-[15px] text-neutral-800">
+                            <div className="lg:text-[38px] xs:text-[32px] text-[24px] lg:leading-[40px] xs:leading-[36.16px] leading-[32px] tb-bold">499 €</div>
+                            <span className="text-neutral-600 text-[18px] leading-[20px] tb-medium">pro Monat (zzgl. Mwst.)</span>
+                        </div>
                     </NavLink>
 
 
@@ -285,26 +290,29 @@ const AdsPlan = () => {
                         <div className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung unbegrenzter Werbebudgets</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung unbegrenzter Werbebudgets</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Individuelle Kampagnenstrategien und fortlaufende Optimierungen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Individuelle Kampagnenstrategien und fortlaufende Optimierungen</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliches Reporting mit tiefgehenden Analysen und Handlungsempfehlungen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Monatliches Reporting mit tiefgehenden Analysen und Handlungsempfehlungen</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Priorisierter Support mit persönlichem Ansprechpartner</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Priorisierter Support mit persönlichem Ansprechpartner</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Umfassende Markt- und Wettbewerbsanalysen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Umfassende Markt- und Wettbewerbsanalysen</div>
                             </div>
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">Preis auf Anfrage</div>
+                        <div className="lg:text-[32px] xs:text-[24px] text-[20px] tb-bold mb-[15px] text-neutral-800"></div>
+                        <div className="lg:text-[32px] xs:text-[24px] text-[20px] tb-bold mb-[15px] text-neutral-800">
+                            <div className="lg:text-[38px] xs:text-[32px] text-[24px] lg:leading-[40px] xs:leading-[36.16px] leading-[32px] tb-bold">Preis auf Anfrage</div>
+                        </div>
 
                     </NavLink>
                 </motion.div>
