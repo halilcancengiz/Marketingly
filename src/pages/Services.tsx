@@ -270,7 +270,6 @@ const Services = () => {
                             <NavLink aria-label="Open seo plan page" to="/seo-plan">
                                 <Button className="tb-bold">Details</Button>
                             </NavLink>
-
                         </div>
 
                     </div>
@@ -316,10 +315,10 @@ const Services = () => {
                     transition={{ delay: 0.3, duration: 0.3 }}
                     className="bg-primary relative overflow-hidden lg:max-w-[1173px] max-w-[660px] w-full mx-auto lg:pt-[104px] lg:pb-[104px] md:pt-[83px] md:pb-[400px] xs:pt-[60px] xs:pb-[350px] pt-[50px] pb-[320px] lg:px-[88px] md:px-[70px] px-[25px] md:rounded-[24px] xs:rounded:-[20px] rounded-[15px]">
 
-                    <div className="flex lg:items-start items-center flex-col">
-                        <div className="max-w-[498px] w-full mb-8 md:text-[38px] xs:text-[32px] text-[26px] tb-bold text-white lg:text-start text-center">Lassen Sie uns gemeinsam starten!</div>
-                        <div className="flex items-center lg:justify-start justify-center max-w-[498px] w-full">
-                            <Button className="tb-bold bg-white !text-primary md:w-auto w-full hover:!bg-secondary3 hover:!text-white">Kontakt</Button>
+                    <div className="flex lg:items-start items-center flex-col ">
+                        <div className="max-w-[550px] w-full mb-8 md:text-[38px] xs:text-[32px] text-[26px] tb-bold text-white lg:text-start text-center z-10">Lassen Sie uns gemeinsam Ihre Sichtbarkeit maximieren!</div>
+                        <div className="flex items-center lg:justify-start justify-center max-w-[498px] w-full z-10">
+                            <Button className="tb-bold bg-white !text-primary md:w-auto w-full hover:!bg-secondary3 hover:!text-white z-10">Kontakt</Button>
                         </div>
                     </div>
 

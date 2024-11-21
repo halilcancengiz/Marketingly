@@ -131,7 +131,7 @@ const Contact = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.80, duration: 0.3 }}
                         style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
-                        className="lg:max-w-[600px] max-w-[660px] mx-auto lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
+                        className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
                     >
                         <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px] bg-white">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
@@ -176,7 +176,7 @@ const Contact = () => {
                                 <div>
                                     <input id="termandconditions" required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </div>
-                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></label>
+                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung.</NavLink></label>
                             </div>
                             <div className="col-span-2">
                                 <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>

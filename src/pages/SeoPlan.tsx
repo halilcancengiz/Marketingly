@@ -33,13 +33,31 @@ const SeoPlan = () => {
     return (
         <div className="flex flex-col">
             <Helmet>
-                <title>Ads Plan - Flexible Lösungen für jeden Bedarf | MARKETINGLY X</title>
-                <meta name="description" content="Entdecken Sie unsere Ads-Preismodelle, die flexible Lösungen für Social Media Marketing, bezahlte Werbung und SEO bieten. MARKETINGLY X unterstützt Sie bei jedem Schritt." />
-                <meta property="og:title" content="Ads Plan - Flexible Lösungen für jeden Bedarf | MARKETINGLY X" />
-                <meta property="og:description" content="Flexible Ads-Pläne für Social Media Marketing, bezahlte Werbung und SEO. Finden Sie den idealen Plan, der zu Ihrem Budget und Ihren Zielen passt!" />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}ads-plan`} />
-                <meta name="robots" content="index, follow" />
+                <title>SEO Plan - Effektive Strategien für bessere Sichtbarkeit | Superagentur</title>
+                <meta
+                    name="description"
+                    content="Entdecken Sie unsere maßgeschneiderten SEO-Pläne, die Ihnen helfen, Ihre Online-Sichtbarkeit zu verbessern und mehr Kunden zu erreichen."
+                />
+                <meta
+                    property="og:title"
+                    content="SEO Plan - Effektive Strategien für bessere Sichtbarkeit | Superagentur"
+                />
+                <meta
+                    property="og:description"
+                    content="Unsere SEO-Pläne sind darauf ausgelegt, Ihre Webseite für Suchmaschinen zu optimieren und Ihre Zielgruppe effektiv zu erreichen."
+                />
+                <meta
+                    property="og:type"
+                    content="website"
+                />
+                <meta
+                    property="og:url"
+                    content={`${import.meta.env.VITE_BASE_URL}seo-plan`}
+                />
+                <meta
+                    name="robots"
+                    content="index, follow"
+                />
             </Helmet>
             <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
                 <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">

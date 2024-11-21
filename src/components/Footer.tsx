@@ -1,4 +1,4 @@
-import { Logo } from '../assets/svg/Logo'
+import { Logo } from "../assets/svg/Logo"
 import facebookIcon from "../assets/images/facebook.webp"
 import xIcon from "../assets/images/x.webp"
 import intagramIcon from "../assets/images/instagram.webp"
@@ -32,18 +32,18 @@ const Footer = () => {
                     <div className='flex flex-col mr-10 lg:mb-[15px] mb-[35px] max-w-[357px] w-full items-start'>
                         <Logo />
                         <div className='leading-[30px] mt-[10px] tb-medium'>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id veniam voluptate blanditiis.
+                            Maximaler Erfolg mit Google!
                         </div>
                     </div>
 
                     <div className='flex gap-x-[32px] md:gap-y-0 gap-y-4 md:flex-nowrap flex-wrap '>
-                        <a href='mailto:contact@marketingly.com' className='footer-card-shadow gap-x-[17px] xs:max-h-[124px] xs:py-10 py-[33px] xs:px-8 px-[25px] md:max-w-[311px] w-full xs:min-w-[311px] gap-y-3 flex xs:flex-row flex-col xs:items-center bg-primary rounded-[10px] hover:bg-secondary1 hover-down'>
+                        <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`} className='footer-card-shadow gap-x-[17px] xs:max-h-[124px] xs:py-10 py-[33px] xs:px-8 px-[25px] md:max-w-[311px] w-full xs:min-w-[311px] gap-y-3 flex xs:flex-row flex-col xs:items-center bg-primary rounded-[10px] hover:bg-secondary1 hover-down'>
                             <div className='min-w-[37px]'>
                                 <img loading="lazy" src="https://cdn.prod.website-files.com/6160c9819f1e5978b56545d6/6165df0bde91472c9eeaad9f_icon-3-contact-links-marketing-template.svg" alt="Email Icon" className="w-[37px] bg-primary" />
                             </div>
                             <div className='flex flex-col text-white'>
-                                <div className='tb-bold'>Send us an email</div>
-                                <div className='text-base truncate'>contact@marketingly.com</div>
+                                <div className='tb-bold'>Schreiben Sie uns eine Mail:</div>
+                                <div className='text-base'>{import.meta.env.VITE_CONTACT_EMAIL}</div>
                             </div>
                         </a>
                         <a href='tel:(414) 809 - 2567' className='footer-card-shadow group gap-x-[17px] xs:max-h-[124px] xs:py-10 py-[33px] xs:px-8 px-[25px] md:max-w-[311px] w-full xs:min-w-[311px] gap-y-3 flex xs:flex-row flex-col xs:items-center border-[1px] border-neutral-300 rounded-[10px] hover-down'>
@@ -51,7 +51,7 @@ const Footer = () => {
                                 <img loading="lazy" src="https://cdn.prod.website-files.com/6160c9819f1e5978b56545d6/6164b381a174dab8087b5eca_icon-2-contact-links-marketing-template.svg" alt="Phone Icon" className="w-[37px] bg-white" />
                             </div>
                             <div className='flex flex-col'>
-                                <div className='text-neutral-800 tb-bold group-hover:text-primary'>Give us a call</div>
+                                <div className='text-neutral-800 tb-bold group-hover:text-primary'>Rufen Sie uns an:</div>
                                 <div className='text-neutral-600 text-base'>(414) 809 - 2567</div>
                             </div>
                         </a>

@@ -848,35 +848,39 @@ export const HomeV3 = () => {
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Kontakt</div>
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Jetzt Anfragen</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
-                        <div className='grid xs:grid-cols-2 gap-x-[32px] md:gap-y-0 gap-y-4 md:flex-nowrap flex-wrap'>
-                            <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`} style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }} className='col-span-1 bg-white flex xs:flex-col flex-row gap-x-3 hover-down lg:rounded-[24px] md:rounded-[20px] rounded-[15px] md:py-[34px] sm:py-[28px] py-[24px] px-[22px]'>
-                                <svg className="mb-4" xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 35 32" fill="none">
-                                    <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="#4A3AFF" />
-                                    <path d="M13.8985 17.5888L0 9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25L21.1015 17.5888C18.8842 18.9188 16.1158 18.9188 13.8985 17.5888Z" fill="#4A3AFF" />
-                                </svg>
-                                <div className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px]'>Schreibe uns eine Mail! </div>
-                                    <div className='text-base text-neutral-600 truncate tb-medium'>{`${import.meta.env.VITE_CONTACT_EMAIL}`}</div>
+                        <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap mb-[60px]'>
+                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
+                                <div className="bg-[#E4E2FF] size-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group/parent">
+                                    <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
+                                        <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="#4A3AFF" />
+                                        <path d="M13.8985 17.5888L0 9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25L21.1015 17.5888C18.8842 18.9188 16.1158 18.9188 13.8985 17.5888Z" fill="#4A3AFF" />
+                                    </svg>
                                 </div>
-                            </a>
-                            <a href={`tel:${import.meta.env.VITE_CONTACT_PHONE}`} style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }} className='col-span-1 bg-white flex xs:flex-col flex-row gap-x-3 hover-down lg:rounded-[24px] md:rounded-[20px] rounded-[15px] md:py-[34px] sm:py-[28px] py-[24px] px-[22px]'>
-                                <svg className="mb-4" xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 35 32" fill="none">
-                                    <g clipPath="url(#clip0)">
-                                        <path opacity="0.35" d="M0.152786 8.03404C0.547467 10.9728 2.09241 17.7268 8.1833 23.8177C14.2742 29.9086 21.0264 31.4536 23.967 31.8483C26.0969 32.3087 28.4063 31.7238 30.0614 30.0686C32.65 27.4801 23.2736 18.1037 20.6851 20.6923L19.0335 22.3439L9.65714 12.9676L11.307 11.3159C13.8955 8.7274 4.51917 -0.648943 1.93063 1.9396C0.275457 3.59477 -0.309453 5.90419 0.152786 8.03404Z" fill="#FF6262" />
-                                        <path d="M1.93652 1.93629L11.3111 11.3109C13.8943 8.72054 13.8943 4.52839 11.3058 1.93985C8.72077 -0.645134 4.52684 -0.646912 1.93652 1.93629Z" fill="#FF6262" />
-                                        <path d="M20.6885 20.6902L30.063 30.0648C32.6462 27.4762 32.6462 23.2823 30.0577 20.6938C27.4709 18.1088 23.2788 18.107 20.6885 20.6902Z" fill="#FF6262" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0">
-                                            <rect width="35" height="32" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <div className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px]'>Ruf uns an</div>
-                                    <div className='text-base text-neutral-600 tb-medium'>{`${import.meta.env.VITE_CONTACT_PHONE}`}</div>
+
+                                <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${import.meta.env.VITE_CONTACT_EMAIL}`}</div>
+                                </a>
+                            </div>
+                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
+                                <div className="bg-[#FFE8E8] size-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group">
+                                    <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
+                                        <g clipPath="url(#clip0)">
+                                            <path opacity="0.35" d="M0.152786 8.03404C0.547467 10.9728 2.09241 17.7268 8.1833 23.8177C14.2742 29.9086 21.0264 31.4536 23.967 31.8483C26.0969 32.3087 28.4063 31.7238 30.0614 30.0686C32.65 27.4801 23.2736 18.1037 20.6851 20.6923L19.0335 22.3439L9.65714 12.9676L11.307 11.3159C13.8955 8.7274 4.51917 -0.648943 1.93063 1.9396C0.275457 3.59477 -0.309453 5.90419 0.152786 8.03404Z" fill="#FF6262" />
+                                            <path d="M1.93652 1.93629L11.3111 11.3109C13.8943 8.72054 13.8943 4.52839 11.3058 1.93985C8.72077 -0.645134 4.52684 -0.646912 1.93652 1.93629Z" fill="#FF6262" />
+                                            <path d="M20.6885 20.6902L30.063 30.0648C32.6462 27.4762 32.6462 23.2823 30.0577 20.6938C27.4709 18.1088 23.2788 18.107 20.6885 20.6902Z" fill="#FF6262" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="35" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
                                 </div>
-                            </a>
+
+                                <a href={`tel:${import.meta.env.VITE_CONTACT_PHONE}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${import.meta.env.VITE_CONTACT_PHONE}`}</div>
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
                     <motion.div
@@ -886,7 +890,7 @@ export const HomeV3 = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.80, duration: 0.3 }}
                         style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
-                        className="lg:max-w-[600px] max-w-[660px] mx-auto lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
+                        className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
                     >
                         <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px] bg-white">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">

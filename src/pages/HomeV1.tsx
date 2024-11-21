@@ -284,7 +284,7 @@ export const HomeV1 = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.3 }}
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1176px] w-full mx-auto">
-                    <div className="col-span-1 rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink to="/ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
                                 className="object-contain size-[86px] rounded-[10px]"
@@ -292,37 +292,54 @@ export const HomeV1 = () => {
                                 alt="analytics"
                                 loading="lazy"
                             />
-                            <div className="md:text-[24px] text-[22px] tb-bold">Google Ads</div>
+                            <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Google Ads</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google Marketingkampagnen – für maximale Reichweite</div>
                         </div>
-                        <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                    </div>
-                    <div className="col-span-1 rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                            <NavLink aria-label="Open seo plan page" to="/seo-plan">
+                                <Button className="tb-bold">Details</Button>
+                            </NavLink>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
                                 loading="lazy"
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={search}
                                 alt="search" />
-                            <div className="md:text-[24px] text-[22px] tb-bold">Seo</div>
+                            <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Seo</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen</div>
                         </div>
 
-                        <div className="w-[109px] bg-primary h-[2px]"></div>
-                    </div>
-                    <div className="col-span-1 rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-primary h-[2px]"></div>
+                            <NavLink aria-label="Open seo plan page" to="/seo-plan">
+                                <Button className="tb-bold">Details</Button>
+                            </NavLink>
+                        </div>
+                    </NavLink>
+                    <NavLink to="/company-listing-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
                                 loading="lazy"
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={system}
                                 alt="system" />
-                            <div className="md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</div>
+                            <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Unternehmenslistung</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichbarkeit optimieren durch Google-Unternehmenslistung</div>
+                            <div className="md:flex hidden"></div>
+                            
                         </div>
 
-                        <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                    </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                            <NavLink aria-label="Open company listing page" to="/company-listing-plan">
+                                <Button className="tb-bold">Details</Button>
+                            </NavLink>
+                        </div>
+                    </NavLink>
                 </motion.div>
             </section>
 
@@ -373,7 +390,7 @@ export const HomeV1 = () => {
                                 </div>
                             </div>
                             <NavLink aria-label="Open google ads plan page" to="/ads-plan" className="xs:w-auto w-full">
-                                <Button className="tb-bold xs:w-auto w-full">Details</Button>
+                                <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
                             </NavLink>
                         </motion.div>
                     </div>
@@ -391,7 +408,7 @@ export const HomeV1 = () => {
                             <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen. Somit ermöglicht es SEO, die Sichtbarkeit Ihrer Webseite nachhaltig zu steigern – ganz ohne zusätzliche Werbeausgaben.</div>
 
                             <NavLink aria-label="Open seo plan page" to="/seo-plan" className="xs:w-auto w-full">
-                                <Button className="tb-bold xs:w-auto w-full">Details</Button>
+                                <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
                             </NavLink>
                         </motion.div>
                         <div className="relative">
@@ -430,7 +447,7 @@ export const HomeV1 = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.3 }}
                         className="max-w-[527px] w-full leading-[30px] text-neutral-100 mb-10 text-[18px] tb-medium">
-                        Kontaktieren Sie uns, um zu erfahren, wie wir Ihnen dabei helfen, Ihre Ziele zu erreichen. Lorem ipsum dolor sit amet consectetur.
+                        Kontaktieren Sie uns, um zu erfahren, wie wir Ihnen dabei helfen, Ihre Ziele zu erreichen.
                     </motion.div>
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -688,7 +705,7 @@ export const HomeV1 = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.3 }}
                         className="lg:max-w-[436px] max-w-[660px] lg:mb-0 mb-20 lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10">
-                        <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso MARKETINGLY X</div>
+                        <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso Superagentur</div>
                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Wieso Sie mit uns abreiten sollten?</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</div>
                         <NavLink aria-label="Open contact page" to="/contact" className="mt-10 xs:w-auto w-full">
@@ -815,35 +832,39 @@ export const HomeV1 = () => {
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Kontakt</div>
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Jetzt Anfragen</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
-                        <div className='grid xs:grid-cols-2 gap-x-[32px] md:gap-y-0 gap-y-4 md:flex-nowrap flex-wrap'>
-                            <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`} style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }} className='col-span-1 bg-white flex xs:flex-col flex-row gap-x-3 hover-down lg:rounded-[24px] md:rounded-[20px] rounded-[15px] md:py-[34px] sm:py-[28px] py-[24px] px-[22px]'>
-                                <svg className="mb-4" xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 35 32" fill="none">
-                                    <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="#4A3AFF" />
-                                    <path d="M13.8985 17.5888L0 9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25L21.1015 17.5888C18.8842 18.9188 16.1158 18.9188 13.8985 17.5888Z" fill="#4A3AFF" />
-                                </svg>
-                                <div className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px]'>Schreibe uns eine Mail! </div>
-                                    <div className='text-base text-neutral-600 truncate tb-medium'>{`${import.meta.env.VITE_CONTACT_EMAIL}`}</div>
+                        <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap mb-[60px]'>
+                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
+                                <div className="bg-[#E4E2FF] size-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group/parent">
+                                    <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
+                                        <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="#4A3AFF" />
+                                        <path d="M13.8985 17.5888L0 9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25L21.1015 17.5888C18.8842 18.9188 16.1158 18.9188 13.8985 17.5888Z" fill="#4A3AFF" />
+                                    </svg>
                                 </div>
-                            </a>
-                            <a href={`tel:${import.meta.env.VITE_CONTACT_PHONE}`} style={{ boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }} className='col-span-1 bg-white flex xs:flex-col flex-row gap-x-3 hover-down lg:rounded-[24px] md:rounded-[20px] rounded-[15px] md:py-[34px] sm:py-[28px] py-[24px] px-[22px]'>
-                                <svg className="mb-4" xmlns="http://www.w3.org/2000/svg" width="35" height="32" viewBox="0 0 35 32" fill="none">
-                                    <g clipPath="url(#clip0)">
-                                        <path opacity="0.35" d="M0.152786 8.03404C0.547467 10.9728 2.09241 17.7268 8.1833 23.8177C14.2742 29.9086 21.0264 31.4536 23.967 31.8483C26.0969 32.3087 28.4063 31.7238 30.0614 30.0686C32.65 27.4801 23.2736 18.1037 20.6851 20.6923L19.0335 22.3439L9.65714 12.9676L11.307 11.3159C13.8955 8.7274 4.51917 -0.648943 1.93063 1.9396C0.275457 3.59477 -0.309453 5.90419 0.152786 8.03404Z" fill="#FF6262" />
-                                        <path d="M1.93652 1.93629L11.3111 11.3109C13.8943 8.72054 13.8943 4.52839 11.3058 1.93985C8.72077 -0.645134 4.52684 -0.646912 1.93652 1.93629Z" fill="#FF6262" />
-                                        <path d="M20.6885 20.6902L30.063 30.0648C32.6462 27.4762 32.6462 23.2823 30.0577 20.6938C27.4709 18.1088 23.2788 18.107 20.6885 20.6902Z" fill="#FF6262" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0">
-                                            <rect width="35" height="32" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <div className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px]'>Ruf uns an</div>
-                                    <div className='text-base text-neutral-600 tb-medium'>{`${import.meta.env.VITE_CONTACT_PHONE}`}</div>
+
+                                <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${import.meta.env.VITE_CONTACT_EMAIL}`}</div>
+                                </a>
+                            </div>
+                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
+                                <div className="bg-[#FFE8E8] size-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group">
+                                    <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
+                                        <g clipPath="url(#clip0)">
+                                            <path opacity="0.35" d="M0.152786 8.03404C0.547467 10.9728 2.09241 17.7268 8.1833 23.8177C14.2742 29.9086 21.0264 31.4536 23.967 31.8483C26.0969 32.3087 28.4063 31.7238 30.0614 30.0686C32.65 27.4801 23.2736 18.1037 20.6851 20.6923L19.0335 22.3439L9.65714 12.9676L11.307 11.3159C13.8955 8.7274 4.51917 -0.648943 1.93063 1.9396C0.275457 3.59477 -0.309453 5.90419 0.152786 8.03404Z" fill="#FF6262" />
+                                            <path d="M1.93652 1.93629L11.3111 11.3109C13.8943 8.72054 13.8943 4.52839 11.3058 1.93985C8.72077 -0.645134 4.52684 -0.646912 1.93652 1.93629Z" fill="#FF6262" />
+                                            <path d="M20.6885 20.6902L30.063 30.0648C32.6462 27.4762 32.6462 23.2823 30.0577 20.6938C27.4709 18.1088 23.2788 18.107 20.6885 20.6902Z" fill="#FF6262" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="35" height="32" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
                                 </div>
-                            </a>
+
+                                <a href={`tel:${import.meta.env.VITE_CONTACT_PHONE}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${import.meta.env.VITE_CONTACT_PHONE}`}</div>
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
                     <motion.div
@@ -853,7 +874,7 @@ export const HomeV1 = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.80, duration: 0.3 }}
                         style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
-                        className="lg:max-w-[600px] max-w-[660px] mx-auto lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
+                        className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
                     >
                         <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px] bg-white">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
@@ -898,7 +919,7 @@ export const HomeV1 = () => {
                                 <div>
                                     <input id="termandconditions" required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </div>
-                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></label>
+                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung.</NavLink></label>
                             </div>
                             <div className="col-span-2">
                                 <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>
