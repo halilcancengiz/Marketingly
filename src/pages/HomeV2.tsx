@@ -4,7 +4,8 @@ import search from "../assets/images/search.webp";
 import system from "../assets/images/system.webp";
 import services from "../assets/images/homev1-services-image.webp";
 import check from "../assets/images/check.webp";
-import womanImage from "../assets/images/card-woman-image.webp";
+import manImage from "../assets/images/manimage.webp";
+import seoImage from "../assets/images/seoimage.webp";
 import * as motion from "framer-motion/client";
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect } from "react";
@@ -124,7 +125,7 @@ export const HomeV2 = () => {
                         viewport={{ once: true }}
                         className="lg:mb-[22px] md:mb-[20px] xs:mb-[15px] mb-[10px] text-center text-neutral-800 tb-bold lg:text-[54px] lg:leading-[61.02px] md:text-[45px] md:leading-[50.85px] xs:text-[38px] xs:leading-[42.94px] text-[32px] leading-[36.16px]"
                     >
-                        
+
                         <div className="block tb-bold text-white">Maximaler Erfolg mit&nbsp;</div>
                         {jumbotronTextSplit.map((char, index) => (
                             <motion.span
@@ -390,9 +391,9 @@ export const HomeV2 = () => {
                 </motion.div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] px-6 bg-neutral-200">
-                <div className="max-w-[1176px] w-full mx-auto flex flex-col lg:gap-y-[86px] md:gap-y-[200px] xs:gap-y-[160px] gap-y-[128px]">
-                    <div className="flex lg:flex-row flex-col items-center justify-between">
+            <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] xs:px-6 px-4 bg-neutral-200 z-[1]">
+                <div className="max-w-[1176px] w-full mx-auto flex flex-col lg:gap-y-[86px] md:gap-y-[200px] xs:gap-y-[160px] gap-y-[128px] z-[2]">
+                    <div className="flex lg:flex-row flex-col items-center justify-between z-[3]">
                         <motion.div
                             variants={fadeInAnimationVariant}
                             initial="initial"
@@ -400,7 +401,11 @@ export const HomeV2 = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.3, duration: 0.3 }}
                             className="relative lg:mr-10 lg:order-1 order-2">
-                            <img loading="lazy" style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300" src={services} alt="" />
+                            <div className="w-full h-full z-10">
+                                <img loading="lazy" style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
+                                <div className="absolute lg:-left-20 left-auto lg:right-auto -right-12 lg:-top-20 -top-16 bg-[#F9F5E5] size-[248px] -z-[1] rounded-full"></div>
+                            </div>
+
                         </motion.div>
                         <motion.div
                             variants={fadeInAnimationVariant}
@@ -433,7 +438,7 @@ export const HomeV2 = () => {
                                 </div>
                             </div>
                             <NavLink aria-label="Open google ads plan page" to="/ads-plan" className="xs:w-auto w-full">
-                                <Button className="tb-bold xs:w-auto w-full">Details</Button>
+                                <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
                             </NavLink>
                         </motion.div>
                     </div>
@@ -451,24 +456,28 @@ export const HomeV2 = () => {
                             <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen. Somit ermöglicht es SEO, die Sichtbarkeit Ihrer Webseite nachhaltig zu steigern – ganz ohne zusätzliche Werbeausgaben.</div>
 
                             <NavLink aria-label="Open seo plan page" to="/seo-plan" className="xs:w-auto w-full">
-                                <Button className="tb-bold xs:w-auto w-full">Details</Button>
+                                <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
                             </NavLink>
                         </motion.div>
-                        <motion.div
-                            variants={fadeInAnimationVariant}
-                            initial="initial"
-                            whileInView="animate"
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.45, duration: 0.3 }}
-                            className="relative">
-                            <img loading="lazy" src={womanImage} alt="womanImage" style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300" />
-                        </motion.div>
+                        <div className="relative">
+                            <motion.img
+                                variants={fadeInAnimationVariant}
+                                initial="initial"
+                                whileInView="animate"
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.45, duration: 0.3 }}
+                                loading="lazy"
+                                src={seoImage}
+                                alt="womanImage"
+                                style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }}
+                                className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300" />
+                        </div>
                     </div>
                 </div>
 
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] bg-primary  overflow-hidden flex items-center justify-center relative">
+            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] bg-primary  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex flex-col z-[5]">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -676,7 +685,7 @@ export const HomeV2 = () => {
 
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -689,10 +698,13 @@ export const HomeV2 = () => {
                             style={{
                                 y: smoothFirstImageTranslateY
                             }}
-                            className="absolute w-[71%] lg:left-auto left-0 lg:right-0 right-auto -top-[220px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
-                            src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf97fa40916d9d2a267_image-1-about-v2-marketing-template-p-800.jpeg"
-                            alt="woman" />
+                            className="absolute w-[71%] max-h-[85%] lg:left-auto left-0 lg:right-0 right-auto -top-[220px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
+                            src={manImage}
+                            alt="woman"
+                            loading="lazy"
+                        />
                         <motion.img
+                            loading="lazy"
                             style={{
                                 y: smoothFirstImageTranslateYReverse
                             }}
@@ -709,19 +721,8 @@ export const HomeV2 = () => {
                         className="lg:max-w-[504px] max-w-[660px] flex flex-col lg:pl-5 lg:order-2 order-1">
                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Zielgruppe</div>
                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] md:leading-[50px] xs:leading-[42px] leading-[34px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]"> Wer kann von unseren Dienstleistungen profitieren?</div>
-                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Egal ob Makler, Zahnarztpraxis, lokale Geschäfte oder große Industriefirmen – unsere maßgeschneiderten Lösungen passen zu jedem. Unsere Dienste sind flexibel, skalierbar und helfen Ihnen, genau die Ergebnisse zu erzielen, die Sie brauchen – ob mehr Kunden, mehr Mitarbeiter oder mehr Sichtbarkeit.</div>
-                        <hr className="w-full border-neutral-400 my-10" />
-                        <div className="flex items-center mb-10">
-                            <div className="md:size-[68px] size-[60px] min-w-[60px] min-h-[60px] bg-neutral-600 rounded-full mr-[19px]"></div>
-                            <div className="flex flex-col text-[18px] gap-1.5">
-                                <div className="tb-bold text-neutral-800 leading-[20px]">
-                                    Filler Name John Carter
-                                </div>
-                                <div className="tb-medium text-neutral-600">
-                                    Filler CEO at Marketingly x
-                                </div>
-                            </div>
-                        </div>
+                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[40px]">Egal ob Makler, Zahnarztpraxis, lokale Geschäfte oder große Industriefirmen – unsere maßgeschneiderten Lösungen passen zu jedem. Unsere Dienste sind flexibel, skalierbar und helfen Ihnen, genau die Ergebnisse zu erzielen, die Sie brauchen – ob mehr Kunden, mehr Mitarbeiter oder mehr Sichtbarkeit.</div>
+
                         <div className="xs:w-auto w-full">
                             <NavLink aria-label="Open services page" className="xs:w-auto w-full" to="/services">
                                 <Button className="tb-bold xs:w-auto w-full">Dienstleistungen</Button>
@@ -800,7 +801,7 @@ export const HomeV2 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex flex-col items-center ">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -856,7 +857,7 @@ export const HomeV2 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] px-6 lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200 z-10">
+            <section className="3xl:py-[220px] xs:px-6 px-4 lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200 z-10">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -864,7 +865,7 @@ export const HomeV2 = () => {
                         whileInView="animate"
                         viewport={{ once: true }}
                         transition={{ delay: 0.30, duration: 0.3 }}
-                        className="max-w-[487px] lg:mb-0 mb-20 mt-[66px] lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10 ">
+                        className="max-w-[487px] lg:mb-0 mb-20 lg:-mt-[50px] lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10 ">
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Kontakt</div>
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Jetzt Anfragen</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
@@ -912,7 +913,7 @@ export const HomeV2 = () => {
                         style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
                         className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
                     >
-                        <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[30px] bg-white">
+                        <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[20px] bg-white">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="firstname" className="xs:text-[18px] text-base tb-bold">Vorname</label>
                                 <input id="firstname" name="firstname" required placeholder="Max" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
@@ -953,9 +954,9 @@ export const HomeV2 = () => {
 
                             <div className="col-span-2 flex items-start gap-3">
                                 <div>
-                                    <input id="termandconditions" required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
+                                    <input id="termandconditions" required className="size-5 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </div>
-                                <label htmlFor="termandconditions" className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung.</NavLink></label>
+                                <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung.</NavLink></label>
                             </div>
                             <div className="col-span-2">
                                 <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>
@@ -981,6 +982,7 @@ export const HomeV2 = () => {
                     </motion.div>
                 </div>
             </section>
+
         </main>
     )
 }
