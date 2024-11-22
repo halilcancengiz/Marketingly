@@ -15,6 +15,7 @@ import redCardImage from "../assets/images/red.webp"
 import { NavLink, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet"
 import { useScroll, useSpring, useTransform } from "framer-motion";
+import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 
 
 export const HomeV1 = () => {
@@ -29,6 +30,24 @@ export const HomeV1 = () => {
             opacity: 1,
             y: 0,
         }
+    };
+
+
+    const jumbotronBoldText = "Google!"
+    const jumbotronTextSplit = splitStringUsingRegex(jumbotronBoldText)
+    const charVariants9 = { hidden: { opacity: 0, color: "#4A3AFF" }, reveal: { opacity: 1, color: "#14142B" } }; 
+    const fadeInAnimationVariantExample = {
+        hidden: { opacity: 0, y: 20 },
+        reveal: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.7,
+                duration: 0.3,
+                staggerChildren: 0.08,
+                delayChildren: 1,
+            },
+        },
     };
 
     const scaleAnimationVariant = {
@@ -98,6 +117,7 @@ export const HomeV1 = () => {
                 <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
+
             <section className="3xl:pt-[145px] 3xl:pb-[145px] lg:pt-[116px] lg:pb-[116px] md:pt-[60px] md:pb-[93px] xs:pt-[50px] xs:pb-[74px] pt-[40px] pb-[60px] relative">
                 <div className="w-full h-full xs:px-6 px-4">
                     <div className="max-w-[1173px] w-full mx-auto lg:flex-row flex-col flex lg:items-center items-start justify-between z-[3]">
@@ -112,13 +132,23 @@ export const HomeV1 = () => {
                                 Marketing Agentur
                             </motion.div>
                             <motion.div
-                                variants={fadeInAnimationVariant}
-                                initial="initial"
-                                whileInView="animate"
+                                variants={fadeInAnimationVariantExample}
+                                initial="hidden"
+                                whileInView="reveal"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.7, duration: 0.3 }}
-                                className="lg:mb-[22px] md:mb-[20px] xs:mb-[15px] mb-[10px] text-neutral-800 tb-bold lg:text-[54px] lg:leading-[61.02px] md:text-[45px] md:leading-[50.85px] xs:text-[38px] xs:leading-[42.94px] text-[32px] leading-[36.16px]">
-                                Maximaler Erfolg mit Google!
+                                className="lg:mb-[22px] md:mb-[20px] xs:mb-[15px] mb-[10px] text-neutral-800 tb-bold lg:text-[54px] lg:leading-[61.02px] md:text-[45px] md:leading-[50.85px] xs:text-[38px] xs:leading-[42.94px] text-[32px] leading-[36.16px]"
+                            >
+                                Maximaler Erfolg mit&nbsp;
+                                {jumbotronTextSplit.map((char, index) => (
+                                    <motion.span
+                                        key={index}
+                                        className="tb-bold inline-block"
+                                        variants={charVariants9}
+                                        transition={{ duration: 0.5 }}
+                                    >
+                                        {char}
+                                    </motion.span>
+                                ))}
                             </motion.div>
                             <motion.div
                                 variants={fadeInAnimationVariant}
@@ -330,7 +360,7 @@ export const HomeV1 = () => {
                             <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Unternehmenslistung</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichbarkeit optimieren durch Google-Unternehmenslistung</div>
                             <div className="md:flex hidden"></div>
-                            
+
                         </div>
 
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
@@ -703,7 +733,7 @@ export const HomeV1 = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.3 }}
+                        transition={{ delay: 0.1, duration: 0.3 }}
                         className="lg:max-w-[436px] max-w-[660px] lg:mb-0 mb-20 lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10">
                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso Superagentur</div>
                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Wieso Sie mit uns abreiten sollten?</div>
@@ -713,14 +743,14 @@ export const HomeV1 = () => {
                         </NavLink>
                     </motion.div>
 
-                    <motion.div
-                        variants={fadeInAnimationVariant}
-                        initial="initial"
-                        whileInView="animate"
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.4, duration: 0.3 }}
-                        className="flex md:flex-row flex-col relative lg:max-w-[700px] max-w-[660px] w-full transition-all duraiton-500">
-                        <div className="flex md:flex-row flex-col">
+                    <div className="flex md:flex-row flex-col relative lg:max-w-[700px] max-w-[660px] w-full transition-all duraiton-500">
+                        <motion.div
+                            variants={fadeInAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4, duration: 0.3 }}
+                            className="flex md:flex-row flex-col">
                             <div className="md:w-1/2 min-w-[285px] md:pr-[14px] flex flex-col items-start  space-y-[28px] z-[2]">
                                 <div className="bg-white lg:py-[60px] md:py-[50px] xs:py-[42px] py-[35px] md:px-9 xs:px-[35px] px-[25px] w-full rounded-[24px] flex flex-col transition-all duration-300 section-6-shadow border border-gray-200/60">
                                     <div className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">100<span className="text-primary tb-bold">%</span></div>
@@ -746,7 +776,7 @@ export const HomeV1 = () => {
                                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir setzen alles daran, Sie nach vorne zu bringen.</div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
 
                         <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 md:max-w-[284px] max-w-[70%] w-full md:aspect-square md:h-auto h-[90%] z-[1]">
@@ -755,15 +785,15 @@ export const HomeV1 = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: 0.3 }}
+                                transition={{ delay: 0.7, duration: 0.3 }}
                                 className="relative h-full w-full bg-[#A199FF]"></motion.div>
                         </div>
-                    </motion.div>
+                    </div>
 
 
                 </div>
             </section>
-
+            
             <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex flex-col items-center ">
                     <motion.div
@@ -945,6 +975,7 @@ export const HomeV1 = () => {
                     </motion.div>
                 </div>
             </section>
+            
         </main>
     )
 }

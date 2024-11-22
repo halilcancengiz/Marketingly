@@ -16,6 +16,7 @@ import { Helmet } from "react-helmet"
 import homeV2HeroImage from "../assets/images/homev2hero.webp"
 import homeV2Chart1Image from "../assets/images/homev2chart1.webp"
 import homeV2Chart2Image from "../assets/images/homev2chart2.webp"
+import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 
 
 export const HomeV2 = () => {
@@ -41,6 +42,23 @@ export const HomeV2 = () => {
             opacity: 1,
             scale: 1
         }
+    };
+
+    const jumbotronBoldText = "Google!"
+    const jumbotronTextSplit = splitStringUsingRegex(jumbotronBoldText)
+    const charVariants9 = { hidden: { opacity: 0, color: "#4A3AFF" }, reveal: { opacity: 1, color: "white" } };
+    const fadeInAnimationVariantExample = {
+        hidden: { opacity: 0, y: 20 },
+        reveal: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                delay: 0.2,
+                duration: 0.3,
+                staggerChildren: 0.08,
+                delayChildren: 1,
+            },
+        },
     };
 
     useEffect(() => {
@@ -100,12 +118,25 @@ export const HomeV2 = () => {
             <section className="homeV2Container 3xl:pt-[167px] lg:pt-[134px] md:pt-[60px] xs:pt-[50px] pt-10 flex flex-col items-start px-6 3xl:h-[795px] lg:h-[735px] md:h-[657px] xs:h-[515px] h-[599px]  relative bg-secondary1 z-[1]">
                 <div className="max-w-[632px] w-full mx-auto flex flex-col lg:mb-[86px] md:mb-[72px] xs:mb-[60px] mb-[50px] bg-transparent z-[3]">
                     <motion.div
-                        variants={fadeInAnimationVariant}
-                        initial="initial"
-                        whileInView="animate"
+                        variants={fadeInAnimationVariantExample}
+                        initial="hidden"
+                        whileInView="reveal"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.20, duration: 0.3 }}
-                        className="lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] tb-bold text-white text-center mb-[10px]">Maximaler Erfolg mit <br /> <span className="whitespace-nowrap tb-bold">Google!</span></motion.div>
+                        className="lg:mb-[22px] md:mb-[20px] xs:mb-[15px] mb-[10px] text-center text-neutral-800 tb-bold lg:text-[54px] lg:leading-[61.02px] md:text-[45px] md:leading-[50.85px] xs:text-[38px] xs:leading-[42.94px] text-[32px] leading-[36.16px]"
+                    >
+                        
+                        <div className="block tb-bold text-white">Maximaler Erfolg mit&nbsp;</div>
+                        {jumbotronTextSplit.map((char, index) => (
+                            <motion.span
+                                key={index}
+                                className="tb-bold inline-block"
+                                variants={charVariants9}
+                                transition={{ duration: 0.5 }}
+                            >
+                                {char}
+                            </motion.span>
+                        ))}
+                    </motion.div>
                     <motion.div
                         variants={fadeInAnimationVariant}
                         initial="initial"
@@ -346,7 +377,7 @@ export const HomeV2 = () => {
                             <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Unternehmenslistung</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichbarkeit optimieren durch Google-Unternehmenslistung</div>
                             <div className="md:flex hidden"></div>
-                            
+
                         </div>
 
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
@@ -700,7 +731,7 @@ export const HomeV2 = () => {
                 </div>
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] px-6 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200">
+            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
 
                     <motion.div
@@ -708,9 +739,9 @@ export const HomeV2 = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.3 }}
+                        transition={{ delay: 0.1, duration: 0.3 }}
                         className="lg:max-w-[436px] max-w-[660px] lg:mb-0 mb-20 lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10">
-                        <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso MARKETINGLY X</div>
+                        <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso Superagentur</div>
                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Wieso Sie mit uns abreiten sollten?</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</div>
                         <NavLink aria-label="Open contact page" to="/contact" className="mt-10 xs:w-auto w-full">
@@ -718,14 +749,14 @@ export const HomeV2 = () => {
                         </NavLink>
                     </motion.div>
 
-                    <motion.div
-                        variants={fadeInAnimationVariant}
-                        initial="initial"
-                        whileInView="animate"
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.4, duration: 0.3 }}
-                        className="flex md:flex-row flex-col relative lg:max-w-[700px] max-w-[660px] w-full transition-all duraiton-500">
-                        <div className="flex md:flex-row flex-col">
+                    <div className="flex md:flex-row flex-col relative lg:max-w-[700px] max-w-[660px] w-full transition-all duraiton-500">
+                        <motion.div
+                            variants={fadeInAnimationVariant}
+                            initial="initial"
+                            whileInView="animate"
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.4, duration: 0.3 }}
+                            className="flex md:flex-row flex-col">
                             <div className="md:w-1/2 min-w-[285px] md:pr-[14px] flex flex-col items-start  space-y-[28px] z-[2]">
                                 <div className="bg-white lg:py-[60px] md:py-[50px] xs:py-[42px] py-[35px] md:px-9 xs:px-[35px] px-[25px] w-full rounded-[24px] flex flex-col transition-all duration-300 section-6-shadow border border-gray-200/60">
                                     <div className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">100<span className="text-primary tb-bold">%</span></div>
@@ -751,19 +782,19 @@ export const HomeV2 = () => {
                                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir setzen alles daran, Sie nach vorne zu bringen.</div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
 
                         <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 md:max-w-[284px] max-w-[70%] w-full md:aspect-square md:h-auto h-[90%] z-[1]">
                             <motion.div
-                                variants={fadeInAnimationVariant}
+                                variants={scaleAnimationVariant}
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: 0.3 }}
+                                transition={{ delay: 0.7, duration: 0.3 }}
                                 className="relative h-full w-full bg-[#A199FF]"></motion.div>
                         </div>
-                    </motion.div>
+                    </div>
 
 
                 </div>
