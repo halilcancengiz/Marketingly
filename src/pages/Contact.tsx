@@ -223,35 +223,29 @@ const Contact = () => {
                         transition={{ delay: 0.50, duration: 0.3 }}
                         className="flex flex-col gap-4">
                         <Accordion
+                            title="Welche Art von Unternehmen betreut ihr?"
+                            content="Wir betreuen Unternehmen aller Branchen, von kleinen Betrieben bis zu großen Firmen." />
+                        <Accordion
                             title="Könnt ihr auch kleinen Startups helfen?"
                             content="Ja, wir unterstützen Unternehmen jeder Größe, einschließlich Neugründungen." />
                         <Accordion
-                            title="Wie funktioniert die Bezahlung?"
-                            content="Die Bezahlung erfolgt je nach Umfang des Projekts entweder als einmalige Pauschale oder als monatliche Abrechnung." />
-
-                        <Accordion
                             title="Kann ich die Leistungen später erweitern?"
                             content="Absolut, unsere Leistungen sind flexibel erweiterbar, sodass wir Sie auch zukünftig unterstützen können." />
-
-                        <Accordion
-                            title="Welche Art von Unternehmen betreut ihr?"
-                            content="Wir betreuen Unternehmen aller Branchen, von kleinen Betrieben bis zu großen Firmen." />
-
                         <Accordion
                             title="Ist eine Mindestlaufzeit erforderlich?"
                             content="Die Mindestlaufzeit wird individuell je nach Leistung und Bedarf des Kunden festgelegt." />
-
                         <Accordion
                             title="Wie kann ich den Erfolg eurer Maßnahmen messen?"
                             content="Wir bieten regelmäßige Reportings, damit Sie die Ergebnisse der Maßnahmen genau verfolgen können." />
-
                         <Accordion
                             title="Bietet ihr eine persönliche Beratung an?"
                             content="Ja, wir bieten individuelle Beratungen an, um die bestmögliche Lösung für Ihre Ziele zu finden." />
-
                         <Accordion
                             title="Welche Dienstleistungen deckt ihr ab?"
                             content="Wir fokussieren uns aktuell auf Suchmaschinenoptimierung (SEO), bezahlte Anzeigen (Ads) und Unternehmenslistungen." />
+                        <Accordion
+                            title="Wie funktioniert die Bezahlung?"
+                            content="Die Bezahlung erfolgt je nach Dienstleistung entweder als einmalige Gebühr oder wird monatlich abgerechnet." />
 
 
                     </motion.div>

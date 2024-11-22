@@ -33,31 +33,13 @@ const SeoPlan = () => {
     return (
         <div className="flex flex-col">
             <Helmet>
-                <title>SEO Plan - Effektive Strategien für bessere Sichtbarkeit | Superagentur</title>
-                <meta
-                    name="description"
-                    content="Entdecken Sie unsere maßgeschneiderten SEO-Pläne, die Ihnen helfen, Ihre Online-Sichtbarkeit zu verbessern und mehr Kunden zu erreichen."
-                />
-                <meta
-                    property="og:title"
-                    content="SEO Plan - Effektive Strategien für bessere Sichtbarkeit | Superagentur"
-                />
-                <meta
-                    property="og:description"
-                    content="Unsere SEO-Pläne sind darauf ausgelegt, Ihre Webseite für Suchmaschinen zu optimieren und Ihre Zielgruppe effektiv zu erreichen."
-                />
-                <meta
-                    property="og:type"
-                    content="website"
-                />
-                <meta
-                    property="og:url"
-                    content={`${import.meta.env.VITE_BASE_URL}seo-plan`}
-                />
-                <meta
-                    name="robots"
-                    content="index, follow"
-                />
+                <title>Ads Plan - Flexible Lösungen für jeden Bedarf | MARKETINGLY X</title>
+                <meta name="description" content="Entdecken Sie unsere Ads-Preismodelle, die flexible Lösungen für Social Media Marketing, bezahlte Werbung und SEO bieten. MARKETINGLY X unterstützt Sie bei jedem Schritt." />
+                <meta property="og:title" content="Ads Plan - Flexible Lösungen für jeden Bedarf | MARKETINGLY X" />
+                <meta property="og:description" content="Flexible Ads-Pläne für Social Media Marketing, bezahlte Werbung und SEO. Finden Sie den idealen Plan, der zu Ihrem Budget und Ihren Zielen passt!" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}ads-plan`} />
+                <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
                 <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
@@ -212,100 +194,132 @@ const SeoPlan = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.6, duration: 0.3 }}
                     className="grid lg:grid-cols-3 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
-                    <NavLink aria-label="Open product detail" to="/product-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
-
+                    {/* Basis */}
+                    <NavLink aria-label="Open basic package detail page" to="/seo-plan-basic-package-detail" className="col-span-1 overflow-hidden w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative">
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
                         </div>
 
                         <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                            Standard
+                            Basis
                         </div>
-                        <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </div>
+                        <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Perfekt für den Einstieg in SEO.<span className="lg:flex hidden"></span> </div>
+                        <div className="flex flex-col lg:mt-[20px]">
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">899 €</div>
+                            <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
+                        </div>
                         <hr className="w-full my-[35px]" />
                         <div className="flex flex-col gap-[16px] mb-10">
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Keyword-Recherche</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">On-Page-Optimierung</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Technische SEO-Analyse</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Monatliches Reporting</div>
                             </div>
+                            <div className="flex items-start gap-[13px]">
+                                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Local SEO</div>
+                            </div>
+                            <br />
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
+                        <Button className="tb-bold">Details</Button>
 
                     </NavLink>
 
-                    <NavLink to="/product-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
+
+                    {/* Standart */}
+                    <NavLink aria-label="Open standart package detail page" to="/seo-plan-standart-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+                        <div className="absolute left-0 top-0 py-1 px-9 tb-bold text-white bg-primary rounded-br-[20px]">Bestseller</div>
 
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
                         </div>
                         <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                            Premium
+                            Standard
                         </div>
-                        <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
+                        <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideal für ambitionierte Ziele.</div>
+
+                        <div className="flex flex-col lg:mt-[20px]">
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">1499 €</div>
+                            <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
+                        </div>
+
                         <hr className="w-full my-[35px]" />
                         <div className="flex flex-col gap-[16px] mb-10">
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Alle Leistungen aus "Basis"</div>
+                            </div>
+                            <div className="flex items-start gap-[13px]">
+                                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Content-Optimierung</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Linkbuilding</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Persönliche Strategie-Meetings</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Persönlicher Ansprechpartner</div>
                             </div>
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
-
+                        <Button className="tb-bold">Details</Button>
                     </NavLink>
 
-                    <NavLink to="/product-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
+
+                    {/* Premium */}
+                    <NavLink aria-label="Open premium package detail page" to="/seo-plan-premium-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]  relative overflow-hidden">
 
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
                         </div>
                         <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                            Deluxe
+                            Premium
                         </div>
-                        <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Umfassende Lösung für maximale Ergebnisse.</div>
+                        <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
+                        <div className="flex flex-col lg:mt-[20px]">
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">Preis auf Anfrage</div>
+                            <div className="tb-medium text-neutral-600">Kontaktieren Sie unseren Vertrieb.</div>
+                        </div>
                         <hr className="w-full my-[35px]" />
                         <div className="flex flex-col gap-[16px] mb-10">
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Maßgeschneiderte SEO-Strategie</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Wettbewerbsanalysen</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Technische Tiefen-Optimierung
+                                </div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Tiefgreifende Analysen und Reporting</div>
+                            </div>
+                            <div className="flex items-start gap-[13px]">
+                                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Conversion-Optimierungsstrategien</div>
                             </div>
                         </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
+                        <Button className="tb-bold">Details</Button>
 
                     </NavLink>
                 </motion.div>
@@ -340,35 +354,30 @@ const SeoPlan = () => {
                     </div>
                     <div className="flex flex-col gap-4">
                         <Accordion
+                            title="Welche Art von Unternehmen betreut ihr?"
+                            content="Wir betreuen Unternehmen aller Branchen, von kleinen Betrieben bis zu großen Firmen." />
+                        <Accordion
                             title="Könnt ihr auch kleinen Startups helfen?"
                             content="Ja, wir unterstützen Unternehmen jeder Größe, einschließlich Neugründungen." />
                         <Accordion
-                            title="Wie funktioniert die Bezahlung?"
-                            content="Die Bezahlung erfolgt je nach Umfang des Projekts entweder als einmalige Pauschale oder als monatliche Abrechnung." />
-
-                        <Accordion
                             title="Kann ich die Leistungen später erweitern?"
                             content="Absolut, unsere Leistungen sind flexibel erweiterbar, sodass wir Sie auch zukünftig unterstützen können." />
-
-                        <Accordion
-                            title="Welche Art von Unternehmen betreut ihr?"
-                            content="Wir betreuen Unternehmen aller Branchen, von kleinen Betrieben bis zu großen Firmen." />
-
                         <Accordion
                             title="Ist eine Mindestlaufzeit erforderlich?"
                             content="Die Mindestlaufzeit wird individuell je nach Leistung und Bedarf des Kunden festgelegt." />
-
                         <Accordion
                             title="Wie kann ich den Erfolg eurer Maßnahmen messen?"
                             content="Wir bieten regelmäßige Reportings, damit Sie die Ergebnisse der Maßnahmen genau verfolgen können." />
-
                         <Accordion
                             title="Bietet ihr eine persönliche Beratung an?"
                             content="Ja, wir bieten individuelle Beratungen an, um die bestmögliche Lösung für Ihre Ziele zu finden." />
-
                         <Accordion
                             title="Welche Dienstleistungen deckt ihr ab?"
                             content="Wir fokussieren uns aktuell auf Suchmaschinenoptimierung (SEO), bezahlte Anzeigen (Ads) und Unternehmenslistungen." />
+                        <Accordion
+                            title="Wie funktioniert die Bezahlung?"
+                            content="Die Bezahlung erfolgt je nach Dienstleistung entweder als einmalige Gebühr oder wird monatlich abgerechnet." />
+
 
 
                     </div>

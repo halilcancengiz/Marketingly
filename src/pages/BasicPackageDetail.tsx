@@ -120,9 +120,12 @@ const BasicPackageDetail = () => {
                     className="bg-white md:px-[45px] xs:px-[35px] px-[25px] lg:py-[65px] md:py-[60px] xs:py-[50px] py-[42px] lg:max-w-[503px] max-w-[660px] lg:min-w-[395.79px] w-full border border-neutral-300 rounded-[20px] sticky top-3">
                     <div className="flex flex-col">
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Kontaktieren Sie uns noch heute!</div>
-                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
+                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
                             Wir helfen Ihnen, Ihre Marketingziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.                        </div>
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[20px] text-neutral-800">Preis: 349 € pro Monat </div>
+                        <div className="flex flex-col lg:my-[20px]">
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">349 €</div>
+                            <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
+                        </div>
                         <NavLink aria-label="Open contact page" to="/contact">
                             <Button className="w-full tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>

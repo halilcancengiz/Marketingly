@@ -43,10 +43,10 @@ const Navbar = () => {
                         </NavLink>
 
                         <div className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative">
-                            <div className="tb-medium">Pläne</div>
+                            <div className="tb-medium">Preise</div>
                             <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
                             <div className="absolute invisible opacity-0 translate-y-[10px] z-[11] pt-[13px] group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out -left-1/2 top-full  text-neutral-600">
-                                <div className="flex flex-col gap-8 rounded-3xl px-[66px] py-[64px] border-[1px] border-net bg-neutral-100">
+                                <div className="flex flex-col gap-8 rounded-3xl px-[66px] py-[64px] border-[1px] border-net bg-neutral-100 mt-2">
                                     <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1 tb-medium" to="/ads-plan" >
                                         <TbPointFilled /> Google Ads
                                     </NavLink>
@@ -94,7 +94,7 @@ const Navbar = () => {
 
                     <div className="flex flex-col items-start gap-1 group transition-colors duration-300 py-[15px]" >
                         <div className="flex items-center gap-1 group-hover:text-primary">
-                            Pläne <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
+                            Preise <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
                         </div>
                         <div className="hidden opacity-0 group-hover:flex group-hover:opacity-100 flex-col transition-opacity duration-300">
                             <NavLink className="hover:text-primary transition-colors duration-300 flex items-center py-[15px] gap-1 tb-medium" to="/ads-plan" >

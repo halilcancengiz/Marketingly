@@ -58,7 +58,7 @@ const CompanyListingPlan = () => {
         />
       </Helmet>
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
-        <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
+        <div className="flex flex-col items-center justify-center text-center text-white max-w-[550px] px-6 w-full mx-auto">
           <motion.div
             variants={fadeInAnimationVariant}
             initial="initial"
@@ -66,7 +66,7 @@ const CompanyListingPlan = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.15, duration: 0.3 }}
             className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">
-            Unsere Pläne
+            Unser Angebot
           </motion.div>
           <motion.div
             variants={fadeInAnimationVariant}
@@ -75,7 +75,7 @@ const CompanyListingPlan = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.30, duration: 0.3 }}
             className="mb-[15px] lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] tb-bold lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] ">
-            Pläne für jeden Bedarf
+            Das einzige Paket, das Sie brauchen!
           </motion.div>
           <motion.div
             variants={fadeInAnimationVariant}
@@ -84,7 +84,7 @@ const CompanyListingPlan = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.35, duration: 0.3 }}
             className="tb-medium text-[18px] leading-[30.006px]">
-            Unsere Preismodelle bieten flexible Lösungen für jedes Budget und jeden Bedarf.
+            Durch unsere professionelle Unternehmenslistung ist Ihnen ein seriöser Auftritt garantiert.
           </motion.div>
         </div>
 
@@ -215,36 +215,44 @@ const CompanyListingPlan = () => {
           transition={{ delay: 0.6, duration: 0.3 }}
           className="grid lg:grid-cols-1 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
 
-          <NavLink aria-label="Open product detail page" to="/product-detail" className="col-span-1 lg:max-w-[340px] w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]">
-
+          <NavLink aria-label="Open standart package detail page" to="/company-listing-premium-package-detail" className="col-span-1 lg:max-w-[373.66px] w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
             <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
               <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
             </div>
             <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
               Premium
             </div>
-            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
+            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Die perfekte Lösung für Ihre Sichtbarkeit.</div>
+
+            <div className="flex flex-col lg:mt-[20px]">
+              <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">299 €</div>
+              <div className="tb-medium text-neutral-600">einmalig (zzgl. Mwst.)</div>
+            </div>
+
             <hr className="w-full my-[35px]" />
             <div className="flex flex-col gap-[16px] mb-10">
-              <div className="flex items-center gap-[13px]">
+              <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Social Media Marketing</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung eines professionellen Google My Business-Eintrags</div>
+              </div>
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und Verifizierung des Unternehmenskontos</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Paid Advertising</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Ausarbeitung einer ansprechenden Unternehmensbeschreibung</div>
               </div>
-              <div className="flex items-center gap-[13px]">
+              <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">SEO: Search Engine Optimization</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Hinzufügen von Bildern, Logo und Kontaktinformationen</div>
               </div>
-              <div className="flex items-center gap-[13px]">
+              <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Normal Support</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Optimierung für bessere Auffindbarkeit in lokalen Suchergebnissen</div>
               </div>
             </div>
-            <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[15px] text-neutral-800">$ 2,500.00 USD</div>
-
+            <Button className="tb-bold">Details</Button>
           </NavLink>
 
         </motion.div>
@@ -279,35 +287,30 @@ const CompanyListingPlan = () => {
           </div>
           <div className="flex flex-col gap-4">
             <Accordion
+              title="Welche Art von Unternehmen betreut ihr?"
+              content="Wir betreuen Unternehmen aller Branchen, von kleinen Betrieben bis zu großen Firmen." />
+            <Accordion
               title="Könnt ihr auch kleinen Startups helfen?"
               content="Ja, wir unterstützen Unternehmen jeder Größe, einschließlich Neugründungen." />
             <Accordion
-              title="Wie funktioniert die Bezahlung?"
-              content="Die Bezahlung erfolgt je nach Umfang des Projekts entweder als einmalige Pauschale oder als monatliche Abrechnung." />
-
-            <Accordion
               title="Kann ich die Leistungen später erweitern?"
               content="Absolut, unsere Leistungen sind flexibel erweiterbar, sodass wir Sie auch zukünftig unterstützen können." />
-
-            <Accordion
-              title="Welche Art von Unternehmen betreut ihr?"
-              content="Wir betreuen Unternehmen aller Branchen, von kleinen Betrieben bis zu großen Firmen." />
-
             <Accordion
               title="Ist eine Mindestlaufzeit erforderlich?"
               content="Die Mindestlaufzeit wird individuell je nach Leistung und Bedarf des Kunden festgelegt." />
-
             <Accordion
               title="Wie kann ich den Erfolg eurer Maßnahmen messen?"
               content="Wir bieten regelmäßige Reportings, damit Sie die Ergebnisse der Maßnahmen genau verfolgen können." />
-
             <Accordion
               title="Bietet ihr eine persönliche Beratung an?"
               content="Ja, wir bieten individuelle Beratungen an, um die bestmögliche Lösung für Ihre Ziele zu finden." />
-
             <Accordion
               title="Welche Dienstleistungen deckt ihr ab?"
               content="Wir fokussieren uns aktuell auf Suchmaschinenoptimierung (SEO), bezahlte Anzeigen (Ads) und Unternehmenslistungen." />
+            <Accordion
+              title="Wie funktioniert die Bezahlung?"
+              content="Die Bezahlung erfolgt je nach Dienstleistung entweder als einmalige Gebühr oder wird monatlich abgerechnet." />
+
 
 
           </div>

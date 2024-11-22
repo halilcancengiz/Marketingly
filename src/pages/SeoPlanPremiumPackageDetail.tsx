@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 
-const PremiumPackageDetail = () => {
+const SeoPlanPremiumPackageDetail = () => {
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,
@@ -52,12 +52,12 @@ const PremiumPackageDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
-                <title>Premium-Paket - Unbegrenztes Werbebudget-Management | MARKETINGLY X</title>
-                <meta name="description" content="Das Premium-Paket von MARKETINGLY X bietet unbegrenztes Werbebudget-Management, strategische Planung und fortgeschrittene Analysen, um das volle Potenzial Ihrer Marke auszuschöpfen." />
-                <meta property="og:title" content="Premium-Paket - MARKETINGLY X" />
-                <meta property="og:description" content="Das Premium-Paket bietet umfassende Lösungen für fortgeschrittenes Marketing, von Content-Marketing bis hin zu erweiterten Analysen." />
+                <title>Premium-Paket (SEO) - Detaillierte Informationen | MARKETINGLY X</title>
+                <meta name="description" content="Entdecken Sie unser Standard-Paket, ideal für Unternehmen, die ihre Werbestrategien erweitern und optimieren möchten. Mit intensiver Betreuung und detaillierten Analysen für nachhaltigen Erfolg." />
+                <meta property="og:title" content="Standard-Paket - MARKETINGLY X" />
+                <meta property="og:description" content="Das Standard-Paket bietet umfangreiche Lösungen für optimierte Werbestrategien, von Budgetverwaltung bis zu gezielter Anzeigenentwicklung." />
                 <meta property="og:type" content="product" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}premium-package-detail`} />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}standart-package-detail`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
@@ -72,40 +72,71 @@ const PremiumPackageDetail = () => {
                         <img loading="lazy" src={circlesImage} alt="circle" />
                     </div>
                     <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
-                        Premium-Paket
+                        Premium-Paket (SEO)
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Das Premium-Paket ist die umfassendste Lösung für Unternehmen, die höchste Ansprüche an ihre Werbemaßnahmen stellen. Dieses Paket kombiniert uneingeschränkte Flexibilität mit strategischer Expertise, sodass Sie das Potenzial Ihrer Marke voll ausschöpfen können.                    </div>
+                        Das Premium-Paket ist die umfassende Lösung für Unternehmen, die maximale Ergebnisse erzielen möchten. Wir entwickeln eine maßgeschneiderte Strategie, die perfekt auf Ihre Ziele und Anforderungen abgestimmt ist, und bieten fortlaufende Optimierungen für dauerhaften Erfolg.
+                    </div>
                     <div className="flex flex-col gap-[15px] mb-10">
-                        <div className="flex items-center gap-[13px]">
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
+
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung unbegrenzter Werbebudgets</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Keyword-Recherche und Analyse: Identifikation der wichtigsten Suchbegriffe für Ihre Branche.</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Entwicklung maßgeschneiderter Werbestrategien</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">On-Page-Optimierung: Anpassung von Meta-Tags, Überschriften und internen Verlinkungen.</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliche Berichte mit umsetzbaren Handlungsempfehlungen</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische SEO-Analyse: Prüfung Ihrer Website auf technische Schwachstellen.</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Priorisierter Support und direkter Ansprechpartner</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Content-Optimierung: Erstellung und Optimierung von relevanten und hochwertigen Inhalten.</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Umfassende Markt- und Wettbewerbsanalysen</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Linkbuilding: Aufbau von hochwertigen Backlinks, um die Domain-Autorität zu stärken.</div>
+                        </div>
+                        <div className="flex items-start gap-[13px]">
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Local SEO: Optimierung Ihrer Website für lokale Suchanfragen.</div>
+                        </div>
+                        <div className="flex items-start gap-[13px]">
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Maßgeschneiderte SEO-Strategie: Individuelle Planung und Umsetzung Ihrer SEO-Maßnahmen.</div>
+                        </div>
+                        <div className="flex items-start gap-[13px]">
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Detaillierte Wettbewerbsanalysen: Analyse Ihrer Konkurrenz und Ableitung effektiver Maßnahmen.</div>
+                        </div>
+                        <div className="flex items-start gap-[13px]">
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische Tiefen-Optimierung: Umfassende technische Anpassungen für optimale Performance.</div>
+                        </div>
+                        <div className="flex items-start gap-[13px]">
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Tiefgreifende Analysen und Reporting: Monatliche Berichte mit detaillierten Einblicken und Empfehlungen.</div>
+                        </div>
+                        <div className="flex items-start gap-[13px]">
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Individuelle Markt- und Trendanalysen: Anpassung der Strategie an Markt- und Suchtrends.</div>
+                        </div>
+                        <div className="flex items-start gap-[13px]">
+                            <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Conversion-Optimierungsstrategien (bearbeitet)</div>
                         </div>
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-                        Unsere Premium-Lösung geht über klassische Kampagnenverwaltung hinaus. Wir begleiten Sie strategisch und operativ, damit Sie in Ihrer Branche führend bleiben. Mit einer priorisierten Betreuung stehen wir Ihnen jederzeit zur Verfügung.                    </div>
+                        Mit unserem Premium-Paket erzielen Sie nicht nur höhere Rankings, sondern auch nachhaltig gesteigerte Conversions und einen messbaren Wettbewerbsvorsprung.
+                    </div>
                     <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Flexible Anpassung Ihrer Kampagnen an Markttrends</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Tiefgehende Analysen Ihrer Zielgruppen</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Fokussierte Strategien für langfristigen Erfolg</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Kontinuierliche Überwachung und Optimierung</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Exklusive Beratung und Zugang zu maßgeschneiderten Lösungen</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Gezielte SEO-Strategien für nachhaltige Ergebnisse</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Strategische Planung und kontinuierliche Anpassung</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Regelmäßige Erfolgskontrolle und Optimierungen</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Direkte Betreuung durch Senior-Experten</li>
                     </ul>
                 </motion.div>
                 <motion.div
@@ -119,7 +150,7 @@ const PremiumPackageDetail = () => {
                     <div className="flex flex-col">
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Kontaktieren Sie uns noch heute!</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-                            Wir helfen Ihnen, Ihre Marketingziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
+                            Wir helfen Ihnen, Ihre SEO-Ziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
                         </div>
                         <div className="flex flex-col lg:my-[20px]">
                             <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">Preis auf Anfrage</div>
@@ -208,4 +239,4 @@ const PremiumPackageDetail = () => {
     )
 }
 
-export default PremiumPackageDetail
+export default SeoPlanPremiumPackageDetail

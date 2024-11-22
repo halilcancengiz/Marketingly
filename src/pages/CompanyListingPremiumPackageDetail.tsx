@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 
-const PremiumPackageDetail = () => {
+const CompanyListingPremiumPackageDetail = () => {
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,
@@ -52,12 +52,12 @@ const PremiumPackageDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
-                <title>Premium-Paket - Unbegrenztes Werbebudget-Management | MARKETINGLY X</title>
-                <meta name="description" content="Das Premium-Paket von MARKETINGLY X bietet unbegrenztes Werbebudget-Management, strategische Planung und fortgeschrittene Analysen, um das volle Potenzial Ihrer Marke auszuschöpfen." />
-                <meta property="og:title" content="Premium-Paket - MARKETINGLY X" />
-                <meta property="og:description" content="Das Premium-Paket bietet umfassende Lösungen für fortgeschrittenes Marketing, von Content-Marketing bis hin zu erweiterten Analysen." />
+                <title>Premium-Paket - Detaillierte Informationen | MARKETINGLY X</title>
+                <meta name="description" content="Entdecken Sie unser Standard-Paket, ideal für Unternehmen, die ihre Werbestrategien erweitern und optimieren möchten. Mit intensiver Betreuung und detaillierten Analysen für nachhaltigen Erfolg." />
+                <meta property="og:title" content="Standard-Paket - MARKETINGLY X" />
+                <meta property="og:description" content="Das Standard-Paket bietet umfangreiche Lösungen für optimierte Werbestrategien, von Budgetverwaltung bis zu gezielter Anzeigenentwicklung." />
                 <meta property="og:type" content="product" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}premium-package-detail`} />
+                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}standart-package-detail`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
@@ -75,37 +75,41 @@ const PremiumPackageDetail = () => {
                         Premium-Paket
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Das Premium-Paket ist die umfassendste Lösung für Unternehmen, die höchste Ansprüche an ihre Werbemaßnahmen stellen. Dieses Paket kombiniert uneingeschränkte Flexibilität mit strategischer Expertise, sodass Sie das Potenzial Ihrer Marke voll ausschöpfen können.                    </div>
+                        Das Premium-Paket richtet sich an Unternehmen, die ihre Sichtbarkeit verbessern und professionell auf Google erscheinen möchten. Mit unserer umfassenden Unternehmenslistung sorgen wir dafür, dass Ihr Unternehmen optimal auffindbar ist und einen überzeugenden ersten Eindruck hinterlässt.                        </div>
                     <div className="flex flex-col gap-[15px] mb-10">
-                        <div className="flex items-center gap-[13px]">
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
+
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung unbegrenzter Werbebudgets</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Erstellung eines professionellen Google-Unternehmenseintrags</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Entwicklung maßgeschneiderter Werbestrategien</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einrichtung und Verifizierung des Unternehmenskontos</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliche Berichte mit umsetzbaren Handlungsempfehlungen</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Ausarbeitung einer ansprechenden und zielgerichteten Unternehmensbeschreibung</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Priorisierter Support und direkter Ansprechpartner</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Hinzufügen von Logo, Bildern und Kontaktdaten</div>
                         </div>
-                        <div className="flex items-center gap-[13px]">
+                        <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Umfassende Markt- und Wettbewerbsanalysen</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Optimierung des Eintrags für lokale Suchergebnisse</div>
                         </div>
                     </div>
-                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-                        Unsere Premium-Lösung geht über klassische Kampagnenverwaltung hinaus. Wir begleiten Sie strategisch und operativ, damit Sie in Ihrer Branche führend bleiben. Mit einer priorisierten Betreuung stehen wir Ihnen jederzeit zur Verfügung.                    </div>
+                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
+                        Dieses Paket stellt sicher, dass Ihr Unternehmen nicht nur sichtbar ist, sondern auch perfekt präsentiert wird. Unser persönlicher Ansatz sorgt dafür, dass Ihr Google-Eintrag alle wichtigen Informationen enthält und Sie langfristig von einem optimierten Online-Auftritt profitieren.
+                    </div>
+                    <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold text-neutral-800">Weitere Vorteile:</div>
+
                     <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Flexible Anpassung Ihrer Kampagnen an Markttrends</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Tiefgehende Analysen Ihrer Zielgruppen</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Fokussierte Strategien für langfristigen Erfolg</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Kontinuierliche Überwachung und Optimierung</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Exklusive Beratung und Zugang zu maßgeschneiderten Lösungen</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Stärkung Ihrer lokalen Präsenz</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Erhöhte Auffindbarkeit in Google-Suchen und Maps</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Professionelle Darstellung Ihrer Dienstleistungen</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Maximale Effizienz durch Expertenwissen</li>
                     </ul>
                 </motion.div>
                 <motion.div
@@ -122,8 +126,8 @@ const PremiumPackageDetail = () => {
                             Wir helfen Ihnen, Ihre Marketingziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
                         </div>
                         <div className="flex flex-col lg:my-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">Preis auf Anfrage</div>
-                            <div className="tb-medium text-neutral-600">Kontaktieren Sie unseren Vertrieb.</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">299 €</div>
+                            <div className="tb-medium text-neutral-600">einmalig (zzgl. Mwst.)</div>
                         </div>
                         <NavLink aria-label="Open contact page" to="/contact">
                             <Button className="w-full tb-bold" variant="primary" size="default">Kontakt</Button>
@@ -208,4 +212,4 @@ const PremiumPackageDetail = () => {
     )
 }
 
-export default PremiumPackageDetail
+export default CompanyListingPremiumPackageDetail

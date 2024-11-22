@@ -36,7 +36,7 @@ export const HomeV1 = () => {
 
     const jumbotronBoldText = "Google!"
     const jumbotronTextSplit = splitStringUsingRegex(jumbotronBoldText)
-    const charVariants9 = { hidden: { opacity: 0, color: "#4A3AFF" }, reveal: { opacity: 1, color: "#14142B" } }; 
+    const charVariants9 = { hidden: { opacity: 0, color: "#4A3AFF" }, reveal: { opacity: 1, color: "#14142B" } };
     const fadeInAnimationVariantExample = {
         hidden: { opacity: 0, y: 20 },
         reveal: {
@@ -436,8 +436,27 @@ export const HomeV1 = () => {
                             className="lg:max-w-[527px] max-w-[660px] w-full flex flex-col lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px] lg:mr-10">
                             <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-base leading-[18px] uppercase text-primary tb-medium tracking-[1.6px]">Nachhaltige Reichweite</div>
                             <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Warum ist eine SEO Optimierung wichtig?</div>
-                            <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen. Somit ermöglicht es SEO, die Sichtbarkeit Ihrer Webseite nachhaltig zu steigern – ganz ohne zusätzliche Werbeausgaben.</div>
-
+                            <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen.</div>
+                            <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
+                                <div className="flex items-center">
+                                    <div className="size-6 mr-[13px]">
+                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                    </div>
+                                    <div className="text-[18px] tb-bold text-neutral-800">Mehr Sichtbarkeit ohne extra Werbekosten</div>
+                                </div>
+                                <div className="flex items-center">
+                                    <div className="size-6 mr-[13px]">
+                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                    </div>
+                                    <div className="text-[18px] tb-bold text-neutral-800">Nachhaltige Marketingstrategie</div>
+                                </div>
+                                <div className="flex items-center">
+                                    <div className="size-6 mr-[13px]">
+                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                    </div>
+                                    <div className="text-[18px] tb-bold text-neutral-800">Maximale organische Leads</div>
+                                </div>
+                            </div>
                             <NavLink aria-label="Open seo plan page" to="/seo-plan" className="xs:w-auto w-full">
                                 <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
                             </NavLink>
@@ -668,7 +687,7 @@ export const HomeV1 = () => {
 
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:pt-[220px] lg:pt-[176px] md:pt-[140px] xs:pt-[113px] pt-[90px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[300px] xs:pb-[263px] pb-[90px] xs:px-6 px-4 overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -681,7 +700,7 @@ export const HomeV1 = () => {
                             style={{
                                 y: smoothFirstImageTranslateY
                             }}
-                            className="absolute w-[71%] max-h-[85%] lg:left-auto left-0 lg:right-0 right-auto -top-[220px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
+                            className="absolute w-[80%]  lg:left-auto left-0 lg:right-0 right-auto -top-[250px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
                             src={manImage}
                             alt="woman"
                             loading="lazy"
@@ -691,9 +710,10 @@ export const HomeV1 = () => {
                             style={{
                                 y: smoothFirstImageTranslateYReverse
                             }}
-                            className="absolute w-[71.15%] lg:left-0 left-auto lg:right-auto right-0 lg:-bottom-[120px] -bottom-[280px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
+                            className="absolute w-[71.15%] lg:left-0 left-auto lg:right-auto right-0 lg:-bottom-[250px] -bottom-[440px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
                             src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf9a96ef17d725a04f5_image-2-about-v2-marketing-template-p-800.jpeg"
-                            alt="studing" />
+                            alt="studing"
+                        />
                     </motion.div>
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -783,7 +803,7 @@ export const HomeV1 = () => {
 
                 </div>
             </section>
-            
+
             <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex flex-col items-center ">
                     <motion.div
@@ -896,7 +916,7 @@ export const HomeV1 = () => {
                         style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
                         className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
                     >
-                       <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[20px] bg-white">
+                        <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[20px] bg-white">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="firstname" className="xs:text-[18px] text-base tb-bold">Vorname</label>
                                 <input id="firstname" name="firstname" required placeholder="Max" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
@@ -965,7 +985,7 @@ export const HomeV1 = () => {
                     </motion.div>
                 </div>
             </section>
-            
+
         </main>
     )
 }

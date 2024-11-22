@@ -16,6 +16,10 @@ import StandartPackageDetail from "../pages/StandartPackageDetail";
 import PremiumPackageDetail from "../pages/PremiumPackageDetail";
 import BasicPackageDetail from "../pages/BasicPackageDetail";
 import { HomeV3 } from "../pages/HomeV3";
+import CompanyListingPremiumPackageDetail from "../pages/CompanyListingPremiumPackageDetail";
+import SeoPlanBasicPackageDetail from "../pages/SeoPlanBasicPackageDetail";
+import SeoPlanStandartPackageDetail from "../pages/SeoPlanStandartPackageDetail";
+import SeoPlanPremiumPackageDetail from "../pages/SeoPlanPremiumPackageDetail";
 
 
 
@@ -35,6 +39,10 @@ export const AppRoutes = () => {
             <Route path="/basic-package-detail" element={<BasicPackageDetail />} />
             <Route path="/standart-package-detail" element={<StandartPackageDetail />} />
             <Route path="/premium-package-detail" element={<PremiumPackageDetail />} />
+            <Route path="/company-listing-premium-package-detail" element={<CompanyListingPremiumPackageDetail />} />
+            <Route path="/seo-plan-basic-package-detail" element={<SeoPlanBasicPackageDetail />} />
+            <Route path="/seo-plan-standart-package-detail" element={<SeoPlanStandartPackageDetail />} />
+            <Route path="/seo-plan-premium-package-detail" element={<SeoPlanPremiumPackageDetail />} />
             <Route path="/services" element={<Services />} />
             <Route path="/seo-plan" element={<SeoPlan />} />
             <Route path="/ads-plan" element={<AdsPlan />} />

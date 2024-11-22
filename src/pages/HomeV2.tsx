@@ -453,8 +453,27 @@ export const HomeV2 = () => {
                             className="lg:max-w-[527px] max-w-[660px] w-full flex flex-col lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px] lg:mr-10">
                             <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-base leading-[18px] uppercase text-primary tb-medium tracking-[1.6px]">Nachhaltige Reichweite</div>
                             <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Warum ist eine SEO Optimierung wichtig?</div>
-                            <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen. Somit ermöglicht es SEO, die Sichtbarkeit Ihrer Webseite nachhaltig zu steigern – ganz ohne zusätzliche Werbeausgaben.</div>
-
+                            <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen.</div>
+                            <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
+                                <div className="flex items-center">
+                                    <div className="size-6 mr-[13px]">
+                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                    </div>
+                                    <div className="text-[18px] tb-bold text-neutral-800">Mehr Sichtbarkeit ohne extra Werbekosten</div>
+                                </div>
+                                <div className="flex items-center">
+                                    <div className="size-6 mr-[13px]">
+                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                    </div>
+                                    <div className="text-[18px] tb-bold text-neutral-800">Nachhaltige Marketingstrategie</div>
+                                </div>
+                                <div className="flex items-center">
+                                    <div className="size-6 mr-[13px]">
+                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                    </div>
+                                    <div className="text-[18px] tb-bold text-neutral-800">Maximale organische Leads</div>
+                                </div>
+                            </div>
                             <NavLink aria-label="Open seo plan page" to="/seo-plan" className="xs:w-auto w-full">
                                 <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
                             </NavLink>
@@ -685,7 +704,7 @@ export const HomeV2 = () => {
 
             </section>
 
-            <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:pt-[220px] lg:pt-[176px] md:pt-[140px] xs:pt-[113px] pt-[90px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[300px] xs:pb-[263px] pb-[90px] xs:px-6 px-4 overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -698,7 +717,7 @@ export const HomeV2 = () => {
                             style={{
                                 y: smoothFirstImageTranslateY
                             }}
-                            className="absolute w-[71%] max-h-[85%] lg:left-auto left-0 lg:right-0 right-auto -top-[220px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
+                            className="absolute w-[80%]  lg:left-auto left-0 lg:right-0 right-auto -top-[250px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
                             src={manImage}
                             alt="woman"
                             loading="lazy"
@@ -708,9 +727,10 @@ export const HomeV2 = () => {
                             style={{
                                 y: smoothFirstImageTranslateYReverse
                             }}
-                            className="absolute w-[71.15%] lg:left-0 left-auto lg:right-auto right-0 lg:-bottom-[120px] -bottom-[280px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
+                            className="absolute w-[71.15%] lg:left-0 left-auto lg:right-auto right-0 lg:-bottom-[250px] -bottom-[440px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
                             src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf9a96ef17d725a04f5_image-2-about-v2-marketing-template-p-800.jpeg"
-                            alt="studing" />
+                            alt="studing"
+                        />
                     </motion.div>
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -982,6 +1002,7 @@ export const HomeV2 = () => {
                     </motion.div>
                 </div>
             </section>
+
 
         </main>
     )
