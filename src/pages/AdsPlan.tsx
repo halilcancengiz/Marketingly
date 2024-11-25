@@ -7,6 +7,7 @@ import Button from "../components/Button";
 import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
+import { useEffect, useRef, useState } from "react";
 
 const AdsPlan = () => {
     const fadeInAnimationVariant = {
@@ -30,6 +31,42 @@ const AdsPlan = () => {
             scale: 1
         }
     };
+
+
+    const headerDescRef = useRef<HTMLDivElement | null>(null);
+    const priceRef = useRef<HTMLDivElement | null>(null);
+    const checkListRef = useRef<HTMLDivElement | null>(null);
+    const [headerDescHeight, setHeaderDescHeight] = useState<number>(0);
+    const [priceHeight, setPriceHeight] = useState<number>(0);
+    const [checkListHeight, setCheckListHeight] = useState<number>(0);
+
+    useEffect(() => {
+        // Function to update the height
+        const updateHeight = () => {
+            if (headerDescRef.current) {
+                setHeaderDescHeight(headerDescRef.current.offsetHeight);
+            }
+            if (priceRef.current) {
+                setPriceHeight(priceRef.current.offsetHeight);
+            }
+            if (checkListRef.current) {
+                setCheckListHeight(checkListRef.current.offsetHeight);
+            }
+        };
+
+        // Initial height calculation
+        updateHeight();
+
+        // Update height on window resize
+        window.addEventListener("resize", updateHeight);
+
+        // Cleanup the event listener on unmount
+        return () => {
+            window.removeEventListener("resize", updateHeight);
+        };
+    }, []);
+
+
     return (
         <div className="flex flex-col">
             <Helmet>
@@ -195,21 +232,23 @@ const AdsPlan = () => {
                     transition={{ delay: 0.6, duration: 0.3 }}
                     className="grid lg:grid-cols-3 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
                     {/* Basis */}
-                    <NavLink aria-label="Open basic package detail page" to="/basic-package-detail" className="col-span-1 overflow-hidden w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative">
-                        <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                    <NavLink aria-label="Open basic package detail page" to="/basic-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+                        <div className="size-[74px] min-w-[74px] min-h-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
                         </div>
 
                         <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
                             Basis
                         </div>
-                        <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"></span> </div>
-                        <div className="flex flex-col lg:mt-[20px]">
+                        <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"></span> </div>
+                        <div style={{ height: `${priceHeight}px` }} className="flex flex-col mt-[20px]">
                             <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">349 €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
+
+
                         <hr className="w-full my-[35px]" />
-                        <div className="flex flex-col gap-[16px] mb-10">
+                        <div style={{ height: `${checkListHeight}px` }} className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 1.500 €</div>
@@ -240,21 +279,24 @@ const AdsPlan = () => {
                     <NavLink aria-label="Open standart package detail page" to="/standart-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
                         <div className="absolute left-0 top-0 py-1 px-9 tb-bold text-white bg-primary rounded-br-[20px]">Bestseller</div>
 
-                        <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                        <div className="size-[74px]  min-w-[74px] min-h-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
                         </div>
+
                         <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
                             Standard
                         </div>
-                        <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
+                        <div ref={headerDescRef} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
 
-                        <div className="flex flex-col lg:mt-[20px]">
+                        <div ref={priceRef} className="flex flex-col mt-[20px]">
                             <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">499 €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
 
+
+
                         <hr className="w-full my-[35px]" />
-                        <div className="flex flex-col gap-[16px] mb-10">
+                        <div ref={checkListRef} className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 3.500 €</div>
@@ -281,21 +323,24 @@ const AdsPlan = () => {
 
 
                     {/* Premium */}
-                    <NavLink aria-label="Open premium package detail page" to="/premium-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-[56px] lg:-mt-[-4px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px]  relative overflow-hidden">
+                    <NavLink aria-label="Open premium package detail page" to="/premium-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
 
-                        <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                        <div className="size-[74px]  min-w-[74px] min-h-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
                         </div>
+
                         <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
                             Premium
                         </div>
-                        <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
-                        <div className="flex flex-col lg:mt-[20px]">
+                        <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
+                        <div style={{ height: `${priceHeight}px` }} className="flex flex-col mt-[20px]">
                             <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">Preis auf Anfrage</div>
                             <div className="tb-medium text-neutral-600">Kontaktieren Sie unseren Vertrieb.</div>
                         </div>
+
+
                         <hr className="w-full my-[35px]" />
-                        <div className="flex flex-col gap-[16px] mb-10">
+                        <div style={{ height: `${checkListHeight}px` }} className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung unbegrenzter Werbebudgets</div>

@@ -222,15 +222,15 @@ const CompanyListingPlan = () => {
             <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
               Premium
             </div>
-            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Die perfekte Lösung für Ihre Sichtbarkeit.</div>
+            <div  className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Die perfekte Lösung für Ihre Sichtbarkeit.</div>
 
-            <div className="flex flex-col lg:mt-[20px]">
+            <div  className="flex flex-col lg:mt-[20px]">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">299 €</div>
               <div className="tb-medium text-neutral-600">einmalig (zzgl. Mwst.)</div>
             </div>
 
             <hr className="w-full my-[35px]" />
-            <div className="flex flex-col gap-[16px] mb-10">
+            <div  className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung eines professionellen Google My Business-Eintrags</div>
