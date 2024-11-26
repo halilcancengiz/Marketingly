@@ -906,7 +906,7 @@ export const HomeV2 = () => {
                                 </div>
 
                                 <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL}`} className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${import.meta.env.VITE_CONTACT_EMAIL}`}</div>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 xs:break-normal break-all'>{`${import.meta.env.VITE_CONTACT_EMAIL}`}</div>
                                 </a>
                             </div>
                             <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
