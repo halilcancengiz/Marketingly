@@ -365,9 +365,11 @@ const SeoPlan = () => {
                 whileInView="animate"
                 viewport={{ once: true }}
                 transition={{ delay: 0.3, duration: 0.3 }}
-                className="3xl:pb-[200px] lg:pb-[160px] md:pb-[128px] xs:pb-[102px] pb-[88px] px-6 max-w-[419px] w-full mx-auto flex flex-col items-center justify-center text-center lg:mt-[60px] mt-10">
+                className="3xl:pb-[200px] lg:pb-[160px] md:pb-[128px] xs:pb-[102px] pb-[88px] px-6 max-w-[450px] w-full mx-auto flex flex-col items-center justify-center text-center lg:mt-[100px] mt-20">
                 <div className="text-neutral-800 mb-[15px] tb-bold lg:text-[24px] md:text-[22px] text-[20px] lg:leading-[34.008px] md:leading-[31.174px] leading-[28.34px]">Haben wir Ihr Interesse geweckt?</div>
-                <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] tb-medium">Wir freuen uns zusammen mit Ihnen Ihre Ziele zu erfüllen.</div>
+                <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] tb-medium">
+                    Wir freuen uns darauf, gemeinsam mit Ihnen Ihre Ziele zu erreichen.
+                </div>
                 <div>
                     <Button className="tb-bold" variant="primary">Kontakt</Button>
                 </div>

@@ -222,15 +222,15 @@ const CompanyListingPlan = () => {
             <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
               Premium
             </div>
-            <div  className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Die perfekte Lösung für Ihre Sichtbarkeit.</div>
+            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Die perfekte Lösung für Ihre Sichtbarkeit.</div>
 
-            <div  className="flex flex-col lg:mt-[20px]">
+            <div className="flex flex-col lg:mt-[20px]">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">299 €</div>
               <div className="tb-medium text-neutral-600">einmalig (zzgl. Mwst.)</div>
             </div>
 
             <hr className="w-full my-[35px]" />
-            <div  className="flex flex-col gap-[16px] mb-10">
+            <div className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung eines professionellen Google My Business-Eintrags</div>
@@ -259,18 +259,20 @@ const CompanyListingPlan = () => {
       </section>
 
       <motion.section
-        variants={fadeInAnimationVariant}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        transition={{ delay: 0.3, duration: 0.3 }}
-        className="3xl:pb-[200px] lg:pb-[160px] md:pb-[128px] xs:pb-[102px] pb-[88px] px-6 max-w-[419px] w-full mx-auto flex flex-col items-center justify-center text-center lg:mt-[60px] mt-10">
-        <div className="text-neutral-800 mb-[15px] tb-bold lg:text-[24px] md:text-[22px] text-[20px] lg:leading-[34.008px] md:leading-[31.174px] leading-[28.34px]">Haben wir Ihr Interesse geweckt?</div>
-        <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] tb-medium">Wir freuen uns zusammen mit Ihnen Ihre Ziele zu erfüllen.</div>
-        <div>
-          <Button className="tb-bold" variant="primary">Kontakt</Button>
-        </div>
-      </motion.section>
+                variants={fadeInAnimationVariant}
+                initial="initial"
+                whileInView="animate"
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.3 }}
+                className="3xl:pb-[200px] lg:pb-[160px] md:pb-[128px] xs:pb-[102px] pb-[88px] px-6 max-w-[450px] w-full mx-auto flex flex-col items-center justify-center text-center lg:mt-[100px] mt-20">
+                <div className="text-neutral-800 mb-[15px] tb-bold lg:text-[24px] md:text-[22px] text-[20px] lg:leading-[34.008px] md:leading-[31.174px] leading-[28.34px]">Haben wir Ihr Interesse geweckt?</div>
+                <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] tb-medium">
+                    Wir freuen uns darauf, gemeinsam mit Ihnen Ihre Ziele zu erreichen.
+                </div>
+                <div>
+                    <Button className="tb-bold" variant="primary">Kontakt</Button>
+                </div>
+            </motion.section>
 
       <motion.section
         variants={fadeInAnimationVariant}
