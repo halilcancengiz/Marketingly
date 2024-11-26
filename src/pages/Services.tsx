@@ -263,7 +263,7 @@ const Services = () => {
                         <div className="flex items-center flex-col gap-6 ">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="analytics" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Google Ads</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google Marketingkampagnen – für maximale Reichweite</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</div>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
@@ -277,8 +277,8 @@ const Services = () => {
                     <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={search} alt="search" />
-                            <div className="md:text-[24px] text-[22px] tb-bold">Seo</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen</div>
+                            <div className="md:text-[24px] text-[22px] tb-bold">SEO</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</div>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
@@ -293,7 +293,7 @@ const Services = () => {
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={system} alt="system" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Sichtbarkeit optimieren durch Google-Unternehmenslistung</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Sichtbarkeit optimieren durch Google-Unternehmenslistung.</div>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>

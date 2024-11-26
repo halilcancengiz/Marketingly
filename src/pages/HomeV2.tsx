@@ -5,7 +5,7 @@ import system from "../assets/images/system.webp";
 import services from "../assets/images/homev1-services-image.webp";
 import check from "../assets/images/check.webp";
 import manImage from "../assets/images/manimage.webp";
-import seoImage from "../assets/images/seoimage.webp";
+import seoImage from "../assets/images/seoimage.png";
 import * as motion from "framer-motion/client";
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect } from "react";
@@ -321,7 +321,7 @@ export const HomeV2 = () => {
                             <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
                         <NavLink aria-label="Open services page" to="/services" className="xs:w-auto w-full">
-                            <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Mehr Details</Button>
+                            <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Dienstleistungen</Button>
                         </NavLink>
                     </div>
                 </motion.div>
@@ -341,12 +341,12 @@ export const HomeV2 = () => {
                                 loading="lazy"
                             />
                             <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Google Ads</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google Marketingkampagnen – für maximale Reichweite</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</div>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
                             <NavLink aria-label="Open seo plan page" to="/seo-plan">
-                                <Button className="tb-bold">Details</Button>
+                                <Button className="tb-bold">Pläne</Button>
                             </NavLink>
                         </div>
                     </NavLink>
@@ -357,14 +357,14 @@ export const HomeV2 = () => {
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={search}
                                 alt="search" />
-                            <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Seo</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen</div>
+                            <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEO</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</div>
                         </div>
 
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
                             <NavLink aria-label="Open seo plan page" to="/seo-plan">
-                                <Button className="tb-bold">Details</Button>
+                                <Button className="tb-bold">Pläne</Button>
                             </NavLink>
                         </div>
                     </NavLink>
@@ -376,7 +376,7 @@ export const HomeV2 = () => {
                                 src={system}
                                 alt="system" />
                             <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Unternehmenslistung</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichtbarkeit optimieren durch Google-Unternehmenslistung</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichtbarkeit optimieren durch Google-Unternehmenslistung.</div>
                             <div className="md:flex hidden"></div>
 
                         </div>
@@ -384,7 +384,7 @@ export const HomeV2 = () => {
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
                             <NavLink aria-label="Open company listing page" to="/company-listing-plan">
-                                <Button className="tb-bold">Details</Button>
+                                <Button className="tb-bold">Pläne</Button>
                             </NavLink>
                         </div>
                     </NavLink>
@@ -459,7 +459,7 @@ export const HomeV2 = () => {
                                     <div className="size-6 mr-[13px]">
                                         <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
-                                    <div className="text-[18px] tb-bold text-neutral-800">Mehr Sichtbarkeit ohne extra Werbekosten</div>
+                                    <div className="text-[18px] tb-bold text-neutral-800">Mehr Sichtbarkeit ohne zusätzliche Werbekosten</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
@@ -514,7 +514,7 @@ export const HomeV2 = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.3 }}
                         className="max-w-[527px] w-full leading-[30px] text-neutral-100 mb-10 text-[18px] tb-medium">
-                        Kontaktieren Sie uns, um zu erfahren, wie wir Ihnen dabei helfen, Ihre Ziele zu erreichen.
+                        Kontaktieren Sie uns, um zu erfahren, wie wir Ihnen dabei helfen können, Ihre Ziele zu erreichen.
                     </motion.div>
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -741,7 +741,9 @@ export const HomeV2 = () => {
                         className="lg:max-w-[504px] max-w-[660px] flex flex-col lg:pl-5 lg:order-2 order-1">
                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Zielgruppe</div>
                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] md:leading-[50px] xs:leading-[42px] leading-[34px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]"> Wer kann von unseren Dienstleistungen profitieren?</div>
-                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[40px]">Egal ob Makler, Zahnarztpraxis, lokale Geschäfte oder große Industriefirmen – unsere maßgeschneiderten Lösungen passen zu jedem. Unsere Dienste sind flexibel, skalierbar und helfen Ihnen, genau die Ergebnisse zu erzielen, die Sie brauchen – ob mehr Kunden, mehr Mitarbeiter oder mehr Sichtbarkeit.</div>
+                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[40px]">
+                            Egal ob Makler, Zahnarztpraxis, lokales Geschäft oder große Industriefirma – unsere maßgeschneiderte Lösung passt zu jedem. Unser Dienst ist flexibel, skalierbar und hilft Ihnen, genau die Ergebnisse zu erzielen, die Sie brauchen – ob mehr Kunden, mehr Mitarbeiter oder mehr Sichtbarkeit.
+                        </div>
 
                         <div className="xs:w-auto w-full">
                             <NavLink aria-label="Open services page" className="xs:w-auto w-full" to="/services">
@@ -763,7 +765,7 @@ export const HomeV2 = () => {
                         transition={{ delay: 0.1, duration: 0.3 }}
                         className="lg:max-w-[436px] max-w-[660px] lg:mb-0 mb-20 lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10">
                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso Superagentur</div>
-                        <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Wieso Sie mit uns abreiten sollten?</div>
+                        <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Warum sollten Sie mit uns arbeiten?</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</div>
                         <NavLink aria-label="Open contact page" to="/contact" className="mt-10 xs:w-auto w-full">
                             <Button className="tb-bold xs:w-auto w-full">Kontakt</Button>
@@ -976,7 +978,7 @@ export const HomeV2 = () => {
                                 <div>
                                     <input id="termandconditions" required className="size-5 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </div>
-                                <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung.</NavLink></label>
+                                <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerklärung.</NavLink></label>
                             </div>
                             <div className="col-span-2">
                                 <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>

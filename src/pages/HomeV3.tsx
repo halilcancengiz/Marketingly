@@ -319,15 +319,15 @@ export const HomeV3 = () => {
                         <div className="flex items-center flex-col gap-6">
                             <img className="object-contain size-[86px] rounded-[10px]" loading="lazy" src={analytics} alt="analytics" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Google Ads</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google Marketingkampagnen – für maximale Reichweite</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</div>
                         </div>
                         <div className="w-[109px] bg-secondary2 h-[2px]"></div>
                     </div>
                     <div className="col-span-1 rounded-[18px] py-16 px-6 flex min-h-[410px] flex-col items-center justify-between gap-6 text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img className="object-contain size-[86px] rounded-[10px]" loading="lazy" src={search} alt="search" />
-                            <div className="md:text-[24px] text-[22px] tb-bold">Seo</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen</div>
+                            <div className="md:text-[24px] text-[22px] tb-bold">SEO</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</div>
                         </div>
 
                         <div className="w-[109px] bg-primary h-[2px]"></div>
@@ -336,7 +336,7 @@ export const HomeV3 = () => {
                         <div className="flex items-center flex-col gap-6">
                             <img className="object-contain size-[86px] rounded-[10px]" loading="lazy" src={system} alt="system" />
                             <div className="md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichtbarkeit optimieren durch Google-Unternehmenslistung</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichtbarkeit optimieren durch Google-Unternehmenslistung.</div>
                         </div>
 
                         <div className="w-[109px] bg-secondary2 h-[2px]"></div>
@@ -917,7 +917,7 @@ export const HomeV3 = () => {
                                 <label>
                                     <input required className="size-6 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </label>
-                                <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerkärung</NavLink></div>
+                                <div className="xs:text-[18px] text-base text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerklärung.</NavLink></div>
                             </div>
                             <div className="col-span-2">
                                 <Button type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>
