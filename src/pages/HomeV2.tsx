@@ -144,7 +144,7 @@ export const HomeV2 = () => {
                         whileInView="animate"
                         viewport={{ once: true }}
                         transition={{ delay: 0.40, duration: 0.3 }}
-                        className="leading-[30px] text-white text-center mb-10 text-[18px] tb-medium">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.</motion.div>
+                        className="leading-[30px] text-white text-center mb-10 text-[18px] tb-medium">Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, SEO & Unternehmenslistungen.</motion.div>
                     <motion.div
                         variants={fadeInAnimationVariant}
                         initial="initial"

@@ -48,5 +48,6 @@ export const AppRoutes = () => {
             <Route path="/ads-plan" element={<AdsPlan />} />
             <Route path="/company-listing-plan" element={<CompanyListingPlan />} />
         </Routes>
+        
     );
 };

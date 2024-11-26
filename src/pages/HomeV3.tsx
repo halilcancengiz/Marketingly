@@ -158,7 +158,7 @@ export const HomeV3 = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3, duration: 0.3 }}
                                 className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">
-                                Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, Seo & Unternehmenslistungen.
+                                Mit uns erreichen Sie Menschen dort wo sie suchen, auf Google - durch Ads, SEO & Unternehmenslistungen.
                             </motion.div>
                             <motion.div
                                 variants={fadeInAnimationVariant}
