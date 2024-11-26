@@ -127,16 +127,21 @@ export const HomeV2 = () => {
                     >
 
                         <div className="block tb-bold text-white">Maximaler Erfolg mit&nbsp;</div>
-                        {jumbotronTextSplit.map((char, index) => (
-                            <motion.span
-                                key={index}
-                                className="tb-bold inline-block"
-                                variants={charVariants9}
-                                transition={{ duration: 0.5 }}
-                            >
-                                {char}
-                            </motion.span>
-                        ))}
+                        <motion.span
+                            className="inline-flex flex-wrap-nowrap"
+                            style={{ whiteSpace: 'nowrap' }}
+                        >
+                            {jumbotronTextSplit.map((char, index) => (
+                                <motion.span
+                                    key={index}
+                                    className="tb-bold inline-block"
+                                    variants={charVariants9}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    {char}
+                                </motion.span>
+                            ))}
+                        </motion.span>
                     </motion.div>
                     <motion.div
                         variants={fadeInAnimationVariant}

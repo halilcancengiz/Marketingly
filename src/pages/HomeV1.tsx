@@ -140,16 +140,21 @@ export const HomeV1 = () => {
                                 className="lg:mb-[22px] md:mb-[20px] xs:mb-[15px] mb-[10px] text-neutral-800 tb-bold lg:text-[54px] lg:leading-[61.02px] md:text-[45px] md:leading-[50.85px] xs:text-[38px] xs:leading-[42.94px] text-[32px] leading-[36.16px]"
                             >
                                 Maximaler Erfolg mit&nbsp;
-                                {jumbotronTextSplit.map((char, index) => (
-                                    <motion.span
-                                        key={index}
-                                        className="tb-bold inline-block"
-                                        variants={charVariants9}
-                                        transition={{ duration: 0.5 }}
-                                    >
-                                        {char}
-                                    </motion.span>
-                                ))}
+                                <motion.span
+                                    className="inline-flex flex-wrap-nowrap"
+                                    style={{ whiteSpace: 'nowrap' }}
+                                >
+                                    {jumbotronTextSplit.map((char, index) => (
+                                        <motion.span
+                                            key={index}
+                                            className="tb-bold inline-block"
+                                            variants={charVariants9}
+                                            transition={{ duration: 0.5 }}
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    ))}
+                                </motion.span>
                             </motion.div>
                             <motion.div
                                 variants={fadeInAnimationVariant}
@@ -687,7 +692,7 @@ export const HomeV1 = () => {
 
             </section>
 
-            <section className="3xl:pt-[220px] lg:pt-[176px] md:pt-[140px] xs:pt-[113px] pt-[90px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[300px] xs:pb-[263px] pb-[90px] xs:px-6 px-4 overflow-hidden flex items-center justify-center relative bg-white">
+            <section className="3xl:pt-[220px] lg:pt-[176px] md:pt-[140px] xs:pt-[113px] pt-[90px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[300px] xs:pb-[263px] pb-[260px] xs:px-6 px-4 overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -710,7 +715,7 @@ export const HomeV1 = () => {
                             style={{
                                 y: smoothFirstImageTranslateYReverse
                             }}
-                            className="absolute w-[71.15%] lg:left-0 left-auto lg:right-auto right-0 lg:-bottom-[250px] -bottom-[440px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
+                            className="absolute w-[71.15%] lg:left-0 left-auto lg:right-auto right-0 lg:-bottom-[250px] xs:-bottom-[440px] -bottom-[350px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
                             src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf9a96ef17d725a04f5_image-2-about-v2-marketing-template-p-800.jpeg"
                             alt="studing"
                         />
