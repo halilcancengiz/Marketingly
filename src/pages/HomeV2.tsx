@@ -376,7 +376,7 @@ export const HomeV2 = () => {
                                 src={system}
                                 alt="system" />
                             <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Unternehmenslistung</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichbarkeit optimieren durch Google-Unternehmenslistung</div>
+                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichtbarkeit optimieren durch Google-Unternehmenslistung</div>
                             <div className="md:flex hidden"></div>
 
                         </div>
