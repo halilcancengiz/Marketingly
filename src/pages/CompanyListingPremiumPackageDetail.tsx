@@ -1,5 +1,5 @@
 import circlesImage from "../assets/images/circles.webp"
-import check from "../assets/images/check.webp";
+// import check from "../assets/images/check.webp";
 import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
 import { Helmet } from "react-helmet";
