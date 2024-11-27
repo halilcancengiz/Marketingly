@@ -75,7 +75,8 @@ const StandartPackageDetail = () => {
                         Standard-Paket
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Das Standard-Paket richtet sich an Unternehmen, die ihre Werbestrategien erweitern und optimieren möchten. Mit intensiver Betreuung und detaillierten Analysen erhalten Sie die Werkzeuge, um Ihre Kampagnen kontinuierlich zu verbessern und nachhaltig zu wachsen.                    </div>
+                        Das Standard-Paket ist ideal für Unternehmen, die ihre Werbestrategien erweitern und optimieren möchten. Mit intensiver Betreuung und detaillierten Analysen erhalten Sie die Werkzeuge, um Ihre Kampagnen kontinuierlich zu verbessern und nachhaltig zu wachsen.
+                    </div>
                     <div className="flex flex-col gap-[15px] mb-10">
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
 
@@ -97,19 +98,21 @@ const StandartPackageDetail = () => {
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Erstellung gezielter Anzeigen mit fortgeschrittener Schlagwort-Recherche</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Erstellung gezielter Anzeigen mit fortgeschrittener Keyword-Recherche</div>
                         </div>
                     </div>
-                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-                        Dieses Paket sorgt dafür, dass Ihre Kampagnen nicht nur erfolgreich laufen, sondern kontinuierlich optimiert werden. Unser persönlicher Ansatz ermöglicht es Ihnen, stets den Überblick zu behalten und die bestmöglichen Ergebnisse zu erzielen.
-                    </div>
-                    <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Strategische Ausrichtung Ihrer Kampagnen</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Anpassung an aktuelle Marktanforderungen</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Detaillierte Insights für langfristige Entscheidungen</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Regelmäßiger Kontakt mit Ihrem Ansprechpartner</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Fokus auf maximale Effizienz und Zielerreichung</li>
+                    <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Ihre Vorteile::</div>
+
+                    <ul className="pl-10 my-5 list-disc">
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Strategische Ausrichtung: Wir entwickeln maßgeschneiderte Strategien, die auf Ihre Ziele abgestimmt sind.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Aktuelle Marktanpassungen: Schnelle Reaktionen auf Trends und Veränderungen im Marktumfeld.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Detaillierte Insights: Analysen, die Ihnen helfen, fundierte Entscheidungen für langfristigen Erfolg zu treffen.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Persönliche Betreuung: Ihr persönlicher Ansprechpartner sorgt dafür, dass Sie stets den Überblick behalten.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Maximale Effizienz: Optimierung der Kampagnen, um Ihre Ziele mit minimalem Aufwand zu erreichen.</li>
                     </ul>
+                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
+                        Mit dem Standard-Paket bleiben Sie am Puls der Zeit und holen das Beste aus Ihren Marketingmaßnahmen heraus.
+                    </div>
                 </motion.div>
                 <motion.div
                     variants={fadeInAnimationVariant}

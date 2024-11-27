@@ -75,8 +75,9 @@ const CompanyListingPremiumPackageDetail = () => {
                         Premium-Paket
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Das Premium-Paket richtet sich an Unternehmen, die ihre Sichtbarkeit verbessern und professionell auf Google erscheinen möchten. Mit unserer umfassenden Unternehmenslistung sorgen wir dafür, dass Ihr Unternehmen optimal auffindbar ist und einen überzeugenden ersten Eindruck hinterlässt.                        </div>
-                    <div className="flex flex-col gap-[15px] mb-10">
+                        Das Premium-Paket ist speziell für Unternehmen konzipiert, die ihre Sichtbarkeit steigern und einen professionellen Auftritt auf Google sicherstellen möchten. Mit unserer umfassenden Unternehmenslistung wird Ihr Unternehmen optimal auffindbar und hinterlässt einen überzeugenden ersten Eindruck.
+                    </div>
+                    {/* <div className="flex flex-col gap-[15px] mb-10">
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
 
                         <div className="flex items-start gap-[13px]">
@@ -85,7 +86,7 @@ const CompanyListingPremiumPackageDetail = () => {
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einrichtung und Verifizierung des Unternehmenskontos</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einrichtung und Verifizierung Ihres Unternehmenskontos</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -99,11 +100,18 @@ const CompanyListingPremiumPackageDetail = () => {
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Optimierung des Eintrags für lokale Suchergebnisse</div>
                         </div>
-                    </div>
+                    </div> */}
+                     <ul className="pl-10 mb-5 list-disc">
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Erstellung eines professionellen Google-Unternehmenseintrags</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Einrichtung und Verifizierung Ihres Unternehmenskontos</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Ausarbeitung einer ansprechenden und zielgerichteten Unternehmensbeschreibung</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Hinzufügen von Logo, Bildern und Kontaktdaten</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Optimierung des Eintrags für lokale Suchergebnisse</li>
+                    </ul>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Dieses Paket stellt sicher, dass Ihr Unternehmen nicht nur sichtbar ist, sondern auch perfekt präsentiert wird. Unser persönlicher Ansatz sorgt dafür, dass Ihr Google-Eintrag alle wichtigen Informationen enthält und Sie langfristig von einem optimierten Online-Auftritt profitieren.
+                        Mit diesem Paket gewährleisten wir nicht nur Ihre Sichtbarkeit, sondern auch eine perfekte Präsentation Ihres Unternehmens. Unser persönlicher Ansatz stellt sicher, dass Ihr Google-Eintrag alle relevanten Informationen enthält und langfristig von einem optimierten Online-Auftritt profitiert.
                     </div>
-                    <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold text-neutral-800">Weitere Vorteile:</div>
+                    <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold text-neutral-800">Ihre Vorteile:</div>
 
                     <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Stärkung Ihrer lokalen Präsenz</li>
@@ -111,6 +119,10 @@ const CompanyListingPremiumPackageDetail = () => {
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Professionelle Darstellung Ihrer Dienstleistungen</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Maximale Effizienz durch Expertenwissen</li>
                     </ul>
+
+                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
+                        Setzen Sie neue Standards für Ihre Google-Präsenz und profitieren Sie von unserer Expertise, um Ihre Marke optimal zu positionieren.
+                    </div>
                 </motion.div>
                 <motion.div
                     variants={fadeInAnimationVariant}

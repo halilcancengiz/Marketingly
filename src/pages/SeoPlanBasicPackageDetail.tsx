@@ -72,43 +72,46 @@ const SeoPlanBasicPackageDetail = () => {
                         <img loading="lazy" src={circlesImage} alt="circle" />
                     </div>
                     <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
-                        Basis-Paket (SEO)
+                        Basis-Paket SEO
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Das Basis-Paket bietet Ihnen den perfekten Einstieg in die Suchmaschinenoptimierung. Es richtet sich an Unternehmen, die eine solide Grundlage schaffen möchten, um die Sichtbarkeit in Suchmaschinen zu verbessern. Mit gezielten Maßnahmen und einer zuverlässigen Betreuung helfen wir Ihnen, Ihre ersten SEO-Erfolge zu erzielen.                    </div>
+                        Das Basis-Paket bietet den perfekten Einstieg in die Suchmaschinenoptimierung. Es richtet sich an Unternehmen, die eine solide Grundlage schaffen möchten, um die Sichtbarkeit in Suchmaschinen zu verbessern. Mit gezielten Maßnahmen und einer zuverlässigen Betreuung helfen wir Ihnen, Ihre ersten SEO-Erfolge zu erzielen.                    </div>
                     <div className="flex flex-col gap-[15px] mb-10">
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
 
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Keyword-Recherche und Analyse: Identifikation der wichtigsten Suchbegriffe für Ihre Branche.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Keyword-Recherche und Analyse</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">On-Page-Optimierung: Anpassung von Meta-Tags, Überschriften und internen Verlinkungen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">On-Page-Optimierung</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische SEO-Analyse: Prüfung Ihrer Website auf technische Schwachstellen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische SEO-Analyse</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliches Reporting: Übersicht der wichtigsten Kennzahlen und Fortschritte.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliches Reporting</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verlässlicher Support per E-Mail und Telefon: Unterstützung bei Fragen und Optimierungen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verlässlicher Support per E-Mail und Telefon</div>
                         </div>
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
                         Wir stellen sicher, dass Ihre SEO-Maßnahmen gut starten und langfristig effektiv bleiben. So können Sie Schritt für Schritt Ihre Reichweite und Sichtbarkeit ausbauen.
                     </div>
-                    <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
+                    <ul className="pl-10 lg:mt-8 md:mt-[26px] mb-10 list-disc">
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Klare und verständliche SEO-Strategie</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Regelmäßige Anpassungen basierend auf Ihren Bedürfnissen</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Transparente Kommunikation mit unserem Team</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Fokus auf schnelle und nachhaltige Ergebnisse</li>
                     </ul>
+                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
+                        Starten Sie jetzt mit einer starken SEO-Grundlage und machen Sie Ihre Website sichtbar!
+                    </div>
                 </motion.div>
                 <motion.div
                     variants={fadeInAnimationVariant}

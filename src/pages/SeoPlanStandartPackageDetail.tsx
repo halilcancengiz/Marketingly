@@ -72,56 +72,59 @@ const SeoPlanStandartPackageDetail = () => {
                         <img loading="lazy" src={circlesImage} alt="circle" />
                     </div>
                     <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
-                        Standard-Paket (SEO)
+                        Standard-Paket SEO
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Das Standard-Paket richtet sich an Unternehmen, die ambitionierte Ziele verfolgen und Ihre SEO-Strategie auf das nächste Level bringen möchten. Mit einer umfassenden Betreuung und gezielten Maßnahmen erreichen wir eine nachhaltige Verbesserung Ihrer Rankings und mehr qualifizierte Besucher.
+                        Das Standard-Paket richtet sich an Unternehmen, die ambitionierte Ziele verfolgen und ihre SEO-Strategie auf das nächste Level bringen möchten.
                     </div>
                     <div className="flex flex-col gap-[15px] mb-10">
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
 
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Keyword-Recherche und Analyse: Identifikation der wichtigsten Suchbegriffe für Ihre Branche.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Keyword-Recherche und Analyse</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">On-Page-Optimierung: Anpassung von Meta-Tags, Überschriften und internen Verlinkungen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">On-Page-Optimierung</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische SEO-Analyse: Prüfung Ihrer Website auf technische Schwachstellen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische SEO-Analyse</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Content-Optimierung: Erstellung und Optimierung von relevanten und hochwertigen Inhalten.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Content-Optimierung</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Linkbuilding: Aufbau von hochwertigen Backlinks, um die Domain-Autorität zu stärken.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Linkbuilding</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Local SEO: Optimierung Ihrer Website für lokale Suchanfragen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Local SEO</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliches Reporting: Übersicht der wichtigsten Kennzahlen und Fortschritte.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Monatliches Reporting</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Persönlicher Ansprechpartner: Direkter Kontakt für alle Fragen und Anpassungen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Persönlicher Ansprechpartner</div>
                         </div>
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-                        Wir helfen Ihnen dabei, Ihre Online-Präsenz nachhaltig auszubauen und Ihre Zielgruppe gezielt anzusprechen. Mit unserer Unterstützung erzielen Sie bessere Rankings und mehr Besucher auf Ihrer Website.
+                        Durch umfassende Betreuung und gezielte Maßnahmen verbessern wir nachhaltig Ihre Rankings und erhöhen die Anzahl qualifizierter Besucher.
                     </div>
-                    <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
+                    <ul className="pl-10 lg:mt-8 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Gezielte SEO-Strategien für nachhaltige Ergebnisse</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Anpassungen basierend auf Ihren Bedürfnissen</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Persönliche Beratung und individuelle Betreuung</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Regelmäßige Optimierungen und Erfolgskontrolle</li>
                     </ul>
+                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
+                        Unser Standard-Paket bietet eine solide Basis für Unternehmen, die ihre SEO-Strategie ausbauen und kontinuierlich verbessern möchten.
+                    </div>
                 </motion.div>
                 <motion.div
                     variants={fadeInAnimationVariant}

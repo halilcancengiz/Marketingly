@@ -76,6 +76,7 @@ const BasicPackageDetail = () => {
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
                         Das Basis-Paket bietet Ihnen den idealen Einstieg ins digitale Marketing. Es richtet sich an Unternehmen, die eine solide Grundlage schaffen und erste Erfahrungen mit gezielten Werbekampagnen sammeln möchten. Mit einfacher Einrichtung und verlässlicher Betreuung helfen wir Ihnen, Ihre Zielgruppe effektiv zu erreichen.
+                        So können Sie Ihre Reichweite Schritt für Schritt ausbauen und erste Erfolge sicherstellen.
                     </div>
                     <div className="flex flex-col gap-[15px] mb-10">
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
@@ -97,18 +98,21 @@ const BasicPackageDetail = () => {
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Recherche und Erstellung passender Schlagworte und Anzeigentexte</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Recherche und Erstellung von passenden Keywords und professionellen Anzeigentexte</div>
                         </div>
                     </div>
-                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-                        Wir stellen sicher, dass Ihre Kampagnen gut starten und langfristig stabil bleiben. So können Sie Ihre Reichweite Schritt für Schritt ausbauen und erste Erfolge sicherstellen.                    </div>
-                    <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Effiziente Verwaltung Ihres Budgets</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Verständliche Darstellung der Kampagnenergebnisse</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Schnelle Anpassungen bei Bedarf</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Transparente Kommunikation mit unserem Team</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Regelmäßige Überwachung zur Sicherstellung optimaler Ergebnisse</li>
+                    <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Ihre Vorteile:</div>
+
+                    <ul className="pl-10 my-5 list-disc">
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Effiziente Verwaltung Ihres Budgets: Wir achten darauf, dass Ihr Werbebudget bestmöglich eingesetzt wird.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Verständliche Darstellung der Ergebnisse: Klare Berichte mit Erkenntnissen, die Ihnen echten Mehrwert bieten.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Flexibilität bei Anpassungen: Schnelle Reaktionen auf Veränderungen im Markt oder Ihrer Zielgruppe.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Transparente Kommunikation: Ein kompetentes Team steht Ihnen bei Fragen und Wünschen zur Seite.</li>
+                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Regelmäßige Überwachung: Wir sichern die Performance Ihrer Kampagnen kontinuierlich ab.</li>
                     </ul>
+                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
+                        Mit dem Basis-Paket legen Sie den Grundstein für langfristigen Erfolg und schrittweisen Ausbau Ihrer digitalen Reichweite.
+                    </div>
                 </motion.div>
                 <motion.div
                     variants={fadeInAnimationVariant}

@@ -75,8 +75,11 @@ const PremiumPackageDetail = () => {
                         Premium-Paket
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-                        Das Premium-Paket ist die umfassendste Lösung für Unternehmen, die höchste Ansprüche an ihre Werbemaßnahmen stellen. Dieses Paket kombiniert uneingeschränkte Flexibilität mit strategischer Expertise, sodass Sie das Potenzial Ihrer Marke voll ausschöpfen können.                    </div>
+                        Das Premium-Paket ist die umfassendste Lösung für Unternehmen, die höchste Ansprüche an ihre Werbemaßnahmen stellen. Dieses Paket kombiniert uneingeschränkte Flexibilität mit strategischer Expertise, sodass Sie das volle Potenzial Ihrer Marke entfalten können.
+                    </div>
                     <div className="flex flex-col gap-[15px] mb-10">
+                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
+
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung unbegrenzter Werbebudgets</div>
@@ -98,15 +101,19 @@ const PremiumPackageDetail = () => {
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Umfassende Markt- und Wettbewerbsanalysen</div>
                         </div>
                     </div>
-                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-                        Unsere Premium-Lösung geht über klassische Kampagnenverwaltung hinaus. Wir begleiten Sie strategisch und operativ, damit Sie in Ihrer Branche führend bleiben. Mit einer priorisierten Betreuung stehen wir Ihnen jederzeit zur Verfügung.                    </div>
-                    <ul className="pl-10 lg:mt-8 lg:mb-10 md:mt-[26px] xs:mb-[33px] mb-[28px] list-disc">
+
+                    <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Ihre Vorteile:</div>
+
+                    <ul className="pl-10 my-5 list-disc">
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Flexible Anpassung Ihrer Kampagnen an Markttrends</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Tiefgehende Analysen Ihrer Zielgruppen</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Fokussierte Strategien für langfristigen Erfolg</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Kontinuierliche Überwachung und Optimierung</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Exklusive Beratung und Zugang zu maßgeschneiderten Lösungen</li>
                     </ul>
+                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
+                        Unsere Premium-Lösung geht weit über klassische Kampagnenverwaltung hinaus. Wir begleiten Sie strategisch und operativ, damit Sie in Ihrer Branche führend bleiben. Dank einer priorisierten Betreuung stehen wir Ihnen jederzeit zur Verfügung.
+                    </div>
                 </motion.div>
                 <motion.div
                     variants={fadeInAnimationVariant}

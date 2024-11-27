@@ -72,7 +72,7 @@ const SeoPlanPremiumPackageDetail = () => {
                         <img loading="lazy" src={circlesImage} alt="circle" />
                     </div>
                     <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
-                        Premium-Paket (SEO)
+                        Premium-Paket SEO
                     </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
                         Das Premium-Paket ist die umfassende Lösung für Unternehmen, die maximale Ergebnisse erzielen möchten. Wir entwickeln eine maßgeschneiderte Strategie, die perfekt auf Ihre Ziele und Anforderungen abgestimmt ist, und bieten fortlaufende Optimierungen für dauerhaften Erfolg.
@@ -82,47 +82,47 @@ const SeoPlanPremiumPackageDetail = () => {
 
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Keyword-Recherche und Analyse: Identifikation der wichtigsten Suchbegriffe für Ihre Branche.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Keyword-Recherche und Analyse</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">On-Page-Optimierung: Anpassung von Meta-Tags, Überschriften und internen Verlinkungen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">On-Page-Optimierung</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische SEO-Analyse: Prüfung Ihrer Website auf technische Schwachstellen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische SEO-Analyse</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Content-Optimierung: Erstellung und Optimierung von relevanten und hochwertigen Inhalten.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Content-Optimierung</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Linkbuilding: Aufbau von hochwertigen Backlinks, um die Domain-Autorität zu stärken.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Linkbuilding</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Local SEO: Optimierung Ihrer Website für lokale Suchanfragen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Local SEO</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Maßgeschneiderte SEO-Strategie: Individuelle Planung und Umsetzung Ihrer SEO-Maßnahmen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Maßgeschneiderte SEO-Strategie</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Detaillierte Wettbewerbsanalysen: Analyse Ihrer Konkurrenz und Ableitung effektiver Maßnahmen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Detaillierte Wettbewerbsanalysen</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische Tiefen-Optimierung: Umfassende technische Anpassungen für optimale Performance.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Technische Tiefen-Optimierung</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Tiefgreifende Analysen und Reporting: Monatliche Berichte mit detaillierten Einblicken und Empfehlungen.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Tiefgreifende Analysen und Reporting</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Individuelle Markt- und Trendanalysen: Anpassung der Strategie an Markt- und Suchtrends.</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Individuelle Markt- und Trendanalysen</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -138,6 +138,11 @@ const SeoPlanPremiumPackageDetail = () => {
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Regelmäßige Erfolgskontrolle und Optimierungen</li>
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Direkte Betreuung durch Senior-Experten</li>
                     </ul>
+
+                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
+                        Mit dem Premium-Paket erhalten Sie eine umfassende, maßgeschneiderte SEO-Lösung, die darauf ausgerichtet ist, maximale Sichtbarkeit und nachhaltigen Erfolg in Suchmaschinen zu gewährleisten.
+                    </div>
+
                 </motion.div>
                 <motion.div
                     variants={fadeInAnimationVariant}
