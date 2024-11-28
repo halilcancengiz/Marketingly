@@ -7,17 +7,13 @@ import youtubeIcon from "../assets/images/youtube.webp"
 import whatsappIcon from "../assets/images/whatsapp.webp"
 import { NavLink } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 
 
 const Footer = () => {
     const footerRef = useRef<HTMLDivElement | null>(null)
     const isInViewFooterRef = useInView(footerRef, { once: true });
 
-    useEffect(() => {
-        // Sayfa yüklendiğinde kaydırmayı en üste al
-        window.scrollTo(0, 0);
-    }, []);
 
     return (
         <footer className='border-t'>
