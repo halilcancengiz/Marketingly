@@ -8,7 +8,7 @@ import manImage from "../assets/images/manimage.png";
 import seoImage from "../assets/images/seoimage.png";
 import * as motion from "framer-motion/client";
 import { useScroll, useSpring, useTransform } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import blueCardImage from "../assets/images/blue.webp"
 import yellowCardImage from "../assets/images/yellow.webp"
 import redCardImage from "../assets/images/red.webp"
@@ -18,9 +18,10 @@ import homeV2HeroImage from "../assets/images/homev2hero.webp"
 import homeV2Chart1Image from "../assets/images/homev2chart1.webp"
 import homeV2Chart2Image from "../assets/images/homev2chart2.webp"
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
-
+import emailjs from '@emailjs/browser';
 
 export const HomeV2 = () => {
+    const form = useRef<HTMLFormElement>(null);
     const navigate = useNavigate()
 
     const fadeInAnimationVariant = {
@@ -104,6 +105,57 @@ export const HomeV2 = () => {
         stiffness: 100,
         damping: 20,
     });
+
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!form.current) return;
+
+        // Form verilerini doğrudan form.current üzerinden al
+        const inputs = Array.from(form.current.elements) as HTMLInputElement[];
+
+        const formattedData = inputs.reduce((acc: Record<string, string>, input) => {
+            if (input.name) {
+                // "Firma" için özel kontrol
+                if (input.name === "companyname") {
+                    acc[input.name] = input.value.trim() || `•  Kein Firmenname`;
+                } else {
+                    // Diğer alanlar için genel kontrol
+                    acc[input.name] = input.value.trim() || `•  Keine Angabe`;
+                }
+            }
+            return acc;
+        }, {});
+
+        // EmailJS ile gönder
+        emailjs
+            .send(
+                import.meta.env.VITE_SMTP_SERVICE_ID,
+                import.meta.env.VITE_SMTP_TEMPLATE_ID,
+                formattedData,
+                import.meta.env.VITE_SMTP_PUBLIC_KEY
+            )
+            .then(
+                () => {
+                    // console.log("Email sent successfully!");
+                    navigate("/thank-you-page", { replace: true });
+                },
+                (error) => {
+                    console.error("Failed to send email:", error);
+                }
+            );
+    };
+
+    const today = new Date();
+    const formattedDate = today
+        .toLocaleDateString("de-DE", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+        })
+        .replace(/\//g, "."); // "/" karakterlerini "." ile değiştir
+
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
@@ -940,13 +992,13 @@ export const HomeV2 = () => {
                         style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
                         className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
                     >
-                        <form onSubmit={() => navigate("/thank-you-page")} className="grid grid-cols-2 gap-[20px] bg-white">
+                        <form ref={form} onSubmit={handleSubmit} className="grid grid-cols-2 gap-[20px] bg-white">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="firstname" className="xs:text-[18px] text-base tb-bold">Vorname</label>
                                 <input id="firstname" name="firstname" required placeholder="Max" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <label htmlFor="lastname" className="xs:text-[18px] text-base tb-bold">Name</label>
+                                <label htmlFor="lastname" className="xs:text-[18px] text-base tb-bold">Nachname</label>
                                 <input id="lastname" name="lastname" required placeholder="Mustermann" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
@@ -955,7 +1007,7 @@ export const HomeV2 = () => {
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="phonenumber" className="xs:text-[18px] text-base tb-bold">Telefonnummer<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
-                                <input id="phonenumber" placeholder="0123 4567890" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="number" />
+                                <input id="phonenumber" name="phonenumber" placeholder="0123 4567890" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="number" />
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="companyname" className="xs:text-[18px] text-base tb-bold">Firma<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
@@ -974,9 +1026,24 @@ export const HomeV2 = () => {
                                 <input id="location" name="location" placeholder="Musterstadt" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
 
+                            <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
+                                <input id="pn" name="pn" value="Home Contact" placeholder="contact" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                            </div>
+
+                            <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
+                                <input
+                                    id="dt"
+                                    name="dt"
+                                    placeholder="dt"
+                                    defaultValue={formattedDate} // Nokta ile ayrılmış tarih formatını ekle
+                                    className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium"
+                                    type="text"
+                                />
+                            </div>
+
                             <div className="col-span-2 flex flex-col gap-3">
                                 <label htmlFor="message" className="xs:text-[18px] text-base tb-bold">Nachricht<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
-                                <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300"></textarea>
+                                <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
 
                             <div className="col-span-2 flex items-start gap-3">

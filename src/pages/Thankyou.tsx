@@ -87,7 +87,7 @@ const Thankyou = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.30, duration: 0.3 }}
                     className="leading-[30px] text-neutral-600 text-[18px] text-center tb-medium">
-                    Vielen Dank für deine Nachricht unser Team wird sich schnellst möglich bei Ihnen melden.
+                    Vielen Dank für Ihre Nachricht. Unser Team wird sich so schnell wie möglich bei Ihnen melden.
                 </motion.div>
             </div>
 
