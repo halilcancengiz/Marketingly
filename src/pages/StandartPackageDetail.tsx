@@ -101,7 +101,7 @@ const StandartPackageDetail = () => {
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Erstellung gezielter Anzeigen mit fortgeschrittener Keyword-Recherche</div>
                         </div>
                     </div>
-                    <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Ihre Vorteile::</div>
+                    <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Ihre Vorteile:</div>
 
                     <ul className="pl-10 my-5 list-disc">
                         <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Strategische Ausrichtung: Wir entwickeln maßgeschneiderte Strategien, die auf Ihre Ziele abgestimmt sind.</li>
