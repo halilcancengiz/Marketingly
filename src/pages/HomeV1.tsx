@@ -17,7 +17,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet"
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
-import emailjs from '@emailjs/browser';
+
 
 
 export const HomeV1 = () => {
@@ -116,39 +116,52 @@ export const HomeV1 = () => {
 
         if (!form.current) return;
 
-        // Form verilerini doğrudan form.current üzerinden al
-        const inputs = Array.from(form.current.elements) as HTMLInputElement[];
+        // Form verilerini al ve işleme
+        const formData = new FormData(form.current);
+        const formattedData: Record<string, string> = {};
 
-        const formattedData = inputs.reduce((acc: Record<string, string>, input) => {
-            if (input.name) {
-                // "Firma" için özel kontrol
-                if (input.name === "companyname") {
-                    acc[input.name] = input.value.trim() || `•  Kein Firmenname`;
+        formData.forEach((value, key) => {
+            if (typeof value === "string") {
+                if (key === "companyname") {
+                    formattedData[key] = value.trim() || `• Kein Firmenname`; // Companyname için özel kontrol
                 } else {
-                    // Diğer alanlar için genel kontrol
-                    acc[input.name] = input.value.trim() || `•  Keine Angabe`;
+                    formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için
                 }
+            } else {
+                // Eğer bir dosya ise (File türü), bunun için de varsayılan değer
+                formattedData[key] = `• Keine Angabe`;
             }
-            return acc;
-        }, {});
+        });
 
-        // EmailJS ile gönder
-        emailjs
-            .send(
-                import.meta.env.VITE_SMTP_SERVICE_ID,
-                import.meta.env.VITE_SMTP_TEMPLATE_ID,
-                formattedData,
-                import.meta.env.VITE_SMTP_PUBLIC_KEY
-            )
-            .then(
-                () => {
-                    // console.log("Email sent successfully!");
-                    navigate("/thank-you-page", { replace: true });
+        try {
+            // Backend URL kontrolü
+            const backendUrl = import.meta.env.VITE_BACKEND_URL;
+            if (!backendUrl) {
+                console.error("Backend URL tanımlı değil.");
+                alert("Sunucu bağlantı hatası. Lütfen daha sonra tekrar deneyin.");
+                return;
+            }
+
+            // E-posta gönderimi
+            const response = await fetch(`${backendUrl}/send-mail`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
                 },
-                (error) => {
-                    console.error("Failed to send email:", error);
-                }
-            );
+                body: JSON.stringify(formattedData),
+            });
+
+            if (response.ok) {
+                navigate("/thank-you-page", { replace: true });
+            } else {
+                const errorMessage = await response.text();
+                console.error("Mail gönderilemedi:", errorMessage);
+                alert("Mail gönderme işlemi başarısız oldu. Lütfen tekrar deneyin.");
+            }
+        } catch (error) {
+            console.error("Mail gönderimi sırasında hata:", error);
+            alert("Bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
+        }
     };
 
     const today = new Date();
