@@ -73,7 +73,7 @@ const Contact = () => {
             }
 
             // E-posta gönderimi
-            const response = await fetch(`${backendUrl}/send-mail`, {
+            const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
