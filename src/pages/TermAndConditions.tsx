@@ -19,7 +19,6 @@ const TermAndConditions = () => {
 
 
     const scrollToSection = (id: string) => {
-        console.log("tıklandı");
         const element = document.getElementById(id);
         const yOffset = -80;
         console.log(element)
@@ -33,31 +32,40 @@ const TermAndConditions = () => {
 
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        const handleScrollSpy = () => {
+            // Tüm section'ları seçiyoruz
+            const sections = document.querySelectorAll("#datenschutz, #websiteAGB");
 
-        const handleScrollSpy = (entries: IntersectionObserverEntry[]) => {
-            entries.forEach((entry: IntersectionObserverEntry) => {
-                if (entry.isIntersecting) {
-                    setActiveSection(entry.target.id);
+            // Mevcut scroll pozisyonunu hesaplıyoruz
+            const scrollPosition = window.scrollY + 100; // Biraz offset ekliyoruz
+
+            sections.forEach((section) => {
+                const sectionElement = section as HTMLElement;
+
+                if (sectionElement) {
+                    const sectionTop = sectionElement.offsetTop;
+                    const sectionHeight = sectionElement.offsetHeight;
+
+                    // Scroll pozisyonu section'ın içinde mi?
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        setActiveSection(sectionElement.id);
+                    }
                 }
             });
         };
 
-        const options = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.5, // Görünürlüğün %50'si aktif olması için yeterli
-        };
+        // Scroll event'ini dinliyoruz
+        window.addEventListener("scroll", handleScrollSpy);
 
-        const observer = new IntersectionObserver(handleScrollSpy, options);
+        // Sayfa yüklendiğinde bir kez çalıştırıyoruz
+        handleScrollSpy();
 
-        const sections = document.querySelectorAll("section div[id]");
-        sections.forEach((section) => observer.observe(section));
-
+        // Event temizleme
         return () => {
-            sections.forEach((section) => observer.unobserve(section));
+            window.removeEventListener("scroll", handleScrollSpy);
         };
     }, []);
+
 
     return (
 
@@ -81,7 +89,7 @@ const TermAndConditions = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.15, duration: 0.3 }}
                     id="menuItems"
-                    className="lg:mt-[63px] lg:mb-0 mb-10 lg:mr-10 min-w-[274px] grid grid-cols-3 gap-[15px] lg:sticky lg:top-5 lg:h-full md:h-[72px] h-[246px]">
+                    className="lg:mt-[63px] lg:mb-0 mb-10 lg:mr-10 min-w-[274px] grid grid-cols-2 gap-[15px] lg:sticky lg:top-5 lg:h-full md:h-[72px] h-[144px]">
 
                     <div onClick={() => scrollToSection("datenschutz")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] lg:text-start text-center px-5 hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "datenschutz" ? "text-primary" : "text-neutral-800"}`}>Datenschutz</div>
                     <div onClick={() => scrollToSection("websiteAGB")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] px-5 lg:text-start text-center hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "websiteAGB" ? "text-primary" : "text-neutral-800"}`}>Website AGB</div>
