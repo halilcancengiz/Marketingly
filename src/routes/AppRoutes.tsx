@@ -1,8 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { HomeV1 } from "../pages/HomeV1";
 import { HomeV2 } from "../pages/HomeV2";
-// import { StyleGuidePage } from "../pages/StyleGuidePage";
-// import Test from "../pages/Test";
 import NotFound from "../pages/NotFound";
 import Thankyou from "../pages/Thankyou";
 import TermAndConditions from "../pages/TermAndConditions";
@@ -15,7 +13,6 @@ import Impressum from "../pages/Impressum";
 import StandartPackageDetail from "../pages/StandartPackageDetail";
 import PremiumPackageDetail from "../pages/PremiumPackageDetail";
 import BasicPackageDetail from "../pages/BasicPackageDetail";
-import { HomeV3 } from "../pages/HomeV3";
 import CompanyListingPremiumPackageDetail from "../pages/CompanyListingPremiumPackageDetail";
 import SeoPlanBasicPackageDetail from "../pages/SeoPlanBasicPackageDetail";
 import SeoPlanStandartPackageDetail from "../pages/SeoPlanStandartPackageDetail";
@@ -25,12 +22,9 @@ import SeoPlanPremiumPackageDetail from "../pages/SeoPlanPremiumPackageDetail";
 
 export const AppRoutes = () => {
     return (
-        <Routes>
+        <Routes >
             <Route path="/" element={<HomeV1 />} />
             <Route path="/homev2" element={<HomeV2 />} />
-            <Route path="/homev3" element={<HomeV3 />} />
-            {/* <Route path="/styleguide" element={<StyleGuidePage />} /> */}
-            {/* <Route path="/test" element={<Test />} /> */}
             <Route path="/thank-you-page" element={<Thankyou />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/datenschutz" element={<TermAndConditions />} />

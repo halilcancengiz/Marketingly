@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
-
+const config = (window as any).APP_CONFIG;
 const BasicPackageDetail = () => {
     const fadeInAnimationVariant = {
         initial: {
@@ -57,7 +57,7 @@ const BasicPackageDetail = () => {
                 <meta property="og:title" content="Basis-Paket - MARKETINGLY X" />
                 <meta property="og:description" content="Erleben Sie das Basis-Paket: Effektive Verwaltung kleiner Budgets, Einrichtung erster Kampagnen und zuverlässiger Support für einen erfolgreichen Start ins digitale Marketing." />
                 <meta property="og:type" content="product" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}basic-package-detail`} />
+                <meta property="og:url" content={`${config.base_url}basic-package-detail`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
@@ -82,7 +82,7 @@ const BasicPackageDetail = () => {
                         <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 1.500 €</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {config.campaign_limits_google_ads.basis} €</div>
                         </div>
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -127,7 +127,7 @@ const BasicPackageDetail = () => {
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
                             Wir helfen Ihnen, Ihre Marketingziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.                        </div>
                         <div className="flex flex-col lg:my-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">349 €</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.google_ads.basis} €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
                         <NavLink aria-label="Open contact page" to="/contact">

@@ -5,7 +5,7 @@ import shapes from "../assets/images/thankspage.webp";
 import check from "../assets/images/thankcheck.webp";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
-
+const config = (window as any).APP_CONFIG;
 
 const Thankyou = () => {
 
@@ -53,7 +53,7 @@ const Thankyou = () => {
                 <meta property="og:title" content="Vielen Dank für Ihre Nachricht" />
                 <meta property="og:description" content="Das MARKETINGLY X Team wird sich bald bei Ihnen melden. Vielen Dank für Ihr Interesse!" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}thank-you`} />
+                <meta property="og:url" content={`${config.base_url}thank-you`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <motion.div

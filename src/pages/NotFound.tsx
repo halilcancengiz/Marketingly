@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet'
 import Button from '../components/Button'
 import { NavLink } from 'react-router-dom'
 import { motion } from "framer-motion"
-
+const config = (window as any).APP_CONFIG;
 
 const NotFound = () => {
     const fadeInAnimationVariant = {
@@ -34,7 +34,7 @@ const NotFound = () => {
                 <meta property="og:title" content="404 - Seite nicht gefunden" />
                 <meta property="og:description" content="Oh, es scheint so, als ob da etwas schiefgelaufen ist. Gehen Sie zurück zur Startseite." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}not-found`} />
+                <meta property="og:url" content={`${config.base_url}not-found`} />
                 <meta name="robots" content="noindex, nofollow" />
             </Helmet>
             <div className='flex flex-col z-[10] max-w-[750px] w-full mx-auto'>

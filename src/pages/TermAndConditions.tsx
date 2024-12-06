@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
-
+const config = (window as any).APP_CONFIG;
 const TermAndConditions = () => {
 
     const [activeSection, setActiveSection] = useState<string>("");
@@ -69,7 +69,7 @@ const TermAndConditions = () => {
                 <meta property="og:title" content="AGB und Datenschutz" />
                 <meta property="og:description" content="Detaillierte Informationen zu unseren Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}terms-and-conditions`} />
+                <meta property="og:url" content={`${config.base_url}terms-and-conditions`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">

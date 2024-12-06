@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
-
+const config = (window as any).APP_CONFIG;
 const StandartPackageDetail = () => {
     const fadeInAnimationVariant = {
         initial: {
@@ -57,7 +57,7 @@ const StandartPackageDetail = () => {
                 <meta property="og:title" content="Standard-Paket - MARKETINGLY X" />
                 <meta property="og:description" content="Das Standard-Paket bietet umfangreiche Lösungen für optimierte Werbestrategien, von Budgetverwaltung bis zu gezielter Anzeigenentwicklung." />
                 <meta property="og:type" content="product" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}standart-package-detail`} />
+                <meta property="og:url" content={`${config.base_url}standart-package-detail`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
@@ -82,7 +82,7 @@ const StandartPackageDetail = () => {
 
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu 3.500 €</div>
+                            <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {config.campaign_limits_google_ads.standard} €</div>
                         </div>
                         <div className="flex items-center gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -128,7 +128,7 @@ const StandartPackageDetail = () => {
                             Wir helfen Ihnen, Ihre Marketingziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
                         </div>
                         <div className="flex flex-col lg:my-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">499 €</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.google_ads.standard} €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
                         <NavLink aria-label="Open contact page" to="/contact">

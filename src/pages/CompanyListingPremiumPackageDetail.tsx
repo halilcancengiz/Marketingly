@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
+const config = (window as any).APP_CONFIG;
 
 const CompanyListingPremiumPackageDetail = () => {
     const fadeInAnimationVariant = {
@@ -138,7 +139,7 @@ const CompanyListingPremiumPackageDetail = () => {
                             Wir helfen Ihnen, Ihre Marketingziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
                         </div>
                         <div className="flex flex-col lg:my-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">299 €</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.company_listing.premium} €</div>
                             <div className="tb-medium text-neutral-600">einmalig (zzgl. Mwst.)</div>
                         </div>
                         <NavLink aria-label="Open contact page" to="/contact">
