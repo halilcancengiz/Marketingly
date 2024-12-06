@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
-const config = (window as any).APP_CONFIG;
+import APP_CONFIG from '../../public/config.ts';
 
 const CompanyListingPlan = () => {
   const fadeInAnimationVariant = {
@@ -51,7 +51,7 @@ const CompanyListingPlan = () => {
         />
         <meta
           property="og:url"
-          content={`${config.base_url}company-listing-plan`}
+          content={`${APP_CONFIG.base_url}company-listing-plan`}
         />
         <meta
           name="robots"
@@ -226,7 +226,7 @@ const CompanyListingPlan = () => {
             <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Die perfekte Lösung für Ihre Sichtbarkeit.</div>
 
             <div className="flex flex-col lg:mt-[20px]">
-              <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.company_listing.premium} €</div>
+              <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.company_listing.premium} €</div>
               <div className="tb-medium text-neutral-600">einmalig (zzgl. Mwst.)</div>
             </div>
 

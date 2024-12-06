@@ -8,7 +8,7 @@ import whatsappIcon from "../assets/images/whatsapp.webp"
 import { NavLink } from 'react-router-dom'
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-const config = (window as any).APP_CONFIG;
+import APP_CONFIG from '../../public/config.js';
 
 const Footer = () => {
     const footerRef = useRef<HTMLDivElement | null>(null)
@@ -41,8 +41,8 @@ const Footer = () => {
                                 </svg>
                             </div>
 
-                            <a href={`mailto:${config.contact.email}`} className='flex flex-col text-white flex-wrap'>
-                                <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 break-all'>{config.contact.email}</div>
+                            <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white flex-wrap'>
+                                <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 break-all'>{APP_CONFIG.contact.email}</div>
                             </a>
                         </div>
                         <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
@@ -61,8 +61,8 @@ const Footer = () => {
                                 </svg>
                             </div>
 
-                            <a href={`tel:${config.contact.phone}`} className='flex flex-col text-white'>
-                                <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{config.contact.phone}</div>
+                            <a href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
+                                <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{APP_CONFIG.contact.phone}</div>
                             </a>
                         </div>
                     </div>
@@ -74,23 +74,23 @@ const Footer = () => {
                         <NavLink to="/datenschutz" className='hover:text-primary transition-all duration-300 tb-medium'>Datenschutz und AGBs</NavLink>
                     </div>
                     <div className='flex gap-4 md:max-w-[311px] w-full xs:min-w-[311px] items-center justify-center md:pb-0 pb-4'>
-                        <a href={config.social_media.facebook} className='rounded-full flex items-center justify-center hover-up-lg'>
+                        <a href={APP_CONFIG.social_media.facebook} className='rounded-full flex items-center justify-center hover-up-lg'>
                             <img loading="lazy" className='size-[29px] object-contain' src={facebookIcon} alt="facebook" />
                         </a>
-                        <a href={config.social_media.x} className='rounded-full flex items-center justify-center hover-up-lg'>
+                        <a href={APP_CONFIG.social_media.x} className='rounded-full flex items-center justify-center hover-up-lg'>
                             <img loading="lazy" className='size-[29px] object-contain' src={xIcon} alt="x" />
                         </a>
-                        <a href={config.social_media.instagram} className='rounded-full flex items-center justify-center hover-up-lg'>
+                        <a href={APP_CONFIG.social_media.instagram} className='rounded-full flex items-center justify-center hover-up-lg'>
                             <img loading="lazy" className='size-[29px] object-contain' src={intagramIcon} alt="instagram" />
                         </a>
-                        <a href={config.social_media.linkedin} className='rounded-full flex items-center justify-center hover-up-lg'>
+                        <a href={APP_CONFIG.social_media.linkedin} className='rounded-full flex items-center justify-center hover-up-lg'>
                             <img loading="lazy" className='size-[29px] object-contain' src={linkedinIcon} alt="linkedin" />
                         </a>
-                        <a href={config.social_media.youtube} className='rounded-full flex items-center justify-center hover-up-lg'>
+                        <a href={APP_CONFIG.social_media.youtube} className='rounded-full flex items-center justify-center hover-up-lg'>
                             <img loading="lazy" className='size-[29px] object-contain' src={youtubeIcon} alt="youtube" />
                         </a>
                         <a
-                            href={`https://wa.me/${config.contact.phone}`}
+                            href={`https://wa.me/${APP_CONFIG.contact.phone}`}
                             className="rounded-full flex items-center justify-center hover-up-lg"
                             target="_blank"
                             rel="noopener noreferrer"

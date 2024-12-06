@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
-const config = (window as any).APP_CONFIG;
+import APP_CONFIG from '../../public/config.ts';
 
 const TermAndConditions = () => {
 
@@ -70,7 +70,7 @@ const TermAndConditions = () => {
                 <meta property="og:title" content="AGB und Datenschutz" />
                 <meta property="og:description" content="Detaillierte Informationen zu unseren Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${config.base_url}terms-and-conditions`} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}terms-and-conditions`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
@@ -107,8 +107,8 @@ const TermAndConditions = () => {
                         </div>
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Kontakt</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
-                            E-Mail: {config.contact.email} <br />
-                            Telefon: {config.contact.phone}
+                            E-Mail: {APP_CONFIG.contact.email} <br />
+                            Telefon: {APP_CONFIG.contact.phone}
                         </div>
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Registereintrag</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
@@ -149,11 +149,11 @@ const TermAndConditions = () => {
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Social-Media-Profile</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
                             Dieses Impressum gilt auch für folgende Social-Media-Profile: <br />
-                            <a href={config.social_media.instagram} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">Instagram: {config.social_media.instagram}</a> <br />
-                            <a href={config.social_media.facebook} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">Facebook: {config.social_media.facebook}</a> <br />
-                            <a href={config.social_media.x} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">X (ehemals Twitter): {config.social_media.x}</a> <br />
-                            <a href={config.social_media.youtube} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">YouTube: {config.social_media.youtube}</a> <br />
-                            <a href={config.social_media.linkedin} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">LinkedIn: {config.social_media.linkedin}</a>
+                            <a href={APP_CONFIG.social_media.instagram} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">Instagram: {APP_CONFIG.social_media.instagram}</a> <br />
+                            <a href={APP_CONFIG.social_media.facebook} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">Facebook: {APP_CONFIG.social_media.facebook}</a> <br />
+                            <a href={APP_CONFIG.social_media.x} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">X (ehemals Twitter): {APP_CONFIG.social_media.x}</a> <br />
+                            <a href={APP_CONFIG.social_media.youtube} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">YouTube: {APP_CONFIG.social_media.youtube}</a> <br />
+                            <a href={APP_CONFIG.social_media.linkedin} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">LinkedIn: {APP_CONFIG.social_media.linkedin}</a>
                         </div>
 
                     </div>

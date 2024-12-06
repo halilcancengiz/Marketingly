@@ -10,7 +10,7 @@ import Accordion from "../components/Accordion"
 import { useEffect, useRef } from "react"
 import { Helmet } from "react-helmet"
 import { motion } from "framer-motion"
-const config = (window as any).APP_CONFIG;
+import APP_CONFIG from '../../public/config.ts';
 
 const Contact = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -113,7 +113,7 @@ const Contact = () => {
                 <meta property="og:title" content="Kontakt - Erreichen Sie Uns | MARKETINGLY X" />
                 <meta property="og:description" content="Lassen Sie uns gemeinsam Ihre Marketingziele erreichen. Kontaktieren Sie MARKETINGLY X für eine maßgeschneiderte Lösung." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${config.base_url}contact`} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}contact`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <section className="3xl:pt-[120px] lg:pt-[96px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] px-6  overflow-hidden flex items-center justify-center relative">
@@ -137,8 +137,8 @@ const Contact = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`mailto:${config.contact.email}`} className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 xs:break-normal break-all'>{`${config.contact.email}`}</div>
+                                <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 xs:break-normal break-all'>{`${APP_CONFIG.contact.email}`}</div>
                                 </a>
                             </div>
                             <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
@@ -157,8 +157,8 @@ const Contact = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`tel:${config.contact.phone}`} className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${config.contact.phone}`}</div>
+                                <a href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${APP_CONFIG.contact.phone}`}</div>
                                 </a>
                             </div>
                         </div>
@@ -168,22 +168,22 @@ const Contact = () => {
                         </div>
 
                         <div className='flex gap-4 md:max-w-[311px] w-full xs:min-w-[311px] items-center justify-center md:pb-0 pb-4'>
-                            <a aria-label="Open facebook" href={config.social_media.facebook} className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <a aria-label="Open facebook" href={APP_CONFIG.social_media.facebook} className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={facebookIcon} alt="facebook" />
                             </a>
-                            <a aria-label="Open x" href={config.social_media.x} className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <a aria-label="Open x" href={APP_CONFIG.social_media.x} className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={xIcon} alt="x" />
                             </a>
-                            <a aria-label="Open instagram" href={config.social_media.instagram} className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <a aria-label="Open instagram" href={APP_CONFIG.social_media.instagram} className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={intagramIcon} alt="instagram" />
                             </a>
-                            <a aria-label="Open linkedin" href={config.social_media.linkedin} className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <a aria-label="Open linkedin" href={APP_CONFIG.social_media.linkedin} className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={linkedinIcon} alt="linkedin" />
                             </a>
-                            <a aria-label="Open youtube" href={config.social_media.youtube} className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <a aria-label="Open youtube" href={APP_CONFIG.social_media.youtube} className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={youtubeIcon} alt="youtube" />
                             </a>
-                            <a aria-label="Open whatsapp" href={config.social_media.whatsapp} className='rounded-full flex items-center justify-center hover-up-lg'>
+                            <a aria-label="Open whatsapp" href={APP_CONFIG.social_media.whatsapp} className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={whatsappIcon} alt="whatsapp" />
                             </a>
                         </div>

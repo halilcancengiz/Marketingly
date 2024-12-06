@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
-const config = (window as any).APP_CONFIG;
+import APP_CONFIG from '../../public/config.ts';
 const SeoPlanStandartPackageDetail = () => {
     const fadeInAnimationVariant = {
         initial: {
@@ -57,7 +57,7 @@ const SeoPlanStandartPackageDetail = () => {
                 <meta property="og:title" content="Standard-Paket - MARKETINGLY X" />
                 <meta property="og:description" content="Das Standard-Paket bietet umfangreiche Lösungen für optimierte Werbestrategien, von Budgetverwaltung bis zu gezielter Anzeigenentwicklung." />
                 <meta property="og:type" content="product" />
-                <meta property="og:url" content={`${config.base_url}standart-package-detail`} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}standart-package-detail`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
@@ -140,7 +140,7 @@ const SeoPlanStandartPackageDetail = () => {
                             Wir helfen Ihnen, Ihre SEO-Ziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
                         </div>
                         <div className="flex flex-col lg:my-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.SEO.standard} €</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEO.standard} €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
                         <NavLink aria-label="Open contact page" to="/contact">

@@ -17,7 +17,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet"
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
-const config = (window as any).APP_CONFIG;
+import APP_CONFIG from '../../public/config.ts';
 
 
 export const HomeV1 = () => {
@@ -184,7 +184,7 @@ export const HomeV1 = () => {
                 <meta property="og:title" content="Home - Maximaler Erfolg mit Google! | MARKETINGLY X" />
                 <meta property="og:description" content="Nutzen Sie Google Ads, SEO und Unternehmenslistungen für maximale Reichweite und Sichtbarkeit." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${config.base_url}`} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
 
@@ -959,8 +959,8 @@ export const HomeV1 = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`mailto:${config.contact.email}`} className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 xs:break-normal break-all'>{`${config.contact.email}`}</div>
+                                <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 xs:break-normal break-all'>{`${APP_CONFIG.contact.email}`}</div>
                                 </a>
                             </div>
                             <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
@@ -979,8 +979,8 @@ export const HomeV1 = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`tel:${config.contact.phone}`} className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${config.contact.phone}`}</div>
+                                <a href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${APP_CONFIG.contact.phone}`}</div>
                                 </a>
                             </div>
                         </div>

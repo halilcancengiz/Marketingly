@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
-const config = (window as any).APP_CONFIG;
+import APP_CONFIG from '../../public/config.ts';
 
 const AdsPlan = () => {
     const fadeInAnimationVariant = {
@@ -76,7 +76,7 @@ const AdsPlan = () => {
                 <meta property="og:title" content="Ads Plan - Flexible Lösungen für jeden Bedarf | MARKETINGLY X" />
                 <meta property="og:description" content="Flexible Ads-Pläne für Social Media Marketing, bezahlte Werbung und SEO. Finden Sie den idealen Plan, der zu Ihrem Budget und Ihren Zielen passt!" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${config.base_url}ads-plan`} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}ads-plan`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
@@ -243,7 +243,7 @@ const AdsPlan = () => {
                         </div>
                         <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"></span> </div>
                         <div style={{ height: `${priceHeight}px` }} className="flex flex-col mt-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.google_ads.basis} €</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.google_ads.basis} €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
 
@@ -252,7 +252,7 @@ const AdsPlan = () => {
                         <div style={{ height: `${checkListHeight}px` }} className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {config.campaign_limits_google_ads.basis} €</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {APP_CONFIG.campaign_limits_google_ads.basis} €</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -290,7 +290,7 @@ const AdsPlan = () => {
                         <div ref={headerDescRef} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
 
                         <div ref={priceRef} className="flex flex-col mt-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.google_ads.standard} €</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.google_ads.standard} €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
 
@@ -300,7 +300,7 @@ const AdsPlan = () => {
                         <div ref={checkListRef} className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {config.campaign_limits_google_ads.standard} €</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {APP_CONFIG.campaign_limits_google_ads.standard} €</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -335,7 +335,7 @@ const AdsPlan = () => {
                         </div>
                         <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
                         <div style={{ height: `${priceHeight}px` }} className="flex flex-col mt-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.google_ads.premium}</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.google_ads.premium}</div>
                             <div className="tb-medium text-neutral-600">Kontaktieren Sie unseren Vertrieb.</div>
                         </div>
 

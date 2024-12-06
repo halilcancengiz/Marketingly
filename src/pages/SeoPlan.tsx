@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
-const config = (window as any).APP_CONFIG;
+import APP_CONFIG from '../../public/config.ts';
 const SeoPlan = () => {
     const fadeInAnimationVariant = {
         initial: {
@@ -72,7 +72,7 @@ const SeoPlan = () => {
                 <meta property="og:title" content="Ads Plan - Flexible Lösungen für jeden Bedarf | MARKETINGLY X" />
                 <meta property="og:description" content="Flexible Ads-Pläne für Social Media Marketing, bezahlte Werbung und SEO. Finden Sie den idealen Plan, der zu Ihrem Budget und Ihren Zielen passt!" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${config.base_url}ads-plan`} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}ads-plan`} />
                 <meta name="robots" content="index, follow" />
             </Helmet>
             <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">  
@@ -239,7 +239,7 @@ const SeoPlan = () => {
                         </div>
                         <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Perfekt für den Einstieg in SEO.<span className="lg:flex hidden"></span> </div>
                         <div style={{ height: `${priceHeight}px` }} className="flex flex-col lg:mt-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.SEO.basis} €</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEO.basis} €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
                         <hr className="w-full my-[35px]" />
@@ -284,7 +284,7 @@ const SeoPlan = () => {
                         <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideal für ambitionierte Ziele.</div>
 
                         <div style={{ height: `${priceHeight}px` }} className="flex flex-col lg:mt-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.SEO.standard} €</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEO.standard} €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
 
@@ -326,7 +326,7 @@ const SeoPlan = () => {
                         </div>
                         <div ref={headerDescRef} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
                         <div ref={priceRef} className="flex flex-col lg:mt-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{config.prices.SEO.premium}</div>
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEO.premium}</div>
                             <div className="tb-medium text-neutral-600">Kontaktieren Sie unseren Vertrieb.</div>
                         </div>
                         <hr className="w-full my-[35px]" />
