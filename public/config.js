@@ -29,6 +29,6 @@ window.APP_CONFIG = {
         x: "https://www.x.com/xxxx/",
         youtube: "https://www.youtube.com/xxxx/",
         linkedin: "https://www.linkedin.com/company/xxxx/",
-        whatsapp: "https://wa.me/+49 7252 5867380"
+        whatsapp: "https://wa.me/+4972525867380"
     }
 };
