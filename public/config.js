@@ -1,3 +1,4 @@
+
 window.APP_CONFIG = {
     base_url: "https://facebookadsagentur.de/",
     contact: {
@@ -13,7 +14,7 @@ window.APP_CONFIG = {
         google_ads: {
             basis: 349,
             standard: 499,
-            premium: "Price auf Anfrage"
+            premium: "Preis auf Anfrage"
         },
         company_listing: {
             premium: 299
