@@ -390,7 +390,7 @@ export const HomeV1 = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.3 }}
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1176px] w-full mx-auto">
-                    <NavLink to="/ads-plan" className="bg-red-400 col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink to="/ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
                                 className="object-contain size-[86px] rounded-[10px]"
