@@ -110,7 +110,7 @@ const Navbar = () => {
                     </div>
 
 
-                    <div className="py-[15px] mt-[60px]">
+                    <div className="py-[15px] xs:mt-[60px] mt-10">
                         <NavLink to="/contact">
                             <Button className="w-full h-16 text-base tb-bold" variant="primary" size="default">
                                 Kontakt

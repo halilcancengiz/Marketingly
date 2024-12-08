@@ -33,8 +33,8 @@ const Footer = () => {
                     </div>
 
                     <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap'>
-                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
-                            <div className="bg-[#E4E2FF] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group/parent">
+                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] md:py-[21px] py-4 md:px-6 px-4 border border-neutral-300'>
+                            <div className="bg-[#E4E2FF] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] md:mr-[25px] mr-[12px] overflow-hidden group/parent">
                                 <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                     <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="#4A3AFF" />
                                     <path d="M13.8985 17.5888L0 9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25L21.1015 17.5888C18.8842 18.9188 16.1158 18.9188 13.8985 17.5888Z" fill="#4A3AFF" />
@@ -42,11 +42,11 @@ const Footer = () => {
                             </div>
 
                             <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white flex-wrap'>
-                                <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 break-all'>{APP_CONFIG.contact.email}</div>
+                                <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300 break-words'>{APP_CONFIG.contact.email}</div>
                             </a>
                         </div>
-                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
-                            <div className="bg-[#FFE8E8] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group">
+                        <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] md:py-[21px] py-4 md:px-6 px-4 border border-neutral-300'>
+                            <div className="bg-[#FFE8E8] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] md:mr-[25px] mr-[12px] overflow-hidden group">
                                 <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                     <g clipPath="url(#clip0)">
                                         <path opacity="0.35" d="M0.152786 8.03404C0.547467 10.9728 2.09241 17.7268 8.1833 23.8177C14.2742 29.9086 21.0264 31.4536 23.967 31.8483C26.0969 32.3087 28.4063 31.7238 30.0614 30.0686C32.65 27.4801 23.2736 18.1037 20.6851 20.6923L19.0335 22.3439L9.65714 12.9676L11.307 11.3159C13.8955 8.7274 4.51917 -0.648943 1.93063 1.9396C0.275457 3.59477 -0.309453 5.90419 0.152786 8.03404Z" fill="#FF6262" />
@@ -62,7 +62,7 @@ const Footer = () => {
                             </div>
 
                             <a href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
-                                <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{APP_CONFIG.contact.phone}</div>
+                                <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300'>{APP_CONFIG.contact.phone}</div>
                             </a>
                         </div>
                     </div>

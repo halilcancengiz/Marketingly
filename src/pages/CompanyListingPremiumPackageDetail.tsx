@@ -138,7 +138,7 @@ const CompanyListingPremiumPackageDetail = () => {
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
                             Wir helfen Ihnen, Ihre Marketingziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
                         </div>
-                        <div className="flex flex-col lg:my-[20px]">
+                        <div className="flex flex-col my-5">
                             <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.company_listing.premium} €</div>
                             <div className="tb-medium text-neutral-600">einmalig (zzgl. Mwst.)</div>
                         </div>

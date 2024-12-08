@@ -18,6 +18,7 @@ import { Helmet } from "react-helmet"
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 import APP_CONFIG from '../../public/config.ts';
+import marketingimage from "../assets/images/marketingimage.jpeg"
 
 
 export const HomeV1 = () => {
@@ -389,7 +390,7 @@ export const HomeV1 = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.3 }}
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1176px] w-full mx-auto">
-                    <NavLink to="/ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink to="/ads-plan" className="bg-red-400 col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
                                 className="object-contain size-[86px] rounded-[10px]"
@@ -402,9 +403,9 @@ export const HomeV1 = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink aria-label="Open seo plan page" to="/seo-plan">
+                            <div aria-label="Open seo plan page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </NavLink>
                     <NavLink to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
@@ -420,9 +421,9 @@ export const HomeV1 = () => {
 
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
-                            <NavLink aria-label="Open seo plan page" to="/seo-plan">
+                            <div aria-label="Open seo plan page" >
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </NavLink>
                     <NavLink to="/company-listing-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
@@ -440,9 +441,9 @@ export const HomeV1 = () => {
 
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink aria-label="Open company listing page" to="/company-listing-plan">
+                            <div aria-label="Open company listing page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </NavLink>
                 </motion.div>
@@ -788,7 +789,7 @@ export const HomeV1 = () => {
                                 y: smoothFirstImageTranslateYReverse
                             }}
                             className="absolute w-[71.15%] lg:left-0 left-auto lg:right-auto right-0 lg:-bottom-[140px] xs:-bottom-[360px] -bottom-[300px] md:rounded-[24px] xs:rounded-[20px] rounded-[15px]"
-                            src="https://assets-global.website-files.com/6160c9819f1e5978b56545d6/61672bf9a96ef17d725a04f5_image-2-about-v2-marketing-template-p-800.jpeg"
+                            src={marketingimage}
                             alt="studing" />
                     </motion.div>
                     <motion.div
@@ -951,8 +952,8 @@ export const HomeV1 = () => {
                         <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Jetzt Anfragen</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
                         <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap mb-[60px]'>
-                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
-                                <div className="bg-[#E4E2FF] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group/parent">
+                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] md:py-[21px] py-4 md:px-6 px-4 border border-neutral-300'>
+                                <div className="bg-[#E4E2FF] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] md:mr-[25px] mr-[12px] overflow-hidden group/parent">
                                     <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                         <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="#4A3AFF" />
                                         <path d="M13.8985 17.5888L0 9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25L21.1015 17.5888C18.8842 18.9188 16.1158 18.9188 13.8985 17.5888Z" fill="#4A3AFF" />
@@ -960,11 +961,11 @@ export const HomeV1 = () => {
                                 </div>
 
                                 <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 xs:break-normal break-all'>{`${APP_CONFIG.contact.email}`}</div>
+                                    <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300 xs:break-words break-words'>{`${APP_CONFIG.contact.email}`}</div>
                                 </a>
                             </div>
-                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
-                                <div className="bg-[#FFE8E8] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group">
+                            <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] md:py-[21px] py-4 md:px-6 px-4 border border-neutral-300'>
+                                <div className="bg-[#FFE8E8] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] md:mr-[25px] mr-[12px] overflow-hidden group">
                                     <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                         <g clipPath="url(#clip0)">
                                             <path opacity="0.35" d="M0.152786 8.03404C0.547467 10.9728 2.09241 17.7268 8.1833 23.8177C14.2742 29.9086 21.0264 31.4536 23.967 31.8483C26.0969 32.3087 28.4063 31.7238 30.0614 30.0686C32.65 27.4801 23.2736 18.1037 20.6851 20.6923L19.0335 22.3439L9.65714 12.9676L11.307 11.3159C13.8955 8.7274 4.51917 -0.648943 1.93063 1.9396C0.275457 3.59477 -0.309453 5.90419 0.152786 8.03404Z" fill="#FF6262" />
@@ -980,7 +981,7 @@ export const HomeV1 = () => {
                                 </div>
 
                                 <a href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${APP_CONFIG.contact.phone}`}</div>
+                                    <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300'>{`${APP_CONFIG.contact.phone}`}</div>
                                 </a>
                             </div>
                         </div>
@@ -1029,15 +1030,16 @@ export const HomeV1 = () => {
                             </div>
 
                             <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <input id="pn" name="pn" value="Home Contact" placeholder="contact" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input readOnly id="pn" name="pn" value="Home Contact" placeholder="contact" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
 
                             <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <input
+                                    readOnly
                                     id="dt"
                                     name="dt"
                                     placeholder="dt"
-                                    defaultValue={formattedDate} // Nokta ile ayrılmış tarih formatını ekle
+                                    value={formattedDate} // Nokta ile ayrılmış tarih formatını ekle
                                     className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium"
                                     type="text"
                                 />

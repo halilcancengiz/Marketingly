@@ -30,7 +30,6 @@ const TermAndConditions = () => {
         }
     };
 
-
     useEffect(() => {
         const handleScrollSpy = () => {
             // Tüm section'ları seçiyoruz

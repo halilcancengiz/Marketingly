@@ -130,7 +130,7 @@ const Contact = () => {
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
                         <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap mb-[60px]'>
                             <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
-                                <div className="bg-[#E4E2FF] size-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group/parent">
+                                <div className="bg-[#E4E2FF] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] mr-[25px] overflow-hidden group/parent">
                                     <svg className="group-hover:scale-110 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 32" fill="none">
                                         <path opacity="0.35" d="M29.75 32H5.25C2.35025 32 0 29.6497 0 26.75V9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25V26.75C35 29.6497 32.6497 32 29.75 32Z" fill="#4A3AFF" />
                                         <path d="M13.8985 17.5888L0 9.25C0 6.35025 2.35025 4 5.25 4H29.75C32.6497 4 35 6.35025 35 9.25L21.1015 17.5888C18.8842 18.9188 16.1158 18.9188 13.8985 17.5888Z" fill="#4A3AFF" />
@@ -138,7 +138,7 @@ const Contact = () => {
                                 </div>
 
                                 <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
-                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 xs:break-normal break-all'>{`${APP_CONFIG.contact.email}`}</div>
+                                    <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 xs:break-words break-words'>{`${APP_CONFIG.contact.email}`}</div>
                                 </a>
                             </div>
                             <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] py-[21px] px-6 border border-neutral-300'>
@@ -233,15 +233,16 @@ const Contact = () => {
                             </div>
 
                             <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <input id="pn" name="pn" value="Contact Page" placeholder="contact" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input readOnly id="pn" name="pn" value="Contact Page" placeholder="contact" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
 
                             <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <input
+                                    readOnly
                                     id="dt"
                                     name="dt"
                                     placeholder="dt"
-                                    defaultValue={formattedDate} // Nokta ile ayrılmış tarih formatını ekle
+                                    value={formattedDate} // Nokta ile ayrılmış tarih formatını ekle
                                     className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium"
                                     type="text"
                                 />
