@@ -22,11 +22,9 @@ const TermAndConditions = () => {
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         const yOffset = -80;
-        console.log(element)
 
         if (element) {
             const yPosition = element.getBoundingClientRect().top + window.scrollY + yOffset;
-            console.log(yPosition)
             window.scrollTo({ top: yPosition, behavior: 'smooth' });
         }
     };

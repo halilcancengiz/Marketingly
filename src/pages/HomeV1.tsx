@@ -9,7 +9,7 @@ import check from "../assets/images/check.webp";
 import manImage from "../assets/images/manimage.png";
 import seoImage from "../assets/images/seoimage.png";
 import * as motion from "framer-motion/client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import blueCardImage from "../assets/images/blue.webp"
 import yellowCardImage from "../assets/images/yellow.webp"
 import redCardImage from "../assets/images/red.webp"
@@ -19,10 +19,12 @@ import { useScroll, useSpring, useTransform } from "framer-motion";
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 import APP_CONFIG from '../../public/config.ts';
 import marketingimage from "../assets/images/marketingimage.jpeg"
-
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const HomeV1 = () => {
+    const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
+    const [captchaError, setCaptchaError] = useState<boolean>(false);
     const navigate = useNavigate()
 
     const fadeInAnimationVariant = {
@@ -98,14 +100,11 @@ export const HomeV1 = () => {
 
 
     const scrollToSection = (id: string) => {
-        console.log("tıklandı");
         const element = document.getElementById(id);
         const yOffset = -80;
-        console.log(element)
 
         if (element) {
             const yPosition = element.getBoundingClientRect().top + window.scrollY + yOffset;
-            console.log(yPosition)
             window.scrollTo({ top: yPosition, behavior: 'smooth' });
         }
     };
@@ -114,13 +113,27 @@ export const HomeV1 = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
-        if (!form.current) return;
-
+    
+        if (!form.current || !captchaRef.current) {
+            alert("Lütfen formu yeniden yükleyin.");
+            return;
+        }
+    
+        // ReCAPTCHA token'ını al (EKLENEN SATIR)
+        const token = captchaRef.current.getValue();
+    
+        if (!token) {
+            setCaptchaError(true); // Hata durumunu aktif hale getir (EKLENEN SATIR)
+            return;
+        }
+    
+        // Hata mesajını gizle (EKLENEN SATIR)
+        setCaptchaError(false);
+    
         // Form verilerini al ve işleme
         const formData = new FormData(form.current);
         const formattedData: Record<string, string> = {};
-
+    
         formData.forEach((value, key) => {
             if (typeof value === "string") {
                 if (key === "companyname") {
@@ -133,25 +146,23 @@ export const HomeV1 = () => {
                 formattedData[key] = `• Keine Angabe`;
             }
         });
-
+    
         try {
-            // Backend URL kontrolü
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
                 console.error("Backend URL tanımlı değil.");
                 alert("Sunucu bağlantı hatası. Lütfen daha sonra tekrar deneyin.");
                 return;
             }
-
-            // E-posta gönderimi
+    
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formattedData),
+                body: JSON.stringify(formattedData), // Token eklenmeden gönderiliyor
             });
-
+    
             if (response.ok) {
                 navigate("/thank-you-page", { replace: true });
             } else {
@@ -162,6 +173,15 @@ export const HomeV1 = () => {
         } catch (error) {
             console.error("Mail gönderimi sırasında hata:", error);
             alert("Bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
+        } finally {
+            captchaRef.current.reset(); // ReCAPTCHA'yı sıfırla (EKLENEN SATIR)
+        }
+    };
+    
+
+    const handleCaptchaChange = (token: string | null) => {
+        if (token) {
+            setCaptchaError(false); // Token varsa hata mesajını kaldır
         }
     };
 
@@ -1049,6 +1069,20 @@ export const HomeV1 = () => {
                                 <label htmlFor="message" className="xs:text-[18px] text-base tb-bold">Nachricht<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
+
+                            {/* reCAPTCHA */}
+                            <ReCAPTCHA
+                                ref={captchaRef}
+                                size="normal"
+                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                hl="de"
+                                onChange={handleCaptchaChange} // Değişiklik kontrolü
+                            />
+                            {captchaError && (
+                                <div className="text-red-500 text-xs w-full col-span-2 -mt-4">
+                                    Bitte bestätigen Sie, dass Sie kein Roboter sind, indem Sie die reCAPTCHA-Überprüfung abschließen.
+                                </div>
+                            )}
 
                             <div className="col-span-2 flex items-start gap-3">
                                 <div>

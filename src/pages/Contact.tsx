@@ -16,7 +16,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 const Contact = () => {
     const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
-    const [captchaError, setCaptchaError] = useState(false);
+    const [captchaError, setCaptchaError] = useState<boolean>(false);
 
     const fadeInAnimationVariant = {
         initial: {
@@ -54,15 +54,15 @@ const Contact = () => {
             return;
         }
 
-        // ReCAPTCHA token'ını al
+        // ReCAPTCHA token'ını al (EKLENEN SATIR)
         const token = captchaRef.current.getValue();
 
         if (!token) {
-            setCaptchaError(true); // Hata durumunu aktif hale getir
+            setCaptchaError(true); // Hata durumunu aktif hale getir (EKLENEN SATIR)
             return;
         }
 
-        // Hata mesajını gizle
+        // Hata mesajını gizle (EKLENEN SATIR)
         setCaptchaError(false);
 
         // Form verilerini al ve işleme
@@ -95,7 +95,7 @@ const Contact = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({ ...formattedData, recaptchaToken: token }),
+                body: JSON.stringify(formattedData), // Token eklenmeden gönderiliyor
             });
 
             if (response.ok) {
@@ -109,9 +109,10 @@ const Contact = () => {
             console.error("Mail gönderimi sırasında hata:", error);
             alert("Bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
         } finally {
-            captchaRef.current.reset(); // ReCAPTCHA'yı sıfırla
+            captchaRef.current.reset(); // ReCAPTCHA'yı sıfırla (EKLENEN SATIR)
         }
     };
+
 
     const handleCaptchaChange = (token: string | null) => {
         if (token) {
@@ -280,12 +281,13 @@ const Contact = () => {
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
 
-                           {/* reCAPTCHA */}
-                           <ReCAPTCHA
+                            {/* reCAPTCHA */}
+                            <ReCAPTCHA
+                                className="col-span-2"
                                 ref={captchaRef}
                                 size="normal"
                                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                                hl="tr"
+                                hl="de"
                                 onChange={handleCaptchaChange} // Değişiklik kontrolü
                             />
                             {captchaError && (
