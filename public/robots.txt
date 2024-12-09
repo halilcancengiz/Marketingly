@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /private   
 Disallow: /admin      
 Allow: /              
-Sitemap: https://marketingly.vercel.app/
+Sitemap: https://facebookadsagentur.de/

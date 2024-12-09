@@ -71,8 +71,8 @@ const TermAndConditions = () => {
         <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] 3xl:pt-[123px] 3xl:pb-[123px] px-6 relative bg-[#F8F9FF]">
 
             <Helmet>
-                <title>AGB und Datenschutz | MARKETINGLY X</title>
-                <meta name="description" content="Erfahren Sie mehr über die Allgemeinen Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen von MARKETINGLY X." />
+                <title>AGB und Datenschutz | Superagentur</title>
+                <meta name="description" content="Erfahren Sie mehr über die Allgemeinen Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen von Superagentur." />
                 <meta property="og:title" content="AGB und Datenschutz" />
                 <meta property="og:description" content="Detaillierte Informationen zu unseren Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen." />
                 <meta property="og:type" content="website" />

@@ -52,9 +52,9 @@ const PremiumPackageDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
-                <title>Premium-Paket - Unbegrenztes Werbebudget-Management | MARKETINGLY X</title>
-                <meta name="description" content="Das Premium-Paket von MARKETINGLY X bietet unbegrenztes Werbebudget-Management, strategische Planung und fortgeschrittene Analysen, um das volle Potenzial Ihrer Marke auszuschöpfen." />
-                <meta property="og:title" content="Premium-Paket - MARKETINGLY X" />
+                <title>Premium-Paket - Unbegrenztes Werbebudget-Management | Superagentur</title>
+                <meta name="description" content="Das Premium-Paket von Superagentur bietet unbegrenztes Werbebudget-Management, strategische Planung und fortgeschrittene Analysen, um das volle Potenzial Ihrer Marke auszuschöpfen." />
+                <meta property="og:title" content="Premium-Paket - Superagentur" />
                 <meta property="og:description" content="Das Premium-Paket bietet umfassende Lösungen für fortgeschrittenes Marketing, von Content-Marketing bis hin zu erweiterten Analysen." />
                 <meta property="og:type" content="product" />
                 <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}premium-package-detail`} />

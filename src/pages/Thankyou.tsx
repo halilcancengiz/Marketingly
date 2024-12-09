@@ -48,10 +48,10 @@ const Thankyou = () => {
     return (
         <div className='3xl:pt-[95px] lg:pt-[76px] md:pt-[60px] xs:pt-[50px] pt-10 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] bg-white flex flex-col items-center justify-center px-6 relative overflow-hidden'>
             <Helmet>
-                <title>Vielen Dank | MARKETINGLY X</title>
+                <title>Vielen Dank | Superagentur</title>
                 <meta name="description" content="Vielen Dank für Ihre Nachricht! Unser Team wird sich schnellstmöglich bei Ihnen melden." />
                 <meta property="og:title" content="Vielen Dank für Ihre Nachricht" />
-                <meta property="og:description" content="Das MARKETINGLY X Team wird sich bald bei Ihnen melden. Vielen Dank für Ihr Interesse!" />
+                <meta property="og:description" content="Das Superagentur Team wird sich bald bei Ihnen melden. Vielen Dank für Ihr Interesse!" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}thank-you`} />
                 <meta name="robots" content="index, follow" />

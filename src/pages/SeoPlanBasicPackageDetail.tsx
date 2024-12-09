@@ -52,9 +52,9 @@ const SeoPlanBasicPackageDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
-                <title>Basis-Paket (SEO) - Detaillierte Informationen | MARKETINGLY X</title>
+                <title>Basis-Paket (SEO) - Detaillierte Informationen | Superagentur</title>
                 <meta name="description" content="Entdecken Sie unser Standard-Paket, ideal für Unternehmen, die ihre Werbestrategien erweitern und optimieren möchten. Mit intensiver Betreuung und detaillierten Analysen für nachhaltigen Erfolg." />
-                <meta property="og:title" content="Standard-Paket - MARKETINGLY X" />
+                <meta property="og:title" content="Standard-Paket - Superagentur" />
                 <meta property="og:description" content="Das Standard-Paket bietet umfangreiche Lösungen für optimierte Werbestrategien, von Budgetverwaltung bis zu gezielter Anzeigenentwicklung." />
                 <meta property="og:type" content="product" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}standart-package-detail`} />

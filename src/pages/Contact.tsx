@@ -108,10 +108,10 @@ const Contact = () => {
     return (
         <div className="flex flex-col">
             <Helmet>
-                <title>Kontakt - Erreichen Sie Uns | MARKETINGLY X</title>
-                <meta name="description" content="Kontaktieren Sie MARKETINGLY X für maßgeschneiderte Marketinglösungen und individuelle Beratung. Wir sind hier, um Ihre Fragen zu beantworten." />
-                <meta property="og:title" content="Kontakt - Erreichen Sie Uns | MARKETINGLY X" />
-                <meta property="og:description" content="Lassen Sie uns gemeinsam Ihre Marketingziele erreichen. Kontaktieren Sie MARKETINGLY X für eine maßgeschneiderte Lösung." />
+                <title>Kontakt - Erreichen Sie Uns | Superagentur</title>
+                <meta name="description" content="Kontaktieren Sie Superagentur für maßgeschneiderte Marketinglösungen und individuelle Beratung. Wir sind hier, um Ihre Fragen zu beantworten." />
+                <meta property="og:title" content="Kontakt - Erreichen Sie Uns | Superagentur" />
+                <meta property="og:description" content="Lassen Sie uns gemeinsam Ihre Marketingziele erreichen. Kontaktieren Sie Superagentur für eine maßgeschneiderte Lösung." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}contact`} />
                 <meta name="robots" content="index, follow" />

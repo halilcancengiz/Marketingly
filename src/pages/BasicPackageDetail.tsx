@@ -52,9 +52,9 @@ const BasicPackageDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
-                <title>Basis-Paket - Detaillierte Informationen | MARKETINGLY X</title>
-                <meta name="description" content="Das Basis-Paket von MARKETINGLY X bietet den idealen Einstieg ins digitale Marketing. Perfekt für Unternehmen, die gezielte Werbekampagnen mit einfacher Einrichtung und verlässlicher Betreuung starten möchten." />
-                <meta property="og:title" content="Basis-Paket - MARKETINGLY X" />
+                <title>Basis-Paket - Detaillierte Informationen | Superagentur</title>
+                <meta name="description" content="Das Basis-Paket von Superagentur bietet den idealen Einstieg ins digitale Marketing. Perfekt für Unternehmen, die gezielte Werbekampagnen mit einfacher Einrichtung und verlässlicher Betreuung starten möchten." />
+                <meta property="og:title" content="Basis-Paket - Superagentur" />
                 <meta property="og:description" content="Erleben Sie das Basis-Paket: Effektive Verwaltung kleiner Budgets, Einrichtung erster Kampagnen und zuverlässiger Support für einen erfolgreichen Start ins digitale Marketing." />
                 <meta property="og:type" content="product" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}basic-package-detail`} />

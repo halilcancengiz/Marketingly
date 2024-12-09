@@ -71,9 +71,9 @@ const AdsPlan = () => {
     return (
         <div className="flex flex-col">
             <Helmet>
-                <title>Ads Plan - Flexible Lösungen für jeden Bedarf | MARKETINGLY X</title>
-                <meta name="description" content="Entdecken Sie unsere Ads-Preismodelle, die flexible Lösungen für Social Media Marketing, bezahlte Werbung und SEO bieten. MARKETINGLY X unterstützt Sie bei jedem Schritt." />
-                <meta property="og:title" content="Ads Plan - Flexible Lösungen für jeden Bedarf | MARKETINGLY X" />
+                <title>Ads Plan - Flexible Lösungen für jeden Bedarf | Superagentur X</title>
+                <meta name="description" content="Entdecken Sie unsere Ads-Preismodelle, die flexible Lösungen für Social Media Marketing, bezahlte Werbung und SEO bieten. Superagentur X unterstützt Sie bei jedem Schritt." />
+                <meta property="og:title" content="Ads Plan - Flexible Lösungen für jeden Bedarf | Superagentur X" />
                 <meta property="og:description" content="Flexible Ads-Pläne für Social Media Marketing, bezahlte Werbung und SEO. Finden Sie den idealen Plan, der zu Ihrem Budget und Ihren Zielen passt!" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}ads-plan`} />

@@ -180,9 +180,9 @@ export const HomeV1 = () => {
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
-                <title>Home - Maximaler Erfolg mit Google! | MARKETINGLY X</title>
-                <meta name="description" content="Erreichen Sie Ihre Zielgruppe mit maßgeschneiderten Google Ads, SEO-Optimierungen und Unternehmenslistungen. Kontaktieren Sie MARKETINGLY X für maximale Reichweite." />
-                <meta property="og:title" content="Home - Maximaler Erfolg mit Google! | MARKETINGLY X" />
+                <title>Home - Maximaler Erfolg mit Google! | Superagentur</title>
+                <meta name="description" content="Erreichen Sie Ihre Zielgruppe mit maßgeschneiderten Google Ads, SEO-Optimierungen und Unternehmenslistungen. Kontaktieren Sie Superagentur für maximale Reichweite." />
+                <meta property="og:title" content="Home - Maximaler Erfolg mit Google! | Superagentur" />
                 <meta property="og:description" content="Nutzen Sie Google Ads, SEO und Unternehmenslistungen für maximale Reichweite und Sichtbarkeit." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}`} />

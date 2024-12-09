@@ -29,7 +29,7 @@ const NotFound = () => {
     return (
         <div className='3xl:pt-[186px] 3xl:pb-[198px] lg:pt-[148px] lg:pb-[158px] md:pt-[118px] md:pb-[126px] xs:pt-[94px] xs:pb-[100px] pt-[75px] pb-[80px] px-6 relative bg-secondary1 overflow-hidden'>
             <Helmet>
-                <title>404 - Seite nicht gefunden | MARKETINGLY X</title>
+                <title>404 - Seite nicht gefunden | Superagentur</title>
                 <meta name="description" content="Die gesuchte Seite ist nicht verfügbar. Bitte gehen Sie zurück zur Startseite oder nutzen Sie die Navigation." />
                 <meta property="og:title" content="404 - Seite nicht gefunden" />
                 <meta property="og:description" content="Oh, es scheint so, als ob da etwas schiefgelaufen ist. Gehen Sie zurück zur Startseite." />
