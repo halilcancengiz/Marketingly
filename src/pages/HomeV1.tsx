@@ -441,7 +441,7 @@ export const HomeV1 = () => {
 
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <div aria-label="Open company listing page">
+                            <div aria-label="Open Unternehmenslistung page">
                                 <Button className="tb-bold">Pläne</Button>
                             </div>
                         </div>

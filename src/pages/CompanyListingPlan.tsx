@@ -32,14 +32,14 @@ const CompanyListingPlan = () => {
   return (
     <div className="flex flex-col">
       <Helmet>
-        <title>Company Listing Plan - Flexible Lösungen für Unternehmen | Superagentur</title>
+        <title>Unternehmenslistung - Flexible Lösungen für Unternehmen | Superagentur</title>
         <meta
           name="description"
           content="Entdecken Sie unsere Unternehmenslisten-Pläne, die speziell für Social Media Marketing, bezahlte Werbung und SEO-Lösungen entwickelt wurden. Flexible Optionen für jeden Bedarf."
         />
         <meta
           property="og:title"
-          content="Company Listing Plan - Flexible Lösungen für Unternehmen | Superagentur"
+          content="Unternehmenslistung  - Flexible Lösungen für Unternehmen | Superagentur"
         />
         <meta
           property="og:description"

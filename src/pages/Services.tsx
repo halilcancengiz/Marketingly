@@ -298,7 +298,7 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink aria-label="Open company listing page" to="/company-listing-plan">
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/company-listing-plan">
                                 <Button className="tb-bold">Details</Button>
                             </NavLink>
                         </div>
