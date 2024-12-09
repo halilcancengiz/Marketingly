@@ -152,3 +152,6 @@ body,
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
+.grecaptcha-badge{
+  z-index: 999!important;
+}

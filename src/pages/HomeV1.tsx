@@ -112,79 +112,82 @@ export const HomeV1 = () => {
 
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-    
+        e.preventDefault(); // Formun varsayılan davranışını engelle
+
+        // Form ve ReCAPTCHA referanslarının mevcut olup olmadığını kontrol et
         if (!form.current || !captchaRef.current) {
-            alert("Lütfen formu yeniden yükleyin.");
+            console.error("Form or reCAPTCHA reference is missing. Please reload the form.");
             return;
         }
-    
-        // ReCAPTCHA token'ını al (EKLENEN SATIR)
-        const token = captchaRef.current.getValue();
-    
-        if (!token) {
-            setCaptchaError(true); // Hata durumunu aktif hale getir (EKLENEN SATIR)
-            return;
-        }
-    
-        // Hata mesajını gizle (EKLENEN SATIR)
-        setCaptchaError(false);
-    
-        // Form verilerini al ve işleme
-        const formData = new FormData(form.current);
-        const formattedData: Record<string, string> = {};
-    
-        formData.forEach((value, key) => {
-            if (typeof value === "string") {
-                if (key === "companyname") {
-                    formattedData[key] = value.trim() || `• Kein Firmenname`; // Companyname için özel kontrol
-                } else {
-                    formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için
-                }
-            } else {
-                // Eğer bir dosya ise (File türü), bunun için de varsayılan değer
-                formattedData[key] = `• Keine Angabe`;
-            }
-        });
-    
+
         try {
-            const backendUrl = import.meta.env.VITE_BACKEND_URL;
-            if (!backendUrl) {
-                console.error("Backend URL tanımlı değil.");
-                alert("Sunucu bağlantı hatası. Lütfen daha sonra tekrar deneyin.");
+            // ReCAPTCHA'yı çalıştır ve token al
+            const token = await captchaRef.current.executeAsync();
+
+            // Eğer token döndürülmezse hata durumu oluştur
+            if (!token) {
+                setCaptchaError(true);
+                console.error("ReCAPTCHA validation failed. Token not received.");
                 return;
             }
-    
+
+            // Token başarılı bir şekilde alındıysa hata durumunu sıfırla ve token'ı konsola yazdır
+            setCaptchaError(false);
+
+            // Form verilerini işleme
+            const formData = new FormData(form.current);
+            const formattedData: Record<string, string> = {};
+
+            formData.forEach((value, key) => {
+                if (typeof value === "string") {
+                    if (key === "companyname") {
+                        formattedData[key] = value.trim() || `• Kein Firmenname`; // Şirket adı için özel kontrol
+                    } else {
+                        formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için varsayılan değer
+                    }
+                } else {
+                    // Eğer bir dosya ise varsayılan bir değer ata
+                    formattedData[key] = `• Keine Angabe`;
+                }
+            });
+
+            // Backend URL kontrolü
+            const backendUrl = import.meta.env.VITE_BACKEND_URL;
+            if (!backendUrl) {
+                console.error("Backend URL is not defined. Server connection error.");
+                return;
+            }
+
+            // Form verilerini backend'e gönder
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formattedData), // Token eklenmeden gönderiliyor
+                body: JSON.stringify(formattedData),
             });
-    
+
+            // Backend'den gelen yanıtı kontrol et
             if (response.ok) {
                 navigate("/thank-you-page", { replace: true });
             } else {
                 const errorMessage = await response.text();
-                console.error("Mail gönderilemedi:", errorMessage);
-                alert("Mail gönderme işlemi başarısız oldu. Lütfen tekrar deneyin.");
+                console.error("Failed to send email:", errorMessage);
             }
         } catch (error) {
-            console.error("Mail gönderimi sırasında hata:", error);
-            alert("Bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
+            console.error("Error during form submission:", error);
         } finally {
-            captchaRef.current.reset(); // ReCAPTCHA'yı sıfırla (EKLENEN SATIR)
+            // ReCAPTCHA'yı sıfırla
+            captchaRef.current.reset();
         }
     };
-    
+
 
     const handleCaptchaChange = (token: string | null) => {
         if (token) {
-            setCaptchaError(false); // Token varsa hata mesajını kaldır
+            setCaptchaError(false);
         }
     };
-
     const today = new Date();
     const formattedDate = today
         .toLocaleDateString("de-DE", {
@@ -1069,20 +1072,24 @@ export const HomeV1 = () => {
                                 <label htmlFor="message" className="xs:text-[18px] text-base tb-bold">Nachricht<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
-
                             {/* reCAPTCHA */}
                             <ReCAPTCHA
+                                className="col-span-2"
                                 ref={captchaRef}
-                                size="normal"
+                                size="invisible"
                                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                                hl="de"
+                                hl="tr"
                                 onChange={handleCaptchaChange} // Değişiklik kontrolü
                             />
-                            {captchaError && (
-                                <div className="text-red-500 text-xs w-full col-span-2 -mt-4">
-                                    Bitte bestätigen Sie, dass Sie kein Roboter sind, indem Sie die reCAPTCHA-Überprüfung abschließen.
-                                </div>
-                            )}
+                            {
+                                captchaError && (
+                                    <div className="text-red-600 text-sm w-full col-span-2 mt-2">
+                                        <p>
+                                            Verifizierung fehlgeschlagen. Bitte vervollständigen Sie das reCAPTCHA, um zu bestätigen, dass Sie kein Roboter sind.
+                                        </p>
+                                    </div>
+                                )
+                            }
 
                             <div className="col-span-2 flex items-start gap-3">
                                 <div>
