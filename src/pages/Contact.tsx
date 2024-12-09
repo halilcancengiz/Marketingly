@@ -7,13 +7,17 @@ import linkedinIcon from "../assets/images/linkedin.webp"
 import youtubeIcon from "../assets/images/youtube.webp"
 import whatsappIcon from "../assets/images/whatsapp.webp"
 import Accordion from "../components/Accordion"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Helmet } from "react-helmet"
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
+    const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
+    const [captchaError, setCaptchaError] = useState(false);
+
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,
@@ -42,10 +46,77 @@ const Contact = () => {
     }, []);
     const navigate = useNavigate()
 
+    // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    //     e.preventDefault();
+
+    //     if (!form.current) return;
+
+    //     // Form verilerini al ve işleme
+    //     const formData = new FormData(form.current);
+    //     const formattedData: Record<string, string> = {};
+
+    //     formData.forEach((value, key) => {
+    //         if (typeof value === "string") {
+    //             if (key === "companyname") {
+    //                 formattedData[key] = value.trim() || `• Kein Firmenname`; // Companyname için özel kontrol
+    //             } else {
+    //                 formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için
+    //             }
+    //         } else {
+    //             // Eğer bir dosya ise (File türü), bunun için de varsayılan değer
+    //             formattedData[key] = `• Keine Angabe`;
+    //         }
+    //     });
+
+    //     try {
+    //         // Backend URL kontrolü
+    //         const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    //         if (!backendUrl) {
+    //             console.error("Backend URL tanımlı değil.");
+    //             alert("Sunucu bağlantı hatası. Lütfen daha sonra tekrar deneyin.");
+    //             return;
+    //         }
+
+    //         // E-posta gönderimi
+    //         const response = await fetch(`${backendUrl}/api/send-mail`, {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //             },
+    //             body: JSON.stringify(formattedData),
+    //         });
+
+    //         if (response.ok) {
+    //             navigate("/thank-you-page", { replace: true });
+    //         } else {
+    //             const errorMessage = await response.text();
+    //             console.error("Mail gönderilemedi:", errorMessage);
+    //             alert("Mail gönderme işlemi başarısız oldu. Lütfen tekrar deneyin.");
+    //         }
+    //     } catch (error) {
+    //         console.error("Mail gönderimi sırasında hata:", error);
+    //         alert("Bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
+    //     }
+    // };
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (!form.current) return;
+        if (!form.current || !captchaRef.current) {
+            alert("Lütfen formu yeniden yükleyin.");
+            return;
+        }
+
+        // ReCAPTCHA token'ını al
+        const token = captchaRef.current.getValue();
+
+        if (!token) {
+            setCaptchaError(true); // Hata durumunu aktif hale getir
+            return;
+        }
+
+        // Hata mesajını gizle
+        setCaptchaError(false);
 
         // Form verilerini al ve işleme
         const formData = new FormData(form.current);
@@ -65,7 +136,6 @@ const Contact = () => {
         });
 
         try {
-            // Backend URL kontrolü
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
                 console.error("Backend URL tanımlı değil.");
@@ -73,13 +143,12 @@ const Contact = () => {
                 return;
             }
 
-            // E-posta gönderimi
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(formattedData),
+                body: JSON.stringify({ ...formattedData, recaptchaToken: token }),
             });
 
             if (response.ok) {
@@ -92,6 +161,14 @@ const Contact = () => {
         } catch (error) {
             console.error("Mail gönderimi sırasında hata:", error);
             alert("Bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
+        } finally {
+            captchaRef.current.reset(); // ReCAPTCHA'yı sıfırla
+        }
+    };
+
+    const handleCaptchaChange = (token: string | null) => {
+        if (token) {
+            setCaptchaError(false); // Token varsa hata mesajını kaldır
         }
     };
 
@@ -103,6 +180,9 @@ const Contact = () => {
             year: "numeric",
         })
         .replace(/\//g, "."); // "/" karakterlerini "." ile değiştir
+
+
+
 
 
     return (
@@ -253,6 +333,19 @@ const Contact = () => {
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
 
+                           {/* reCAPTCHA */}
+                           <ReCAPTCHA
+                                ref={captchaRef}
+                                size="normal"
+                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                hl="de"
+                                onChange={handleCaptchaChange} // Değişiklik kontrolü
+                            />
+                            {captchaError && (
+                                <div className="text-red-500 text-xs w-full col-span-2 -mt-4">
+                                    Bitte bestätigen Sie, dass Sie kein Roboter sind, indem Sie die reCAPTCHA-Überprüfung abschließen.
+                                </div>
+                            )}
 
 
                             <div className="col-span-2 flex items-start gap-3">
