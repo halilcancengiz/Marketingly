@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /private   
 Disallow: /admin      
 Allow: /              
-Sitemap: https://facebookadsagentur.de/
+Sitemap: https://superagentur-marketing.de/

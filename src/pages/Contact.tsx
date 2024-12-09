@@ -46,59 +46,6 @@ const Contact = () => {
     }, []);
     const navigate = useNavigate()
 
-    // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    //     e.preventDefault();
-
-    //     if (!form.current) return;
-
-    //     // Form verilerini al ve işleme
-    //     const formData = new FormData(form.current);
-    //     const formattedData: Record<string, string> = {};
-
-    //     formData.forEach((value, key) => {
-    //         if (typeof value === "string") {
-    //             if (key === "companyname") {
-    //                 formattedData[key] = value.trim() || `• Kein Firmenname`; // Companyname için özel kontrol
-    //             } else {
-    //                 formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için
-    //             }
-    //         } else {
-    //             // Eğer bir dosya ise (File türü), bunun için de varsayılan değer
-    //             formattedData[key] = `• Keine Angabe`;
-    //         }
-    //     });
-
-    //     try {
-    //         // Backend URL kontrolü
-    //         const backendUrl = import.meta.env.VITE_BACKEND_URL;
-    //         if (!backendUrl) {
-    //             console.error("Backend URL tanımlı değil.");
-    //             alert("Sunucu bağlantı hatası. Lütfen daha sonra tekrar deneyin.");
-    //             return;
-    //         }
-
-    //         // E-posta gönderimi
-    //         const response = await fetch(`${backendUrl}/api/send-mail`, {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify(formattedData),
-    //         });
-
-    //         if (response.ok) {
-    //             navigate("/thank-you-page", { replace: true });
-    //         } else {
-    //             const errorMessage = await response.text();
-    //             console.error("Mail gönderilemedi:", errorMessage);
-    //             alert("Mail gönderme işlemi başarısız oldu. Lütfen tekrar deneyin.");
-    //         }
-    //     } catch (error) {
-    //         console.error("Mail gönderimi sırasında hata:", error);
-    //         alert("Bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
-    //     }
-    // };
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -338,7 +285,7 @@ const Contact = () => {
                                 ref={captchaRef}
                                 size="normal"
                                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                                hl="de"
+                                hl="tr"
                                 onChange={handleCaptchaChange} // Değişiklik kontrolü
                             />
                             {captchaError && (
