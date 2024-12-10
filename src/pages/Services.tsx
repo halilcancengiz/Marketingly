@@ -54,7 +54,7 @@ const Services = () => {
         "@type": "Organization",
         "name": "Superagentur Marketing",
         "url": "${APP_CONFIG.base_url}",
-        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "logo": "${APP_CONFIG.base_url}assets/images/logo.webp",
         "sameAs": [
           "${APP_CONFIG.social_media.facebook}",
           "${APP_CONFIG.social_media.instagram}",
