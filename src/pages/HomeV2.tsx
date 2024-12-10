@@ -1085,15 +1085,7 @@ export const HomeV2 = () => {
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
 
-                            {/* reCAPTCHA */}
-                            <ReCAPTCHA
-                                className="col-span-2"
-                                ref={captchaRef}
-                                size="invisible"
-                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                                hl="tr"
-                                onChange={handleCaptchaChange} // Değişiklik kontrolü
-                            />
+                            {/* recaptcha error area */}
                             {
                                 captchaError && (
                                     <div className="text-red-600 text-sm w-full col-span-2 mt-2">
@@ -1135,7 +1127,15 @@ export const HomeV2 = () => {
                 </div>
             </section>
 
-
+            {/* reCAPTCHA */}
+            <ReCAPTCHA
+                className="col-span-2"
+                ref={captchaRef}
+                size="invisible"
+                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                hl="tr"
+                onChange={handleCaptchaChange} // Değişiklik kontrolü
+            />
         </main>
     )
 }

@@ -1,51 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://superagentur-marketing.de.app/</loc>
+    <loc>https://superagentur-marketing.de/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://superagentur-marketing.de.app/homev2</loc>
+    <loc>https://superagentur-marketing.de/homev2</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://superagentur-marketing.de.app/thank-you-page</loc>
+    <loc>https://superagentur-marketing.de/thank-you-page</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://superagentur-marketing.de.app/datenschutz</loc>
+    <loc>https://superagentur-marketing.de/datenschutz</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://superagentur-marketing.de.app/contact</loc>
+    <loc>https://superagentur-marketing.de/impressum</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://superagentur-marketing.de/contact</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://superagentur-marketing.de.app/basic-package-detail</loc>
-    <priority>0.6</priority>
-  </url>
-   <url>
-    <loc>https://superagentur-marketing.de.app/standart-package-detail</loc>
-    <priority>0.6</priority>
-  </url>
-   <url>
-    <loc>https://superagentur-marketing.de.app/premium-package-detail</loc>
+    <loc>https://superagentur-marketing.de/basic-package-detail</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://superagentur-marketing.de.app/services</loc>
+    <loc>https://superagentur-marketing.de/standart-package-detail</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://superagentur-marketing.de/premium-package-detail</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://superagentur-marketing.de/seo-plan-basic-package-detail</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://superagentur-marketing.de/seo-plan-standart-package-detail</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://superagentur-marketing.de/seo-plan-premium-package-detail</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://superagentur-marketing.de/services</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://superagentur-marketing.de.app/seo-plan</loc>
+    <loc>https://superagentur-marketing.de/seo-plan</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://superagentur-marketing.de.app/ads-plan</loc>
+    <loc>https://superagentur-marketing.de/ads-plan</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://superagentur-marketing.de.app/company-listing-plan</loc>
+    <loc>https://superagentur-marketing.de/company-listing-plan</loc>
     <priority>0.7</priority>
   </url>
 </urlset>
