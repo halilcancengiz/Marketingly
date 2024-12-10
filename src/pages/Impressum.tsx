@@ -123,8 +123,9 @@ const TermAndConditions = () => {
                         </div>
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Kontakt</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
-                            E-Mail: {APP_CONFIG.contact.email} <br />
-                            Telefon: {APP_CONFIG.contact.phone}
+                            E-Mail: <a href={`mailto:${APP_CONFIG.contact.email}`} className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">{APP_CONFIG.contact.email}</a>
+                            <br />
+                            Telefon: <a href={`tel:${APP_CONFIG.contact.phone}`} className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">{APP_CONFIG.contact.phone}</a>
                         </div>
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Registereintrag</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
@@ -142,9 +143,9 @@ const TermAndConditions = () => {
                         </div>
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">EU-Streitbeilegung</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
-                            Durch die Europäische Kommission wird eine Plattform zur Online-Streitbeilegung (OS) bereitgestellt: <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">https://ec.europa.eu/consumers/odr/</a>
+                            Durch die Europäische Kommission wird eine Plattform zur Online-Streitbeilegung (OS) bereitgestellt: <a href="https://ec.europa.eu/consumers/odr/" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">https://ec.europa.eu/consumers/odr/</a>
                         </div>
-                        <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Verbraucherstreitbeilegung gem. § 36 VSBG</div>
+                        <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px] break-words hyphens-auto">Verbraucherstreitbeilegung gem. § 36 VSBG</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
                             Wir nehmen nicht an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.
                         </div>
@@ -165,11 +166,11 @@ const TermAndConditions = () => {
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Social-Media-Profile</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
                             Dieses Impressum gilt auch für folgende Social-Media-Profile: <br />
-                            <a href={APP_CONFIG.social_media.instagram} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">Instagram: {APP_CONFIG.social_media.instagram}</a> <br />
-                            <a href={APP_CONFIG.social_media.facebook} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">Facebook: {APP_CONFIG.social_media.facebook}</a> <br />
-                            <a href={APP_CONFIG.social_media.x} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">X (ehemals Twitter): {APP_CONFIG.social_media.x}</a> <br />
-                            <a href={APP_CONFIG.social_media.youtube} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">YouTube: {APP_CONFIG.social_media.youtube}</a> <br />
-                            <a href={APP_CONFIG.social_media.linkedin} target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">LinkedIn: {APP_CONFIG.social_media.linkedin}</a>
+                            <a href={APP_CONFIG.social_media.instagram} target="_blank" className="hover:text-secondary3 underline break-words text-primary tb-medium transition-all duration-300">Instagram: {APP_CONFIG.social_media.instagram}</a> <br />
+                            <a href={APP_CONFIG.social_media.facebook} target="_blank" className="hover:text-secondary3 underline break-words text-primary tb-medium transition-all duration-300">Facebook: {APP_CONFIG.social_media.facebook}</a> <br />
+                            <a href={APP_CONFIG.social_media.x} target="_blank" className="hover:text-secondary3 underline break-words text-primary tb-medium transition-all duration-300">X (ehemals Twitter): {APP_CONFIG.social_media.x}</a> <br />
+                            <a href={APP_CONFIG.social_media.youtube} target="_blank" className="hover:text-secondary3 underline break-words text-primary tb-medium transition-all duration-300">YouTube: {APP_CONFIG.social_media.youtube}</a> <br />
+                            <a href={APP_CONFIG.social_media.linkedin} target="_blank" className="hover:text-secondary3 underline break-words text-primary tb-medium transition-all duration-300">LinkedIn: {APP_CONFIG.social_media.linkedin}</a>
                         </div>
 
                     </div>
