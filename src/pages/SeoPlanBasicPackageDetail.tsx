@@ -155,7 +155,7 @@ const SeoPlanBasicPackageDetail = () => {
                             <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEO.basis} €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
-                        <NavLink aria-label="Open contact page" to="/contact">
+                        <NavLink aria-label="Open contact page" to="/kontakt">
                             <Button className="w-full tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
                     </div>

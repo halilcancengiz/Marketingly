@@ -287,7 +287,7 @@ export const HomeV1 = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.7, duration: 0.3 }}
                                 className="flex xs:flex-row flex-col gap-6 lg:justify-start justify-center">
-                                <NavLink aria-label="Open contact page" to="/contact" className="xs:w-auto w-full">
+                                <NavLink aria-label="Open contact page" to="/kontakt" className="xs:w-auto w-full">
                                     <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
                                 </NavLink>
                                 <div aria-label="Scroll to next section" onClick={() => scrollToSection("unsereDienstleistungen")} className="xs:w-auto w-full">
@@ -419,10 +419,10 @@ export const HomeV1 = () => {
                         <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">Mit uns an Ihrer Seite maximierst du deine Sichtbarkeit!</div>
                     </div>
                     <div className="flex xs:flex-row flex-col items-center justify-center gap-6 xs:w-auto w-full">
-                        <NavLink aria-label="Open contact page" to="/contact" className="xs:w-auto w-full">
+                        <NavLink aria-label="Open contact page" to="/kontakt" className="xs:w-auto w-full">
                             <Button className="w-full whitespace-nowrap tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
-                        <NavLink aria-label="Open services page" to="/services" className="xs:w-auto w-full">
+                        <NavLink aria-label="Open services page" to="/dienstleistungen" className="xs:w-auto w-full">
                             <Button className="w-full whitespace-nowrap tb-medium" variant="secondary" size="default">Dienstleistungen</Button>
                         </NavLink>
                     </div>
@@ -434,7 +434,7 @@ export const HomeV1 = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.3 }}
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1176px] w-full mx-auto">
-                    <NavLink to="/ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink to="/google-ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
                                 className="object-contain size-[86px] rounded-[10px]"
@@ -470,7 +470,7 @@ export const HomeV1 = () => {
                             </div>
                         </div>
                     </NavLink>
-                    <NavLink to="/company-listing-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink to="/unternehmenslistung-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
                                 loading="lazy"
@@ -539,7 +539,7 @@ export const HomeV1 = () => {
                                     <div className="text-[18px] tb-bold text-neutral-800">Schnelle Ergebnisse</div>
                                 </div>
                             </div>
-                            <NavLink aria-label="Open google ads plan page" to="/ads-plan" className="xs:w-auto w-full">
+                            <NavLink aria-label="Open google ads plan page" to="/google-ads-plan" className="xs:w-auto w-full">
                                 <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
                             </NavLink>
                         </motion.div>
@@ -627,10 +627,10 @@ export const HomeV1 = () => {
                             viewport={{ once: true }}
                             transition={{ delay: 0.3, duration: 0.3 }}
                             className="max-w-[527px] w-full flex xs:flex-row flex-col items-center gap-6">
-                            <NavLink aria-label="Open contact page" className="xs:w-auto w-full" to="/contact">
+                            <NavLink aria-label="Open contact page" className="xs:w-auto w-full" to="/kontakt">
                                 <Button className="w-full whitespace-nowrap !text-primary tb-bold bg-white hover:bg-secondary3 hover:!text-white" variant="primary" size="default">Kontakt</Button>
                             </NavLink>
-                            <NavLink aria-label="Open services page" className="xs:w-auto w-full" to="services">
+                            <NavLink aria-label="Open services page" className="xs:w-auto w-full" to="/dienstleistungen">
                                 <Button className="w-full whitespace-nowrap border-white text-white hover:bg-secondary3 tb-medium" variant="secondary" size="default">Dienstleistungen</Button>
                             </NavLink>
                         </motion.div>
@@ -850,7 +850,7 @@ export const HomeV1 = () => {
                         </div>
 
                         <div className="xs:w-auto w-full">
-                            <NavLink className="xs:w-auto w-full" to="/services">
+                            <NavLink className="xs:w-auto w-full" to="/dienstleistungen">
                                 <Button className="tb-bold xs:w-auto w-full">Dienstleistungen</Button>
                             </NavLink>
                         </div>
@@ -871,7 +871,7 @@ export const HomeV1 = () => {
                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso Superagentur</div>
                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Warum sollten Sie mit uns arbeiten?</div>
                         <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</div>
-                        <NavLink aria-label="Open contact page" to="/contact" className="mt-10 xs:w-auto w-full">
+                        <NavLink aria-label="Open contact page" to="/kontakt" className="mt-10 xs:w-auto w-full">
                             <Button className="tb-bold xs:w-auto w-full">Kontakt</Button>
                         </NavLink>
                     </motion.div>
@@ -977,7 +977,7 @@ export const HomeV1 = () => {
                             </div>
                         </div>
                     </motion.div>
-                    <NavLink aria-label="Open contact page" to="/contact" className="mt-10">
+                    <NavLink aria-label="Open contact page" to="/kontakt" className="mt-10">
                         <Button className="tb-bold">Kontakt</Button>
                     </NavLink>
                 </div>

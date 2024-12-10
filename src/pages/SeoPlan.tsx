@@ -254,7 +254,7 @@ const SeoPlan = () => {
                     transition={{ delay: 0.6, duration: 0.3 }}
                     className="grid lg:grid-cols-3 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
                     {/* Basis */}
-                    <NavLink aria-label="Open basic package detail page" to="/seo-plan-basic-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+                    <NavLink aria-label="Open basic package detail page" to="/seo-plan-basis-paket-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
                         </div>
@@ -297,7 +297,7 @@ const SeoPlan = () => {
 
 
                     {/* Standart */}
-                    <NavLink aria-label="Open standart package detail page" to="/seo-plan-standart-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+                    <NavLink aria-label="Open standart package detail page" to="/seo-plan-standard-paket-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
                         <div className="absolute left-0 top-0 py-1 px-9 tb-bold text-white bg-primary rounded-br-[20px]">Bestseller</div>
 
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
@@ -341,7 +341,7 @@ const SeoPlan = () => {
 
 
                     {/* Premium */}
-                    <NavLink aria-label="Open premium package detail page" to="/seo-plan-premium-package-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+                    <NavLink aria-label="Open premium package detail page" to="/seo-plan-premium-paket-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
 
                         <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />

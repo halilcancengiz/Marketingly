@@ -24,23 +24,23 @@ export const AppRoutes = () => {
     return (
         <Routes >
             <Route path="/" element={<HomeV1 />} />
-            <Route path="/homev2" element={<HomeV2 />} />
-            <Route path="/thank-you-page" element={<Thankyou />} />
+            <Route path="/startseite-v2" element={<HomeV2 />} />
+            <Route path="/danke-seite" element={<Thankyou />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/datenschutz" element={<TermAndConditions />} />
             <Route path="/impressum" element={<Impressum />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/basic-package-detail" element={<BasicPackageDetail />} />
-            <Route path="/standart-package-detail" element={<StandartPackageDetail />} />
-            <Route path="/premium-package-detail" element={<PremiumPackageDetail />} />
-            <Route path="/company-listing-premium-package-detail" element={<CompanyListingPremiumPackageDetail />} />
-            <Route path="/seo-plan-basic-package-detail" element={<SeoPlanBasicPackageDetail />} />
-            <Route path="/seo-plan-standart-package-detail" element={<SeoPlanStandartPackageDetail />} />
-            <Route path="/seo-plan-premium-package-detail" element={<SeoPlanPremiumPackageDetail />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/kontakt" element={<Contact />} />
+            <Route path="/google-ads-basis-paket-detail" element={<BasicPackageDetail />} />
+            <Route path="/google-ads-standard-paket-detail" element={<StandartPackageDetail />} />
+            <Route path="/google-ads-premium-paket-detail" element={<PremiumPackageDetail />} />
+            <Route path="/unternehmenslistung-premium-paket-detail" element={<CompanyListingPremiumPackageDetail />} />
+            <Route path="/seo-plan-basis-paket-detail" element={<SeoPlanBasicPackageDetail />} />
+            <Route path="/seo-plan-standard-paket-detail" element={<SeoPlanStandartPackageDetail />} />
+            <Route path="/seo-plan-premium-paket-detail" element={<SeoPlanPremiumPackageDetail />} />
+            <Route path="/dienstleistungen" element={<Services />} />
             <Route path="/seo-plan" element={<SeoPlan />} />
-            <Route path="/ads-plan" element={<AdsPlan />} />
-            <Route path="/company-listing-plan" element={<CompanyListingPlan />} />
+            <Route path="/google-ads-plan" element={<AdsPlan />} />
+            <Route path="/unternehmenslistung-plan" element={<CompanyListingPlan />} />
         </Routes>
         
     );

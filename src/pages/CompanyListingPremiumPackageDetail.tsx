@@ -53,11 +53,11 @@ const CompanyListingPremiumPackageDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
-                <title>Unternehmenslistungen – Sichtbarkeit in Verzeichnissen</title>
-                <meta name="description" content="Sorgen Sie für eine stärkere lokale Präsenz mit unseren Unternehmenslistungs-Diensten in wichtigen Verzeichnissen." />
-                <meta name="keywords" content="Unternehmenslistungen, lokale Präsenz, Verzeichnisse, Sichtbarkeit" />
-                <meta property="og:title" content="Unternehmenslistungen – Sichtbarkeit in Verzeichnissen" />
-                <meta property="og:description" content="Maximieren Sie Ihre lokale Sichtbarkeit mit professionellen Unternehmenslistungen." />
+                <title>Unternehmenslistung Premium-Paket – Maximale lokale Präsenz</title>
+                <meta name="description" content="Mit unserem Premium-Paket für Unternehmenslistungen /Google MyBusiness-Listungen, steigern Sie Ihre Sichtbarkeit in Verzeichnissen." />
+                <meta name="keywords" content="Unternehmenslistung, Premium-Paket, lokale Präsenz, Verzeichnisse, Google My Business, Sichtbarkeit erhöhen" />
+                <meta property="og:title" content="Unternehmenslistung Premium-Paket – Maximale lokale Präsenz" />
+                <meta property="og:description" content="Erhöhen Sie Ihre lokale und regionale Sichtbarkeit mit unserem umfassenden Premium-Service für Unternehmenslistungen / Google My Business." />
 
                 <meta name="robots" content="index, follow" />
                 <meta property="og:type" content="website" />
@@ -165,7 +165,7 @@ const CompanyListingPremiumPackageDetail = () => {
                             <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.company_listing.premium} €</div>
                             <div className="tb-medium text-neutral-600">einmalig (zzgl. Mwst.)</div>
                         </div>
-                        <NavLink aria-label="Open contact page" to="/contact">
+                        <NavLink aria-label="Open contact page" to="/kontakt">
                             <Button className="w-full tb-bold" variant="primary" size="default">Kontakt</Button>
                         </NavLink>
                     </div>

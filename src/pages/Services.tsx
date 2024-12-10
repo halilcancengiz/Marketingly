@@ -308,7 +308,7 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
-                            <NavLink aria-label="Open google ads plan page" to="/ads-plan">
+                            <NavLink aria-label="Open google ads plan page" to="/google-ads-plan">
                                 <Button className="tb-bold">Details</Button>
                             </NavLink>
                         </div>
@@ -323,7 +323,7 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/company-listing-plan">
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
                                 <Button className="tb-bold">Details</Button>
                             </NavLink>
                         </div>
