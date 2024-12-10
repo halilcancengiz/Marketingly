@@ -12,7 +12,7 @@ import { Helmet } from "react-helmet"
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
 import ReCAPTCHA from "react-google-recaptcha";
-
+import logo from "../assets/images/logo.webp"
 const Contact = () => {
     const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
@@ -45,216 +45,6 @@ const Contact = () => {
         window.scrollTo(0, 0);
     }, []);
     const navigate = useNavigate()
-
-    // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    //     e.preventDefault();
-
-    //     if (!form.current || !captchaRef.current) {
-    //         alert("Lütfen formu yeniden yükleyin.");
-    //         return;
-    //     }
-
-    //     // ReCAPTCHA token'ını al (EKLENEN SATIR)
-    //     const token = captchaRef.current.getValue();
-
-    //     if (!token) {
-    //         setCaptchaError(true); // Hata durumunu aktif hale getir (EKLENEN SATIR)
-    //         return;
-    //     }
-
-    //     // Hata mesajını gizle (EKLENEN SATIR)
-    //     setCaptchaError(false);
-
-    //     // Form verilerini al ve işleme
-    //     const formData = new FormData(form.current);
-    //     const formattedData: Record<string, string> = {};
-
-    //     formData.forEach((value, key) => {
-    //         if (typeof value === "string") {
-    //             if (key === "companyname") {
-    //                 formattedData[key] = value.trim() || `• Kein Firmenname`; // Companyname için özel kontrol
-    //             } else {
-    //                 formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için
-    //             }
-    //         } else {
-    //             // Eğer bir dosya ise (File türü), bunun için de varsayılan değer
-    //             formattedData[key] = `• Keine Angabe`;
-    //         }
-    //     });
-
-    //     try {
-    //         const backendUrl = import.meta.env.VITE_BACKEND_URL;
-    //         if (!backendUrl) {
-    //             console.error("Backend URL tanımlı değil.");
-    //             alert("Sunucu bağlantı hatası. Lütfen daha sonra tekrar deneyin.");
-    //             return;
-    //         }
-
-    //         const response = await fetch(`${backendUrl}/api/send-mail`, {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify(formattedData), // Token eklenmeden gönderiliyor
-    //         });
-
-    //         if (response.ok) {
-    //             navigate("/thank-you-page", { replace: true });
-    //         } else {
-    //             const errorMessage = await response.text();
-    //             console.error("Mail gönderilemedi:", errorMessage);
-    //             alert("Mail gönderme işlemi başarısız oldu. Lütfen tekrar deneyin.");
-    //         }
-    //     } catch (error) {
-    //         console.error("Mail gönderimi sırasında hata:", error);
-    //         alert("Bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
-    //     } finally {
-    //         captchaRef.current.reset(); // ReCAPTCHA'yı sıfırla (EKLENEN SATIR)
-    //     }
-    // };
-
-    // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    //     e.preventDefault();
-
-    //     if (!form.current || !captchaRef.current) {
-    //         alert("Please reload the form.");
-    //         return;
-    //     }
-
-    //     try {
-    //         // ReCAPTCHA'yı çalıştır ve token al (EKLENEN SATIR)
-    //         const token = await captchaRef.current.executeAsync();
-
-    //         if (!token) {
-    //             setCaptchaError(true); // Hata durumunu aktif hale getir
-    //             alert("ReCAPTCHA validation failed. Please try again.");
-    //             return;
-    //         }
-
-    //         setCaptchaError(false); // Hata durumunu sıfırla
-
-    //         // Form verilerini al ve işleme
-    //         const formData = new FormData(form.current);
-    //         const formattedData: Record<string, string> = {};
-
-    //         formData.forEach((value, key) => {
-    //             if (typeof value === "string") {
-    //                 if (key === "companyname") {
-    //                     formattedData[key] = value.trim() || `• Kein Firmenname`; // Companyname için özel kontrol
-    //                 } else {
-    //                     formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için
-    //                 }
-    //             } else {
-    //                 // Eğer bir dosya ise (File türü), bunun için de varsayılan değer
-    //                 formattedData[key] = `• Keine Angabe`;
-    //             }
-    //         });
-
-    //         const backendUrl = import.meta.env.VITE_BACKEND_URL;
-    //         if (!backendUrl) {
-    //             console.error("Backend URL is not defined.");
-    //             alert("Server connection error. Please try again later.");
-    //             return;
-    //         }
-
-    //         const response = await fetch(`${backendUrl}/api/send-mail`, {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify(formattedData), // Token backend'e gönderilmiyor
-    //         });
-
-    //         if (response.ok) {
-    //             navigate("/thank-you-page", { replace: true });
-    //         } else {
-    //             const errorMessage = await response.text();
-    //             console.error("Failed to send email:", errorMessage);
-    //             alert("Email sending failed. Please try again.");
-    //         }
-    //     } catch (error) {
-    //         console.error("Error during email sending:", error);
-    //         alert("An error occurred. Please try again later.");
-    //     } finally {
-    //         captchaRef.current.reset(); // ReCAPTCHA'yı sıfırla (EKLENEN SATIR)
-    //     }
-    // };
-
-    // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    //     e.preventDefault(); // Formun varsayılan davranışını engelle
-
-    //     // Form ve ReCAPTCHA referanslarının mevcut olup olmadığını kontrol et
-    //     if (!form.current || !captchaRef.current) {
-    //         alert("Please reload the form.");
-    //         return;
-    //     }
-
-    //     try {
-    //         // ReCAPTCHA'yı çalıştır ve token al
-    //         const token = await captchaRef.current.executeAsync();
-
-    //         // Eğer token döndürülmezse hata mesajı göster
-    //         if (!token) {
-    //             setCaptchaError(true);
-    //             alert("ReCAPTCHA validation failed. Please try again.");
-    //             return;
-    //         }
-
-    //         // Token başarılı bir şekilde alındıysa hata durumunu sıfırla ve token'ı göster
-    //         setCaptchaError(false);
-    //         alert(`ReCAPTCHA token: ${token}`);
-
-    //         // Form verilerini işleme
-    //         const formData = new FormData(form.current);
-    //         const formattedData: Record<string, string> = {};
-
-    //         formData.forEach((value, key) => {
-    //             if (typeof value === "string") {
-    //                 if (key === "companyname") {
-    //                     formattedData[key] = value.trim() || `• Kein Firmenname`; // Şirket adı için özel kontrol
-    //                 } else {
-    //                     formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için varsayılan değer
-    //                 }
-    //             } else {
-    //                 // Eğer bir dosya ise varsayılan bir değer ata
-    //                 formattedData[key] = `• Keine Angabe`;
-    //             }
-    //         });
-
-    //         // Backend URL kontrolü
-    //         const backendUrl = import.meta.env.VITE_BACKEND_URL;
-    //         if (!backendUrl) {
-    //             console.error("Backend URL is not defined.");
-    //             alert("Server connection error. Please try again later.");
-    //             return;
-    //         }
-
-    //         // Form verilerini backend'e gönder
-    //         const response = await fetch(`${backendUrl}/api/send-mail`, {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify(formattedData),
-    //         });
-
-    //         // Backend'den gelen yanıtı kontrol et
-    //         if (response.ok) {
-    //             alert("Form successfully submitted!");
-    //             navigate("/thank-you-page", { replace: true });
-    //         } else {
-    //             const errorMessage = await response.text();
-    //             console.error("Failed to send email:", errorMessage);
-    //             alert("Email sending failed. Please try again.");
-    //         }
-    //     } catch (error) {
-    //         console.error("Error during form submission:", error);
-    //         alert("An error occurred. Please try again later.");
-    //     } finally {
-    //         // ReCAPTCHA'yı sıfırla
-    //         captchaRef.current.reset();
-    //     }
-    // };
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault(); // Formun varsayılan davranışını engelle
@@ -350,13 +140,36 @@ const Contact = () => {
     return (
         <div className="flex flex-col">
             <Helmet>
-                <title>Kontakt - Erreichen Sie Uns | Superagentur</title>
-                <meta name="description" content="Kontaktieren Sie Superagentur für maßgeschneiderte Marketinglösungen und individuelle Beratung. Wir sind hier, um Ihre Fragen zu beantworten." />
-                <meta property="og:title" content="Kontakt - Erreichen Sie Uns | Superagentur" />
-                <meta property="og:description" content="Lassen Sie uns gemeinsam Ihre Marketingziele erreichen. Kontaktieren Sie Superagentur für eine maßgeschneiderte Lösung." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}contact`} />
+                <title>Kontaktieren Sie Superagentur</title>
+                <meta name="description" content="Wir freuen uns auf Ihre Anfrage. Kontaktieren Sie uns für individuelle digitale Marketinglösungen." />
+                <meta name="keywords" content="Kontakt, Marketinglösungen, Anfrage, Superagentur" />
+                <meta property="og:title" content="Kontaktieren Sie Superagentur" />
+                <meta property="og:description" content="Lassen Sie uns gemeinsam an Ihrer digitalen Marketingstrategie arbeiten. Wir stehen Ihnen zur Verfügung." />
+
                 <meta name="robots" content="index, follow" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
             <section className="3xl:pt-[120px] lg:pt-[96px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] px-6  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">
@@ -501,7 +314,7 @@ const Contact = () => {
                                 ref={captchaRef}
                                 size="invisible"
                                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                                hl="tr"
+                                hl="de"
                                 onChange={handleCaptchaChange} // Değişiklik kontrolü
                             />
                             {

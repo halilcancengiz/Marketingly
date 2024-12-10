@@ -3,7 +3,7 @@ import Button from '../components/Button'
 import { NavLink } from 'react-router-dom'
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
-
+import logo from "../assets/images/logo.webp"
 const NotFound = () => {
     const fadeInAnimationVariant = {
         initial: {
@@ -29,13 +29,36 @@ const NotFound = () => {
     return (
         <div className='3xl:pt-[186px] 3xl:pb-[198px] lg:pt-[148px] lg:pb-[158px] md:pt-[118px] md:pb-[126px] xs:pt-[94px] xs:pb-[100px] pt-[75px] pb-[80px] px-6 relative bg-secondary1 overflow-hidden'>
             <Helmet>
-                <title>404 - Seite nicht gefunden | Superagentur</title>
-                <meta name="description" content="Die gesuchte Seite ist nicht verfügbar. Bitte gehen Sie zurück zur Startseite oder nutzen Sie die Navigation." />
-                <meta property="og:title" content="404 - Seite nicht gefunden" />
-                <meta property="og:description" content="Oh, es scheint so, als ob da etwas schiefgelaufen ist. Gehen Sie zurück zur Startseite." />
+                <title>Seite nicht gefunden - Superagentur</title>
+                <meta name="description" content="Die von Ihnen gesuchte Seite wurde nicht gefunden. Bitte überprüfen Sie die URL oder navigieren Sie zurück zur Startseite." />
+                <meta name="keywords" content="Seite nicht gefunden, 404 Fehler, Superagentur" />
+                <meta property="og:title" content="Seite nicht gefunden - Superagentur" />
+                <meta property="og:description" content="Leider konnten wir die angeforderte Seite nicht finden. Nutzen Sie die Navigation, um zur gewünschten Seite zu gelangen." />
+
+                <meta name="robots" content="noindex, follow" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}not-found`} />
-                <meta name="robots" content="noindex, nofollow" />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}/404`} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={`${APP_CONFIG.base_url}/404`} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
             <div className='flex flex-col z-[10] max-w-[750px] w-full mx-auto'>
                 <motion.div

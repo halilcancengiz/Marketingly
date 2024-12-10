@@ -6,6 +6,7 @@ import check from "../assets/images/thankcheck.webp";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
+import logo from "../assets/images/logo.webp"
 
 const Thankyou = () => {
 
@@ -48,13 +49,36 @@ const Thankyou = () => {
     return (
         <div className='3xl:pt-[95px] lg:pt-[76px] md:pt-[60px] xs:pt-[50px] pt-10 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] bg-white flex flex-col items-center justify-center px-6 relative overflow-hidden'>
             <Helmet>
-                <title>Vielen Dank | Superagentur</title>
-                <meta name="description" content="Vielen Dank für Ihre Nachricht! Unser Team wird sich schnellstmöglich bei Ihnen melden." />
-                <meta property="og:title" content="Vielen Dank für Ihre Nachricht" />
-                <meta property="og:description" content="Das Superagentur Team wird sich bald bei Ihnen melden. Vielen Dank für Ihr Interesse!" />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}thank-you`} />
+                <title>Vielen Dank für Ihre Anfrage!</title>
+                <meta name="description" content="Ihre Anfrage wurde erfolgreich übermittelt. Erfahren Sie, wie es weitergeht, und lassen Sie uns gemeinsam an Ihrer Vision arbeiten." />
+                <meta name="keywords" content="Danke-Seite, Anfrage bestätigt, nächster Schritt" />
+                <meta property="og:title" content="Vielen Dank für Ihre Anfrage!" />
+                <meta property="og:description" content="Wir haben Ihre Anfrage erhalten und melden uns in Kürze mit den nächsten Schritten." />
+
                 <meta name="robots" content="index, follow" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

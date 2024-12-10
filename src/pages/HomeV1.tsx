@@ -6,8 +6,8 @@ import search from "../assets/images/search.webp";
 import system from "../assets/images/system.webp";
 import services from "../assets/images/homev1-services-image.webp";
 import check from "../assets/images/check.webp";
-import manImage from "../assets/images/manimage.png";
-import seoImage from "../assets/images/seoimage.png";
+import manImage from "../assets/images/manimage.webp";
+import seoImage from "../assets/images/seoimage.webp";
 import * as motion from "framer-motion/client";
 import { useEffect, useRef, useState } from "react";
 import blueCardImage from "../assets/images/blue.webp"
@@ -18,8 +18,9 @@ import { Helmet } from "react-helmet"
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 import APP_CONFIG from '../../public/config.ts';
-import marketingimage from "../assets/images/marketingimage.jpeg"
+import marketingimage from "../assets/images/marketingimage.webp"
 import ReCAPTCHA from "react-google-recaptcha";
+import logo from "../assets/images/logo.webp"
 
 export const HomeV1 = () => {
     const captchaRef = useRef<ReCAPTCHA>(null);
@@ -203,15 +204,36 @@ export const HomeV1 = () => {
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
-                <title>Home - Maximaler Erfolg mit Google! | Superagentur</title>
-                <meta name="description" content="Erreichen Sie Ihre Zielgruppe mit maßgeschneiderten Google Ads, SEO-Optimierungen und Unternehmenslistungen. Kontaktieren Sie Superagentur für maximale Reichweite." />
-                <meta property="og:title" content="Home - Maximaler Erfolg mit Google! | Superagentur" />
-                <meta property="og:description" content="Nutzen Sie Google Ads, SEO und Unternehmenslistungen für maximale Reichweite und Sichtbarkeit." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}`} />
+                <title>Superagentur- Ihre Marketingagentur für digitale Lösungen</title>
+                <meta name="description" content="Superagentur bietet maßgeschneiderte digitale Marketingstrategien, um Ihre Online-Präsenz zu stärken und nachhaltiges Geschäftswachstum zu fördern." />
+                <meta name="keywords" content="digitale Marketingagentur, SEO, Google Ads, Unternehmenslistungen, Online-Präsenz, Geschäftswachstum" />
                 <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Superagentur – Ihre Marketingagentur für digitale Lösungen" />
+                <meta property="og:description" content="Entdecken Sie innovative Marketinglösungen, die Ihre Marke erfolgreich im digitalen Raum positionieren." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
-
             <section className="3xl:pt-[145px] 3xl:pb-[145px] lg:pt-[116px] lg:pb-[116px] md:pt-[60px] md:pb-[93px] xs:pt-[50px] xs:pb-[74px] pt-[40px] pb-[60px] relative">
                 <div className="w-full h-full xs:px-6 px-4">
                     <div className="max-w-[1173px] w-full mx-auto lg:flex-row flex-col flex lg:items-center items-start justify-between z-[3]">
@@ -288,7 +310,6 @@ export const HomeV1 = () => {
                                 className="border border-neutral-300 max:w-[502.844px] 3xl:w-[89%] lg:w-[87%] w-[87%]  lg:ml-auto xs:rounded-[18px] rounded-[10px]"
                                 src={chart}
                                 alt="chart"
-                                loading="lazy"
                             />
                             <motion.img
                                 style={{
@@ -1119,7 +1140,7 @@ export const HomeV1 = () => {
                 ref={captchaRef}
                 size="invisible"
                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                hl="tr"
+                hl="de"
                 onChange={handleCaptchaChange} // Değişiklik kontrolü
             />
         </main>

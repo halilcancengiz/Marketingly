@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
-
+import logo from "../assets/images/logo.webp"
 const TermAndConditions = () => {
 
     const [activeSection, setActiveSection] = useState<string>("");
@@ -58,13 +58,36 @@ const TermAndConditions = () => {
         <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] 3xl:pt-[123px] 3xl:pb-[123px] px-6 relative bg-[#F8F9FF]">
 
             <Helmet>
-                <title>AGB und Datenschutz | Superagentur</title>
-                <meta name="description" content="Erfahren Sie mehr über die Allgemeinen Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen von Superagentur." />
-                <meta property="og:title" content="AGB und Datenschutz" />
-                <meta property="og:description" content="Detaillierte Informationen zu unseren Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}terms-and-conditions`} />
+                <title>Impressum von Superagentur</title>
+                <meta name="description" content="Rechtliche Informationen, Kontaktdaten und Verantwortlichkeiten von Superagentur in einem Überblick." />
+                <meta name="keywords" content="Impressum, rechtliche Informationen, Kontakt, Superagentur" />
+                <meta property="og:title" content="Impressum von Superagentur" />
+                <meta property="og:description" content="Alle rechtlichen Details und Kontaktdaten Ihrer Full-Service Marketingagentur." />
+
                 <meta name="robots" content="index, follow" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
 

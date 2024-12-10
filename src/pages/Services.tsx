@@ -6,6 +6,8 @@ import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
+import logo from "../assets/images/logo.webp"
+
 const Services = () => {
     const fadeInAnimationVariant = {
         initial: {
@@ -31,13 +33,36 @@ const Services = () => {
     return (
         <div className="flex flex-col">
             <Helmet>
-                <title>Dienstleistungen - Unsere Services</title>
-                <meta name="description" content="Unsere Dienstleistungen auf einen Blick. Google Ads, SEO und Unternehmenslistung für maximale Reichweite und Sichtbarkeit." />
-                <meta property="og:title" content="Dienstleistungen - Unsere Services" />
-                <meta property="og:description" content="Erfahren Sie mehr über unsere Google Ads Kampagnen, SEO-Optimierung und Unternehmenslistung für maximale Reichweite und Sichtbarkeit." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}services`} />
+                <title>Unsere Dienstleistungen – SEO, Ads und mehr</title>
+                <meta name="description" content="Entdecken Sie das vielfältige Dienstleistungsangebot von Superagentur, von SEO-Optimierung bis Google Ads." />
+                <meta name="keywords" content="Dienstleistungen, SEO, Google Ads, digitales Marketing, Unternehmenslistungen" />
+                <meta property="og:title" content="Unsere Dienstleistungen – SEO, Ads und mehr" />
+                <meta property="og:description" content="Profitieren Sie von unseren umfassenden Dienstleistungen für Ihren digitalen Erfolg." />
+
                 <meta name="robots" content="index, follow" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
 
             <section className="relative overflow-hidden z-[1]  flex items-center justify-center bg-secondary1 w-full 3xl:pt-[142px] lg:pt-[114px] md:pt-[91px] xs:pt-[72px] pt-[58px] 3xl:pb-[196px]  lg:pb-[118px] md:pb-[140px] xs:pb-[88px] pb-[100px] px-6">

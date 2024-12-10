@@ -5,6 +5,8 @@ import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
+import logo from "../assets/images/logo.webp"
+
 const PremiumPackageDetail = () => {
     const fadeInAnimationVariant = {
         initial: {
@@ -52,13 +54,36 @@ const PremiumPackageDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
-                <title>Premium-Paket - Unbegrenztes Werbebudget-Management | Superagentur</title>
-                <meta name="description" content="Das Premium-Paket von Superagentur bietet unbegrenztes Werbebudget-Management, strategische Planung und fortgeschrittene Analysen, um das volle Potenzial Ihrer Marke auszuschöpfen." />
-                <meta property="og:title" content="Premium-Paket - Superagentur" />
-                <meta property="og:description" content="Das Premium-Paket bietet umfassende Lösungen für fortgeschrittenes Marketing, von Content-Marketing bis hin zu erweiterten Analysen." />
-                <meta property="og:type" content="product" />
-                <meta property="og:url" content={`${import.meta.env.VITE_BASE_URL}premium-package-detail`} />
+                <title>Google Ads Premium-Paket – Maximale Performance</title>
+                <meta name="description" content="Unser Premium-Paket bietet umfassende Google Ads-Lösungen für optimale Ergebnisse und nachhaltigen Erfolg." />
+                <meta name="keywords" content="Google Ads, Premium-Paket, maximale Performance, nachhaltiger Erfolg" />
+                <meta property="og:title" content="Google Ads Premium-Paket – Maximale Performance" />
+                <meta property="og:description" content="Erzielen Sie höchste Performance und Conversion-Raten mit unseren Premium-Strategien." />
+
                 <meta name="robots" content="index, follow" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
                 <motion.div

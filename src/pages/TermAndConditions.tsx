@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
+import logo from "../assets/images/logo.webp"
+
 const TermAndConditions = () => {
 
     const [activeSection, setActiveSection] = useState<string>("");
@@ -69,13 +71,36 @@ const TermAndConditions = () => {
         <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] 3xl:pt-[123px] 3xl:pb-[123px] px-6 relative bg-[#F8F9FF]">
 
             <Helmet>
-                <title>AGB und Datenschutz | Superagentur</title>
-                <meta name="description" content="Erfahren Sie mehr über die Allgemeinen Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen von Superagentur." />
-                <meta property="og:title" content="AGB und Datenschutz" />
-                <meta property="og:description" content="Detaillierte Informationen zu unseren Geschäftsbedingungen, Datenschutzrichtlinien und Nutzungsbedingungen." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}terms-and-conditions`} />
+                <title>Datenschutzrichtlinien von Superagentur</title>
+                <meta name="description" content="Informieren Sie sich, wie Superagentur Ihre Daten schützt und DSGVO-konform verwendet." />
+                <meta name="keywords" content="Datenschutz, Datenverwendung, Datensicherheit, DSGVO" />
+                <meta property="og:title" content="Datenschutzrichtlinien von Superagentur" />
+                <meta property="og:description" content="Ihre Privatsphäre ist uns wichtig. Lesen Sie, wie wir Ihre Daten sicher und verantwortungsvoll behandeln." />
+
                 <meta name="robots" content="index, follow" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
 
@@ -102,9 +127,9 @@ const TermAndConditions = () => {
                     className="flex flex-col h-full rounded-[24px] bg-white w-full lg:pt-[80px] md:pt-[70px] xs:pt-[60px] pt-[50px] lg:px-[91px] md:px-[76px] xs:px-[35px] px-[25px] lg:pb-[108px] md:pb-[90px] xs:pb-[75px] pb-[63px] border border-neutral-300">
                     {/* <div id="terms-and-conditions" className="flex flex-col">
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Datenschutz</div>
-                        <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua massa sed elementum tempus egestas sed sed risus pretium quam amet nulla facilisi morbi tempus iaculis urna <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">et malesuada</a> fames ac turpis egestas sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.</div>
+                        <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua massa sed elementum tempus egestas sed sed risus pretium quam amet nulla facilisi morbi tempus iaculis urna <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">et malesuada</a> fames ac turpis egestas sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.</div>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px] lg:mb-4 mb-[10px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px] mt-2">Use Terms for Marketing X app</div>
-                        <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">Velit sed ullamcorper morbi tincidunt ornare massa eget volutpat est velit egestas dui id ornare arcu. Facilisis sed odio morbi quis commodo vitae proin sagittis nisl rhoncus mattis rhoncus <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">nunc scelerisque</a> viverra mauris in vitae suscipit tellus mauris a purus in massa tempor nec feugiat nisl pretium fusce id nunc sed velit dignissim sodales bibendum at varius vel pharetra pharetra massa massa ultricies mi ornare aenean euismod elementum nisi quis eleifend ut tortor pretium viverra suspendisse potenti nullam ac tortor volutpat commodo sed egestas egestas fringilla phasellus faucibus.</div>
+                        <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">Velit sed ullamcorper morbi tincidunt ornare massa eget volutpat est velit egestas dui id ornare arcu. Facilisis sed odio morbi quis commodo vitae proin sagittis nisl rhoncus mattis rhoncus <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">nunc scelerisque</a> viverra mauris in vitae suscipit tellus mauris a purus in massa tempor nec feugiat nisl pretium fusce id nunc sed velit dignissim sodales bibendum at varius vel pharetra pharetra massa massa ultricies mi ornare aenean euismod elementum nisi quis eleifend ut tortor pretium viverra suspendisse potenti nullam ac tortor volutpat commodo sed egestas egestas fringilla phasellus faucibus.</div>
                     </div> */}
                     {/* <hr className="lg:my-[84px] md:my-[70px] xs:my-[60px] my-[50px]" /> */}
                     <div id="datenschutz" className="flex flex-col">
@@ -121,7 +146,7 @@ const TermAndConditions = () => {
                             Sprache, damit Sie wirklich verstehen, was mit Ihren Daten passiert.
                         </div>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">2. Allgemeine Informationen</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5 flex flex-col gap-[20px]">
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5 flex flex-col gap-[20px]">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 2.1. Verarbeitung von personenbezogenen Daten und andere Begriffe: <br />
                                 Datenschutz gilt bei der Verarbeitung von personenbezogenen Daten.
@@ -152,7 +177,7 @@ const TermAndConditions = () => {
                                 Den Verantwortlichen erreichen Sie unter: <br />
                                 Colacy GmbH <br />
                                 Brucknerstraße 2, 75015 Bretten <br />
-                                <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">kontakt@superagentur-marketing.de</a>
+                                <a href="mailto:kontakt@superagentur-marketing.de" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">kontakt@superagentur-marketing.de</a>
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
@@ -171,7 +196,7 @@ const TermAndConditions = () => {
                                 unentgeltliche Auskunft über Herkunft, Empfänger und Zweck Ihrer
                                 gespeicherten personenbezogenen Daten. Außerdem können Sie die
                                 Berichtigung, Sperrung oder Löschung dieser Daten verlangen oder sich bei
-                                der zuständigen Datenschutzaufsichtsbehörde beschweren. Eine erteilte
+                                der zuständigen <span className="break-all">Datenschutzaufsichtsbehörde</span> beschweren. Eine erteilte
                                 Einwilligung können Sie jederzeit widerrufen.
                                 Wie diese Rechte im Detail aussehen und wie sie wahrzunehmen sind, finden
                                 Sie im letzten Abschnitt dieser Datenschutzerklärung.
@@ -181,7 +206,7 @@ const TermAndConditions = () => {
                                 Datenschutz ist für uns mehr als nur eine lästige Pflicht! Personenbezogene
                                 Daten haben einen großen Wert und ein achtsamer Umgang mit diesen Daten
                                 sollte in unserer digitalisierten Welt selbstverständlich sein. Außerdem sollen
-                                Sie als Website-Besucher in der Lage sein, selbst zu entscheiden, was, wann und durch wen mit Ihren Daten „passiert“. Deswegen verpflichten wir uns, alle
+                                Sie als Website-Besucher in der Lage sein, selbst zu entscheiden, was, wann und durch wen mit Ihren Daten „passiert". Deswegen verpflichten wir uns, alle
                                 gesetzlichen Bestimmungen einzuhalten, erheben nur die für uns
                                 notwendigen Daten und behandeln diese selbstverständlich vertraulich.
                             </li>
@@ -197,7 +222,7 @@ const TermAndConditions = () => {
                                 wurde. <br />
                                 Wir löschen Ihre Daten dann, wenn der Zweck und die Rechtsgrundlage zur
                                 Verarbeitung wegfallen und der Löschung zudem keine anderen gesetzlichen
-                                Verpflichtungen entgegenstehen. Einen ‚guten‘ Überblick darüber gibt auch
+                                Verpflichtungen entgegenstehen. Einen ‚guten' Überblick darüber gibt auch
                                 Art. 17 DSGVO. <br />
                                 Alle weiterführenden Informationen entnehmen Sie bitte dieser
                                 Datenschutzerklärung und wenden sich bei konkreten Fragen an den
@@ -226,8 +251,8 @@ const TermAndConditions = () => {
                                 Folgenden Hoster setzen wir ein: <br />
                                 IONOS <br />
                                 IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland. <br />
-                                <a href="mailto:info@ionos.de" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">info@ionos.de</a> <br />
-                                <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">https://www.ionos.de/terms-gtc/datenschutzerklaerung/.</a>
+                                <a href="mailto:info@ionos.de" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">info@ionos.de</a> <br />
+                                <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">https://www.ionos.de/terms-gtc/datenschutzerklaerung/.</a>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 2.9. Rechtsgrundlagen: <br />
@@ -284,7 +309,7 @@ const TermAndConditions = () => {
                             erhoben werden, zu welchem Zweck dies geschieht und aufgrund welcher
                             Rechtsgrundlage. <br />
                         </div>
-                        <ol className="md:my-4 my-3 list-inside pl-5 flex flex-col gap-[20px]">
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5 flex flex-col gap-[20px]">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 3.1. Datenerhebung beim Aufruf der Website: <br />
                                 Durch das Aufrufen der Website werden automatisch Informationen in
@@ -329,7 +354,7 @@ const TermAndConditions = () => {
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 3.2. Cookies
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.2.1. Allgemeines <br />
                                 Diese Website nutzt sogenannte Cookies. Dabei handelt es sich um einen
                                 Datensatz, eine Information, die im Browser Ihres Endgeräts gespeichert wird
@@ -341,7 +366,7 @@ const TermAndConditions = () => {
                                 haben.
 
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.2.2. Ablehnen von Cookies <br />
                                 Alle Cookies, die nicht technisch notwendig sind, können Sie direkt über unser
                                 Cookie-Consent-Tool verwalten. <br />
@@ -350,41 +375,41 @@ const TermAndConditions = () => {
                                 Hier finden Sie die entsprechenden Verlinkungen zu häufig benutzten
                                 Browsern: <br />
                                 Mozilla Firefox: <br />
-                                <a href="https://support.mozilla.org/de/kb/cookies-und-website-datenin-firefox-loschen?redirectslug=Cookies+l%C3%B6schen&redirectlocale=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://support.mozilla.org/de/kb/cookies-und-website-datenin-firefox-loschen?redirectslug=Cookies+l%C3%B6schen&redirectlocale=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://support.mozilla.org/de/kb/cookies-und-website-datenin-firefox-loschen?redirectslug=Cookies+l%C3%B6schen&redirectlocale=de
                                 </a>
                                 <br />
                                 Google Chrome: <br />
-                                <a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&hl=de
                                 </a>
                                 <br />
                                 Microsoft Edge: <br />
-                                <a href="https://support.microsoft.com/de-de/windows/l%C3%B6schen-und-verwalten-von-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://support.microsoft.com/de-de/windows/l%C3%B6schen-und-verwalten-von-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://support.microsoft.com/de-de/windows/l%C3%B6schen-und-verwalten-von-cookies-168dab11-0753-043d-7c16-ede5947fc64d
                                 </a> <br />
                                 Safari: <br />
-                                <a href="https://support.apple.com/de-de/guide/mdm/mdmf7d5714d4/web" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://support.apple.com/de-de/guide/mdm/mdmf7d5714d4/web" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://support.apple.com/de-de/guide/mdm/mdmf7d5714d4/web
                                 </a> und <br />
-                                <a href="https://support.apple.com/de-de/guide/safari/sfri11471/mac" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://support.apple.com/de-de/guide/safari/sfri11471/mac" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://support.apple.com/de-de/guide/safari/sfri11471/mac
                                 </a>. Sie einen
                                 anderen Browser nutzen, empfiehlt es sich den Namen Ihres Browsers und
-                                ‚Cookies löschen und verwalten‘ in eine Suchmaschine einzugeben und dem
+                                ‚Cookies löschen und verwalten' in eine Suchmaschine einzugeben und dem
                                 offiziellen Link zu Ihrem Browser zu folgen. <br />
                                 Alternativ können Sie Ihre Cookie-Einstellungen auch unter <br />
-                                <a href=" www.aboutads.info/choices/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href=" www.aboutads.info/choices/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     www.aboutads.info/choices/
                                 </a> <br />
-                                <a href="www.youronlinechoices.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="www.youronlinechoices.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     www.youronlinechoices.com
                                 </a> <br />
                                 Wir müssen Sie allerdings darauf hinweisen, dass eine umfassende
                                 Blockierung/Löschung von Cookies zu Beeinträchtigungen bei der Nutzung
                                 der Website führen kann.
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.2.3. Technisch notwendige Cookies <br />
                                 Wir setzen auf dieser Website technisch notwendige Cookies ein, damit
                                 unsere Website fehlerfrei und gemäß den geltenden Gesetzen funktioniert.
@@ -394,7 +419,7 @@ const TermAndConditions = () => {
                                 Rechtsgrundlage hierfür ist je nach Einzelfall Art. 6 Abs. 1 lit. b, c und/oder f
                                 DSGVO.
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.2.4. Technisch nicht notwendige Cookies <br />
                                 Außerdem verwenden wir auf unserer Website auch solche Cookies, die
                                 technisch nicht notwendig sind. Diese Cookies dienen unter anderem dazu,
@@ -408,7 +433,7 @@ const TermAndConditions = () => {
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 3.3. Datenverarbeitung durch Nutzereingabe
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.3.1. Eigene Datenerhebung <br />
                                 Wir bieten folgende (Dienst-)Leistung auf unserer Website an: Google Ads,
                                 SEO, Unternehmenslistung, Social Media Ads, Marketingdienstleistungen. <br />
@@ -424,9 +449,9 @@ const TermAndConditions = () => {
                                 Die Daten werden gelöscht, sobald der jeweilige Zweck entfällt und es gemäß
                                 den gesetzlichen Vorgaben möglich ist.
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.3.2. Kontaktaufnahme <br />
-                                <ul className="pl-5 my-[20px]">
+                                <ul className="xs:pl-5 pl-2.5 my-[20px]">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                         <span className="mr-2">a)</span>
                                         E-Mail <br />
@@ -442,7 +467,7 @@ const TermAndConditions = () => {
                                         <span className="mr-2">b)</span>
                                         Telefon <br />
                                         Wenn Sie per Telefon mit uns in Kontakt treten, können die Anrufdaten auf
-                                        dem jeweiligen Endgerät und beim eingesetzten Telekommunikationsanbieter
+                                        dem jeweiligen Endgerät und beim eingesetzten <span className="break-all">Telekommunikationsanbieter</span>
                                         pseudonymisiert gespeichert werden. Während des Telefonats erhobene
                                         personenbezogene Daten werden ausschließlich verarbeitet, um Ihre Anfrage
                                         zu bearbeiten. Je nach Anliegen ist die Rechtsgrundlage hierfür regelmäßig
@@ -471,10 +496,10 @@ const TermAndConditions = () => {
                                         Entwicklung. Eine Datenübermittlung an Dritte findet nicht statt. <br />
                                         IONOS <br />
                                         IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland <br />
-                                        <a href="mailto:info@ionos.de" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                        <a href="mailto:info@ionos.de" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                             info@ionos.de
                                         </a> <br />
-                                        <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                        <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                             https://www.ionos.de/terms-gtc/datenschutzerklaerung/
                                         </a>
 
@@ -483,7 +508,7 @@ const TermAndConditions = () => {
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                         <span className="mr-2">d)</span>
                                         WhatsApp Business <br />
-                                        <a href="https://www.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0." target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                        <a href="https://www.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                             https://www.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0.
                                         </a>
 
@@ -491,9 +516,9 @@ const TermAndConditions = () => {
 
                                 </ul>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.3.3. Fragebögen/Formulare <br />
-                                <ul className="pl-5 my-[20px]">
+                                <ul className="xs:pl-5 pl-2.5 my-[20px]">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                         <span className="mr-2">a)</span>
                                         Google Forms <br />
@@ -524,7 +549,7 @@ const TermAndConditions = () => {
                                         Zwingend gesetzliche Bestimmungen zu Aufbewahrungsfristen bleiben
                                         unberührt. <br />
                                         Nähere Informationen finden Sie hier: <br />
-                                        <a href=" https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                        <a href=" https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                             https://policies.google.com/privacy?hl=de.
                                         </a>
 
@@ -561,13 +586,13 @@ const TermAndConditions = () => {
                                         widerrufen wird oder der Zweck für die Speicherung der Daten entfällt.
                                         Zwingend gesetzliche Bestimmungen zu Aufbewahrungsfristen bleiben
                                         unberührt. <br />
-                                        Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                        Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                         (SCC) der EU-Kommission. <br />
                                         Nähere Informationen zu der Datenverarbeitung von Webflow: <br />
 
-                                        <a href="https://webflow.com/legal/cookie-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">https://webflow.com/legal/cookie-policy.</a> <br />
-                                        <a href="https://webflow.com/legal/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">https://webflow.com/legal/privacy.</a> <br />
-                                        <a href="https://webflow.com/legal/eu-privacy-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">https://webflow.com/legal/eu-privacy-policy.</a>
+                                        <a href="https://webflow.com/legal/cookie-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">https://webflow.com/legal/cookie-policy.</a> <br />
+                                        <a href="https://webflow.com/legal/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">https://webflow.com/legal/privacy.</a> <br />
+                                        <a href="https://webflow.com/legal/eu-privacy-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">https://webflow.com/legal/eu-privacy-policy.</a>
                                     </li>
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                         <span className="mr-2">c)</span>
@@ -597,11 +622,11 @@ const TermAndConditions = () => {
                                         ClickUp hat Maßnahmen zum Schutz der Daten implementiert, einschließlich
                                         Verschlüsselung und Zugriffskontrollen. Die Daten werden auf Servern in den
                                         USA gespeichert. Für die Übermittlung personenbezogener Daten in die USA
-                                        stützen wir uns auf die EU-Standardvertragsklauseln als geeignete Garantie gemäß Art. 46 DSGVO. ClickUp hat sich zur Einhaltung der DSGVO
+                                        stützen wir uns auf die EU-<span className="break-all">Standardvertragsklauseln</span> als geeignete Garantie gemäß Art. 46 DSGVO. ClickUp hat sich zur Einhaltung der DSGVO
                                         verpflichtet. <br />
                                         Weitere Informationen zum Datenschutz bei ClickUp finden sich in deren
                                         Datenschutzerklärung: <br />
-                                        <a href="https://clickup.com/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                        <a href="https://clickup.com/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                             https://clickup.com/privacy.
                                         </a>
 
@@ -611,7 +636,7 @@ const TermAndConditions = () => {
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 3.4. Cookie-Consent-Tool
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.4.1 Cookiebot <br />
                                 Damit auf unserer Website nur die Cookies gesetzt werden, für die es eine
                                 Rechtsgrundlage gibt, nutzen wir das Consent-Management-Tool Cookiebot
@@ -635,7 +660,7 @@ const TermAndConditions = () => {
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 3.5. Newsletter
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.1. Mailchimp <br />
                                 Wir verwenden Mailchimp zur Bereitstellung unseres Newsletters. <br />
                                 Mailchimp ist ein Dienst zur Versendung von Newslettern und wird angeboten
@@ -660,29 +685,29 @@ const TermAndConditions = () => {
                                 Abs. 1 TDDDG. Die Einwilligung ist jederzeit mit deabonnieren des
                                 Newsletters wiederrufbar. Die Rechtmäßigkeit der bereits erfolgten
                                 Verarbeitungen bleibt von einem ggf. erfolgten Widerruf unberührt. <br />
-                                Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                 (SCC) der EU-Kommission. <br />
-                                <a href="https://mailchimp.com/eu-us-data-transfer-statement/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://mailchimp.com/eu-us-data-transfer-statement/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://mailchimp.com/eu-us-data-transfer-statement/
                                 </a> <br />
-                                <a href="https://mailchimp.com/legal/data-processing-addendum/#Annex_C_-_Standard_Contractual_Clauses" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://mailchimp.com/legal/data-processing-addendum/#Annex_C_-_Standard_Contractual_Clauses" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://mailchimp.com/legal/data-processing-addendum/#Annex_C_-_Standard_Contractual_Clauses.
                                 </a> <br />
                                 Die Daten werden bei Vertragsende zwischen uns und Mailchimp gelöscht, es
                                 sei denn, Sie widerrufen Ihre Einwilligung zuvor. In diesem Fall werden die
                                 Daten mit dem Widerruf der Einwilligung gelöscht. <br />
                                 Nähere Informationen finden Sie auch unter <br />
-                                <a href="https://mailchimp.com/de/help/mailchimp-european-data-transfers/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://mailchimp.com/de/help/mailchimp-european-data-transfers/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://mailchimp.com/de/help/mailchimp-european-data-transfers/
                                 </a> und <br />
-                                <a href="https://mailchimp.com/de/gdpr/erfahren" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://mailchimp.com/de/gdpr/erfahren" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://mailchimp.com/de/gdpr/erfahren
                                 </a> Sie unter <br />
-                                <a href="https://mailchimp.com/legal/cookies/https://www.intuit.com/privacy/statement/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://mailchimp.com/legal/cookies/https://www.intuit.com/privacy/statement/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://mailchimp.com/legal/cookies/https://www.intuit.com/privacy/statement/.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.2. Cleverreach <br />
                                 Wir verwenden Cleverreach zur Bereitstellung unseres Newsletters. Dieser
                                 Dienst wird angeboten von der CleverReach GmbH& Co. KG,
@@ -709,17 +734,17 @@ const TermAndConditions = () => {
                                 dem Interesse des Website-Besuchers als auch unserem Interesse, einen
                                 Newsletter nach den gesetzlichen Vorgaben zu benutzen/betreiben. <br />
                                 Weitere Details: <br />
-                                <a href="https://www.cleverreach.com/de/funktionen/reporting-und-tracking/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.cleverreach.com/de/funktionen/reporting-und-tracking/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.cleverreach.com/de/funktionen/reporting-und-tracking/.
                                 </a><br />
-                                <a href="https://www.cleverreach.com/de/datenschutz/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.cleverreach.com/de/datenschutz/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.cleverreach.com/de/datenschutz/.
                                 </a><br />
                                 Außerdem nutzen wir weitere E-Mail Services von CleverElements zur
                                 Erfüllung unserer vertragsmäßigen Leistungen und der Kundenverwaltung.
                                 Rechtsgrundlage dafür ist Art. 6 Abs. 1 lit. b DSGVO.
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.3. Rapidmail <br />
                                 Wir verwenden Rapidmail zur Bereitstellung unseres Newsletters. Dieser
                                 Dienst wird angeboten von der rapidmail GmbH, Augustinerplatz 2, 79098
@@ -748,14 +773,14 @@ const TermAndConditions = () => {
                                 dem Interesse des Website-Besuchers als auch unserem Interesse, einen
                                 Newsletter nach den gesetzlichen Vorgaben zu benutzen/betreiben. <br />
                                 Weitere Details: <br />
-                                <a href="https://de.rapidmail.wiki/kategorien/statistiken/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://de.rapidmail.wiki/kategorien/statistiken/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://de.rapidmail.wiki/kategorien/statistiken/.
                                 </a><br />
-                                <a href="https://www.rapidmail.de/datensicherheit" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.rapidmail.de/datensicherheit" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.rapidmail.de/datensicherheit.
                                 </a><br />
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.4. Brevo <br />
                                 Wir verwenden Brevo zur Bereitstellung unseres Newsletters. Dieser Dienst
                                 wird angeboten von der Sendinblue GmbH, Köpenicker Str. 126, 10179
@@ -785,12 +810,12 @@ const TermAndConditions = () => {
                                 dem Interesse des Website-Besuchers als auch unserem Interesse einen
                                 Newsletter nach den gesetzlichen Vorgaben zu benutzen/betreiben. <br />
                                 Weitere Details: <br />
-                                <a href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.brevo.com/de/legal/privacypolicy/.
                                 </a>
 
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.5. IONOS <br />
                                 Wir verwenden IONOS zur Bereitstellung unseres Newsletters. Dieser Dienst
                                 wird angeboten von der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur,
@@ -822,11 +847,11 @@ const TermAndConditions = () => {
                                 dem Interesse des Website-Besuchers als auch unsrem Interesse einen
                                 Newsletter nach den gesetzlichen Vorgaben zu benutzen/betreiben. <br />
                                 Weitere Details: <br />
-                                <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.ionos.de/terms-gtc/datenschutzerklaerung/.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.6. Hubspot <br />
                                 Wir verwenden Hubspot zur Bereitstellung unseres Newsletters. Dieser Dienst
                                 wird angeboten von Hubspot Inc., 25 Street, Cambridge, MA 02141 USA. <br />
@@ -849,11 +874,11 @@ const TermAndConditions = () => {
                                 der Fall, werden die Daten aus der Verteilerliste gelöscht. <br />
                                 Hubspot ist nach dem EU-US Data Privacy Framework zertifiziert. <br />
                                 Weitere Details: <br />
-                                <a href="https://legal.hubspot.com/de/privacy-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://legal.hubspot.com/de/privacy-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://legal.hubspot.com/de/privacy-policy.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.7. Eigenentwicklung <br />
                                 Die Bereitstellung unseres Newsletters haben wir eigenständig entwickelt. <br />
                                 Dadurch können wir unseren Newsletter organisieren und analysieren. Die
@@ -867,7 +892,7 @@ const TermAndConditions = () => {
                                 werden oder es kann eine Aufforderung zur Löschung der Daten abgegeben
                                 werden.
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.8. Pipedrive <br />
                                 Wir verwenden Pipedrive zur Bereitstellung unseres Newsletters. Dieser
                                 Dienst wird angeboten von der Pipedrive OÜ, Mustamäe tee 3a, 10615
@@ -891,11 +916,11 @@ const TermAndConditions = () => {
                                 sei denn, der Website-Besucher widerruft zuvor seine Einwilligung. Ist dies
                                 der Fall, werden die Daten aus der Verteilerliste gelöscht. <br />
                                 Weitere Informationen: <br />
-                                <a href="https://www.pipedrive.com/en/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.pipedrive.com/en/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.pipedrive.com/en/privacy.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.9. Zapier <br />
                                 Wir verwenden die E-Mail-Marketing und Newsletter Funktion von Zapier zur
                                 Bereitstellung unseres Newsletters. Dieser Dienst wird angeboten von der
@@ -919,11 +944,11 @@ const TermAndConditions = () => {
                                 denn, der Website-Besucher widerruft zuvor seine Einwilligung. Ist dies der
                                 Fall, werden die Daten aus der Verteilerliste gelöscht. <br />
                                 Weitere Informationen: <br />
-                                <a href="https://zapier.com/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://zapier.com/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://zapier.com/privacy.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.5.10. Webflow <br />
                                 Wir verwenden die E-Mail-Marketing und Newsletter Funktion von Webflow
                                 zur Bereitstellung unseres Newsletters. Dieser Dienst wird angeboten von der
@@ -949,18 +974,18 @@ const TermAndConditions = () => {
                                 seine Einwilligung. Ist dies der Fall, werden die Daten aus der Verteilerliste
                                 gelöscht. <br />
                                 Weitere Informationen: <br />
-                                <a href="https://webflow.com/legal/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://webflow.com/legal/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://webflow.com/legal/privacy.
                                 </a>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 3.6. Analyse- und Trackingtools
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.1. Google Analytics <br />
                                 Wir nutzen auf dieser Website Google Analytics. Google Analytics ist ein
                                 Webanalysedienst. Dieser Dienst wird angeboten von der Google Irland
-                                Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland. <br />
+                                Limited („Google"), Gordon House, Barrow Street, Dublin 4, Irland. <br />
                                 Google Analytics verwendet Cookies, um den Nutzer wiederzuerkennen und
                                 somit das Nutzungsverhalten zu analysieren. Diese Cookies werden nur mit
                                 Einwilligung gesetzt. Die Einwilligung kann jederzeit widerrufen und in
@@ -984,7 +1009,7 @@ const TermAndConditions = () => {
                                 gesammelten Informationen (wie z.B. die IP-Adresse) an Google versendet
                                 und durch Google genutzt werden. Das Plugin und weitere Informationen
                                 dazu finden Sie unter <br />
-                                <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://tools.google.com/dlpage/gaoptout?hl=de.
                                 </a> <br />
                                 Ansonsten hängt die Speicherdauer von der Art der verarbeiteten Daten ab.
@@ -992,15 +1017,15 @@ const TermAndConditions = () => {
                                 sie automatisch gelöscht werden. Die maximale Lebensdauer eines Google
                                 Analytics Cookies sind zwei Jahre. <br />
                                 Weitere Informationen zur Datennutzung durch Google finden Sie auch unter <br />
-                                <a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://support.google.com/analytics/answer/6004245?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://support.google.com/analytics/answer/6004245?hl=de.
                                 </a> <br />
                                 Für alle weiteren Rückfragen können Sie sich auch direkt an <br />
-                                <a href="mailto:support-deutschland@google.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="mailto:support-deutschland@google.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     support-deutschland@google.com
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.2. Google Consent Mode <br />
                                 Wir verwenden auf unserer Website den Google Consent Mode, um die
                                 Nutzung von Google-Diensten basierend auf Ihrer Einwilligung anzupassen.
@@ -1018,14 +1043,17 @@ const TermAndConditions = () => {
                                 Funktionen der auf der Webseite eingesetzten einwilligungsbedürftigen
                                 Google-Dienste besser steuern und verwenden zu können. Rechtsgrundlage
                                 der Verarbeitung ist Art. 6 Abs. 1 S. 1 lit. f DSGVO. <br />
-                                Weitere Informationen zum Google Consent Mode finden Sie unter:
-                                https://support.google.com/analytics/answer/9976101.
+                                Weitere Informationen zum Google Consent Mode finden Sie unter: <br />
+                                <a href="https://support.google.com/analytics/answer/9976101" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://support.google.com/analytics/answer/9976101
+                                </a>
+
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.3. Google Maps <br />
                                 Wir nutzen auf dieser Website Google Maps. Google Maps ist ein Web-
                                 Mapping-Dienst. Dieser Dienst wird angeboten von der Google Irland Limited
-                                („Google“), Gordon House, Barrow Street, Dublin 4, Irland. <br />
+                                („Google"), Gordon House, Barrow Street, Dublin 4, Irland. <br />
                                 Bei der Nutzung von Google Maps wird die IP-Adresse gespeichert. Diese
                                 Daten werden in der Regel an einen Server von Google in den USA
                                 übertragen und gespeichert. Hierauf haben wir keinen Einfluss. Google kann
@@ -1037,25 +1065,25 @@ const TermAndConditions = () => {
                                 Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG,
                                 soweit diese Einwilligung den Zugriff auf Informationen im Endgerät des
                                 Nutzers oder die Speicherung von Cookies im Sinne des TDDDG umfasst. <br />
-                                Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                 (SCC) der EU-Kommission. <br />
                                 Weitere Details: <br />
-                                <a href="https://privacy.google.com/businesses/gdprcontrollerterms/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://privacy.google.com/businesses/gdprcontrollerterms/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://privacy.google.com/businesses/gdprcontrollerterms/
                                 </a> und <br />
-                                <a href="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://privacy.google.com/businesses/gdprcontrollerterms/sccs/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://privacy.google.com/businesses/gdprcontrollerterms/sccs/
                                 </a> <br />
-                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://policies.google.com/privacy?hl=de.
                                 </a>
 
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.4. YouTube <br />
                                 Auf dieser Website binden wir YouTube-Videos ein. YouTube ist eine Online-
                                 Videoplattform. Dieser Dienst wird angeboten von der Google Irland Limited
-                                („Google“), Gordon House, Barrow Street, Dublin 4, Irland. <br />
+                                („Google"), Gordon House, Barrow Street, Dublin 4, Irland. <br />
                                 Sobald Sie auf unserer Website ein Video starten, wird eine Verbindung zu
                                 den Servern von YouTube hergestellt. YouTube kann nach dem Start eines
                                 Videos Cookies auf dem Endgerät des Website-Besuchers setzen, um
@@ -1068,15 +1096,15 @@ const TermAndConditions = () => {
                                 Endgerät des Nutzers oder die Speicherung von Cookies im Sinne des
                                 TDDDG umfasst. Diese Einwilligung ist jederzeit widerrufbar. <br />
                                 Weitere Informationen: <br />
-                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://policies.google.com/privacy?hl=de.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.5. Google Conversion-Tracking <br />
                                 Diese Website nutzt Google Conversion Tracking. Google Conversion
                                 Tracking ist ein Webanalysedienst. Dieser Dienst wird angeboten von der
-                                Google Irland Limited („Google“), Gordon House, Barrow Street, Dublin 4,
+                                Google Irland Limited („Google"), Gordon House, Barrow Street, Dublin 4,
                                 Irland. <br />
                                 Google Conversion-Tracking setzt Cookies zur Identifikation. Wir erfahren die
                                 Nutzerzahl und welche Aktionen auf der Website durch die Website-Besucher
@@ -1086,16 +1114,16 @@ const TermAndConditions = () => {
                                 Die Daten werden gelöscht, sobald sie für die Verarbeitungszwecke nicht
                                 mehr benötigt werden. <br />
                                 Weitere Details: <br />
-                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://policies.google.com/privacy?hl=de.
                                 </a>
 
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.6. Google Ads Remarketing <br />
                                 Auf dieser Website nutzen wir Google Ads Remarketing. Google Ads
                                 Remarketing ist ein Webanalysedienst. Dieser Dienst wird angeboten von der
-                                Google Irland Limited („Google“), Gordon House, Barrow Street, Dublin 4,
+                                Google Irland Limited („Google"), Gordon House, Barrow Street, Dublin 4,
                                 Irland. <br />
                                 Google Ads Remarketing setzt Cookies zu folgendem Zweck: Website-
                                 Besucher können einer bestimmten Zielgruppe zugeordnet werden und
@@ -1103,18 +1131,18 @@ const TermAndConditions = () => {
                                 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
                                 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. <br />
                                 Weitere Details: <br />
-                                <a href="https://www.google.com/settings/ads/onweb/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.google.com/settings/ads/onweb/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.google.com/settings/ads/onweb/
                                 </a> <br />
-                                <a href="https://policies.google.com/technologies/ads?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://policies.google.com/technologies/ads?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://policies.google.com/technologies/ads?hl=de.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.7. Google Tag Manager <br />
                                 Auf dieser Website nutzen wir Google Tag Manager. Google Tag Manager ist
                                 ein Webanalysedienst. Dieser Dienst wird angeboten von der Google Irland
-                                Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland. <br />
+                                Limited („Google"), Gordon House, Barrow Street, Dublin 4, Irland. <br />
                                 Der Google Tag Manager speichert keine Cookies und analysiert auch nicht
                                 eigenständig. Er dient lediglich der Verwaltung der über ihn eingebundenen
                                 Tools. Die IP-Adresse des Website-Besuchers wird jedoch erfasst, welche an
@@ -1124,14 +1152,14 @@ const TermAndConditions = () => {
                                 Website einzubinden und zu verwalten. <br />
                                 Weitere Details: <br />
 
-                                <a href="https://policies.google.com/privacy?hl=en" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://policies.google.com/privacy?hl=en" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://policies.google.com/privacy?hl=en.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.8. Google Ads <br />
                                 Wir nutzen auf dieser Website Google Ads. Google Ads ist ein Online-
-                                Werbeprogramm der Google Irland Limited („Google“), Gordon House, Barrow
+                                Werbeprogramm der Google Irland Limited („Google"), Gordon House, Barrow
                                 Street, Dublin 4, Irland. <br />
                                 Der Dienst ermöglicht es uns, Werbeanzeigen in der Google-Suchmaschine
                                 an bestimmte Keywords zu knüpfen und anhand von vorhandenen
@@ -1139,14 +1167,14 @@ const TermAndConditions = () => {
                                 das Conversion-Tracking Cookies genutzt. <br />
                                 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
                                 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. <br />
-                                Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                 (SCC) der EU-Kommission. <br />
                                 Weitere Details: <br />
-                                <a href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://privacy.google.com/businesses/controllerterms/mccs/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://privacy.google.com/businesses/controllerterms/mccs/.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.9. Meta-Pixel <br />
                                 Wir nutzen auf dieser Website Meta-Pixel. Meta-Pixel ist ein Conversion-
                                 Tracking-Tool. Dieser Dienst wird angeboten von der Meta Platforms Ireland
@@ -1159,7 +1187,7 @@ const TermAndConditions = () => {
                                 jeweiligen Nutzerprofil hergestellt werden kann. <br />
                                 Die erfassten Daten werden auch in die USA und in andere Drittländer
                                 übertragen. <br />
-                                Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                 (SCC) der EU-Kommission. <br />
                                 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
                                 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. <br />
@@ -1170,7 +1198,7 @@ const TermAndConditions = () => {
                                 verantwortlich. Diese gemeinsame Verantwortlichkeit beschränkt sich hierbei
                                 ausschließlich auf die Erfassung und Weitergabe der Daten an Facebook. <br />
                                 Hierzu gibt es eine Vereinbarung über die gemeinsame Verarbeitung: <br />
-                                <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/legal/controller_addendum.
                                 </a> <br />
                                 Wir sind für die Erteilung der Datenschutzinformationen beim Einsatz des
@@ -1180,23 +1208,23 @@ const TermAndConditions = () => {
                                 Betroffenenrechte hinsichtlich der bei Facebook verarbeiteten Daten direkt bei
                                 Facebook geltend zu machen sind. <br />
                                 Weitere Details: <br />
-                                <a href="https://de-de.facebook.com/about/privacy/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://de-de.facebook.com/about/privacy/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://de-de.facebook.com/about/privacy/
                                 </a> <br />
-                                <a href="https://www.facebook.com/ads/preferences/?entry_product=ad_settings_scrnen" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/ads/preferences/?entry_product=ad_settings_scrnen" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/ads/preferences/?entry_product=ad_settings_scrnen
                                 </a> <br />
-                                <a href="http://www.youronlinechoices.com/de/praferenzmanagement/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="http://www.youronlinechoices.com/de/praferenzmanagement/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     http://www.youronlinechoices.com/de/praferenzmanagement/
                                 </a> <br />
-                                <a href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/legal/EU_data_transfer_addendum
                                 </a> <br />
-                                <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://de-de.facebook.com/help/566994660333381.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.10. IONOS WebAnalytics <br />
                                 Wir nutzen auf dieser Website IONOS WebAnalytics. IONOS WebAnalytics ist
                                 ein Webanalysedienst. Dieser Dienst wird angeboten von der 1&1 IONOS SE,
@@ -1212,11 +1240,11 @@ const TermAndConditions = () => {
                                 analysieren, um so unser Webangebot und auch unsere Werbung zu
                                 optimieren. <br />
                                 Weitere Details: <br />
-                                <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.ionos.de/terms-gtc/datenschutzerklaerung/.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.11. Facebook Conversion API <br />
                                 Wir nutzen auf dieser Website Facebook Conversion API. Facebook
                                 Conversion API ist ein Webanalysedienst. Dieser Dienst wird angeboten von
@@ -1226,12 +1254,12 @@ const TermAndConditions = () => {
                                 um die Werbeperformance bei Facebook zu optimieren. <br />
                                 Die erfassten Daten werden auch in die USA und in andere Drittländer
                                 übertragen. <br />
-                                Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                 (SCC) der EU-Kommission. <br />
-                                <a href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/legal/EU_data_transfer_addendum
                                 </a><br />
-                                <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://de-de.facebook.com/help/566994660333381.
                                 </a><br />
                                 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
@@ -1243,7 +1271,7 @@ const TermAndConditions = () => {
                                 verantwortlich. Diese gemeinsame Verantwortlichkeit beschränkt sich hierbei
                                 ausschließlich auf die Erfassung und Weitergabe der Daten an Facebook. <br />
                                 Hierzu gibt es eine Vereinbarung über die gemeinsame Verarbeitung: <br />
-                                <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/legal/controller_addendum.
                                 </a><br />
                                 Wir sind für die Erteilung der Datenschutzinformationen beim Einsatz des
@@ -1253,12 +1281,12 @@ const TermAndConditions = () => {
                                 Betroffenenrechte hinsichtlich der bei Facebook verarbeiteten Daten direkt bei
                                 Facebook geltend zu machen sind. <br />
                                 Weitere Details: <br />
-                                <a href="https://de-de.facebook.com/about/privacy/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://de-de.facebook.com/about/privacy/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://de-de.facebook.com/about/privacy/.
                                 </a>
 
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.12. Facebook Custom Audiences <br />
                                 Wir nutzen auf dieser Website Facebook Custom Audiences. Facebook
                                 Custom Audiences ist ein Webanalysedienst. Dieser Dienst wird angeboten
@@ -1271,16 +1299,16 @@ const TermAndConditions = () => {
                                 Werbung auszuspielen und Zielgruppen zu definieren. <br />
                                 Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
                                 Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. <br />
-                                Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                 (SCC) der EU-Kommission. <br />
-                                <a href="https://www.facebook.com/legal/terms/customaudience" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/legal/terms/customaudience" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/legal/terms/customaudience
                                 </a><br />
-                                <a href="https://www.facebook.com/legal/terms/dataprocessing" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/legal/terms/dataprocessing" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/legal/terms/dataprocessing.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.13. LinkedIn Insight Tag <br />
                                 Wir nutzen auf dieser Website LinkedIn Insight Tag. LinkedIn Insight Tag ist
                                 ein Webanalysedienst. Dieser Dienst wird angeboten von der LinkedIn Ireland
@@ -1303,20 +1331,20 @@ const TermAndConditions = () => {
                                 LinkedIn gelöscht. <br />
                                 Die erfassten Daten werden auch in die USA und in andere Drittländer
                                 übertragen. <br />
-                                Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                 (SCC) der EU-Kommission. <br />
                                 Weitere Details: <br />
-                                <a href="https://www.linkedin.com/legal/l/dpa" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.linkedin.com/legal/l/dpa" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.linkedin.com/legal/l/dpa
                                 </a> <br />
-                                <a href="https://www.linkedin.com/legal/l/eu-sccs" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.linkedin.com/legal/l/eu-sccs" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.linkedin.com/legal/l/eu-sccs
                                 </a> <br />
-                                <a href="https://de.linkedin.com/legal/l/cookie-table" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://de.linkedin.com/legal/l/cookie-table" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://de.linkedin.com/legal/l/cookie-table.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.14. Calendly <br />
                                 Wir nutzen den Dienst Calendly für Analyse- und Tracking-Zwecke. Dieser
                                 Dienst wird angeboten von Calendly LLC, 271 17th St NW, Atlanta, GA
@@ -1343,14 +1371,14 @@ const TermAndConditions = () => {
                                 auffordert, die Einwilligung zur Speicherung widerruft oder der Zweck für die
                                 Speicherung entfällt. Zwingend gesetzliche Bestimmungen zu
                                 Aufbewahrungsfristen bleiben unberührt. <br />
-                                Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                 (SCC) der EU-Kommission. <br />
                                 Weitere Informationen: <br />
-                                <a href="https://calendly.com/legal/privacy-notice" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://calendly.com/legal/privacy-notice" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://calendly.com/legal/privacy-notice.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.15. TikTok Pixel <br />
                                 Wir nutzen auf unserer Website den TikTok Pixel. TikTok Pixel wird betrieben
                                 von der TikTok Technology Limited, 10 Earlsfort Terrace, Dublin, D02 T380,
@@ -1367,21 +1395,21 @@ const TermAndConditions = () => {
                                 welche jederzeit widerrufen werden kann. Rechtsgrundlage dafür ist Art. 6
                                 Abs. 1 lit. a DSGVO. <br />
                                 Es findet eine Datenübermittlung in Drittländer, insbesondere in die USA,
-                                statt. Dabei kommen die Standardvertragsklauseln (SCC) der EU-Kommission
+                                statt. Dabei kommen die <span className="break-all">Standardvertragsklauseln</span> (SCC) der EU-Kommission
                                 zum Einsatz, um ein angemessenes Datenschutzniveau zu gewährleisten.
                                 Daten werden gespeichert, bis der Betroffene die Einwilligung zur
                                 Speicherung widerruft oder der Zweck für die Speicherung entfällt. <br />
-                                <a href="https://www.tiktok.com/legal/page/eea/privacy-policy/de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.tiktok.com/legal/page/eea/privacy-policy/de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.tiktok.com/legal/page/eea/privacy-policy/de.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.16. HubSpot <br />
-                                <a href="https://www.hubspot.com/privacy-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.hubspot.com/privacy-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.hubspot.com/privacy-policy.
                                 </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.6.17. Google Search Console <br />
                                 Wir binden auf unserer Website den Dienst Google Search Console ein, der
                                 von der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4,
@@ -1398,20 +1426,20 @@ const TermAndConditions = () => {
                                 Google Search Console setzt keine Cookies auf unserer Website. Es kann
                                 jedoch eine Datenübermittlung in Drittländer, insbesondere in die USA,
                                 stattfinden, da Google Server weltweit betreibt. Dabei werden die
-                                Standardvertragsklauseln (SCCs) der EU-Kommission verwendet, um ein
+                                <span className="break-all">Standardvertragsklauseln</span> (SCCs) der EU-Kommission verwendet, um ein
                                 angemessenes Datenschutzniveau sicherzustellen. <br />
                                 Die Daten werden so lange gespeichert, wie sie für den jeweiligen
                                 Verarbeitungszweck notwendig sind oder bis der Nutzer eine Löschung
                                 beantragt. <br />
                                 Weitere Informationen zur Datenverarbeitung finden sich unter: <br />
-                                <a href="https://policies.google.com/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://policies.google.com/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://policies.google.com/privacy.
                                 </a>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 3.7. Social Media Plugins
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.7.1. Facebook <br />
                                 Auf dieser Website werden Elemente des sozialen Netzwerkes Facebook
                                 eingebunden. Dieser Dienst wird angeboten von der Meta Platforms Ireland
@@ -1430,48 +1458,1409 @@ const TermAndConditions = () => {
                                 Diese gemeinsame Verantwortlichkeit beschränkt sich hierbei ausschließlich
                                 auf die Erfassung und Weitergabe der Daten an Facebook. Hierzu gibt es
                                 eine Vereinbarung über die gemeinsame Verarbeitung: <br />
-                                <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/legal/controller_addendum
                                 </a> <br />
-                                Bei der Datenübertragung in die USA greifen die Standardvertragsklauseln
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
                                 (SCC) der EU-Kommission. <br />
                                 Weitere Informationen: <br />
-                                <a href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/legal/EU_data_transfer_addendum
                                 </a> <br />
-                                <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://de-de.facebook.com/help/566994660333381
                                 </a> <br />
-                                <a href="https://www.facebook.com/policy.php" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://www.facebook.com/policy.php" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/policy.php
                                 </a> <br />
-                                <a href="https://de-de.facebook.com/privacy/explanation" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">
+                                <a href="https://de-de.facebook.com/privacy/explanation" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://de-de.facebook.com/privacy/explanation.
                                 </a> <br />
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
-                                3.7.2. Twitter
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.7.2. Twitter <br />
+                                Auf dieser Website werden Elemente des sozialen Netzwerkes Twitter
+                                eingebunden. Dieser Dienst wird angeboten von der Twitter International
+                                Company, One Cumberland Place, Fenian Street, Dublin 2, D02AX07, Irland. <br />
+                                Ist das Social-Media-Element aktiviert, wird eine direkte Verbindung zwischen
+                                dem Website-Besucher und den Servern von Twitter hergestellt und dessen
+                                IP-Adresse an Twitter übermittelt. Hat der Website-Besucher ein Nutzerkonto,
+                                kann der Besuch dieser Website dem entsprechenden Nutzerkonto
+                                zugewiesen werden. Der Website-Betreiber erlangt hierbei keine Kenntnis
+                                über den Inhalt der übertragenen Daten. <br />
+                                Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
+                                Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. <br />
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
+                                (SCC) der EU-Kommission. <br />
+                                Nähere Informationen: <br />
+                                <a href="https://twitter.com/de/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://twitter.com/de/privacy
+                                </a> <br />
+                                <a href="https://gdpr.twitter.com/en/controller-to-controller-transfers.html" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://gdpr.twitter.com/en/controller-to-controller-transfers.html.
+                                </a> <br />
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
-                                3.7.3.
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.7.3. Instagram <br />
+                                Auf dieser Website werden Elemente des sozialen Netzwerkes Instagram
+                                eingebunden. Dieser Dienst wird angeboten von der Meta Platforms Ireland
+                                Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland. <br />
+                                Ist das Social-Media-Element aktiviert, wird eine direkte Verbindung zwischen
+                                dem Website-Besucher und den Servern von Instagram hergestellt und
+                                dessen IP-Adresse an Instagram übermittelt. Hat der Website-Besucher ein
+                                Nutzerkonto, kann der Besuch dieser Website dem entsprechenden
+                                Nutzerkonto zugewiesen werden. Wir als Website-Betreiber erlangen hierbei
+                                keine Kenntnis über den Inhalt der übertragenen Daten. <br />
+                                Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
+                                Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. <br />
+                                Sofern auf dieser Website mit Hilfe Facebook bzw. Instagram
+                                personenbezogene Daten erfasst und an Meta weitergeleitet werden, ist der
+                                Website-Betreiber und die Meta Platforms Ireland Limited, 4 Grand Canal
+                                Square, Grand Canal Habour,Dublin 2, Irland gem. Art. 26 DSGVO
+                                gemeinsam für die Datenverarbeitung verantwortlich. Diese gemeinsame
+                                Verantwortlichkeit beschränkt sich hierbei ausschließlich auf die Erfassung
+                                und Weitergabe der Daten an Facebook bzw. Instagram. Hierzu gibt es eine
+                                Vereinbarung über die gemeinsame Verarbeitung: <br />
+                                <a href="https://www.facebook.com/legal/controller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.facebook.com/legal/controller_addendum.
+                                </a> <br />
+                                Der Website-Betreiber ist für die Erteilung der Datenschutzinformationen beim
+                                Einsatz des Instagram-Tools und die datenschutzrechtliche sichere
+                                Einbindung des Tools auf der entsprechenden Website verantwortlich.
+                                Facebook bzw. Instagram ist hingegen für die Datensicherheit ihrer Produkte
+                                verantwortlich. Hieraus folgt, dass Betroffenenrechte hinsichtlich der bei
+                                Facebook bzw. Instagram verarbeiteten Daten direkt bei Facebook bzw.
+                                Instagram geltend zu machen sind. <br />
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
+                                (SCC) der EU-Kommission. <br />
+                                <a href="https://www.facebook.com/legal/EU_data_transfer_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.facebook.com/legal/EU_data_transfer_addendum
+                                </a> <br />
+                                <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://de-de.facebook.com/help/566994660333381
+                                </a>
+                                <a href="https://www.facebook.com/policy.php" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.facebook.com/policy.php
+                                </a>
+                                <a href="https://instagram.com/about/legal/privacy/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://instagram.com/about/legal/privacy/
+                                </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
-                                3.7.4.
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.7.4. LinkedIn <br />
+                                Auf dieser Website werden Elemente des sozialen Netzwerkes LinkedIn
+                                eingebunden. Dieser Dienst wird angeboten von der LinkedIn Ireland
+                                Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland. <br />
+                                Ist das Social-Media-Element aktiviert, wird eine direkte Verbindung zwischen
+                                dem Website-Besucher und den Servern von LinkedIn hergestellt und dessen
+                                IP-Adresse an LinkedIn übermittelt. Hat der Website-Besucher ein
+                                Nutzerkonto, kann der Besuch dieser Website dem entsprechenden
+                                Nutzerkonto zugewiesen werden. Der Website-Betreiber erlangt hierbei keine
+                                Kenntnis über den Inhalt der übertragenen Daten. <br />
+                                Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
+                                Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. <br />
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
+                                (SCC) der EU-Kommission. <br />
+                                <a href="https://www.linkedin.com/help/linkedin/answer/62538/datenubertragung-ausder-eu-dem-ewr-und-derschweiz?lang=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.linkedin.com/help/linkedin/answer/62538/datenubertragung-ausder-eu-dem-ewr-und-derschweiz?lang=de.
+                                </a> <br />
+                                Nähere Informationen: <br />
+                                <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.linkedin.com/legal/privacy-policy
+                                </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
-                                3.7.5.
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.7.5. TikTok <br />
+                                Auf dieser Website werden Elemente des sozialen Netzwerkes TikTok
+                                eingebunden. Dieser Dienst wird angeboten von der TikTok Technology
+                                Limited, 10 Earlsfort Terrace, Dublin, D02 T380, Irland. <br />
+                                Ist das Social-Media-Element aktiviert, wird eine direkte Verbindung zwischen
+                                dem Website-Besucher und den Servern von TikTok hergestellt und dessen
+                                IP-Adresse an TikTok übermittelt. Hat der Website-Besucher ein Nutzerkonto,
+                                kann der Besuch dieser Website dem entsprechenden Nutzerkonto
+                                zugewiesen werden. Der Website-Betreiber erlangt hierbei keine Kenntnis
+                                über den Inhalt der übertragenen Daten. <br />
+                                Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
+                                Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. <br />
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
+                                (SCC) der EU-Kommission. <br />
+                                Nähere Informationen: <br />
+                                <a href="https://www.tiktok.com/legal/page/eea/privacy-policy/de-DE?tid=331689749201" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.tiktok.com/legal/page/eea/privacy-policy/de-DE?tid=331689749201
+                                </a> <br />
+                                <a href="https://ads.tiktok.com/i18n/official/policy/controller-to-controller" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://ads.tiktok.com/i18n/official/policy/controller-to-controller.
+                                </a>
                             </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 pl-7">
-                                3.7.6.
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.7.6. WhatsApp Kanäle <br />
+                                Durch die WhatsApp Kanäle können Informationen und relevante Meldungen
+                                direkt auf WhatsApp ausgespielt werden, indem Kanäle von Menschen und
+                                Organisationen abonniert werden. Wenn ein Kanal abonniert wurde, werden
+                                Meldungen in Form von Textnachrichten, Links zu Informationen, Bildern oder
+                                Videos verschickt.Kanäle sind öffentlich, das heißt, jeder kann die Kanäle
+                                finden, ihnen folgen und sie ansehen. Da Kanäle öffentlich sind und die
+                                Anzahl der Nutzer unbegrenzt ist, sind Kanal-Statusmeldungen für alle und für
+                                WhatsApp sichtbar. Das bedeutet auch, dass Kanal-Statusmeldungen zu den
+                                Informationen gehören, die WhatsApp erhebt und verwendet, um die
+                                Sicherheit und Integrität der Kanäle zu verbessern.WhatsApp erhebt
+                                Informationen der Nutzer, beispielsweise über ihre Reaktionen, ihre
+                                Sprachwahl und die Kanäle, denen sie folden.<br />
+                                <a href="https://www.whatsapp.com/legal/channels-privacy-policy-eea?lang=de_DE" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.whatsapp.com/legal/channels-privacy-policy-eea?lang=de_DE.
+                                </a>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                3.8. Cookie-Consent-Tool
+                                3.8. Social Media Profile <br />
+                                Außerdem nutzen wir auch die Möglichkeit, Werbeanzeigen und
+                                Stellengesuche in sozialen Medien zu schalten.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.8.1. LinkedIn <br />
+                                <ul className="pl-10 my-[20px]">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                        <span className="mr-2">a)</span> Interaktion mit unserem Unternehmensprofil
+                                    </li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                        <span className="mr-2">b)</span> Seiten-Insights <br />
+                                        LinkedIn stellt uns zusammengefasste Statistiken und Einblicke (sogenannte
+                                        Page-Insights) zur Verfügung, die uns darüber Aufschluss geben, wie
+                                        Personen mit unserer Unternehmensseite interagieren. Wir erhalten unter
+                                        anderem Informationen über die Anzahl der Profile, die unsere Beiträge
+                                        aufrufen, kommentieren oder anderweitig damit interagieren, sowie
+                                        zusammengefasste demografische und andere Informationen, die uns helfen,
+                                        etwas über die Interaktion mit unserer Seite bzw. unserem LinkedIn Profil zu
+                                        erfahren. Pages Insights, die uns von LinkedIn zur Verfügung gestellt werden,
+                                        bestehen aus aggregierten Daten, wobei uns LinkedIn keine
+                                        personenbezogenen Daten von Mitgliedern in Bezug auf Page Insights zur
+                                        Verfügung stellt. Wir haben auch keine Möglichkeit, die Page Insights mit
+                                        einzelnen Mitgliedern zu verknüpfen. <br />
+                                        Beim Schalten von Werbeanzeigen übermittelt LinkedIn uns Informationen
+                                        über die Arten von Personen, die unsere Anzeigen sehen und über den Erfolg
+                                        unserer Anzeigen. Personenbezogene Daten werden dabei nur dann an uns
+                                        weitergegeben, wenn diese Person in eine derartige Verarbeitung eingewilligt
+                                        hat. Wir erhalten von LinkedIn auch Informationen, mit denen wir
+                                        nachvollziehen können, welche unserer Anzeigen dazu geführt hat, dass ein
+                                        Kauf getätigt oder eine Handlung durchgeführt wurde. <br />
+                                        Die Verarbeitung dieser Daten dient dem Zweck der Analyse unserer
+                                        Reichweite und der Anpassung unserer Inhalte und Anzeigen an die
+                                        Nutzerinteressen. Anhand der Auswertungen dieser Daten können wir
+                                        erkennen, wie unser Content, unser Profil und unsere Werbung konsumiert
+                                        werden. Damit können wir zielgruppengerechten Content schaffen und Werbung schalten, um unser Unternehmen und unsere Leistungen besser zu
+                                        vermarkten. <br />
+                                        Die Verarbeitung basiert auf unserem berechtigten Interesse nach Art. 6 Abs.
+                                        1 S. 1 lit. f DSGVO. <br />
+                                        Bei der Verarbeitung personenbezogener Daten im Zuge der sogenannten
+                                        Page-Insights erfolgt die Verarbeitung in gemeinsamer Verantwortlichkeit mit
+                                        LinkedIn gem. Art. 26 Abs. 1 DSGVO. <br />
+                                        Hierzu haben wir eine entsprechende Vereinbarung mit LinkedIn getroffen, die
+                                        hier (https://legal.linkedin.com/pages-joint-controller-addendum) eingesehen
+                                        werden kann. <br />
+                                        Die Kontaktdaten von LinkedIn lauten: <br />
+                                        LinkedIn Ireland Unlimited Company, Wilton Place, Dublin 2, Ireland. <br />
+                                        Für LinkedIn können Sie unter folgendem Link mit dem
+                                        Datenschutzbeauftragten Kontakt aufnehmen: <br />
+                                        <a href="https://www.linkedin.com/help/linkedin/ask/TSO-DPO" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                            https://www.linkedin.com/help/linkedin/ask/TSO-DPO.
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.8.2. Verarbeitung durch LinkedIn <br />
+                                Im Zusammenhang mit Ihrem Besuch unseres Unternehmensprofils
+                                verarbeitet LinkedIn möglicherweise auch darüber hinaus personenbezogene
+                                Daten. In diesem Fall erfolgt die Verarbeitung in alleiniger Verantwortung von
+                                LinkedIn und ohne unsere Kenntnis. Nähere Informationen von LinkedIn
+                                hierzu finden Sie unter: <br />
+                                <a href="https://de.linkedin.com/legal/privacy-policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://de.linkedin.com/legal/privacy-policy.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.8.3. LinkedIn Ads <br />
+                                Außerdem binden auf unserer Website die Funktionen von LinkedIn Ads ein. <br />
+                                Mit Hilfe von LinkedIn Ads, können wir einfach effektive Anzeigen erstellen,
+                                welche von einer großen Zielgruppe auf LinkedIn wahrgenommen werden
+                                können. <br />
+                                LinkedIn erhebt hierzu personenbezogene Daten durch Cookies. Hierdurch
+                                wird das Verhalten der Nutzerausgewertet, um so die Wirksamkeit der Werbemaßnahmen zu analysieren und für zukünftige Kampagnen
+                                nutzerorioentierter anzupassen. <br />
+                                Diese Cookies werden nur mit Einwilligung gesetzt. Die Einwilligung kann
+                                jederzeit widerrufen werden. Rechtsgrundlage dafür ist Art 6 Abs. 1 lit. a
+                                DSGVO. <br />
+                                Im Übrigen ist Rechtsgrundlage für die Verarbeitung der Daten durch LinkedIn
+                                Ads Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse daran,
+                                unseren Werbeauftritt auf der Plattform LinkedIn auszubauen und zu
+                                optimieren. <br />
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.9. Facebook <br />
+                                Wir betreiben eine Facebook Fanpage auf https://www.facebook.com/. Dieses
+                                soziale Netzwerk wir von der Meta Platforms Ireland Limited, 4 Grand Canal
+                                Square, Grand Canal Harbour, Dublin 2, Irland, betrieben. <br />
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.9.1. Interaktion mit unserem Unternehmensprofil <br />
+                                Bei dem Besuch unseres Facebook-Profil und der Interaktion darüber mit uns
+                                verarbeiten wir personenbezogene Daten. Einerseits die öffentlich zur
+                                Verfügung gestellten Daten auf dem Profil. Andererseits auch die
+                                personenbezogenen Daten, die in Posts, Kommentaren oder direkten
+                                Nachrichten an uns enthalten sind. Durch Interaktionen wie Liken oder Teilen
+                                können wir das Nutzerprofil mit den öffentlichen Informationen sehen. <br />
+                                Rechtsgrundlage für diese Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO. Es liegt
+                                in unserem berechtigten Interesse, relevante und interessante Inhalte zur
+                                Verfügung zu stellen und die Nutzung und Funktionalität unseres Facebook-
+                                Profils zu ermöglichen. <br />
+                                Soweit eine Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder
+                                zur Durchführung vorvertraglicher Maßnahmen erforderlich ist, basiert unsere
+                                Verarbeitung auf Art. 6 Abs. 1 lit. b DSGVO.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.9.2. Seiten Insights <br />
+                                Wie in der Meta-Datenschutzrichtlinie unter „Wie verwenden wir deine
+                                Informationen?“ (erläutert, erhebt und verwendet Meta Informationen auch, um Analysedienste, sogenannte Seiten-Insights, für Seitenbetreiber
+                                bereitzustellen. Dies gilt auch für unsere Facebook Seite. <br />
+                                Bei Seiten-Insights handelt es sich um zusammengefasste Statistiken, die
+                                anhand bestimmter Interaktionen der Besuchenden mit Seiten und den mit
+                                ihnen verbundenen Inhalten (z. B. dem Ansehen einer Seite oder eines
+                                Videos, dem Abonnieren einer Seite, eine Seite mit „Gefällt mir" oder „Gefällt
+                                mir nicht mehr" markieren etc.) erstellt und von den Meta Servern protokolliert
+                                werden. <br />
+                                Meta stellt uns im Zusammenhang mit den Seiten-Insights
+                                zusammengefasste Statistiken und Einblicke zur Verfügung, die uns darüber
+                                Aufschluss geben, wie Personen mit unserer Unternehmensseite interagieren.
+                                Dabei erhalten wir keinen Zugriff auf personenbezogene Daten, sondern nur
+                                auf die zusammengefassten Seiten-Insights. Mithilfe der Seiten-Insights
+                                können wir anonyme Statistiken z. B. der Reichweite unseres Accounts, der
+                                Seitenaufrufe, der Likes etc. einsehen. Diese enthalten auch Auswertungen
+                                nach Alter, Geschlecht und Standort der Nutzenden (wie von diesen in ihren
+                                jeweiligen Facebook-Profilen angegeben). Für die Auswertung der Reichweite
+                                können wir Einstellungen vornehmen bzw. entsprechende Filter hinsichtlich
+                                der Auswahl eines Zeitraums, der Betrachtung eines bestimmten Beitrags
+                                sowie der demografischen Gruppierungen setzen. Diese Daten sind
+                                anonymisiert. Rückschlüsse auf bestimmte Personen sind uns dabei nicht
+                                möglich. <br />
+                                Die Verarbeitung dieser Daten dient dem Zweck der Analyse unserer
+                                Reichweite und der Anpassung unserer Inhalte und Anzeigen an die
+                                Nutzerinteressen, damit Besuchende einen größtmöglichen Nutzen daraus
+                                ziehen können. Anhand der Auswertungen dieser Daten können wir
+                                erkennen, wie unser Content, unser Profil und unsere Werbung konsumiert
+                                werden. Damit können wir zielgruppengerechten Content schaffen und
+                                Werbung schalten, um unser Unternehmen und unsere Leistungen besser zu
+                                vermarkten. <br />
+                                Die Verarbeitung basiert auf unserem berechtigten Interesse nach Art. 6 Abs.
+                                1 S. 1 lit. f DSGVO. <br />
+                                Bei der Verarbeitung personenbezogener Daten im Zuge der sogenannten
+                                Seiten-Insights erfolgt in gemeinsamer Verantwortlichkeit mit Facebook gem.
+                                Art. 26 Abs. 1 DSGVO. <br />
+                                Hierzu haben wir eine entsprechende Vereinbarung mit Facebook getroffen,
+                                die hier <br />
+
+                                <a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    (https://www.facebook.com/legal/terms/page_controller_addendum)
+                                </a>
+                                eingesehen werden kann. <br />
+                                Die Kontaktdaten von Facebook lauten: <br />
+                                Online-Kontakt: <br />
+                                <a href="https://www.facebook.com/help/contact/1650115808681298" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.facebook.com/help/contact/1650115808681298.
+                                </a> <br />
+                                Postalisch: Meta Platforms Ireland Limited, ATTN: Privacy Operations,
+                                Merrion Road, Dublin 4, D04 X2K5, Irland. <br />
+                                Für Facebook können Sie unter folgendem Link mit dem
+                                Datenschutzbeauftragten Kontakt aufnehmen: <br />
+                                <a href="https://www.facebook.com/help/contact/540977946302970" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.facebook.com/help/contact/540977946302970.
+                                </a> <br />
+                                Weitere Informationen über die Seiten-Insights: <br />
+                                <a href="https://de-de.facebook.com/legal/terms/page_cntroller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://de-de.facebook.com/legal/terms/page_cntroller_addendum
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.9.3. Verarbeitung personenbezogener Daten und Cookies durch Meta <br />
+                                Beim Zugriff auf eine Facebook-Seite wird die Ihrem Endgeräte zugeteilte IPAdresse
+                                an Facebook übermittelt. Nach Auskunft von Facebook wird diese IPAdresse
+                                anonymisiert (bei "deutschen" IP-Adressen). Facebook speichert
+                                darüber hinaus Informationen über die Endgeräte seiner Nutzer (z.B. im
+                                Rahmen der Funktion <span className="break-all">„Anmeldebenachrichtigung"</span> ); gegebenenfalls ist
+                                Facebook damit eine Zuordnung von IP-Adressen zu einzelnen Nutzern
+                                möglich. Wenn Sie als Nutzer aktuell bei Facebook angemeldet sind, befindet
+                                sich auf Ihrem Endgerät ein Cookie mit Ihrer Facebook-Kennung. Dadurch ist
+                                Facebook in der Lage, nachzuvollziehen, dass Sie diese Seite aufgesucht und
+                                wie Sie sie genutzt haben. Über in Websites eingebundene Facebook-Buttons
+                                ist es Facebook möglich, Ihre Besuche auf diesen Websites zu erfassen und
+                                Ihrem Facebook-Profil zuzuordnen. Anhand dieser Daten können Inhalte oder
+                                Werbung auf Sie zugeschnitten angeboten werden. <br />
+                                Informationen dazu, wie personenbezogene Daten verwaltet oder gelöscht
+                                werden können, sind im Privacy Center von Facebook zu finden: <br />
+                                <a href="https://www.facebook.com/privacy/center/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.facebook.com/privacy/center/
+                                </a> <br />
+                                Nähere Informationen zu dem Umgang mit Daten von Facebook sind hier zu
+                                finden: <br />
+                                <a href="http://de-de.facebook.com/about/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    http://de-de.facebook.com/about/privacy.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.10. Instagram <br />
+                                Wir betreiben ein Instagram Profil. Diese Social-Media-Plattform wird
+                                angeboten von der Meta Platforms Ireland Limited, 4 Grand Canal Square,
+                                Grand Canal Harbour, Dublin 2, Irland.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.10.1. Interaktion mit unserem Unternehmensprofil <br />
+                                Bei dem Besuch unseres Instagram Profils und der Interaktion darüber mit
+                                uns verarbeiten wir personenbezogene Daten. Einerseits die öffentlich zur
+                                Verfügung gestellten Daten auf dem Profil. Andererseits auch die
+                                personenbezogenen Daten, die in Posts, Kommentaren oder direkten
+                                Nachrichten an uns enthalten sind. Durch Interaktionen wie Liken oder Teilen
+                                können wir das Nutzerprofil mit den öffentlichen Informationen sehen. <br />
+                                Rechtsgrundlage für diese Verarbeitung ist Art. 6 Abs. 1 lit. f DSGVO. Es liegt
+                                in unserem berechtigten Interesse, relevante und interessante Inhalte zur
+                                Verfügung zu stellen und die Nutzung und Funktionalität unseres Instagram
+                                Profils zu ermöglichen. <br />
+                                Soweit eine Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder
+                                zur Durchführung vorvertraglicher Maßnahmen erforderlich ist, basiert unsere
+                                Verarbeitung auf Art. 6 Abs. 1 lit. b DSGVO.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.10.2. Insights <br />
+                                Wie in der Meta-Datenschutzrichtlinie unter „Wie verwenden wir deine
+                                Informationen?“ <br />
+                                <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    (https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect)
+                                </a> <br />
+                                erläutert, erhebt und
+                                verwendet Meta Informationen auch, um Analysedienste, sogenannte Insights, für Seitenbetreiber bereitzustellen. Dies gilt auch für unser Instagram
+                                Profil. <br />
+                                Bei den Insights handelt es sich um zusammengefasste Statistiken, die
+                                anhand bestimmter Interaktionen der Besuchenden mit Seiten und den mit
+                                ihnen verbundenen Inhalten erstellt und von den Meta Servern protokolliert
+                                werden. Hierzu zählen unter anderem folgende Informationen
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                        Wie viele Menschen sehen unsere Produkte, Dienste oder Inhalte, wie
+                                        u. a. Beiträge, Videos, Instagram-Seiten, Inserate, Shops und
+                                        Werbeanzeigen (wenn die Werbung auf Meta-Produkten gezeigt wird)
+                                        und interagieren mit ihnen;
+                                    </li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                        Wie interagieren Personen mit unseren Inhalten, Websites, Apps und
+                                        Diensten;
+                                    </li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                        Welche Personengruppe interagiert mit unseren Inhalten bzw. welche
+                                        Personengruppe nutzt unsere Dienste.
+                                    </li>
+                                </ul>
+                                Meta stellt uns zusammengefasste Berichte und Einblicke zur Verfügung, die
+                                uns darüber Aufschluss geben, wie gut unsere Inhalte, Features, Produkte
+                                und Dienste abschneiden. <br />
+                                Dabei erhalten wir keinen Zugriff auf personenbezogene Daten, sondern nur
+                                auf die zusammengefassten Berichte. <br />
+                                Für die Auswertung der Reichweite können wir Einstellungen vornehmen bzw.
+                                entsprechende Filter hinsichtlich der Auswahl eines Zeitraums, der
+                                Betrachtung eines bestimmten Beitrags sowie der demografischen
+                                Gruppierungen setzen. Diese Daten sind anonymisiert. Rückschlüsse auf
+                                bestimmte Personen sind uns dabei nicht möglich. <br />
+                                Die Verarbeitung dieser Daten dient dem Zweck der Analyse unserer
+                                Reichweite und der Anpassung unserer Inhalte und Anzeigen an die
+                                Nutzerinteressen, damit Besuchende einen größtmöglichen Nutzen daraus
+                                ziehen können. Anhand der Auswertungen dieser Daten können wir
+                                erkennen, wie unser Content, unser Profil und unsere Werbung konsumiert
+                                werden. Damit können wir zielgruppengerechten Content schaffen und
+                                Werbung schalten, um unser Unternehmen und unsere Leistungen besser zu
+                                vermarkten. <br />
+                                Die Verarbeitung basiert auf unserem berechtigten Interesse nach Art. 6 Abs.
+                                1 S. 1 lit. f DSGVO <br />
+                                Bei der Verarbeitung personenbezogener Daten im Zuge der sogenannten
+                                Insights erfolgt die Verarbeitung in gemeinsamer Verantwortlichkeit mit Meta
+                                gem. Art. 26 Abs. 1 DSGVO. <br />
+                                Hierzu haben wir eine entsprechende Vereinbarung mit Meta getroffen, die
+                                hier <br />
+                                <a href="https://www.facebook.com/legal/terms/page_controller_addendum" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    (https://www.facebook.com/legal/terms/page_controller_addendum.)
+                                </a> <br />
+
+                                eingesehen werden kann. <br />
+                                Die Kontaktdaten von Meta lauten: <br />
+                                Online-Kontakt: <br />
+                                <a href="https://www.facebook.com/help/contact/1650115808681298" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.facebook.com/help/contact/1650115808681298
+                                </a> <br />
+
+                                Postalisch: Meta Platforms Ireland Limited, ATTN: Privacy Operations,
+                                Merrion Road, Dublin 4, D04 X2K5, Irland. <br />
+                                Für Instagram können Sie unter folgendem Link mit dem
+                                Datenschutzbeauftragten Kontakt aufnehmen: <br />
+                                <a href="https://www.facebook.com/help/contact/540977946302970" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.facebook.com/help/contact/540977946302970.
+                                </a> <br />
+                                Weitere Informationen über die Insights: <br />
+                                <a href="https://de-de.facebook.com/help/pages/insights" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://de-de.facebook.com/help/pages/insights.
+                                </a> <br />
+                                Die vollständige Datenschutzrichtlinie von Instagram finden Sie hier: <br />
+                                <a href="https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect
+                                </a> <br />
+                                Verarbeitung personenbezogener Daten und Cookies durch Meta <br />
+                                Beim Zugriff auf eine Instagram-Seite wird die Ihrem Endgerät zugeteilte IPAdresse
+                                an Meta übermittelt. Nach Auskunft von Meta wird diese IP-Adresse
+                                anonymisiert (bei "deutschen" IP-Adressen). Meta speichert darüber hinaus
+                                Informationen über die Endgeräte seiner Nutzer (z.B. im Rahmen der
+                                Funktion <span className="break-all">„Anmeldebenachrichtigung"</span>); gegebenenfalls ist Meta damit eine
+                                Zuordnung von IP-Adressen zu einzelnen Nutzern möglich. Wenn Sie als
+                                Nutzer aktuell bei Instagram angemeldet sind, befindet sich auf Ihrem
+                                Endgerät ein Cookie mit Ihrer Instagram-Kennung. Dadurch ist Meta in der
+                                Lage nachzuvollziehen, dass Sie diese Seite aufgesucht und wie Sie sie genutzt haben. Über in Websites eingebundene Meta-Buttons ist es Meta
+                                möglich, Ihre Besuche auf diesen Websites zu erfassen und Ihrem Instagram-
+                                Profil zuzuordnen. Anhand dieser Daten können Inhalte oder Werbung auf Sie
+                                zugeschnitten angeboten werden. <br />
+                                Nähere Informationen: <br />
+
+                                <a href=" https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://privacycenter.instagram.com/policy/?entry_point=ig_help_center_data_policy_redirect.
+                                </a> <br />
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.10.3. Threads <br />
+                                Wir nutzen außerdem die Funktionen von Threads. Bei der Nutzung des
+                                Dienstes erhobene Daten, darunter IP-Adresse, verwendete Applikation und
+                                Informationen zum Endgerät sowie aufgerufene Webseiten, Standort und
+                                Mobilfunkanbieter, werden von der Meta Platform, Inc., wie oben beschrieben,
+                                verarbeitet. Diese Daten können dabeiauch in Länder außerhalb der
+                                Europäischen Union übertragen werden.Die erfassten Daten werden mit dem
+                                Konto oder Profil bei Threads verknüpft. Es besteht keine Kontrolle über die
+                                Spezifika der von Threads bearbeiteten Daten, einschließlich deren
+                                Verarbeitung, Nutzung oder Weitergabe an Dritte. <br />
+                                <a href="https://help.instagram.com/769983657850450/?helpref=uf_share" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://help.instagram.com/769983657850450/?helpref=uf_share
+                                </a> <br />
+                                <a href="https://privacycenter.instagram.com/policy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://privacycenter.instagram.com/policy.
+                                </a> <br />
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.11. X (ehemals Twitter) <br />
+                                Wir greifen auf den Kurznachrichtendienst „X" (ehm. Twitter) zurück. Dies ist
+                                ein Dienst der X Corp., 1355 Market Street, Suite 900, San Francisco, CA
+                                94103 USA. Verantwortlich für die Datenverarbeitung von außerhalb der
+                                Vereinigten Staaten lebenden Personen ist die Twitter International Company,
+                                One Cumberland Place, Fenian Street, Dublin 2 D02 AX07, Irland.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.11.1. Interaktionen mit unserem Account <br />
+                                Grundsätzlich erheben und verarbeiten wir keine Daten von Ihnen bei der
+                                Nutzung unseres Kurznachrichtendienstes. Die von Ihnen bei X
+                                eingegebenen Daten, insbesondere der Nutzername und die unter Ihrem
+                                Account veröffentlichten Inhalte, werden von uns aufgrund Ihrer Einwilligung
+                                gemäß Art. 6 Abs. 1 lit. a DSGVO verarbeitet, soweit Ihre Tweets gegebenenfalls retweetet werden, wir auf diese antworten oder Tweets
+                                verfasst werden, die auf Ihren Account verweisen. Die frei bei X
+                                veröffentlichten und verbreiteten Daten werden so von uns einbezogen und
+                                unseren Followern zugänglich gemacht.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.11.2. Von X verarbeitete Daten <br />
+                                Wir haben keinen Einfluss auf Art und Umfang der durch die X Corp.
+                                verarbeiteten Daten, die Art der Verarbeitung und Nutzung oder die
+                                Weitergabe dieser Daten an Dritte. Wenn Sie X verwenden, werden Ihre
+                                personenbezogenen Daten von der X Corp. erfasst, übertragen, gespeichert,
+                                offengelegt und verwendet und dabei unabhängig von Ihrem Wohnsitz in die
+                                Vereinigten Staaten, Irland und jedes andere Land, in dem die X Corp.
+                                geschäftlich tätig wird, übertragen und dort gespeichert und genutzt. <br />
+                                X verarbeitet dabei zum einen alle freiwillig eingegebenen Daten wie Name
+                                und Nutzername, E-Mail-Adresse, Telefonnummer oder die Kontakte des
+                                Adressbuches, soweit diese hochgeladen oder synchronisiert wurden. <br />
+                                Zum anderen wertet X aber auch die geteilten Inhalte daraufhin aus, an
+                                welchen Themen der Nutzer interessiert ist. Vertrauliche Nachrichten, die
+                                direkt an andere Nutzer geschickt werden, verarbeitet und speichert X.
+                                Anhand von GPS-Daten, Informationen zu Drahtlosnetzwerken oder über die
+                                IP-Adresse kann X den Standort des Nutzers bestimmen. <br />
+                                X erhält auch Informationen darüber, welche Inhalte angesehen werden, auch
+                                wenn der Nutzer keinen Account erstellt hat. <br />
+                                X verarbeitet sog. „Log-Daten". Dabei handelt es sich um die IP-Adresse, den
+                                Browsertyp, das Betriebssystem, Informationen zu der zuvor aufgerufenen
+                                Website und den aufgerufenen Seiten, dem Standort, dem Mobilfunkanbieter,
+                                dem genutzten Endgerät (einschließlich Geräte-ID und Anwendungs-ID), die
+                                verwendeten Suchbegriffe und Cookie-Informationen. <br />
+                                Dadurch, dass es sich bei der X Corp. um einen außereuropäischen Anbieter
+                                handelt, der eine europäische Niederlassung nur in Irland hat, ist dieser nach
+                                seiner eigenen Auffassung nicht an deutsche Datenschutzvorschriften
+                                gebunden. Dies betrifft z. B. die Rechte auf Auskunft, Sperrung oder Löschung von Daten oder die Möglichkeit, einer Verwendung von
+                                Nutzungsdaten für Werbezwecke zu widersprechen. <br />
+                                Im Bereich der allgemeinen Einstellungen des X-Kontos sowie unter dem
+                                Punkt „Datenschutz und Sicherheit" kann die Verarbeitung der Daten
+                                eingeschränkt werden. Außerdem kann auf Mobilgeräten (Smartphones,
+                                Tablet-Computer) in den dortigen Einstellmöglichkeiten der Zugriff von X auf
+                                Kontakt- und Kalenderdaten, Fotos, Standortdaten etc. beschränkt werden.
+                                Dies ist jedoch abhängig vom genutzten Betriebssystem. <br />
+                                Weitere Informationen dazu sind hier zu finden: <br />
+                                <a href="https://help.twitter.com/de/safety-and-security/x-privacy-settings" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://help.twitter.com/de/safety-and-security/x-privacy-settings.
+                                </a> <br />
+                                Angaben über die Verarbeitung der Daten durch X sind in der
+                                Datenschutzerklärung von X zu finden: <br />
+                                <a href="https://twitter.com/de/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://twitter.com/de/privacy
+                                </a> <br />
+                                Außerdem können über das X-Datenschutzformular oder die
+                                Archivanforderungen können Informationen angefordert werden: <br />
+                                <a href="https://support.twitter.com/forms/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://support.twitter.com/forms/privacy.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.12. TikTok <br />
+                                Wir betreiben einen TikTok-Kanal. TikTok wird von der TikTok Technology
+                                Limited, 10 Earlsfort Terrace, Dublin, D02 T380, Ireland (nachfolgend „TikTok
+                                Ireland“) zur Verfügung gestellt. Über unseren TikTok-Kanal erhalten wir die
+                                Möglichkeit, uns den Nutzern von TikTok zu präsentieren und mit Ihnen in
+                                Kontakt zu treten.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.12.1. Interaktionen mit unserem TikTok-Kanal <br />
+                                Nutzern können über ihren TikTok-Account mit unserem TikTok-Kanal
+                                interagieren, indem Sie zum Beispiel unsere Post liken oder kommentieren.
+                                Dabei verarbeiten wir die dazugehörigen Daten wie zum Beispiel den
+                                Benutzernamen und das Profilbild. <br />
+                                Wir nutzen diese Daten, um unsere Inhalte und deren Präsentation zu
+                                optimieren und auf die jeweiligen Nutzerinteressen anzupassen. <br />
+                                Außerdem ist es möglich, uns Direktnachrichten auf unserem TikTok-Kanal
+                                zukommen zu lassen. Auch hier wird uns der Benutzername und das Profilbild
+                                angezeigt. <br />
+                                Rechtsgrundlage der Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO. Wir
+                                haben ein berechtigtes Interesse an der Optimierung unseres TikTok-Kanals
+                                und der dort veröffentlichten Inhalte. Außerdem haben wir ein berechtigtes
+                                Interesse an der Kommunikation mit den Nutzern, um Fragen zu beantworten,
+                                auf Kritik einzugehen, eine Beziehung aufzubauen und Informationen
+                                auszutauschen. So können wir unsere Leistungen verbessern und auf die
+                                Bedürfnisse möglicher Kunden eingehen. Mit der Kommunikation über TikTok
+                                erreichen wir insbesondere jüngere Kunden. <br />
+                                Kommentare werden zeitlich unbegrenzt auf dem Kanal gespeichert und
+                                können von anderen Nutzern eingesehen werden. Das Gleiche gilt für die
+                                Nutzung der Like-Funktion und Direktnachrichten.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.12.2. TikTok Analyse <br />
+                                Beim Aufruf und der Nutzung unseres TikTok-Kanals werden zusätzlich Daten
+                                zur TikTok Analyse verarbeitet. Dabei handelt es sich um zusammengefasste
+                                Statistiken, die anhand bestimmter Interaktionen der Besuchenden mit
+                                unserem TikTok-Kanal durch TikTok erstellt und protokolliert werden und
+                                Aufschluss darüber geben, wie mit unserem Kanal interagiert wird. <br />
+                                Diese Daten umfassen, sind aber nicht beschränkt auf:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Follower-Wachstum</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Videoaufrufe</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Profilaufrufe</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Durchschnittliche Wiedergabezeit</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Quellen des Traffics (z.B. Profil, For You-Feed)</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Geografische Verteilung des Publikums</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Aktivitätszeiten der Follower.</li>
+                                </ul>
+                                Die Daten werden uns in aggregierter Form als Statistiken bereitgestellt. Wir
+                                erhalten keinen Zugriff auf personenbezogene Daten, sondern nur auf die
+                                zusammengefassten Statistiken. <br />
+                                Weitere Informationen zu den TikTok Analysen finden sich hier: <br />
+                                <a href="https://www.tiktok.com/creators/creator-portal/en-us/tiktok-content-strategy/understanding-your-analytics/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.tiktok.com/creators/creator-portal/en-us/tiktok-content-strategy/understanding-your-analytics/.
+                                </a> <br />
+                                Die Verarbeitung dieser Daten dient ausschließlich der Analyse und
+                                Verbesserung der Inhalte auf unserem TikTok-Kanal. Anhand der
+                                Auswertungen dieser Daten können wir erkennen, wie unser Content und
+                                unser TikTok-Kanal konsumiert werden. Damit können wir
+                                zielgruppengerechten Content schaffen und ggf. Werbung schalten, um unser
+                                Unternehmen und unsere Leistungen besser zu vermarkten. <br />
+                                Die Verarbeitung basiert auf unserem berechtigten Interesse nach Art. 6 Abs.
+                                1 S. 1 lit. f DSGVO. <br />
+                                Bei der Verarbeitung personenbezogener Daten im Zuge der TikTok Analysen
+                                erfolgt die Verarbeitung in gemeinsamer Verantwortlichkeit mit TikTok gem.
+                                Art. 26 Abs. 1 DSGVO. <br />
+                                Hierzu haben wir eine entsprechende Vereinbarung mit TikTok getroffen, die
+                                hier eingesehen werden kann. <br />
+                                Die Kontaktdaten von TikTok lauten: <br />
+                                Online-Kontakt: <br />
+                                <a href="https://privacytiktok.zendesk.com/hc/en-us/requests/new" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://privacytiktok.zendesk.com/hc/en-us/requests/new.
+                                </a> <br />
+                                Postalisch: TikTok Technology Limited, 10 Earlsfort Terrace, Dublin, D02
+                                T380, Ireland. <br />
+                                Über dieses Formular kann man mit dem Datenschutzbeauftragten von
+                                TikTok Kontakt aufnehmen: <br />
+                                <a href="https://www.tiktok.com/legal/report/DPO" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.tiktok.com/legal/report/DPO.
+                                </a> <br />
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.12.3. Verarbeitung personenbezogener Daten durch TikTok <br />
+                                Bei Nutzung der Angebote von TikTok verarbeitet TikTok personenbezogene
+                                Daten den Nutzern. Dazu gehören Daten wie Ihre IP-Adresse, Standortdaten,
+                                Zeitzoneneinstellungen, Werbe-IDs, App- und Browser-Versionen sowie
+                                Daten zu dem Gerät (System, Netzwerktyp, Geräte-ID, Bildschirmauflösung,
+                                Betriebssystem, Audioeinstellungen und angeschlossene Audiogeräte). Auch die aufgerufenen TikTok-Profile und Kanäle, Likes, Nachrichten und weitere
+                                Nutzungsdaten werden verarbeitet. Sofern Sie mit einem eigenen TikTok-
+                                Account angemeldet sind, werden diese Daten Ihrem Account zugeordnet. <br />
+                                Weitere Informationen zur Verarbeitung der Daten durch TikTok finden sich
+                                hier: <br />
+                                <a href="https://www.tiktok.com/legal/page/eea/privacy-policy/de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.tiktok.com/legal/page/eea/privacy-policy/de.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.13. WhatsApp Kanal <br />
+                                Durch WhatsApp Kanäle können Informationen und relevante Meldungen
+                                direkt auf WhatsApp ausgespielt werden, indem Kanäle von Menschen und
+                                Organisationen abonniert werden. Wenn ein Kanal abonniert wurde, werden
+                                Meldungen in Form von Textnachrichten, Links zu Informationen, Bildern oder
+                                Videos verschickt.Kanäle sind öffentlich, das heißt, jeder kann die Kanäle
+                                finden, ihnen folgen und sie ansehen. Da Kanäle öffentlich sind und die
+                                Anzahl der Nutzer unbegrenzt ist, sind Kanal-Statusmeldungen für alle und für
+                                WhatsApp sichtbar.WhatsApp erhebt Informationen der Nutzer,
+                                beispielsweise über ihre Reaktionen, ihre Sprachwahl und die Kanäle, denen
+                                sie folgen.der Nutzer erhalten. <br />
+                                <a href="https://www.whatsapp.com/legal/channels-privacy-policy-eea?lang=de_DE" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.whatsapp.com/legal/channels-privacy-policy-eea?lang=de_DE
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.13.1. YouTube <br />
+                                Wir betreiben ein Profil auf YouTube. Dies ist eine Videoplattform der Google
+                                Ireland Limited mit Sitz in Gordon House, Barrow Street, Dublin 4, Irland, die
+                                es uns ermöglicht, Videoinhalte zu veröffentlichen und mit unserem Publikum
+                                zu interagieren. <br />
+                                Auch wir verarbeiten die Daten der Profilbesucher. Dabei verarbeiten wir
+                                Daten aus Ihrer Nutzung unseres Profils, die uns von YouTube zur Verfügung
+                                gestellt wird. <br />
+                                Diese Informationen enthalten Statistiken zu den Besuchen unseres Profils,
+                                Berichte zur Wiedergabezeit unserer Videos, zur Interaktion von Nutzern (z.B.
+                                „Mag ich“ oder Kommentare), als auch Informationen über einzelne Personen
+                                die aktiv mit unserer Seite interagieren, z.B. durch das Abonnieren oder die
+                                <span className="break-all">Kommunikationsmöglichkeiten</span> von YouTube. <br />
+                                Die bei YouTube eingegebenen Daten, insbesondere der Nutzername und die
+                                unter dem Account veröffentlichten Inhalte, werden von uns durch
+                                Interaktionen mit unserem Profil sichtbar gemacht und verarbeitet. <br />
+                                Wir verarbeiten diese Daten, um eine Kommunikation zu ermöglichen und um
+                                unsere Inhalte in Reichweite und Zielgruppe zu optimieren. <br />
+                                Rechtsgrundlage für die Verarbeitung ist ein berechtigtes Interesse nach Art.
+                                6 Abs. 1 lit. f DSGVO zu den genannten Zwecken.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.13.2. Datenverarbeitung durch uns <br />
+                                Auch wir verarbeiten die Daten der Profilbesucher. Dabei verarbeiten wir
+                                Daten aus Ihrer Nutzung unseres Profils, die uns von YouTube zur Verfügung
+                                gestellt wird. <br />
+                                Diese Informationen enthalten Statistiken zu den Besuchen unseres Profils,
+                                Berichte zur Wiedergabezeit unserer Videos, zur Interaktion von Nutzern (z.B.
+                                „Mag ich“ oder Kommentare), als auch Informationen über einzelne Personen
+                                die aktiv mit unserer Seite interagieren, z.B. durch das Abonnieren oder die
+                                <span className="break-all">Kommunikationsmöglichkeiten</span> von YouTube. <br />
+                                Die bei YouTube eingegebenen Daten, insbesondere der Nutzername und die
+                                unter dem Account veröffentlichten Inhalte, werden von uns durch
+                                Interaktionen mit unserem Profil sichtbar gemacht und verarbeitet. <br />
+                                Wir verarbeiten diese Daten, um eine Kommunikation zu ermöglichen und um
+                                unsere Inhalte in Reichweite und Zielgruppe zu optimieren. <br />
+                                Rechtsgrundlage für die Verarbeitung ist ein berechtigtes Interesse nach Art.
+                                6 Abs. 1 lit. f DSGVO zu den genannten Zwecken. <br />
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.13.3. Datenverarbeitung durch YouTube <br />
+                                Beim Besuch unseres YouTube-Kanals oder bei Interaktion mit unserem
+                                YouTube-Kanal, erfasst YouTube personenbezogene Daten wie die IPAdresse,
+                                Geräteinformationen, geografische Informationen, sowie die
+                                Aktivitäten auf der Plattform, einschließlich der angesehenen Videos, der
+                                Interaktionen wie Likes, Kommentare und Abonnements. Diese Daten können
+                                durch Cookies und ähnliche Technologien gesammelt werden, die auf dem
+                                Gerät gespeichert werden. <br />
+                                YouTube verwendet diese Informationen, um die Plattform zu betreiben und
+                                zu verbessern, personalisierte Werbung zu schalten und um Analysen und
+                                Messungen durchzuführen, um zu verstehen, wie Nutzer mit den Inhalten
+                                interagieren. Darüber hinaus hilft die Datenverarbeitung, die Reichweite und
+                                Effektivität der Inhalte zu bewerten und zu verbessern. <br />
+                                Die Verarbeitung der Daten durch YouTube erfolgt unter anderem auf der
+                                Grundlage Ihrer Einwilligung, die durch die Annahme der Cookie-Richtlinien
+                                auf YouTube ausgedrückt wird. <br />
+                                Die von YouTube erfassten Daten können innerhalb der Google-
+                                Unternehmensgruppe sowie an Dritte weitergegeben werden, die in Ländern
+                                außerhalb der Europäischen Union ansässig sein können, einschließlich der
+                                USA. Google LLC ist durch das EU-U.S. Data Privacy Framework zertifiziert,
+                                was sicherstellt, dass auch bei der Übermittlung in Drittländer ein
+                                angemessenes Datenschutzniveau gewahrt bleibt. <br />
+                                Wir haben keinen Einfluss auf den Umfang der durch YouTube verarbeiteten
+                                Daten, die Art der Verarbeitung und Nutzung oder die Weitergabe dieser Daten an Dritte. Auch haben wir insoweit keine effektiven
+                                Kontrollmöglichkeiten. <br />
+                                Angaben darüber, welche Daten durch YouTube verarbeitet und zu welchen
+                                Zwecken genutzt werden, finden Sie in der Datenschutzerklärung von <br />
+                                YouTube: <br />
+                                <a href="https://policies.google.com/privacy?hl=de&gl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://policies.google.com/privacy?hl=de&gl=de.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.14. Google Unternehmensprofil <br />
+                                Wir verfügen über ein sogenanntes Google Unternehmensprofil. Dabei greifen
+                                wir auf den von Google angebotenen Informationsdienst und die Dienste der
+                                Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland
+                                („Google“) zurück.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.14.1. Datenverarbeitung durch Google <br />
+                                Die Google-Seite und ihre Funktionen werden in eigener Verantwortung
+                                genutzt. Dies gilt insbesondere für die Nutzung der sozialen und interaktiven
+                                Funktionen (z. B. Kommentieren, Teilen, Bewerten, Direktnachrichten). Beim
+                                Besuch und der Interaktion mit unserem Google Unternehmensprofil Eintrag
+                                erfasst Google auch Ihre IP-Adresse sowie weitere Informationen, die in Form
+                                von sog. Cookies auf dem Endgerät vorhanden sind. Gegebenenfalls ist
+                                Google damit eine Zuordnung von IP- Adressen zu einzelnen Nutzern oder
+                                Nutzerkonten möglich. Diese Informationen werden verwendet, um uns als
+                                Betreiber des Google Unternehmensprofil Eintrags statistische Informationen
+                                über die Inanspruchnahme der Google-Dienste zur Verfügung zu stellen. Die
+                                in diesem Zusammenhang erhobenen Daten werden von Google verarbeitet
+                                und dabei gegebenenfalls in Länder außerhalb der Europäischen Union
+                                übertragen. Welche Informationen Google erhält und wie diese verwendet
+                                werden, beschreibt Google allgemein in der Datenschutzerklärung. <br />
+                                Sollten Sie uns über unseren Google Unternehmensprofil Eintrag oder andere
+                                Google-Dienste per Direktnachricht kontaktieren, können wir nicht
+                                ausschließen, dass diese Nachrichten auch von Google (sowohl von
+                                Mitarbeiterinnen und Mitarbeitern als auch automatisiert) mitgelesen und
+                                ausgewertet werden können. Wir raten daher davon ab, uns dort
+                                personenbezogene Daten mitzuteilen. Stattdessen sollte so früh wie möglich
+                                eine andere Form der Kommunikation gewählt werden. <br />
+                                Die Nutzung dieses Dienstes unterliegt der Google Datenschutzerklärung, der
+                                Sie – mit Nutzung – bereits zugestimmt haben. <br />
+                                Nähere Informationen finden sich in der Datenschutzerklärung unter
+                                folgendem Link: <br />
+                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://policies.google.com/privacy?hl=de.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.14.2. Datenverarbeitung durch uns <br />
+                                Wir als Anbieter unseres Google Unternehmensprofil Eintrags erheben und
+                                verarbeiten keine weiteren Daten aus der Nutzung dieses Google-Angebotes. <br />
+                                Wenn Sie mit uns in Kontakt tretenoder eine Bewertung über uns
+                                veröffentlichst, verarbeiten wir Ihreveröffentlichten Profildaten, sowie den
+                                Inhalt der Bewertung/des Kommentars. <br />
+                                Rechtsgrundlage ist Art. 6 Abs.1 lit. f DSGVO. Wir haben ein berechtigtes
+                                Interesse an der Darstellung unseres Unternehmens und Ermöglichung der
+                                Bewertung unserer Leistungen, um unser Unternehmen uns unsere
+                                Leistungen zu präsentieren und nach außen gut zu präsentieren.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.15. Drittinhalte <br />
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.15.1. Google Fonts<br />
+                                Wir haben Google Fonts lokal auf unserem Server eingebunden. Damit
+                                werden, trotz der Nutzung, keine Daten an Google übertragen.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.15.2. Google reCAPTCHA<br />
+                                Diese Website nutzt Google reCAPTCHA. Google reCAPTCHA ist ein Plugin,
+                                welches von der Google Ireland Limited, Gordon House, Barrow Street,
+                                Dublin 4, Irland, angeboten wird. <br />
+                                Der Dienst ermöglicht es festzustellen, ob eine Dateneingabe durch einen
+                                Menschen oder durch ein automatisiertes Programm erfolgt. Diese Analyse
+                                beginnt automatisch im Hintergrund, sobald die Website betreten wird. Hierzu
+                                werden verschiedene Informationen erfasst, welche an Google übermittelt
+                                werde. Ein Hinweis auf diese Analyse findet nicht statt. <br />
+                                Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. a DSGVO und § 25
+                                Abs. 1 TDDDG. Die Einwilligung ist jederzeit widerrufbar. <br />
+                                Weitere Details: <br />
+                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://policies.google.com/privacy?hl=de
+                                </a> <br />
+                                <a href="https://policies.google.com/terms?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://policies.google.com/terms?hl=de.
+                                </a>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.15.3. HiDrive - IONOS<br />
+                                Wir verwenden auf unserer Seite den Dienst HiDrive. Dieser Dienst wird von
+                                der IONOS SE, Elgendorfer Str. 57, 56410 Montabaur. <br />
+                                HiDrive ist ein Online-Speicher Dienst. Mit diesem Dienst können Daten
+                                verschlüsselt auf RAID gesicherten Servern abgelegt werden und somit von
+                                überall auf der Welt und von verschiedenen Geräten aus zugänglich gemacht
+                                werden. Diese Server befinden sich ausschließlich in Deutschland und sind
+                                TÜV zertifiziert.
+                                <br />
+                                Sofern mit uns eine Datenspeicherung auf den HiDrive Servern vereinbart
+                                wurde, erfragen wir eine Einwilligung für den Einsatz dieses Dienstes. Die
+                                Rechtsgrundlage ist dann Art. 6 Abs. 1 lit. a DSGVO. Diese Einwilligung kann
+                                jederzeit widerrufen werden.
+                                <br />
+                                Darüber hinaus ist Rechtsgrundlage für den Einsatz von HiDrive Art. 6 Abs. 1
+                                lit. f DSGVO, basierend auf unserem berechtigten Interesse, Daten speziell zu
+                                sichern und cloudbasiert zugänglich zu machen. <br />
+                                Die auf den Servern gespeicherten Daten werden gelöscht, sobald sie für den
+                                Zweck ihrer Verarbeitung nicht mehr erforderlich sind und keine gesetzlichen
+                                Aufbewahrungspflichten entgegenstehen. <br />
+                                Weitere Informationen: <br />
+                                <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.ionos.de/terms-gtc/datenschutzerklaerung/.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.15.4. Trustpilot Bewertungen<br />
+                                Wir binden die Funktionen des Bewertungsportals Trustpilot auf unserer
+                                Website ein. Dieser Dienst wird angeboten von der Trustpilot A/S, Pilestræde
+                                58, 5,1112 Kopenhagen, Dänemark. <br />
+                                Trustpilot ermöglicht es den Nutzern, unsere Dienste zu beurteilen. Nutzer,
+                                die unsere Services genutzt haben, werden um Zustimmung gebeten, eine
+                                Aufforderung zur Abgabe einer Bewertung zu erhalten. Nach erteilter
+                                Zustimmung, beispielsweise durch Anklicken eines Kontrollkästchens oder Links, wird ihnen ein Link zur Bewertungsseite zugesandt. Um zu bestätigen,
+                                dass die Nutzer unsere Dienste wirklich in Anspruch genommen haben,
+                                übermitteln wir Trustpilot notwendige Informationen wie Namen, E-Mail-
+                                Adresse und eine Referenznummer der Nutzer sowie Details zur genutzten
+                                Leistung. Diese Informationen dienen ausschließlich der Überprüfung der
+                                Echtheit und der gezielten Kontaktaufnahme. <br />
+                                Diese geschieht nur mit Einwilligung. Die Einwilligung kann jederzeit
+                                widerrufen werden. Rechtsgrundlage dafür ist Art 6 Abs. 1 lit. a DSGVO. <br />
+                                Weitere Informationen: <br />
+                                <a href="https://de.legal.trustpilot.com/for-reviewers/end-user-privacy-terms" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://de.legal.trustpilot.com/for-reviewers/end-user-privacy-terms
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.15.5. Gravatar<br />
+                                Wir binden die Funktionen von Gravatar auf unserer Website ein. Dieser
+                                Dienst wird angeboten von der Automattic Inc., 60 29th Street #343, San
+                                Francisco, CA 94110, USA. <br />
+                                Gravatar ist ein Dienst, der es Nutzer ermöglicht, ein einziges Avatar-Bild zu
+                                erstellen und dieses mit ihrer E Mail-Adresse zu verknüpfen. Dieses Avatar-
+                                Bild wird dann automatisch neben dem Namen angezeigt, wenn auf gravatarfähigen
+                                Websites, Foren und Blogs Kommentare gepostet oder Artikel
+                                geschrieben werden. Die Hauptfunktionen von Gravatar umfassen die
+                                einfache Erstellung und Verwaltung eines universellen Avatars, der auf
+                                verschiedenen Webplattformen konsistent verwendet wird, wodurch Nutzer
+                                leichter identifizierbar sind und eine einheitliche Online-Identität über mehrere
+                                Seiten hinweg pflegen können. <br />
+                                Hierzu wird die E-Mail Adresse und die IP-Adresse an die Server von
+                                Automattic in den USA übertragen. Gravatar setzt sowohl technisch
+                                notwendige Cookies, als auch solche zur Analyse, Leistungsmessung und
+                                Werbung. Letztere werden nur mit Einwilligung nach Art. 6 Abs. 1 lit. a
+                                DSGVO gesetzt. Die Einwilligung ist jederzeit widerrufbar. <br />
+                                Im Übrigen beruht die Datenverarbeitung auf Art. 6 Abs. 1 lit. f DSGVO. Wir
+                                haben ein berechtigtes Interesse daran den Nutzern die Möglichkeit zu geben, die Funktionen von Gravatar auf unserer Website zu verwenden, um so ein
+                                uneingeschränktes Nutzungserlebnis zu gewährleisten. <br />
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
+                                (SCC) der EU-Kommission. <br />
+                                Nähere Informationen: <br />
+                                <a href="https://automattic.com/privacy/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://automattic.com/privacy/
+                                </a> <br />
+                                <a href="https://automattic.com/cookies/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://automattic.com/cookies/
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.15.6. Unsplash<br />
+                                Auf unserer Website verwenden wir Bilder von Unsplash, einem Dienst der
+                                Unsplash Inc., Unsplash, Inc. 500–400 rue McGill Montreal, QC H2Y 2G1,
+                                Canada, E-Mail: <br />
+                                <a href="mailto:abuse@unsplash.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    abuse@unsplash.com
+                                </a> <br />
+                                Dieser Dienst stellt lizenzfreie Fotos zur Verfügung und ermöglicht uns damit,
+                                qualitativ hochwertige visuelle Inhalte auf unserer Webseite zu präsentieren,
+                                die das Nutzererlebnis verbessern. <br />
+                                Beim Besuch unserer Website kann es sein, dass Informationen über die
+                                Nutzung der Bilder (wie z.B. Datum und Uhrzeit des Abrufs, betrachtete
+                                Seiten) an Server von Unsplash übermittelt werden. Normalerweise werden
+                                beim Einbetten von Bildern von Unsplash direkt über öffentliche URLs keine
+                                umfangreichen Nutzerdaten wie Cookies oder IP-Adressen aktiv von
+                                Unsplash gesammelt. <br />
+                                Es ist möglich, dass beim Laden eines Bildes von Unplash eine HTTPAnfrage
+                                an den Server gesendet wird und dabei die IP-Adresse des
+                                Anfragenden von diesem Server protokolliert werden kann. In diesem Fall
+                                holen wir vorher eine Einwilligung nach Art. 6 Abs.1 lit. a DSGVO ein. Die
+                                Einwilligung ist widerruflich. <br />
+                                Unsplash verarbeitet diese Daten in den USA. Wir haben keinen Einfluss auf
+                                diesen <span className="break-all">Datenverarbeitungsvorgang</span>. <br />
+                                Die Nutzung von Unsplash erfolgt im Interesse einer ansprechenden
+                                Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes Interesse im
+                                Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. <br />
+                                Weitere Informationen zur Datennutzung durch Unsplash finden sich in der
+                                Datenschutzerklärung von Unsplash: <br />
+                                <a href="https://unsplash.com/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://unsplash.com/privacy
+                                </a>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.15.7. Spline<br />
+                                Wir verwenden das Tool Spline, um interaktive 3D-Grafiken und -Animationen
+                                zu erstellen, die auf unserer Website und in unseren digitalen Anwendungen
+                                präsentiert werden. Dieser Dienst wird angeboten von der Spline, Inc., 651
+                                North Broad Street, Suite 206, Middletown, DE 19709, USA. <br />
+                                Spline ermöglicht es uns, visuell ansprechende Designs zu entwickeln, die die
+                                Benutzererfahrung verbessern und unsere Inhalte in einer interaktiven Form
+                                darstellen. <br />
+                                Durch die Nutzung von Spline können Daten wie Benutzerinteraktionen mit
+                                den 3D-Modellen und technische Daten (z.B. Gerätetyp, Browser-Version)
+                                erfasst werden, um die Darstellung und Funktionalität der Designs zu
+                                optimieren. <br />
+                                Die Datenverarbeitung dient dazu, die Funktionalität und Ästhetik unserer
+                                digitalen Präsenz zu verbessern und ein ansprechendes Nutzererlebnis zu
+                                gewährleisten. <br />
+                                Rechtsgrundlage für die Verarbeitung ist unser berechtigtes Interesses eine
+                                technisch einwandfreie und optimierte Website sowie digitale Anwendungen
+                                bereitzustellen nach Art. 6 Abs. 1 lit. f DSGVO. <br />
+                                Weitere Informationen: <br />
+                                <a href="https://splinetool.notion.site/Spline-Privacy-Policy-69eb8efed8fe44418afaafa3e2d8156d" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://splinetool.notion.site/Spline-Privacy-Policy-69eb8efed8fe44418afaafa3e2d8156d
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.15.8. Google Video<br />
+                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://policies.google.com/privacy?hl=de.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.16. Audio- und Videokonferenzen <br />
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.16.1. Zoom<br />
+                                Für die Kommunikation mit Kunden verwenden wir Zoom. Zoom ist ein
+                                Online-Konferenzen-Tool. Dieser Dienst wird angeboten von der Zoom Communications Inc., San Jose, 55 Almaden Boulevard, 6th Floor, San Jose,
+                                CA 95113, USA. <br />
+                                Bei der Kommunikation mit diesem Tool per Video- oder Audiokonferenzen
+                                werden personenbezogene Daten von uns und dem Anbieter des Tools
+                                verarbeitet. Die dabei erfassten Daten beinhalten alle Informationen, die Sie
+                                bei der Nutzung des Tools bereitstellen. Außerdem werden Metadaten
+                                bezüglich der Konferenz verarbeitet. Des weiteren werden technische
+                                Information verarbeitet, welche für die Funktion der Online-Kommunikation
+                                benötigt werden. Ferner werden auf den Servern des Tool-Anbieters alle
+                                Dateien gespeichert, welche innerhalb des Tools geteilt werden. <br />
+                                Zoom kann auch Cookies setzen. Diese Cookies werden nur mit Einwilligung
+                                gesetzt. Die Einwilligung kann jederzeit widerrufen werden. Rechtsgrundlage
+                                dafür ist Art 6 Abs. 1 lit. a DSGVO. <br />
+                                Im Übrigen ist Rechtsgrundlage für die Verarbeitung der Daten durch Zoom
+                                Art. 6 Abs. 1 lit. b DSGVO. Die Kommunikation hängt mit der Erfüllung eines
+                                Vertrags zusammen oder ist zur Erfüllung von vorvertraglichen Pflichten
+                                erforderlich. Des weiteren wird dieses Tool genutzt, um die Kommunikation
+                                mit unserem Unternehmen zu vereinfachen. Dies stellt ein berechtigtes
+                                Interesse im Sinne des Art. 6 Abs. 1 lit. f DSGVO dar. <br />
+                                Diese Daten werden so lange gespeichert, bis der Betroffene zur Löschung
+                                auffordert, die Einwilligung zur Speicherung widerrufen wurde oder der Zweck
+                                für die Speicherung entfallen ist. Cookies verbleiben auf dem Endgerät, bis
+                                der Nutzer sie löscht. Zwingend gesetzliche Bestimmungen zu
+                                Aufbewahrungsfristen bleiben unberührt. <br />
+                                Bei der Datenübertragung in die USA greifen die <span className="break-all">Standardvertragsklauseln</span>
+                                (SCC) der EU-Kommission. <br />
+                                Nähere Informationen: <br />
+                                <a href="https://zoom.us/de-de/privacy.html" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://zoom.us/de-de/privacy.html.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.16.2. Skype for Business<br />
+                                Für die Kommunikation mit Kundenverwenden wir Skype for Business. Skype
+                                for Business ist ein Online-Konferenzen-Tool. Dieser Dienst wird angeboten von der Skype Communications SARL, 23-29 Rives de Clausen, L-2165,
+                                Luxembourg. <br />
+                                Bei der Kommunikation mit diesem Tool per Video- oder Audiokonferenzen
+                                werden personenbezogene Daten von uns und dem Anbieter des Tools
+                                verarbeitet. Die dabei erfassten Daten beinhalten alle Informationen, die Sie
+                                bei der Nutzung des Tools bereitstellen. Außerdem werden Metadaten
+                                bezüglich der Konferenz verarbeitet. Des Weiteren werden technische
+                                Information verarbeitet, welche für die Funktion der Online-Kommunikation
+                                benötigt werden. Ferner werden auf den Servern des Tool-Anbieters alle
+                                Dateien gespeichert, welche innerhalb des Tools geteilt werden. <br />
+                                Skype for Business kann auch Cookies setzen. Diese Cookies werden nur mit
+                                Einwilligung gesetzt. Diese Einwilligung kann jederzeit widerrufen
+                                werden. Rechtsgrundlage dafür ist Art 6 Abs. 1 lit. a DSGVO. <br />
+                                Im Übrigen ist Rechtsgrundlage für die Verarbeitung der Daten durch Skype
+                                for Business Art. 6 Abs. 1 lit. b DSGVO. Die Kommunikation hängt mit der
+                                Erfüllung eines Vertrags zusammen oder ist zur Erfüllung von vorvertraglichen
+                                Pflichten erforderlich. Des weiteren wird dieses Tool genutzt, um die
+                                Kommunikation mit unserem Unternehmen zu vereinfachen. Dies stellt ein
+                                berechtigtes Interesse im Sinne des Art. 6 Abs. 1 lit. f DSGVO dar. <br />
+                                Diese Daten werden so lange gespeichert, bis der Betroffene zur Löschung
+                                auffordert, die Einwilligung zur Speicherung widerrufen wurde oder der Zweck
+                                für die Speicherung entfallen ist. Cookies verbleiben auf dem Endgerät, bis
+                                der Nutzer sie löscht. Zwingend gesetzliche Bestimmungen zu
+                                Aufbewahrungsfristen bleiben unberührt. <br />
+                                Weitere Details: <br />
+                                <a href="https://privacy.microsoft.com/de-de/privacystatement/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://privacy.microsoft.com/de-de/privacystatement/
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.16.3. Google Meet<br />
+                                Für die Kommunikation mit Kunden verwenden wir Google Meet. Google Meet
+                                ist ein Online-Konferenzen-Tool. Dieser Dienst wird angeboten von der
+                                Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. <br />
+                                Bei der Kommunikation mit diesem Tool per Video- oder Audiokonferenzen
+                                werden personenbezogene Daten von uns und dem Anbieter des Tools
+                                verarbeitet. Die dabei erfassten Daten beinhalten alle Informationen, die Sie
+                                bei der Nutzung des Tools bereitstellen. Außerdem werden Metadaten
+                                bezüglich der Konferenz verarbeitet. Des Weiteren werden technische
+                                Information verarbeitet, welche für die Funktion der Online-Kommunikation
+                                benötigt werden. Ferner werden auf den Servern des Tool-Anbieters alle
+                                Dateien gespeichert, welche innerhalb des Tools geteilt werden. <br />
+                                Google Meet kann auch Cookies setzen. Diese Cookies werden nur mit
+                                Einwilligung gesetzt. Diese Einwilligung kann jederzeit widerrufen
+                                werden. Rechtsgrundlage dafür ist Art 6 Abs. 1 lit. a DSGVO. <br />
+                                Im Übrigen ist Rechtsgrundlage für die Verarbeitung der Daten durch Google
+                                Meet Art. 6 Abs. 1 lit. b DSGVO. Die Kommunikation hängt mit der Erfüllung
+                                eines Vertrags zusammen oder ist zur Erfüllung von vorvertraglichen Pflichten
+                                erforderlich. Des weiteren wird dieses Tool genutzt, um die Kommunikation
+                                mit unserem Unternehmen zu vereinfachen. Dies stellt ein berechtigtes
+                                Interesse im Sinne des Art. 6 Abs. 1 lit. f DSGVO dar. <br />
+                                Diese Daten werden so lange gespeichert, bis der Betroffene zur Löschung
+                                auffordert, die Einwilligung zur Speicherung widerrufen wurde oder der Zweck
+                                für die Speicherung entfallen ist. Cookies verbleiben auf dem Endgerät, bis
+                                der Nutzer sie löscht. Zwingend gesetzliche Bestimmungen zu
+                                Aufbewahrungsfristen bleiben unberührt. <br />
+                                Weitere Details: <br />
+                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://policies.google.com/privacy?hl=de.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.16.4. Webex<br />
+                                Für die Kommunikation mit Kunden verwenden wir Webex. Webex ist ein
+                                Online-Konferenzen-Tool. Dieser Dienst wird angeboten von der Webex
+                                Communications Deutschland GmbH, Hansaallee 249 c/o Cisco Systems
+                                GmbH, 40549 Düsseldorf, Deutschland. <br />
+                                Bei der Kommunikation mit diesem Tool per Video- oder Audiokonferenzen
+                                werden personenbezogene Daten von uns und dem Anbieter des Tools verarbeitet. Die dabei erfassten Daten beinhalten alle Informationen, die Sie
+                                bei der Nutzung des Tools bereitstellen. Außerdem werden Metadaten
+                                bezüglich der Konferenz verarbeitet. Des Weiteren werden technische
+                                Information verarbeitet, welche für die Funktion der Online-Kommunikation
+                                benötigt werden. Ferner werden auf den Servern des Tool-Anbieters alle
+                                Dateien gespeichert, welche innerhalb des Tools geteilt werden. <br />
+                                Webex kann auch Cookies setzen. Diese Cookies werden nur mit Einwilligung
+                                gesetzt. Diese Einwilligung kann jederzeit widerrufen
+                                werden. Rechtsgrundlage dafür ist Art 6 Abs. 1 lit. a DSGVO. <br />
+                                Im Übrigen ist Rechtsgrundlage für die Verarbeitung der Daten durch Webex
+                                Art. 6 Abs. 1 lit. b DSGVO. Die Kommunikation hängt mit der Erfüllung eines
+                                Vertrags zusammen oder ist zur Erfüllung von vorvertraglichen Pflichten
+                                erforderlich. Des weiteren wird dieses Tool genutzt, um die Kommunikation
+                                mit unserem Unternehmen zu vereinfachen. Dies stellt ein berechtigtes
+                                Interesse im Sinne des Art. 6 Abs. 1 lit. f DSGVO dar. <br />
+                                Webex verfügt über Binding Corporate Rules (BCR). Dies sind verbindliche
+                                unternehmensinterne Vorschriften, welche die Datenübertragung in
+                                Drittstaaten legitimieren. <br />
+                                Die Daten werden so lange gespeichert, bis der Betroffene zur Löschung
+                                auffordert, die Einwilligung zur Speicherung widerrufen wurde oder der Zweck
+                                für die Speicherung entfallen ist. Cookies verbleiben auf dem Endgerät, bis
+                                der Nutzer sie löscht. Zwingend gesetzliche Bestimmungen zu
+                                Aufbewahrungsfristen bleiben unberührt. <br />
+                                Weitere Details: <br />
+                                <a href="https://www.cisco.com/c/de_de/about/trust-center/data-protection-and-privacypolicy.html" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.cisco.com/c/de_de/about/trust-center/data-protection-and-privacypolicy.html
+                                </a> <br />
+                                <a href="https://www.cisco.com/c/de_de/about/legal/privacy-full.html" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.cisco.com/c/de_de/about/legal/privacy-full.html.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.16.5. FaceTime<br />
+                                Für die Kommunikation mit Kunden verwenden wir FaceTime. Der Dienst wird
+                                angeboten von der Apple Inc., Infinite Loop, Cupertino, CA 95014, USA. <br />
+                                FaceTime ist ein Dienst von Apple, mit dem Video- oder Audioanrufe mit
+                                Personen getätigt werden können, die ebenfalls ein iOS- oder iPadOS-Gerät,
+                                einen Mac oder einen WebRTC-Browser verwenden. Mit einer Apple Watch
+                                können Audioanrufe getätigt werden. FaceTime verwendet die Ende-zu-Ende-
+                                Verschlüsselung. Apple speichert niemals den Inhalt von FaceTime-
+                                Anrufen.Die Apple-ID, Telefonnummer oder E-Mail Adresse wird den
+                                Personen angezeigt, die kontaktiert werden. <br />
+                                Apple kann beim Gebrauch von FaceTime bestimmte Nutzungsdaten
+                                erfassen, wie etwa die Nutzer eines Anrufs und die Netzwerkeinstellungen
+                                des verwendeten Geräts, ohne jedoch persönlich identifizierbare
+                                Informationen zu speichern oder den Inhalt der Gespräche einzusehen. Diese
+                                Daten können für bis zu 30 Tage gespeichert werden. Zudem kommunizieren
+                                Apps wie FaceTime mit Apple-Servern, um die Verfügbarkeit anderer Nutzer. <br />
+                                Die Daten werden so lange gespeichert, bis der Betroffene zur Löschung
+                                auffordert, die Einwilligung zur Speicherung widerruft oder der Zweck für die
+                                Speicherung entfallen ist. Zwingend gesetzliche Bestimmungen zu
+                                Aufbewahrungsfristen bleiben unberührt. <br />
+                                Nähere Informationen: <br />
+                                <a href="https://www.apple.com/de/legal/privacy/data/de/face-time/#:~:text=Wenn%20du%20FaceTime%20verwendest%2C%20kann,FaceTime%2DAnrufe%20aufzeichnen%20und%20speichern" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.apple.com/de/legal/privacy/data/de/face-time/#:~:text=Wenn%20du%20FaceTime%20verwendest%2C%20kann,FaceTime%2DAnrufe%20aufzeichnen%20und%20speichern.
+                                </a>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.16.6. WhatsApp<br />
+                                Wir nutzen den Dienst WhatsApp für Audio- und Videokonferenzen. Dieser
+                                Dienst wird angeboten von WhatsApp LLC, 1601 Willow Road, Menlo Park,
+                                CA 94025, USA. Wir nutzen WhatsApp, um zu kommunizieren und Audiosowie
+                                Videoanrufe durchzuführen. <br />
+                                Die hierbei verarbeiteten Daten umfassen unter anderem Telefonnummern,
+                                Profilnamen und -fotos, Online-Status, Statusnachrichten, die Inhalte der
+                                Nachrichten, sowie Verbindungs- und Gerätedaten wie IP-Adressen und
+                                Gerätemodelle. Diese Daten werden genutzt, um die Kommunikation zu
+                                ermöglichen und die Qualität der Dienste sicherzustellen. WhatsApp speichert
+                                die Daten auf Servern weltweit und kann zur Datenerhebung und Speicherung Cookies setzen. Diese Cookies werden nur mit Einwilligung gesetzt. Diese
+                                Einwilligung kann jederzeit widerrufen werden. Rechtsgrundlage für die
+                                Cookie-Nutzung ist Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG,
+                                soweit diese Einwilligung den Zugriff auf Informationen im Endgerät des
+                                Nutzers oder die Speicherung von Cookies im Sinne des TDDDG umfasst. <br />
+                                Die Rechtsgrundlage für die Verarbeitung der erhobenen Daten ist Art. 6 Abs.
+                                1 lit. f DSGVO, da wir ein berechtigtes Interesse an der Nutzung dieses Tools
+                                zur Optimierung unserer Kommunikation haben. <br />
+                                Die Daten werden so lange gespeichert, bis der Betroffene zur Löschung
+                                auffordert, die Einwilligung zur Speicherung widerrufen wird oder der Zweck
+                                für die Speicherung entfällt. Zwingend gesetzliche Bestimmungen zu
+                                Aufbewahrungsfristen bleiben unberührt. <br />
+                                Bei der Datenübertragung in Drittstaaten (z.B. die USA) greifen die
+                                <span className="break-all">Standardvertragsklauseln</span> (SCC) der EU-Kommission. <br />
+                                Weitere Informationen: <br />
+                                <a href="https://www.whatsapp.com/legal/privacy-policy-eea?lang=de_DE" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.whatsapp.com/legal/privacy-policy-eea?lang=de_DE.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.16.7. Slack<br />
+                                <a href="www.slack.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    www.slack.com.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                3.16.8. [...]<br />
+                            </li>
+
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.17. CRM-Systeme <br />
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.18. Hubspot CRM <br />
+                                Wir nutzen das CRM-System Hubspot. Dieser Dienst wird angeboten von
+                                Hubspot Inc., 25 Street, Cambridge, MA 02141 USA. <br />
+                                CRM (Customer Relationship Management) ist ein System zur Verwaltung
+                                aller Interaktionen und Beziehungen eines Unternehmens mit seinen aktuellen
+                                und potenziellen Kunden. Es unterstützt die Automatisierung und Optimierung
+                                von Vertriebsprozessen, Marketingkampagnen, Kundenservice und
+                                Kundenkommunikation. <br />
+                                Sobald wir auf unserer Website Ihre personenbezogenen Daten erfassen,
+                                werden diese von uns im CRM-System Hubspot verarbeitet. <br />
+                                Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. b DSGVO. Die Datenverarbeitung
+                                erfolgt zur Erfüllung von (vor-) vertraglichen Pflichten. <br />
+                                Hubspot ist im Rahmen des EU-U.S. Data Privacy Frameworks zertifiziert.
+                                Ansonsten greifen die <span className="break-all">Standardvertragsklauseln</span> (SCC) der EU-Kommission. <br />
+                                Nähere Informationen: <br />
+                                <a href="https://legal.hubspot.com/de/privacy-policy?hubs_content=www.hubspot.de/&hubs_content-cta=Datenschutzbestimmungen" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://legal.hubspot.com/de/privacy-policy?hubs_content=www.hubspot.de/&hubs_content-cta=Datenschutzbestimmungen.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.19. Pipedrice CRM <br />
+                                Wir nutzen das CRM-System Pipedrive CRM. Dieser Dienst wird angeboten
+                                von Pipedrive OÜ, Mustamäe tee 3a, 10615 Tallinn, Estland. <br />
+                                CRM (Customer Relationship Management) ist ein System zur Verwaltung
+                                aller Interaktionen und Beziehungen eines Unternehmens mit seinen aktuellen
+                                und potenziellen Kunden. Es unterstützt die Automatisierung und Optimierung
+                                von Vertriebsprozessen, Marketingkampagnen, Kundenservice und
+                                Kundenkommunikation. <br />
+                                Sobald wir auf unserer Website Ihre personenbezogenen Daten erfassen,
+                                werden diese von uns im CRM-System Pipedrive CRM verarbeitet. <br />
+                                Rechtsgrundlage hierfür ist Art. 6 abs. 1 lit. b DSGVO. Die Datenverarbeitung
+                                erfolgt zur Erfüllung von (vor-) vertraglichen Pflichten. <br />
+                                Nähere Informationen: <br />
+                                <a href="https://www.pipedrive.com/en/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.pipedrive.com/en/privacy.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.20. Airtable <br />
+                                Wir verwenden Airtable zur Verwaltung unserer Kundenbeziehungen. Airtable
+                                ist eine Anwendung der Formagrid Inc., 799 Market Street, 8. Stock, San
+                                Francisco, CA, USA. <br />
+                                In diesem Zusammenhang speichern und verarbeiten wir Daten wie Namen,
+                                Kontaktinformationen, Kommunikationshistorie und Kundeninteraktionen, um
+                                unsere Dienstleistungen effektiv bereitzustellen und zu verbessern. <br />
+                                Die Verarbeitung dieser Daten basiert auf einer Einwilligung nach Art. 6 Abs.
+                                1 lit. a DSGVO und/oder unserem berechtigten Interesse an der effektiven
+                                Kundenverwaltung nach Art. 6 Abs. 1 lit. f DSGVO. Eine Einwilligung kann
+                                jederzeit widerrufen werden. <br />
+                                Die Daten werden möglicherweise in die USA übertragen und dort
+                                gespeichert. In diesem Fall haben wir mit Formagrid einen SCC geschlossen,
+                                um ein geeufbetes Schutzniveau der Daten sicherzustellen. <br />
+                                Weitere Informationen: <br />
+                                <a href="https://www.airtable.com/company/privacy" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.airtable.com/company/privacy.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.21. Eigenentwicklung <br />
+                                Wir nutzen ein Customer Relationship Management (CRM)-System, welches
+                                wir selbst entwickelt haben. <br />
+                                Dieses CRM ermöglicht es uns, bestehende und potenzielle Kunden sowie
+                                Kontakte zu verwalten und Vertriebs-, Buchhaltungs- und
+                                Kommunikationsprozesse zu organisieren. Dieses System ist entscheidend
+                                für die Analyse und Optimierung unserer kundenbezogenen Prozesse. <br />
+                                Mithilfe des CRM Systems können wir unsere Kundenkommunikation über
+                                verschiedene Kanäle effizient gestalten, um relevante Informationen und
+                                Angebote zu präsentieren, die den Interessen unserer Kunden entsprechen. <br />
+                                Sobald wir auf unserer Website personenbezogene Daten erfassen, werden
+                                diese von uns im CRM-System verarbeitet. Die Verarbeitung der Daten
+                                erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Erfüllung von
+                                (vor-)vertraglichen Pflichten sowie auf Art. 6 Abs. 1 lit. f DSGVO, da der
+                                Einsatz von CRM-Funktionen für das Wachstum und die Skalierung unseres
+                                Unternehmens von zentraler Bedeutung ist und wir ein berechtigtes Interesse
+                                an einer möglichst effizienten Kundenverwaltung und -kommunikation haben. <br />
+                                Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die
+                                Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO; die Einwilligung
+                                ist jederzeit widerrufbar. <br />
+                                Durch die Eigenenticklung können wir sicherstellen, dass keine
+                                Datenübertragung an Dritte stattfindet.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.22. Notion <br />
+                                Wir nutzen das CRM-System Notion. Dieser Dienst wird angeboten von
+                                Notion Labs, Inc., 2300 Harrison Street, San Francisco, CA 94110, USA.
+                                Notion ermöglicht es uns, Kundenbeziehungen zu verwalten, indem wir Daten
+                                wie Kontaktinformationen, Interaktionen und Geschäftsabschlüsse in einer
+                                flexiblen und anpassbaren Datenbank speichern und organisieren. <br />
+                                Notion speichert die Daten auf Servern weltweit und kann zur Datenerhebung
+                                und Speicherung Cookies setzen. Diese Cookies werden nur mit Einwilligung
+                                gesetzt. Diese Einwilligung kann jederzeit widerrufen werden.
+                                Rechtsgrundlage für die Cookie-Nutzung ist Art. 6 Abs. 1 lit. a DSGVO und §
+                                25 Abs. 1 TDDDG, soweit diese Einwilligung den Zugriff auf Informationen im
+                                Endgerät des Nutzers oder die Speicherung von Cookies im Sinne des
+                                TDDDG umfasst. <br />
+                                Die Rechtsgrundlage für die Verarbeitung der erhobenen Daten ist Art. 6 Abs.
+                                1 lit. b DSGVO, da die Datenverarbeitung zur Erfüllung von (vor-)vertraglichen
+                                Pflichten notwendig ist. Darüber hinaus haben wir ein berechtigtes Interesse
+                                an der Nutzung dieses Tools zur Optimierung unserer
+                                Kundenbeziehungsverwaltung, was durch Art. 6 Abs. 1 lit. f DSGVO gedeckt
+                                ist. <br />
+                                Die Daten werden so lange gespeichert, bis der Betroffene zur Löschung
+                                auffordert, die Einwilligung zur Speicherung widerrufen wird oder der Zweck
+                                für die Speicherung entfällt. Zwingend gesetzliche Bestimmungen zu
+                                Aufbewahrungsfristen bleiben unberührt. <br />
+                                <a href="https://www.notion.so/notion/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.notion.so/notion/Privacy-Policy-3468d120cf614d4c9014c09f6adc9091.
+                                </a>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.23. Cloud-Backups <br />
+                                Wir nutzen auf unserer Website Cloud-Backup Funktionen, um die Daten und
+                                die Inhalte der Website vor Datenverlust, Korruption oder Sicherheitsvorfällen
+                                zu schützen. Dies gewährleistet, dass im Falle eines Serverausfalls, eines
+                                Hackerangriffs oder anderer unvorhergesehener Ereignisse die Website
+                                schnell und vollständig wiederhergestellt werden kann. <br />
+                                Folgenden Cloud-Backup-Service verwenden wir:  <br />
+                                Google Drive <br />
+                                Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. <br />
+                                <a href="https://policies.google.com/privacy?hl=de" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://policies.google.com/privacy?hl=de
+                                </a> <br />
+                                One Drive <br />
+                                Microsoft Corporation, One Microsoft Way, Redmond, WA 98052-6399, USA. <br />
+                                <a href="https://privacy.microsoft.com/de-de/privacystatement" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://privacy.microsoft.com/de-de/privacystatement
+                                </a> <br />
+                                IONOS <br />
+                                <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.ionos.de/terms-gtc/datenschutzerklaerung/.
+                                </a> <br />
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">4. Das ist sonst noch wichtig</div>
+                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base leading-[30.006px] my-[20px]">
+                            Zum Abschluss möchten wir Sie ausführlich und detailliert über Ihre Rechte
+                            informieren und Ihnen mitteilen, wie Sie über Veränderungen der
+                            datenschutzrechtlichen Anforderungen informiert werden wirst.
+                        </div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5 flex flex-col gap-[20px]">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                4.1. Ihre Rechte im Detail <br />
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                4.1.1. Auskunftsrecht nach Art. 15 DSGVO <br />
+                                Sie können Auskunft darüber verlangen, ob personenbezogenen Daten von
+                                Ihnen verarbeitet werden. Ist das der Fall, können Sie weitere Auskünfte zur
+                                Art und Weise der Verarbeitung einfordern. Eine detaillierte Aufzählung finden
+                                Sie in Art. 15 Abs. 1 lit. a bis h DSGVO.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                4.1.2. Recht auf Berichtigung nach Art. 16 DSGVO <br />
+                                Dieses Recht umfasst die Berichtigung unrichtiger Daten und die Ergänzung
+                                unvollständiger personenbezogener Daten.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                4.1.3. Recht auf Löschung nach Art. 17 DSGVO <br />
+                                Dieses sogenannte ‚Recht auf Vergessenwerden‘ gibt Ihnen das Recht, unter
+                                bestimmten Voraussetzungen, die Löschung der personenbezogenen Daten
+                                durch den Verantwortlichen zu verlangen. Dies ist grundsätzlich dann der Fall,
+                                wenn der Zweck der Datenverarbeitung entfallen ist, wenn eine Einwilligung widerrufen wurde oder die Ausgangsverarbeitung ohne Rechtsgrundlage
+                                stattfand. Eine detaillierte Aufzählung von Gründen finden Sie in Art. 17 Abs.
+                                1 lit. a bis f DSGVO. Dieses „Recht auf Vergessenwerden“ korrespondiert
+                                darüber hinaus mit der Pflicht des Verantwortlichen aus Art. 17 Abs. 2
+                                DSGVO angemessene Maßnahmen zu ergreifen, um eine allgemeine
+                                Löschung der Daten herbeizuführen.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                4.1.4. Recht auf Einschränkung der Verarbeitung nach Art. 18 DSGVO <br />
+                                Dieses Recht ist an die Voraussetzungen gemäß Art. 18 Abs. 1 lit. a bis d
+                                geknüpft.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                4.1.5. Recht auf Datenübertragbarkeit nach Art. 20 DSGVO <br />
+                                Hier wird das grundsätzliche Recht zum Erhalt der eigenen Daten in einer
+                                gängigen Form und der Übermittlung an einen anderen Verantwortlichen
+                                geregelt. Dies gilt allerdings nur für die Daten einer Verarbeitung aufgrund von
+                                Einwilligung oder Vertrag nach Art. 20 Abs. 1 lit. a und b und soweit dies
+                                technisch machbar ist.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                4.1.6. Recht auf Widerspruch nach Art. 21 DSGVO <br />
+                                Sie können grundsätzlich der Verarbeitung Ihrer personenbezogenen Daten
+                                widersprechen. Dies gilt insbesondere dann, wenn Ihr Interesse am
+                                Widerspruch das berechtigte Interesse des Verantwortlichen an der
+                                Verarbeitung überwiegt und wenn sich die Verarbeitung auf Direktwerbung
+                                und oder Profiling bezieht.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                4.1.7. Recht auf „Entscheidung im Einzelfall“ nach Art. 22 DSGVO <br />
+                                Sie haben grundsätzlich das Recht, nicht einer ausschließlich auf einer
+                                automatisierten Verarbeitung (einschließlich Profiling) beruhenden
+                                Entscheidung unterworfen zu werden, die Ihnen gegenüber rechtliche
+                                Wirkung entfaltet oder Sie in ähnlicher Weise erheblich beeinträchtigt. Auch
+                                dieses Recht findet allerdings Einschränkungen und Ergänzungen in Art. 22
+                                Abs. 2 und 4 DSGVO.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                4.1.8. Weitere Rechte <br />
+                                Die DSGVO beinhaltet umfassende Rechte der Unterrichtung von Dritten
+                                darüber, ob oder wie Sie Rechte nach Art. 16, 17, 18 DSGVO geltend gemacht haben. Dies allerdings nur, insoweit dies auch möglich bzw. mit
+                                einem angemessenen Aufwand durchführbar ist. <br />
+                                Wir möchten Sie an dieser Stelle erneut auf Ihr Recht des Widerrufs einer
+                                erteilten Einwilligung nach Art. 7 Abs. 3 DSGVO hinweisen. Die
+                                Rechtmäßigkeit der bis dahin durchgeführten Verarbeitung wird dadurch
+                                allerdings nicht berührt. <br />
+                                Außerdem möchten wir Sie auch noch auf Ihre Rechte nach §§ 32 ff. BDSG
+                                hinweisen, die allerdings inhaltlich größtenteils deckungsgleich mit den
+                                soeben beschrieben Rechten sind.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
+                                4.1.9. Beschwerderecht nach Art. 77 DSGVO <br />
+                                Sie haben auch das Recht, sich bei einer <span className="break-all">Datenschutzaufsichtsbehörde</span> zu
+                                beschweren, wenn Sie der Ansicht sind, dass eine Verarbeitung der Sie
+                                betreffenden personenbezogenen Daten gegen diese Verordnung verstößt.
                             </li>
                         </ol>
 
-                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">4. Das ist sonst noch wichtig</div>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">5. Was ist, wenn morgen die DSGVO abgeschafft wird oder andere Veränderungen stattfinden?</div>
-
+                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base leading-[30.006px] my-[20px]">
+                            Der aktuelle Stand dieser Datenschutzerklärung ist 06.05.2024. Von Zeit zu
+                            Zeit ist es erforderlich, den Inhalt der Datenschutzerklärung anzupassen, um
+                            auf tatsächliche und rechtliche Veränderungen zu reagieren. Wir behalten uns
+                            daher vor, diese Datenschutzerklärung jederzeit zu ändern. Wir werden die
+                            geänderte Version an gleicher Stelle veröffentlichen und empfehlen Ihnen, die
+                            Datenschutzerklärung regelmäßig zu lesen. <br /> <br />
+                            Dieter macht den Datenschutz" ist ein Produkt der simply Legal GmbH, Burkarderstr. 36, D-97082 Würzburg. All rights reserved 2024
+                        </div>
                     </div>
 
 
@@ -1505,65 +2894,65 @@ const TermAndConditions = () => {
                     <div id="websiteAGB" className="flex flex-col">
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Website AGB</div>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">1. Geltungsbereich</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5">
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">1.1. Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für die Nutzung der Website der Colacy GmbH (im Folgenden „Superagentur“) sowie aller angebotenen Inhalte, Dienste und Funktionen.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">1.2. Abweichende oder ergänzende Bedingungen des Nutzers finden keine Anwendung, es sei denn, die Superagentur stimmt ihrer Geltung ausdrücklich zu.</li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">2. Nutzung der Website</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5">
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">2.1. Die Nutzung der Website ist ausschließlich zu rechtmäßigen Zwecken gestattet.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">2.2. Nutzer verpflichten sich, keine Inhalte zu übermitteln, die gegen geltendes Recht oder Rechte Dritter verstoßen (z. B. urheberrechtlich geschütztes Material ohne Genehmigung, beleidigende Inhalte).</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">2.3. Der Betreiber behält sich das Recht vor, Inhalte zu entfernen, die unangemessen oder rechtswidrig sind.</li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">3. Registrierung und Nutzerkonto</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5">
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">3.1. Einige Dienste oder Funktionen der Website können eine Registrierung erfordern.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">3.2. Nutzer sind verpflichtet, wahrheitsgemäße und vollständige Angaben zu machen.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">3.3. Das Nutzerkonto ist nicht übertragbar, und Nutzer sind für die Sicherheit ihrer Zugangsdaten verantwortlich.</li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">4. Haftungsausschluss</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5">
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">4.1. Die Superagentur haftet nur bei Vorsatz oder grober Fahrlässigkeit, ausgenommen sind Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">4.2. Für die Inhalte verlinkter externer Websites wird keine Haftung übernommen. Die Verantwortung für diese Inhalte liegt bei den jeweiligen Anbietern oder Betreibern.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">4.3. Die Verfügbarkeit der Website wird nicht garantiert. Insbesondere Wartungsarbeiten, technische Probleme oder höhere Gewalt können die Nutzung einschränken.</li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">5. Urheberrecht und Nutzungsrechte</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5">
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">5.1. Alle auf der Website veröffentlichten Inhalte (Texte, Bilder, Grafiken, Videos, etc.) sind urheberrechtlich geschützt.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">5.2. Eine Nutzung, Vervielfältigung oder Verbreitung der Inhalte ist nur mit ausdrücklicher schriftlicher Zustimmung der Superagentur zulässig.</li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">6. Datenschutz</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5">
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">6.1. Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Informationen zum Umgang mit Daten finden Sie in unserer Datenschutzerklärung unter <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">www.superagentur-marketing.de/datenschutz-und-agbs</a>.</li>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">6.1. Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Informationen zum Umgang mit Daten finden Sie in unserer Datenschutzerklärung unter <a href="www.superagentur-marketing.de/datenschutz-und-agbs" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">www.superagentur-marketing.de/datenschutz-und-agbs</a>.</li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">7. Änderungen der AGB</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5">
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">7.1. Die Superagentur behält sich das Recht vor, diese AGB jederzeit zu ändern.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">7.2. Änderungen treten in Kraft, sobald sie auf der Website veröffentlicht werden. Es obliegt den Nutzern, sich regelmäßig über Änderungen zu informieren.</li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">8. Schlussbestimmungen</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5">
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">8.1. Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">8.2. Gerichtsstand ist der Sitz der Colacy GmbH, sofern gesetzlich zulässig.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">8.3. Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Gültigkeit der übrigen Bestimmungen unberührt.</li>
                         </ol>
-                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">9. Verbraucherinformationen zur Streitbeilegung</div>
-                        <ol className="md:my-4 my-3 list-inside pl-5">
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">9.1. Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">https://ec.europa.eu/consumers/odr/</a> .</li>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px] break-words">9. Verbraucherinformationen zur Streitbeilegung</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">9.1. Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">https://ec.europa.eu/consumers/odr/</a>.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">9.2. Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</li>
                         </ol>
-                        {/* <div className="text-neutral-600 text-[18px] tb-medium leading-[30.006px]">Enim nec dui nunc mattis enim vulputate eu scelerisque felis imperdiet proin fermentum leo vel proin sed libero enim sed <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">faucibus turpis</a> at lectus urna duis convallis convallis at tellus at urna condimentum mattis pellentesque id nibh nibh cras pulvinar mattis nunc sed.</div>
+                        {/* <div className="text-neutral-600 text-[18px] tb-medium leading-[30.006px]">Enim nec dui nunc mattis enim vulputate eu scelerisque felis imperdiet proin fermentum leo vel proin sed libero enim sed <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">faucibus turpis</a> at lectus urna duis convallis convallis at tellus at urna condimentum mattis pellentesque id nibh nibh cras pulvinar mattis nunc sed.</div>
 
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px] md:mb-4 mb-[10px]">Cookies and tracking</div>
-                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base md:mb-8 mb-[26px] leading-[30.006px]">Consequat mauris nunc congue nisi cursus metus aliquam eleifend mi in null dignissim cras tincidunt lobortis feugiat vivamus blandit aliquam etiam erat velit sapien faucibus et molestie ac ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">id cursus</a> metus aliquam eleifend mi in nulla posuere sollicitudin.</div> */}
+                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base md:mb-8 mb-[26px] leading-[30.006px]">Consequat mauris nunc congue nisi cursus metus aliquam eleifend mi in null dignissim cras tincidunt lobortis feugiat vivamus blandit aliquam etiam erat velit sapien faucibus et molestie ac ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">id cursus</a> metus aliquam eleifend mi in nulla posuere sollicitudin.</div> */}
                     </div>
 
 
                     {/* <div id="user-policy" className="flex flex-col">
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">User Policy</div>
-                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base md:mb-8 mb-[26px] leading-[30.006px]">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin amet facilisis magna etiam tempor pellentesque massa placerat duis ultricies lacus sed sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Id interdum velit laoreet id donec ultrices <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">aliquam malesuada</a> bibendum arcu vitae elementum curabitur. Sapien eget mi proin sed libero at erat pellentesque adipiscing commodo at pellentesque elit vivamus at augue eget arcu dictum varius.</div>
+                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base md:mb-8 mb-[26px] leading-[30.006px]">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin amet facilisis magna etiam tempor pellentesque massa placerat duis ultricies lacus sed sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Id interdum velit laoreet id donec ultrices <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">aliquam malesuada</a> bibendum arcu vitae elementum curabitur. Sapien eget mi proin sed libero at erat pellentesque adipiscing commodo at pellentesque elit vivamus at augue eget arcu dictum varius.</div>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px] md:mb-4 mb-[10px] mt-2">User responsibilities</div>
-                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base leading-[30.006px]">eugiat vivamus at augue eget arcu dictum varius curabitur vitae nunc sed velit dignissim felis eget velit aliquet sagittis id consectetur sit amet consectetur adipiscing elit pellentesque habitant morbi <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">mus mauris</a> vitae ultricies leo integer malesuada id aliquet lectus proin nibh nisl condimentum dolor viverra ipsum nunc.</div>
+                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base leading-[30.006px]">eugiat vivamus at augue eget arcu dictum varius curabitur vitae nunc sed velit dignissim felis eget velit aliquet sagittis id consectetur sit amet consectetur adipiscing elit pellentesque habitant morbi <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">mus mauris</a> vitae ultricies leo integer malesuada id aliquet lectus proin nibh nisl condimentum dolor viverra ipsum nunc.</div>
                         <ul className="pl-10 md:my-8 my-[26px] list-disc">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Mollis aliquam ut porttitor leo a diam.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Enim nec dui nunc mattis enim.</li>

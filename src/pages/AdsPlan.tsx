@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 import APP_CONFIG from '../../public/config.ts';
+import logo from "../assets/images/logo.webp"
 
 const AdsPlan = () => {
     const fadeInAnimationVariant = {
@@ -71,13 +72,35 @@ const AdsPlan = () => {
     return (
         <div className="flex flex-col">
             <Helmet>
-                <title>Ads Plan - Flexible Lösungen für jeden Bedarf | Superagentur X</title>
-                <meta name="description" content="Entdecken Sie unsere Ads-Preismodelle, die flexible Lösungen für Social Media Marketing, bezahlte Werbung und SEO bieten. Superagentur X unterstützt Sie bei jedem Schritt." />
-                <meta property="og:title" content="Ads Plan - Flexible Lösungen für jeden Bedarf | Superagentur X" />
-                <meta property="og:description" content="Flexible Ads-Pläne für Social Media Marketing, bezahlte Werbung und SEO. Finden Sie den idealen Plan, der zu Ihrem Budget und Ihren Zielen passt!" />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}ads-plan`} />
+                <title>Google Ads-Pläne für effektives Marketing</title>
+                <meta name="description" content="Unsere Google Ads-Pläne bieten gezielte Werbelösungen, um Ihre Reichweite zu erhöhen und Conversion-Raten zu maximieren." />
+                <meta name="keywords" content="Google Ads, effektive Werbung, Reichweite erhöhen, Conversion-Optimierung" />
                 <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Google Ads-Pläne für effektives Marketing" />
+                <meta property="og:description" content="Erreichen Sie Ihre Zielgruppe effizient mit unseren professionellen Google Ads-Plänen." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
             <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
                 <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">

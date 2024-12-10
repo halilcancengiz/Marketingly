@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
+import logo from "../assets/images/logo.webp"
 const BasicPackageDetail = () => {
     const fadeInAnimationVariant = {
         initial: {
@@ -52,13 +53,35 @@ const BasicPackageDetail = () => {
     return (
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
-                <title>Basis-Paket - Detaillierte Informationen | Superagentur</title>
-                <meta name="description" content="Das Basis-Paket von Superagentur bietet den idealen Einstieg ins digitale Marketing. Perfekt für Unternehmen, die gezielte Werbekampagnen mit einfacher Einrichtung und verlässlicher Betreuung starten möchten." />
-                <meta property="og:title" content="Basis-Paket - Superagentur" />
-                <meta property="og:description" content="Erleben Sie das Basis-Paket: Effektive Verwaltung kleiner Budgets, Einrichtung erster Kampagnen und zuverlässiger Support für einen erfolgreichen Start ins digitale Marketing." />
-                <meta property="og:type" content="product" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}basic-package-detail`} />
+                <title>Google Ads Basis-Paket – Effektive Werbung für Ihr Unternehmen</title>
+                <meta name="description" content="Unser Google Ads Basis-Paket bietet kosteneffiziente Lösungen zur Steigerung Ihrer Sichtbarkeit und Kundengewinnung." />
+                <meta name="keywords" content="Google Ads, Basis-Paket, Online-Werbung, Sichtbarkeit steigern" />
                 <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Google Ads Basis-Paket – Effektive Werbung für Ihr Unternehmen" />
+                <meta property="og:description" content="Starten Sie mit gezielten Google Ads-Kampagnen und gewinnen Sie neue Kunden effizient." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
                 <motion.div

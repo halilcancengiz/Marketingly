@@ -4,8 +4,8 @@ import search from "../assets/images/search.webp";
 import system from "../assets/images/system.webp";
 import services from "../assets/images/homev1-services-image.webp";
 import check from "../assets/images/check.webp";
-import manImage from "../assets/images/manimage.png";
-import seoImage from "../assets/images/seoimage.png";
+import manImage from "../assets/images/manimage.webp";
+import seoImage from "../assets/images/seoimage.webp";
 import * as motion from "framer-motion/client";
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
@@ -19,9 +19,9 @@ import homeV2Chart1Image from "../assets/images/homev2chart1.webp"
 import homeV2Chart2Image from "../assets/images/homev2chart2.webp"
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 import APP_CONFIG from '../../public/config.ts';
-import marketingimage from "../assets/images/marketingimage.jpeg"
+import marketingimage from "../assets/images/marketingimage.webp"
 import ReCAPTCHA from "react-google-recaptcha";
-
+import logo from "../assets/images/logo.webp"
 export const HomeV2 = () => {
     const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
@@ -197,13 +197,35 @@ export const HomeV2 = () => {
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
-                <title>Home - Maximaler Erfolg mit Google! | Superagentur</title>
-                <meta name="description" content="Erreichen Sie Ihre Zielgruppe mit maßgeschneiderten Google Ads, SEO-Optimierungen und Unternehmenslistungen. Kontaktieren Sie Superagentur für maximale Reichweite." />
-                <meta property="og:title" content="Home - Maximaler Erfolg mit Google! | Superagentur" />
-                <meta property="og:description" content="Nutzen Sie Google Ads, SEO und Unternehmenslistungen für maximale Reichweite und Sichtbarkeit." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}`} />
+                <title>Superagentur- Innovative Marketinglösungen für Ihren Erfolg</title>
+                <meta name="description" content="Mit kreativen und effizienten Strategien unterstützt Superagentur Sie dabei, Ihre Marke im digitalen Raum hervorzuheben." />
+                <meta name="keywords" content=" innovative Marketingstrategien, digitale Lösungen, Markenpräsenz, nachhaltiger Erfolg" />
                 <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Innovative Marketinglösungen für Ihren Erfolg" />
+                <meta property="og:description" content="Steigern Sie Ihre Markenpräsenz und erreichen Sie nachhaltigen Erfolg mit unseren digitalen Strategien." />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:image" content={logo} />
+                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <meta charSet="UTF-8" />
+                <html lang="de" />
+                {/* Structured Data for Logo */}
+                <script type="application/ld+json">
+                    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+                </script>
             </Helmet>
 
             <section className="homeV2Container 3xl:pt-[167px] lg:pt-[134px] md:pt-[60px] xs:pt-[50px] pt-10 flex flex-col items-start px-6 3xl:h-[795px] lg:h-[735px] md:h-[657px] xs:h-[515px] h-[599px]  relative bg-secondary1 z-[1]">
@@ -1133,7 +1155,7 @@ export const HomeV2 = () => {
                 ref={captchaRef}
                 size="invisible"
                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                hl="tr"
+                hl="de"
                 onChange={handleCaptchaChange} // Değişiklik kontrolü
             />
         </main>

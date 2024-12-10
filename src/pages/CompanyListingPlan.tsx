@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
-
+import logo from "../assets/images/logo.webp"
 const CompanyListingPlan = () => {
   const fadeInAnimationVariant = {
     initial: {
@@ -32,31 +32,36 @@ const CompanyListingPlan = () => {
   return (
     <div className="flex flex-col">
       <Helmet>
-        <title>Unternehmenslistung - Flexible Lösungen für Unternehmen | Superagentur</title>
-        <meta
-          name="description"
-          content="Entdecken Sie unsere Unternehmenslisten-Pläne, die speziell für Social Media Marketing, bezahlte Werbung und SEO-Lösungen entwickelt wurden. Flexible Optionen für jeden Bedarf."
-        />
-        <meta
-          property="og:title"
-          content="Unternehmenslistung  - Flexible Lösungen für Unternehmen | Superagentur"
-        />
-        <meta
-          property="og:description"
-          content="Unsere Unternehmenslisten-Pläne bieten die perfekte Kombination aus SEO, bezahlten Anzeigen und Social Media Marketing. Maßgeschneiderte Lösungen für Ihr Geschäft!"
-        />
-        <meta
-          property="og:type"
-          content="website"
-        />
-        <meta
-          property="og:url"
-          content={`${APP_CONFIG.base_url}company-listing-plan`}
-        />
-        <meta
-          name="robots"
-          content="index, follow"
-        />
+        <title>Unternehmenslistungen – Sichtbarkeit in Verzeichnissen</title>
+        <meta name="description" content="Sorgen Sie für eine stärkere lokale Präsenz mit unseren Unternehmenslistungs-Diensten in wichtigen Verzeichnissen." />
+        <meta name="keywords" content="Unternehmenslistungen, lokale Präsenz, Verzeichnisse, Sichtbarkeit" />
+        <meta property="og:title" content="Unternehmenslistungen – Sichtbarkeit in Verzeichnissen" />
+        <meta property="og:description" content="Maximieren Sie Ihre lokale Sichtbarkeit mit professionellen Unternehmenslistungen." />
+
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={APP_CONFIG.base_url} />
+        <meta property="og:image" content={logo} />
+        <link rel="canonical" href={APP_CONFIG.base_url} />
+        <meta charSet="UTF-8" />
+        <html lang="de" />
+        {/* Structured Data for Logo */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Superagentur Marketing",
+        "url": "${APP_CONFIG.base_url}",
+        "logo": "${APP_CONFIG.base_url}/assets/images/logo.webp",
+        "sameAs": [
+          "${APP_CONFIG.social_media.facebook}",
+          "${APP_CONFIG.social_media.instagram}",
+          "${APP_CONFIG.social_media.linkedin}"
+        ]
+      }
+    `}
+        </script>
       </Helmet>
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
         <div className="flex flex-col items-center justify-center text-center text-white max-w-[550px] px-6 w-full mx-auto">
@@ -260,20 +265,20 @@ const CompanyListingPlan = () => {
       </section>
 
       <motion.section
-                variants={fadeInAnimationVariant}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                transition={{ delay: 0.3, duration: 0.3 }}
-                className="3xl:pb-[200px] lg:pb-[160px] md:pb-[128px] xs:pb-[102px] pb-[88px] px-6 max-w-[450px] w-full mx-auto flex flex-col items-center justify-center text-center lg:mt-[100px] mt-20">
-                <div className="text-neutral-800 mb-[15px] tb-bold lg:text-[24px] md:text-[22px] text-[20px] lg:leading-[34.008px] md:leading-[31.174px] leading-[28.34px]">Haben wir Ihr Interesse geweckt?</div>
-                <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] tb-medium">
-                    Wir freuen uns darauf, gemeinsam mit Ihnen Ihre Ziele zu erreichen.
-                </div>
-                <div>
-                    <Button className="tb-bold" variant="primary">Kontakt</Button>
-                </div>
-            </motion.section>
+        variants={fadeInAnimationVariant}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 0.3 }}
+        className="3xl:pb-[200px] lg:pb-[160px] md:pb-[128px] xs:pb-[102px] pb-[88px] px-6 max-w-[450px] w-full mx-auto flex flex-col items-center justify-center text-center lg:mt-[100px] mt-20">
+        <div className="text-neutral-800 mb-[15px] tb-bold lg:text-[24px] md:text-[22px] text-[20px] lg:leading-[34.008px] md:leading-[31.174px] leading-[28.34px]">Haben wir Ihr Interesse geweckt?</div>
+        <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] tb-medium">
+          Wir freuen uns darauf, gemeinsam mit Ihnen Ihre Ziele zu erreichen.
+        </div>
+        <div>
+          <Button className="tb-bold" variant="primary">Kontakt</Button>
+        </div>
+      </motion.section>
 
       <motion.section
         variants={fadeInAnimationVariant}
