@@ -111,7 +111,7 @@ const TermAndConditions = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.15, duration: 0.3 }}
                     id="menuItems"
-                    className="lg:mt-[63px] lg:mb-0 mb-10 lg:mr-10 min-w-[274px] grid grid-cols-2 gap-[15px] lg:sticky lg:top-5 lg:h-full md:h-[72px] h-[144px]">
+                    className="lg:mt-[63px] lg:mb-0 mb-10 lg:mr-10 min-w-[274px] grid grid-cols-3 gap-[15px] lg:sticky lg:top-5 lg:h-full md:h-[72px] h-[216px]">
 
                     <div onClick={() => scrollToSection("datenschutz")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] lg:text-start text-center px-5 hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "datenschutz" ? "text-primary" : "text-neutral-800"}`}>Datenschutz</div>
                     <div onClick={() => scrollToSection("agb")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] px-5 lg:text-start text-center hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "agb" ? "text-primary" : "text-neutral-800"}`}>AGB</div>
@@ -2904,7 +2904,7 @@ const TermAndConditions = () => {
 
                             </li>
                         </ol>
-                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">3. Dienstleistungsspezifikationen</div>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px] break-words hyphens-auto">3. Dienstleistungsspezifikationen</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 3.1. Festlegung von Art, Umfang und Spezifikationen: <br />
@@ -2987,376 +2987,424 @@ const TermAndConditions = () => {
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">6. Verpflichtungen des Dienstleisters</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                6.1. Erbringung der vereinbarten Dienstleistungen: <br/>
-
+                                6.1. Erbringung der vereinbarten Dienstleistungen: <br />
+                                Der Dienstleister verpflichtet sich, die im jeweiligen Dienstleistungsvertrag festgelegten Dienstleistungen ordnungsgemäß und im Rahmen der dort beschriebenen Leistungsinhalte zu erbringen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                6.2. Begrenzung auf den vereinbarten Leistungsumfang <br/>
-
+                                6.2. Begrenzung auf den vereinbarten Leistungsumfang <br />
+                                Die Erbringung der Dienstleistungen erfolgt ausschließlich im Rahmen des vereinbarten Leistungsumfangs. Leistungen, die über den Vertrag hinausgehen, bedürfen einer schriftlichen Zusatzvereinbarung zwischen den Parteien.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                6.3. <br/>
-
+                                6.3. Branchenübliche Standards und Sorgfalt: <br />
+                                Der Dienstleister erbringt die Leistungen unter Anwendung branchenüblicher Standards und mit der gebotenen Sorgfalt. Er verpflichtet sich, seine Pflichten gewissenhaft und im Interesse des Kunden zu erfüllen.
                             </li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">7. Kulanzleistungen und freiwilliges Engagement</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                7.1. <br/>
-
+                                7.1. Kulanzleistungen und freiwillige Unterstützung: <br />
+                                Leistungen, die nicht ausdrücklich in den schriftlichen Vereinbarungen zwischen den Parteien als verpflichtend festgelegt sind, werden freiwillig und auf Kulanzbasis erbracht. Solche Leistungen dienen der Förderung und Unterstützung der Geschäftsbeziehung, begründen jedoch keine rechtliche Verpflichtung zur gegenwärtigen oder zukünftigen Erbringung ähnlicher Leistungen. Sie dürfen weder als stillschweigende noch als mündliche Ergänzung der bestehenden Vereinbarungen interpretiert werden.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                7.2. <br/>
-
+                                7.2. Keine Gewohnheitsrechte: <br />
+                                Die Erbringung von Kulanzleistungen oder freiwilligem Engagement in der Vergangenheit begründet weder ein Gewohnheitsrecht noch eine rechtlich durchsetzbare Erwartungshaltung des Kunden für die zukünftige Erbringung solcher oder ähnlicher Leistungen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                7.3. <br/>
+                                7.3. Änderungen und zusätzliche Leistungen: <br />
+                                Änderungen des Umfangs oder der Art der vom Dienstleister vertraglich zu erbringenden Leistungen bedürfen einer schriftlichen Vereinbarung zwischen den Parteien.
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Mündliche Absprachen oder implizite Erwartungen führen nicht zu einer Änderung der vertraglich vereinbarten Leistungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Zusätzliche Leistungen, die vom Kunden gewünscht werden, können nur auf Grundlage einer neuen schriftlichen Vereinbarung erbracht werden.</li>
                                 </ul>
                             </li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">8. Verpflichtungen des Kunden</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                8.1. <br/>
-
+                                8.1. Bereitstellung von Informationen und Materialien: <br />
+                                Der Kunde verpflichtet sich, alle für die ordnungsgemäße Erbringung der Dienstleistungen erforderlichen Informationen, Unterlagen und Materialien vollständig, korrekt und rechtzeitig bereitzustellen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                8.2. <br/>
+                                8.2. Mitwirkungspflichten: <br />
+                                Der Kunde unterstützt den Dienstleister aktiv bei der Erbringung der vereinbarten Dienstleistungen, insbesondere durch:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die rechtzeitige Erfüllung notwendiger Mitwirkungshandlungen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Bereitstellung erforderlicher Ressourcen, wie Zugänge, technische Voraussetzungen oder andere unterstützende Materialien, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Benennung eines Ansprechpartners, der für die Koordination und Rückfragen zur Verfügung steht.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                8.3. <br/>
-
+                                8.3. Verantwortung für Inhalte und Rechtmäßigkeit: <br />
+                                Der Kunde ist dafür verantwortlich, dass die bereitgestellten Informationen und Unterlagen:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Frei von Rechten Dritter sind, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Den gesetzlichen Vorschriften entsprechen, insbesondere in Bezug auf Datenschutz und Urheberrechte.</li>
+                                </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                8.4. <br/>
-
+                                8.4. Informationspflicht bei Änderungen: <br />
+                                Der Kunde verpflichtet sich, den Dienstleister unverzüglich über wesentliche Änderungen zu informieren, die die Erbringung der Dienstleistungen beeinflussen könnten. Dies umfasst insbesondere:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Änderungen von Ansprechpartnern,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Technische Voraussetzungen, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Betriebliche Rahmenbedingungen.</li>
+                                </ul>
                             </li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">9. Geheimhaltung vertraulicher Informationen</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.1. <br/>
+                                9.1. Definition vertraulicher Informationen: <br />
+                                Vertrauliche Informationen umfassen alle mündlichen, schriftlichen, elektronischen oder anderweitig übermittelten Informationen, die im Rahmen dieser Vereinbarung oder der Geschäftsanbahnung offengelegt werden.
+                                Die Vertraulichkeit ergibt sich entweder aus einer entsprechenden Kennzeichnung oder aus der Natur bzw. den Umständen der Offenlegung. <br />
+                                Als vertraulich gelten insbesondere, aber nicht ausschließlich:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Geschäftsgeheimnisse, technische Daten, Finanzinformationen, Marketingstrategien, Kundenlisten, Personalinformationen sowie andere sensible Daten,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Schulungsmaterialien, Best-Practice-Dokumentationen, technische Unterlagen, Analysen und Präsentationen.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.2. <br/>
-
+                                9.2. Geheimhaltungspflicht: <br />
+                                Beide Parteien verpflichten sich, vertrauliche Informationen der jeweils anderen Partei strikt geheim zu halten. Eine Weitergabe oder anderweitige Verwendung ist ohne vorherige schriftliche Zustimmung der offenlegenden Partei unzulässig, es sei denn, sie ist zur Erfüllung der vertraglichen Pflichten erforderlich.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.3. <br/>
-
+                                9.3. Schutzmaßnahmen: <br />
+                                Die empfangende Partei ergreift alle angemessenen Maßnahmen, um die Vertraulichkeit der erhaltenen Informationen zu gewährleisten. Der Zugang wird auf Personen beschränkt, die die Informationen für die Erfüllung ihrer beruflichen Aufgaben benötigen und zur Geheimhaltung verpflichtet sind.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.4. <br/>
-
+                                9.4. Begrenzung der Nutzung: <br />
+                                Vertrauliche Informationen dürfen ausschließlich zur ordnungsgemäßen Erfüllung der vertraglich vereinbarten Dienstleistungen genutzt werden. Eine anderweitige Verwendung bedarf der schriftlichen Zustimmung der offenlegenden Partei.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.5. <br/>
-
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.6. <br/>
-
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.7. <br/>
+                                9.5. Weitergabe an Mitarbeiter und Berater: <br />
+                                Die Weitergabe vertraulicher Informationen an Mitarbeiter oder externe Berater ist nur zulässig, wenn:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Diese Personen schriftlich zur Geheimhaltung verpflichtet wurden, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Weitergabe zur Erfüllung der vertraglichen Aufgaben erforderlich ist.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.8. <br/>
-                                <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
-                                </ul>
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.9. <br/>
-                                <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
-                                </ul>
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                9.10. <br/>
+                                9.6. Rückgabe und Vernichtung von Informationen: <br />
+                                Nach Beendigung der Vereinbarung oder auf Verlangen der offenlegenden Partei sind alle vertraulichen Informationen unverzüglich zurückzugeben oder sicher zu vernichten. Dies umfasst Kopien, Aufzeichnungen und elektronische Dateien.
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.7. Dauer der Geheimhaltungspflicht: <br />
+                                Die Geheimhaltungspflicht bleibt auch nach Beendigung der Vereinbarung bestehen.
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Für besonders schützenswerte Informationen (z. B. Geschäftsgeheimnisse) gilt die Geheimhaltung unbefristet.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Für alle anderen, weniger sensiblen vertraulichen Informationen endet die Geheimhaltungspflicht fünf (5) Jahre nach Beendigung der Vereinbarung, sofern keine längeren gesetzlichen Aufbewahrungs- oder Geheimhaltungspflichten bestehen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.8. Ausnahmen von der Geheimhaltungspflicht: <br />
+                                Die Geheimhaltungspflicht gilt nicht für Informationen, die:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Zum Zeitpunkt der Offenlegung öffentlich bekannt waren,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Nach der Offenlegung ohne Verschulden der empfangenden Partei öffentlich bekannt werden, oder</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Der empfangenden Partei nachweislich bereits rechtmäßig bekannt waren.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.9. Rechtliche Offenlegungspflichten: <br />
+                                Falls die empfangende Partei gesetzlich verpflichtet ist, vertrauliche Informationen offenzulegen, darf sie dies tun, muss jedoch:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die offenlegende Partei unverzüglich informieren (soweit gesetzlich zulässig), und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Offenlegung auf das gesetzlich erforderliche Maß beschränken.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.10. Haftung und Schadensersatz: <br />
+                                Verstöße gegen diese Geheimhaltungsklausel können Schadensersatzansprüche oder andere rechtliche Konsequenzen nach sich ziehen. Die Haftung richtet sich nach den vertraglich oder gesetzlich vorgesehenen Regelungen.
                             </li>
                         </ol>
-                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">10. Haftungs- und Gewährleistungsregelungen</div>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px] break-words hyphens-auto">10. Haftungs- und Gewährleistungsregelungen</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                10.1. <br/>
+                                10.1. Haftung beider Parteien: <br />
+                                Beide Parteien haften nicht für indirekte, zufällige oder Folgeschäden, die sich aus oder im Zusammenhang mit der Erfüllung dieser Vereinbarung ergeben. Dies umfasst insbesondere:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
-                                </ul> <br />
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Entgangenen Gewinn,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Betriebsunterbrechungen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Verlust von Geschäftsinformationen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Schäden oder Verluste an Hardware, Software, Accounts, digitalen Strukturen oder anderen materiellen oder immateriellen Gütern.</li>
+                                </ul>
+                                Eine Haftung besteht jedoch, soweit dies gesetzlich vorgeschrieben ist, insbesondere bei:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Vorsatz oder grober Fahrlässigkeit,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Schäden aus der Verletzung von Leben, Körper oder Gesundheit, oder</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Verstößen gegen wesentliche Vertragspflichten (Kardinalpflichten).</li>
+                                </ul>
+                                Bei der Verletzung wesentlicher Vertragspflichten ist die Haftung auf den vertragstypischen, vorhersehbaren Schaden begrenzt. Wesentliche Vertragspflichten sind solche, deren Erfüllung die ordnungsgemäße Durchführung des Vertrags erst ermöglicht und auf deren Einhaltung die andere Partei regelmäßig vertrauen darf.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                10.2. Begrenzung der Haftung: <br />
+                                Die Haftung jeder Partei ist auf den Gesamtbetrag der im Rahmen dieser Vereinbarung gezahlten Vergütung begrenzt. Diese Begrenzung gilt nicht in Fällen von:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Vorsatz,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Grober Fahrlässigkeit, oder</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Schäden aus der Verletzung von Leben, Körper oder Gesundheit.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                10.2. <br/>
+                                10.3. Gewährleistungsausschluss: <br />
+                                Keine der Parteien übernimmt eine ausdrückliche oder stillschweigende Garantie für Eigenschaften oder Ergebnisse, die nicht ausdrücklich im Vertrag vereinbart wurden. Dies umfasst insbesondere:
+
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Eignung der Dienstleistungen oder Produkte für einen bestimmten Zweck,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Marktgängigkeit, oder</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Nichtverletzung von Rechten Dritter.</li>
                                 </ul>
+                                Beide Parteien gewährleisten jedoch, dass die vertraglich vereinbarten Leistungen ordnungsgemäß, mit der gebotenen Sorgfalt und in Übereinstimmung mit den im Vertrag festgelegten Standards erbracht werden. <br />
+                                Dienstleistungen oder Mitwirkungen, die über den ausdrücklich vereinbarten Leistungsumfang hinaus erbracht werden, erfolgen „wie besehen“ und ohne zusätzliche Gewährleistung, sofern keine abweichenden schriftlichen Vereinbarungen getroffen wurden.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                10.3. <br/>
-                                <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
-                                </ul>
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                10.4. <br/>
+                                10.4. Freistellung und Verzicht auf Ansprüche: <br />
+                                Beide Parteien verpflichten sich, die jeweils andere Partei von sämtlichen Ansprüchen, Forderungen oder Schäden freizustellen, die durch eine Verletzung ihrer vertraglichen Pflichten entstehen. Diese Freistellung gilt nicht, wenn die Verletzung auf Vorsatz oder grober Fahrlässigkeit der freistellenden Partei beruht. <br />
+                                Darüber hinaus erkennen beide Parteien an, dass dieser Haftungs- und Gewährleistungsausschluss alle nicht zwingend gesetzlich vorgesehenen Ansprüche der jeweils anderen Partei ausschließt. Zusätzliche Haftungs- oder Gewährleistungszusagen bestehen nur, wenn sie ausdrücklich schriftlich vereinbart wurden.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                10.5. <br/>
+                                10.5. Anwendbares Recht: <br />
+                                Diese Haftungs- und Gewährleistungsregelungen gelten im gesetzlich zulässigen Umfang und unterliegen den geltenden Gesetzen der Bundesrepublik Deutschland.
 
                             </li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">11. Mängelansprüche und Beanstandungen</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                11.1. <br/>
+                                11.1. Leistungsumfang und Erfolgsverpflichtung: <br />
+                                Die Dienstleistungen des Dienstleisters, insbesondere im Bereich Google Ads und Suchmaschinenoptimierung (SEO), stellen Tätigkeiten zur Optimierung der Sichtbarkeit und Reichweite des Kunden dar.
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Der Dienstleister verpflichtet sich, die vereinbarten Leistungen mit der gebotenen Sorgfalt und gemäß den vertraglichen Vorgaben auszuführen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Eine konkrete Garantie für bestimmte Ergebnisse (z. B. spezifische Rankings, Conversions oder Umsatzsteigerungen) wird nicht übernommen, sofern dies nicht ausdrücklich schriftlich vereinbart wurde.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                11.2. <br/>
+                                11.2. Beanstandung von Fehlern: <br />
+                                Der Kunde ist verpflichtet, die erbrachten Leistungen unverzüglich zu prüfen und etwaige Beanstandungen oder Abweichungen von den vereinbarten Leistungen schriftlich anzuzeigen.
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Für offensichtliche Mängel oder Abweichungen: Diese müssen spätestens innerhalb von sieben (7) Kalendertagen nach Erbringung der jeweiligen Leistung gemeldet werden.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Für versteckte Mängel: Es gelten die gesetzlichen Gewährleistungsfristen gemäß § 438 Abs. 1 Nr. 3 BGB.</li>
                                 </ul>
+                                Spätere Beanstandungen offensichtlicher Mängel können nicht berücksichtigt werden, sofern der Fehler dem Kunden bei ordnungsgemäßer Prüfung hätte auffallen können.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                11.3. <br/>
+                                11.3. Nachbesserung und Haftungsbeschränkung: <br />
+                                Im Falle einer berechtigten Beanstandung hat der Dienstleister das Recht, innerhalb einer angemessenen Frist eine Nachbesserung oder Korrektur vorzunehmen.
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Eigenständige Mängelbeseitigungen durch den Kunden oder durch Dritte ohne vorherige schriftliche Zustimmung des Dienstleisters führen zum Verlust sämtlicher Ansprüche auf Mängelbeseitigung und Kostenerstattung.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Weitergehende Ansprüche des Kunden, insbesondere Schadensersatz, sind ausgeschlossen, sofern nicht Vorsatz oder grobe Fahrlässigkeit vorliegt.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Kosten, die dem Kunden durch eigenmächtige Behebung vermeintlicher Mängel entstehen, werden vom Dienstleister nicht erstattet.</li>
                                 </ul>
                             </li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">12. Rechnungsstellung und Zahlungsmodalitäten</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.1. <br/>
-
+                                12.1. Zahlungsfrist: <br />
+                                Der Kunde verpflichtet sich, alle vom Dienstleister gemäß den Bestimmungen dieses Vertrags ausgestellten Rechnungen innerhalb der auf der Rechnung angegebenen Frist, jedoch spätestens vierzehn (14) Tage nach Erhalt, zu begleichen, sofern keine abweichende schriftliche Vereinbarung getroffen wurde.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.2. <br/>
-
+                                12.2. Elektronische Rechnungsstellung: <br />
+                                Rechnungen können über die vereinbarten Kommunikationskanäle in elektronischer Form bereitgestellt werden. Elektronisch übermittelte Rechnungen haben die gleiche verbindliche Wirkung wie physisch ausgestellte Rechnungen, sofern dies zwischen den Parteien vereinbart wurde.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.3. <br/>
-
+                                12.3. Vorauszahlungen: <br />
+                                Der Dienstleister ist berechtigt, vereinbarte Beträge oder Rechnungen vor Erbringung der Dienstleistungen in Rechnung zu stellen, sofern dies ausdrücklich schriftlich zwischen den Parteien festgelegt wurde. In solchen Fällen ist der Kunde verpflichtet, die entsprechenden Beträge gemäß den vereinbarten Zahlungsbedingungen zu begleichen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.4. <br/>
+                                12.4. Lastschriftmandat: <br />
+                                Sofern ein Lastschriftmandat erteilt wurde, ist der Dienstleister berechtigt, alle offenen Forderungen direkt vom Bankkonto des Kunden einzuziehen.
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Ein gescheiterter Lastschrifteinzug aufgrund unzureichender Kontodeckung oder anderer Gründe gilt als Nichtzahlung.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Das Lastschriftmandat erfordert eine separate schriftliche Vereinbarung, die die Bedingungen und den Umfang der Ermächtigung regelt.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.5. <br/>
-
+                                12.5. Verzugszinsen und Mahnverfahren: <br />
+                                Im Falle einer verspäteten Zahlung ist der Dienstleister berechtigt, Verzugszinsen gemäß den geltenden gesetzlichen Bestimmungen zu erheben: <br />
+                                Für Verbraucher: 5 Prozentpunkte über dem Basiszinssatz.
+                                <br />
+                                Für Unternehmer: 9 Prozentpunkte über dem Basiszinssatz (§ 288 BGB).
+                                <br />
+                                Zusätzlich können angemessene Mahnkosten geltend gemacht werden.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.6. <br/>
-
+                                12.6. Währung und Gebühren: <br />
+                                Alle Zahlungen sind in der auf der Rechnung angegebenen Währung zu leisten. Der Kunde ist dafür verantwortlich, sicherzustellen, dass der vollständige Rechnungsbetrag ohne Abzug von Bankgebühren oder anderen Transaktionskosten beim Dienstleister eingeht
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.7. <br/>
-
+                                12.7. Mehrwertsteuer (MwSt.): <br />
+                                Sofern in den zwischen den Parteien geschlossenen Verträgen nichts anderes geregelt ist, verstehen sich die angegebenen Beträge als Nettobeträge. In der Rechnungsstellung wird die gesetzliche Mehrwertsteuer (MwSt.) zusätzlich ausgewiesen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.8. <br/>
+                                12.8. Prüfung und Einspruchsfrist: <br />
+                                Der Kunde ist verpflichtet, alle erhaltenen Rechnungen innerhalb von dreißig (30) Tagen nach Erhalt auf Richtigkeit zu prüfen.
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Unstimmigkeiten oder Widersprüche sind innerhalb dieser Frist schriftlich beim Dienstleister einzureichen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Ein Einspruch hat keine aufschiebende Wirkung auf die Zahlungsverpflichtung. Der Rechnungsbetrag ist zunächst vollständig zu begleichen.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.9. <br/>
+                                12.9. Ausschluss von Aufrechnungs- und Zurückbehaltungsrechten: <br />
+                                Aufrechnungs- oder Zurückbehaltungsrechte stehen dem Kunden nur zu, wenn:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Der Anspruch rechtskräftig festgestellt oder unbestritten ist, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Der Gegenanspruch auf demselben Vertragsverhältnis beruht.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.10. <br/>
+                                12.10. Ausschluss bei Mängeln: <br />
+                                Der Kunde ist verpflichtet, die vertraglich vereinbarten Zahlungen auch bei behaupteten oder tatsächlichen Mängeln der gelieferten Ware oder Dienstleistung fristgerecht und vollständig zu leisten. Zurückbehaltungsrechte und die Aufrechnung mit Gegenansprüchen wegen Mängeln sind ausgeschlossen. <br />
+                                Die Geltendmachung von Mängelansprüchen, wie Nachbesserung, Ersatzlieferung oder Schadensersatz, bleibt unberührt und muss unabhängig von der Zahlungspflicht separat erfolgen.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                12.11. <br/>
-
+                                12.11. Bearbeitung von Einsprüchen: <br />
+                                Der Dienstleister wird jeden Einspruch prüfen und bei berechtigten Einwänden eine entsprechende Korrektur oder Rückerstattung vornehmen. Alle Punkte in der Rechnung, die nicht innerhalb der Einspruchsfrist beanstandet werden, gelten als akzeptiert.
                             </li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">13. Laufzeit und Kündigungsverfahren</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.1. <br/>
+                                13.1. Laufzeit und spezifische Bestimmungen: <br />
+                                Die Laufzeit des Vertrages sowie die Kündigungsverfahren, Fristen und Bedingungen werden spezifisch in den jeweiligen Vereinbarungen zwischen den Parteien definiert. Soweit keine abweichenden Regelungen getroffen wurden, gelten die nachfolgenden allgemeinen Grundsätze: <br />
+                                Der Vertrag hat eine unbestimmte Laufzeit, sofern nicht ausdrücklich eine feste Vertragslaufzeit vereinbart wurde.
+                                Bei einer festen Laufzeit verlängert sich der Vertrag automatisch um denselben Zeitraum, sofern er nicht rechtzeitig gekündigt wird. Die Kündigungsfrist richtet sich nach den spezifischen Vereinbarungen oder, falls nicht anders geregelt, nach 13.3 dieser AGB.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.2. <br/>
+                                13.2. Kündigungsmodalitäten: <br />
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Eine Kündigung muss schriftlich erfolgen und an die im Vertrag benannte Kontaktperson gerichtet werden.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Sie wird erst wirksam, wenn sie der anderen Vertragspartei postalisch an die im Vertrag angegebene Adresse zugestellt wurde.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Alternativ können die Parteien ausdrücklich einen anderen Übermittlungsweg schriftlich vereinbaren.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.3. <br/>
+                                13.3. Kündigungsmodalitäten: <br />
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Eine Kündigung muss schriftlich erfolgen und an die im Vertrag benannte Kontaktperson gerichtet werden.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Sie wird erst wirksam, wenn sie der anderen Vertragspartei postalisch an die im Vertrag angegebene Adresse zugestellt wurde.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Alternativ können die Parteien ausdrücklich einen anderen Übermittlungsweg schriftlich vereinbaren.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.4. <br/>
+                                13.4. Fortführung der Dienstleistung während der Kündigungsfrist: <br />
+                                Während der Kündigungsfrist sind beide Parteien verpflichtet, ihre vertraglichen Pflichten uneingeschränkt zu erfüllen. Dies umfasst insbesondere:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Erbringung der vereinbarten Leistungen durch den Dienstleister, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die rechtzeitige Zahlung aller offenen und laufenden Forderungen durch den Kunden.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.5. <br/>
+                                13.5. Ansprüche nach Vertragsbeendigung: <br />
+                                Nach Beendigung des Vertrages bleiben alle Ansprüche bestehen, die:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Vor der Vertragsbeendigung entstanden sind, oder</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Auf Handlungen oder Ereignisse zurückzuführen sind, die vor der Vertragsbeendigung stattgefunden haben.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.6. <br/>
+                                13.6. Fortlaufende Pflichten nach Vertragsende: <br />
+                                Bestimmte gesetzliche und vertragliche Pflichten bleiben auch nach Beendigung des Vertrages bestehen. Dazu gehören unter anderem:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Gesetzliche Aufbewahrungspflichten,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung von Datenschutzvorschriften, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Vertragliche Pflichten, die ihrer Natur nach auch nach Vertragsende weiterwirken (z. B. Geheimhaltungspflichten).</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.7. <br/>
-
+                                13.7. Wirkung der Kündigung auf andere Vereinbarungen: <br />
+                                Die Kündigung eines spezifischen Vertrages hat keinen Einfluss auf andere zwischen den Parteien geschlossene Vereinbarungen, sofern nicht ausdrücklich etwas anderes geregelt wurde. Andere Verträge bleiben unberührt und behalten ihre volle Wirksamkeit.
                             </li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">14. Aussetzung der Dienstleistung bei Zahlungsverzug</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.1. <br/>
-
+                                14.1. Recht zur Aussetzung: <br />
+                                Der Dienstleister ist berechtigt, die Erbringung sämtlicher Dienstleistungen temporär auszusetzen, falls der Kunde mit der Zahlung länger als vierzehn (14) Tage nach Fälligkeit in Verzug ist. Die Aussetzung bleibt solange wirksam, bis die ausstehenden Zahlungen vollständig beglichen wurden.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.2. <br/>
+                                14.2. Voraussetzungen für die Aussetzung: <br />
+                                Eine Aussetzung der Dienstleistung ist möglich, wenn:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Der Kunde mit einer Zahlung länger als vierzehn (28) Tage nach Fälligkeit im Verzug ist, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Der Dienstleister dem Kunden zuvor eine schriftliche Zahlungsaufforderung mit einer Nachfrist von mindestens sieben (7) Tagen zur Begleichung der offenen Forderungen gestellt hat.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.3. <br/>
+                                14.3. Folgen der Aussetzung: <br />
+                                Während der Aussetzung der Dienstleistung:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Ist der Dienstleister von seiner Verpflichtung zur Leistungserbringung befreit, solange der Zahlungsverzug andauert.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Bleiben alle anderen vertraglichen Verpflichtungen des Kunden, insbesondere die Zahlungspflichten, bestehen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Betrifft die Aussetzung nur zukünftige Leistungen und gilt nicht rückwirkend für bereits erbrachte Leistungen.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.4. <br/>
+                                14.4. Wiederaufnahme der Dienstleistung: <br />
+                                Die Dienstleistung wird wieder aufgenommen, sobald der Kunde die ausstehenden Beträge vollständig beglichen hat. Der Dienstleister kann:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Bedingungen für die Wiederaufnahme festlegen, wie z. B. die Zahlung von Verzugszinsen oder die Erstattung von durch den Zahlungsverzug entstandenen Kosten.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wiederaufnahme der Dienstleistung innerhalb eines angemessenen Zeitraums nach Begleichung der ausstehenden Beträge sicherstellen.</li>
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.5. <br/>
+                                14.5. Rechtliche Schritte: <br />
+                                Ungeachtet der Aussetzung der Dienstleistung behält sich der Dienstleister das Recht vor, rechtliche Schritte einzuleiten, um ausstehende Zahlungen einzufordern. Dazu gehören:
                                 <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einleitung gerichtlicher Mahnverfahren,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Sicherung von Forderungen durch geeignete rechtliche Maßnahmen, oder</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Weitere Schritte, die zur Durchsetzung der Ansprüche erforderlich sind.</li>
                                 </ul>
                             </li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">15. Generelle Bestimmungen</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.1. <br/>
+                                15.1. Unterzeichnerberechtigung: <br />
+                                Die Unterzeichner aller zwischen den Parteien geschlossenen Verträge versichern, dass sie vollumfänglich berechtigt sind, im Namen der jeweils genannten Partei zu handeln und alle damit verbundenen Verpflichtungen einzugehen.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.2. <br/>
+                                15.2. Elektronische Dokumente und Unterzeichnung: <br />
+                                Die Parteien erkennen elektronische Kopien und elektronisch unterzeichnete Dokumente als gleichwertig zu ihren physischen Pendants an. Elektronisch unterzeichnete und übermittelte Dokumente besitzen die gleiche verbindliche Wirkung wie handschriftlich unterzeichnete Unterlagen, es sei denn, es ist ausdrücklich festgelegt, dass bestimmte Dokumente postalisch versendet werden müssen.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.3. Unverbindlichkeit von Angeboten <br />
+                                Unsere Angebote sind freibleibend und unverbindlich. Ein Vertrag kommt erst zustande, wenn das Angebot von beiden Parteien schriftlich bestätigt wurde.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.3. <br/>
+                                15.4. Ausschluss mündlicher Nebenabreden: <br />
+                                Es wird vereinbart, dass mündliche Nebenabreden zu den Verträgen zwischen den Parteien nicht bestehen und auch zukünftig ausgeschlossen sind.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.5. Schriftformerfordernis für Änderungen: <br />
+                                Änderungen oder Ergänzungen zu den Verträgen bedürfen der Schriftform und müssen von beiden Parteien unterzeichnet werden, um rechtsgültig zu sein. Ausnahmefälle, in denen abweichende Verfahren zur Anwendung kommen, müssen spezifisch und explizit vereinbart werden.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.6. Gerichtsstand: <br />
+                                Für sämtliche aus den Verträgen zwischen den Parteien resultierenden Rechtsstreitigkeiten gilt das Recht der Bundesrepublik Deutschland. Als ausschließlicher Gerichtsstand wird der Sitz des Dienstleisters festgelegt.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.7. Übertragung von Rechten und Pflichten: <br />
+                                Die Übertragung von Rechten und Pflichten aus den Verträgen an Dritte ist nur mit vorheriger schriftlicher Zustimmung der anderen Partei zulässig oder wenn gesetzliche Regelungen dies erfordern. Rechtsnachfolger und Abtretungsempfänger sind verpflichtet, alle Verpflichtungen unter denselben Bedingungen wie im ursprünglichen Vertrag festgelegt zu übernehmen.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.4. <br/>
-
+                                15.8. Nutzung geistigen Eigentums: <br />
+                                Der Dienstleister kann im Rahmen der Erbringung der vereinbarten Dienstleistungen auf das geistige Eigentum des Kunden angewiesen sein. Zu diesem Zweck räumt der Kunde dem Dienstleister eine weltweite, nicht-exklusive, zeitlich unbeschränkte, nicht übertragbare und nicht unterlizenzierbare Lizenz ein, die gebührenfrei ist und ausschließlich der Erbringung der vertraglich vereinbarten Dienstleistungen dient. Diese Lizenz gilt ausschließlich für die Nutzung des geistigen Eigentums im Rahmen der Bedingungen dieses Vertrags sowie etwaiger dazugehöriger Dienstleistungsvereinbarungen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.5. <br/>
-
+                                15.9. Nutzung von Kundenbeziehungen für Marketingzwecke:<br />
+                                Sofern nicht ausdrücklich anders vereinbart, ist es den Parteien gestattet, die Geschäftsbeziehung und die Erbringung von Dienstleistungen durch den Dienstleister für den Kunden zu referenzieren oder auf andere Weise zu verwenden, einschließlich, aber nicht beschränkt auf die Nennung als Kunde auf der Website, in Marketingmaterialien oder in Pressemitteilungen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.6. <br/>
-
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.7. <br/>
-
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.8. <br/>
-
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.9. <br/>
-
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.10. <br/>
-
+                                15.10. Salvatorische Klausel:<br />
+                                Sollten einzelne Bestimmungen dieses Vertrages ganz oder teilweise unwirksam oder nicht durchsetzbar sein oder werden, so bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Die Parteien verpflichten sich, die unwirksame oder nicht durchsetzbare Bestimmung durch eine Regelung zu ersetzen, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung möglichst nahekommt, soweit dies rechtlich zulässig ist.
                             </li>
                         </ol>
                     </div>
@@ -3410,26 +3458,8 @@ const TermAndConditions = () => {
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">9.1. Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">https://ec.europa.eu/consumers/odr/</a>.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">9.2. Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</li>
-                        </ol>
-                        {/* <div className="text-neutral-600 text-[18px] tb-medium leading-[30.006px]">Enim nec dui nunc mattis enim vulputate eu scelerisque felis imperdiet proin fermentum leo vel proin sed libero enim sed <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">faucibus turpis</a> at lectus urna duis convallis convallis at tellus at urna condimentum mattis pellentesque id nibh nibh cras pulvinar mattis nunc sed.</div>
-
-                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px] md:mb-4 mb-[10px]">Cookies and tracking</div>
-                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base md:mb-8 mb-[26px] leading-[30.006px]">Consequat mauris nunc congue nisi cursus metus aliquam eleifend mi in null dignissim cras tincidunt lobortis feugiat vivamus blandit aliquam etiam erat velit sapien faucibus et molestie ac ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">id cursus</a> metus aliquam eleifend mi in nulla posuere sollicitudin.</div> */}
+                        </ol>         
                     </div>
-
-
-                    {/* <div id="user-policy" className="flex flex-col">
-                        <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">User Policy</div>
-                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base md:mb-8 mb-[26px] leading-[30.006px]">Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin amet facilisis magna etiam tempor pellentesque massa placerat duis ultricies lacus sed sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper sit. Id interdum velit laoreet id donec ultrices <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">aliquam malesuada</a> bibendum arcu vitae elementum curabitur. Sapien eget mi proin sed libero at erat pellentesque adipiscing commodo at pellentesque elit vivamus at augue eget arcu dictum varius.</div>
-                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px] md:mb-4 mb-[10px] mt-2">User responsibilities</div>
-                        <div className="text-neutral-600 xs:text-[18px] tb-medium text-base leading-[30.006px]">eugiat vivamus at augue eget arcu dictum varius curabitur vitae nunc sed velit dignissim felis eget velit aliquet sagittis id consectetur sit amet consectetur adipiscing elit pellentesque habitant morbi <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">mus mauris</a> vitae ultricies leo integer malesuada id aliquet lectus proin nibh nisl condimentum dolor viverra ipsum nunc.</div>
-                        <ul className="pl-10 md:my-8 my-[26px] list-disc">
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Mollis aliquam ut porttitor leo a diam.</li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Enim nec dui nunc mattis enim.</li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Vulputate eu scelerisque felis fermentum leo vel.</li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Quam lacus suspendisse posuere lorem.</li>
-                        </ul>
-                    </div> */}
                 </motion.div>
             </div>
         </section>
