@@ -30,9 +30,9 @@ export const AppRoutes = () => {
             <Route path="/datenschutz-und-agbs" element={<TermAndConditions />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/kontakt" element={<Contact />} />
-            <Route path="/google-ads-basis-paket-detail" element={<BasicPackageDetail />} />
-            <Route path="/google-ads-standard-paket-detail" element={<StandartPackageDetail />} />
-            <Route path="/google-ads-premium-paket-detail" element={<PremiumPackageDetail />} />
+            <Route path="/google-ads-plan-basis-paket-detail" element={<BasicPackageDetail />} />
+            <Route path="/google-ads-plan-standard-paket-detail" element={<StandartPackageDetail />} />
+            <Route path="/google-ads-plan-premium-paket-detail" element={<PremiumPackageDetail />} />
             <Route path="/unternehmenslistung-premium-paket-detail" element={<CompanyListingPremiumPackageDetail />} />
             <Route path="/seo-plan-basis-paket-detail" element={<SeoPlanBasicPackageDetail />} />
             <Route path="/seo-plan-standard-paket-detail" element={<SeoPlanStandartPackageDetail />} />
