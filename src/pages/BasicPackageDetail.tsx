@@ -60,9 +60,9 @@ const BasicPackageDetail = () => {
                 <meta property="og:title" content="Google Ads Basis-Paket – Effektive Werbung für Ihr Unternehmen" />
                 <meta property="og:description" content="Starten Sie mit gezielten Google Ads-Kampagnen und gewinnen Sie neue Kunden effizient." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}google-ads-basis-paket-detail`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <link rel="canonical" href={`${APP_CONFIG.base_url}google-ads-basis-paket-detail`} />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}

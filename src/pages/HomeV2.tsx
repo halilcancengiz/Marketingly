@@ -204,9 +204,9 @@ export const HomeV2 = () => {
                 <meta property="og:title" content="Innovative Marketinglösungen für Ihren Erfolg" />
                 <meta property="og:description" content="Steigern Sie Ihre Markenpräsenz und erreichen Sie nachhaltigen Erfolg mit unseren digitalen Strategien." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}startseite-v2`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <link rel="canonical" href={`${APP_CONFIG.base_url}startseite-v2`} />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}

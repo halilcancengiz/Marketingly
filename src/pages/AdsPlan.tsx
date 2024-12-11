@@ -79,9 +79,9 @@ const AdsPlan = () => {
                 <meta property="og:title" content="Google Ads-Pläne für effektives Marketing" />
                 <meta property="og:description" content="Erreichen Sie Ihre Zielgruppe effizient mit unseren professionellen Google Ads-Plänen." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}google-ads-plan`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <link rel="canonical" href={`${APP_CONFIG.base_url}google-ads-plan`} />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}

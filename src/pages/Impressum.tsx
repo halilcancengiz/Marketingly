@@ -66,9 +66,9 @@ const TermAndConditions = () => {
 
                 <meta name="robots" content="index, follow" />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}impressum`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <link rel="canonical" href={`${APP_CONFIG.base_url}impressum`} />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}

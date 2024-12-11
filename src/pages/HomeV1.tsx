@@ -213,9 +213,9 @@ export const HomeV1 = () => {
                 <meta property="og:title" content="Superagentur – Ihre Marketingagentur für digitale Lösungen" />
                 <meta property="og:description" content="Entdecken Sie innovative Marketinglösungen, die Ihre Marke erfolgreich im digitalen Raum positionieren." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content={APP_CONFIG.base_url} />
+                <meta property="og:url" content={`${APP_CONFIG.base_url}`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={APP_CONFIG.base_url} />
+                <link rel="canonical" href={`${APP_CONFIG.base_url}`} />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
 
