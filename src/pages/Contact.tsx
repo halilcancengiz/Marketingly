@@ -218,7 +218,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="text-[24px] tb-bold mb-[30px]">
+                        {/* <div className="text-[24px] tb-bold mb-[30px]">
                             Folge uns!
                         </div>
 
@@ -241,7 +241,7 @@ const Contact = () => {
                             <a aria-label="Open whatsapp" href={APP_CONFIG.social_media.whatsapp} className='rounded-full flex items-center justify-center hover-up-lg'>
                                 <img loading="lazy" className='size-[37px] object-contain' src={whatsappIcon} alt="whatsapp" />
                             </a>
-                        </div>
+                        </div> */}
 
                     </motion.div>
                     <motion.div
@@ -332,7 +332,7 @@ const Contact = () => {
                                 <div>
                                     <input id="termandconditions" required className="size-5 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
                                 </div>
-                                <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz" className="text-primary cursor-pointer tb-medium">Datenschutzerklärung.</NavLink></label>
+                                <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz-und-agbs" className="text-primary cursor-pointer tb-medium">Datenschutzerklärung.</NavLink></label>
                             </div>
                             <div className="col-span-2">
                                 <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>

@@ -157,13 +157,13 @@ const TermAndConditions = () => {
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Datenschutzhinweis</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
                             Unsere Datenschutzerklärung finden <br />
-                            Sie unter: <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">www.superagentur-marketing.de/datenschutz-und-agbs</a>
+                            Sie unter: <a href="www.superagentur-marketing.de/datenschutz-und-agbs" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300">www.superagentur-marketing.de/datenschutz-und-agbs</a>
                         </div>
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Urheberrechtshinweis</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
                             Die auf unserer Internetseite vorhandenen Texte, Bilder, Fotos, Videos oder Grafiken unterliegen in der Regel dem Schutz des Urheberrechts. Jede unberechtigte Verwendung (insbesondere die Vervielfältigung, Bearbeitung oder Verbreitung) dieser urheberrechtsgeschützten Inhalte ist daher untersagt. Wenn Sie beabsichtigen, diese Inhalte oder Teile davon zu verwenden, kontaktieren Sie uns bitte im Voraus unter den oben stehenden Angaben. Soweit wir nicht selbst Inhaber der benötigten urheberrechtlichen Nutzungsrechte sein sollten, bemühen wir uns, einen Kontakt zum Berechtigten zu vermitteln.
                         </div>
-                        <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Social-Media-Profile</div>
+                        {/* <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Social-Media-Profile</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">
                             Dieses Impressum gilt auch für folgende Social-Media-Profile: <br />
                             <a href={APP_CONFIG.social_media.instagram} target="_blank" className="hover:text-secondary3 underline break-words text-primary tb-medium transition-all duration-300">Instagram: {APP_CONFIG.social_media.instagram}</a> <br />
@@ -171,7 +171,7 @@ const TermAndConditions = () => {
                             <a href={APP_CONFIG.social_media.x} target="_blank" className="hover:text-secondary3 underline break-words text-primary tb-medium transition-all duration-300">X (ehemals Twitter): {APP_CONFIG.social_media.x}</a> <br />
                             <a href={APP_CONFIG.social_media.youtube} target="_blank" className="hover:text-secondary3 underline break-words text-primary tb-medium transition-all duration-300">YouTube: {APP_CONFIG.social_media.youtube}</a> <br />
                             <a href={APP_CONFIG.social_media.linkedin} target="_blank" className="hover:text-secondary3 underline break-words text-primary tb-medium transition-all duration-300">LinkedIn: {APP_CONFIG.social_media.linkedin}</a>
-                        </div>
+                        </div> */}
 
                     </div>
                 </motion.div>

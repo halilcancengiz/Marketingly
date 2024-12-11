@@ -27,7 +27,7 @@ export const AppRoutes = () => {
             <Route path="/startseite-v2" element={<HomeV2 />} />
             <Route path="/danke-seite" element={<Thankyou />} />
             <Route path="*" element={<NotFound />} />
-            <Route path="/datenschutz" element={<TermAndConditions />} />
+            <Route path="/datenschutz-und-agbs" element={<TermAndConditions />} />
             <Route path="/impressum" element={<Impressum />} />
             <Route path="/kontakt" element={<Contact />} />
             <Route path="/google-ads-basis-paket-detail" element={<BasicPackageDetail />} />

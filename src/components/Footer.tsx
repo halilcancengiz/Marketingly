@@ -71,9 +71,9 @@ const Footer = () => {
                 <div className='lg:mt-20 mt-10 border-b w-full md:flex-row flex-col gap-y-6 flex items-center justify-between border-neutral-400 pb-2'>
                     <div className='flex xs:flex-row flex-col items-center gap-6'>
                         <NavLink to="/impressum" className='hover:text-primary transition-all duration-300 tb-medium'>Impressum</NavLink>
-                        <NavLink to="/datenschutz" className='hover:text-primary transition-all duration-300 tb-medium'>Datenschutz und AGBs</NavLink>
+                        <NavLink to="/datenschutz-und-agbs" className='hover:text-primary transition-all duration-300 tb-medium'>Datenschutz und AGBs</NavLink>
                     </div>
-                    <div className='flex gap-4 md:max-w-[311px] w-full xs:min-w-[311px] items-center justify-center md:pb-0 pb-4'>
+                    {/* <div className='flex gap-4 md:max-w-[311px] w-full xs:min-w-[311px] items-center justify-center md:pb-0 pb-4'>
                         <a href={APP_CONFIG.social_media.facebook} className='rounded-full flex items-center justify-center hover-up-lg'>
                             <img loading="lazy" className='size-[29px] object-contain' src={facebookIcon} alt="facebook" />
                         </a>
@@ -102,7 +102,7 @@ const Footer = () => {
                                 alt="whatsapp"
                             />
                         </a>
-                    </div>
+                    </div> */}
 
 
                 </div>

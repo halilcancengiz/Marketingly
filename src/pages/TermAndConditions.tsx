@@ -33,7 +33,7 @@ const TermAndConditions = () => {
     useEffect(() => {
         const handleScrollSpy = () => {
             // Tüm section'ları seçiyoruz
-            const sections = document.querySelectorAll("#datenschutz, #websiteAGB");
+            const sections = document.querySelectorAll("#datenschutz,#agb, #websiteAGB");
 
             // Mevcut scroll pozisyonunu hesaplıyoruz
             const scrollPosition = window.scrollY + 100; // Biraz offset ekliyoruz
@@ -114,6 +114,7 @@ const TermAndConditions = () => {
                     className="lg:mt-[63px] lg:mb-0 mb-10 lg:mr-10 min-w-[274px] grid grid-cols-2 gap-[15px] lg:sticky lg:top-5 lg:h-full md:h-[72px] h-[144px]">
 
                     <div onClick={() => scrollToSection("datenschutz")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] lg:text-start text-center px-5 hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "datenschutz" ? "text-primary" : "text-neutral-800"}`}>Datenschutz</div>
+                    <div onClick={() => scrollToSection("agb")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] px-5 lg:text-start text-center hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "agb" ? "text-primary" : "text-neutral-800"}`}>AGB</div>
                     <div onClick={() => scrollToSection("websiteAGB")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] px-5 lg:text-start text-center hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "websiteAGB" ? "text-primary" : "text-neutral-800"}`}>Website AGB</div>
                 </motion.div>
 
@@ -2862,34 +2863,503 @@ const TermAndConditions = () => {
                             Dieter macht den Datenschutz" ist ein Produkt der simply Legal GmbH, Burkarderstr. 36, D-97082 Würzburg. All rights reserved 2024
                         </div>
                     </div>
+                    <hr className="lg:my-[84px] md:my-[70px] xs:my-[60px] my-[50px]" />
+                    <div id="agb" className="flex flex-col">
+                        <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">AGB</div>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">1. Geltungsbereich</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                1.1. Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) regeln sämtliche Geschäftsbeziehungen zwischen der Colacy GmbH (nachfolgend „Dienstleister“) und deren Kunden (nachfolgend „Kunde“). Sie umfassen alle vom Dienstleister angebotenen Dienstleistungen, insbesondere, aber nicht ausschließlich, die Schaltung und Optimierung von Google Ads, Suchmaschinenoptimierung (SEO), die Erstellung und Verwaltung von Google MyBusiness-Unternehmensprofilen („Unternehmenslistungen“) sowie die Planung, Schaltung und Verwaltung von Social Media Ads.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                1.2. Verträge und zukünftige Geschäftsbeziehungen: <br />
+                                Diese AGB gelten für alle zwischen den Parteien geschlossenen Verträge sowie für zukünftige Geschäftsbeziehungen, sofern nicht ausdrücklich abweichende schriftliche Vereinbarungen getroffen werden.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                1.3. Ausschluss fremder AGB: <br />
+                                Allgemeine Geschäftsbedingungen des Kunden, die von diesen AGB abweichen, ihnen entgegenstehen oder sie ergänzen, werden nicht Vertragsbestandteil. Dies gilt auch dann, wenn der Kunde auf seine eigenen AGB verweist und der Dienstleister diesen nicht ausdrücklich widersprochen hat. Eine Zustimmung des Dienstleisters erfolgt ausschließlich durch eine ausdrücklich schriftliche und eindeutig bezeichnete Bestätigung im Einzelfall. Die vorbehaltlose Erbringung von Leistungen durch den Dienstleister stellt keine Anerkennung der abweichenden AGB des Kunden dar.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                1.4. Hinweise auf gesetzliche Vorschriften: <br />
+                                Hinweise auf gesetzliche Vorschriften dienen lediglich der Klarstellung. Die gesetzlichen Regelungen gelten auch ohne ausdrückliche Bezugnahme, soweit sie nicht durch diese AGB geändert oder ausgeschlossen werden.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                1.5. Vorrang individueller Vereinbarungen: <br />
+                                Individuelle Vereinbarungen zwischen den Parteien (z. B. Nebenabreden, Änderungen oder Ergänzungen) haben Vorrang vor diesen AGB. Diese Vereinbarungen sind nur wirksam, wenn sie eindeutig formuliert, schriftlich festgehalten und von beiden Parteien ausdrücklich bestätigt wurden.
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">2. Vertragsstruktur und Zustimmung</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                2.1. Grundlage der Vertragsbeziehung: <br />
+                                Die Vertragsbeziehung zwischen den Parteien basiert auf einem individuell gestalteten Dienstleistungsvertrag, der die spezifischen Leistungen und Konditionen regelt. Dieser Dienstleistungsvertrag nimmt ausdrücklich Bezug auf die vorliegenden Allgemeinen Geschäftsbedingungen (AGB) sowie die Datenschutzerklärung, die dem Kunden vor Vertragsabschluss zur Verfügung gestellt wurden. Die AGB und die Datenschutzerklärung werden dadurch zu integralen Bestandteilen des Vertrags.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                2.2. Zustimmung durch Unterzeichnung: <br />
+                                Mit der Unterzeichnung des Dienstleistungsvertrages bestätigen beide Parteien, dass sie die AGB und die Datenschutzerklärung zur Kenntnis genommen haben und deren Geltung akzeptieren. Eine zusätzliche schriftliche Bestätigung ist nicht erforderlich.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                2.3. Begriffsdefinition "Vertrag": <br />
+                                Der Begriff „Vertrag“ umfasst im Folgenden das gesamte Vertragskonstrukt, bestehend aus dem Dienstleistungsvertrag, den Allgemeinen Geschäftsbedingungen (AGB) und der Datenschutzerklärung.
 
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">3. Dienstleistungsspezifikationen</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.1. Festlegung von Art, Umfang und Spezifikationen: <br />
+                                Die Art, der Umfang und die Spezifikationen der vom Dienstleister zu erbringenden Dienstleistungen werden im jeweiligen Dienstleistungsvertrag festgelegt und dort detailliert beschrieben.
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.2. Ergänzende Geltung der AGB: <br />
+                                Neben den individuellen Vereinbarungen des Dienstleistungsvertrages gelten die Allgemeinen Geschäftsbedingungen (AGB) ergänzend. Dies betrifft insbesondere allgemeine Leistungsvoraussetzungen, Haftungsbeschränkungen und Abrechnungsmodalitäten.
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                3.3. Änderungen und Ergänzungen: <br />
+                                Änderungen oder Ergänzungen der Dienstleistungsspezifikationen bedürfen der vorherigen schriftlichen Zustimmung beider Parteien, um wirksam zu sein.
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">4. Allgemeine Verpflichtungen der Parteien</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                4.1. Verpflichtung zu professionellem Umgang: <br />
+                                Beide Parteien verpflichten sich zu einem professionellen und respektvollen Umgang miteinander. Dies umfasst insbesondere: <br />
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                4.2. Verpflichtung zu effektiver Kommunikation und Handlungserfüllung: <br />
+                                Um einen reibungslosen Ablauf der Dienstleistungen sicherzustellen, verpflichten sich die Parteien:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Zeitnah auf Anfragen, Probleme oder Anforderungen im Zusammenhang mit den Dienstleistungen zu reagieren,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Alle erforderlichen Schritte zu unternehmen, um ihren vertraglichen Verpflichtungen ordnungsgemäß nachzukommen, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Geeignete Ansprechpartner und klare Kommunikationswege bereitzustellen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                4.3. Informationspflicht bei wesentlichen Umständen: <br />
+                                Beide Parteien sind verpflichtet, die jeweils andere Partei unverzüglich zu informieren, wenn:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Eine Insolvenz, drohende Zahlungsunfähigkeit oder Geschäftsaufgabe eintritt, oder</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Andere Umstände eintreten, die die Fortführung der Geschäftsbeziehung erheblich gefährden könnten.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                4.4. Benachrichtigung bei Sanktionen oder Handelseinschränkungen: <br />
+                                Sollte eine Partei von Sanktionen oder Handelseinschränkungen betroffen sein oder deren Eintreten befürchten, verpflichtet sie sich:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die andere Partei unverzüglich über die festgelegten Ansprechpartner und Kommunikationswege formell zu informieren, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Im Rahmen des gesetzlich zulässigen Handlungsspielraums zu agieren.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">5. Kontaktpersonen</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                5.1. Festlegung von Kontaktpersonen und allgemeine Mitteilungsform: <br />
+                                Beide Vertragsparteien benennen eine primäre Kontaktperson, einschließlich vollständiger Kontaktinformationen, die für alle wesentlichen und formalen Angelegenheiten zuständig ist. Dazu gehören insbesondere:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Kündigungen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Wesentliche Vertragsänderungen, und</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Andere rechtlich relevante Mitteilungen oder Erklärungen.</li>
+                                </ul>
+                                Alle rechtlich relevanten Mitteilungen oder Erklärungen der Parteien – insbesondere Mängelanzeigen, Fristsetzungen, Rücktrittserklärungen oder Preisminderungsforderungen – müssen in Textform (z. B. E-Mail, Fax) oder schriftlich (z. B. Brief mit Originalunterschrift) erfolgen. Strengere gesetzliche Formvorschriften bleiben unberührt. <br />
+                                Jede Partei ist berechtigt, bei Zweifeln an der Berechtigung oder Authentizität einer Erklärung zusätzliche Nachweise zu verlangen.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                5.2. Operative Ansprechpartner: <br />
+                                Für operative Angelegenheiten, wie die Abwicklung von Dienstleistungen oder die Meldung von Problemen, können nach Bedarf weitere Ansprechpartner benannt werden. Diese operativen Ansprechpartner müssen nicht explizit im Vertrag aufgeführt sein, sofern deren Zuständigkeiten klar kommuniziert wurden.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                5.3. Änderung der Kontaktinformationen: <br />
+                                Änderungen der Kontaktinformationen der primären Kontaktperson sind der jeweils anderen Partei unverzüglich schriftlich mitzuteilen.
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Mitteilung sollte vorzugsweise postalisch erfolgen, ergänzt durch eine Benachrichtigung über andere vereinbarte Kommunikationswege.</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Werden geänderte Kontaktinformationen nicht mitgeteilt, gelten Mitteilungen an die zuletzt bekannten Kontaktinformationen als ordnungsgemäß zugestellt.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">6. Verpflichtungen des Dienstleisters</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                6.1. Erbringung der vereinbarten Dienstleistungen: <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                6.2. Begrenzung auf den vereinbarten Leistungsumfang <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                6.3. <br/>
 
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">7. Kulanzleistungen und freiwilliges Engagement</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                7.1. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                7.2. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                7.3. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">8. Verpflichtungen des Kunden</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                8.1. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                8.2. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                8.3. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                8.4. <br/>
 
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">9. Geheimhaltung vertraulicher Informationen</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.1. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.2. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.3. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.4. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.5. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.6. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.7. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.8. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.9. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                9.10. <br/>
 
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">10. Haftungs- und Gewährleistungsregelungen</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                10.1. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul> <br />
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                10.2. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                10.3. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                10.4. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                10.5. <br/>
 
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">11. Mängelansprüche und Beanstandungen</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                11.1. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                11.2. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                11.3. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">12. Rechnungsstellung und Zahlungsmodalitäten</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.1. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.2. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.3. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.4. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.5. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.6. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.7. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.8. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.9. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.10. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                12.11. <br/>
 
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">13. Laufzeit und Kündigungsverfahren</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.1. <br/>
 
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.2. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.3. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.4. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.5. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.6. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.7. <br/>
+
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">14. Aussetzung der Dienstleistung bei Zahlungsverzug</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                14.1. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                14.2. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                14.3. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                14.4. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                14.5. <br/>
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einhaltung vereinbarter Verpflichtungen und Fristen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Wahrung von Integrität und Transparenz in der Kommunikation, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die gegenseitige Respektierung getroffener Vereinbarungen.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">15. Generelle Bestimmungen</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.1. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.2. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.3. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.4. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.5. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.6. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.7. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.8. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.9. <br/>
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                15.10. <br/>
+
+                            </li>
+                        </ol>
+                    </div>
                     <hr className="lg:my-[84px] md:my-[70px] xs:my-[60px] my-[50px]" />
                     <div id="websiteAGB" className="flex flex-col">
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Website AGB</div>
