@@ -1,3 +1,4 @@
+"use client";
 import Button from "../components/Button";
 import contactPeopleImage from "../assets/images/homeV1-hero-section-small.webp";
 import chart from "../assets/images/chart.webp";
@@ -71,6 +72,7 @@ export const HomeV1 = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
     const { scrollY }: { scrollY: any } = useScroll();
 
     const translateY: any = useTransform(scrollY, (value: number) => value / 20);
@@ -216,6 +218,13 @@ export const HomeV1 = () => {
                 <link rel="canonical" href={APP_CONFIG.base_url} />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
+
+
+                {/* Preload Assets */}
+                <link rel="preload" as="image" href={contactPeopleImage} />
+                <link rel="preload" as="image" href={chart} />
+
+
                 {/* Structured Data for Logo */}
                 <script type="application/ld+json">
                     {`
@@ -310,6 +319,7 @@ export const HomeV1 = () => {
                                 className="border border-neutral-300 max:w-[502.844px] 3xl:w-[89%] lg:w-[87%] w-[87%]  lg:ml-auto xs:rounded-[18px] rounded-[10px]"
                                 src={chart}
                                 alt="chart"
+                                loading="lazy"
                             />
                             <motion.img
                                 style={{

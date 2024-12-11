@@ -3,7 +3,9 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
 import logo from "../assets/images/logo.webp"
-
+import Button from "../components/Button.tsx";
+import { HiOutlineDownload } from "../assets/icons/icons.tsx"
+import agbpdf from "../../public/agb.pdf"
 const TermAndConditions = () => {
 
     const [activeSection, setActiveSection] = useState<string>("");
@@ -125,7 +127,7 @@ const TermAndConditions = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.50, duration: 0.3 }}
                     style={{ boxShadow: '0px 4px 22px 0px rgba(8, 15, 52, 0.03)' }}
-                    className="flex flex-col h-full rounded-[24px] bg-white w-full lg:pt-[80px] md:pt-[70px] xs:pt-[60px] pt-[50px] lg:px-[91px] md:px-[76px] xs:px-[35px] px-[25px] lg:pb-[108px] md:pb-[90px] xs:pb-[75px] pb-[63px] border border-neutral-300">
+                    className="flex flex-col h-full rounded-[24px] bg-white overflow-hidden  w-full lg:pt-[80px] md:pt-[70px] xs:pt-[60px] pt-[50px] lg:px-[91px] md:px-[76px] xs:px-[35px] px-[25px] lg:pb-[108px] md:pb-[90px] xs:pb-[75px] pb-[63px] border border-neutral-300">
                     {/* <div id="terms-and-conditions" className="flex flex-col">
                         <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Datenschutz</div>
                         <div className="text-neutral-600 text-[18px] tb-medium md:mb-8 mb-[26px] leading-[30.006px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua massa sed elementum tempus egestas sed sed risus pretium quam amet nulla facilisi morbi tempus iaculis urna <a href="#" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">et malesuada</a> fames ac turpis egestas sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi.</div>
@@ -2865,7 +2867,16 @@ const TermAndConditions = () => {
                     </div>
                     <hr className="lg:my-[84px] md:my-[70px] xs:my-[60px] my-[50px]" />
                     <div id="agb" className="flex flex-col">
-                        <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">AGB</div>
+                        <div className="flex flex-col items-start gap-2 lg:mb-4 mb-[10px]">
+                            <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">AGB</div>
+
+                            <Button size="small">
+                                <a className="flex items-center justify-center gap-2" href={agbpdf} download="Allgemeine Geschäftsbedingungen Superagentur">
+                                    <HiOutlineDownload size={20} />
+                                    Herunterladen
+                                </a>
+                            </Button>
+                        </div>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">1. Geltungsbereich</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
@@ -3458,7 +3469,7 @@ const TermAndConditions = () => {
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">9.1. Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">https://ec.europa.eu/consumers/odr/</a>.</li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">9.2. Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</li>
-                        </ol>         
+                        </ol>
                     </div>
                 </motion.div>
             </div>

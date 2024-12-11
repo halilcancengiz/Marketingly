@@ -7,38 +7,31 @@ import { AppRoutes } from './routes/AppRoutes';
 
 const Layout = () => {
   const location = useLocation();
-  const [contentVisible, setContentVisible] = useState(true); // Varsayılan olarak true ayarlandı
-  const [animationStarted, setAnimationStarted] = useState(false);
+  const [contentVisible, setContentVisible] = useState(true);
+  const [animationKey, setAnimationKey] = useState(0);
   const [previousWidth, setPreviousWidth] = useState(window.innerWidth);
   const [previousPathname, setPreviousPathname] = useState(location.pathname);
-  const [animationKey, setAnimationKey] = useState(0);
+  const [initialLoad, setInitialLoad] = useState(true);
 
   const breakpoints = [480, 768, 992];
 
   const startAnimation = () => {
-    setAnimationStarted(false);
     setContentVisible(false);
-
+    setAnimationKey((prev) => prev + 1);
     setTimeout(() => {
-      setAnimationStarted(true);
-      setAnimationKey((prev) => prev + 1);
-    }, 100);
+      setContentVisible(true);
+    }, 500); // Animasyon süresiyle uyumlu şekilde ayarlandı
   };
 
   // Sayfa yüklendiğinde animasyonu başlat
   useEffect(() => {
-    animationStarted ? "" : ""
-    const handleLoad = () => {
+    if (initialLoad) {
+      setInitialLoad(false);
       startAnimation();
-    };
-    window.addEventListener('load', handleLoad);
+    }
+  }, [initialLoad]);
 
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
-
-  // URL değiştiğinde animasyonu başlat, sayfa içi yönlendirmeleri hariç tut
+  // URL değiştiğinde animasyonu başlat
   useEffect(() => {
     if (location.pathname !== previousPathname) {
       startAnimation();
@@ -46,18 +39,18 @@ const Layout = () => {
     }
   }, [location.pathname, previousPathname]);
 
-  // Breakpoint kontrolü ve animasyon tetikleme
+  // Breakpoint değişimlerinde animasyonu başlat
   useEffect(() => {
     const handleResize = () => {
       const currentWidth = window.innerWidth;
 
-      const isPreviousCrossingBreakpoint = breakpoints.some(
+      const isCrossingBreakpoint = breakpoints.some(
         (bp) =>
           (previousWidth < bp && currentWidth >= bp) ||
           (previousWidth >= bp && currentWidth < bp)
       );
 
-      if (isPreviousCrossingBreakpoint) {
+      if (isCrossingBreakpoint) {
         startAnimation();
       }
 
@@ -71,17 +64,8 @@ const Layout = () => {
     };
   }, [previousWidth, breakpoints]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setContentVisible(true)
-    }, 500)
-
-  }, [contentVisible])
-
   return (
     <div className="flex flex-col relative">
-
-
       <motion.div
         key={`fadeIn-${animationKey}`}
         className="h-[4px] bg-primary absolute top-0 left-0"
@@ -103,7 +87,6 @@ const Layout = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-
           <Navbar />
           <AppRoutes />
           <Footer />
