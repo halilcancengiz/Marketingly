@@ -22,7 +22,8 @@ import APP_CONFIG from '../../public/config.ts';
 import marketingimage from "../assets/images/marketingimage.webp"
 import ReCAPTCHA from "react-google-recaptcha";
 import logo from "../assets/images/logo.webp"
-export const HomeV2 = () => {
+
+const HomeV2 = () => {
     const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
     const [captchaError, setCaptchaError] = useState<boolean>(false);
@@ -1161,3 +1162,4 @@ export const HomeV2 = () => {
         </main>
     )
 }
+export default HomeV2

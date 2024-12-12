@@ -17,10 +17,18 @@
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/javascript application/json image/svg+xml
     AddOutputFilterByType DEFLATE font/ttf font/woff font/woff2
+    # Eski tarayıcılar için istisnalar
     BrowserMatch ^Mozilla/4 gzip-only-text/html
     BrowserMatch ^Mozilla/4\.0[678] no-gzip
     BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
     Header append Vary User-Agent
+</IfModule>
+
+# Brotli sıkıştırma (modern tarayıcılar için)
+<IfModule mod_brotli.c>
+    AddOutputFilterByType BROTLI_COMPRESS text/plain text/html text/xml text/css application/javascript application/json image/svg+xml
+    AddOutputFilterByType BROTLI_COMPRESS font/ttf font/woff font/woff2
+    Header append Vary Accept-Encoding
 </IfModule>
 
 # Tarayıcı önbellekleme
@@ -43,4 +51,21 @@
     Header always set X-Frame-Options "SAMEORIGIN"
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-XSS-Protection "1; mode=block"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self';"
+</IfModule>
+
+# Resim optimizasyonu
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+</IfModule>
+
+# Ekran dışı görüntüleri geciktirme
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp)$">
+        Header set Lazy-Load "on"
+    </FilesMatch>
 </IfModule>

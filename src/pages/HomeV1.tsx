@@ -23,7 +23,7 @@ import marketingimage from "../assets/images/marketingimage.webp"
 import ReCAPTCHA from "react-google-recaptcha";
 import logo from "../assets/images/logo.webp"
 
-export const HomeV1 = () => {
+const HomeV1 = () => {
     const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
     const [captchaError, setCaptchaError] = useState<boolean>(false);
@@ -207,7 +207,7 @@ export const HomeV1 = () => {
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
                 <title>Superagentur- Ihre Marketingagentur für digitale Lösungen</title>
-                <meta name="description" content="Superagentur bietet maßgeschneiderte digitale Marketingstrategien, um Ihre Online-Präsenz zu stärken und nachhaltiges Geschäftswachstum zu fördern." />
+                <meta name="description" content="Maßgeschneiderte Marketingstrategien für Ihr Online-Wachstum – SEO, Google Ads und mehr. Ihre Agentur für Erfolg im digitalen Raum."/>
                 <meta name="keywords" content="digitale Marketingagentur, SEO, Google Ads, Unternehmenslistungen, Online-Präsenz, Geschäftswachstum" />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Superagentur – Ihre Marketingagentur für digitale Lösungen" />
@@ -319,7 +319,7 @@ export const HomeV1 = () => {
                                 className="border border-neutral-300 max:w-[502.844px] 3xl:w-[89%] lg:w-[87%] w-[87%]  lg:ml-auto xs:rounded-[18px] rounded-[10px]"
                                 src={chart}
                                 alt="chart"
-                                loading="lazy"
+                                
                             />
                             <motion.img
                                 style={{
@@ -329,7 +329,7 @@ export const HomeV1 = () => {
                                 className="absolute top-[27%] -translate-y-1/3 lg:left-0 right-0 hxl:w-[237px] lg:w-[43.627%] w-[42%] xs:rounded-[18px] rounded-[10px] border border-neutral-300"
                                 src={contactPeopleImage}
                                 alt="Contact People"
-                                loading="lazy"
+                                
                             />
 
                         </motion.div>
@@ -450,7 +450,7 @@ export const HomeV1 = () => {
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={analytics}
                                 alt="analytics"
-                                loading="lazy"
+                                
                             />
                             <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Google Ads</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</div>
@@ -465,7 +465,7 @@ export const HomeV1 = () => {
                     <NavLink to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
-                                loading="lazy"
+                                
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={search}
                                 alt="search" />
@@ -483,7 +483,7 @@ export const HomeV1 = () => {
                     <NavLink to="/unternehmenslistung-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
-                                loading="lazy"
+                                
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={system}
                                 alt="system" />
@@ -514,7 +514,7 @@ export const HomeV1 = () => {
                             transition={{ delay: 0.3, duration: 0.3 }}
                             className="relative lg:mr-10 lg:order-1 order-2">
                             <div className="w-full h-full z-10">
-                                <img loading="lazy" style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
+                                <img  style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
                                 <div className="absolute lg:-left-20 left-auto lg:right-auto -right-12 lg:-top-20 -top-16 bg-[#F9F5E5] size-[248px] -z-[1] rounded-full"></div>
                             </div>
 
@@ -532,19 +532,19 @@ export const HomeV1 = () => {
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Optimale Reichweite</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Messbare Erfolge</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Schnelle Ergebnisse</div>
                                 </div>
@@ -569,19 +569,19 @@ export const HomeV1 = () => {
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Mehr Sichtbarkeit ohne zusätzliche Werbekosten</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Nachhaltige Marketingstrategie</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Maximale organische Leads</div>
                                 </div>
@@ -597,7 +597,7 @@ export const HomeV1 = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.45, duration: 0.3 }}
-                                loading="lazy"
+                                
                                 src={seoImage}
                                 alt="womanImage"
                                 style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }}
@@ -958,7 +958,7 @@ export const HomeV1 = () => {
                         className="flex lg:flex-row flex-col w-full gap-[26px]">
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img loading="lazy" src={blueCardImage} alt="card" />
+                                <img  src={blueCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">1. Erstkontakt</div>
@@ -968,7 +968,7 @@ export const HomeV1 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img loading="lazy" src={yellowCardImage} alt="card" />
+                                <img  src={yellowCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">2. Planung</div>
@@ -978,7 +978,7 @@ export const HomeV1 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img loading="lazy" src={redCardImage} alt="card" />
+                                <img  src={redCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">3. Durchführung</div>
@@ -1156,3 +1156,5 @@ export const HomeV1 = () => {
         </main>
     )
 }
+
+export default HomeV1

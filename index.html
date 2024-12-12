@@ -6,35 +6,29 @@
   <link rel="icon" type="image/svg+xml" href="./src/assets/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google Tag Manager -->
+  <!-- Google Tag Manager (Delayed by 2 seconds) -->
   <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({
-        'gtm.start': new Date().getTime(),
-        event: 'gtm.js'
-      });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5C5X5R7V');
+    setTimeout(() => {
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.defer = true; // Defer ekleyerek tarayıcı yüklemesini optimize ediyoruz.
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5C5X5R7V');
+    }, 2000); // 2 saniye gecikme
   </script>
   <!-- End Google Tag Manager -->
 
-  <title>Superagentur - Ihre Marketingagentur für digitale Lösungen</title>
-  <meta name="description" content="Superagentur bietet maßgeschneiderte digitale Marketingstrategien, um Ihre Online-Präsenz zu stärken und nachhaltiges Geschäftswachstum zu fördern." />
-  <meta name="keywords" content="digitale Marketingagentur, SEO, Google Ads, Unternehmenslistungen, Online-Präsenz, Geschäftswachstum" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Superagentur – Ihre Marketingagentur für digitale Lösungen" />
-  <meta property="og:description" content="Entdecken Sie innovative Marketinglösungen, die Ihre Marke erfolgreich im digitalen Raum positionieren." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://superagentur-marketing.de" />
-  <meta property="og:image" content="https://superagentur-marketing.de/assets/images/logo.webp" />
-  <link rel="canonical" href="https://superagentur-marketing.de" />
-
+  <title>Superagentur</title>
+  <!-- <meta name="google-site-verification" content="u8G2lehexDHKKjOv7EKdic2EFQT2bA9WsY07zvRLwS8" /> -->
   <!-- Preload Assets -->
   <link rel="preload" as="image" href="./src/assets/images/contactPeopleImage.webp" />
   <link rel="preload" as="image" href="./src/assets/images/chart.webp" />

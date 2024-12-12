@@ -5,7 +5,7 @@ import APP_CONFIG from '../../public/config.ts';
 import logo from "../assets/images/logo.webp"
 import Button from "../components/Button.tsx";
 import { HiOutlineDownload } from "../assets/icons/icons.tsx"
-import agbpdf from "../../public/agb.pdf"
+import agbpdf from "../assets/pdfs/agb.pdf"
 const TermAndConditions = () => {
 
     const [activeSection, setActiveSection] = useState<string>("");
@@ -3276,17 +3276,48 @@ const TermAndConditions = () => {
                                 Der Dienstleister wird jeden Einspruch prüfen und bei berechtigten Einwänden eine entsprechende Korrektur oder Rückerstattung vornehmen. Alle Punkte in der Rechnung, die nicht innerhalb der Einspruchsfrist beanstandet werden, gelten als akzeptiert.
                             </li>
                         </ol>
-                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">13. Laufzeit und Kündigungsverfahren</div>
+                        {/* ******************* */}
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">13. Zahlungsabwicklung für Werbekampagnen-Budget (Google Ads, Social Media Ads)</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.1. Laufzeit und spezifische Bestimmungen: <br />
+                                13.1. Direkte Zahlungsabwicklung über das Kundenkonto: <br />
+                                Grundsätzlich erfolgt die Zahlungsabwicklung über das Kundenkonto. Hierbei wird das Zahlungsmittel des Kunden hinterlegt,
+                                und der Kunde ist selbst für die Begleichung aller anfallenden Plattformkosten verantwortlich.
+
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.2. Ausnahmefälle: Vorauszahlung oder Vorstreckung durch den Dienstleister: <br />
+                                In Ausnahmefällen, insbesondere bei kleineren Kampagnen, kann der Dienstleister die Zahlungen für Werbekampagnen
+                                vorstrecken und die angefallenen Kosten nachträglich mit dem Kunden abrechnen. Alternativ kann eine Vorauszahlung
+                                vereinbart werden, bei der der Kunde verpflichtet ist, die geschätzten Kosten der Kampagne spätestens sieben 7 Tage vor
+                                Kampagnenbeginn zu leisten. Nach Kampagnenende erfolgt eine Abrechnung, und etwaige Differenzen werden entweder
+                                erstattet oder nachberechnet.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.3. Detaillierte Abrechnung und Rechnungsstellung:: <br />
+                                In jedem Fall, in dem der Dienstleister Vorauszahlungen erhält oder Kosten vorstreckt, erfolgt eine detaillierte Abrechnung
+                                nach Abschluss der Kampagne. Der Kunde erhält eine Rechnung, die entweder eine Rückerstattung ausweist oder die noch
+                                offenen Beträge aus der Nachberechnung enthält.
+                            </li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                13.4. Aussetzung der Kampagnen bei Nichtzahlung: <br />
+                                Wird eine vereinbarte Vorauszahlung nicht fristgerecht geleistet, ist der Dienstleister berechtigt, die Kampagne nicht zu
+                                starten oder laufende Kampagnen auszusetzen. Entsprechendes gilt, wenn vorab gestreckte Summen nicht zeitnah erstattet
+                                werden.
+                            </li>
+                        </ol>
+                        {/* ************************* */}
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">14. Laufzeit und Kündigungsverfahren</div>
+                        <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
+                                14.1. Laufzeit und spezifische Bestimmungen: <br />
                                 Die Laufzeit des Vertrages sowie die Kündigungsverfahren, Fristen und Bedingungen werden spezifisch in den jeweiligen Vereinbarungen zwischen den Parteien definiert. Soweit keine abweichenden Regelungen getroffen wurden, gelten die nachfolgenden allgemeinen Grundsätze: <br />
                                 Der Vertrag hat eine unbestimmte Laufzeit, sofern nicht ausdrücklich eine feste Vertragslaufzeit vereinbart wurde.
                                 Bei einer festen Laufzeit verlängert sich der Vertrag automatisch um denselben Zeitraum, sofern er nicht rechtzeitig gekündigt wird. Die Kündigungsfrist richtet sich nach den spezifischen Vereinbarungen oder, falls nicht anders geregelt, nach 13.3 dieser AGB.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.2. Kündigungsmodalitäten: <br />
+                                14.2. Kündigungsmodalitäten: <br />
                                 <ul className="pl-10 my-[20px] list-disc">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Eine Kündigung muss schriftlich erfolgen und an die im Vertrag benannte Kontaktperson gerichtet werden.</li>
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Sie wird erst wirksam, wenn sie der anderen Vertragspartei postalisch an die im Vertrag angegebene Adresse zugestellt wurde.</li>
@@ -3294,15 +3325,7 @@ const TermAndConditions = () => {
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.3. Kündigungsmodalitäten: <br />
-                                <ul className="pl-10 my-[20px] list-disc">
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Eine Kündigung muss schriftlich erfolgen und an die im Vertrag benannte Kontaktperson gerichtet werden.</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Sie wird erst wirksam, wenn sie der anderen Vertragspartei postalisch an die im Vertrag angegebene Adresse zugestellt wurde.</li>
-                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Alternativ können die Parteien ausdrücklich einen anderen Übermittlungsweg schriftlich vereinbaren.</li>
-                                </ul>
-                            </li>
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.4. Fortführung der Dienstleistung während der Kündigungsfrist: <br />
+                                14.3. Fortführung der Dienstleistung während der Kündigungsfrist: <br />
                                 Während der Kündigungsfrist sind beide Parteien verpflichtet, ihre vertraglichen Pflichten uneingeschränkt zu erfüllen. Dies umfasst insbesondere:
                                 <ul className="pl-10 my-[20px] list-disc">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Erbringung der vereinbarten Leistungen durch den Dienstleister, und</li>
@@ -3310,7 +3333,7 @@ const TermAndConditions = () => {
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.5. Ansprüche nach Vertragsbeendigung: <br />
+                                14.4. Ansprüche nach Vertragsbeendigung: <br />
                                 Nach Beendigung des Vertrages bleiben alle Ansprüche bestehen, die:
                                 <ul className="pl-10 my-[20px] list-disc">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Vor der Vertragsbeendigung entstanden sind, oder</li>
@@ -3318,7 +3341,7 @@ const TermAndConditions = () => {
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.6. Fortlaufende Pflichten nach Vertragsende: <br />
+                                14.5. Fortlaufende Pflichten nach Vertragsende: <br />
                                 Bestimmte gesetzliche und vertragliche Pflichten bleiben auch nach Beendigung des Vertrages bestehen. Dazu gehören unter anderem:
                                 <ul className="pl-10 my-[20px] list-disc">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Gesetzliche Aufbewahrungspflichten,</li>
@@ -3327,18 +3350,18 @@ const TermAndConditions = () => {
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                13.7. Wirkung der Kündigung auf andere Vereinbarungen: <br />
+                                14.6. Wirkung der Kündigung auf andere Vereinbarungen: <br />
                                 Die Kündigung eines spezifischen Vertrages hat keinen Einfluss auf andere zwischen den Parteien geschlossene Vereinbarungen, sofern nicht ausdrücklich etwas anderes geregelt wurde. Andere Verträge bleiben unberührt und behalten ihre volle Wirksamkeit.
                             </li>
                         </ol>
-                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">14. Aussetzung der Dienstleistung bei Zahlungsverzug</div>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">15. Aussetzung der Dienstleistung bei Zahlungsverzug</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.1. Recht zur Aussetzung: <br />
+                                15.1. Recht zur Aussetzung: <br />
                                 Der Dienstleister ist berechtigt, die Erbringung sämtlicher Dienstleistungen temporär auszusetzen, falls der Kunde mit der Zahlung länger als vierzehn (14) Tage nach Fälligkeit in Verzug ist. Die Aussetzung bleibt solange wirksam, bis die ausstehenden Zahlungen vollständig beglichen wurden.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.2. Voraussetzungen für die Aussetzung: <br />
+                                15.2. Voraussetzungen für die Aussetzung: <br />
                                 Eine Aussetzung der Dienstleistung ist möglich, wenn:
                                 <ul className="pl-10 my-[20px] list-disc">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Der Kunde mit einer Zahlung länger als vierzehn (28) Tage nach Fälligkeit im Verzug ist, und</li>
@@ -3346,7 +3369,7 @@ const TermAndConditions = () => {
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.3. Folgen der Aussetzung: <br />
+                                15.3. Folgen der Aussetzung: <br />
                                 Während der Aussetzung der Dienstleistung:
                                 <ul className="pl-10 my-[20px] list-disc">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Ist der Dienstleister von seiner Verpflichtung zur Leistungserbringung befreit, solange der Zahlungsverzug andauert.</li>
@@ -3355,7 +3378,7 @@ const TermAndConditions = () => {
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.4. Wiederaufnahme der Dienstleistung: <br />
+                                15.4. Wiederaufnahme der Dienstleistung: <br />
                                 Die Dienstleistung wird wieder aufgenommen, sobald der Kunde die ausstehenden Beträge vollständig beglichen hat. Der Dienstleister kann:
                                 <ul className="pl-10 my-[20px] list-disc">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Bedingungen für die Wiederaufnahme festlegen, wie z. B. die Zahlung von Verzugszinsen oder die Erstattung von durch den Zahlungsverzug entstandenen Kosten.</li>
@@ -3363,7 +3386,7 @@ const TermAndConditions = () => {
                                 </ul>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                14.5. Rechtliche Schritte: <br />
+                                15.5. Rechtliche Schritte: <br />
                                 Ungeachtet der Aussetzung der Dienstleistung behält sich der Dienstleister das Recht vor, rechtliche Schritte einzuleiten, um ausstehende Zahlungen einzufordern. Dazu gehören:
                                 <ul className="pl-10 my-[20px] list-disc">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Die Einleitung gerichtlicher Mahnverfahren,</li>
@@ -3372,49 +3395,49 @@ const TermAndConditions = () => {
                                 </ul>
                             </li>
                         </ol>
-                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">15. Generelle Bestimmungen</div>
+                        <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">16. Generelle Bestimmungen</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.1. Unterzeichnerberechtigung: <br />
+                                16.1. Unterzeichnerberechtigung: <br />
                                 Die Unterzeichner aller zwischen den Parteien geschlossenen Verträge versichern, dass sie vollumfänglich berechtigt sind, im Namen der jeweils genannten Partei zu handeln und alle damit verbundenen Verpflichtungen einzugehen.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.2. Elektronische Dokumente und Unterzeichnung: <br />
+                                16.2. Elektronische Dokumente und Unterzeichnung: <br />
                                 Die Parteien erkennen elektronische Kopien und elektronisch unterzeichnete Dokumente als gleichwertig zu ihren physischen Pendants an. Elektronisch unterzeichnete und übermittelte Dokumente besitzen die gleiche verbindliche Wirkung wie handschriftlich unterzeichnete Unterlagen, es sei denn, es ist ausdrücklich festgelegt, dass bestimmte Dokumente postalisch versendet werden müssen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.3. Unverbindlichkeit von Angeboten <br />
+                                16.3. Unverbindlichkeit von Angeboten <br />
                                 Unsere Angebote sind freibleibend und unverbindlich. Ein Vertrag kommt erst zustande, wenn das Angebot von beiden Parteien schriftlich bestätigt wurde.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.4. Ausschluss mündlicher Nebenabreden: <br />
+                                16.4. Ausschluss mündlicher Nebenabreden: <br />
                                 Es wird vereinbart, dass mündliche Nebenabreden zu den Verträgen zwischen den Parteien nicht bestehen und auch zukünftig ausgeschlossen sind.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.5. Schriftformerfordernis für Änderungen: <br />
+                                16.5. Schriftformerfordernis für Änderungen: <br />
                                 Änderungen oder Ergänzungen zu den Verträgen bedürfen der Schriftform und müssen von beiden Parteien unterzeichnet werden, um rechtsgültig zu sein. Ausnahmefälle, in denen abweichende Verfahren zur Anwendung kommen, müssen spezifisch und explizit vereinbart werden.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.6. Gerichtsstand: <br />
+                                16.6. Gerichtsstand: <br />
                                 Für sämtliche aus den Verträgen zwischen den Parteien resultierenden Rechtsstreitigkeiten gilt das Recht der Bundesrepublik Deutschland. Als ausschließlicher Gerichtsstand wird der Sitz des Dienstleisters festgelegt.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.7. Übertragung von Rechten und Pflichten: <br />
+                                16.7. Übertragung von Rechten und Pflichten: <br />
                                 Die Übertragung von Rechten und Pflichten aus den Verträgen an Dritte ist nur mit vorheriger schriftlicher Zustimmung der anderen Partei zulässig oder wenn gesetzliche Regelungen dies erfordern. Rechtsnachfolger und Abtretungsempfänger sind verpflichtet, alle Verpflichtungen unter denselben Bedingungen wie im ursprünglichen Vertrag festgelegt zu übernehmen.
 
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.8. Nutzung geistigen Eigentums: <br />
+                                16.8. Nutzung geistigen Eigentums: <br />
                                 Der Dienstleister kann im Rahmen der Erbringung der vereinbarten Dienstleistungen auf das geistige Eigentum des Kunden angewiesen sein. Zu diesem Zweck räumt der Kunde dem Dienstleister eine weltweite, nicht-exklusive, zeitlich unbeschränkte, nicht übertragbare und nicht unterlizenzierbare Lizenz ein, die gebührenfrei ist und ausschließlich der Erbringung der vertraglich vereinbarten Dienstleistungen dient. Diese Lizenz gilt ausschließlich für die Nutzung des geistigen Eigentums im Rahmen der Bedingungen dieses Vertrags sowie etwaiger dazugehöriger Dienstleistungsvereinbarungen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.9. Nutzung von Kundenbeziehungen für Marketingzwecke:<br />
+                                16.9. Nutzung von Kundenbeziehungen für Marketingzwecke:<br />
                                 Sofern nicht ausdrücklich anders vereinbart, ist es den Parteien gestattet, die Geschäftsbeziehung und die Erbringung von Dienstleistungen durch den Dienstleister für den Kunden zu referenzieren oder auf andere Weise zu verwenden, einschließlich, aber nicht beschränkt auf die Nennung als Kunde auf der Website, in Marketingmaterialien oder in Pressemitteilungen.
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                15.10. Salvatorische Klausel:<br />
+                                16.10. Salvatorische Klausel:<br />
                                 Sollten einzelne Bestimmungen dieses Vertrages ganz oder teilweise unwirksam oder nicht durchsetzbar sein oder werden, so bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Die Parteien verpflichten sich, die unwirksame oder nicht durchsetzbare Bestimmung durch eine Regelung zu ersetzen, die dem wirtschaftlichen Zweck der unwirksamen Bestimmung möglichst nahekommt, soweit dies rechtlich zulässig ist.
                             </li>
                         </ol>
