@@ -238,7 +238,7 @@ export const HomeV2 = () => {
                         className="lg:mb-[22px] md:mb-[20px] xs:mb-[15px] mb-[10px] text-center text-neutral-800 tb-bold lg:text-[54px] lg:leading-[61.02px] md:text-[45px] md:leading-[50.85px] xs:text-[38px] xs:leading-[42.94px] text-[32px] leading-[36.16px]"
                     >
 
-                        <div className="block tb-bold text-white">Maximaler Erfolg mit&nbsp;</div>
+                        <h1 className="block tb-bold text-white">Maximaler Erfolg mit&nbsp;</h1>
                         <motion.span
                             className="inline-flex flex-wrap-nowrap"
                             style={{ whiteSpace: 'nowrap' }}

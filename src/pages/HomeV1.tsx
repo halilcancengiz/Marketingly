@@ -256,7 +256,7 @@ export const HomeV1 = () => {
                                 className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.5px]">
                                 Marketing Agentur
                             </motion.div>
-                            <motion.div
+                            <motion.h1
                                 variants={fadeInAnimationVariantExample}
                                 initial="hidden"
                                 whileInView="reveal"
@@ -279,7 +279,7 @@ export const HomeV1 = () => {
                                         </motion.span>
                                     ))}
                                 </motion.span>
-                            </motion.div>
+                            </motion.h1>
                             <motion.div
                                 variants={fadeInAnimationVariant}
                                 initial="initial"
