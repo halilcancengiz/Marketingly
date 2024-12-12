@@ -456,7 +456,7 @@ const HomeV2 = () => {
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={analytics}
                                 alt="analytics"
-                                loading="lazy"
+                                
                             />
                             <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Google Ads</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</div>
@@ -471,7 +471,7 @@ const HomeV2 = () => {
                     <NavLink to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
-                                loading="lazy"
+                                
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={search}
                                 alt="search" />
@@ -489,7 +489,7 @@ const HomeV2 = () => {
                     <NavLink to="/unternehmenslistung-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
-                                loading="lazy"
+                                
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={system}
                                 alt="system" />
@@ -520,7 +520,7 @@ const HomeV2 = () => {
                             transition={{ delay: 0.3, duration: 0.3 }}
                             className="relative lg:mr-10 lg:order-1 order-2">
                             <div className="w-full h-full z-10">
-                                <img loading="lazy" style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
+                                <img  style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
                                 <div className="absolute lg:-left-20 left-auto lg:right-auto -right-12 lg:-top-20 -top-16 bg-[#F9F5E5] size-[248px] -z-[1] rounded-full"></div>
                             </div>
 
@@ -538,19 +538,19 @@ const HomeV2 = () => {
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Optimale Reichweite</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Messbare Erfolge</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Schnelle Ergebnisse</div>
                                 </div>
@@ -575,19 +575,19 @@ const HomeV2 = () => {
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Mehr Sichtbarkeit ohne zusätzliche Werbekosten</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Nachhaltige Marketingstrategie</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img loading="lazy" className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Maximale organische Leads</div>
                                 </div>
@@ -603,7 +603,7 @@ const HomeV2 = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.45, duration: 0.3 }}
-                                loading="lazy"
+                                
                                 src={seoImage}
                                 alt="womanImage"
                                 style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }}
@@ -962,7 +962,7 @@ const HomeV2 = () => {
                         className="flex lg:flex-row flex-col w-full gap-[26px]">
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img loading="lazy" src={blueCardImage} alt="card" />
+                                <img  src={blueCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">1. Erstkontakt</div>
@@ -972,7 +972,7 @@ const HomeV2 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img loading="lazy" src={yellowCardImage} alt="card" />
+                                <img  src={yellowCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">2. Planung</div>
@@ -982,7 +982,7 @@ const HomeV2 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img loading="lazy" src={redCardImage} alt="card" />
+                                <img  src={redCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">3. Durchführung</div>

@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Tag Manager (Delayed by 2 seconds) -->
-  <script>
+  <script nonce="randomNonce">
     setTimeout(() => {
-      (function(w, d, s, l, i) {
+      (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({
           'gtm.start': new Date().getTime(),
@@ -19,47 +19,62 @@
           j = d.createElement(s),
           dl = l != 'dataLayer' ? '&l=' + l : '';
         j.async = true;
-        j.defer = true; // Defer ekleyerek tarayıcı yüklemesini optimize ediyoruz.
         j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, 'script', 'dataLayer', 'GTM-5C5X5R7V');
-    }, 2000); // 2 saniye gecikme
+    }, 2000);
   </script>
   <!-- End Google Tag Manager -->
 
   <title>Superagentur</title>
-  <!-- <meta name="google-site-verification" content="u8G2lehexDHKKjOv7EKdic2EFQT2bA9WsY07zvRLwS8" /> -->
+
   <!-- Preload Assets -->
   <link rel="preload" as="image" href="./src/assets/images/contactPeopleImage.webp" />
   <link rel="preload" as="image" href="./src/assets/images/chart.webp" />
 
   <!-- Structured Data for Logo -->
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Superagentur Marketing",
-        "url": "https://superagentur-marketing.de",
-        "logo": "https://superagentur-marketing.de/assets/images/logo.webp",
-        "sameAs": [
-          "https://facebook.com/superagentur",
-          "https://instagram.com/superagentur",
-          "https://linkedin.com/company/superagentur"
-        ]
-      }
+  <script nonce="randomNonce" type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Superagentur Marketing",
+      "url": "https://superagentur-marketing.de",
+      "logo": "https://superagentur-marketing.de/assets/images/logo.webp",
+      "sameAs": [
+        "https://facebook.com/superagentur",
+        "https://instagram.com/superagentur",
+        "https://linkedin.com/company/superagentur"
+      ]
+    }
   </script>
+
+  <!-- SEO ve Performans Meta Etiketleri -->
+  <meta name="description" content="Superagentur Marketing - Dijital pazarlama çözümleri">
+  <meta name="keywords" content="marketing, dijital pazarlama, reklam, sosyal medya">
+
+  <!-- Open Graph ve Sosyal Medya Paylaşım Etiketleri -->
+  <meta property="og:title" content="Superagentur Marketing">
+  <meta property="og:description" content="Dijital pazarlama çözümlerimizle işletmenizi bir üst seviyeye taşıyın">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://superagentur-marketing.de">
+  <meta property="og:image" content="https://superagentur-marketing.de/assets/images/og-image.webp">
+
+  <!-- Performance ve Browser Hints -->
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
 </head>
 
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C5X5R7V" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C5X5R7V" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <div id="root"></div>
-  <script type="text/typescript" src="./public/config.ts"></script>
-  <script type="module" src="/src/main.tsx"></script>
+  <script nonce="randomNonce" type="text/typescript" src="./public/config.ts"></script>
+  <script nonce="randomNonce" type="module" src="/src/main.tsx"></script>
 </body>
 
 </html>
