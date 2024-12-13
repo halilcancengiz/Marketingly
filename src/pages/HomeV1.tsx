@@ -28,7 +28,6 @@ const HomeV1 = () => {
     const form = useRef<HTMLFormElement>(null);
     const [captchaError, setCaptchaError] = useState<boolean>(false);
     const navigate = useNavigate()
-
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,
@@ -39,8 +38,6 @@ const HomeV1 = () => {
             y: 0,
         }
     };
-
-
     const jumbotronBoldText = "Google!"
     const jumbotronTextSplit = splitStringUsingRegex(jumbotronBoldText)
     const charVariants9 = { hidden: { opacity: 0, color: "#4A3AFF" }, reveal: { opacity: 1, color: "#14142B" } };
@@ -57,7 +54,6 @@ const HomeV1 = () => {
             },
         },
     };
-
     const scaleAnimationVariant = {
         initial: {
             opacity: 0,
@@ -68,40 +64,30 @@ const HomeV1 = () => {
             scale: 1
         }
     };
-
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
     const { scrollY }: { scrollY: any } = useScroll();
-
     const translateY: any = useTransform(scrollY, (value: number) => value / 20);
     const translateYReverse: any = useTransform(scrollY, (value: number) => -value / 40);
     const firstImageTranslateY: any = useTransform(scrollY, (value: number) => value / 20);
     const firstImageTranslateYReverse: any = useTransform(scrollY, (value: number) => -value / 40);
-
     const smoothTranslateY: any = useSpring(translateY, {
         stiffness: 100,
         damping: 20,
     });
-
     const smoothTranslateYReverse: any = useSpring(translateYReverse, {
         stiffness: 100,
         damping: 20,
     });
-
-
     const smoothFirstImageTranslateY: any = useSpring(firstImageTranslateY, {
         stiffness: 100,
         damping: 20,
     });
-
     const smoothFirstImageTranslateYReverse: any = useSpring(firstImageTranslateYReverse, {
         stiffness: 100,
         damping: 20,
     });
-
-
     const scrollToSection = (id: string) => {
         const element = document.getElementById(id);
         const yOffset = -80;
@@ -111,57 +97,40 @@ const HomeV1 = () => {
             window.scrollTo({ top: yPosition, behavior: 'smooth' });
         }
     };
-
-
-
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault(); // Formun varsayılan davranışını engelle
-
-        // Form ve ReCAPTCHA referanslarının mevcut olup olmadığını kontrol et
+        e.preventDefault();
         if (!form.current || !captchaRef.current) {
             console.error("Form or reCAPTCHA reference is missing. Please reload the form.");
             return;
         }
 
         try {
-            // ReCAPTCHA'yı çalıştır ve token al
             const token = await captchaRef.current.executeAsync();
-
-            // Eğer token döndürülmezse hata durumu oluştur
             if (!token) {
                 setCaptchaError(true);
                 console.error("ReCAPTCHA validation failed. Token not received.");
                 return;
             }
-
-            // Token başarılı bir şekilde alındıysa hata durumunu sıfırla ve token'ı konsola yazdır
             setCaptchaError(false);
-
-            // Form verilerini işleme
             const formData = new FormData(form.current);
             const formattedData: Record<string, string> = {};
 
             formData.forEach((value, key) => {
                 if (typeof value === "string") {
                     if (key === "companyname") {
-                        formattedData[key] = value.trim() || `• Kein Firmenname`; // Şirket adı için özel kontrol
+                        formattedData[key] = value.trim() || `• Kein Firmenname`;
                     } else {
-                        formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için varsayılan değer
+                        formattedData[key] = value.trim() || `• Keine Angabe`; 
                     }
                 } else {
-                    // Eğer bir dosya ise varsayılan bir değer ata
                     formattedData[key] = `• Keine Angabe`;
                 }
             });
-
-            // Backend URL kontrolü
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
                 console.error("Backend URL is not defined. Server connection error.");
                 return;
             }
-
-            // Form verilerini backend'e gönder
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: {
@@ -169,8 +138,6 @@ const HomeV1 = () => {
                 },
                 body: JSON.stringify(formattedData),
             });
-
-            // Backend'den gelen yanıtı kontrol et
             if (response.ok) {
                 navigate("/thank-you-page", { replace: true });
             } else {
@@ -180,12 +147,9 @@ const HomeV1 = () => {
         } catch (error) {
             console.error("Error during form submission:", error);
         } finally {
-            // ReCAPTCHA'yı sıfırla
             captchaRef.current.reset();
         }
     };
-
-
     const handleCaptchaChange = (token: string | null) => {
         if (token) {
             setCaptchaError(false);
@@ -198,11 +162,7 @@ const HomeV1 = () => {
             month: "2-digit",
             year: "numeric",
         })
-        .replace(/\//g, "."); // "/" karakterlerini "." ile değiştir
-
-
-
-
+        .replace(/\//g, ".");
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
@@ -218,14 +178,8 @@ const HomeV1 = () => {
                 <link rel="canonical" href={`${APP_CONFIG.base_url}`} />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
-
-
-                {/* Preload Assets */}
                 <link rel="preload" as="image" href={contactPeopleImage} />
                 <link rel="preload" as="image" href={chart} />
-
-
-                {/* Structured Data for Logo */}
                 <script type="application/ld+json">
                     {`
       {
@@ -335,7 +289,6 @@ const HomeV1 = () => {
                         </motion.div>
                     </div>
                 </div>
-
                 <motion.div
                     variants={fadeInAnimationVariant}
                     initial="initial"
@@ -607,8 +560,6 @@ const HomeV1 = () => {
                 </div>
 
             </section>
-
-
             <section className="relative">
                 <div style={{ clipPath: "polygon(0 7%, 100% 7%, 100% 93%, 0 93%)" }} className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] bg-primary  overflow-hidden flex items-center justify-center relative">
                     <div className="max-w-[1173px] w-full mx-auto flex flex-col z-[5]">
@@ -820,8 +771,6 @@ const HomeV1 = () => {
                 <div className="z-[-1] absolute top-0 right-0 h-1/2 w-full bg-neutral-200"></div>
                 <div className="z-[-1] absolute bottom-0 right-0 h-1/2 w-full bg-white"></div>
             </section>
-
-
             <section className="3xl:pt-[220px] lg:pt-[176px] md:pt-[140px] xs:pt-[113px] pt-[90px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[240px] xs:pb-[240px] pb-[150px] xs:px-6 px-4 overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
                     <motion.div
@@ -867,7 +816,6 @@ const HomeV1 = () => {
                     </motion.div>
                 </div>
             </section>
-
             <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-center justify-between">
 
@@ -936,7 +884,6 @@ const HomeV1 = () => {
 
                 </div>
             </section>
-
             <section className="3xl:py-[220px] lg:py-[176px] xs:px-6 px-4 md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-white">
                 <div className="max-w-[1173px] w-full mx-auto flex flex-col items-center ">
                     <motion.div
@@ -992,7 +939,6 @@ const HomeV1 = () => {
                     </NavLink>
                 </div>
             </section>
-
             <section className="3xl:py-[220px] xs:px-6 px-4 lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] overflow-hidden flex items-center justify-center relative bg-neutral-200 z-10">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">
                     <motion.div
@@ -1144,14 +1090,14 @@ const HomeV1 = () => {
                     </motion.div>
                 </div>
             </section>
-            {/* reCAPTCHA */}
+
             <ReCAPTCHA
                 className="col-span-2"
                 ref={captchaRef}
                 size="invisible"
                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                 hl="de"
-                onChange={handleCaptchaChange} // Değişiklik kontrolü
+                onChange={handleCaptchaChange}
             />
         </main>
     )
