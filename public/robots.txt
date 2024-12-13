@@ -1,5 +1,7 @@
-User-agent: *         
-Disallow: /private   
-Disallow: /admin      
-Allow: /              
-Sitemap: https://superagentur-marketing.de/
+User-agent: *
+Disallow: /private
+Disallow: /admin
+Disallow: /tmp
+Disallow: /test
+Allow: /
+Sitemap: https://superagentur-marketing.de/sitemap.xml
