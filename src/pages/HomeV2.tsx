@@ -198,7 +198,7 @@ const HomeV2 = () => {
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
-                <title>Superagentur- Innovative Marketinglösungen für Ihren Erfolg</title>
+                <title>Superagentur - Innovative Marketinglösungen für Ihren Erfolg</title>
                 <meta name="description" content="Mit kreativen und effizienten Strategien unterstützt Superagentur Sie dabei, Ihre Marke im digitalen Raum hervorzuheben." />
                 <meta name="keywords" content=" innovative Marketingstrategien, digitale Lösungen, Markenpräsenz, nachhaltiger Erfolg" />
                 <meta name="robots" content="index, follow" />
