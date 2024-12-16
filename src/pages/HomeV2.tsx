@@ -22,11 +22,18 @@ import APP_CONFIG from '../../public/config.ts';
 import marketingimage from "../assets/images/marketingimage.webp"
 import ReCAPTCHA from "react-google-recaptcha";
 import logo from "../assets/images/logo.webp"
+import { CgSpinner } from "../assets/icons/icons.tsx"
 
 const HomeV2 = () => {
     const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
     const [captchaError, setCaptchaError] = useState<boolean>(false);
+    const firstNameRef = useRef<HTMLInputElement>(null);
+    const lastNameRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const termAndConditionsCheckboxRef = useRef<HTMLInputElement>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [errors, setErrors] = useState<Record<string, string>>({});
     const navigate = useNavigate()
 
     const fadeInAnimationVariant = {
@@ -108,74 +115,86 @@ const HomeV2 = () => {
         damping: 20,
     });
 
+    const validateForm = () => {
+        const newErrors: Record<string, string> = {};
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!firstNameRef.current?.value.trim()) {
+            newErrors.firstname = "Dieses Feld darf nicht leer sein.";
+        }
+
+        if (!lastNameRef.current?.value.trim()) {
+            newErrors.lastname = "Dieses Feld darf nicht leer sein.";
+        }
+
+        if (!emailRef.current?.value.trim()) {
+            newErrors.email = "Dieses Feld darf nicht leer sein.";
+        } else if (!emailRegex.test(emailRef.current.value)) {
+            newErrors.email = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+        }
+
+        if (!termAndConditionsCheckboxRef.current?.checked) {
+            newErrors.terms = "Sie müssen die Bedingungen akzeptieren.";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault(); // Formun varsayılan davranışını engelle
+        e.preventDefault();
 
-        // Form ve ReCAPTCHA referanslarının mevcut olup olmadığını kontrol et
-        if (!form.current || !captchaRef.current) {
-            console.error("Form or reCAPTCHA reference is missing. Please reload the form.");
+        if (!validateForm()) return;
+
+        if (!captchaRef.current) {
+            console.error("ReCAPTCHA referansı bulunamadı.");
             return;
         }
 
         try {
-            // ReCAPTCHA'yı çalıştır ve token al
+            setIsSubmitting(true);
             const token = await captchaRef.current.executeAsync();
 
-            // Eğer token döndürülmezse hata durumu oluştur
             if (!token) {
                 setCaptchaError(true);
-                console.error("ReCAPTCHA validation failed. Token not received.");
                 return;
             }
 
-            // Token başarılı bir şekilde alındıysa hata durumunu sıfırla ve token'ı konsola yazdır
             setCaptchaError(false);
 
-            // Form verilerini işleme
-            const formData = new FormData(form.current);
+            const formData = new FormData(form.current!);
             const formattedData: Record<string, string> = {};
 
             formData.forEach((value, key) => {
                 if (typeof value === "string") {
-                    if (key === "companyname") {
-                        formattedData[key] = value.trim() || `• Kein Firmenname`; // Şirket adı için özel kontrol
-                    } else {
-                        formattedData[key] = value.trim() || `• Keine Angabe`; // Diğer alanlar için varsayılan değer
-                    }
+                    formattedData[key] = value.trim() || `• Keine Angabe`;
                 } else {
-                    // Eğer bir dosya ise varsayılan bir değer ata
                     formattedData[key] = `• Keine Angabe`;
                 }
             });
 
-            // Backend URL kontrolü
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
-                console.error("Backend URL is not defined. Server connection error.");
                 return;
             }
 
-            // Form verilerini backend'e gönder
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formattedData),
             });
 
-            // Backend'den gelen yanıtı kontrol et
             if (response.ok) {
-                navigate("/thank-you-page", { replace: true });
+                navigate("/danke-seite", { replace: true });
             } else {
                 const errorMessage = await response.text();
-                console.error("Failed to send email:", errorMessage);
+                console.error("Backend hatası:", errorMessage);
             }
         } catch (error) {
-            console.error("Error during form submission:", error);
+            console.error(error);
         } finally {
-            // ReCAPTCHA'yı sıfırla
+            setIsSubmitting(false);
             captchaRef.current.reset();
         }
     };
@@ -195,10 +214,19 @@ const HomeV2 = () => {
         })
         .replace(/\//g, "."); // "/" karakterlerini "." ile değiştir
 
+
+        const handleInputChange = (field: string) => {
+            setErrors((prevErrors) => {
+                const updatedErrors = { ...prevErrors };
+                delete updatedErrors[field];
+                return updatedErrors;
+            });
+        };
+
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
-                <title>Superagentur - Innovative Marketinglösungen für Ihren Erfolg</title>
+                <title>{`Superagentur - Innovative Marketinglösungen für Ihren Erfolg`}</title>
                 <meta name="description" content="Mit kreativen und effizienten Strategien unterstützt Superagentur Sie dabei, Ihre Marke im digitalen Raum hervorzuheben." />
                 <meta name="keywords" content=" innovative Marketingstrategien, digitale Lösungen, Markenpräsenz, nachhaltiger Erfolg" />
                 <meta name="robots" content="index, follow" />
@@ -1053,18 +1081,45 @@ const HomeV2 = () => {
                         style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
                         className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
                     >
-                        <form ref={form} onSubmit={handleSubmit} className="grid grid-cols-2 gap-[20px] bg-white">
+                        <form noValidate ref={form} onSubmit={handleSubmit} className="grid grid-cols-2 gap-[20px] bg-white">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="firstname" className="xs:text-[18px] text-base tb-bold">Vorname</label>
-                                <input id="firstname" name="firstname" required placeholder="Max" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input
+                                    ref={firstNameRef}
+                                    id="firstname"
+                                    name="firstname"
+                                    placeholder="Max"
+                                    className={`placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium ${errors.firstname ? "border-red-500" : ""}`}
+                                    onChange={() => handleInputChange("firstname")}
+                                    type="text"
+                                />
+                                {errors.firstname && <span className="text-red-500 text-xs">{errors.firstname}</span>}
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="lastname" className="xs:text-[18px] text-base tb-bold">Nachname</label>
-                                <input id="lastname" name="lastname" required placeholder="Mustermann" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input
+                                    ref={lastNameRef}
+                                    id="lastname"
+                                    name="lastname"
+                                    placeholder="Mustermann"
+                                    className={`placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium ${errors.lastname ? "border-red-500" : ""}`}
+                                    onChange={() => handleInputChange("lastname")}
+                                    type="text"
+                                />
+                                {errors.lastname && <span className="text-red-500 text-xs">{errors.lastname}</span>}
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="email" className="xs:text-[18px] text-base tb-bold">E-Mail</label>
-                                <input id="email" name="email" required placeholder="name@domain.de" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="email" />
+                                <input
+                                    ref={emailRef}
+                                    id="email"
+                                    name="email"
+                                    placeholder="name@domain.de"
+                                    className={`placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium ${errors.email ? "border-red-500" : ""}`}
+                                    onChange={() => handleInputChange("email")}
+                                    type="email"
+                                />
+                                {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="phonenumber" className="xs:text-[18px] text-base tb-bold">Telefonnummer<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
@@ -1088,7 +1143,7 @@ const HomeV2 = () => {
                             </div>
 
                             <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <input readOnly id="pn" name="pn" value="Home Contact" placeholder="contact" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input readOnly id="pn" name="pn" value="Contact Page" placeholder="contact" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
 
                             <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
@@ -1108,7 +1163,15 @@ const HomeV2 = () => {
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
 
-                            {/* recaptcha error area */}
+                            {/* reCAPTCHA */}
+                            <ReCAPTCHA
+                                className="col-span-2"
+                                ref={captchaRef}
+                                size="invisible"
+                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                hl="de"
+                                onChange={handleCaptchaChange} // Değişiklik kontrolü
+                            />
                             {
                                 captchaError && (
                                     <div className="text-red-600 text-sm w-full col-span-2 mt-2">
@@ -1119,14 +1182,36 @@ const HomeV2 = () => {
                                 )
                             }
 
-                            <div className="col-span-2 flex items-start gap-3">
-                                <div>
-                                    <input id="termandconditions" required className="size-5 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
+
+                            <div className="col-span-2 flex flex-col items-start gap-1">
+                                <div className="flex items-start gap-3">
+                                    <input
+                                        ref={termAndConditionsCheckboxRef}
+                                        id="termandconditions"
+                                        name="terms"
+                                        type="checkbox"
+                                        className={`size-5 mt-1 outline-none ring-0 !accent-primary ${errors.terms ? "border-red-500" : ""}`}
+                                        onChange={() => handleInputChange("terms")}
+                                    />
+                                    <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">
+                                        Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz-und-agbs" className="text-primary cursor-pointer">Datenschutzerklärung</NavLink>.
+                                    </label>
                                 </div>
-                                <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz-und-agbs" className="text-primary cursor-pointer tb-medium">Datenschutzerklärung.</NavLink></label>
+
+                                <div className="col-span-2">
+                                    {errors.terms && <span className="text-red-500 text-xs">{errors.terms}</span>}
+                                </div>
                             </div>
+
                             <div className="col-span-2">
-                                <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>
+                                <Button disabled={isSubmitting} aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full gap-2">
+                                    {isSubmitting && (
+                                        <div className="animate-spin">
+                                            <CgSpinner />
+                                        </div>
+                                    )}
+                                    {isSubmitting ? "Wird gesendet..." : "Absenden"}
+                                </Button>
                             </div>
                         </form>
                         <motion.div

@@ -1,22 +1,21 @@
-import { useEffect, ReactNode } from 'react';
+import { useEffect, ReactNode, ButtonHTMLAttributes } from 'react';
 
 type Props = {
     size?: 'small' | 'default' | 'large';
     variant?: 'primary' | 'secondary';
     children: ReactNode;
-    type?: 'button' | 'submit';
     className?: string;
-};
+} & ButtonHTMLAttributes<HTMLButtonElement>; // Tüm button attributelerini destekle
 
 const Button = ({
     size = 'default',
     variant = 'primary',
-    type = 'button',
     className = '',
     children,
+    ...rest // Diğer tüm attributeleri yakala
 }: Props) => {
     useEffect(() => {
-
+        // Herhangi bir side effect burada işlenebilir
     }, [variant, size]);
 
     const baseClasses = 'flex items-center justify-center rounded-[8px] transition-all duration-300 hover-up';
@@ -35,7 +34,7 @@ const Button = ({
     const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
 
     return (
-        <button type={type} className={`${classes} ${className}`}>
+        <button className={classes} {...rest}> {/* Diğer attributeleri butona uygula */}
             {children}
         </button>
     );

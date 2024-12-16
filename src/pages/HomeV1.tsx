@@ -22,11 +22,19 @@ import APP_CONFIG from '../../public/config.ts';
 import marketingimage from "../assets/images/marketingimage.webp"
 import ReCAPTCHA from "react-google-recaptcha";
 import logo from "../assets/images/logo.webp"
+import { CgSpinner } from "../assets/icons/icons.tsx"
 
 const HomeV1 = () => {
     const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
     const [captchaError, setCaptchaError] = useState<boolean>(false);
+    const firstNameRef = useRef<HTMLInputElement>(null);
+    const lastNameRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const termAndConditionsCheckboxRef = useRef<HTMLInputElement>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [errors, setErrors] = useState<Record<string, string>>({});
+
     const navigate = useNavigate()
     const fadeInAnimationVariant = {
         initial: {
@@ -97,64 +105,99 @@ const HomeV1 = () => {
             window.scrollTo({ top: yPosition, behavior: 'smooth' });
         }
     };
+
+
+    const validateForm = () => {
+        const newErrors: Record<string, string> = {};
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!firstNameRef.current?.value.trim()) {
+            newErrors.firstname = "Dieses Feld darf nicht leer sein.";
+        }
+
+        if (!lastNameRef.current?.value.trim()) {
+            newErrors.lastname = "Dieses Feld darf nicht leer sein.";
+        }
+
+        if (!emailRef.current?.value.trim()) {
+            newErrors.email = "Dieses Feld darf nicht leer sein.";
+        } else if (!emailRegex.test(emailRef.current.value)) {
+            newErrors.email = "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+        }
+
+        if (!termAndConditionsCheckboxRef.current?.checked) {
+            newErrors.terms = "Sie müssen die Bedingungen akzeptieren.";
+        }
+
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
+
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (!form.current || !captchaRef.current) {
-            console.error("Form or reCAPTCHA reference is missing. Please reload the form.");
+
+        if (!validateForm()) return;
+
+        if (!captchaRef.current) {
+            console.error("ReCAPTCHA referansı bulunamadı.");
             return;
         }
 
         try {
+            setIsSubmitting(true);
             const token = await captchaRef.current.executeAsync();
+
             if (!token) {
                 setCaptchaError(true);
-                console.error("ReCAPTCHA validation failed. Token not received.");
                 return;
             }
+
             setCaptchaError(false);
-            const formData = new FormData(form.current);
+
+            const formData = new FormData(form.current!);
             const formattedData: Record<string, string> = {};
 
             formData.forEach((value, key) => {
                 if (typeof value === "string") {
-                    if (key === "companyname") {
-                        formattedData[key] = value.trim() || `• Kein Firmenname`;
-                    } else {
-                        formattedData[key] = value.trim() || `• Keine Angabe`; 
-                    }
+                    formattedData[key] = value.trim() || `• Keine Angabe`;
                 } else {
                     formattedData[key] = `• Keine Angabe`;
                 }
             });
+
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
-                console.error("Backend URL is not defined. Server connection error.");
                 return;
             }
+
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formattedData),
             });
+
             if (response.ok) {
-                navigate("/thank-you-page", { replace: true });
+                navigate("/danke-seite", { replace: true });
             } else {
                 const errorMessage = await response.text();
-                console.error("Failed to send email:", errorMessage);
+                console.error("Backend hatası:", errorMessage);
             }
         } catch (error) {
-            console.error("Error during form submission:", error);
+            console.error(error);
         } finally {
+            setIsSubmitting(false);
             captchaRef.current.reset();
         }
     };
+
+
     const handleCaptchaChange = (token: string | null) => {
         if (token) {
             setCaptchaError(false);
         }
     };
+
     const today = new Date();
     const formattedDate = today
         .toLocaleDateString("de-DE", {
@@ -162,12 +205,22 @@ const HomeV1 = () => {
             month: "2-digit",
             year: "numeric",
         })
-        .replace(/\//g, ".");
+        .replace(/\//g, "."); // "/" karakterlerini "." ile değiştir
+
+
+    const handleInputChange = (field: string) => {
+        setErrors((prevErrors) => {
+            const updatedErrors = { ...prevErrors };
+            delete updatedErrors[field];
+            return updatedErrors;
+        });
+    };
+
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
-                <title>Superagentur - Ihre Marketingagentur für digitale Lösungen</title>
-                <meta name="description" content="Maßgeschneiderte Marketingstrategien für Ihr Online-Wachstum – SEO, Google Ads und mehr. Ihre Agentur für Erfolg im digitalen Raum."/>
+                <title>{`Superagentur - Ihre Marketingagentur für digitale Lösungen`}</title>
+                <meta name="description" content="Maßgeschneiderte Marketingstrategien für Ihr Online-Wachstum – SEO, Google Ads und mehr. Ihre Agentur für Erfolg im digitalen Raum." />
                 <meta name="keywords" content="digitale Marketingagentur, SEO, Google Ads, Unternehmenslistungen, Online-Präsenz, Geschäftswachstum" />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Superagentur – Ihre Marketingagentur für digitale Lösungen" />
@@ -273,7 +326,7 @@ const HomeV1 = () => {
                                 className="border border-neutral-300 max:w-[502.844px] 3xl:w-[89%] lg:w-[87%] w-[87%]  lg:ml-auto xs:rounded-[18px] rounded-[10px]"
                                 src={chart}
                                 alt="chart"
-                                
+
                             />
                             <motion.img
                                 style={{
@@ -283,7 +336,7 @@ const HomeV1 = () => {
                                 className="absolute top-[27%] -translate-y-1/3 lg:left-0 right-0 hxl:w-[237px] lg:w-[43.627%] w-[42%] xs:rounded-[18px] rounded-[10px] border border-neutral-300"
                                 src={contactPeopleImage}
                                 alt="Contact People"
-                                
+
                             />
 
                         </motion.div>
@@ -403,7 +456,7 @@ const HomeV1 = () => {
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={analytics}
                                 alt="analytics"
-                                
+
                             />
                             <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Google Ads</div>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</div>
@@ -418,7 +471,7 @@ const HomeV1 = () => {
                     <NavLink to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
-                                
+
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={search}
                                 alt="search" />
@@ -436,7 +489,7 @@ const HomeV1 = () => {
                     <NavLink to="/unternehmenslistung-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
-                                
+
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={system}
                                 alt="system" />
@@ -467,7 +520,7 @@ const HomeV1 = () => {
                             transition={{ delay: 0.3, duration: 0.3 }}
                             className="relative lg:mr-10 lg:order-1 order-2">
                             <div className="w-full h-full z-10">
-                                <img  style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
+                                <img style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
                                 <div className="absolute lg:-left-20 left-auto lg:right-auto -right-12 lg:-top-20 -top-16 bg-[#F9F5E5] size-[248px] -z-[1] rounded-full"></div>
                             </div>
 
@@ -485,19 +538,19 @@ const HomeV1 = () => {
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Optimale Reichweite</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Messbare Erfolge</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Schnelle Ergebnisse</div>
                                 </div>
@@ -522,19 +575,19 @@ const HomeV1 = () => {
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Mehr Sichtbarkeit ohne zusätzliche Werbekosten</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Nachhaltige Marketingstrategie</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Maximale organische Leads</div>
                                 </div>
@@ -550,7 +603,7 @@ const HomeV1 = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.45, duration: 0.3 }}
-                                
+
                                 src={seoImage}
                                 alt="womanImage"
                                 style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }}
@@ -905,7 +958,7 @@ const HomeV1 = () => {
                         className="flex lg:flex-row flex-col w-full gap-[26px]">
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img  src={blueCardImage} alt="card" />
+                                <img src={blueCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">1. Erstkontakt</div>
@@ -915,7 +968,7 @@ const HomeV1 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img  src={yellowCardImage} alt="card" />
+                                <img src={yellowCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">2. Planung</div>
@@ -925,7 +978,7 @@ const HomeV1 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img  src={redCardImage} alt="card" />
+                                <img src={redCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">3. Durchführung</div>
@@ -995,20 +1048,49 @@ const HomeV1 = () => {
                         style={{ boxShadow: '0px 2px 11px 0px rgba(31, 37, 89, 0.08)' }}
                         className="lg:max-w-[600px] max-w-[660px] lg:min-w-[542px] border border-neutral-300 w-full lg:py-[70px] lg:px-[55px] md:px-[46px] px-[35px] md:py-[58px] sm:[48px] py-[40px] rounded-[24px] relative bg-white"
                     >
-                        <form ref={form} onSubmit={handleSubmit} className="grid grid-cols-2 gap-[20px] bg-white">
+                        <form noValidate ref={form} onSubmit={handleSubmit} className="grid grid-cols-2 gap-[20px] bg-white">
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="firstname" className="xs:text-[18px] text-base tb-bold">Vorname</label>
-                                <input id="firstname" name="firstname" required placeholder="Max" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input
+                                    ref={firstNameRef}
+                                    id="firstname"
+                                    name="firstname"
+                                    placeholder="Max"
+                                    className={`placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium ${errors.firstname ? "border-red-500" : ""}`}
+                                    onChange={() => handleInputChange("firstname")}
+                                    type="text"
+                                />
+                                {errors.firstname && <span className="text-red-500 text-xs">{errors.firstname}</span>}
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="lastname" className="xs:text-[18px] text-base tb-bold">Nachname</label>
-                                <input id="lastname" name="lastname" required placeholder="Mustermann" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                                <input
+                                    ref={lastNameRef}
+                                    id="lastname"
+                                    name="lastname"
+                                    placeholder="Mustermann"
+                                    className={`placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium ${errors.lastname ? "border-red-500" : ""}`}
+                                    onChange={() => handleInputChange("lastname")}
+                                    type="text"
+                                />
+                                {errors.lastname && <span className="text-red-500 text-xs">{errors.lastname}</span>}
                             </div>
                             <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
                                 <label htmlFor="email" className="xs:text-[18px] text-base tb-bold">E-Mail</label>
-                                <input id="email" name="email" required placeholder="name@domain.de" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="email" />
+                                <input
+                                    ref={emailRef}
+                                    id="email"
+                                    name="email"
+                                    placeholder="name@domain.de"
+                                    className={`placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium ${errors.email ? "border-red-500" : ""}`}
+                                    onChange={() => handleInputChange("email")}
+                                    type="email"
+                                />
+                                {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
                             </div>
-                            <div className="md:col-span-1 col-span-2 flex flex-col gap-3">
+
+
+                            <div className="md:col-span-1 col-span-2 flex flex-col gap-3 ">
                                 <label htmlFor="phonenumber" className="xs:text-[18px] text-base tb-bold">Telefonnummer<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
                                 <input id="phonenumber" name="phonenumber" placeholder="0123 4567890" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="number" />
                             </div>
@@ -1060,14 +1142,35 @@ const HomeV1 = () => {
                                 )
                             }
 
-                            <div className="col-span-2 flex items-start gap-3">
-                                <div>
-                                    <input id="termandconditions" required className="size-5 mt-1 border-none outline-none ring-0 !accent-primary" type="checkbox" />
+                            <div className="col-span-2 flex flex-col items-start gap-1">
+                                <div className="flex items-start gap-3">
+                                    <input
+                                        ref={termAndConditionsCheckboxRef}
+                                        id="termandconditions"
+                                        name="terms"
+                                        type="checkbox"
+                                        className={`size-5 mt-1 outline-none ring-0 !accent-primary ${errors.terms ? "border-red-500" : ""}`}
+                                        onChange={() => handleInputChange("terms")}
+                                    />
+                                    <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">
+                                        Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz-und-agbs" className="text-primary cursor-pointer">Datenschutzerklärung</NavLink>.
+                                    </label>
                                 </div>
-                                <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open term and conditions  page" to="/datenschutz-und-agbs" className="text-primary cursor-pointer tb-medium">Datenschutzerklärung.</NavLink></label>
+
+                                <div className="col-span-2">
+                                    {errors.terms && <span className="text-red-500 text-xs">{errors.terms}</span>}
+                                </div>
                             </div>
+                            
                             <div className="col-span-2">
-                                <Button aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full">Absenden</Button>
+                                <Button disabled={isSubmitting} aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full gap-2">
+                                    {isSubmitting && (
+                                        <div className="animate-spin">
+                                            <CgSpinner />
+                                        </div>
+                                    )}
+                                    {isSubmitting ? "Wird gesendet..." : "Absenden"}
+                                </Button>
                             </div>
                         </form>
                         <motion.div

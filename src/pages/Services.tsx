@@ -343,9 +343,9 @@ const Services = () => {
 
                     <div className="flex lg:items-start items-center flex-col ">
                         <div className="max-w-[550px] w-full mb-8 md:text-[38px] xs:text-[32px] text-[26px] tb-bold text-white lg:text-start text-center z-10">Lassen Sie uns gemeinsam Ihre Sichtbarkeit maximieren!</div>
-                        <div className="flex items-center lg:justify-start justify-center max-w-[498px] w-full z-10">
+                        <NavLink to="/kontakt" className="flex items-center lg:justify-start justify-center max-w-[498px] w-full z-10">
                             <Button className="tb-bold bg-white !text-primary md:w-auto w-full hover:!bg-secondary3 hover:!text-white z-10">Kontakt</Button>
-                        </div>
+                        </NavLink>
                     </div>
 
                     <div className="absolute lg:visible invisible right-0 top-0 max-w-[35.9%] w-full h-full">
