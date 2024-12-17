@@ -24,34 +24,6 @@ const SeoPlanPremiumPackageDetail = React.lazy(() => import("../pages/SeoPlanPre
 
 export const AppRoutes = () => {
 
-    useEffect(() => {
-        const backendUrl = import.meta.env.VITE_BACKEND_URL; // Backend URL'nizi çevresel değişkenden alın
-        if (!backendUrl) {
-            
-            return;
-        }
-
-        const pingBackend = async () => {
-            try {
-                const response = await fetch(`${backendUrl}/`, {
-                    method: "GET",
-                });
-                if (response.ok) {
-                    
-                } else {
-                   
-                }
-            } catch (error) {
-               
-            }
-        };
-
-        // İlk ping ve ardından her 10 dakikada bir tekrar et
-        const intervalId = setInterval(pingBackend, 600000); // 10 dakika = 600,000 ms
-        pingBackend(); // Uygulama yüklendiğinde hemen bir ping gönder
-
-        return () => clearInterval(intervalId); // Bileşen unmount edildiğinde interval'i temizle
-    }, []);
     return (
         <React.Suspense fallback={<div>Loading...</div>}>
             <Routes>
