@@ -1,9 +1,15 @@
 <?php
-// Enable error reporting
+// En başa ekleyin
+ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/error.log');
+error_log("Starting send-mail.php script");
+
+// Hata log dosyası oluştur
+$logFile = __DIR__ . '/error.log';
+ini_set('error_log', $logFile);
+error_log("Log file initialized at: " . $logFile);
 
 // CORS headers
 header("Access-Control-Allow-Origin: *");

@@ -84,6 +84,7 @@ const Contact = () => {
 
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+
         e.preventDefault();
 
         if (!validateForm()) return;
@@ -115,10 +116,9 @@ const Contact = () => {
                 }
             });
 
+            // debugger
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
-            if (!backendUrl) {
-                return;
-            }
+
 
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",

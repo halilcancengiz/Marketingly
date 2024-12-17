@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Email sending endpoint
-app.post('/api/send-mail', async (req, res) => {
+app.post('/api/send-mail', async (req:any, res:any) => {
   try {
     const {
       firstname,

@@ -24,7 +24,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:80', // Apache/PHP server port
+        target: 'http://localhost:22', // Apache/PHP server port
         changeOrigin: true,
         secure: false,
         configure: (proxy, _options) => {
@@ -33,6 +33,7 @@ export default defineConfig({
           });
           proxy.on('proxyReq', (proxyReq, req, _res) => {
             console.log('Sending Request to the Target:', req.method, req.url);
+            console.log(proxyReq);
           });
           proxy.on('proxyRes', (proxyRes, req, _res) => {
             console.log('Received Response from the Target:', proxyRes.statusCode, req.url);
