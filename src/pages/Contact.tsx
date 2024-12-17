@@ -129,8 +129,15 @@ const Contact = () => {
             if (response.ok) {
                 navigate("/danke-seite", { replace: true });
             } else {
-                const errorMessage = await response.text();
-                console.error("Backend hatası:", errorMessage);
+                let errorMessage = await response.text();
+                try {
+                    const errorData = JSON.parse(errorMessage);
+                    console.error("Backend error:", errorData);
+                    alert(`Error: ${errorData.message}\n${errorData.debug ? JSON.stringify(errorData.debug, null, 2) : ''}`);
+                } catch (parseError) {
+                    console.error("Raw error response:", errorMessage);
+                    alert(`Server error: ${errorMessage || 'Unknown error occurred'}`);
+                }
             }
         } catch (error) {
             console.error(error);
