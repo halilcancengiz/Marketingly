@@ -6,6 +6,7 @@ import logo from "../assets/images/logo.webp"
 import Button from "../components/Button.tsx";
 import { HiOutlineDownload } from "../assets/icons/icons.tsx"
 import agbpdf from "../assets/pdfs/agb.pdf"
+import datenschutzpdf from "../assets/pdfs/Colacy GmbH Datenschutzerklärung.pdf"
 const TermAndConditions = () => {
 
     const [activeSection, setActiveSection] = useState<string>("");
@@ -136,7 +137,16 @@ const TermAndConditions = () => {
                     </div> */}
                     {/* <hr className="lg:my-[84px] md:my-[70px] xs:my-[60px] my-[50px]" /> */}
                     <div id="datenschutz" className="flex flex-col">
-                        <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] lg:mb-4 mb-[10px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Datenschutz</div>
+                        <div className="flex flex-col items-start gap-2 lg:mb-4 mb-[10px]">
+                            <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Datenschutz</div>
+
+                            <Button size="small">
+                                <a className="flex items-center justify-center gap-2" href={datenschutzpdf} download="Colacy GmbH Datenschutzerklärung">
+                                    <HiOutlineDownload size={20} />
+                                    Herunterladen
+                                </a>
+                            </Button>
+                        </div>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">1. Einleitung</div>
                         <div className="text-neutral-600 xs:text-[18px] tb-medium text-base leading-[30.006px] my-[20px]">
                             Diese Website wird betrieben von: Colacy GmbH (Superagentur). <br />
@@ -402,11 +412,11 @@ const TermAndConditions = () => {
                                 ‚Cookies löschen und verwalten' in eine Suchmaschine einzugeben und dem
                                 offiziellen Link zu Ihrem Browser zu folgen. <br />
                                 Alternativ können Sie Ihre Cookie-Einstellungen auch unter <br />
-                                <a href=" www.aboutads.info/choices/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
-                                    www.aboutads.info/choices/
+                                <a href="https://www.aboutads.info/choices" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.aboutads.info/choices
                                 </a> <br />
-                                <a href="www.youronlinechoices.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
-                                    www.youronlinechoices.com
+                                <a href="https://www.youronlinechoices.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.youronlinechoices.com
                                 </a> <br />
                                 Wir müssen Sie allerdings darauf hinweisen, dass eine umfassende
                                 Blockierung/Löschung von Cookies zu Beeinträchtigungen bei der Nutzung
@@ -1700,7 +1710,12 @@ const TermAndConditions = () => {
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 3.9. Facebook <br />
-                                Wir betreiben eine Facebook Fanpage auf https://www.facebook.com/. Dieses
+                                Wir betreiben eine Facebook Fanpage auf <br />
+
+                                <a href="https://www.facebook.com/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.facebook.com/
+                                </a>
+                                . Dieses
                                 soziale Netzwerk wir von der Meta Platforms Ireland Limited, 4 Grand Canal
                                 Square, Grand Canal Harbour, Dublin 2, Irland, betrieben. <br />
 
@@ -2624,8 +2639,8 @@ const TermAndConditions = () => {
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
                                 3.16.7. Slack<br />
-                                <a href="www.slack.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
-                                    www.slack.com.
+                                <a href="https://www.slack.com" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
+                                    https://www.slack.com.
                                 </a>
                             </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2 xs:pl-7 pl-4">
