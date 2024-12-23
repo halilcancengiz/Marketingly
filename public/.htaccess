@@ -1,19 +1,15 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
-
-    # Backend API isteklerini yönlendir
     RewriteCond %{REQUEST_URI} ^/api/ [NC]
     RewriteRule ^ - [L]
-
-    # HTTPS Yönlendirme
     RewriteCond %{HTTPS} off
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-    # SPA Yönlendirme (Tüm diğer istekler index.html'e gider)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule . /index.html [L]
+    RewriteCond %{REQUEST_URI} ^/api/send-mail$ [NC]
+    RewriteRule ^api/send-mail$ /public/api/send-mail.php [L,QSA]
 </IfModule>
 
 

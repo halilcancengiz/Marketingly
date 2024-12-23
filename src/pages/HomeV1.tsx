@@ -166,6 +166,8 @@ const HomeV1 = () => {
                 }
             });
 
+            formattedData["recaptchaToken"] = token;
+
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
                 return;
@@ -178,6 +180,8 @@ const HomeV1 = () => {
             });
 
             if (response.ok) {
+                const responseData = await response.json();
+                // console.log("Backend cevabı:", responseData); // Gelen yanıtı konsola yazdı
                 navigate("/danke-seite", { replace: true });
             } else {
                 const errorMessage = await response.text();

@@ -20,5 +20,8 @@ export default defineConfig({
       filter: /\.(js|css|html|json)$/ // Sadece belirli dosya türlerini sıkıştır
     }),
   ],
-  publicDir: 'public',              // Public dosya dizini
+  publicDir: 'public',
+  build: {
+    outDir: 'dist',
+},
 });

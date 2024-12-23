@@ -1551,10 +1551,10 @@ const TermAndConditions = () => {
                                 </a> <br />
                                 <a href="https://de-de.facebook.com/help/566994660333381" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://de-de.facebook.com/help/566994660333381
-                                </a>
+                                </a> <br />
                                 <a href="https://www.facebook.com/policy.php" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://www.facebook.com/policy.php
-                                </a>
+                                </a> <br />
                                 <a href="https://instagram.com/about/legal/privacy/" target="_blank" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">
                                     https://instagram.com/about/legal/privacy/
                                 </a>
@@ -3490,7 +3490,7 @@ const TermAndConditions = () => {
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">6. Datenschutz</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
-                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">6.1. Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Informationen zum Umgang mit Daten finden Sie in unserer Datenschutzerklärung unter <a href="www.superagentur-marketing.de/datenschutz-und-agbs" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">www.superagentur-marketing.de/datenschutz-und-agbs</a>.</li>
+                            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">6.1. Der Schutz Ihrer personenbezogenen Daten ist uns ein wichtiges Anliegen. Informationen zum Umgang mit Daten finden Sie in unserer Datenschutzerklärung unter <a href="https://www.superagentur-marketing.de/datenschutz-und-agbs" className="hover:text-secondary3 underline text-primary tb-medium transition-all duration-300 break-words">www.superagentur-marketing.de/datenschutz-und-agbs</a>.</li>
                         </ol>
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">7. Änderungen der AGB</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
