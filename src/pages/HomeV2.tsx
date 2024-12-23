@@ -20,14 +20,12 @@ import homeV2Chart2Image from "../assets/images/homev2chart2.webp"
 import splitStringUsingRegex from "../utils/splitStringUsingRegex";
 import APP_CONFIG from '../../public/config.ts';
 import marketingimage from "../assets/images/marketingimage.webp"
-import ReCAPTCHA from "react-google-recaptcha";
 import logo from "../assets/images/logo.webp"
 import { CgSpinner } from "../assets/icons/icons.tsx"
 
 const HomeV2 = () => {
-    const captchaRef = useRef<ReCAPTCHA>(null);
+    // const captchaRef = useRef<ReCAPTCHA>(null);
     const form = useRef<HTMLFormElement>(null);
-    const [captchaError, setCaptchaError] = useState<boolean>(false);
     const firstNameRef = useRef<HTMLInputElement>(null);
     const lastNameRef = useRef<HTMLInputElement>(null);
     const emailRef = useRef<HTMLInputElement>(null);
@@ -144,71 +142,77 @@ const HomeV2 = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+    
+        // Form doğrulama kontrolü
         if (!validateForm()) return;
-
-        if (!captchaRef.current) {
-            console.error("ReCAPTCHA referansı bulunamadı.");
+    
+        // reCAPTCHA'nın yüklü olup olmadığını kontrol et
+        if (typeof window.grecaptcha === "undefined") {
+            console.error("reCAPTCHA yüklenmedi.");
             return;
         }
-
+        console.log("reCAPTCHA yüklendi:", window.grecaptcha);
+    
         try {
             setIsSubmitting(true);
-            const token = await captchaRef.current.executeAsync();
-
+    
+            // reCAPTCHA Token alımı
+            const token = await window.grecaptcha.enterprise.execute(
+                import.meta.env.VITE_RECAPTCHA_SITE_KEY, // reCAPTCHA Enterprise Site Key
+                { action: "LOGIN" }
+            );
+    
             if (!token) {
-                setCaptchaError(true);
+                console.error("reCAPTCHA Token alınamadı.");
                 return;
             }
-
-            setCaptchaError(false);
-
-            const formData = new FormData(form.current!);
+            console.log("Alınan reCAPTCHA Token:", token);
+    
+            // Form verilerini işleme
+            const formData = new FormData(form.current!); // Form'daki verileri al
             const formattedData: Record<string, string> = {};
-
+    
+            // FormData'daki her bir anahtar-değer çifti üzerinde işlem yap
             formData.forEach((value, key) => {
                 if (typeof value === "string") {
-                    formattedData[key] = value.trim() || `• Keine Angabe`;
+                    formattedData[key] = value.trim() || "• Keine Angabe";
                 } else {
-                    formattedData[key] = `• Keine Angabe`;
+                    formattedData[key] = "• Keine Angabe";
                 }
             });
-
+    
+            // reCAPTCHA Token'i veriye ekle
             formattedData["recaptchaToken"] = token;
-
+    
+            // Backend URL'sinin tanımlı olup olmadığını kontrol et
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
+                console.error("Backend URL tanımlı değil.");
                 return;
             }
-
+    
+            // Backend'e POST isteği gönder
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formattedData),
+                body: JSON.stringify(formattedData), // İşlenmiş verileri JSON olarak gönder
             });
-
+    
             if (response.ok) {
                 const responseData = await response.json();
-                // console.log("Backend cevabı:", responseData); // Gelen yanıtı konsola yazdı
-                navigate("/danke-seite", { replace: true });
+                console.log("Backend cevabı:", responseData);
+                navigate("/danke-seite", { replace: true }); // Başarılı işlem sonrası yönlendirme
             } else {
                 const errorMessage = await response.text();
                 console.error("Backend hatası:", errorMessage);
             }
         } catch (error) {
-            console.error(error);
+            console.error("Hata:", error);
         } finally {
             setIsSubmitting(false);
-            captchaRef.current.reset();
         }
     };
 
-
-    const handleCaptchaChange = (token: string | null) => {
-        if (token) {
-            setCaptchaError(false);
-        }
-    };
     const today = new Date();
     const formattedDate = today
         .toLocaleDateString("de-DE", {
@@ -1167,24 +1171,7 @@ const HomeV2 = () => {
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
 
-                            {/* reCAPTCHA */}
-                            <ReCAPTCHA
-                                className="col-span-2"
-                                ref={captchaRef}
-                                size="invisible"
-                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                                hl="de"
-                                onChange={handleCaptchaChange} // Değişiklik kontrolü
-                            />
-                            {
-                                captchaError && (
-                                    <div className="text-red-600 text-sm w-full col-span-2 mt-2">
-                                        <p>
-                                            Verifizierung fehlgeschlagen. Bitte vervollständigen Sie das reCAPTCHA, um zu bestätigen, dass Sie kein Roboter sind.
-                                        </p>
-                                    </div>
-                                )
-                            }
+
 
 
                             <div className="col-span-2 flex flex-col items-start gap-1">
@@ -1238,16 +1225,6 @@ const HomeV2 = () => {
                     </motion.div>
                 </div>
             </section>
-
-            {/* reCAPTCHA */}
-            <ReCAPTCHA
-                className="col-span-2"
-                ref={captchaRef}
-                size="invisible"
-                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                hl="de"
-                onChange={handleCaptchaChange} // Değişiklik kontrolü
-            />
         </main>
     )
 }
