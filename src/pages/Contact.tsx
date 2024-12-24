@@ -82,7 +82,6 @@ const Contact = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-    
         // Form doğrulama kontrolü
         if (!validateForm()) return;
     
@@ -99,7 +98,7 @@ const Contact = () => {
             // reCAPTCHA Token alımı
             const token = await window.grecaptcha.enterprise.execute(
                 import.meta.env.VITE_RECAPTCHA_SITE_KEY, // reCAPTCHA Enterprise Site Key
-                { action: "LOGIN" }
+                { action: "SUBMIT" }
             );
     
             if (!token) {
@@ -132,11 +131,13 @@ const Contact = () => {
             }
     
             // Backend'e POST isteği gönder
+            console.log(formattedData)
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formattedData), // İşlenmiş verileri JSON olarak gönder
             });
+            console.log(response)
     
             if (response.ok) {
                 const responseData = await response.json();
