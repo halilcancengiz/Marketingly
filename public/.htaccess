@@ -16,10 +16,11 @@
 # CORS Ayarları
 <IfModule mod_headers.c>
     # CORS İzinleri
-    SetEnvIf Origin "^(https://superagentur-marketing\.de|http://localhost:5173)$" AccessControlAllowOrigin=$0
+    SetEnvIf Origin "^(https://superagentur-marketing.de|http://localhost:5173)$" AccessControlAllowOrigin=$0
     Header always set Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
     Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
     Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
+    Header set Access-Control-Allow-Credentials "true"
 
     # OPTIONS Preflight İsteği için
     <IfModule mod_rewrite.c>
