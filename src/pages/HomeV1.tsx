@@ -261,7 +261,7 @@ const HomeV1 = () => {
                 <div className="w-full h-full xs:px-6 px-4">
                     <div className="max-w-[1173px] w-full mx-auto lg:flex-row flex-col flex lg:items-center items-start justify-between z-[3]">
                         <div className="lg:mr-10 lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px] flex flex-col max-w-[547px] w-full mx-auto lg:text-start xs:text-center text-start">
-                            <motion.div
+                            <motion.h2
                                 variants={fadeInAnimationVariant}
                                 initial="initial"
                                 whileInView="animate"
@@ -269,7 +269,7 @@ const HomeV1 = () => {
                                 transition={{ delay: 0.7, duration: 0.3 }}
                                 className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.5px]">
                                 Marketing Agentur
-                            </motion.div>
+                            </motion.h2>
                             <motion.h1
                                 variants={fadeInAnimationVariantExample}
                                 initial="hidden"
@@ -294,7 +294,7 @@ const HomeV1 = () => {
                                     ))}
                                 </motion.span>
                             </motion.h1>
-                            <motion.div
+                            <motion.p
                                 variants={fadeInAnimationVariant}
                                 initial="initial"
                                 whileInView="animate"
@@ -302,7 +302,7 @@ const HomeV1 = () => {
                                 transition={{ delay: 0.7, duration: 0.3 }}
                                 className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">
                                 Mit uns erreichen Sie Menschen dort, wo sie suchen, auf Google – durch Ads, SEO & Unternehmenslistungen.
-                            </motion.div>
+                            </motion.p>
                             <motion.div
                                 variants={fadeInAnimationVariant}
                                 initial="initial"
@@ -439,7 +439,7 @@ const HomeV1 = () => {
                     className="flex lg:flex-row flex-col lg:items-end items-center lg:text-start text-center justify-between lg:max-w-[1173px] max-w-[660px] w-full mx-auto lg:mb-[60px] md:mb-[50px] mb-10 lg:gap-6">
                     <div className="flex flex-col max-w-[600px] w-full lg:mb-0 mb-[28px]">
                         <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-base leading-[18px] uppercase text-primary tb-medium tracking-[1.6px]">Unsere Dienstleistungen</div>
-                        <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">Mit uns an Ihrer Seite maximierst du deine Sichtbarkeit!</div>
+                        <h2 className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">Mit uns an Ihrer Seite maximierst du deine Sichtbarkeit!</h2>
                     </div>
                     <div className="flex xs:flex-row flex-col items-center justify-center gap-6 xs:w-auto w-full">
                         <NavLink aria-label="Open contact page" to="/kontakt" className="xs:w-auto w-full">
@@ -465,8 +465,8 @@ const HomeV1 = () => {
                                 alt="analytics"
 
                             />
-                            <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Google Ads</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</div>
+                            <h3 className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Google Ads</h3>
+                            <p className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
@@ -482,8 +482,8 @@ const HomeV1 = () => {
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={search}
                                 alt="search" />
-                            <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEO</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</div>
+                            <h3 className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEO</h3>
+                            <p className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
                         </div>
 
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
@@ -500,8 +500,8 @@ const HomeV1 = () => {
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={system}
                                 alt="system" />
-                            <div className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Unternehmenslistung</div>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichtbarkeit optimieren durch Google-Unternehmenslistung.</div>
+                            <h3 className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Unternehmenslistung</h3>
+                            <p className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Sichtbarkeit optimieren durch Google-Unternehmenslistung.</p>
                             <div className="md:flex hidden"></div>
 
                         </div>
@@ -541,7 +541,7 @@ const HomeV1 = () => {
                             className="lg:max-w-[527px] max-w-[660px] w-full flex flex-col lg:order-2 order-1 lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px]">
                             <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-base leading-[18px] uppercase text-primary tb-medium tracking-[1.6px]">Performance Marketing</div>
                             <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Wieso Google Ads?</div>
-                            <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Mit bezahlter Werbung auf Google erscheint Ihre digitale Anzeige genau in dem Moment, in dem jemand nach Produkten, Dienstleistungen oder Karrieremöglichkeiten wie Ihren sucht.</div>
+                            <p className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Mit bezahlter Werbung auf Google erscheint Ihre digitale Anzeige genau in dem Moment, in dem jemand nach Produkten, Dienstleistungen oder Karrieremöglichkeiten wie Ihren sucht.</p>
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
@@ -577,8 +577,8 @@ const HomeV1 = () => {
                             transition={{ delay: 0.3, duration: 0.3 }}
                             className="lg:max-w-[527px] max-w-[660px] w-full flex flex-col lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px] lg:mr-10">
                             <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-base leading-[18px] uppercase text-primary tb-medium tracking-[1.6px]">Nachhaltige Reichweite</div>
-                            <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Warum ist eine SEO Optimierung wichtig?</div>
-                            <div className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen.</div>
+                            <h2 className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Warum ist eine SEO Optimierung wichtig?</h2>
+                            <p className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen.</p>
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
@@ -632,7 +632,7 @@ const HomeV1 = () => {
                             className="max-w-[527px] w-full md:text-[38px] md:leading-[50px] xs:text-[32px] xs:leading-[42px] text-[26px] leading-[34.216px] tb-bold text-white md:mb-5 xs:mb-[15px] mb-[10px]">
                             Lassen Sie uns gemeinsam starten!
                         </motion.div>
-                        <motion.div
+                        <motion.p
                             variants={fadeInAnimationVariant}
                             initial="initial"
                             whileInView="animate"
@@ -640,7 +640,7 @@ const HomeV1 = () => {
                             transition={{ delay: 0.3, duration: 0.3 }}
                             className="max-w-[527px] w-full leading-[30px] text-neutral-100 mb-10 text-[18px] tb-medium">
                             Kontaktieren Sie uns, um zu erfahren, wie wir Ihnen dabei helfen können, Ihre Ziele zu erreichen.
-                        </motion.div>
+                        </motion.p>
                         <motion.div
                             variants={fadeInAnimationVariant}
                             initial="initial"
@@ -864,9 +864,9 @@ const HomeV1 = () => {
                         className="lg:max-w-[504px] max-w-[660px] flex flex-col lg:pl-5 lg:order-2 order-1">
                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Zielgruppe</div>
                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] md:leading-[50px] xs:leading-[42px] leading-[34px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]"> Wer kann von unseren Dienstleistungen profitieren?</div>
-                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">
+                        <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">
                             Egal ob Makler, Zahnarztpraxis, lokales Geschäft oder große Industriefirma – unsere maßgeschneiderte Lösung passt zu jedem. Unser Dienst ist flexibel, skalierbar und hilft Ihnen, genau die Ergebnisse zu erzielen, die Sie brauchen – ob mehr Kunden, mehr Mitarbeiter oder mehr Sichtbarkeit.
-                        </div>
+                        </p>
 
                         <div className="xs:w-auto w-full">
                             <NavLink className="xs:w-auto w-full" to="/dienstleistungen">
@@ -887,8 +887,8 @@ const HomeV1 = () => {
                         transition={{ delay: 0.1, duration: 0.3 }}
                         className="lg:max-w-[436px] max-w-[660px] lg:mb-0 mb-20 lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10">
                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso Superagentur</div>
-                        <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Warum sollten Sie mit uns arbeiten?</div>
-                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</div>
+                        <h2 className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Warum sollten Sie mit uns arbeiten?</h2>
+                        <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</p>
                         <NavLink aria-label="Open contact page" to="/kontakt" className="mt-10 xs:w-auto w-full">
                             <Button className="tb-bold xs:w-auto w-full">Kontakt</Button>
                         </NavLink>
@@ -904,27 +904,27 @@ const HomeV1 = () => {
                             className="flex md:flex-row flex-col">
                             <div className="md:w-1/2 min-w-[285px] md:pr-[14px] flex flex-col items-start  space-y-[28px] z-[2]">
                                 <div className="bg-white lg:py-[60px] md:py-[50px] xs:py-[42px] py-[35px] md:px-9 xs:px-[35px] px-[25px] w-full rounded-[24px] flex flex-col transition-all duration-300 section-6-shadow border border-gray-200/60">
-                                    <div className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">100<span className="text-primary tb-bold">%</span></div>
+                                    <h4 className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">100<span className="text-primary tb-bold">%</span></h4>
                                     <div className="text-neutral-800 md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px]">Einsatz</div>
-                                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir geben immer unser Bestes für Ihre Ziele.</div>
+                                    <path className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir geben immer unser Bestes für Ihre Ziele.</path>
                                 </div>
 
                                 <div className="bg-white lg:py-[60px] md:py-[50px] xs:py-[42px] py-[35px] md:px-9 xs:px-[35px] px-[25px] w-full rounded-[24px] flex flex-col transition-all duration-300 section-6-shadow border border-gray-200/60">
-                                    <div className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">3<span className="text-primary tb-bold">x</span></div>
+                                    <h4 className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">3<span className="text-primary tb-bold">x</span></h4>
                                     <div className="text-neutral-800 md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px]">Power</div>
-                                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Alles aus einer Hand - SEO, Google Ads, Unternehmenslistungen.</div>
+                                    <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Alles aus einer Hand - SEO, Google Ads, Unternehmenslistungen.</p>
                                 </div>
                             </div>
                             <div className="md:w-1/2 md:pl-[14px] min-w-[285px] flex flex-col justify-end md:mt-16 mt-7 space-y-[28px] z-[2]">
                                 <div className="bg-white lg:py-[60px] md:py-[50px] xs:py-[42px] py-[35px] md:px-9 xs:px-[35px] px-[25px] w-full rounded-[24px] flex flex-col transition-all duration-300 section-6-shadow border border-gray-200/60">
-                                    <div className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">14 <span className="text-primary tb-bold">Tage</span></div>
+                                    <h4 className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">14 <span className="text-primary tb-bold">Tage</span></h4>
                                     <div className="text-neutral-800 md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px]">Kickstart</div>
-                                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Schneller Start  für schnelle Ergebnisse – in nur 14 Tagen.</div>
+                                    <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Schneller Start  für schnelle Ergebnisse – in nur 14 Tagen.</p>
                                 </div>
                                 <div className="bg-white lg:py-[60px] md:py-[50px] xs:py-[42px] py-[35px] md:px-9 xs:px-[35px] px-[25px] w-full rounded-[24px] flex flex-col transition-all duration-300 section-6-shadow border border-gray-200/60">
-                                    <div className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">1 <span className="text-primary tb-bold">Ziel</span></div>
+                                    <h4 className="text-neutral-800 lg:text-[58px] md:text-[48px] xs:text-[40px] text-[34px] lg:leading-[59.972px] md:leading-[49.632px] xs:leading-[41.36px] leading-[35.156px] tb-bold mb-5">1 <span className="text-primary tb-bold">Ziel</span></h4>
                                     <div className="text-neutral-800 md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px]">Ihr Erfolg</div>
-                                    <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir setzen alles daran, Sie nach vorne zu bringen.</div>
+                                    <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir setzen alles daran, Sie nach vorne zu bringen.</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -954,7 +954,7 @@ const HomeV1 = () => {
                         transition={{ delay: 0.3, duration: 0.3 }}
                         className="flex flex-col items-center justify-center max-w-[452px] w-full mb-[60px]">
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Unser Prozess</div>
-                        <div className="text-center md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Ein einfacher, aber effektiver Drei-Schritte-Prozess</div>
+                        <h2 className="text-center md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Ein einfacher, aber effektiver Drei-Schritte-Prozess</h2>
                     </motion.div>
                     <motion.div
                         variants={fadeInAnimationVariant}
@@ -969,7 +969,7 @@ const HomeV1 = () => {
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">1. Erstkontakt</div>
-                                <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir beginnen mit einem persönlichen Gespräch, um Ihre Bedürfnisse und Ziele zu verstehen.</div>
+                                <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir beginnen mit einem persönlichen Gespräch, um Ihre Bedürfnisse und Ziele zu verstehen.</p>
 
                             </div>
                         </div>
@@ -979,7 +979,7 @@ const HomeV1 = () => {
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">2. Planung</div>
-                                <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir entwickeln eine maßgeschneiderte Strategie für Ihren Erfolg.</div>
+                                <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir entwickeln eine maßgeschneiderte Strategie für Ihren Erfolg.</p>
 
                             </div>
                         </div>
@@ -989,7 +989,7 @@ const HomeV1 = () => {
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">3. Durchführung</div>
-                                <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Unsere Experten setzen die Planung präzise und effizient um.</div>
+                                <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Unsere Experten setzen die Planung präzise und effizient um.</p>
 
                             </div>
                         </div>
@@ -1009,8 +1009,8 @@ const HomeV1 = () => {
                         transition={{ delay: 0.30, duration: 0.3 }}
                         className="max-w-[487px] lg:mb-0 mb-20 lg:-mt-[50px] lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10 ">
                         <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Kontakt</div>
-                        <div className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Jetzt Anfragen</div>
-                        <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</div>
+                        <h2 className="col-span-1 md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800 mb-5">Jetzt Anfragen</h2>
+                        <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-10">Lassen Sie uns gemeinsam Ihre Ziele erreichen – ob mehr Sichtbarkeit, neue Kunden oder andere Anliegen. Wir sind für Sie da und bieten Ihnen maßgeschneiderte Lösungen für Ihre Bedürfnisse.</p>
                         <div className='flex flex-col gap-y-4 md:flex-nowrap flex-wrap mb-[60px]'>
                             <div style={{ boxShadow: '0px 8px 44px 0px rgba(8, 15, 52, 0.03)' }} className='group cursor-pointer flex items-center gap-x-3 hover-up-md rounded-[16px] md:py-[21px] py-4 md:px-6 px-4 border border-neutral-300'>
                                 <div className="bg-[#E4E2FF] size-12 min-w-12 min-h-12 p-2.5 rounded-[10px] md:mr-[25px] mr-[12px] overflow-hidden group/parent">

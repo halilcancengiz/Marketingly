@@ -111,7 +111,7 @@ const AdsPlan = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.15, duration: 0.3 }}
                         className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">Unsere Pläne</motion.div>
-                    <motion.div
+                    <motion.h1
                         variants={fadeInAnimationVariant}
                         initial="initial"
                         whileInView="animate"
@@ -119,7 +119,7 @@ const AdsPlan = () => {
                         transition={{ delay: 0.30, duration: 0.3 }}
                         className="mb-[15px] lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] tb-bold lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] ">
                         Pläne für jeden Bedarf
-                    </motion.div>
+                    </motion.h1>
                     <motion.div
                         variants={fadeInAnimationVariant}
                         initial="initial"
@@ -261,9 +261,9 @@ const AdsPlan = () => {
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
                         </div>
 
-                        <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+                        <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
                             Basis
-                        </div>
+                        </h2>
                         <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"></span> </div>
                         <div style={{ height: `${priceHeight}px` }} className="flex flex-col mt-[20px]">
                             <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.google_ads.basis} €</div>
@@ -307,9 +307,9 @@ const AdsPlan = () => {
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
                         </div>
 
-                        <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+                        <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
                             Standard
-                        </div>
+                        </h2>
                         <div ref={headerDescRef} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
 
                         <div ref={priceRef} className="flex flex-col mt-[20px]">
@@ -353,9 +353,9 @@ const AdsPlan = () => {
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
                         </div>
 
-                        <div className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+                        <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
                             Premium
-                        </div>
+                        </h2>
                         <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
                         <div style={{ height: `${priceHeight}px` }} className="flex flex-col mt-[20px]">
                             <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.google_ads.premium}</div>

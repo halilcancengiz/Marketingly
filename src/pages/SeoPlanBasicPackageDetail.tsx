@@ -96,9 +96,9 @@ const SeoPlanBasicPackageDetail = () => {
                     <div className="size-[90px] border border-neutral-300 md:mb-8 xs:mb-[28px] mb-[25px] rounded-[25px] flex items-center justify-center overflow-hidden">
                         <img loading="lazy" src={circlesImage} alt="circle" />
                     </div>
-                    <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
+                    <h1 className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
                         Basis-Paket SEO
-                    </div>
+                    </h1>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
                         Das Basis-Paket bietet den perfekten Einstieg in die Suchmaschinenoptimierung. Es richtet sich an Unternehmen, die eine solide Grundlage schaffen möchten, um die Sichtbarkeit in Suchmaschinen zu verbessern. Mit gezielten Maßnahmen und einer zuverlässigen Betreuung helfen wir Ihnen, Ihre ersten SEO-Erfolge zu erzielen.                    </div>
                     <div className="flex flex-col gap-[15px] mb-10">

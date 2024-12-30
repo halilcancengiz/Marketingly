@@ -67,13 +67,13 @@ const Services = () => {
 
             <section className="relative overflow-hidden z-[1]  flex items-center justify-center bg-secondary1 w-full 3xl:pt-[142px] lg:pt-[114px] md:pt-[91px] xs:pt-[72px] pt-[58px] 3xl:pb-[196px]  lg:pb-[118px] md:pb-[140px] xs:pb-[88px] pb-[100px] px-6">
                 <div className="max-w-[540px] w-full flex flex-col text-white z-[3]">
-                    <motion.div
+                    <motion.h1
                         variants={fadeInAnimationVariant}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
                         transition={{ delay: 0.3, duration: 0.3 }}
-                        className="mb-[10px] text-center tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px]">Dienstleistungen</motion.div>
+                        className="mb-[10px] text-center tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px]">Dienstleistungen</motion.h1>
                     <motion.div
                         variants={fadeInAnimationVariant}
                         initial="initial"
@@ -288,7 +288,7 @@ const Services = () => {
                     <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6 ">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="analytics" />
-                            <div className="md:text-[24px] text-[22px] tb-bold">Google Ads</div>
+                            <h4 className="md:text-[24px] text-[22px] tb-bold">Google Ads</h4>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</div>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
@@ -303,7 +303,7 @@ const Services = () => {
                     <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={search} alt="search" />
-                            <div className="md:text-[24px] text-[22px] tb-bold">SEO</div>
+                            <h4 className="md:text-[24px] text-[22px] tb-bold">SEO</h4>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</div>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
@@ -318,7 +318,7 @@ const Services = () => {
                     <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={system} alt="system" />
-                            <div className="md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</div>
+                            <h4 className="md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</h4>
                             <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Sichtbarkeit optimieren durch Google-Unternehmenslistung.</div>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">

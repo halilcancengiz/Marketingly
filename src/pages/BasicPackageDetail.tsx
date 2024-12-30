@@ -94,9 +94,9 @@ const BasicPackageDetail = () => {
                     <div className="size-[90px] border border-neutral-300 md:mb-8 xs:mb-[28px] mb-[25px] rounded-[25px] flex items-center justify-center overflow-hidden">
                         <img loading="lazy" src={circlesImage} alt="circle" />
                     </div>
-                    <div className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
+                    <h1 className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
                         Basis-Paket
-                    </div>
+                    </h1>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
                         Das Basis-Paket bietet Ihnen den idealen Einstieg ins digitale Marketing. Es richtet sich an Unternehmen, die eine solide Grundlage schaffen und erste Erfahrungen mit gezielten Werbekampagnen sammeln möchten. Mit einfacher Einrichtung und verlässlicher Betreuung helfen wir Ihnen, Ihre Zielgruppe effektiv zu erreichen.
                         So können Sie Ihre Reichweite Schritt für Schritt ausbauen und erste Erfolge sicherstellen.

@@ -95,7 +95,7 @@ const Thankyou = () => {
                 </div>
             </motion.div>
             <div className="flex flex-col items-center justify-center max-w-[640px] w-full">
-                <motion.div
+                <motion.h1
                     variants={fadeInAnimationVariant}
                     initial="initial"
                     whileInView="animate"
@@ -103,7 +103,7 @@ const Thankyou = () => {
                     transition={{ delay: 0.15, duration: 0.3 }}
                     className="3xl:text-[58px] lg:text-[48px] text-[41px] text-center lg:leading-[59px] md:leading-[49px] leading-[41px] tb-bold mb-5 text-neutral-800">
                     Danke!
-                </motion.div>
+                </motion.h1>
                 <motion.div
                     variants={fadeInAnimationVariant}
                     initial="initial"

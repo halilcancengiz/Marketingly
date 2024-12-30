@@ -95,7 +95,7 @@ const TermAndConditions = () => {
                     id="menuItems"
                     className="lg:mt-[63px] lg:mb-0 mb-10 lg:mr-10 min-w-[274px] grid grid-cols-3 gap-[15px] lg:sticky lg:top-5 lg:h-full h-[72px]">
 
-                    <div onClick={() => scrollToSection("impressum")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] lg:text-start text-center px-5 hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "impressum" ? "text-primary" : "text-neutral-800"}`}>Impressum</div>
+                    <h1 onClick={() => scrollToSection("impressum")} className={`menuItemShadow  h-[72px] lg:col-span-3 md:col-span-1 col-span-3 py-[25px] lg:px-[25px] lg:text-start text-center px-5 hover:text-primary bg-white rounded-[10px] text-[18px] leading-[19.998px] tb-bold cursor-pointer transition-all border border-white duration-300 ${activeSection === "impressum" ? "text-primary" : "text-neutral-800"}`}>Impressum</h1>
 
                 </motion.div>
 
