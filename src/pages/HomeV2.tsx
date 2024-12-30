@@ -142,36 +142,36 @@ const HomeV2 = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-    
+
         // Form doğrulama kontrolü
         if (!validateForm()) return;
-    
+
         // reCAPTCHA'nın yüklü olup olmadığını kontrol et
         if (typeof window.grecaptcha === "undefined") {
             console.error("reCAPTCHA yüklenmedi.");
             return;
         }
         console.log("reCAPTCHA yüklendi:", window.grecaptcha);
-    
+
         try {
             setIsSubmitting(true);
-    
+
             // reCAPTCHA Token alımı
             const token = await window.grecaptcha.enterprise.execute(
                 import.meta.env.VITE_RECAPTCHA_SITE_KEY, // reCAPTCHA Enterprise Site Key
                 { action: "LOGIN" }
             );
-    
+
             if (!token) {
                 console.error("reCAPTCHA Token alınamadı.");
                 return;
             }
             console.log("Alınan reCAPTCHA Token:", token);
-    
+
             // Form verilerini işleme
             const formData = new FormData(form.current!); // Form'daki verileri al
             const formattedData: Record<string, string> = {};
-    
+
             // FormData'daki her bir anahtar-değer çifti üzerinde işlem yap
             formData.forEach((value, key) => {
                 if (typeof value === "string") {
@@ -180,24 +180,24 @@ const HomeV2 = () => {
                     formattedData[key] = "• Keine Angabe";
                 }
             });
-    
+
             // reCAPTCHA Token'i veriye ekle
             formattedData["recaptchaToken"] = token;
-    
+
             // Backend URL'sinin tanımlı olup olmadığını kontrol et
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
                 console.error("Backend URL tanımlı değil.");
                 return;
             }
-    
+
             // Backend'e POST isteği gönder
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formattedData), // İşlenmiş verileri JSON olarak gönder
             });
-    
+
             if (response.ok) {
                 const responseData = await response.json();
                 console.log("Backend cevabı:", responseData);
@@ -223,13 +223,13 @@ const HomeV2 = () => {
         .replace(/\//g, "."); // "/" karakterlerini "." ile değiştir
 
 
-        const handleInputChange = (field: string) => {
-            setErrors((prevErrors) => {
-                const updatedErrors = { ...prevErrors };
-                delete updatedErrors[field];
-                return updatedErrors;
-            });
-        };
+    const handleInputChange = (field: string) => {
+        setErrors((prevErrors) => {
+            const updatedErrors = { ...prevErrors };
+            delete updatedErrors[field];
+            return updatedErrors;
+        });
+    };
 
     return (
         <main className="flex flex-col overflow-x-hidden">
@@ -243,7 +243,7 @@ const HomeV2 = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}startseite-v2`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={`${APP_CONFIG.base_url}startseite-v2`} />
+                <link rel="canonical" href="https://superagentur-marketing.de/startseite-v2" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}
@@ -486,13 +486,13 @@ const HomeV2 = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.3 }}
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1176px] w-full mx-auto">
-                    <NavLink to="/google-ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink aria-label="Go to the google ads plan page" to="/google-ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={analytics}
                                 alt="analytics"
-                                
+
                             />
                             <h3 className="md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Google Ads</h3>
                             <p className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</p>
@@ -504,10 +504,10 @@ const HomeV2 = () => {
                             </div>
                         </div>
                     </NavLink>
-                    <NavLink to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink aria-label="Go to the seo plan page" to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
-                                
+
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={search}
                                 alt="search" />
@@ -522,10 +522,10 @@ const HomeV2 = () => {
                             </div>
                         </div>
                     </NavLink>
-                    <NavLink to="/unternehmenslistung-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink aria-label="Go to the unternehmenslistung page" to="/unternehmenslistung-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
-                                
+
                                 className="object-contain size-[86px] rounded-[10px]"
                                 src={system}
                                 alt="system" />
@@ -556,7 +556,7 @@ const HomeV2 = () => {
                             transition={{ delay: 0.3, duration: 0.3 }}
                             className="relative lg:mr-10 lg:order-1 order-2">
                             <div className="w-full h-full z-10">
-                                <img  style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
+                                <img style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }} className="hxxl:max-w-[572px] max-w-[660px] hxxl:w-full lg:min-w-[461px] w-full md:rounded-[24px] xs:rounded-[20px] rounded-[15px] border border-neutral-300 z-[4]" src={services} alt="" />
                                 <div className="absolute lg:-left-20 left-auto lg:right-auto -right-12 lg:-top-20 -top-16 bg-[#F9F5E5] size-[248px] -z-[1] rounded-full"></div>
                             </div>
 
@@ -574,19 +574,19 @@ const HomeV2 = () => {
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Optimale Reichweite</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Messbare Erfolge</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Schnelle Ergebnisse</div>
                                 </div>
@@ -611,19 +611,19 @@ const HomeV2 = () => {
                             <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Mehr Sichtbarkeit ohne zusätzliche Werbekosten</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Nachhaltige Marketingstrategie</div>
                                 </div>
                                 <div className="flex items-center">
                                     <div className="size-6 mr-[13px]">
-                                        <img  className="w-full h-full rounded-full " src={check} alt="check" />
+                                        <img className="w-full h-full rounded-full " src={check} alt="check" />
                                     </div>
                                     <div className="text-[18px] tb-bold text-neutral-800">Maximale organische Leads</div>
                                 </div>
@@ -639,7 +639,7 @@ const HomeV2 = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.45, duration: 0.3 }}
-                                
+
                                 src={seoImage}
                                 alt="womanImage"
                                 style={{ boxShadow: "rgba(8, 15, 52, 0.03) 0px 4px 22px 0px" }}
@@ -900,7 +900,7 @@ const HomeV2 = () => {
                         </p>
 
                         <div className="xs:w-auto w-full">
-                            <NavLink className="xs:w-auto w-full" to="/dienstleistungen">
+                            <NavLink aria-label="Go to the dienstleistungen page" className="xs:w-auto w-full" to="/dienstleistungen">
                                 <Button className="tb-bold xs:w-auto w-full">Dienstleistungen</Button>
                             </NavLink>
                         </div>
@@ -998,7 +998,7 @@ const HomeV2 = () => {
                         className="flex lg:flex-row flex-col w-full gap-[26px]">
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img  src={blueCardImage} alt="card" />
+                                <img src={blueCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">1. Erstkontakt</div>
@@ -1008,7 +1008,7 @@ const HomeV2 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img  src={yellowCardImage} alt="card" />
+                                <img src={yellowCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">2. Planung</div>
@@ -1018,7 +1018,7 @@ const HomeV2 = () => {
                         </div>
                         <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                             <div>
-                                <img  src={redCardImage} alt="card" />
+                                <img src={redCardImage} alt="card" />
                             </div>
                             <div className="pt-[42px] pb-[52px] px-[25px]">
                                 <div className="md:text-[24px] text-[22px] lg:leading-[34px] leading-[31px] tb-bold mb-[10px] text-neutral-800">3. Durchführung</div>
@@ -1054,7 +1054,7 @@ const HomeV2 = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
+                                <a aria-label="send mail" href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
                                     <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300 xs:break-words break-words'>{`${APP_CONFIG.contact.email}`}</div>
                                 </a>
                             </div>
@@ -1074,7 +1074,7 @@ const HomeV2 = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
+                                <a aria-label="Call the number" href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
                                     <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300'>{`${APP_CONFIG.contact.phone}`}</div>
                                 </a>
                             </div>
@@ -1185,7 +1185,7 @@ const HomeV2 = () => {
                                         onChange={() => handleInputChange("terms")}
                                     />
                                     <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">
-                                        Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz-und-agbs" className="text-primary cursor-pointer">Datenschutzerklärung</NavLink>.
+                                        Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz-und-agbs" aria-label="Go to the datenschutz und agbs page" className="text-primary cursor-pointer">Datenschutzerklärung</NavLink>.
                                     </label>
                                 </div>
 

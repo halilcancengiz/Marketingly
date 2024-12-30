@@ -64,7 +64,7 @@ const StandartPackageDetail = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}google-ads-plan-standard-paket-detail`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={`${APP_CONFIG.base_url}google-ads-plan-standard-paket-detail`} />
+                <link rel="canonical" href="https://superagentur-marketing.de/google-ads-plan-standard-paket-detail" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}

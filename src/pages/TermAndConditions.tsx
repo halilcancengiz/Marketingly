@@ -84,7 +84,7 @@ const TermAndConditions = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}datenschutz-und-agbs`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={`${APP_CONFIG.base_url}datenschutz-und-agbs`} />
+                <link rel="canonical" href="https://superagentur-marketing.de/datenschutz-und-agbs" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}
@@ -141,7 +141,7 @@ const TermAndConditions = () => {
                             <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">Datenschutz</div>
 
                             <Button size="small">
-                                <a className="flex items-center justify-center gap-2" href={datenschutzpdf} download="Colacy GmbH Datenschutzerklärung">
+                                <a className="flex items-center justify-center gap-2" aria-label="Download Colacy GmbH Datenschutzerklärung pdf" href={datenschutzpdf} download="Colacy GmbH Datenschutzerklärung">
                                     <HiOutlineDownload size={20} />
                                     Herunterladen
                                 </a>
@@ -2886,7 +2886,7 @@ const TermAndConditions = () => {
                             <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">AGB</div>
 
                             <Button size="small">
-                                <a className="flex items-center justify-center gap-2" href={agbpdf} download="Allgemeine Geschäftsbedingungen Superagentur">
+                                <a className="flex items-center justify-center gap-2" aria-label="Download Allgemeine Geschäftsbedingungen Superagentur pdf" href={agbpdf} download="Allgemeine Geschäftsbedingungen Superagentur">
                                     <HiOutlineDownload size={20} />
                                     Herunterladen
                                 </a>

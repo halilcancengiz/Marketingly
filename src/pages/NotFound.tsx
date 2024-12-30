@@ -39,7 +39,7 @@ const NotFound = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}404`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={`${APP_CONFIG.base_url}404`} />
+                <link rel="canonical" href="https://superagentur-marketing.de/404" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}

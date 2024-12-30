@@ -84,33 +84,33 @@ const Contact = () => {
         e.preventDefault();
         // Form doğrulama kontrolü
         if (!validateForm()) return;
-    
+
         // reCAPTCHA'nın yüklü olup olmadığını kontrol et
         if (typeof window.grecaptcha === "undefined") {
             console.error("reCAPTCHA yüklenmedi.");
             return;
         }
         console.log("reCAPTCHA yüklendi:", window.grecaptcha);
-    
+
         try {
             setIsSubmitting(true);
-    
+
             // reCAPTCHA Token alımı
             const token = await window.grecaptcha.enterprise.execute(
                 import.meta.env.VITE_RECAPTCHA_SITE_KEY, // reCAPTCHA Enterprise Site Key
                 { action: "SUBMIT" }
             );
-    
+
             if (!token) {
                 console.error("reCAPTCHA Token alınamadı.");
                 return;
             }
             console.log("Alınan reCAPTCHA Token:", token);
-    
+
             // Form verilerini işleme
             const formData = new FormData(form.current!); // Form'daki verileri al
             const formattedData: Record<string, string> = {};
-    
+
             // FormData'daki her bir anahtar-değer çifti üzerinde işlem yap
             formData.forEach((value, key) => {
                 if (typeof value === "string") {
@@ -119,17 +119,17 @@ const Contact = () => {
                     formattedData[key] = "• Keine Angabe";
                 }
             });
-    
+
             // reCAPTCHA Token'i veriye ekle
             formattedData["recaptchaToken"] = token;
-    
+
             // Backend URL'sinin tanımlı olup olmadığını kontrol et
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
                 console.error("Backend URL tanımlı değil.");
                 return;
             }
-    
+
             // Backend'e POST isteği gönder
             console.log(formattedData)
             const response = await fetch(`${backendUrl}/api/send-mail`, {
@@ -138,7 +138,7 @@ const Contact = () => {
                 body: JSON.stringify(formattedData), // İşlenmiş verileri JSON olarak gönder
             });
             console.log(response)
-    
+
             if (response.ok) {
                 const responseData = await response.json();
                 console.log("Backend cevabı:", responseData);
@@ -153,7 +153,7 @@ const Contact = () => {
             setIsSubmitting(false);
         }
     };
-    
+
 
 
 
@@ -191,7 +191,7 @@ const Contact = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}kontakt`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={`${APP_CONFIG.base_url}kontakt`} />
+                <link rel="canonical" href="https://superagentur-marketing.de/kontakt" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}
@@ -233,7 +233,7 @@ const Contact = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
+                                <a aria-label="Send Mail" href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
                                     <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300 xs:break-words break-words'>{`${APP_CONFIG.contact.email}`}</div>
                                 </a>
                             </div>
@@ -253,7 +253,7 @@ const Contact = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
+                                <a aria-label="Call the number" href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
                                     <div className='tb-bold text-neutral-800 text-[18px] group-hover:text-primary transition-colors duration-300'>{`${APP_CONFIG.contact.phone}`}</div>
                                 </a>
                             </div>
@@ -375,7 +375,7 @@ const Contact = () => {
                                 <label htmlFor="message" className="xs:text-[18px] text-base tb-bold">Nachricht<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
-                
+
                             <div className="col-span-2 flex flex-col items-start gap-1">
                                 <div className="flex items-start gap-3">
                                     <input
@@ -387,7 +387,7 @@ const Contact = () => {
                                         onChange={() => handleInputChange("terms")}
                                     />
                                     <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">
-                                        Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz-und-agbs" className="text-primary cursor-pointer">Datenschutzerklärung</NavLink>.
+                                        Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open Kontakt page" to="/datenschutz-und-agbs" className="text-primary cursor-pointer">Datenschutzerklärung</NavLink>.
                                     </label>
                                 </div>
 

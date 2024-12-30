@@ -134,36 +134,36 @@ const HomeV1 = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-    
+
         // Form doğrulama kontrolü
         if (!validateForm()) return;
-    
+
         // reCAPTCHA'nın yüklü olup olmadığını kontrol et
         if (typeof window.grecaptcha === "undefined") {
             console.error("reCAPTCHA yüklenmedi.");
             return;
         }
         console.log("reCAPTCHA yüklendi:", window.grecaptcha);
-    
+
         try {
             setIsSubmitting(true);
-    
+
             // reCAPTCHA Token alımı
             const token = await window.grecaptcha.enterprise.execute(
                 import.meta.env.VITE_RECAPTCHA_SITE_KEY, // reCAPTCHA Enterprise Site Key
                 { action: "LOGIN" }
             );
-    
+
             if (!token) {
                 console.error("reCAPTCHA Token alınamadı.");
                 return;
             }
             console.log("Alınan reCAPTCHA Token:", token);
-    
+
             // Form verilerini işleme
             const formData = new FormData(form.current!); // Form'daki verileri al
             const formattedData: Record<string, string> = {};
-    
+
             // FormData'daki her bir anahtar-değer çifti üzerinde işlem yap
             formData.forEach((value, key) => {
                 if (typeof value === "string") {
@@ -172,24 +172,24 @@ const HomeV1 = () => {
                     formattedData[key] = "• Keine Angabe";
                 }
             });
-    
+
             // reCAPTCHA Token'i veriye ekle
             formattedData["recaptchaToken"] = token;
-    
+
             // Backend URL'sinin tanımlı olup olmadığını kontrol et
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             if (!backendUrl) {
                 console.error("Backend URL tanımlı değil.");
                 return;
             }
-    
+
             // Backend'e POST isteği gönder
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formattedData), // İşlenmiş verileri JSON olarak gönder
             });
-    
+
             if (response.ok) {
                 const responseData = await response.json();
                 console.log("Backend cevabı:", responseData);
@@ -235,7 +235,7 @@ const HomeV1 = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={`${APP_CONFIG.base_url}`} />
+                <link rel="canonical" href="https://superagentur-marketing.de/" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 <link rel="preload" as="image" href={contactPeopleImage} />
@@ -457,7 +457,7 @@ const HomeV1 = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.3 }}
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1176px] w-full mx-auto">
-                    <NavLink to="/google-ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink aria-label="Open Google Ads Plan page" to="/google-ads-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
                                 className="object-contain size-[86px] rounded-[10px]"
@@ -475,7 +475,7 @@ const HomeV1 = () => {
                             </div>
                         </div>
                     </NavLink>
-                    <NavLink to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink aria-label="Open Seo Plan page" to="/seo-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
 
@@ -493,7 +493,7 @@ const HomeV1 = () => {
                             </div>
                         </div>
                     </NavLink>
-                    <NavLink to="/unternehmenslistung-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <NavLink aria-label="Open unternehmenslistung plan page" to="/unternehmenslistung-plan" className="col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img
 
@@ -869,7 +869,7 @@ const HomeV1 = () => {
                         </p>
 
                         <div className="xs:w-auto w-full">
-                            <NavLink className="xs:w-auto w-full" to="/dienstleistungen">
+                            <NavLink aria-label="Open Dienstleistungen page" className="xs:w-auto w-full" to="/dienstleistungen">
                                 <Button className="tb-bold xs:w-auto w-full">Dienstleistungen</Button>
                             </NavLink>
                         </div>
@@ -1020,7 +1020,7 @@ const HomeV1 = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
+                                <a aria-label="Send mail" href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white'>
                                     <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300 xs:break-words break-words'>{`${APP_CONFIG.contact.email}`}</div>
                                 </a>
                             </div>
@@ -1040,7 +1040,7 @@ const HomeV1 = () => {
                                     </svg>
                                 </div>
 
-                                <a href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
+                                <a aria-label="Call the number" href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
                                     <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300'>{`${APP_CONFIG.contact.phone}`}</div>
                                 </a>
                             </div>
@@ -1138,7 +1138,7 @@ const HomeV1 = () => {
                                 <label htmlFor="message" className="xs:text-[18px] text-base tb-bold">Nachricht<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
                             </div>
-                           
+
 
                             <div className="col-span-2 flex flex-col items-start gap-1">
                                 <div className="flex items-start gap-3">
@@ -1151,7 +1151,7 @@ const HomeV1 = () => {
                                         onChange={() => handleInputChange("terms")}
                                     />
                                     <label htmlFor="termandconditions" className="text-sm text-neutral-600 flex-wrap tb-medium">
-                                        Mit dem Absenden des Formulars akzeptieren Sie die <NavLink to="/datenschutz-und-agbs" className="text-primary cursor-pointer">Datenschutzerklärung</NavLink>.
+                                        Mit dem Absenden des Formulars akzeptieren Sie die <NavLink aria-label="Open Datenschutz und Agbs page" to="/datenschutz-und-agbs" className="text-primary cursor-pointer">Datenschutzerklärung</NavLink>.
                                     </label>
                                 </div>
 
@@ -1159,7 +1159,7 @@ const HomeV1 = () => {
                                     {errors.terms && <span className="text-red-500 text-xs">{errors.terms}</span>}
                                 </div>
                             </div>
-                            
+
                             <div className="col-span-2">
                                 <Button disabled={isSubmitting} aria-label="Submit form" type="submit" className="tb-bold md:w-auto w-full gap-2">
                                     {isSubmitting && (

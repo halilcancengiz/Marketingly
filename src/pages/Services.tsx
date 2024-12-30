@@ -43,7 +43,7 @@ const Services = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}dienstleistungen`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={`${APP_CONFIG.base_url}dienstleistungen`} />
+                <link rel="canonical" href="https://superagentur-marketing.de/dienstleistungen" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}
@@ -343,7 +343,7 @@ const Services = () => {
 
                     <div className="flex lg:items-start items-center flex-col ">
                         <div className="max-w-[550px] w-full mb-8 md:text-[38px] xs:text-[32px] text-[26px] tb-bold text-white lg:text-start text-center z-10">Lassen Sie uns gemeinsam Ihre Sichtbarkeit maximieren!</div>
-                        <NavLink to="/kontakt" className="flex items-center lg:justify-start justify-center max-w-[498px] w-full z-10">
+                        <NavLink aria-label="Go to the kontakt page" to="/kontakt" className="flex items-center lg:justify-start justify-center max-w-[498px] w-full z-10">
                             <Button className="tb-bold bg-white !text-primary md:w-auto w-full hover:!bg-secondary3 hover:!text-white z-10">Kontakt</Button>
                         </NavLink>
                     </div>

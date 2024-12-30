@@ -64,7 +64,7 @@ const SeoPlanPremiumPackageDetail = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}seo-plan-premium-paket-detail`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={`${APP_CONFIG.base_url}seo-plan-premium-paket-detail`} />
+                <link rel="canonical" href="https://superagentur-marketing.de/seo-plan-premium-paket-detail" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}

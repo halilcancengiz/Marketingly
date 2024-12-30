@@ -59,7 +59,7 @@ const Thankyou = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}danke-seite`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href={`${APP_CONFIG.base_url}danke-seite`} />
+                <link rel="canonical" href="https://superagentur-marketing.de/danke-seite" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
                 {/* Structured Data for Logo */}
