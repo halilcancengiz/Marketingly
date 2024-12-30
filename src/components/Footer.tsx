@@ -41,7 +41,7 @@ const Footer = () => {
                                 </svg>
                             </div>
 
-                            <a href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white flex-wrap'>
+                            <a aria-label="Send mail" href={`mailto:${APP_CONFIG.contact.email}`} className='flex flex-col text-white flex-wrap'>
                                 <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300 break-words'>{APP_CONFIG.contact.email}</div>
                             </a>
                         </div>
@@ -61,7 +61,7 @@ const Footer = () => {
                                 </svg>
                             </div>
 
-                            <a href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
+                            <a aria-label="Call the number" href={`tel:${APP_CONFIG.contact.phone}`} className='flex flex-col text-white'>
                                 <div className='tb-bold text-neutral-800 xs:text-[18px] text-base group-hover:text-primary transition-colors duration-300'>{APP_CONFIG.contact.phone}</div>
                             </a>
                         </div>
@@ -70,8 +70,8 @@ const Footer = () => {
 
                 <div className='lg:mt-20 mt-10 border-b w-full md:flex-row flex-col gap-y-6 flex items-center justify-between border-neutral-400 pb-2'>
                     <div className='flex xs:flex-row flex-col items-center gap-6'>
-                        <NavLink to="/impressum" className='hover:text-primary transition-all duration-300 tb-medium'>Impressum</NavLink>
-                        <NavLink to="/datenschutz-und-agbs" className='hover:text-primary transition-all duration-300 tb-medium'>Datenschutz und AGBs</NavLink>
+                        <NavLink aria-label="Got to the impressum page" to="/impressum" className='hover:text-primary transition-all duration-300 tb-medium'>Impressum</NavLink>
+                        <NavLink aria-label="Got to the datenschutz und agbs page" to="/datenschutz-und-agbs" className='hover:text-primary transition-all duration-300 tb-medium'>Datenschutz und AGBs</NavLink>
                     </div>
                     {/* <div className='flex gap-4 md:max-w-[311px] w-full xs:min-w-[311px] items-center justify-center md:pb-0 pb-4'>
                         <a href={APP_CONFIG.social_media.facebook} className='rounded-full flex items-center justify-center hover-up-lg'>
