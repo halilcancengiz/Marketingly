@@ -60,8 +60,6 @@ const Thankyou = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}danke-seite`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/danke-seite" />
-                <meta charSet="UTF-8" />
-                <html lang="de" />
              
             </Helmet>
             <motion.div

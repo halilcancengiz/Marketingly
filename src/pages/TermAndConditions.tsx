@@ -79,14 +79,11 @@ const TermAndConditions = () => {
                 <meta name="keywords" content="Datenschutz, Datenverwendung, Datensicherheit, DSGVO" /> */}
                 <meta property="og:title" content="Datenschutzrichtlinien von Superagentur" />
                 <meta property="og:description" content="Ihre Privatsphäre ist uns wichtig. Lesen Sie, wie wir Ihre Daten sicher und verantwortungsvoll behandeln." />
-
                 <meta name="robots" content="index, follow" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}datenschutz-und-agbs`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/datenschutz-und-agbs" />
-                <meta charSet="UTF-8" />
-                <html lang="de" />
                
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">

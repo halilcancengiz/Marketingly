@@ -65,8 +65,6 @@ const SeoPlanPremiumPackageDetail = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}seo-plan-premium-paket-detail`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/seo-plan-premium-paket-detail" />
-                <meta charSet="UTF-8" />
-                <html lang="de" />
              
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">

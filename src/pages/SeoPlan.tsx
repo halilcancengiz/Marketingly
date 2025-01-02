@@ -80,8 +80,6 @@ const SeoPlan = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}seo-plan`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/seo-plan" />
-                <meta charSet="UTF-8" />
-                <html lang="de" />
               
             </Helmet>
             <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">

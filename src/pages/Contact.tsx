@@ -192,8 +192,6 @@ const Contact = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}kontakt`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/kontakt" />
-                <meta charSet="UTF-8" />
-                <html lang="de" />
             </Helmet>
             <section className="3xl:pt-[120px] lg:pt-[96px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] px-6  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">

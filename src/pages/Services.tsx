@@ -44,8 +44,6 @@ const Services = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}dienstleistungen`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/dienstleistungen" />
-                <meta charSet="UTF-8" />
-                <html lang="de" />
               
             </Helmet>
 

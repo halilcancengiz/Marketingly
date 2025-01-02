@@ -62,9 +62,7 @@ const BasicPackageDetail = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}google-ads-plan-basis-paket-detail`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href="https://superagentur-marketing.de/google-ads-plan-basis-paket-detail" />
-                <meta charSet="UTF-8" />
-                <html lang="de" />       
+                <link rel="canonical" href="https://superagentur-marketing.de/google-ads-plan-basis-paket-detail" />     
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
                 <motion.div

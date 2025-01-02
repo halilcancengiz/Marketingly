@@ -95,11 +95,10 @@ const HomeV1 = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/" />
-                <meta charSet="UTF-8" />
-                <html lang="de" />
                 <link rel="preload" as="image" href={contactPeopleImage} />
                 <link rel="preload" as="image" href={chart} />
             </Helmet>
+
 
             <section className="3xl:pt-[145px] 3xl:pb-[145px] lg:pt-[116px] lg:pb-[116px] md:pt-[60px] md:pb-[93px] xs:pt-[50px] xs:pb-[74px] pt-[40px] pb-[60px] relative">
                 <div className="w-full h-full xs:px-6 px-4">

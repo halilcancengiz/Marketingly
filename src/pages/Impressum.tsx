@@ -64,9 +64,7 @@ const TermAndConditions = () => {
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}impressum`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href="https://superagentur-marketing.de/impressum" />
-                <meta charSet="UTF-8" />
-                <html lang="de" />   
+                <link rel="canonical" href="https://superagentur-marketing.de/impressum" /> 
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
 
