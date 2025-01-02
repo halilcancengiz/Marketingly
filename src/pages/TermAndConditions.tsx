@@ -75,8 +75,8 @@ const TermAndConditions = () => {
 
             <Helmet>
                 <title>Datenschutzrichtlinien von Superagentur</title>
-                <meta name="description" content="Informieren Sie sich, wie Superagentur Ihre Daten schützt und DSGVO-konform verwendet." />
-                <meta name="keywords" content="Datenschutz, Datenverwendung, Datensicherheit, DSGVO" />
+                {/* <meta name="description" content="Informieren Sie sich, wie Superagentur Ihre Daten schützt und DSGVO-konform verwendet." />
+                <meta name="keywords" content="Datenschutz, Datenverwendung, Datensicherheit, DSGVO" /> */}
                 <meta property="og:title" content="Datenschutzrichtlinien von Superagentur" />
                 <meta property="og:description" content="Ihre Privatsphäre ist uns wichtig. Lesen Sie, wie wir Ihre Daten sicher und verantwortungsvoll behandeln." />
 
@@ -87,23 +87,7 @@ const TermAndConditions = () => {
                 <link rel="canonical" href="https://superagentur-marketing.de/datenschutz-und-agbs" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
-                {/* Structured Data for Logo */}
-                <script type="application/ld+json">
-                    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Superagentur Marketing",
-        "url": "${APP_CONFIG.base_url}",
-        "logo": "${APP_CONFIG.base_url}assets/images/logo.webp",
-        "sameAs": [
-          "${APP_CONFIG.social_media.facebook}",
-          "${APP_CONFIG.social_media.instagram}",
-          "${APP_CONFIG.social_media.linkedin}"
-        ]
-      }
-    `}
-                </script>
+               
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
 

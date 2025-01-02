@@ -234,35 +234,18 @@ const HomeV2 = () => {
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
-                <title>{`Superagentur - Innovative Marketinglösungen für Ihren Erfolg`}</title>
-                <meta name="description" content="Mit kreativen und effizienten Strategien unterstützt Superagentur Sie dabei, Ihre Marke im digitalen Raum hervorzuheben." />
-                <meta name="keywords" content=" innovative Marketingstrategien, digitale Lösungen, Markenpräsenz, nachhaltiger Erfolg" />
-                <meta name="robots" content="index, follow" />
+                <title>Superagentur - Innovative Marketinglösungen für Ihren Erfolg</title>
+                {/* <meta name="description" content="Mit kreativen und effizienten Strategien unterstützt Superagentur Sie dabei, Ihre Marke im digitalen Raum hervorzuheben." />
+                <meta name="keywords" content=" innovative Marketingstrategien, digitale Lösungen, Markenpräsenz, nachhaltiger Erfolg" /> */}
                 <meta property="og:title" content="Innovative Marketinglösungen für Ihren Erfolg" />
                 <meta property="og:description" content="Steigern Sie Ihre Markenpräsenz und erreichen Sie nachhaltigen Erfolg mit unseren digitalen Strategien." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}startseite-v2`} />
                 <meta property="og:image" content={logo} />
+                <meta name="robots" content="noindex, nofollow"/>
                 <link rel="canonical" href="https://superagentur-marketing.de/startseite-v2" />
                 <meta charSet="UTF-8" />
-                <html lang="de" />
-                {/* Structured Data for Logo */}
-                <script type="application/ld+json">
-                    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Superagentur Marketing",
-        "url": "${APP_CONFIG.base_url}",
-        "logo": "${APP_CONFIG.base_url}assets/images/logo.webp",
-        "sameAs": [
-          "${APP_CONFIG.social_media.facebook}",
-          "${APP_CONFIG.social_media.instagram}",
-          "${APP_CONFIG.social_media.linkedin}"
-        ]
-      }
-    `}
-                </script>
+                <html lang="de" />      
             </Helmet>
 
             <section className="homeV2Container 3xl:pt-[167px] lg:pt-[134px] md:pt-[60px] xs:pt-[50px] pt-10 flex flex-col items-start px-6 3xl:h-[795px] lg:h-[735px] md:h-[657px] xs:h-[515px] h-[599px]  relative bg-secondary1 z-[1]">

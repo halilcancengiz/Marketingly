@@ -55,8 +55,8 @@ const SeoPlanPremiumPackageDetail = () => {
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
                 <title>SEO Premium-Paket – Spitzenplatzierung in Suchmaschinen</title>
-                <meta name="description" content="Unser Premium-Paket bietet individuelle SEO-Strategien für maximale Sichtbarkeit und nachhaltigen Erfolg." />
-                <meta name="keywords" content="SEO, Premium-Paket, Spitzenplatzierung, Suchmaschinenoptimierung" />
+                {/* <meta name="description" content="Unser Premium-Paket bietet individuelle SEO-Strategien für maximale Sichtbarkeit und nachhaltigen Erfolg." />
+                <meta name="keywords" content="SEO, Premium-Paket, Spitzenplatzierung, Suchmaschinenoptimierung" /> */}
                 <meta property="og:title" content="SEO Premium-Paket – Spitzenplatzierung in Suchmaschinen" />
                 <meta property="og:description" content="Erreichen Sie Top-Platzierungen in Suchmaschinen mit unserer Premium-Strategie." />
 
@@ -67,23 +67,7 @@ const SeoPlanPremiumPackageDetail = () => {
                 <link rel="canonical" href="https://superagentur-marketing.de/seo-plan-premium-paket-detail" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
-                {/* Structured Data for Logo */}
-                <script type="application/ld+json">
-                    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Superagentur Marketing",
-        "url": "${APP_CONFIG.base_url}",
-        "logo": "${APP_CONFIG.base_url}assets/images/logo.webp",
-        "sameAs": [
-          "${APP_CONFIG.social_media.facebook}",
-          "${APP_CONFIG.social_media.instagram}",
-          "${APP_CONFIG.social_media.linkedin}"
-        ]
-      }
-    `}
-                </script>
+             
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
                 <motion.div

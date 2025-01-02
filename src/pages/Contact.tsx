@@ -182,8 +182,8 @@ const Contact = () => {
         <div className="flex flex-col">
             <Helmet>
                 <title>Kontaktieren Sie Superagentur</title>
-                <meta name="description" content="Wir freuen uns auf Ihre Anfrage. Kontaktieren Sie uns für individuelle digitale Marketinglösungen." />
-                <meta name="keywords" content="Kontakt, Marketinglösungen, Anfrage, Superagentur" />
+                {/* <meta name="description" content="Wir freuen uns auf Ihre Anfrage. Kontaktieren Sie uns für individuelle digitale Marketinglösungen." />
+                <meta name="keywords" content="Kontakt, Marketinglösungen, Anfrage, Superagentur" /> */}
                 <meta property="og:title" content="Kontaktieren Sie Superagentur" />
                 <meta property="og:description" content="Lassen Sie uns gemeinsam an Ihrer digitalen Marketingstrategie arbeiten. Wir stehen Ihnen zur Verfügung." />
 
@@ -194,23 +194,6 @@ const Contact = () => {
                 <link rel="canonical" href="https://superagentur-marketing.de/kontakt" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
-                {/* Structured Data for Logo */}
-                <script type="application/ld+json">
-                    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Superagentur Marketing",
-        "url": "${APP_CONFIG.base_url}",
-        "logo": "${APP_CONFIG.base_url}assets/images/logo.webp",
-        "sameAs": [
-          "${APP_CONFIG.social_media.facebook}",
-          "${APP_CONFIG.social_media.instagram}",
-          "${APP_CONFIG.social_media.linkedin}"
-        ]
-      }
-    `}
-                </script>
             </Helmet>
             <section className="3xl:pt-[120px] lg:pt-[96px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] px-6  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">

@@ -54,8 +54,8 @@ const BasicPackageDetail = () => {
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
                 <title>Google Ads Basis-Paket – Effektive Werbung für Ihr Unternehmen</title>
-                <meta name="description" content="Unser Google Ads Basis-Paket bietet kosteneffiziente Lösungen zur Steigerung Ihrer Sichtbarkeit und Kundengewinnung." />
-                <meta name="keywords" content="Google Ads, Basis-Paket, Online-Werbung, Sichtbarkeit steigern" />
+                {/* <meta name="description" content="Unser Google Ads Basis-Paket bietet kosteneffiziente Lösungen zur Steigerung Ihrer Sichtbarkeit und Kundengewinnung." />
+                <meta name="keywords" content="Google Ads, Basis-Paket, Online-Werbung, Sichtbarkeit steigern" /> */}
                 <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Google Ads Basis-Paket – Effektive Werbung für Ihr Unternehmen" />
                 <meta property="og:description" content="Starten Sie mit gezielten Google Ads-Kampagnen und gewinnen Sie neue Kunden effizient." />
@@ -64,24 +64,7 @@ const BasicPackageDetail = () => {
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/google-ads-plan-basis-paket-detail" />
                 <meta charSet="UTF-8" />
-                <html lang="de" />
-                {/* Structured Data for Logo */}
-                <script type="application/ld+json">
-                    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Superagentur Marketing",
-        "url": "${APP_CONFIG.base_url}",
-        "logo": "${APP_CONFIG.base_url}assets/images/logo.webp",
-        "sameAs": [
-          "${APP_CONFIG.social_media.facebook}",
-          "${APP_CONFIG.social_media.instagram}",
-          "${APP_CONFIG.social_media.linkedin}"
-        ]
-      }
-    `}
-                </script>
+                <html lang="de" />       
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
                 <motion.div

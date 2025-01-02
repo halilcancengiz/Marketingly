@@ -55,8 +55,8 @@ const StandartPackageDetail = () => {
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
                 <title>Google Ads Standard-Paket – Mehr Reichweite für Ihr Business</title>
-                <meta name="description" content="Mit erweiterten Google Ads-Strategien steigern Sie Ihre Reichweite und erzielen höhere Conversion-Raten." />
-                <meta name="keywords" content="Google Ads, Standard-Paket, Reichweite, Conversion-Optimierung" />
+                {/* <meta name="description" content="Mit erweiterten Google Ads-Strategien steigern Sie Ihre Reichweite und erzielen höhere Conversion-Raten." />
+                <meta name="keywords" content="Google Ads, Standard-Paket, Reichweite, Conversion-Optimierung" /> */}
                 <meta property="og:title" content="Google Ads Standard-Paket – Mehr Reichweite für Ihr Business" />
                 <meta property="og:description" content="Optimieren Sie Ihre Marketingziele mit unserem Standard-Paket und erweitern Sie Ihre Kundenbasis." />
 
@@ -67,23 +67,7 @@ const StandartPackageDetail = () => {
                 <link rel="canonical" href="https://superagentur-marketing.de/google-ads-plan-standard-paket-detail" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
-                {/* Structured Data for Logo */}
-                <script type="application/ld+json">
-                    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Superagentur Marketing",
-        "url": "${APP_CONFIG.base_url}",
-        "logo": "${APP_CONFIG.base_url}assets/images/logo.webp",
-        "sameAs": [
-          "${APP_CONFIG.social_media.facebook}",
-          "${APP_CONFIG.social_media.instagram}",
-          "${APP_CONFIG.social_media.linkedin}"
-        ]
-      }
-    `}
-                </script>
+              
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
                 <motion.div

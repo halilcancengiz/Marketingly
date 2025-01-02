@@ -33,8 +33,8 @@ const CompanyListingPlan = () => {
     <div className="flex flex-col">
       <Helmet>
         <title>Unternehmenslistungen – Sichtbarkeit in Verzeichnissen</title>
-        <meta name="description" content="Sorgen Sie für eine stärkere lokale Präsenz mit unseren Unternehmenslistungs-Diensten in wichtigen Verzeichnissen." />
-        <meta name="keywords" content="Unternehmenslistungen, lokale Präsenz, Verzeichnisse, Sichtbarkeit" />
+        {/* <meta name="description" content="Sorgen Sie für eine stärkere lokale Präsenz mit unseren Unternehmenslistungs-Diensten in wichtigen Verzeichnissen." />
+        <meta name="keywords" content="Unternehmenslistungen, lokale Präsenz, Verzeichnisse, Sichtbarkeit" /> */}
         <meta property="og:title" content="Unternehmenslistungen – Sichtbarkeit in Verzeichnissen" />
         <meta property="og:description" content="Maximieren Sie Ihre lokale Sichtbarkeit mit professionellen Unternehmenslistungen." />
 
@@ -45,23 +45,6 @@ const CompanyListingPlan = () => {
         <link rel="canonical" href="https://superagentur-marketing.de/unternehmenslistung-plan" />
         <meta charSet="UTF-8" />
         <html lang="de" />
-        {/* Structured Data for Logo */}
-        <script type="application/ld+json">
-          {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Superagentur Marketing",
-        "url": "${APP_CONFIG.base_url}",
-        "logo": "${APP_CONFIG.base_url}assets/images/logo.webp",
-        "sameAs": [
-          "${APP_CONFIG.social_media.facebook}",
-          "${APP_CONFIG.social_media.instagram}",
-          "${APP_CONFIG.social_media.linkedin}"
-        ]
-      }
-    `}
-        </script>
       </Helmet>
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
         <div className="flex flex-col items-center justify-center text-center text-white max-w-[550px] px-6 w-full mx-auto">

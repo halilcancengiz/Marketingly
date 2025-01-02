@@ -70,8 +70,8 @@ const SeoPlan = () => {
         <div className="flex flex-col">
             <Helmet>
                 <title>SEO-Pläne für Ihr Unternehmen</title>
-                <meta name="description" content="Maßgeschneiderte SEO-Pläne, die auf Ihre geschäftlichen Ziele abgestimmt sind und nachhaltiges Wachstum fördern." />
-                <meta name="keywords" content="SEO-Pläne, maßgeschneiderte Lösungen, nachhaltiges Wachstum, Suchmaschinenoptimierung" />
+                {/* <meta name="description" content="Maßgeschneiderte SEO-Pläne, die auf Ihre geschäftlichen Ziele abgestimmt sind und nachhaltiges Wachstum fördern." />
+                <meta name="keywords" content="SEO-Pläne, maßgeschneiderte Lösungen, nachhaltiges Wachstum, Suchmaschinenoptimierung" /> */}
                 <meta property="og:title" content="SEO-Pläne für Ihr Unternehmen" />
                 <meta property="og:description" content="Maximieren Sie Ihre Online-Sichtbarkeit mit individuellen SEO-Strategien." />
 
@@ -82,23 +82,7 @@ const SeoPlan = () => {
                 <link rel="canonical" href="https://superagentur-marketing.de/seo-plan" />
                 <meta charSet="UTF-8" />
                 <html lang="de" />
-                {/* Structured Data for Logo */}
-                <script type="application/ld+json">
-                    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Superagentur Marketing",
-        "url": "${APP_CONFIG.base_url}",
-        "logo": "${APP_CONFIG.base_url}assets/images/logo.webp",
-        "sameAs": [
-          "${APP_CONFIG.social_media.facebook}",
-          "${APP_CONFIG.social_media.instagram}",
-          "${APP_CONFIG.social_media.linkedin}"
-        ]
-      }
-    `}
-                </script>
+              
             </Helmet>
             <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
                 <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
