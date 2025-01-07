@@ -55,8 +55,8 @@ const PremiumPackageDetail = () => {
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
                 <title>Google Ads Premium-Paket – Maximale Performance</title>
-                {/* <meta name="description" content="Unser Premium-Paket bietet umfassende Google Ads-Lösungen für optimale Ergebnisse und nachhaltigen Erfolg." />
-                <meta name="keywords" content="Google Ads, Premium-Paket, maximale Performance, nachhaltiger Erfolg" /> */}
+                <meta name="description" content="Unser Premium-Paket bietet umfassende Google Ads-Lösungen für optimale Ergebnisse und nachhaltigen Erfolg." />
+                <meta name="keywords" content="Google Ads, Premium-Paket, maximale Performance, nachhaltiger Erfolg" /> 
                 <meta property="og:title" content="Google Ads Premium-Paket – Maximale Performance" />
                 <meta property="og:description" content="Erzielen Sie höchste Performance und Conversion-Raten mit unseren Premium-Strategien." />
                 <meta name="robots" content="index, follow" />

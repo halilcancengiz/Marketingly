@@ -4,7 +4,7 @@ import HomeV1 from "../pages/HomeV1";
 
 
 // Dinamik olarak yüklenen bileşenler
-const HomeV2 = React.lazy(() => import("../pages/HomeV2"));
+// const HomeV2 = React.lazy(() => import("../pages/HomeV2"));
 const NotFound = React.lazy(() => import("../pages/NotFound"));
 const Thankyou = React.lazy(() => import("../pages/Thankyou"));
 const TermAndConditions = React.lazy(() => import("../pages/TermAndConditions"));
@@ -28,7 +28,7 @@ export const AppRoutes = () => {
         <React.Suspense fallback={<div>Loading...</div>}>
             <Routes>
                 <Route path="/" element={<HomeV1 />} />
-                <Route path="/startseite-v2" element={<HomeV2 />} />
+                {/* <Route path="/startseite-v2" element={<HomeV2 />} /> */}
                 <Route path="/danke-seite" element={<Thankyou />} />
                 <Route path="*" element={<NotFound />} />
                 <Route path="/datenschutz-und-agbs" element={<TermAndConditions />} />

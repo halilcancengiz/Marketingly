@@ -70,8 +70,8 @@ const SeoPlan = () => {
         <div className="flex flex-col">
             <Helmet>
                 <title>SEO-Pläne für Ihr Unternehmen</title>
-                {/* <meta name="description" content="Maßgeschneiderte SEO-Pläne, die auf Ihre geschäftlichen Ziele abgestimmt sind und nachhaltiges Wachstum fördern." />
-                <meta name="keywords" content="SEO-Pläne, maßgeschneiderte Lösungen, nachhaltiges Wachstum, Suchmaschinenoptimierung" /> */}
+                <meta name="description" content="Maßgeschneiderte SEO-Pläne, die auf Ihre geschäftlichen Ziele abgestimmt sind und nachhaltiges Wachstum fördern." />
+                <meta name="keywords" content="SEO-Pläne, maßgeschneiderte Lösungen, nachhaltiges Wachstum, Suchmaschinenoptimierung" /> 
                 <meta property="og:title" content="SEO-Pläne für Ihr Unternehmen" />
                 <meta property="og:description" content="Maximieren Sie Ihre Online-Sichtbarkeit mit individuellen SEO-Strategien." />
 

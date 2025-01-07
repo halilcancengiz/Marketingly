@@ -54,8 +54,8 @@ const BasicPackageDetail = () => {
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
                 <title>Google Ads Basis-Paket – Effektive Werbung für Ihr Unternehmen</title>
-                {/* <meta name="description" content="Unser Google Ads Basis-Paket bietet kosteneffiziente Lösungen zur Steigerung Ihrer Sichtbarkeit und Kundengewinnung." />
-                <meta name="keywords" content="Google Ads, Basis-Paket, Online-Werbung, Sichtbarkeit steigern" /> */}
+                 <meta name="description" content="Unser Google Ads Basis-Paket bietet kosteneffiziente Lösungen zur Steigerung Ihrer Sichtbarkeit und Kundengewinnung." />
+                <meta name="keywords" content="Google Ads, Basis-Paket, Online-Werbung, Sichtbarkeit steigern" /> 
                 <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Google Ads Basis-Paket – Effektive Werbung für Ihr Unternehmen" />
                 <meta property="og:description" content="Starten Sie mit gezielten Google Ads-Kampagnen und gewinnen Sie neue Kunden effizient." />

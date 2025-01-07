@@ -55,8 +55,8 @@ const StandartPackageDetail = () => {
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
                 <title>Google Ads Standard-Paket – Mehr Reichweite für Ihr Business</title>
-                {/* <meta name="description" content="Mit erweiterten Google Ads-Strategien steigern Sie Ihre Reichweite und erzielen höhere Conversion-Raten." />
-                <meta name="keywords" content="Google Ads, Standard-Paket, Reichweite, Conversion-Optimierung" /> */}
+                 <meta name="description" content="Mit erweiterten Google Ads-Strategien steigern Sie Ihre Reichweite und erzielen höhere Conversion-Raten." />
+                <meta name="keywords" content="Google Ads, Standard-Paket, Reichweite, Conversion-Optimierung" /> 
                 <meta property="og:title" content="Google Ads Standard-Paket – Mehr Reichweite für Ihr Business" />
                 <meta property="og:description" content="Optimieren Sie Ihre Marketingziele mit unserem Standard-Paket und erweitern Sie Ihre Kundenbasis." />
 

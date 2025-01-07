@@ -75,8 +75,8 @@ const TermAndConditions = () => {
 
             <Helmet>
                 <title>Datenschutzrichtlinien von Superagentur</title>
-                {/* <meta name="description" content="Informieren Sie sich, wie Superagentur Ihre Daten schützt und DSGVO-konform verwendet." />
-                <meta name="keywords" content="Datenschutz, Datenverwendung, Datensicherheit, DSGVO" /> */}
+                <meta name="description" content="Informieren Sie sich, wie Superagentur Ihre Daten schützt und DSGVO-konform verwendet." />
+                <meta name="keywords" content="Datenschutz, Datenverwendung, Datensicherheit, DSGVO" />
                 <meta property="og:title" content="Datenschutzrichtlinien von Superagentur" />
                 <meta property="og:description" content="Ihre Privatsphäre ist uns wichtig. Lesen Sie, wie wir Ihre Daten sicher und verantwortungsvoll behandeln." />
                 <meta name="robots" content="index, follow" />
@@ -84,7 +84,7 @@ const TermAndConditions = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}datenschutz-und-agbs`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/datenschutz-und-agbs" />
-               
+
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
 
@@ -2867,7 +2867,7 @@ const TermAndConditions = () => {
                             <div className="text-neutral-800 tb-bold md:text-[38px] xs:text-[32px] text-[26px] md:leading-[50.008px] xs:leading-[42.112px] leading-[34.216px]">AGB</div>
 
                             <Button size="small">
-                                <a className="flex items-center justify-center gap-2" aria-label="Download Allgemeine Geschäftsbedingungen Superagentur pdf" href={agbpdf} download="Allgemeine Geschäftsbedingungen Superagentur">
+                                <a className="flex items-center justify-center gap-2" aria-label="Download Allgemeine Geschäftsbedingungen Superagentur pdf" href={agbpdf} download="Superagentur-Allgemeine Geschäftsbedingungen-AGB">
                                     <HiOutlineDownload size={20} />
                                     Herunterladen
                                 </a>
@@ -2876,8 +2876,18 @@ const TermAndConditions = () => {
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">1. Geltungsbereich</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                1.1. Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) regeln sämtliche Geschäftsbeziehungen zwischen der Colacy GmbH (nachfolgend „Dienstleister“) und deren Kunden (nachfolgend „Kunde“). Sie umfassen alle vom Dienstleister angebotenen Dienstleistungen, insbesondere, aber nicht ausschließlich, die Schaltung und Optimierung von Google Ads, Suchmaschinenoptimierung (SEO), die Erstellung und Verwaltung von Google MyBusiness-Unternehmensprofilen („Unternehmenslistungen“) sowie die Planung, Schaltung und Verwaltung von Social Media Ads.
-                            </li>
+                                1.1. Geltungsbereich <br/> Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) regeln sämtliche Geschäftsbeziehungen zwischen der Colacy GmbH (nachfolgend „Dienstleister“) und ihren Kunden (nachfolgend „Kunde“). Sie gelten für alle vom Dienstleister angebotenen Dienstleistungen, insbesondere, aber nicht ausschließlich:
+                                <ul className="pl-10 my-[20px] list-disc">
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">die Konzeption, Erstellung und Optimierung von Funnel-Websites,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">die Integration und Einrichtung von Analysesoftware wie Google Tag Manager oder Google Analytics,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">die Schaltung, Verwaltung und Optimierung von Suchmaschinenwerbung (SEA) über Plattformen wie Google Ads und Bing Ads,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Suchmaschinenoptimierung (SEO),</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">die Erstellung und Verwaltung von Google MyBusiness-Unternehmensprofilen („Unternehmenslistungen“),</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Foto- und Videografie-Dienstleistungen,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">Grafikdesign, einschließlich der Erstellung von Marketingmaterialien,</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">die Planung, Schaltung und Verwaltung von Social-Media-Werbung, sowie</li>
+                                    <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">E-Mail-Marketing, einschließlich der Konzeption, Einrichtung und Verwaltung von E-Mail-Kampagnen und Automatisierungen.</li>
+                                </ul>                           </li>
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
                                 1.2. Verträge und zukünftige Geschäftsbeziehungen: <br />
                                 Diese AGB gelten für alle zwischen den Parteien geschlossenen Verträge sowie für zukünftige Geschäftsbeziehungen, sofern nicht ausdrücklich abweichende schriftliche Vereinbarungen getroffen werden.

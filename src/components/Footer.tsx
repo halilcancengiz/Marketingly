@@ -28,7 +28,7 @@ const Footer = () => {
                     <div className='flex flex-col mr-10 lg:mb-[15px] mb-[35px] max-w-[357px] w-full items-start'>
                         <Logo />
                         <div className='leading-[30px] mt-[10px] tb-medium'>
-                            Maximaler Erfolg mit Google!
+                            Ihre Partner für digitales Marketing!
                         </div>
                     </div>
 

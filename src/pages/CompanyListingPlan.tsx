@@ -33,8 +33,8 @@ const CompanyListingPlan = () => {
     <div className="flex flex-col">
       <Helmet>
         <title>Unternehmenslistungen – Sichtbarkeit in Verzeichnissen</title>
-        {/* <meta name="description" content="Sorgen Sie für eine stärkere lokale Präsenz mit unseren Unternehmenslistungs-Diensten in wichtigen Verzeichnissen." />
-        <meta name="keywords" content="Unternehmenslistungen, lokale Präsenz, Verzeichnisse, Sichtbarkeit" /> */}
+         <meta name="description" content="Sorgen Sie für eine stärkere lokale Präsenz mit unseren Unternehmenslistungs-Diensten in wichtigen Verzeichnissen." />
+        <meta name="keywords" content="Unternehmenslistungen, lokale Präsenz, Verzeichnisse, Sichtbarkeit" /> 
         <meta property="og:title" content="Unternehmenslistungen – Sichtbarkeit in Verzeichnissen" />
         <meta property="og:description" content="Maximieren Sie Ihre lokale Sichtbarkeit mit professionellen Unternehmenslistungen." />
 

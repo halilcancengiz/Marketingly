@@ -1,11 +1,13 @@
 import circlesImage from "../assets/images/circles.webp"
-// import check from "../assets/images/check.webp";
+import check from "../assets/images/check.webp";
 import { NavLink } from "react-router-dom";
 import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
 import logo from "../assets/images/logo.webp"
+
+
 const CompanyListingPremiumPackageDetail = () => {
     const fadeInAnimationVariant = {
         initial: {
@@ -54,8 +56,8 @@ const CompanyListingPremiumPackageDetail = () => {
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
                 <title>Unternehmenslistung Premium-Paket – Maximale lokale Präsenz</title>
-                {/* <meta name="description" content="Mit unserem Premium-Paket für Unternehmenslistungen /Google MyBusiness-Listungen, steigern Sie Ihre Sichtbarkeit in Verzeichnissen." />
-                <meta name="keywords" content="Unternehmenslistung, Premium-Paket, lokale Präsenz, Verzeichnisse, Google My Business, Sichtbarkeit erhöhen" /> */}
+                <meta name="description" content="Mit unserem Premium-Paket für Unternehmenslistungen /Google MyBusiness-Listungen, steigern Sie Ihre Sichtbarkeit in Verzeichnissen." />
+                <meta name="keywords" content="Unternehmenslistung, Premium-Paket, lokale Präsenz, Verzeichnisse, Google My Business, Sichtbarkeit erhöhen" />
                 <meta property="og:title" content="Unternehmenslistung Premium-Paket – Maximale lokale Präsenz" />
                 <meta property="og:description" content="Erhöhen Sie Ihre lokale und regionale Sichtbarkeit mit unserem umfassenden Premium-Service für Unternehmenslistungen / Google My Business." />
 
@@ -82,9 +84,7 @@ const CompanyListingPremiumPackageDetail = () => {
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
                         Das Premium-Paket ist speziell für Unternehmen konzipiert, die ihre Sichtbarkeit steigern und einen professionellen Auftritt auf Google sicherstellen möchten. Mit unserer umfassenden Unternehmenslistung wird Ihr Unternehmen optimal auffindbar und hinterlässt einen überzeugenden ersten Eindruck.
                     </div>
-                    {/* <div className="flex flex-col gap-[15px] mb-10">
-                        <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
-
+                    <div className="flex flex-col gap-[15px] mb-10">
                         <div className="flex items-start gap-[13px]">
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Erstellung eines professionellen Google-Unternehmenseintrags</div>
@@ -105,14 +105,7 @@ const CompanyListingPremiumPackageDetail = () => {
                             <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                             <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Optimierung des Eintrags für lokale Suchergebnisse</div>
                         </div>
-                    </div> */}
-                    <ul className="pl-10 mb-5 list-disc">
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Erstellung eines professionellen Google-Unternehmenseintrags</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Einrichtung und Verifizierung Ihres Unternehmenskontos</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Ausarbeitung einer ansprechenden und zielgerichteten Unternehmensbeschreibung</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Hinzufügen von Logo, Bildern und Kontaktdaten</li>
-                        <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Optimierung des Eintrags für lokale Suchergebnisse</li>
-                    </ul>
+                    </div>
                     <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
                         Mit diesem Paket gewährleisten wir nicht nur Ihre Sichtbarkeit, sondern auch eine perfekte Präsentation Ihres Unternehmens. Unser persönlicher Ansatz stellt sicher, dass Ihr Google-Eintrag alle relevanten Informationen enthält und langfristig von einem optimierten Online-Auftritt profitiert.
                     </div>

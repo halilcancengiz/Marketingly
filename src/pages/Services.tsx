@@ -1,12 +1,16 @@
 import { NavLink } from "react-router-dom";
 import analytics from "../assets/images/analytics.webp";
 import search from "../assets/images/search.webp";
-import system from "../assets/images/system.webp";
+import emailImage from "../assets/images/email-image.webp";
+import likeImage from "../assets/images/like-image.webp";
+import achievementImage from "../assets/images/achievement-icon.webp";
+import filterImage from "../assets/images/filter-icon.webp";
 import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
 import logo from "../assets/images/logo.webp"
+import { useEffect, useState, useRef } from "react";
 
 const Services = () => {
     const fadeInAnimationVariant = {
@@ -30,12 +34,70 @@ const Services = () => {
             scale: 1
         }
     };
+
+    const seaRef = useRef<HTMLHeadingElement>(null);
+    const seoRef = useRef<HTMLHeadingElement>(null);
+    const sMediaRef = useRef<HTMLHeadingElement>(null);
+    const eMarketingRef = useRef<HTMLHeadingElement>(null);
+    const wFunnelsRef = useRef<HTMLHeadingElement>(null);
+    const WeitereRef = useRef<HTMLHeadingElement>(null);
+
+    const seaDescriptionRef = useRef<HTMLParagraphElement>(null);
+    const seoDescriptionRef = useRef<HTMLParagraphElement>(null);
+    const sMediaDescriptionRef = useRef<HTMLParagraphElement>(null);
+    const eMarketingDescriptionRef = useRef<HTMLParagraphElement>(null);
+    const wFunnelsDescriptionRef = useRef<HTMLParagraphElement>(null);
+    const WeitereDescriptionRef = useRef<HTMLParagraphElement>(null);
+
+    const setMaxHeightForGroup = (elements: (HTMLElement | null)[]): void => {
+        // Grup içindeki en yüksek öğeyi bul
+        const heights = elements.map(element => element ? element.clientHeight : 0);
+        const maxHeight = Math.max(...heights);
+
+        // En yüksek değeri, grup içindeki her elemana uygula
+        elements.forEach(element => {
+            if (element) element.style.height = `${maxHeight}px`;
+        });
+    };
+
+    useEffect(() => {
+        const resizeObserver = new ResizeObserver(() => {
+            // Grup 1: Heading öğeleri
+            setMaxHeightForGroup([seaRef.current, seoRef.current, sMediaRef.current]);
+
+            // Grup 2: Diğer Heading öğeleri
+            setMaxHeightForGroup([eMarketingRef.current, wFunnelsRef.current, WeitereRef.current]);
+
+            // Grup 3: Description öğeleri
+            setMaxHeightForGroup([seaDescriptionRef.current, seoDescriptionRef.current, sMediaDescriptionRef.current]);
+
+            // Grup 4: Diğer Description öğeleri
+            setMaxHeightForGroup([eMarketingDescriptionRef.current, wFunnelsDescriptionRef.current, WeitereDescriptionRef.current]);
+        });
+
+        // Observe all refs (heading and paragraph elements)
+        const elementsToObserve = [
+            seaRef.current, seoRef.current, sMediaRef.current,
+            eMarketingRef.current, wFunnelsRef.current, WeitereRef.current,
+            seaDescriptionRef.current, seoDescriptionRef.current, sMediaDescriptionRef.current,
+            eMarketingDescriptionRef.current, wFunnelsDescriptionRef.current, WeitereDescriptionRef.current
+        ];
+
+        elementsToObserve.forEach(element => {
+            if (element) resizeObserver.observe(element);
+        });
+
+        // Cleanup observer on component unmount
+        return () => resizeObserver.disconnect();
+    }, []);
+
+
     return (
         <div className="flex flex-col">
             <Helmet>
                 <title>Unsere Dienstleistungen – SEO, Ads und mehr</title>
-                {/* <meta name="description" content="Entdecken Sie das vielfältige Dienstleistungsangebot von Superagentur, von SEO-Optimierung bis Google Ads." />
-                <meta name="keywords" content="Dienstleistungen, SEO, Google Ads, digitales Marketing, Unternehmenslistungen" /> */}
+                <meta name="description" content="Entdecken Sie das vielfältige Dienstleistungsangebot von Superagentur, von SEO-Optimierung bis Google Ads." />
+                <meta name="keywords" content="Dienstleistungen, SEO, Google Ads, digitales Marketing, Unternehmenslistungen" />
                 <meta property="og:title" content="Unsere Dienstleistungen – SEO, Ads und mehr" />
                 <meta property="og:description" content="Profitieren Sie von unseren umfassenden Dienstleistungen für Ihren digitalen Erfolg." />
 
@@ -44,7 +106,7 @@ const Services = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}dienstleistungen`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/dienstleistungen" />
-              
+
             </Helmet>
 
             <section className="relative overflow-hidden z-[1]  flex items-center justify-center bg-secondary1 w-full 3xl:pt-[142px] lg:pt-[114px] md:pt-[91px] xs:pt-[72px] pt-[58px] 3xl:pb-[196px]  lg:pb-[118px] md:pb-[140px] xs:pb-[88px] pb-[100px] px-6">
@@ -267,50 +329,96 @@ const Services = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.7, duration: 0.3 }}
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center max-w-[1173px] gap-6 w-full mx-auto">
-                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    {/* sea */}
+                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6 ">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="analytics" />
-                            <h4 className="md:text-[24px] text-[22px] tb-bold">Google Ads</h4>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px]">Bezahlte Google-Marketingkampagnen – für maximale Reichweite.</div>
+                            <h4 ref={seaRef} className="card-header md:text-[24px] text-[22px] tb-bold">SEA</h4>
+                            <p ref={seaDescriptionRef} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Suchmaschinenwerbung – Effektive Kampagnen auf Google und Bing für maximale Ergebnisse.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
                             <NavLink aria-label="Open seo plan page" to="/seo-plan">
-                                <Button className="tb-bold">Details</Button>
+                                <Button className="tb-bold">Pläne</Button>
                             </NavLink>
                         </div>
 
                     </div>
-
-                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    {/* seo */}
+                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={search} alt="search" />
-                            <h4 className="md:text-[24px] text-[22px] tb-bold">SEO</h4>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</div>
+                            <h4 ref={seoRef} className="card-header md:text-[24px] text-[22px] tb-bold">SEO</h4>
+                            <p ref={seoDescriptionRef} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
                             <NavLink aria-label="Open google ads plan page" to="/google-ads-plan">
-                                <Button className="tb-bold">Details</Button>
+                                <Button className="tb-bold">Pläne</Button>
                             </NavLink>
                         </div>
 
                     </div>
-
-                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    {/* social media */}
+                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
-                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={system} alt="system" />
-                            <h4 className="md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</h4>
-                            <div className="text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Sichtbarkeit optimieren durch Google-Unternehmenslistung.</div>
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={likeImage} alt="system" />
+                            <h4 ref={sMediaRef} className="card-header md:text-[24px] text-[22px] tb-bold">Social Media Ads</h4>
+                            <p ref={sMediaDescriptionRef} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maximale Reichweite auf Plattformen wie , Facebook, Instagram, TikTok und LinkedIn.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
-                            <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                            <div className="w-[109px] bg-secondary3 h-[2px]"></div>
                             <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
                                 <Button className="tb-bold">Details</Button>
                             </NavLink>
                         </div>
-
                     </div>
+
+                    {/* email marketing */}
+                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={emailImage} alt="system" />
+                            <h4 ref={eMarketingRef} className="card-header md:text-[24px] text-[22px] tb-bold">Email Marketing</h4>
+                            <p ref={eMarketingDescriptionRef} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary3 h-[2px]"></div>
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                                <Button className="tb-bold">Pläne</Button>
+                            </NavLink>
+                        </div>
+                    </div>
+
+                    {/* website funnels */}
+                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={filterImage} alt="system" />
+                            <h4 ref={wFunnelsRef} className="card-header md:text-[24px] text-[22px] tb-bold">Website Funnels</h4>
+                            <p ref={wFunnelsDescriptionRef} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maßgeschneiderte Funnel-Websites, perfekt auf Ihre Kampagne abgestimmt.</p>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-primary h-[2px]"></div>
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                                <Button className="tb-bold">Pläne</Button>
+                            </NavLink>
+                        </div>
+                    </div>
+
+                    {/* weitere marketinglösungen */}
+                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={achievementImage} alt="system" />
+                            <h4 ref={WeitereRef} className="card-header md:text-[24px] text-[22px] tb-bold">Weitere Marketinglösungen</h4>
+                            <p ref={WeitereDescriptionRef} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Von Content-Marketing bis hin zu Google Unternehmenslistungen und vielem mehr.</p>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                                <Button className="tb-bold">Anfrage</Button>
+                            </NavLink>
+                        </div>
+                    </div>
+
                 </motion.div>
             </section>
 

@@ -34,7 +34,7 @@ const HomeV1 = () => {
             y: 0,
         }
     };
-    const jumbotronBoldText = "Google!"
+    const jumbotronBoldText = "Marketing!"
     const jumbotronTextSplit = splitStringUsingRegex(jumbotronBoldText)
     const charVariants9 = { hidden: { opacity: 0, color: "#4A3AFF" }, reveal: { opacity: 1, color: "#14142B" } };
     const fadeInAnimationVariantExample = {
@@ -88,6 +88,8 @@ const HomeV1 = () => {
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
                 <title>Superagentur - Ihre Marketingagentur für digitale Lösungen</title>
+                <meta name="description" content="Maßgeschneiderte Marketingstrategien für Ihr Online-Wachstum – SEO, Google Ads und mehr. Ihre Agentur für Erfolg im digitalen Raum." />
+                <meta name="keywords" content="digitale Marketingagentur, SEO, Google Ads, Unternehmenslistungen, Online-Präsenz, Geschäftswachstum," />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:title" content="Superagentur – Ihre Marketingagentur für digitale Lösungen" />
                 <meta property="og:description" content="Entdecken Sie innovative Marketinglösungen, die Ihre Marke erfolgreich im digitalen Raum positionieren." />
@@ -111,7 +113,7 @@ const HomeV1 = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.7, duration: 0.3 }}
                                 className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.5px]">
-                                Marketing Agentur
+                                Ihr Partner für digitale Werbung
                             </motion.h2>
                             <motion.h1
                                 variants={fadeInAnimationVariantExample}
@@ -144,7 +146,7 @@ const HomeV1 = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.7, duration: 0.3 }}
                                 className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">
-                                Mit uns erreichen Sie Menschen dort, wo sie suchen, auf Google – durch Ads, SEO & Unternehmenslistungen.
+                                Als All-in-One-Werbeagentur sorgen wir auf allen Online-Kanälen für maximale Sichtbarkeit und messbaren Erfolg – mit Search Ads, SEO, Social Media Marketing und vielem mehr.
                             </motion.p>
                             <motion.div
                                 variants={fadeInAnimationVariant}
@@ -273,11 +275,11 @@ const HomeV1 = () => {
 
             <Suspense fallback={<div>loading...</div>}>
                 <HomeV1CardSection />
-                <HomeV1ThirdSection />
-                <HomeV1FourthSection />
                 <HomeV1FifthSection />
-                <HomeV1SixthSection />
                 <HomeV1SeventhSection />
+                <HomeV1FourthSection />
+                <HomeV1ThirdSection />
+                <HomeV1SixthSection />
                 <HomeV1ContactFormSection />
             </Suspense>
 

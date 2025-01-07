@@ -30,8 +30,8 @@ const NotFound = () => {
         <div className='3xl:pt-[186px] 3xl:pb-[198px] lg:pt-[148px] lg:pb-[158px] md:pt-[118px] md:pb-[126px] xs:pt-[94px] xs:pb-[100px] pt-[75px] pb-[80px] px-6 relative bg-secondary1 overflow-hidden'>
             <Helmet>
                 <title>Seite nicht gefunden – Superagentur</title>
-                {/* <meta name="description" content="Fehlerseite für nicht gefundene Inhalte." />
-                <meta name="keywords" content="404 Fehler, Seite nicht gefunden, Superagentur" /> */}
+                <meta name="description" content="Fehlerseite für nicht gefundene Inhalte." />
+                <meta name="keywords" content="404 Fehler, Seite nicht gefunden, Superagentur" />
                 <meta property="og:title" content="Seite nicht gefunden – Superagentur" />
                 <meta property="og:description" content="Oops! Die Seite, die Sie suchen, existiert nicht. Besuchen Sie unsere Startseite, um weiterzumachen." />
                 <meta name="robots" content="noindex, follow" />

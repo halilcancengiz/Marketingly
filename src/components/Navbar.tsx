@@ -45,16 +45,25 @@ const Navbar = () => {
                         <div className="lg:flex hidden items-center gap-1 group hover:text-primary transition-colors duration-300 relative">
                             <div className="tb-medium">Preise</div>
                             <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
-                            <div className="absolute invisible opacity-0 translate-y-[10px] z-[11] pt-[13px] group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out -left-1/2 top-full  text-neutral-600">
-                                <div className="flex flex-col gap-8 rounded-3xl px-[66px] py-[64px] border-[1px] border-net bg-neutral-100 mt-2">
-                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1 tb-medium" aria-label="Go to the google ads-plan page" to="/google-ads-plan" >
-                                        <TbPointFilled /> Google Ads
+                            <div className="absolute invisible opacity-0 translate-y-[10px] z-[11] pt-[13px] group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out 2xl:-left-1/2 -right-1/2 top-full  text-neutral-600">
+                                <div className="flex flex-col gap-8 rounded-3xl px-[66px] py-[64px] border-[1px] border-net bg-neutral-100 mt-2 min-w-[400px]">
+                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the google ads-plan page" to="/google-ads-plan" >
+                                        <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" /> SEA (Google & Bing Ads)
                                     </NavLink>
-                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1 tb-medium" aria-label="Go to the seo plan page" to="/seo-plan" >
-                                        <TbPointFilled /> SEO
+                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the seo plan page" to="/seo-plan" >
+                                        <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" /> SEO
                                     </NavLink>
-                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-center gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
-                                        <TbPointFilled /> Unternehmenslistung
+                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
+                                        <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" /> Social Media Ads
+                                    </NavLink>
+                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
+                                        <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" /> Email Marketing
+                                    </NavLink>
+                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
+                                        <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" /> Funnel-Website
+                                    </NavLink>
+                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
+                                        <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" /> Unternehmenslistungen (Google Business Profile)
                                     </NavLink>
                                 </div>
                             </div>
@@ -97,14 +106,23 @@ const Navbar = () => {
                             Preise <IoIosArrowDown className="group-hover:transform group-hover:-rotate-180 transition-transform duration-300" size={16} />
                         </div>
                         <div className="hidden opacity-0 group-hover:flex group-hover:opacity-100 flex-col transition-opacity duration-300">
-                            <NavLink className="hover:text-primary transition-colors duration-300 flex items-center py-[15px] gap-1 tb-medium" aria-label="Go to the google-ads plan page" to="/google-ads-plan" >
-                                <TbPointFilled /> Google Ads
+                            <NavLink className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the google-ads plan page" to="/google-ads-plan" >
+                                <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" /> SEA (Google & Bing Ads)
                             </NavLink>
-                            <NavLink className="hover:text-primary transition-colors duration-300 flex items-center py-[15px] gap-1 tb-medium" aria-label="Go to the seo plan page" to="/seo-plan" >
-                                <TbPointFilled /> SEO
+                            <NavLink className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the seo plan page" to="/seo-plan" >
+                                <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" /> SEO
                             </NavLink>
-                            <NavLink className="hover:text-primary transition-colors duration-300 flex items-center py-[15px] gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
-                                <TbPointFilled /> Unternehmenslistung
+                            <NavLink className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
+                                <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" /> Social Media Ads
+                            </NavLink>
+                            <NavLink className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
+                                <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" /> Email Marketing
+                            </NavLink>
+                            <NavLink className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
+                                <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" /> Funnel-Website
+                            </NavLink>
+                            <NavLink className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the unternehmenslistung plan page" to="/unternehmenslistung-plan">
+                                <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" /> Unternehmenslistungen (Google Business Profile)
                             </NavLink>
                         </div>
                     </div>

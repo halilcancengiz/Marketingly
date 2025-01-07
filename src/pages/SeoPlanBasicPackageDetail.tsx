@@ -55,8 +55,8 @@ const SeoPlanBasicPackageDetail = () => {
         <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
             <Helmet>
                 <title>SEO Basis-Paket – Bessere Sichtbarkeit für Ihre Website</title>
-                {/* <meta name="description" content="Mit grundlegenden SEO-Optimierungen legen wir die Basis für Ihre bessere Auffindbarkeit in Suchmaschinen." />
-                <meta name="keywords" content="SEO, Basis-Paket, Sichtbarkeit, Suchmaschinenoptimierung" /> */}
+                 <meta name="description" content="Mit grundlegenden SEO-Optimierungen legen wir die Basis für Ihre bessere Auffindbarkeit in Suchmaschinen." />
+                <meta name="keywords" content="SEO, Basis-Paket, Sichtbarkeit, Suchmaschinenoptimierung" /> 
                 <meta property="og:title" content="SEO Basis-Paket – Bessere Sichtbarkeit für Ihre Website" />
                 <meta property="og:description" content="Erhöhen Sie Ihre Online-Sichtbarkeit durch grundlegende SEO-Optimierungen." />
 

@@ -182,8 +182,8 @@ const Contact = () => {
         <div className="flex flex-col">
             <Helmet>
                 <title>Kontaktieren Sie Superagentur</title>
-                {/* <meta name="description" content="Wir freuen uns auf Ihre Anfrage. Kontaktieren Sie uns für individuelle digitale Marketinglösungen." />
-                <meta name="keywords" content="Kontakt, Marketinglösungen, Anfrage, Superagentur" /> */}
+                <meta name="description" content="Wir freuen uns auf Ihre Anfrage. Kontaktieren Sie uns für individuelle digitale Marketinglösungen." />
+                <meta name="keywords" content="Kontakt, Marketinglösungen, Anfrage, Superagentur" /> 
                 <meta property="og:title" content="Kontaktieren Sie Superagentur" />
                 <meta property="og:description" content="Lassen Sie uns gemeinsam an Ihrer digitalen Marketingstrategie arbeiten. Wir stehen Ihnen zur Verfügung." />
 

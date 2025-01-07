@@ -66,6 +66,7 @@ const Layout = () => {
 
   return (
     <div className="flex flex-col relative">
+      <h1 style={{ display: "none" }} id="seo-h1">Superagentur - Ihre Marketingagentur für digitale Lösungen</h1>
       <motion.div
         key={`fadeIn-${animationKey}`}
         className="h-[4px] bg-primary absolute top-0 left-0"
