@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
 import logo from "../assets/images/logo.webp"
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const Services = () => {
     const fadeInAnimationVariant = {
