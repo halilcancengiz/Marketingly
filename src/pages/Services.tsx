@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import analytics from "../assets/images/analytics.webp";
 import search from "../assets/images/search.webp";
 import emailImage from "../assets/images/email-image.webp";
@@ -17,6 +17,7 @@ import logo from "../assets/images/logo.webp"
 import { useEffect, useRef, useState } from "react";
 
 const Services = () => {
+    const navigate = useNavigate()
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,
@@ -300,137 +301,137 @@ const Services = () => {
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center max-w-[1173px] gap-6 w-full mx-auto"
                 >
                     {/* sea */}
-                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={()=>navigate("/sea-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6 ">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="analytics" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">SEA</h4>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEA</h4>
                             <p style={{ height: `${descriptionHeight}px` }} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Suchmaschinenwerbung – Effektive Kampagnen auf Google und Bing für maximale Ergebnisse.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink aria-label="Open seo plan page" to="/seo-plan">
+                            <div aria-label="Open sea-preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
 
                     </div>
                     {/* seo */}
-                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div  onClick={()=>navigate("/seo-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={search} alt="search" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">SEO</h4>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEO</h4>
                             <p style={{ height: `${descriptionHeight}px` }} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
-                            <NavLink aria-label="Open google ads plan page" to="/google-ads-plan">
+                            <div aria-label="Open seo-preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
 
                     </div>
                     {/* social media */}
-                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div  onClick={()=>navigate("/social-media-ads-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={likeImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Social Media Ads</h4>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Social Media Ads</h4>
                             <p style={{ height: `${descriptionHeight}px` }} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maximale Reichweite auf Plattformen wie Facebook, Instagram, TikTok und LinkedIn.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary3 h-[2px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
-                                <Button className="tb-bold">Details</Button>
-                            </NavLink>
+                            <div aria-label="Open social-media-ads-preise page">
+                                <Button className="tb-bold">Pläne</Button>
+                            </div>
                         </div>
                     </div>
 
                     {/* email marketing */}
-                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div  onClick={()=>navigate("/email-marketing-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={emailImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Email Marketing</h4>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Email Marketing</h4>
                             <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary3 h-[2px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                            <div aria-label="Open email-marketing-preise page" >
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </div>
 
                     {/* website funnels */}
-                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div  onClick={()=>navigate("/websitefunnel-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={filterImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Website Funnels</h4>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Website Funnels</h4>
                             <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maßgeschneiderte Funnel-Websites, perfekt auf Ihre Kampagne abgestimmt.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                            <div aria-label="Open websitefunnel preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </div>
 
                     {/* Video- und Fotografie */}
-                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div  onClick={()=>navigate("/foto-und-videographie-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
-                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={stairsImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Video- und Fotografie</h4>
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={playImage} alt="system" />
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Video- und Fotografie</h4>
                             <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Professionelle visuelle Inhalte, die Ihre Marke ins richtige Licht rücken.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary3 h-[2px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                            <div aria-label="Open foto-und-videographie-preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </div>
 
                     {/* Grafikdesign */}
-                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div  onClick={()=>navigate("/marketing-ressourcen-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={settingsImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Grafikdesign</h4>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Grafikdesign</h4>
                             <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Individuell gestaltete Grafiken, perfekt abgestimmt auf Ihre Marketingkampagnen.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary3 h-[2px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                            <div aria-label="Open marketing-ressourcen-preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </div>
 
                     {/* Analytics-Tools und Tracking */}
-                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div  onClick={()=>navigate("/analytics-aufsetzung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={pcImage} alt="system" />
-                            <h4 ref={headerDescRef} className="card-header md:text-[24px] text-[22px] tb-bold">Analytics-Tools und Tracking</h4>
+                            <h4 ref={headerDescRef} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Analytics-Tools und Tracking</h4>
                             <p ref={descriptionRef} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Einrichtung von Analytics-Systemen, Tag Manager und Tracking-Lösungen für präzise Einblicke.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                            <div aria-label="Open analytics-aufsetzung-preis page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </div>
 
                     {/* Unternehmenslistung */}
-                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div  onClick={()=>navigate("/unternehmenslistung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
-                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={playImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</h4>
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={stairsImage} alt="system" />
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Unternehmenslistung</h4>
                             <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                            <div aria-label="Open Unternehmenslistung preis page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </div>
 
@@ -452,17 +453,17 @@ const Services = () => {
                     {/* yer tutucu */}
 
                     {/* weitere marketinglösungen */}
-                    <div className="mx-auto hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:max-w-[374px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div  onClick={()=>navigate("/kontakt")} className="cursor-pointer group mx-auto hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:max-w-[374px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={achievementImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Weitere Marketinglösungen</h4>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Weitere Marketinglösungen</h4>
                             <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Von Content-Marketing bis hin zu Google Unternehmenslistungen und vielem mehr.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                            <div aria-label="Open kontakt page">
                                 <Button className="tb-bold">Anfrage</Button>
-                            </NavLink>
+                            </div>
                         </div>
                     </div>
 

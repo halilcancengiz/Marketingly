@@ -270,7 +270,7 @@ const SeoPreise = () => {
               <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
             </div>
 
-            <div ref={cardTopHeaderRef} className="flex flex-col">
+            <div style={{ height: heights.headerHeight }} className="flex flex-col">
               <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
                 Standard
               </h2>
@@ -315,7 +315,7 @@ const SeoPreise = () => {
             <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
               <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
             </div>
-            <div style={{ height: heights.headerHeight }} className="flex flex-col">
+            <div ref={cardTopHeaderRef} className="flex flex-col">
               <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
                 Premium
               </h2>

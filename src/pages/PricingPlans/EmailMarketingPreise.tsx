@@ -297,7 +297,7 @@ const EmailMarketingPreise = () => {
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Individuelle Gestaltung von Opt-in-Formularen zur Lead-Generierung</div>
               </div>
-              <div className="flex items-center gap-[13px]">
+              <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von bis zu 5.000 Kontakten </div>
               </div>

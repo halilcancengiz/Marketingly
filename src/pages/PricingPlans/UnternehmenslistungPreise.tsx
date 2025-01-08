@@ -221,7 +221,7 @@ const UnternehmenslistungPreise = () => {
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und Verifizierung des Unternehmenskontos</div>
               </div>
-              <div className="flex items-center gap-[13px]">
+              <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Ausarbeitung einer ansprechenden Unternehmensbeschreibung</div>
               </div>

@@ -294,7 +294,7 @@ const SocialMediaAdsPreise = () => {
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {APP_CONFIG.campaign_limits.Social_Media_Ads.standard} €</div>
               </div>
-              <div className="flex items-center gap-[13px]">
+              <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Umfassende Kampagnenverwaltung mit regelmäßigen Optimierungen</div>
               </div>

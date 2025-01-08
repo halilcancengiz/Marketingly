@@ -283,7 +283,7 @@ const WebsiteFunnelPreise = () => {
             </div>
 
             <hr className="w-full my-[35px]" />
-            <div style={{ height: heights.checklistHeight }} className="flex flex-col gap-[16px] mb-10">
+            <div ref={checkListRef} className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung von bis zu 3 Funnels</div>
@@ -292,7 +292,7 @@ const WebsiteFunnelPreise = () => {
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Integration automatisierter E-Mail-Sequenzen</div>
               </div>
-              <div className="flex items-center gap-[13px]">
+              <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Anpassung und Optimierung der Funnels für bessere Conversion-Raten</div>
               </div>
@@ -336,7 +336,7 @@ const WebsiteFunnelPreise = () => {
             </div>
 
             <hr className="w-full my-[35px]" />
-            <div ref={checkListRef} className="flex flex-col gap-[16px] mb-10">
+            <div style={{ height: heights.checklistHeight }} className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung und Verwaltung einer unbegrenzten Anzahl von Funnels</div>

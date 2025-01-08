@@ -292,7 +292,7 @@ const AnalyticsAufsetzungPreise = () => {
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Individuelle Anpassung der Tracking-Struktur an Ihre Geschäftsziele</div>
               </div>
-              <div className="flex items-center gap-[13px]">
+              <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung von Conversion-Tracking für präzise Erfolgsmessung</div>
               </div>

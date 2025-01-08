@@ -80,7 +80,7 @@ const HomeV1CardSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 0.3 }}
                 className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1176px] w-full mx-auto">
-                <div onClick={() => navigate("/google-ads-plan", { replace: true })} aria-label="Open Google Ads Plan page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                <div onClick={() => navigate("/sea-preise", { replace: true })} aria-label="Open sea-preise page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                     <div className="flex items-center flex-col gap-6">
                         <img
                             className="object-contain size-[86px] rounded-[10px]"
@@ -93,13 +93,13 @@ const HomeV1CardSection = () => {
                     </div>
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                         <div className="w-[109px] bg-secondary2 h-[2px]"></div>
-                        <NavLink to="/google-ads-plan" aria-label="Open seo plan page">
+                        <div aria-label="Open sea-preise page">
                             <Button className="tb-bold">Pläne</Button>
-                        </NavLink>
+                        </div>
                     </div>
                 </div>
 
-                <div aria-label="Open Seo Plan page" onClick={() => navigate("/seo-plan", { replace: true })} className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                <div onClick={() => navigate("/seo-preise", { replace: true })} aria-label="Open seo-preise page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                     <div className="flex items-center flex-col gap-6">
                         <img
 
@@ -112,13 +112,13 @@ const HomeV1CardSection = () => {
 
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                         <div className="w-[109px] bg-primary h-[2px]"></div>
-                        <div aria-label="Open seo plan page" >
+                        <div aria-label="Open seo-preise page" >
                             <Button className="tb-bold">Pläne</Button>
                         </div>
                     </div>
                 </div>
 
-                <div aria-label="Open Google Ads Plan page" onClick={() => navigate("/google-ads-plan", { replace: true })} className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                <div onClick={() => navigate("/social-media-ads-preise", { replace: true })} aria-label="Open social-media-ads-preise page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                     <div className="flex items-center flex-col gap-6">
                         <img
                             className="object-contain size-[86px] rounded-[10px]"
@@ -131,13 +131,13 @@ const HomeV1CardSection = () => {
                     </div>
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                         <div className="w-[109px] bg-secondary3 h-[2px]"></div>
-                        <div aria-label="Open seo plan page">
+                        <div aria-label="Open social-media-ads-preise page">
                             <Button className="tb-bold">Pläne</Button>
                         </div>
                     </div>
                 </div>
 
-                <div aria-label="Open unternehmenslistung plan page" onClick={() => navigate("/google-ads-plan", { replace: true })} className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                <div onClick={() => navigate("/email-marketing-preise", { replace: true })} aria-label="Open email-marketing-preise page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                     <div className="flex items-center flex-col gap-6">
                         <img
                             className="object-contain size-[86px] rounded-[10px]"
@@ -150,13 +150,13 @@ const HomeV1CardSection = () => {
 
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                         <div className="w-[109px] bg-secondary3 h-[2px]"></div>
-                        <div aria-label="Open Unternehmenslistung page">
+                        <div aria-label="Open email-marketing-preise page">
                             <Button className="tb-bold">Pläne</Button>
                         </div>
                     </div>
                 </div>
 
-                <div aria-label="Open unternehmenslistung plan page" onClick={() => navigate("/unternehmenslistung-plan", { replace: true })} className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                <div onClick={() => navigate("/websitefunnel-preise", { replace: true })} aria-label="Open unternehmenslistung-preis page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                     <div className="flex items-center flex-col gap-6">
                         <img
 
@@ -169,13 +169,13 @@ const HomeV1CardSection = () => {
 
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                         <div className="w-[109px] bg-primary h-[2px]"></div>
-                        <div aria-label="Open Unternehmenslistung page">
+                        <div aria-label="Open websitefunnel-preise page">
                             <Button className="tb-bold">Pläne</Button>
                         </div>
                     </div>
                 </div>
 
-                <div aria-label="Open unternehmenslistung plan page" onClick={() => navigate("/kontakt", { replace: true })} className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                <div onClick={() => navigate("/kontakt", { replace: true })} aria-label="Open kontakt page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                     <div className="flex items-center flex-col gap-6">
                         <img
 
