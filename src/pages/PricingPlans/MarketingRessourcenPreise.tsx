@@ -1,13 +1,16 @@
-import circlesImage from "../assets/images/circles.webp"
-import check from "../assets/images/check.webp";
-import Accordion from "../components/Accordion";
-import Button from "../components/Button";
-import { NavLink } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import circlesImage from "../../assets/images/circles.webp"
+import trianglesImage from "../../assets/images/triangles.webp"
+import squaresImage from "../../assets/images/squares.webp"
+import check from "../../assets/images/check.webp";
+import Accordion from "../../components/Accordion";
+import Button from "../../components/Button";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
-import APP_CONFIG from '../../public/config.ts';
-import logo from "../assets/images/logo.webp"
-const CompanyListingPlan = () => {
+import APP_CONFIG from '../../../public/config.ts';
+import { useEffect, useRef, useState } from "react";
+
+const MarketingRessourcenPreise = () => {
+  const navigate = useNavigate()
   const fadeInAnimationVariant = {
     initial: {
       opacity: 0,
@@ -29,32 +32,45 @@ const CompanyListingPlan = () => {
       scale: 1
     }
   };
+
+  const cardTopHeaderRef = useRef<HTMLDivElement>(null)
+  const cardTopPriceRef = useRef<HTMLDivElement>(null)
+  const checkListRef = useRef<HTMLDivElement>(null)
+
+  const [heights, setHeights] = useState({
+    headerHeight: 0,
+    priceHeight: 0,
+    checklistHeight: 0
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setHeights({
+        headerHeight: cardTopHeaderRef.current?.offsetHeight || 0,
+        priceHeight: cardTopPriceRef.current?.offsetHeight || 0,
+        checklistHeight: checkListRef.current?.offsetHeight || 0
+      });
+    }
+
+    // Initial call
+    handleResize();
+
+    // Add resize listener
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="flex flex-col">
-      <Helmet>
-        <title>Unternehmenslistungen – Sichtbarkeit in Verzeichnissen</title>
-         <meta name="description" content="Sorgen Sie für eine stärkere lokale Präsenz mit unseren Unternehmenslistungs-Diensten in wichtigen Verzeichnissen." />
-        <meta name="keywords" content="Unternehmenslistungen, lokale Präsenz, Verzeichnisse, Sichtbarkeit" /> 
-        <meta property="og:title" content="Unternehmenslistungen – Sichtbarkeit in Verzeichnissen" />
-        <meta property="og:description" content="Maximieren Sie Ihre lokale Sichtbarkeit mit professionellen Unternehmenslistungen." />
-
-        <meta name="robots" content="index, follow" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${APP_CONFIG.base_url}unternehmenslistung-plan`} />
-        <meta property="og:image" content={logo} />
-        <link rel="canonical" href="https://superagentur-marketing.de/unternehmenslistung-plan" />
-      </Helmet>
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
-        <div className="flex flex-col items-center justify-center text-center text-white max-w-[550px] px-6 w-full mx-auto">
+        <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
           <motion.div
             variants={fadeInAnimationVariant}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             transition={{ delay: 0.15, duration: 0.3 }}
-            className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">
-            Unser Angebot
-          </motion.div>
+            className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">Unsere Marketing-Ressourcen Pläne</motion.div>
           <motion.h1
             variants={fadeInAnimationVariant}
             initial="initial"
@@ -62,17 +78,15 @@ const CompanyListingPlan = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.30, duration: 0.3 }}
             className="mb-[15px] lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] tb-bold lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] ">
-            Das einzige Paket, das Sie brauchen!
+            Pläne für jeden Bedarf
           </motion.h1>
-          <motion.div
+          <motion.p
             variants={fadeInAnimationVariant}
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             transition={{ delay: 0.35, duration: 0.3 }}
-            className="tb-medium text-[18px] leading-[30.006px]">
-            Durch unsere professionelle Unternehmenslistung ist Ihnen ein seriöser Auftritt garantiert.
-          </motion.div>
+            className="tb-medium text-[18px] leading-[30.006px]">Unsere Preismodelle bieten flexible Lösungen für jedes Budget und jeden Bedarf.</motion.p>
         </div>
 
         {/* shapes start */}
@@ -200,48 +214,141 @@ const CompanyListingPlan = () => {
           whileInView="animate"
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.3 }}
-          className="grid lg:grid-cols-1 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
-
-          <NavLink aria-label="Open standart package detail page" to="/unternehmenslistung-premium-paket-detail" className="col-span-1 lg:max-w-[373.66px] w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+          className="grid lg:grid-cols-3 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
+          {/* Basis */}
+          <div onClick={() => navigate("/marketing-ressourcen-basis", { replace: true })} aria-label="Open basic package detail page" className="cursor-pointer col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
             <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
-              <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
+              <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
             </div>
-            <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-              Premium
-            </h2>
-            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Die perfekte Lösung für Ihre Sichtbarkeit.</div>
 
-            <div className="flex flex-col lg:mt-[20px]">
-              <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.company_listing.premium} €</div>
-              <div className="tb-medium text-neutral-600">einmalig (zzgl. Mwst.)</div>
+            <div style={{ height: heights.headerHeight }} className="flex flex-col">
+              <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+                Basis
+              </h2>
+              <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.</div>
+            </div>
+
+            <div style={{ height: heights.priceHeight }} className="flex flex-col lg:mt-[20px]">
+              <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Marketing_Ressourcen.basis} €</div>
+              <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
             </div>
 
             <hr className="w-full my-[35px]" />
-            <div className="flex flex-col gap-[16px] mb-10">
+            <div style={{ height: heights.checklistHeight }} className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung eines professionellen Google My Business-Eintrags</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung von bis zu 15 Grafiken</div>
               </div>
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und Verifizierung des Unternehmenskontos</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Anpassung an Ihr Corporate Design</div>
+              </div>
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Überprüfung nach Werberichtlinien</div>
+              </div>
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Optimiert für Social Media und einfache Kampagnen</div>
+              </div>
+              <br />
+            </div>
+            <Button className="tb-bold">Details</Button>
+
+          </div>
+
+
+          {/* Standart */}
+          <div onClick={() => navigate("/marketing-ressourcen-standard", { replace: true })} aria-label="Open standart package detail page" className="cursor-pointer col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+            <div className="absolute left-0 top-0 py-1 px-9 tb-bold text-white bg-primary rounded-br-[20px]">Bestseller</div>
+
+            <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+              <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
+            </div>
+
+            <div style={{ height: heights.headerHeight }} className="flex flex-col">
+              <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+                Standard
+              </h2>
+              <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
+            </div>
+
+            <div style={{ height: heights.priceHeight }} className="flex flex-col lg:mt-[20px]">
+              <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Marketing_Ressourcen.standard} €</div>
+              <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
+            </div>
+
+            <hr className="w-full my-[35px]" />
+            <div style={{ height: heights.checklistHeight }} className="flex flex-col gap-[16px] mb-10">
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung von bis zu 40 Grafiken</div>
+              </div>
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Unterschiedliche Konzepte zur Auswahl basierend auf Wettbewerbsanalyse</div>
               </div>
               <div className="flex items-center gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Ausarbeitung einer ansprechenden Unternehmensbeschreibung</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Überprüfung nach Werberichtlinien </div>
               </div>
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Hinzufügen von Bildern, Logo und Kontaktinformationen</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Integration animierter Grafiken für ansprechendere Inhalte</div>
               </div>
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Optimierung für bessere Auffindbarkeit in lokalen Suchergebnissen</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Optimiert für Social Media und fortgeschrittene Kampagnen</div>
               </div>
             </div>
             <Button className="tb-bold">Details</Button>
-          </NavLink>
+          </div>
 
+
+          {/* Premium */}
+          <div onClick={() => navigate("/marketing-ressourcen-premium", { replace: true })} aria-label="Open premium package detail page" className="cursor-pointer col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+
+            <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+              <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
+            </div>
+            <div ref={cardTopHeaderRef}  className="flex flex-col">
+              <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+                Premium
+              </h2>
+              <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
+            </div>
+
+            <div ref={cardTopPriceRef} className="flex flex-col lg:mt-[20px]">
+              <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Marketing_Ressourcen.premium}</div>
+              <div className="tb-medium text-neutral-600">Kontaktieren Sie unseren Vertrieb.</div>
+            </div>
+
+            <hr className="w-full my-[35px]" />
+            <div ref={checkListRef} className="flex flex-col gap-[16px] mb-10">
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung einer individuellen Anzahl an Grafiken</div>
+              </div>
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Entwicklung unterschiedlicher Konzepte basierend auf detaillierten Marktanalysen</div>
+              </div>
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Überprüfung und Optimierung nach Werberichtlinien und Plattformanforderungen</div>
+              </div>
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Integration aufwändiger Animationen für höchste visuelle Qualität</div>
+              </div>
+              <div className="flex items-start gap-[13px]">
+                <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Optimiert für Social Media und fortgeschrittene Kampagnen</div>
+              </div>
+            </div>
+            <Button className="tb-bold">Details</Button>
+
+          </div>
         </motion.div>
       </section>
 
@@ -299,9 +406,6 @@ const CompanyListingPlan = () => {
             <Accordion
               title="Wie funktioniert die Bezahlung?"
               content="Die Bezahlung erfolgt je nach Dienstleistung entweder als einmalige Gebühr oder wird monatlich abgerechnet." />
-
-
-
           </div>
         </div>
       </motion.section>
@@ -309,4 +413,4 @@ const CompanyListingPlan = () => {
   )
 }
 
-export default CompanyListingPlan
+export default MarketingRessourcenPreise

@@ -140,6 +140,16 @@ body,
   }
 }
 
+
+
+
+@media screen and (min-width:992px) {
+  .dienstleistungen-card {
+    width: 33%;
+     max-width: 374px!important;
+  }
+}
+
 .menuItemShadow{
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 14px;
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);

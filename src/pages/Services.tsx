@@ -4,13 +4,17 @@ import search from "../assets/images/search.webp";
 import emailImage from "../assets/images/email-image.webp";
 import likeImage from "../assets/images/like-image.webp";
 import achievementImage from "../assets/images/achievement-icon.webp";
+import stairsImage from "../assets/images/stairsIcon.webp";
+import settingsImage from "../assets/images/settingsIcon.webp";
+import pcImage from "../assets/images/pcIcon.webp";
+import playImage from "../assets/images/playicon.webp";
 import filterImage from "../assets/images/filter-icon.webp";
 import Button from "../components/Button";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
 import logo from "../assets/images/logo.webp"
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Services = () => {
     const fadeInAnimationVariant = {
@@ -35,62 +39,27 @@ const Services = () => {
         }
     };
 
-    const seaRef = useRef<HTMLHeadingElement>(null);
-    const seoRef = useRef<HTMLHeadingElement>(null);
-    const sMediaRef = useRef<HTMLHeadingElement>(null);
-    const eMarketingRef = useRef<HTMLHeadingElement>(null);
-    const wFunnelsRef = useRef<HTMLHeadingElement>(null);
-    const WeitereRef = useRef<HTMLHeadingElement>(null);
+    const headerDescRef = useRef<HTMLDivElement | null>(null);
+    const descriptionRef = useRef<HTMLDivElement | null>(null);
 
-    const seaDescriptionRef = useRef<HTMLParagraphElement>(null);
-    const seoDescriptionRef = useRef<HTMLParagraphElement>(null);
-    const sMediaDescriptionRef = useRef<HTMLParagraphElement>(null);
-    const eMarketingDescriptionRef = useRef<HTMLParagraphElement>(null);
-    const wFunnelsDescriptionRef = useRef<HTMLParagraphElement>(null);
-    const WeitereDescriptionRef = useRef<HTMLParagraphElement>(null);
-
-    const setMaxHeightForGroup = (elements: (HTMLElement | null)[]): void => {
-        // Grup içindeki en yüksek öğeyi bul
-        const heights = elements.map(element => element ? element.clientHeight : 0);
-        const maxHeight = Math.max(...heights);
-
-        // En yüksek değeri, grup içindeki her elemana uygula
-        elements.forEach(element => {
-            if (element) element.style.height = `${maxHeight}px`;
-        });
-    };
+    const [headerDescHeight, setHeaderDescHeight] = useState<number | string>(0);
+    const [descriptionHeight, setDescriptionHeight] = useState<number | string>(0);
 
     useEffect(() => {
-        const resizeObserver = new ResizeObserver(() => {
-            // Grup 1: Heading öğeleri
-            setMaxHeightForGroup([seaRef.current, seoRef.current, sMediaRef.current]);
-
-            // Grup 2: Diğer Heading öğeleri
-            setMaxHeightForGroup([eMarketingRef.current, wFunnelsRef.current, WeitereRef.current]);
-
-            // Grup 3: Description öğeleri
-            setMaxHeightForGroup([seaDescriptionRef.current, seoDescriptionRef.current, sMediaDescriptionRef.current]);
-
-            // Grup 4: Diğer Description öğeleri
-            setMaxHeightForGroup([eMarketingDescriptionRef.current, wFunnelsDescriptionRef.current, WeitereDescriptionRef.current]);
-        });
-
-        // Observe all refs (heading and paragraph elements)
-        const elementsToObserve = [
-            seaRef.current, seoRef.current, sMediaRef.current,
-            eMarketingRef.current, wFunnelsRef.current, WeitereRef.current,
-            seaDescriptionRef.current, seoDescriptionRef.current, sMediaDescriptionRef.current,
-            eMarketingDescriptionRef.current, wFunnelsDescriptionRef.current, WeitereDescriptionRef.current
-        ];
-
-        elementsToObserve.forEach(element => {
-            if (element) resizeObserver.observe(element);
-        });
-
-        // Cleanup observer on component unmount
-        return () => resizeObserver.disconnect();
+        const updateHeight = () => {
+            if (headerDescRef.current) {
+                setHeaderDescHeight(headerDescRef.current.offsetHeight);
+            }
+            if (descriptionRef.current) {
+                setDescriptionHeight(descriptionRef.current.offsetHeight);
+            }
+        };
+        updateHeight();
+        window.addEventListener("resize", updateHeight);
+        return () => {
+            window.removeEventListener("resize", updateHeight);
+        };
     }, []);
-
 
     return (
         <div className="flex flex-col">
@@ -328,13 +297,14 @@ const Services = () => {
                     whileInView="animate"
                     viewport={{ once: true }}
                     transition={{ delay: 0.7, duration: 0.3 }}
-                    className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center max-w-[1173px] gap-6 w-full mx-auto">
+                    className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center max-w-[1173px] gap-6 w-full mx-auto"
+                >
                     {/* sea */}
-                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6 ">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="analytics" />
-                            <h4 ref={seaRef} className="card-header md:text-[24px] text-[22px] tb-bold">SEA</h4>
-                            <p ref={seaDescriptionRef} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Suchmaschinenwerbung – Effektive Kampagnen auf Google und Bing für maximale Ergebnisse.</p>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">SEA</h4>
+                            <p style={{ height: `${descriptionHeight}px` }} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Suchmaschinenwerbung – Effektive Kampagnen auf Google und Bing für maximale Ergebnisse.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
@@ -345,11 +315,11 @@ const Services = () => {
 
                     </div>
                     {/* seo */}
-                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={search} alt="search" />
-                            <h4 ref={seoRef} className="card-header md:text-[24px] text-[22px] tb-bold">SEO</h4>
-                            <p ref={seoDescriptionRef} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">SEO</h4>
+                            <p style={{ height: `${descriptionHeight}px` }} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
@@ -360,11 +330,11 @@ const Services = () => {
 
                     </div>
                     {/* social media */}
-                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={likeImage} alt="system" />
-                            <h4 ref={sMediaRef} className="card-header md:text-[24px] text-[22px] tb-bold">Social Media Ads</h4>
-                            <p ref={sMediaDescriptionRef} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maximale Reichweite auf Plattformen wie , Facebook, Instagram, TikTok und LinkedIn.</p>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Social Media Ads</h4>
+                            <p style={{ height: `${descriptionHeight}px` }} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maximale Reichweite auf Plattformen wie Facebook, Instagram, TikTok und LinkedIn.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary3 h-[2px]"></div>
@@ -375,11 +345,11 @@ const Services = () => {
                     </div>
 
                     {/* email marketing */}
-                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={emailImage} alt="system" />
-                            <h4 ref={eMarketingRef} className="card-header md:text-[24px] text-[22px] tb-bold">Email Marketing</h4>
-                            <p ref={eMarketingDescriptionRef} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Email Marketing</h4>
+                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary3 h-[2px]"></div>
@@ -390,11 +360,11 @@ const Services = () => {
                     </div>
 
                     {/* website funnels */}
-                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={filterImage} alt="system" />
-                            <h4 ref={wFunnelsRef} className="card-header md:text-[24px] text-[22px] tb-bold">Website Funnels</h4>
-                            <p ref={wFunnelsDescriptionRef} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maßgeschneiderte Funnel-Websites, perfekt auf Ihre Kampagne abgestimmt.</p>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Website Funnels</h4>
+                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maßgeschneiderte Funnel-Websites, perfekt auf Ihre Kampagne abgestimmt.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-primary h-[2px]"></div>
@@ -404,12 +374,89 @@ const Services = () => {
                         </div>
                     </div>
 
+                    {/* Video- und Fotografie */}
+                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={stairsImage} alt="system" />
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Video- und Fotografie</h4>
+                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Professionelle visuelle Inhalte, die Ihre Marke ins richtige Licht rücken.</p>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary3 h-[2px]"></div>
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                                <Button className="tb-bold">Pläne</Button>
+                            </NavLink>
+                        </div>
+                    </div>
+
+                    {/* Grafikdesign */}
+                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={settingsImage} alt="system" />
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Grafikdesign</h4>
+                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Individuell gestaltete Grafiken, perfekt abgestimmt auf Ihre Marketingkampagnen.</p>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary3 h-[2px]"></div>
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                                <Button className="tb-bold">Pläne</Button>
+                            </NavLink>
+                        </div>
+                    </div>
+
+                    {/* Analytics-Tools und Tracking */}
+                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={pcImage} alt="system" />
+                            <h4 ref={headerDescRef} className="card-header md:text-[24px] text-[22px] tb-bold">Analytics-Tools und Tracking</h4>
+                            <p ref={descriptionRef} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Einrichtung von Analytics-Systemen, Tag Manager und Tracking-Lösungen für präzise Einblicke.</p>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                                <Button className="tb-bold">Pläne</Button>
+                            </NavLink>
+                        </div>
+                    </div>
+
+                    {/* Unternehmenslistung */}
+                    <div className="hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={playImage} alt="system" />
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</h4>
+                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                                <Button className="tb-bold">Pläne</Button>
+                            </NavLink>
+                        </div>
+                    </div>
+
+
+                    {/* yer tutucu */}
+                    <div className="lg:invisible lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={playImage} alt="system" />
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                                <Button className="tb-bold">Pläne</Button>
+                            </NavLink>
+                        </div>
+                    </div>
+                    {/* yer tutucu */}
+
                     {/* weitere marketinglösungen */}
-                    <div className="col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div className="mx-auto hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:max-w-[374px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={achievementImage} alt="system" />
-                            <h4 ref={WeitereRef} className="card-header md:text-[24px] text-[22px] tb-bold">Weitere Marketinglösungen</h4>
-                            <p ref={WeitereDescriptionRef} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Von Content-Marketing bis hin zu Google Unternehmenslistungen und vielem mehr.</p>
+                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold">Weitere Marketinglösungen</h4>
+                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Von Content-Marketing bis hin zu Google Unternehmenslistungen und vielem mehr.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                             <div className="w-[109px] bg-secondary2 h-[2px]"></div>
@@ -418,6 +465,22 @@ const Services = () => {
                             </NavLink>
                         </div>
                     </div>
+
+                    {/* yer tutucu */}
+                    <div className="lg:invisible lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                        <div className="flex items-center flex-col gap-6">
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={playImage} alt="system" />
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold">Unternehmenslistung</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
+                        </div>
+                        <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
+                            <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                                <Button className="tb-bold">Pläne</Button>
+                            </NavLink>
+                        </div>
+                    </div>
+                    {/* yer tutucu */}
 
                 </motion.div>
             </section>

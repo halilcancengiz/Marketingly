@@ -84,6 +84,8 @@ const HomeV1 = () => {
         }
     };
 
+
+
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>

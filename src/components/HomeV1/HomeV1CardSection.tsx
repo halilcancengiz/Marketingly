@@ -9,7 +9,7 @@ import filterImage from "../../assets/images/filter-icon.webp";
 
 import * as motion from "framer-motion/client";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 
@@ -28,82 +28,27 @@ const HomeV1CardSection = () => {
     };
 
 
+    const headerDescRef = useRef<HTMLDivElement | null>(null);
+    const descriptionRef = useRef<HTMLDivElement | null>(null);
+
+    const [headerDescHeight, setHeaderDescHeight] = useState<number | string>(0);
+    const [descriptionHeight, setDescriptionHeight] = useState<number | string>(0);
+
     useEffect(() => {
-        const updateHeightsFirstCardSection = () => {
-            const firstParagraphs = Array.from(document.getElementsByClassName("card-description")) as HTMLParagraphElement[]
-
-            if (window.innerWidth >= 992) {
-                // 994px ve üzeri: İlk paragrafın yüksekliğini diğerlerine uygula
-                if (firstParagraphs.length > 0) {
-                    const firstHeight = firstParagraphs[0].clientHeight
-                    firstParagraphs.forEach(paragraph => {
-                        paragraph.style.height = `${firstHeight}px`
-                    })
-                }
-            } else {
-                // 993px ve altı: Her paragrafın yüksekliğini kaldır
-                firstParagraphs.forEach(paragraph => {
-                    paragraph.style.height = "auto"
-                })
+        const updateHeight = () => {
+            if (headerDescRef.current) {
+                setHeaderDescHeight(headerDescRef.current.offsetHeight);
             }
-        }
-
-        const updateHeightsSecondCardSection = () => {
-            const secondParagraphs = Array.from(document.getElementsByClassName("second-card-description")) as HTMLParagraphElement[]
-
-            if (window.innerWidth >= 992) {
-                // 994px ve üzeri: İlk paragrafın yüksekliğini diğerlerine uygula
-                if (secondParagraphs.length > 0) {
-                    const firstHeight = secondParagraphs[2].clientHeight
-                    secondParagraphs.forEach(paragraph => {
-                        paragraph.style.height = `${firstHeight}px`
-                    })
-                }
-            } else {
-                // 993px ve altı: Her paragrafın yüksekliğini kaldır
-                secondParagraphs.forEach(paragraph => {
-                    paragraph.style.height = "auto"
-                })
-            }
-        }
-        const updateHeightsSecondCardHeader = () => {
-            const headers = Array.from(document.getElementsByClassName("card-header")) as HTMLDivElement[];
-
-            if (window.innerWidth >= 992) {
-                // 992px ve üzeri: İlk 3 elemanı hariç tut ve en yüksek height değerini uygula
-                if (headers.length > 3) {
-                    const filteredHeaders = headers.slice(3); // İlk 3 elemanı hariç tut
-                    const maxHeight = Math.max(...filteredHeaders.map(h => h.clientHeight));
-                    filteredHeaders.forEach(h => {
-                        h.style.height = `${maxHeight}px`;
-                    });
-                }
-            } else {
-                // 991px ve altı: Her paragrafın yüksekliğini kaldır
-                headers.forEach(h => {
-                    h.style.height = "auto";
-                });
+            if (descriptionRef.current) {
+                setDescriptionHeight(descriptionRef.current.offsetHeight);
             }
         };
-
-
-        // İlk yükleme sırasında yükseklik ayarla
-        updateHeightsFirstCardSection()
-        updateHeightsSecondCardSection()
-        updateHeightsSecondCardHeader()
-
-        // Pencere yeniden boyutlandırıldığında yükseklikleri güncelle
-        window.addEventListener("resize", updateHeightsFirstCardSection)
-        window.addEventListener("resize", updateHeightsSecondCardSection)
-        window.addEventListener("resize", updateHeightsSecondCardHeader)
-
+        updateHeight();
+        window.addEventListener("resize", updateHeight);
         return () => {
-            // Etkinlik dinleyicisini kaldır
-            window.removeEventListener("resize", updateHeightsFirstCardSection)
-            window.removeEventListener("resize", updateHeightsSecondCardSection)
-            window.removeEventListener("resize", updateHeightsSecondCardHeader)
-        }
-    }, [])
+            window.removeEventListener("resize", updateHeight);
+        };
+    }, []);
 
     return (
         <section className="3xl:py-[220px] lg:py-[176px] md:py-[140px] xs:py-[113px] py-[90px] xs:px-6 px-4 flex flex-col bg-neutral-200">
@@ -143,8 +88,8 @@ const HomeV1CardSection = () => {
                             alt="analytics"
 
                         />
-                        <h3 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEA</h3>
-                        <p className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Suchmaschinenwerbung – Effektive Kampagnen auf Google und Bing für maximale Ergebnisse.</p>
+                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEA</h3>
+                        <p ref={descriptionRef} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Suchmaschinenwerbung – Effektive Kampagnen auf Google und Bing für maximale Ergebnisse.</p>
                     </div>
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                         <div className="w-[109px] bg-secondary2 h-[2px]"></div>
@@ -161,8 +106,8 @@ const HomeV1CardSection = () => {
                             className="object-contain size-[86px] rounded-[10px]"
                             src={search}
                             alt="search" />
-                        <h3 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEO</h3>
-                        <p className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
+                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEO</h3>
+                        <p style={{height:`${descriptionHeight}px`}} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
                     </div>
 
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
@@ -181,8 +126,8 @@ const HomeV1CardSection = () => {
                             alt="analytics"
 
                         />
-                        <h3 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Social Media Ads</h3>
-                        <p className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Maximale Reichweite auf Plattformen wie , Facebook, Instagram, TikTok und LinkedIn.</p>
+                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Social Media Ads</h3>
+                        <p style={{height:`${descriptionHeight}px`}} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Maximale Reichweite auf Plattformen wie Facebook, Instagram, TikTok und LinkedIn.</p>
                     </div>
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
                         <div className="w-[109px] bg-secondary3 h-[2px]"></div>
@@ -192,14 +137,14 @@ const HomeV1CardSection = () => {
                     </div>
                 </div>
 
-                <div aria-label="Open unternehmenslistung plan page" onClick={() => navigate("/google-ads-plan", { replace: true })}  className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                <div aria-label="Open unternehmenslistung plan page" onClick={() => navigate("/google-ads-plan", { replace: true })} className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                     <div className="flex items-center flex-col gap-6">
                         <img
                             className="object-contain size-[86px] rounded-[10px]"
                             src={emailImage}
                             alt="system" />
                         <h3 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Email Marketing</h3>
-                        <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
+                        <p style={{height:`${descriptionHeight}px`}} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
 
                     </div>
 
@@ -218,8 +163,8 @@ const HomeV1CardSection = () => {
                             className="object-contain size-[86px] rounded-[10px]"
                             src={filterImage}
                             alt="system" />
-                        <h3 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Website Funnels</h3>
-                        <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Maßgeschneiderte Funnel-Websites, perfekt auf Ihre Kampagne abgestimmt.</p>
+                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Website Funnels</h3>
+                        <p style={{height:`${descriptionHeight}px`}} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Maßgeschneiderte Funnel-Websites, perfekt auf Ihre Kampagne abgestimmt.</p>
                     </div>
 
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
@@ -230,15 +175,15 @@ const HomeV1CardSection = () => {
                     </div>
                 </div>
 
-                <div aria-label="Open unternehmenslistung plan page"  onClick={() => navigate("/kontakt", { replace: true })} className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
+                <div aria-label="Open unternehmenslistung plan page" onClick={() => navigate("/kontakt", { replace: true })} className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
                     <div className="flex items-center flex-col gap-6">
                         <img
 
                             className="object-contain size-[86px] rounded-[10px]"
                             src={achievementImage}
                             alt="system" />
-                        <h3 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Weitere Marketinglösungen</h3>
-                        <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Von Content-Marketing bis hin zu Google Unternehmenslistungen und vielem mehr.</p>
+                        <h3 ref={headerDescRef} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Weitere Marketinglösungen</h3>
+                        <p style={{height:`${descriptionHeight}px`}} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Unzählige weite Marketingleistungen, abgestimmt auf Ihren individuellen Bedarf.</p>
                     </div>
 
                     <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">

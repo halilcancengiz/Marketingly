@@ -1,17 +1,16 @@
-import circlesImage from "../assets/images/circles.webp"
-import trianglesImage from "../assets/images/triangles.webp"
-import squaresImage from "../assets/images/squares.webp"
-import check from "../assets/images/check.webp";
-import Accordion from "../components/Accordion";
-import Button from "../components/Button";
-import { NavLink } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import circlesImage from "../../assets/images/circles.webp"
+import trianglesImage from "../../assets/images/triangles.webp"
+import squaresImage from "../../assets/images/squares.webp"
+import check from "../../assets/images/check.webp";
+import Accordion from "../../components/Accordion";
+import Button from "../../components/Button";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
+import APP_CONFIG from '../../../public/config.ts';
 import { useEffect, useRef, useState } from "react";
-import APP_CONFIG from '../../public/config.ts';
-import logo from "../assets/images/logo.webp"
 
-const AdsPlan = () => {
+const SeaPreise = () => {
+    const navigate = useNavigate()
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,
@@ -34,55 +33,35 @@ const AdsPlan = () => {
         }
     };
 
+    const cardTopHeaderRef = useRef<HTMLDivElement>(null)
+    const cardTopPriceRef = useRef<HTMLDivElement>(null)
+    const checkListRef = useRef<HTMLDivElement>(null)
 
-    const headerDescRef = useRef<HTMLDivElement | null>(null);
-    const priceRef = useRef<HTMLDivElement | null>(null);
-    const checkListRef = useRef<HTMLDivElement | null>(null);
-    const [headerDescHeight, setHeaderDescHeight] = useState<number>(0);
-    const [priceHeight, setPriceHeight] = useState<number>(0);
-    const [checkListHeight, setCheckListHeight] = useState<number>(0);
+    const [heights, setHeights] = useState({
+        headerHeight: 0,
+        priceHeight: 0,
+        checklistHeight: 0
+    });
 
     useEffect(() => {
-        // Function to update the height
-        const updateHeight = () => {
-            if (headerDescRef.current) {
-                setHeaderDescHeight(headerDescRef.current.offsetHeight);
-            }
-            if (priceRef.current) {
-                setPriceHeight(priceRef.current.offsetHeight);
-            }
-            if (checkListRef.current) {
-                setCheckListHeight(checkListRef.current.offsetHeight);
-            }
-        };
+        const handleResize = () => {
+            setHeights({
+                headerHeight: cardTopHeaderRef.current?.offsetHeight || 0,
+                priceHeight: cardTopPriceRef.current?.offsetHeight || 0,
+                checklistHeight: checkListRef.current?.offsetHeight || 0
+            });
+        }
 
-        // Initial height calculation
-        updateHeight();
+        // Initial call
+        handleResize();
 
-        // Update height on window resize
-        window.addEventListener("resize", updateHeight);
-
-        // Cleanup the event listener on unmount
-        return () => {
-            window.removeEventListener("resize", updateHeight);
-        };
+        // Add resize listener
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
-
 
     return (
         <div className="flex flex-col">
-            <Helmet>
-                <title>Google Ads-Pläne für effektives Marketing</title>
-                {/* <meta name="description" content="Unsere Google Ads-Pläne bieten gezielte Werbelösungen, um Ihre Reichweite zu erhöhen und Conversion-Raten zu maximieren." />
-                <meta name="keywords" content="Google Ads, effektive Werbung, Reichweite erhöhen, Conversion-Optimierung" /> */}
-                <meta name="robots" content="index, follow" />
-                <meta property="og:title" content="Google Ads-Pläne für effektives Marketing" />
-                <meta property="og:description" content="Erreichen Sie Ihre Zielgruppe effizient mit unseren professionellen Google Ads-Plänen." />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content={`${APP_CONFIG.base_url}google-ads-plan`} />
-                <meta property="og:image" content={logo} />
-                <link rel="canonical" href="https://superagentur-marketing.de/google-ads-plan" />     
-            </Helmet>
             <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
                 <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
                     <motion.div
@@ -91,7 +70,7 @@ const AdsPlan = () => {
                         whileInView="animate"
                         viewport={{ once: true }}
                         transition={{ delay: 0.15, duration: 0.3 }}
-                        className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">Unsere Pläne</motion.div>
+                        className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">Unsere SEA Pläne</motion.div>
                     <motion.h1
                         variants={fadeInAnimationVariant}
                         initial="initial"
@@ -101,13 +80,13 @@ const AdsPlan = () => {
                         className="mb-[15px] lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] tb-bold lg:leading-[61.02px] md:leading-[50.85px] xs:leading-[42.94px] leading-[36.16px] ">
                         Pläne für jeden Bedarf
                     </motion.h1>
-                    <motion.div
+                    <motion.p
                         variants={fadeInAnimationVariant}
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
                         transition={{ delay: 0.35, duration: 0.3 }}
-                        className="tb-medium text-[18px] leading-[30.006px]">Unsere Preismodelle bieten flexible Lösungen für jedes Budget und jeden Bedarf.</motion.div>
+                        className="tb-medium text-[18px] leading-[30.006px]">Unsere Preismodelle bieten flexible Lösungen für jedes Budget und jeden Bedarf.</motion.p>
                 </div>
 
                 {/* shapes start */}
@@ -237,78 +216,81 @@ const AdsPlan = () => {
                     transition={{ delay: 0.6, duration: 0.3 }}
                     className="grid lg:grid-cols-3 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
                     {/* Basis */}
-                    <NavLink aria-label="Open basic package detail page" to="/google-ads-plan-basis-paket-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
-                        <div className="size-[74px] min-w-[74px] min-h-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                    <div onClick={() => navigate("/sea-basis", { replace: true })} aria-label="Open basic package detail page" className="cursor-pointer col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+                        <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
                         </div>
 
-                        <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                            Basis
-                        </h2>
-                        <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"></span> </div>
-                        <div style={{ height: `${priceHeight}px` }} className="flex flex-col mt-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.google_ads.basis} €</div>
+                        <div style={{ height: heights.headerHeight }} className="flex flex-col">
+                            <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+                                Basis
+                            </h2>
+                            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"></span> </div>
+                        </div>
+
+                        <div style={{ height: heights.priceHeight }} className="flex flex-col lg:mt-[20px]">
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEA.basis} €</div>
                             <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
                         </div>
 
-
                         <hr className="w-full my-[35px]" />
-                        <div style={{ height: `${checkListHeight}px` }} className="flex flex-col gap-[16px] mb-10">
+                        <div style={{ height: heights.checklistHeight }} className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {APP_CONFIG.campaign_limits_google_ads.basis} €</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {APP_CONFIG.campaign_limits.SEA.basis} €</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und grundlegende Verwaltung von Google Ads-Kampagnen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und grundlegende Verwaltung von SEA-Kampagnen, beschränkt auf Google Ads</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Monatliches Reporting mit den wichtigsten Leistungskennzahlen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Monatliches Reporting mit den wichtigsten Leistungskennzahlen </div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Umfassender Support per E-Mail und Telefon während der Geschäftszeiten</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Umfassender Support per E-Mail und Telefon während der Geschäftszeiten </div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einfache Keyword-Recherche und Anzeigenerstellung</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einfache Keyword-Recherche und Anzeigenerstellun</div>
                             </div>
+                            <br />
                         </div>
                         <Button className="tb-bold">Details</Button>
 
-                    </NavLink>
+                    </div>
 
 
                     {/* Standart */}
-                    <NavLink aria-label="Open standart package detail page" to="/google-ads-plan-standard-paket-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+                    <div onClick={() => navigate("/sea-standard", { replace: true })} aria-label="Open standart package detail page" className="cursor-pointer col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
                         <div className="absolute left-0 top-0 py-1 px-9 tb-bold text-white bg-primary rounded-br-[20px]">Bestseller</div>
 
-                        <div className="size-[74px]  min-w-[74px] min-h-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                        <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
                         </div>
 
-                        <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                            Standard
-                        </h2>
-                        <div ref={headerDescRef} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
-
-                        <div ref={priceRef} className="flex flex-col mt-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.google_ads.standard} €</div>
-                            <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
+                        <div ref={cardTopHeaderRef} className="flex flex-col">
+                            <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+                                Standard
+                            </h2>
+                            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
                         </div>
 
-
+                        <div style={{ height: heights.priceHeight }} className="flex flex-col lg:mt-[20px]">
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEA.standard} €</div>
+                            <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
+                        </div>
 
                         <hr className="w-full my-[35px]" />
                         <div ref={checkListRef} className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {APP_CONFIG.campaign_limits_google_ads.standard} €</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung von Werbebudgets bis zu {APP_CONFIG.campaign_limits.SEA.standard} €</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Umfassende Kampagnenverwaltung mit regelmäßigen Optimierungen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und umfassende Verwaltung von SEA-Kampagnen für Google Ads und Bing Ads mit regelmäßigen Optimierungen</div>
                             </div>
                             <div className="flex items-center gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -324,39 +306,41 @@ const AdsPlan = () => {
                             </div>
                         </div>
                         <Button className="tb-bold">Details</Button>
-                    </NavLink>
+                    </div>
 
 
                     {/* Premium */}
-                    <NavLink aria-label="Open premium package detail page" to="/google-ads-plan-premium-paket-detail" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+                    <div onClick={() => navigate("/sea-premium", { replace: true })} aria-label="Open premium package detail page" className="cursor-pointer col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
 
-                        <div className="size-[74px]  min-w-[74px] min-h-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                        <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
                             <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
                         </div>
+                        <div style={{ height: heights.headerHeight }} className="flex flex-col">
+                            <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
+                                Premium
+                            </h2>
+                            <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
+                        </div>
 
-                        <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                            Premium
-                        </h2>
-                        <div style={{ height: `${headerDescHeight}px` }} className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
-                        <div style={{ height: `${priceHeight}px` }} className="flex flex-col mt-[20px]">
-                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.google_ads.premium}</div>
+                        <div ref={cardTopPriceRef} className="flex flex-col lg:mt-[20px]">
+                            <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEO.premium}</div>
                             <div className="tb-medium text-neutral-600">Kontaktieren Sie unseren Vertrieb.</div>
                         </div>
 
-
                         <hr className="w-full my-[35px]" />
-                        <div style={{ height: `${checkListHeight}px` }} className="flex flex-col gap-[16px] mb-10">
+                        <div style={{ height: heights.checklistHeight }} className="flex flex-col gap-[16px] mb-10">
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Verwaltung unbegrenzter Werbebudgets</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Individuelle Kampagnenstrategien und fortlaufende Optimierungen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und individuelle Kampagnenstrategien für Google Ads und Bing Ads mit fortlaufenden Optimierungen</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Monatliches Reporting mit tiefgehenden Analysen und Handlungsempfehlungen</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Monatliches Reporting mit tiefgehenden Analysen
+                                </div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -369,7 +353,7 @@ const AdsPlan = () => {
                         </div>
                         <Button className="tb-bold">Details</Button>
 
-                    </NavLink>
+                    </div>
                 </motion.div>
             </section>
 
@@ -427,9 +411,6 @@ const AdsPlan = () => {
                         <Accordion
                             title="Wie funktioniert die Bezahlung?"
                             content="Die Bezahlung erfolgt je nach Dienstleistung entweder als einmalige Gebühr oder wird monatlich abgerechnet." />
-
-
-
                     </div>
                 </div>
             </motion.section>
@@ -437,4 +418,4 @@ const AdsPlan = () => {
     )
 }
 
-export default AdsPlan
+export default SeaPreise
