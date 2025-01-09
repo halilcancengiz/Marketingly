@@ -81,18 +81,17 @@ const HomeV1CardSection = () => {
                 transition={{ delay: 0.4, duration: 0.3 }}
                 className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1176px] w-full mx-auto">
                 <div onClick={() => navigate("/sea-preise", { replace: true })} aria-label="Open sea-preise page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
-                    <div className="flex items-center flex-col gap-6">
+                    <div className="flex items-center flex-col">
                         <img
-                            className="object-contain size-[86px] rounded-[10px]"
+                            className="object-contain size-[86px] rounded-[10px] mb-6"
                             src={analytics}
                             alt="analytics"
-
                         />
-                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEA</h3>
+                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">SEA</h3>
                         <p ref={descriptionRef} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Suchmaschinenwerbung – Effektive Kampagnen auf Google und Bing für maximale Ergebnisse.</p>
                     </div>
-                    <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
-                        <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
                         <div aria-label="Open sea-preise page">
                             <Button className="tb-bold">Pläne</Button>
                         </div>
@@ -100,18 +99,17 @@ const HomeV1CardSection = () => {
                 </div>
 
                 <div onClick={() => navigate("/seo-preise", { replace: true })} aria-label="Open seo-preise page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
-                    <div className="flex items-center flex-col gap-6">
+                    <div className="flex items-center flex-col">
                         <img
-
-                            className="object-contain size-[86px] rounded-[10px]"
+                            className="object-contain size-[86px] rounded-[10px] mb-6"
                             src={search}
                             alt="search" />
-                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEO</h3>
+                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">SEO</h3>
                         <p style={{height:`${descriptionHeight}px`}} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
                     </div>
 
-                    <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
-                        <div className="w-[109px] bg-primary h-[2px]"></div>
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="w-[109px] bg-primary h-[2px] md:my-[34px] my-[30px]"></div>
                         <div aria-label="Open seo-preise page" >
                             <Button className="tb-bold">Pläne</Button>
                         </div>
@@ -119,18 +117,18 @@ const HomeV1CardSection = () => {
                 </div>
 
                 <div onClick={() => navigate("/social-media-ads-preise", { replace: true })} aria-label="Open social-media-ads-preise page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
-                    <div className="flex items-center flex-col gap-6">
+                    <div className="flex items-center flex-col">
                         <img
-                            className="object-contain size-[86px] rounded-[10px]"
+                            className="object-contain size-[86px] rounded-[10px] mb-6"
                             src={likeImage}
                             alt="analytics"
 
                         />
-                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Social Media Ads</h3>
+                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Social Media Ads</h3>
                         <p style={{height:`${descriptionHeight}px`}} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Maximale Reichweite auf Plattformen wie Facebook, Instagram, TikTok und LinkedIn.</p>
                     </div>
-                    <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
-                        <div className="w-[109px] bg-secondary3 h-[2px]"></div>
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
                         <div aria-label="Open social-media-ads-preise page">
                             <Button className="tb-bold">Pläne</Button>
                         </div>
@@ -138,18 +136,18 @@ const HomeV1CardSection = () => {
                 </div>
 
                 <div onClick={() => navigate("/email-marketing-preise", { replace: true })} aria-label="Open email-marketing-preise page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
-                    <div className="flex items-center flex-col gap-6">
+                    <div className="flex items-center flex-col">
                         <img
-                            className="object-contain size-[86px] rounded-[10px]"
+                            className="object-contain size-[86px] rounded-[10px] mb-6"
                             src={emailImage}
                             alt="system" />
-                        <h3 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Email Marketing</h3>
+                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Email Marketing</h3>
                         <p style={{height:`${descriptionHeight}px`}} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
 
                     </div>
 
-                    <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
-                        <div className="w-[109px] bg-secondary3 h-[2px]"></div>
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
                         <div aria-label="Open email-marketing-preise page">
                             <Button className="tb-bold">Pläne</Button>
                         </div>
@@ -157,18 +155,17 @@ const HomeV1CardSection = () => {
                 </div>
 
                 <div onClick={() => navigate("/websitefunnel-preise", { replace: true })} aria-label="Open unternehmenslistung-preis page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex min-h-[410px] flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
-                    <div className="flex items-center flex-col gap-6">
+                    <div className="flex items-center flex-col">
                         <img
-
-                            className="object-contain size-[86px] rounded-[10px]"
+                            className="object-contain size-[86px] rounded-[10px] mb-6"
                             src={filterImage}
                             alt="system" />
-                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Website Funnels</h3>
+                        <h3 style={{height:`${headerDescHeight}px`}} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Website Funnels</h3>
                         <p style={{height:`${descriptionHeight}px`}} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Maßgeschneiderte Funnel-Websites, perfekt auf Ihre Kampagne abgestimmt.</p>
                     </div>
 
-                    <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
-                        <div className="w-[109px] bg-primary h-[2px]"></div>
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="w-[109px] bg-primary h-[2px] md:my-[34px] my-[30px]"></div>
                         <div aria-label="Open websitefunnel-preise page">
                             <Button className="tb-bold">Pläne</Button>
                         </div>
@@ -176,18 +173,17 @@ const HomeV1CardSection = () => {
                 </div>
 
                 <div onClick={() => navigate("/kontakt", { replace: true })} aria-label="Open kontakt page" className="cursor-pointer col-span-1 rounded-[18px] group hover-up-md py-16 px-6 flex flex-col items-center text-center homev1-card-shadow border-[1px] border-neutral-300">
-                    <div className="flex items-center flex-col gap-6">
+                    <div className="flex items-center flex-col">
                         <img
-
-                            className="object-contain size-[86px] rounded-[10px]"
+                            className="object-contain size-[86px] rounded-[10px] mb-6"
                             src={achievementImage}
                             alt="system" />
-                        <h3 ref={headerDescRef} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Weitere Marketinglösungen</h3>
+                        <h3 ref={headerDescRef} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Weitere Marketinglösungen</h3>
                         <p style={{height:`${descriptionHeight}px`}} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Unzählige weite Marketingleistungen, abgestimmt auf Ihren individuellen Bedarf.</p>
                     </div>
 
-                    <div className="flex flex-col items-center justify-center gap-5 mt-[20px]">
-                        <div className="w-[109px] bg-secondary2 h-[2px]"></div>
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
                         <div aria-label="Open Unternehmenslistung page">
                             <Button className="tb-bold">Anfrage</Button>
                         </div>
