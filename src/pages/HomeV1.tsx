@@ -113,7 +113,7 @@ const HomeV1 = () => {
                                 whileInView="animate"
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.7, duration: 0.3 }}
-                                className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.5px]">
+                                className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.6px]">
                                 Ihr Partner für digitale Werbung
                             </motion.h2>
                             <motion.h1

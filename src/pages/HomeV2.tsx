@@ -810,7 +810,7 @@
 //                         viewport={{ once: true }}
 //                         transition={{ delay: 0.1, duration: 0.3 }}
 //                         className="lg:max-w-[436px] max-w-[660px] lg:mb-0 mb-20 lg:w-auto w-full min-w-[288px] flex flex-col lg:mr-10">
-//                         <div className="text-primary uppercase md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base tracking-[1.6px]">Wieso Superagentur</div>
+//                         <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.6px]">Wieso Superagentur</div>
 //                         <div className="col-span-1 md:text-[38px] xs:text-[32px] text-[26px] leading-[34px] xs:leading-[42px] md:leading-[50px] tb-bold text-neutral-800 md:mb-5 xs:mb-[15px] mb-[10px]">Warum sollten Sie mit uns arbeiten?</div>
 //                         <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium"> Es gibt viele Agenturen – aber nur wenige stecken so viel Leidenschaft hinein wie wir.</p>
 //                         <NavLink aria-label="Open contact page" to="/kontakt" className="mt-10 xs:w-auto w-full">

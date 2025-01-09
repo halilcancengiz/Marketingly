@@ -31,7 +31,7 @@ const HomeV1SeventhSection = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.3, duration: 0.3 }}
                     className="flex flex-col items-center justify-center max-w-[550px] w-full lg:mb-[60px] xs:mb-[50px] mb-10">
-                    <div className="text-primary uppercase mb-5 tb-medium text-base tracking-[1.6px]">Unser Prozess</div>
+                    <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.6px]">Unser Prozess</div>
                     <h2 className="text-center md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800">Ein einfacher, aber effektiver Drei-Schritte-Prozess</h2>
                 </motion.div>
                 <motion.div

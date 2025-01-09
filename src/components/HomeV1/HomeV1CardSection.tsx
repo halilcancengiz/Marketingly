@@ -61,7 +61,7 @@ const HomeV1CardSection = () => {
                 id="unsereDienstleistungen"
                 className="flex lg:flex-row flex-col lg:items-end items-center lg:text-start text-center justify-between lg:max-w-[1173px] max-w-[660px] w-full mx-auto lg:mb-[60px] md:mb-[50px] mb-10 lg:gap-6">
                 <div className="flex flex-col max-w-[600px] w-full lg:mb-0 mb-[28px]">
-                    <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-base leading-[18px] uppercase text-primary tb-medium tracking-[1.6px]">Unsere Dienstleistungen</div>
+                    <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.6px]">Unsere Dienstleistungen</div>
                     <h2 className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">Mit uns an Ihrer Seite maximieren Sie Ihre Sichtbarkeit!</h2>
                 </div>
                 <div className="flex xs:flex-row flex-col items-center justify-center gap-6 xs:w-auto w-full">
