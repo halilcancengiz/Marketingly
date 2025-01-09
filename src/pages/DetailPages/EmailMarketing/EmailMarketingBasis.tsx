@@ -53,20 +53,19 @@ const EmailMarketingBasis = () => {
   };
   return (
     <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
+      
       <Helmet>
-        <title>SEO Basis-Paket – Bessere Sichtbarkeit für Ihre Website</title>
-        <meta name="description" content="Mit grundlegenden SEO-Optimierungen legen wir die Basis für Ihre bessere Auffindbarkeit in Suchmaschinen." />
-        <meta name="keywords" content="SEO, Basis-Paket, Sichtbarkeit, Suchmaschinenoptimierung" />
-        <meta property="og:title" content="SEO Basis-Paket – Bessere Sichtbarkeit für Ihre Website" />
-        <meta property="og:description" content="Erhöhen Sie Ihre Online-Sichtbarkeit durch grundlegende SEO-Optimierungen." />
-
+        <title>E-Mail-Marketing Basis Paket | Superagentur</title>
+        <meta property="og:title" content="E-Mail-Marketing Basis Paket | Superagentur" />
+        <meta name="description" content="E-Mail-Marketing für Einsteiger – automatisierte Kampagnen für eine effektive und unkomplizierte Kundenkommunikation." />
+        <meta property="og:description" content="E-Mail-Marketing für Einsteiger – automatisierte Kampagnen für eine effektive und unkomplizierte Kundenkommunikation." />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${APP_CONFIG.base_url}seo-plan-basis-paket-detail`} />
+        <meta property="og:url" content={`${APP_CONFIG.base_url}email-marketing-basis`} />
         <meta property="og:image" content={logo} />
-        <link rel="canonical" href="https://superagentur-marketing.de/seo-plan-basis-paket-detail" />
-
+        <link rel="canonical" href="https://superagentur-marketing.de/email-marketing-basis" />
       </Helmet>
+
       <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
         <motion.div
           variants={fadeInAnimationVariant}

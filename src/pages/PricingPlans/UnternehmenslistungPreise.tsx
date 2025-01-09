@@ -1,12 +1,13 @@
 
 import trianglesImage from "../../assets/images/triangles.webp"
-
 import check from "../../assets/images/check.webp";
 import Accordion from "../../components/Accordion";
 import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../public/config.ts';
+import { Helmet } from "react-helmet";
+import logo from "../../assets/images/logo.webp"
 
 
 const UnternehmenslistungPreise = () => {
@@ -36,6 +37,19 @@ const UnternehmenslistungPreise = () => {
 
   return (
     <div className="flex flex-col">
+
+      <Helmet>
+        <title>Unternehmenslistung Preis | Superagentur</title>
+        <meta property="og:title" content="Unternehmenslistung Preis | Superagentur" />
+        <meta name="description" content="Google My Business Profile für maximale Sichtbarkeit – transparente Preise für Ihre Präsenz in relevanten Verzeichnissen." />
+        <meta property="og:description" content="Google My Business Profile für maximale Sichtbarkeit – transparente Preise für Ihre Präsenz in relevanten Verzeichnissen." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${APP_CONFIG.base_url}unternehmenslistung-preis`} />
+        <meta property="og:image" content={logo} />
+        <link rel="canonical" href="https://superagentur-marketing.de/unternehmenslistung-preis" />
+      </Helmet>
+
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
         <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
           <motion.div
@@ -233,7 +247,7 @@ const UnternehmenslistungPreise = () => {
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Optimierung für bessere Auffindbarkeit in lokalen Suchergebnissen</div>
               </div>
-              
+
             </div>
             <Button className="tb-bold">Details</Button>
           </div>

@@ -49,18 +49,15 @@ const Thankyou = () => {
     return (
         <div className='3xl:pt-[95px] lg:pt-[76px] md:pt-[60px] xs:pt-[50px] pt-10 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] bg-white flex flex-col items-center justify-center px-6 relative overflow-hidden'>
             <Helmet>
-                <title>Vielen Dank für Ihre Anfrage!</title>
-                 <meta name="description" content="Ihre Anfrage wurde erfolgreich übermittelt. Erfahren Sie, wie es weitergeht, und lassen Sie uns gemeinsam an Ihrer Vision arbeiten." />
-                <meta name="keywords" content="Danke-Seite, Anfrage bestätigt, nächster Schritt" /> 
-                <meta property="og:title" content="Vielen Dank für Ihre Anfrage!" />
-                <meta property="og:description" content="Wir haben Ihre Anfrage erhalten und melden uns in Kürze mit den nächsten Schritten." />
-
-                <meta name="robots" content="index, follow" />
+                <title>Danke für Ihre Anfrage | Superagentur</title>
+                <meta property="og:title" content="Danke für Ihre Anfrage | Superagentur" />
+                <meta name="description" content="Vielen Dank für Ihre Anfrage bei Superagentur! Entdecken Sie unsere Leistungen und starten Sie jetzt Ihren digitalen Erfolg." />
+                <meta property="og:description" content="Vielen Dank für Ihre Anfrage bei Superagentur! Entdecken Sie unsere Leistungen und starten Sie jetzt Ihren digitalen Erfolg." />
+                <meta name="robots" content="noindex, follow" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}danke-seite`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/danke-seite" />
-             
             </Helmet>
             <motion.div
                 initial={{ opacity: 0, y: 20 }}

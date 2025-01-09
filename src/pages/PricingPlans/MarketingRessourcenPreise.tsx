@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../public/config.ts';
 import { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet";
+import logo from "../../assets/images/logo.webp"
 
 const MarketingRessourcenPreise = () => {
   const navigate = useNavigate()
@@ -62,6 +64,19 @@ const MarketingRessourcenPreise = () => {
 
   return (
     <div className="flex flex-col">
+
+      <Helmet>
+        <title>Marketing-Ressourcen Preise | Superagentur</title>
+        <meta property="og:title" content="Marketing-Ressourcen Preise | Superagentur" />
+        <meta name="description" content="Klare Preise für Marketing-Ressourcen – professionelle Grafiken für erfolgreiche Kampagnen." />
+        <meta property="og:description" content="Klare Preise für Marketing-Ressourcen – professionelle Grafiken für erfolgreiche Kampagnen." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${APP_CONFIG.base_url}marketing-ressourcen-preise`} />
+        <meta property="og:image" content={logo} />
+        <link rel="canonical" href="https://superagentur-marketing.de/marketing-ressourcen-preise" />
+      </Helmet>
+
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
         <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
           <motion.div
@@ -311,7 +326,7 @@ const MarketingRessourcenPreise = () => {
             <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
               <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
             </div>
-            <div style={{ height: heights.headerHeight }}  className="flex flex-col">
+            <div style={{ height: heights.headerHeight }} className="flex flex-col">
               <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
                 Premium
               </h2>

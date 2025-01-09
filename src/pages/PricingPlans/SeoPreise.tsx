@@ -8,6 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../public/config.ts';
 import { useEffect, useRef, useState } from "react";
+import { Helmet } from "react-helmet";
+import logo from "../../assets/images/logo.webp"
 
 const SeoPreise = () => {
   const navigate = useNavigate()
@@ -62,6 +64,19 @@ const SeoPreise = () => {
 
   return (
     <div className="flex flex-col">
+
+      <Helmet>
+        <title>SEO Preise | Superagentur</title>
+        <meta property="og:title" content="SEO Preise | Superagentur" />
+        <meta name="description" content="Unsere SEO-Preise bieten faire und transparente Lösungen für nachhaltigen Erfolg in den Suchmaschinen." />
+        <meta property="og:description" content="Unsere SEO-Preise bieten faire und transparente Lösungen für nachhaltigen Erfolg in den Suchmaschinen." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${APP_CONFIG.base_url}seo-preise`} />
+        <meta property="og:image" content={logo} />
+        <link rel="canonical" href="https://superagentur-marketing.de/seo-preise" />
+      </Helmet>
+
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
         <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">
           <motion.div

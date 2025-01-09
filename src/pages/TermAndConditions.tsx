@@ -74,17 +74,15 @@ const TermAndConditions = () => {
         <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] 3xl:pt-[123px] 3xl:pb-[123px] px-6 relative bg-[#F8F9FF]">
 
             <Helmet>
-                <title>Datenschutzrichtlinien von Superagentur</title>
-                <meta name="description" content="Informieren Sie sich, wie Superagentur Ihre Daten schützt und DSGVO-konform verwendet." />
-                <meta name="keywords" content="Datenschutz, Datenverwendung, Datensicherheit, DSGVO" />
-                <meta property="og:title" content="Datenschutzrichtlinien von Superagentur" />
-                <meta property="og:description" content="Ihre Privatsphäre ist uns wichtig. Lesen Sie, wie wir Ihre Daten sicher und verantwortungsvoll behandeln." />
+                <title>Datenschutz & AGBs | Superagentur</title>
+                <meta property="og:title" content="Datenschutz & AGBs | Superagentur" />
+                <meta name="description" content="Erfahren Sie alles über unsere Datenschutzrichtlinien und AGBs – für eine transparente und vertrauensvolle Zusammenarbeit." />
+                <meta property="og:description" content="Erfahren Sie alles über unsere Datenschutzrichtlinien und AGBs – für eine transparente und vertrauensvolle Zusammenarbeit." />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}datenschutz-und-agbs`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/datenschutz-und-agbs" />
-
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
 
@@ -2876,7 +2874,7 @@ const TermAndConditions = () => {
                         <div className="text-neutral-800 tb-bold md:text-[24px] xs:text-[22px] text-[20px]">1. Geltungsbereich</div>
                         <ol className="md:my-4 my-3 list-inside xs:pl-5 pl-2.5">
                             <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">
-                                1.1. Geltungsbereich <br/> Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) regeln sämtliche Geschäftsbeziehungen zwischen der Colacy GmbH (nachfolgend „Dienstleister“) und ihren Kunden (nachfolgend „Kunde“). Sie gelten für alle vom Dienstleister angebotenen Dienstleistungen, insbesondere, aber nicht ausschließlich:
+                                1.1. Geltungsbereich <br /> Diese Allgemeinen Geschäftsbedingungen (nachfolgend „AGB“) regeln sämtliche Geschäftsbeziehungen zwischen der Colacy GmbH (nachfolgend „Dienstleister“) und ihren Kunden (nachfolgend „Kunde“). Sie gelten für alle vom Dienstleister angebotenen Dienstleistungen, insbesondere, aber nicht ausschließlich:
                                 <ul className="pl-10 my-[20px] list-disc">
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">die Konzeption, Erstellung und Optimierung von Funnel-Websites,</li>
                                     <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30.006px] mb-2">die Integration und Einrichtung von Analysesoftware wie Google Tag Manager oder Google Analytics,</li>

@@ -53,20 +53,19 @@ const MarketingRessourcenPremium = () => {
   };
   return (
     <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
+      
       <Helmet>
-        <title>SEO Basis-Paket – Bessere Sichtbarkeit für Ihre Website</title>
-        <meta name="description" content="Mit grundlegenden SEO-Optimierungen legen wir die Basis für Ihre bessere Auffindbarkeit in Suchmaschinen." />
-        <meta name="keywords" content="SEO, Basis-Paket, Sichtbarkeit, Suchmaschinenoptimierung" />
-        <meta property="og:title" content="SEO Basis-Paket – Bessere Sichtbarkeit für Ihre Website" />
-        <meta property="og:description" content="Erhöhen Sie Ihre Online-Sichtbarkeit durch grundlegende SEO-Optimierungen." />
-
+        <title>Marketing-Ressourcen Premium Paket | Superagentur</title>
+        <meta property="og:title" content="Marketing-Ressourcen Premium Paket | Superagentur" />
+        <meta name="description" content="Premium-Marketing-Ressourcen – hochwertige Grafiken, die Ihre Kampagnen auf das nächste Level bringen." />
+        <meta property="og:description" content="Premium-Marketing-Ressourcen – hochwertige Grafiken, die Ihre Kampagnen auf das nächste Level bringen." />
         <meta name="robots" content="index, follow" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${APP_CONFIG.base_url}seo-plan-basis-paket-detail`} />
+        <meta property="og:url" content={`${APP_CONFIG.base_url}marketing-ressourcen-premium`} />
         <meta property="og:image" content={logo} />
-        <link rel="canonical" href="https://superagentur-marketing.de/seo-plan-basis-paket-detail" />
-
+        <link rel="canonical" href="https://superagentur-marketing.de/marketing-ressourcen-premium" />
       </Helmet>
+      
       <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
         <motion.div
           variants={fadeInAnimationVariant}
@@ -83,7 +82,7 @@ const MarketingRessourcenPremium = () => {
             Premium-Paket
           </h1>
           <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-            Das Premium-Paket bietet eine maßgeschneiderte Lösung für Unternehmen, die maximale Qualität und Flexibilität benötigen. 
+            Das Premium-Paket bietet eine maßgeschneiderte Lösung für Unternehmen, die maximale Qualität und Flexibilität benötigen.
             Es ist perfekt für umfangreiche Kampagnen, die auf eine detaillierte Wettbewerbsanalyse und hochgradig personalisierte Inhalte setzen.
           </div>
           <div className="flex flex-col gap-[15px] mb-10">

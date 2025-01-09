@@ -65,18 +65,15 @@ const Services = () => {
     return (
         <div className="flex flex-col">
             <Helmet>
-                <title>Unsere Dienstleistungen – SEO, Ads und mehr</title>
-                <meta name="description" content="Entdecken Sie das vielfältige Dienstleistungsangebot von Superagentur, von SEO-Optimierung bis Google Ads." />
-                <meta name="keywords" content="Dienstleistungen, SEO, Google Ads, digitales Marketing, Unternehmenslistungen" />
-                <meta property="og:title" content="Unsere Dienstleistungen – SEO, Ads und mehr" />
-                <meta property="og:description" content="Profitieren Sie von unseren umfassenden Dienstleistungen für Ihren digitalen Erfolg." />
-
+                <title>Übersicht Marketing Dienstleistungen | Superagentur</title>
+                <meta property="og:title" content="Übersicht Marketing Dienstleistungen | Superagentur" />
+                <meta name="description" content="Unsere Dienstleistungen im Überblick: SEO, Social Media Ads, E-Mail-Marketing und mehr – alles aus einer Hand." />
+                <meta property="og:description" content="Unsere Dienstleistungen im Überblick: SEO, Social Media Ads, E-Mail-Marketing und mehr – alles aus einer Hand." />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}dienstleistungen`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/dienstleistungen" />
-
             </Helmet>
 
             <section className="relative overflow-hidden z-[1]  flex items-center justify-center bg-secondary1 w-full 3xl:pt-[142px] lg:pt-[114px] md:pt-[91px] xs:pt-[72px] pt-[58px] 3xl:pb-[196px]  lg:pb-[118px] md:pb-[140px] xs:pb-[88px] pb-[100px] px-6">
@@ -301,7 +298,7 @@ const Services = () => {
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center max-w-[1173px] gap-6 w-full mx-auto"
                 >
                     {/* sea */}
-                    <div onClick={()=>navigate("/sea-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/sea-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6 ">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={analytics} alt="analytics" />
                             <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEA</h4>
@@ -316,7 +313,7 @@ const Services = () => {
 
                     </div>
                     {/* seo */}
-                    <div  onClick={()=>navigate("/seo-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/seo-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={search} alt="search" />
                             <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">SEO</h4>
@@ -331,7 +328,7 @@ const Services = () => {
 
                     </div>
                     {/* social media */}
-                    <div  onClick={()=>navigate("/social-media-ads-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/social-media-ads-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={likeImage} alt="system" />
                             <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Social Media Ads</h4>
@@ -346,7 +343,7 @@ const Services = () => {
                     </div>
 
                     {/* email marketing */}
-                    <div  onClick={()=>navigate("/email-marketing-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/email-marketing-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={emailImage} alt="system" />
                             <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Email Marketing</h4>
@@ -361,7 +358,7 @@ const Services = () => {
                     </div>
 
                     {/* website funnels */}
-                    <div  onClick={()=>navigate("/websitefunnel-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/websitefunnel-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={filterImage} alt="system" />
                             <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Website Funnels</h4>
@@ -376,7 +373,7 @@ const Services = () => {
                     </div>
 
                     {/* Video- und Fotografie */}
-                    <div  onClick={()=>navigate("/foto-und-videographie-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/foto-und-videographie-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={playImage} alt="system" />
                             <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Video- und Fotografie</h4>
@@ -391,7 +388,7 @@ const Services = () => {
                     </div>
 
                     {/* Grafikdesign */}
-                    <div  onClick={()=>navigate("/marketing-ressourcen-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/marketing-ressourcen-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={settingsImage} alt="system" />
                             <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Grafikdesign</h4>
@@ -406,7 +403,7 @@ const Services = () => {
                     </div>
 
                     {/* Analytics-Tools und Tracking */}
-                    <div  onClick={()=>navigate("/analytics-aufsetzung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/analytics-aufsetzung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={pcImage} alt="system" />
                             <h4 ref={headerDescRef} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Analytics-Tools und Tracking</h4>
@@ -421,7 +418,7 @@ const Services = () => {
                     </div>
 
                     {/* Unternehmenslistung */}
-                    <div  onClick={()=>navigate("/unternehmenslistung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/unternehmenslistung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={stairsImage} alt="system" />
                             <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Unternehmenslistung</h4>
@@ -453,7 +450,7 @@ const Services = () => {
                     {/* yer tutucu */}
 
                     {/* weitere marketinglösungen */}
-                    <div  onClick={()=>navigate("/kontakt")} className="cursor-pointer group mx-auto hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:max-w-[374px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
+                    <div onClick={() => navigate("/kontakt")} className="cursor-pointer group mx-auto hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:max-w-[374px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
                         <div className="flex items-center flex-col gap-6">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px]" src={achievementImage} alt="system" />
                             <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary">Weitere Marketinglösungen</h4>

@@ -89,16 +89,15 @@ const HomeV1 = () => {
     return (
         <main className="flex flex-col overflow-x-hidden">
             <Helmet>
-                <title>Superagentur - Ihre Marketingagentur für digitale Lösungen</title>
-                <meta name="description" content="Maßgeschneiderte Marketingstrategien für Ihr Online-Wachstum – SEO, Google Ads und mehr. Ihre Agentur für Erfolg im digitalen Raum." />
-                <meta name="keywords" content="digitale Marketingagentur, SEO, Google Ads, Unternehmenslistungen, Online-Präsenz, Geschäftswachstum," />
+                <title>Superagentur – Ihr Partner für Online-Marketing und digitalen Erfolg!</title>
+                <meta property="og:title" content="Superagentur – Ihr Partner für Online-Marketing und digitalen Erfolg!" />
+                <meta name="description" content="Als All-in-One-Werbeagentur steigern wir Ihre Sichtbarkeit und Erfolge auf allen Online-Kanälen – mit Search Ads, SEO, Social Media Ads & mehr." />
+                <meta property="og:description" content="Als All-in-One-Werbeagentur steigern wir Ihre Sichtbarkeit und Erfolge auf allen Online-Kanälen – mit Search Ads, SEO, Social Media Ads & mehr." />
                 <meta name="robots" content="index, follow" />
-                <meta property="og:title" content="Superagentur – Ihre Marketingagentur für digitale Lösungen" />
-                <meta property="og:description" content="Entdecken Sie innovative Marketinglösungen, die Ihre Marke erfolgreich im digitalen Raum positionieren." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href="https://superagentur-marketing.de/" />
+                <link rel="canonical" href="https://superagentur-marketing.de" />
                 <link rel="preload" as="image" href={contactPeopleImage} />
                 <link rel="preload" as="image" href={chart} />
             </Helmet>

@@ -55,16 +55,15 @@ const TermAndConditions = () => {
     return (
         <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] 3xl:pt-[123px] 3xl:pb-[123px] px-6 relative bg-[#F8F9FF]">
             <Helmet>
-                <title>Impressum von Superagentur</title>
-                <meta name="description" content="Rechtliche Informationen, Kontaktdaten und Verantwortlichkeiten von Superagentur in einem Überblick." />
-                <meta name="keywords" content="Impressum, rechtliche Informationen, Kontakt, Superagentur" /> 
-                <meta property="og:title" content="Impressum von Superagentur" />
-                <meta property="og:description" content="Alle rechtlichen Details und Kontaktdaten Ihrer Full-Service Marketingagentur." />
+                <title>Impressum | Superagentur</title>
+                <meta property="og:title" content="Impressum | Superagentur" />
+                <meta name="description" content="Offizielle Informationen über Superagentur: Ansprechpartner, rechtliche Hinweise und Kontaktmöglichkeiten im Überblick." />
+                <meta property="og:description" content="Offizielle Informationen über Superagentur: Ansprechpartner, rechtliche Hinweise und Kontaktmöglichkeiten im Überblick." />
                 <meta name="robots" content="index, follow" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={`${APP_CONFIG.base_url}impressum`} />
                 <meta property="og:image" content={logo} />
-                <link rel="canonical" href="https://superagentur-marketing.de/impressum" /> 
+                <link rel="canonical" href="https://superagentur-marketing.de/impressum" />
             </Helmet>
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
 
