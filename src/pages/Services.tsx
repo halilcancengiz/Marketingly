@@ -40,28 +40,6 @@ const Services = () => {
         }
     };
 
-    const headerDescRef = useRef<HTMLDivElement | null>(null);
-    const descriptionRef = useRef<HTMLDivElement | null>(null);
-
-    const [headerDescHeight, setHeaderDescHeight] = useState<number | string>(0);
-    const [descriptionHeight, setDescriptionHeight] = useState<number | string>(0);
-
-    useEffect(() => {
-        const updateHeight = () => {
-            if (headerDescRef.current) {
-                setHeaderDescHeight(headerDescRef.current.offsetHeight);
-            }
-            if (descriptionRef.current) {
-                setDescriptionHeight(descriptionRef.current.offsetHeight);
-            }
-        };
-        updateHeight();
-        window.addEventListener("resize", updateHeight);
-        return () => {
-            window.removeEventListener("resize", updateHeight);
-        };
-    }, []);
-
     return (
         <div className="flex flex-col">
             <Helmet>
@@ -298,11 +276,13 @@ const Services = () => {
                     className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center max-w-[1173px] gap-6 w-full mx-auto"
                 >
                     {/* sea */}
-                    <div onClick={() => navigate("/sea-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/sea-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={analytics} alt="analytics" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">SEA</h4>
-                            <p style={{ height: `${descriptionHeight}px` }} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Suchmaschinenwerbung – Effektive Kampagnen auf Google und Bing für maximale Ergebnisse.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">SEA</h4>
+                            <p className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px]">Suchmaschinenwerbung – Effektive Kampagnen auf Google und Bing für maximale Ergebnisse.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
@@ -310,14 +290,15 @@ const Services = () => {
                                 <Button className="tb-bold">Pläne</Button>
                             </div>
                         </div>
-
                     </div>
                     {/* seo */}
-                    <div onClick={() => navigate("/seo-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/seo-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={search} alt="search" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">SEO</h4>
-                            <p style={{ height: `${descriptionHeight}px` }} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">SEO</h4>
+                            <p className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Organische Reichweite steigern durch bessere Platzierungen in Suchmaschinen.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-primary h-[2px] md:my-[34px] my-[30px]"></div>
@@ -328,11 +309,14 @@ const Services = () => {
 
                     </div>
                     {/* social media */}
-                    <div onClick={() => navigate("/social-media-ads-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/social-media-ads-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={likeImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Social Media Ads</h4>
-                            <p style={{ height: `${descriptionHeight}px` }} className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maximale Reichweite auf Plattformen wie Facebook, Instagram, TikTok und LinkedIn.</p>
+
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Social Media Ads</h4>
+                            <p className="card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maximale Reichweite auf Plattformen wie Facebook, Instagram, TikTok und LinkedIn.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
@@ -343,11 +327,13 @@ const Services = () => {
                     </div>
 
                     {/* email marketing */}
-                    <div onClick={() => navigate("/email-marketing-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/email-marketing-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={emailImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Email Marketing</h4>
-                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Email Marketing</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
@@ -358,11 +344,13 @@ const Services = () => {
                     </div>
 
                     {/* website funnels */}
-                    <div onClick={() => navigate("/websitefunnel-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/websitefunnel-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={filterImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Website Funnels</h4>
-                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maßgeschneiderte Funnel-Websites, perfekt auf Ihre Kampagne abgestimmt.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Website Funnels</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Maßgeschneiderte Funnel-Websites, perfekt auf Ihre Kampagne abgestimmt.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-primary h-[2px] md:my-[34px] my-[30px]"></div>
@@ -373,14 +361,16 @@ const Services = () => {
                     </div>
 
                     {/* Video- und Fotografie */}
-                    <div onClick={() => navigate("/foto-und-videographie-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/foto-und-videographie-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={playImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Video- und Fotografie</h4>
-                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Professionelle visuelle Inhalte, die Ihre Marke ins richtige Licht rücken.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Video- und Fotografie</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Professionelle visuelle Inhalte, die Ihre Marke ins richtige Licht rücken.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
-                            <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
+                            <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
                             <div aria-label="Open foto-und-videographie-preise page">
                                 <Button className="tb-bold">Pläne</Button>
                             </div>
@@ -388,11 +378,13 @@ const Services = () => {
                     </div>
 
                     {/* Grafikdesign */}
-                    <div onClick={() => navigate("/marketing-ressourcen-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/marketing-ressourcen-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={settingsImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Grafikdesign</h4>
-                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Individuell gestaltete Grafiken, perfekt abgestimmt auf Ihre Marketingkampagnen.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Grafikdesign</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Individuell gestaltete Grafiken, perfekt abgestimmt auf Ihre Marketingkampagnen.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
@@ -403,11 +395,13 @@ const Services = () => {
                     </div>
 
                     {/* Analytics-Tools und Tracking */}
-                    <div onClick={() => navigate("/analytics-aufsetzung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/analytics-aufsetzung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={pcImage} alt="system" />
-                            <h4 ref={headerDescRef} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Analytics-Tools und Tracking</h4>
-                            <p ref={descriptionRef} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Einrichtung von Analytics-Systemen, Tag Manager und Tracking-Lösungen für präzise Einblicke.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Analytics-Tools und Tracking</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Einrichtung von Analytics-Systemen, Tag Manager und Tracking-Lösungen für präzise Einblicke.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
@@ -418,11 +412,13 @@ const Services = () => {
                     </div>
 
                     {/* Unternehmenslistung */}
-                    <div onClick={() => navigate("/unternehmenslistung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/unternehmenslistung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={stairsImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Unternehmenslistung</h4>
-                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Unternehmenslistung</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
@@ -434,9 +430,11 @@ const Services = () => {
 
 
                     {/* yer tutucu */}
-                    <div className="lg:invisible lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div className="lg:invisible lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={playImage} alt="system" />
+                        </div>
+                        <div className="flex flex-1 flex-col">
                             <h4 className="card-header md:text-[24px] text-[22px] tb-bold mb-[10px]">Unternehmenslistung</h4>
                             <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
                         </div>
@@ -450,11 +448,13 @@ const Services = () => {
                     {/* yer tutucu */}
 
                     {/* weitere marketinglösungen */}
-                    <div onClick={() => navigate("/kontakt")} className="cursor-pointer group mx-auto hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:max-w-[374px] md:min-h-[500px] py-16 px-6 flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div onClick={() => navigate("/kontakt")} className="cursor-pointer group mx-auto hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:max-w-[374px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={achievementImage} alt="system" />
-                            <h4 style={{ height: `${headerDescHeight}px` }} className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Weitere Marketinglösungen</h4>
-                            <p style={{ height: `${descriptionHeight}px` }} className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Von Content-Marketing bis hin zu Google Unternehmenslistungen und vielem mehr.</p>
+                        </div>
+                        <div className="flex flex-1 flex-col">
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Weitere Marketinglösungen</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Von Content-Marketing bis hin zu Google Unternehmenslistungen und vielem mehr.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
@@ -465,9 +465,11 @@ const Services = () => {
                     </div>
 
                     {/* yer tutucu */}
-                    <div className="lg:invisible lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] md:min-h-[500px] py-16 px-6 flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300">
-                        <div className="flex items-center flex-col">
+                    <div className="lg:invisible lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                        <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={playImage} alt="system" />
+                        </div>
+                        <div className="flex flex-1 flex-col">
                             <h4 className="card-header md:text-[24px] text-[22px] tb-bold mb-[10px]">Unternehmenslistung</h4>
                             <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
                         </div>
