@@ -46,7 +46,7 @@ const HomeV1ThirdSection = () => {
                         transition={{ delay: 0.45, duration: 0.3 }}
                         className="lg:max-w-[527px] max-w-[660px] w-full flex flex-col lg:order-2 order-1 lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px]">
                         <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.6px]">Reichweite mit Präzision</div>
-                        <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Wieso Suchmaschinenwerbung?</div>
+                        <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] xs:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Wieso Suchmaschinenwerbung?</div>
                         <p className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Mit bezahlter Werbung auf Suchmaschinen wie Google und Bing erscheint Ihre digitale Anzeige genau in dem Moment, in dem jemand nach Produkten, Dienstleistungen oder Karrieremöglichkeiten sucht, die Sie anbieten.</p>
                         <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                             <div className="flex items-center">
@@ -68,9 +68,11 @@ const HomeV1ThirdSection = () => {
                                 <div className="text-[18px] tb-bold text-neutral-800">Schnelle Ergebnisse</div>
                             </div>
                         </div>
-                        <NavLink aria-label="Open google ads plan page" to="/google-ads-plan" className="xs:w-auto w-full">
-                            <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
-                        </NavLink>
+                        <div className="xs:w-auto w-full xs:flex">
+                            <NavLink aria-label="Open sea-preise page" to="/sea-preise">
+                                <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
+                            </NavLink>
+                        </div>
                     </motion.div>
                 </div>
                 <div className="flex lg:flex-row flex-col items-center justify-between">
@@ -83,7 +85,7 @@ const HomeV1ThirdSection = () => {
                         transition={{ delay: 0.3, duration: 0.3 }}
                         className="lg:max-w-[527px] max-w-[660px] w-full flex flex-col lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px] lg:mr-10">
                         <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.6px]">Nachhaltige Reichweite</div>
-                        <h2 className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Warum ist eine SEO Optimierung wichtig?</h2>
+                        <h2 className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] xs:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Warum ist eine SEO Optimierung wichtig?</h2>
                         <p className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">Durch gezielte Optimierung bringen wir Ihnen organisch mehr Reichweite durch bessere Platzierungen in Suchmaschinen.</p>
                         <div className="flex flex-col lg:mb-[60px] xs:mb-[50px] mb-10 gap-[15px]">
                             <div className="flex items-center">
@@ -105,9 +107,11 @@ const HomeV1ThirdSection = () => {
                                 <div className="text-[18px] tb-bold text-neutral-800">Maximale organische Leads</div>
                             </div>
                         </div>
-                        <NavLink aria-label="Open seo plan page" to="/seo-plan" className="xs:w-auto w-full">
-                            <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
-                        </NavLink>
+                        <div className="xs:w-auto w-full xs:flex">
+                            <NavLink aria-label="Open sep-preise page" to="/seo-preise">
+                                <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
+                            </NavLink>
+                        </div>
                     </motion.div>
                     <div className="relative">
                         <motion.img
@@ -145,7 +149,7 @@ const HomeV1ThirdSection = () => {
                         transition={{ delay: 0.45, duration: 0.3 }}
                         className="lg:max-w-[527px] max-w-[660px] w-full flex flex-col lg:order-2 order-1 lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px]">
                         <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.6px]">MAXIMALE REICHWEITE</div>
-                        <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] md:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Weshalb Social Media Ads?</div>
+                        <div className="lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] xs:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800 lg:mb-5 xs:mb-[15px] mb-[10px]">Weshalb Social Media Ads?</div>
                         <p className="md:mb-12 mb-10 tb-medium text-[18px] text-neutral-600">
                             Mit Milliarden von täglichen Nutzern bieten Social Media Plattformen wie Facebook, Instagram, LinkedIn und TikTok die perfekte Möglichkeit, Ihre Zielgruppe in unvorstellbaren Größen zu erreichen.
                         </p>
@@ -169,9 +173,11 @@ const HomeV1ThirdSection = () => {
                                 <div className="text-[18px] tb-bold text-neutral-800">Unmittelbare Erfolge</div>
                             </div>
                         </div>
-                        <NavLink aria-label="Open google ads plan page" to="/google-ads-plan" className="xs:w-auto w-full">
-                            <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
-                        </NavLink>
+                        <div className="xs:w-auto w-full xs:flex">
+                            <NavLink aria-label="Open sea-preise page" to="/social-media-ads-preise">
+                                <Button className="tb-bold xs:w-auto w-full">Pläne</Button>
+                            </NavLink>
+                        </div>
                     </motion.div>
                 </div>
             </div>

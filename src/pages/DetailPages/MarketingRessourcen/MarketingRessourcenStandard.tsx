@@ -6,7 +6,9 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../../public/config.ts';
 import logo from "../../../assets/images/logo.webp"
-
+import rocketImage from "../../../assets/images/rocket.webp"
+import handshakeImage from "../../../assets/images/handshake.webp"
+import { BsDash } from "../../../assets/icons/icons.tsx"
 const MarketingRessourcenStandard = () => {
   const fadeInAnimationVariant = {
     initial: {
@@ -53,7 +55,7 @@ const MarketingRessourcenStandard = () => {
   };
   return (
     <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
-      
+
       <Helmet>
         <title>Marketing-Ressourcen Standard Paket | Superagentur</title>
         <meta property="og:title" content="Marketing-Ressourcen Standard Paket | Superagentur" />
@@ -109,13 +111,34 @@ const MarketingRessourcenStandard = () => {
             </div>
           </div>
           <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold text-neutral-800">Ihre Vorteile:</div>
-          <ul className="pl-10 lg:mt-8 md:mt-[26px] mb-10 list-disc">
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Höhere Flexibilität durch die Auswahl aus verschiedenen Konzepten </li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Einsatz animierter Inhalte für eine stärkere visuelle Wirkung</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Ideal für komplexere Kampagnen und Social-Media-Strategien</li>
 
-          </ul>
+          <div className="lg:mt-8 md:mt-[26px] mb-10">
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Höhere Flexibilität durch die Auswahl aus verschiedenen Konzepten
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Einsatz animierter Inhalte für eine stärkere visuelle Wirkung
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Ideal für komplexere Kampagnen und Social-Media-Strategien
+              </p>
+            </div>
 
+          </div>
         </motion.div>
         <motion.div
           variants={fadeInAnimationVariant}
@@ -128,7 +151,8 @@ const MarketingRessourcenStandard = () => {
           <div className="flex flex-col">
             <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Kontaktieren Sie uns noch heute!</div>
             <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-              Wir helfen Ihnen, Ihre Marketing-Ressourcen-Ziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
+              Wir helfen Ihnen, das Maximum aus Ihrem digitalen Marketing zu holen. <img className="inline-flex mb-2" src={rocketImage} alt="" /> <br />
+              Erfahren Sie mehr über unsere Dienstleistungen in einem unverbindlichen Gespräch. <img className="inline-flex" src={handshakeImage} alt="" />
             </div>
             <div className="flex flex-col my-5">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Marketing_Ressourcen.standard} €</div>

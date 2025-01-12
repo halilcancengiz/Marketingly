@@ -140,7 +140,9 @@ body,
   }
 }
 
-
+.emoji {
+  font-family:op
+}
 
 
 @media screen and (min-width:992px) {
@@ -164,4 +166,8 @@ body,
 
 .grecaptcha-badge{
   z-index: 999!important;
+}
+
+img{
+  user-select: none;
 }

@@ -14,7 +14,6 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
 import logo from "../assets/images/logo.webp"
-import { useEffect, useRef, useState } from "react";
 
 const Services = () => {
     const navigate = useNavigate()
@@ -332,8 +331,8 @@ const Services = () => {
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={emailImage} alt="system" />
                         </div>
                         <div className="flex flex-1 flex-col">
-                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Email Marketing</h4>
-                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Mailkampagnen für mehr Conversions und langfristigen Erfolg.</p>
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">E-mail Marketing</h4>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente E-Mail-Kampagnen für mehr Conversions und langfristigen Erfolg.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
@@ -377,17 +376,17 @@ const Services = () => {
                         </div>
                     </div>
 
-                    {/* Grafikdesign */}
+                    {/* Marketing-Ressourcen */}
                     <div onClick={() => navigate("/marketing-ressourcen-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
-                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={settingsImage} alt="system" />
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={pcImage} alt="system" />
                         </div>
                         <div className="flex flex-1 flex-col">
-                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Grafikdesign</h4>
+                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Marketing-Ressourcen</h4>
                             <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Individuell gestaltete Grafiken, perfekt abgestimmt auf Ihre Marketingkampagnen.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
-                            <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
+                            <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
                             <div aria-label="Open marketing-ressourcen-preise page">
                                 <Button className="tb-bold">Pläne</Button>
                             </div>
@@ -397,14 +396,14 @@ const Services = () => {
                     {/* Analytics-Tools und Tracking */}
                     <div onClick={() => navigate("/analytics-aufsetzung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
-                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={pcImage} alt="system" />
+                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={settingsImage} alt="system" />
                         </div>
                         <div className="flex flex-1 flex-col">
                             <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Analytics-Tools und Tracking</h4>
                             <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Effiziente Einrichtung von Analytics-Systemen, Tag Manager und Tracking-Lösungen für präzise Einblicke.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
-                            <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
+                            <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
                             <div aria-label="Open analytics-aufsetzung-preis page">
                                 <Button className="tb-bold">Pläne</Button>
                             </div>
@@ -454,12 +453,12 @@ const Services = () => {
                         </div>
                         <div className="flex flex-1 flex-col">
                             <h4 className="card-header md:text-[24px] text-[22px] tb-bold group-hover:text-primary mb-[10px]">Weitere Marketinglösungen</h4>
-                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Von Content-Marketing bis hin zu Google Unternehmenslistungen und vielem mehr.</p>
+                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Von Mikro-Influencer-Kampagnen bis hin zu maßgeschneidertem Content-Marketing und vielem mehr.</p>
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
                             <div aria-label="Open kontakt page">
-                                <Button className="tb-bold">Anfrage</Button>
+                                <Button className="tb-bold">Kontakt</Button>
                             </div>
                         </div>
                     </div>

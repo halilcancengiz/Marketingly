@@ -6,6 +6,9 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../../public/config.ts';
 import logo from "../../../assets/images/logo.webp"
+import rocketImage from "../../../assets/images/rocket.webp"
+import handshakeImage from "../../../assets/images/handshake.webp"
+import { BsDash } from "../../../assets/icons/icons.tsx"
 
 const EmailMarketingBasis = () => {
   const fadeInAnimationVariant = {
@@ -53,7 +56,7 @@ const EmailMarketingBasis = () => {
   };
   return (
     <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
-      
+
       <Helmet>
         <title>E-Mail-Marketing Basis Paket | Superagentur</title>
         <meta property="og:title" content="E-Mail-Marketing Basis Paket | Superagentur" />
@@ -77,7 +80,7 @@ const EmailMarketingBasis = () => {
           <div className="size-[90px] border border-neutral-300 md:mb-8 xs:mb-[28px] mb-[25px] rounded-[25px] flex items-center justify-center overflow-hidden">
             <img loading="lazy" src={squaresImage} alt="circle" />
           </div>
-          <h2 className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.5px] mt-10">Email Marketing</h2>
+          <h2 className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.5px] mt-10">E-mail Marketing</h2>
           <h1 className="whitespace-nowrap text-neutral-800 tb-bold lg:text-[54px] md:text-[45px] xs:text-[38px] text-[32px] lg:leading-[61px] md:leading-[50px] xs:leading-[42px] leading-[36px] mb-[15px]">
             Basis-Paket
           </h1>
@@ -115,12 +118,42 @@ const EmailMarketingBasis = () => {
             </div>
           </div>
           <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold text-neutral-800">Ihre Vorteile:</div>
-          <ul className="pl-10 lg:mt-8 md:mt-[26px] mb-10 list-disc">
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Effiziente Verwaltung Ihrer E-Mail-Kampagnen mit minimalem Aufwand</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Klare Berichte, die Ihnen einen Überblick über Ihre Erfolge bieten</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Einfache Automatisierungen für erste Schritte in der Prozessoptimierung</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Transparente und DSGVO-konforme Datenverwaltung</li>
-          </ul>
+
+          <div className="lg:mt-8 md:mt-[26px] mb-10">
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Effiziente Verwaltung Ihrer E-Mail-Kampagnen mit minimalem Aufwand
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Klare Berichte, die Ihnen einen Überblick über Ihre Erfolge bieten
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Einfache Automatisierungen für erste Schritte in der Prozessoptimierung
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Transparente und DSGVO-konforme Datenverwaltung
+              </p>
+            </div>
+
+          </div>
           <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
             Mit dem Basis-Paket legen Sie den Grundstein für Ihr E-Mail-Marketing und erste nachhaltige Ergebnisse.
           </div>
@@ -136,7 +169,8 @@ const EmailMarketingBasis = () => {
           <div className="flex flex-col">
             <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Kontaktieren Sie uns noch heute!</div>
             <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-              Wir helfen Ihnen, Ihre Email Marketing-Ziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
+              Wir helfen Ihnen, das Maximum aus Ihrem digitalen Marketing zu holen. <img className="inline-flex mb-2" src={rocketImage} alt="" /> <br />
+              Erfahren Sie mehr über unsere Dienstleistungen in einem unverbindlichen Gespräch. <img className="inline-flex" src={handshakeImage} alt="" />
             </div>
             <div className="flex flex-col my-5">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Email_Marketing.basis} €</div>

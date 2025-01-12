@@ -67,21 +67,23 @@ const Navbar = () => {
                                         <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" />
                                         <span>Funnel-Website</span>
                                     </NavLink>
-                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the Unternehmenslistung plan page" to="/unternehmenslistung-preis">
-                                        <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" />
-                                        <span>Unternehmenslistung</span>
-                                    </NavLink>
+
                                     <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the Video- und Fotografie plan page" to="/foto-und-videographie-preise">
                                         <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" />
                                         <span>Video- und Fotografie</span>
+                                    </NavLink>
+                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the Marketing-Ressourcen (Grafiken) plan page" to="/marketing-ressourcen-preise">
+                                        <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" />
+                                        <span>Marketing-Ressourcen (Grafiken)</span>
                                     </NavLink>
                                     <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the Aufsetzung Analyse-Software plan page" to="/analytics-aufsetzung-preis">
                                         <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" />
                                         <span>Aufsetzung Analyse-Software</span>
                                     </NavLink>
-                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the Marketing-Ressourcen (Grafiken) plan page" to="/marketing-ressourcen-preise">
+
+                                    <NavLink className="hover:text-primary transition-all duration-300 flex items-start gap-1 tb-medium" aria-label="Go to the Unternehmenslistung plan page" to="/unternehmenslistung-preis">
                                         <TbPointFilled className="w-5 h-5 min-w-5 min-h-5" />
-                                        <span>Marketing-Ressourcen (Grafiken)</span>
+                                        <span>Unternehmenslistung</span>
                                     </NavLink>
                                 </div>
                             </div>
@@ -143,22 +145,22 @@ const Navbar = () => {
                             <NavLink to="/websitefunnel-preise" className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the Funnel-Websites plan page"   >
                                 <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" />
                                 <span>Funnel-Websites</span>
-                            </NavLink>
-                            <NavLink to="/unternehmenslistung-preis" className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the Unternehmenslistung plan page" >
-                                <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" />
-                                <span>Unternehmenslistung</span>
-                            </NavLink>
+                            </NavLink>                          
                             <NavLink to="/foto-und-videographie-preise" className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the Video- und Fotografie plan page" >
                                 <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" />
                                 <span>Video- und Fotografie</span>
+                            </NavLink>
+                            <NavLink to="/marketing-ressourcen-preise" className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the Marketing-Ressourcen (Grafiken) plan page" >
+                                <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" />
+                                <span>Marketing-Ressourcen (Grafiken)</span>
                             </NavLink>
                             <NavLink to="/analytics-aufsetzung-preis" className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the Aufsetzung Analyse-Software plan page" >
                                 <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" />
                                 <span>Aufsetzung Analyse-Software</span>
                             </NavLink>
-                            <NavLink to="/marketing-ressourcen-preise" className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the Marketing-Ressourcen (Grafiken) plan page" >
+                            <NavLink to="/unternehmenslistung-preis" className="hover:text-primary transition-colors duration-300 flex items-start py-[15px] gap-1 tb-medium" aria-label="Go to the Unternehmenslistung plan page" >
                                 <TbPointFilled className="w-5 h-5 min-w-5 min-h-5 mt-1" />
-                                <span>Marketing-Ressourcen (Grafiken)</span>
+                                <span>Unternehmenslistung</span>
                             </NavLink>
                         </div>
                     </div>

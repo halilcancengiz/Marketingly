@@ -3,7 +3,7 @@ import trianglesImage from "../../assets/images/triangles.webp"
 import check from "../../assets/images/check.webp";
 import Accordion from "../../components/Accordion";
 import Button from "../../components/Button";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../public/config.ts';
 import { Helmet } from "react-helmet";
@@ -206,17 +206,18 @@ const UnternehmenslistungPreise = () => {
 
 
           {/* Standart */}
-          <div onClick={() => navigate("/unternehmenslistung-premium", { replace: true })} aria-label="Open standart package detail page" className="cursor-pointer col-span-1 w-full shadow-sm lg:max-w-[400px] max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+          <div aria-label="Open standart package detail page" className="col-span-1 w-full shadow-sm lg:max-w-[400px] max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
             <div className="absolute left-0 top-0 py-1 px-9 tb-bold text-white bg-primary rounded-br-[20px]">Bestseller</div>
 
-            <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
-              <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="circle" />
-            </div>
-
             <div className="flex flex-col">
-              <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                Premium
-              </h2>
+              <div className="flex items-center justify-between">
+                <h2 className="group-hover:text-primary lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] xs:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">
+                  Premium
+                </h2>
+                <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                  <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="square" />
+                </div>
+              </div>
               <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Die perfekte Lösung für Ihre Sichtbarkeit.</div>
             </div>
 
@@ -249,7 +250,9 @@ const UnternehmenslistungPreise = () => {
               </div>
 
             </div>
-            <Button className="tb-bold">Details</Button>
+            <NavLink to="/unternehmenslistung-premium" className="flex">
+              <Button className="tb-bold w-full">Details</Button>
+            </NavLink>
           </div>
 
 

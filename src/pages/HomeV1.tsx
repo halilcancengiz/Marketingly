@@ -174,7 +174,7 @@ const HomeV1 = () => {
                             <motion.img
                                 style={{
                                     boxShadow: "rgba(20, 20, 43, 0.07) 0px 18px 54px 0px",
-                                    y: smoothTranslateYReverse,
+                                    
                                 }}
                                 className="border border-neutral-300 max:w-[502.844px] 3xl:w-[89%] lg:w-[87%] w-[87%]  lg:ml-auto xs:rounded-[18px] rounded-[10px]"
                                 src={chart}
@@ -184,9 +184,9 @@ const HomeV1 = () => {
                             <motion.img
                                 style={{
                                     boxShadow: "rgba(20, 20, 43, 0.07) 0px 18px 54px 0px",
-                                    y: smoothTranslateY, // Hareket miktarı
+                                   
                                 }}
-                                className="absolute top-[27%] -translate-y-1/3 lg:left-0 right-0 hxl:w-[237px] lg:w-[43.627%] w-[42%] xs:rounded-[18px] rounded-[10px] border border-neutral-300"
+                                className="absolute top-[50%] -translate-y-1/3 lg:left-0 right-0 hxl:w-[237px] lg:w-[43.627%] w-[42%] xs:rounded-[18px] rounded-[10px] border border-neutral-300"
                                 src={contactPeopleImage}
                                 alt="Contact People"
 

@@ -6,7 +6,9 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../../public/config.ts';
 import logo from "../../../assets/images/logo.webp"
-
+import rocketImage from "../../../assets/images/rocket.webp"
+import handshakeImage from "../../../assets/images/handshake.webp"
+import { BsDash } from "../../../assets/icons/icons.tsx"
 const SocialMediaAdsBasis = () => {
   const fadeInAnimationVariant = {
     initial: {
@@ -53,7 +55,7 @@ const SocialMediaAdsBasis = () => {
   };
   return (
     <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
-      
+
       <Helmet>
         <title>Social Media Ads Basis Paket | Superagentur</title>
         <meta property="og:title" content="Social Media Ads Basis Paket | Superagentur" />
@@ -112,13 +114,48 @@ const SocialMediaAdsBasis = () => {
             </div>
           </div>
           <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold text-neutral-800">Ihre Vorteile:</div>
-          <ul className="pl-10 lg:mt-8 md:mt-[26px] mb-10 list-disc">
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Effiziente Verwaltung Ihres Budgets: Wir stellen sicher, dass Ihr Werbebudget optimal genutzt wird, um die besten Ergebnisse zu erzielen.</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Verständliche Darstellung der Ergebnisse: Klare und übersichtliche Berichte geben Ihnen wertvolle Einblicke und Mehrwert.</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Flexibilität bei Veränderungen: Wir passen Ihre Kampagnen schnell und gezielt an neue Entwicklungen im Markt, an veränderte Marketingziele oder an Ihre individuellen Anforderungen an.</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Transparente Kommunikation: Unser Team steht Ihnen jederzeit bei Fragen und Wünschen zur Verfügung.</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Kontinuierliche Optimierung: Regelmäßige Überwachung und Anpassung Ihrer Kampagnen sichern nachhaltigen Erfolg.</li>
-          </ul>
+          <div className="lg:mt-8 md:mt-[26px] mb-10">
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Effiziente Verwaltung Ihres Budgets: Wir stellen sicher, dass Ihr Werbebudget optimal genutzt wird, um die besten Ergebnisse zu erzielen.
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Verständliche Darstellung der Ergebnisse: Klare und übersichtliche Berichte geben Ihnen wertvolle Einblicke und Mehrwert.
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Flexibilität bei Veränderungen: Wir passen Ihre Kampagnen schnell und gezielt an neue Entwicklungen im Markt, an veränderte Marketingziele oder an Ihre individuellen Anforderungen an.
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Transparente Kommunikation: Unser Team steht Ihnen jederzeit bei Fragen und Wünschen zur Verfügung.
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Kontinuierliche Optimierung: Regelmäßige Überwachung und Anpassung Ihrer Kampagnen sichern nachhaltigen Erfolg.
+              </p>
+            </div>
+          </div>
           <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
             Mit dem Basis-Paket legen Sie den Grundstein für langfristigen Erfolg und den schrittweisen Ausbau Ihrer digitalen Reichweite.
           </div>
@@ -134,7 +171,8 @@ const SocialMediaAdsBasis = () => {
           <div className="flex flex-col">
             <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Kontaktieren Sie uns noch heute!</div>
             <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-              Wir helfen Ihnen, Ihre Social Media-Ziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
+              Wir helfen Ihnen, das Maximum aus Ihrem digitalen Marketing zu holen. <img className="inline-flex mb-2" src={rocketImage} alt="" /> <br />
+              Erfahren Sie mehr über unsere Dienstleistungen in einem unverbindlichen Gespräch. <img className="inline-flex" src={handshakeImage} alt="" />
             </div>
             <div className="flex flex-col my-5">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEA.basis} €</div>

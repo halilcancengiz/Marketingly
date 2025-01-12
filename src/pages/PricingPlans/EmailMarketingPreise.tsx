@@ -4,7 +4,7 @@ import squaresImage from "../../assets/images/squares.webp"
 import check from "../../assets/images/check.webp";
 import Accordion from "../../components/Accordion";
 import Button from "../../components/Button";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../public/config.ts';
 import { useEffect, useRef, useState } from "react";
@@ -39,7 +39,13 @@ const EmailMarketingPreise = () => {
   const cardTopPriceRef = useRef<HTMLDivElement>(null)
   const checkListRef = useRef<HTMLDivElement>(null)
 
-  const [heights, setHeights] = useState({
+  type Hights = {
+    headerHeight: string | number,
+    priceHeight: string | number,
+    checklistHeight: string | number
+  }
+
+  const [heights, setHeights] = useState<Hights>({
     headerHeight: 0,
     priceHeight: 0,
     checklistHeight: 0
@@ -47,12 +53,22 @@ const EmailMarketingPreise = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setHeights({
-        headerHeight: cardTopHeaderRef.current?.offsetHeight || 0,
-        priceHeight: cardTopPriceRef.current?.offsetHeight || 0,
-        checklistHeight: checkListRef.current?.offsetHeight || 0
-      });
-    }
+      if (window.innerWidth < 992) {
+        // 992px altında hepsini "auto" yap
+        setHeights({
+          headerHeight: "auto",
+          priceHeight: "auto",
+          checklistHeight: "auto",
+        });
+      } else {
+        // 992px üstünde height'leri elementlerden al
+        setHeights({
+          headerHeight: cardTopHeaderRef.current?.offsetHeight || "auto",
+          priceHeight: cardTopPriceRef.current?.offsetHeight || "auto",
+          checklistHeight: checkListRef.current?.offsetHeight || "auto",
+        });
+      }
+    };
 
     // Initial call
     handleResize();
@@ -85,7 +101,7 @@ const EmailMarketingPreise = () => {
             whileInView="animate"
             viewport={{ once: true }}
             transition={{ delay: 0.15, duration: 0.3 }}
-            className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">Unsere Email Marketing Pläne</motion.div>
+            className="md:mb-5 xs:mb-[15px] mb-[10px] tb-medium text-base leading-[18px] uppercase">Unsere E-mail Marketing Pläne</motion.div>
           <motion.h1
             variants={fadeInAnimationVariant}
             initial="initial"
@@ -231,15 +247,16 @@ const EmailMarketingPreise = () => {
           transition={{ delay: 0.6, duration: 0.3 }}
           className="grid lg:grid-cols-3 grid-cols-1 items-start max-w-[1173px] gap-[26px] gap-y-[72px] w-full mx-auto ">
           {/* Basis */}
-          <div onClick={() => navigate("/email-marketing-basis", { replace: true })} aria-label="Open basic package detail page" className="cursor-pointer col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
-            <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
-              <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
-            </div>
-
+          <div aria-label="Open basic package detail page" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
             <div style={{ height: heights.headerHeight }} className="flex flex-col">
-              <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                Basis
-              </h2>
+              <div className="flex items-center justify-between">
+                <h2 className="group-hover:text-primary lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] xs:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">
+                  Basis
+                </h2>
+                <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                  <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={squaresImage} alt="square" />
+                </div>
+              </div>
               <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Das perfekte Paket für den Einstieg.<span className="lg:flex hidden"></span> </div>
             </div>
 
@@ -277,23 +294,27 @@ const EmailMarketingPreise = () => {
 
               <br />
             </div>
-            <Button className="tb-bold">Details</Button>
+            <NavLink to="/email-marketing-basis" className="flex">
+              <Button className="tb-bold w-full">Details</Button>
+            </NavLink>
 
           </div>
 
 
           {/* Standart */}
-          <div onClick={() => navigate("/email-marketing-standard", { replace: true })} aria-label="Open standart package detail page" className="cursor-pointer col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+          <div aria-label="Open standart package detail page" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
             <div className="absolute left-0 top-0 py-1 px-9 tb-bold text-white bg-primary rounded-br-[20px]">Bestseller</div>
 
-            <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
-              <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="circle" />
-            </div>
 
             <div ref={cardTopHeaderRef} className="flex flex-col">
-              <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                Standard
-              </h2>
+              <div className="flex items-center justify-between">
+                <h2 className="group-hover:text-primary lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] xs:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">
+                  Standard
+                </h2>
+                <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                  <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={circlesImage} alt="square" />
+                </div>
+              </div>
               <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Für Unternehmen, die wachsen möchten.</div>
             </div>
 
@@ -333,20 +354,24 @@ const EmailMarketingPreise = () => {
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Strategische Beratung zur Zielgruppenansprache </div>
               </div>
             </div>
-            <Button className="tb-bold">Details</Button>
+            <NavLink to="/email-marketing-standard" className="flex">
+              <Button className="tb-bold w-full">Details</Button>
+            </NavLink>
           </div>
 
 
           {/* Premium */}
-          <div onClick={() => navigate("/email-marketing-premium", { replace: true })} aria-label="Open premium package detail page" className="cursor-pointer col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
+          <div aria-label="Open premium package detail page" className="col-span-1 w-full shadow-sm max-w-[660px] mx-auto 3xl:-mt-32 lg:-mt-[68px] md:-mt-[32px] xs:-mt-[32px] -mt-[32px] hover-up-md group bg-white flex flex-col md:pb-12 xs:pb-10 pb-[33px] md:pt-[42px] xs:pt-[35px] pt-[30px] xs:px-[30px] px-[25px] border border-neutral-300 rounded-[20px] relative overflow-hidden">
 
-            <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
-              <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="triangles" />
-            </div>
             <div style={{ height: heights.headerHeight }} className="flex flex-col">
-              <h2 className="tb-bold text-neutral-800 group-hover:text-primary transition-colors duration-300 mb-[10px] md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">
-                Premium
-              </h2>
+              <div className="flex items-center justify-between">
+                <h2 className="group-hover:text-primary lg:text-[38px] xs:text-[32px] text-[26px] lg:leading-[50.006px] xs:leading-[42.112px] leading-[34.216px] tb-bold text-neutral-800">
+                  Premium
+                </h2>
+                <div className="size-[74px] rounded-[22px] border border-neutral-300 mb-[22px] flex items-center justify-center overflow-hidden">
+                  <img loading="lazy" className="group-hover:scale-110 transition-all duration-300" src={trianglesImage} alt="square" />
+                </div>
+              </div>
               <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Die umfassende Lösung für maximale Ergebnisse.</div>
             </div>
 
@@ -386,7 +411,9 @@ const EmailMarketingPreise = () => {
                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Strategische Planung und regelmäßige Überwachung Ihrer Kampagnen</div>
               </div>
             </div>
-            <Button className="tb-bold">Details</Button>
+            <NavLink to="/email-marketing-premium" className="flex">
+              <Button className="tb-bold w-full">Details</Button>
+            </NavLink>
 
           </div>
         </motion.div>

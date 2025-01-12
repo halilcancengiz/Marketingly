@@ -6,7 +6,9 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../../public/config.ts';
 import logo from "../../../assets/images/logo.webp"
-
+import rocketImage from "../../../assets/images/rocket.webp"
+import handshakeImage from "../../../assets/images/handshake.webp"
+import { BsDash } from "../../../assets/icons/icons.tsx"
 const WFunnelPremium = () => {
   const fadeInAnimationVariant = {
     initial: {
@@ -53,7 +55,7 @@ const WFunnelPremium = () => {
   };
   return (
     <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
-      
+
       <Helmet>
         <title>Website-Funnel Premium Paket | Superagentur</title>
         <meta property="og:title" content="Website-Funnel Premium Paket | Superagentur" />
@@ -114,12 +116,41 @@ const WFunnelPremium = () => {
             </div>
           </div>
           <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold text-neutral-800">Ihre Vorteile:</div>
-          <ul className="pl-10 lg:mt-8 md:mt-[26px] mb-10 list-disc">
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Maximale Flexibilität mit unbegrenzten Funnels und personalisierten Lösungen</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Fortgeschrittene Automatisierungen für nahtlose Abläufe</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Dynamische Tests und Anpassungen für stetige Optimierung</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Langfristige Betreuung durch Experten für nachhaltigen Erfolg</li>
-          </ul>
+          <div className="lg:mt-8 md:mt-[26px] mb-10">
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Maximale Flexibilität mit unbegrenzten Funnels und personalisierten Lösungen
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Fortgeschrittene Automatisierungen für nahtlose Abläufe
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Dynamische Tests und Anpassungen für stetige Optimierung
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Langfristige Betreuung durch Experten für nachhaltigen Erfolg
+              </p>
+            </div>
+
+          </div>
           <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
             Mit dem Premium-Paket sichern Sie sich die besten Ergebnisse und setzen neue Standards für Ihre Funnels.
           </div>
@@ -135,7 +166,8 @@ const WFunnelPremium = () => {
           <div className="flex flex-col">
             <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Kontaktieren Sie uns noch heute!</div>
             <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-              Wir helfen Ihnen, Ihre Website Funnel-Ziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
+              Wir helfen Ihnen, das Maximum aus Ihrem digitalen Marketing zu holen. <img className="inline-flex mb-2" src={rocketImage} alt="" /> <br />
+              Erfahren Sie mehr über unsere Dienstleistungen in einem unverbindlichen Gespräch. <img className="inline-flex" src={handshakeImage} alt="" />
             </div>
             <div className="flex flex-col my-5">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Website_Funnel.premium}</div>

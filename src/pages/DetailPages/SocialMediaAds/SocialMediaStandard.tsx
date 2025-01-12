@@ -6,7 +6,9 @@ import { Helmet } from "react-helmet";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../../public/config.ts';
 import logo from "../../../assets/images/logo.webp"
-
+import rocketImage from "../../../assets/images/rocket.webp"
+import handshakeImage from "../../../assets/images/handshake.webp"
+import { BsDash } from "../../../assets/icons/icons.tsx"
 const SocialMediaStandard = () => {
   const fadeInAnimationVariant = {
     initial: {
@@ -53,7 +55,7 @@ const SocialMediaStandard = () => {
   };
   return (
     <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
-      
+
       <Helmet>
         <title>Social Media Ads Standard Paket | Superagentur</title>
         <meta property="og:title" content="Social Media Ads Standard Paket | Superagentur" />
@@ -65,7 +67,7 @@ const SocialMediaStandard = () => {
         <meta property="og:image" content={logo} />
         <link rel="canonical" href="https://superagentur-marketing.de/social-media-ads-standard" />
       </Helmet>
-      
+
       <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
         <motion.div
           variants={fadeInAnimationVariant}
@@ -110,13 +112,49 @@ const SocialMediaStandard = () => {
             </div>
           </div>
           <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold text-neutral-800">Ihre Vorteile:</div>
-          <ul className="pl-10 lg:mt-8 md:mt-[26px] mb-10 list-disc">
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Strategische Ausrichtung: Wir entwickeln maßgeschneiderte Strategien, die perfekt auf Ihre Ziele abgestimmt sind. </li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Flexibilität und Anpassung: Schnelle Reaktionen auf Veränderungen im Markt, bei Zielgruppen oder Marketingzielen.</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Detaillierte Einblicke: Unsere Analysen helfen Ihnen, fundierte Entscheidungen für langfristigen Erfolg zu treffen.</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Individuelle Betreuung: Ihr persönlicher Ansprechpartner sorgt dafür, dass Sie stets den Überblick behalten.</li>
-            <li className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2">Effiziente Optimierung: Maximale Ergebnisse Ihrer Kampagnen bei minimalem Aufwand.</li>
-          </ul>
+
+          <div className="lg:mt-8 md:mt-[26px] mb-10">
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Strategische Ausrichtung: Wir entwickeln maßgeschneiderte Strategien, die perfekt auf Ihre Ziele abgestimmt sind.
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Flexibilität und Anpassung: Schnelle Reaktionen auf Veränderungen im Markt, bei Zielgruppen oder Marketingzielen.
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Detaillierte Einblicke: Unsere Analysen helfen Ihnen, fundierte Entscheidungen für langfristigen Erfolg zu treffen.
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Individuelle Betreuung: Ihr persönlicher Ansprechpartner sorgt dafür, dass Sie stets den Überblick behalten.
+              </p>
+            </div>
+            <div className="flex gap-[13px]">
+              <div className="size-6 flex items-center justify-center">
+                <BsDash className="text-neutral-600 mt-1" size={24} />
+              </div>
+              <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
+                Effiziente Optimierung: Maximale Ergebnisse Ihrer Kampagnen bei minimalem Aufwand.
+              </p>
+            </div>
+          </div>
           <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
             Mit dem Standard-Paket maximieren Sie Ihre Reichweite und erzielen nachhaltige Erfolge mit Ihren Social Media Maßnahmen.
 
@@ -133,7 +171,8 @@ const SocialMediaStandard = () => {
           <div className="flex flex-col">
             <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Kontaktieren Sie uns noch heute!</div>
             <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium">
-              Wir helfen Ihnen, Ihre SEA-Ziele zu erreichen. Erfahren Sie mehr über Ihre Möglichkeiten und lassen Sie uns gemeinsam wachsen.
+              Wir helfen Ihnen, das Maximum aus Ihrem digitalen Marketing zu holen. <img className="inline-flex mb-2" src={rocketImage} alt="" /> <br />
+              Erfahren Sie mehr über unsere Dienstleistungen in einem unverbindlichen Gespräch. <img className="inline-flex" src={handshakeImage} alt="" />
             </div>
             <div className="flex flex-col my-5">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEA.standard} €</div>
