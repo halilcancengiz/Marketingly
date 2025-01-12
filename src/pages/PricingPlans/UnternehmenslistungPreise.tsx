@@ -3,7 +3,7 @@ import trianglesImage from "../../assets/images/triangles.webp"
 import check from "../../assets/images/check.webp";
 import Accordion from "../../components/Accordion";
 import Button from "../../components/Button";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../public/config.ts';
 import { Helmet } from "react-helmet";
@@ -11,7 +11,6 @@ import logo from "../../assets/images/logo.webp"
 
 
 const UnternehmenslistungPreise = () => {
-  const navigate = useNavigate()
   const fadeInAnimationVariant = {
     initial: {
       opacity: 0,

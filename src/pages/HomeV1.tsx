@@ -9,7 +9,7 @@ import Button from "../components/Button.tsx";
 import * as motion from "framer-motion/client";
 import { NavLink } from "react-router-dom";
 import splitStringUsingRegex from "../utils/splitStringUsingRegex.tsx";
-import { useScroll, useSpring, useTransform } from "framer-motion";
+// import { useScroll, useSpring, useTransform } from "framer-motion";
 const HomeV1CardSection = lazy(() => import("../components/HomeV1/HomeV1CardSection.tsx"));
 const HomeV1ThirdSection = lazy(() => import("../components/HomeV1/HomeV1ThirdSection.tsx"));
 const HomeV1FourthSection = lazy(() => import("../components/HomeV1/HomeV1FourthSection.tsx"));
@@ -60,18 +60,18 @@ const HomeV1 = () => {
             scale: 1
         }
     };
-    const { scrollY }: { scrollY: any } = useScroll();
-    const translateY: any = useTransform(scrollY, (value: number) => value / 20);
-    const translateYReverse: any = useTransform(scrollY, (value: number) => -value / 40);
+    // const { scrollY }: { scrollY: any } = useScroll();
+    // const translateY: any = useTransform(scrollY, (value: number) => value / 20);
+    // const translateYReverse: any = useTransform(scrollY, (value: number) => -value / 40);
 
-    const smoothTranslateY: any = useSpring(translateY, {
-        stiffness: 100,
-        damping: 20,
-    });
-    const smoothTranslateYReverse: any = useSpring(translateYReverse, {
-        stiffness: 100,
-        damping: 20,
-    });
+    // const smoothTranslateY: any = useSpring(translateY, {
+    //     stiffness: 100,
+    //     damping: 20,
+    // });
+    // const smoothTranslateYReverse: any = useSpring(translateYReverse, {
+    //     stiffness: 100,
+    //     damping: 20,
+    // });
 
 
     const scrollToSection = (id: string) => {

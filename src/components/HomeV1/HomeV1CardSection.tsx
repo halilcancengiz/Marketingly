@@ -8,11 +8,10 @@ import achievementImage from "../../assets/images/achievement-icon.webp";
 import filterImage from "../../assets/images/filter-icon.webp";
 
 import * as motion from "framer-motion/client";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const HomeV1CardSection = () => {
 
-    const navigate = useNavigate();
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,

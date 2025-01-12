@@ -4,7 +4,7 @@ import squaresImage from "../../assets/images/squares.webp"
 import check from "../../assets/images/check.webp";
 import Accordion from "../../components/Accordion";
 import Button from "../../components/Button";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../public/config.ts';
 import { useEffect, useRef, useState } from "react";
@@ -12,7 +12,6 @@ import { Helmet } from "react-helmet";
 import logo from "../../assets/images/logo.webp"
 
 const WebsiteFunnelPreise = () => {
-  const navigate = useNavigate()
   const fadeInAnimationVariant = {
     initial: {
       opacity: 0,
@@ -260,7 +259,7 @@ const WebsiteFunnelPreise = () => {
               <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Basis-Paket für den Start.<span className="lg:flex hidden"></span> </div>
             </div>
 
-            <div style={{ height: heights.priceHeight }} className="flex flex-col lg:mt-[20px]">
+            <div style={{ height: heights.priceHeight }} className="flex flex-col mt-[20px] ">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Website_Funnel.basis} €</div>
               <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
             </div>
@@ -312,7 +311,7 @@ const WebsiteFunnelPreise = () => {
               <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Ideales Paket für ambitionierte Ziele.</div>
             </div>
 
-            <div style={{ height: heights.priceHeight }} className="flex flex-col lg:mt-[20px]">
+            <div style={{ height: heights.priceHeight }} className="flex flex-col mt-[20px]">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Website_Funnel.standard} €</div>
               <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
             </div>
@@ -369,7 +368,7 @@ const WebsiteFunnelPreise = () => {
               <div className="text-[18px] leading-[30.006px] text-neutral-600 tb-medium">Lösung für maximale Ergebnisse.</div>
             </div>
 
-            <div ref={cardTopPriceRef} className="flex flex-col lg:mt-[20px]">
+            <div ref={cardTopPriceRef} className="flex flex-col mt-[20px]">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEO.premium}</div>
               <div className="tb-medium text-neutral-600">Kontaktieren Sie unseren Vertrieb.</div>
             </div>
