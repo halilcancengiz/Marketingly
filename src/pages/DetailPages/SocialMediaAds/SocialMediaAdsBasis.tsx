@@ -175,7 +175,7 @@ const SocialMediaAdsBasis = () => {
               Erfahren Sie mehr über unsere Dienstleistungen in einem unverbindlichen Gespräch. <img className="inline-flex" src={handshakeImage} alt="" />
             </div>
             <div className="flex flex-col my-5">
-              <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.SEA.basis} €</div>
+              <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Social_Media_Ads.basis} €</div>
               <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
             </div>
             <NavLink aria-label="Open contact page" to="/kontakt">
