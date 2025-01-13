@@ -1,50 +1,58 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomeV1 from "../pages/HomeV1";
-import SeaPreise from "../pages/PricingPlans/SeaPreise";
-import SeoPreise from "../pages/PricingPlans/SeoPreise";
-import SocialMediaAdsPreise from "../pages/PricingPlans/SocialMediaAdsPreise";
-import EmailMarketingPreise from "../pages/PricingPlans/EmailMarketingPreise";
-import WebsiteFunnelPreise from "../pages/PricingPlans/WebsiteFunnelPreise";
-import UnternehmenslistungPreise from "../pages/PricingPlans/UnternehmenslistungPreise";
-import FotoUndVideographiePreise from "../pages/PricingPlans/FotoUndVideographiePreise";
-import AnalyticsAufsetzungPreise from "../pages/PricingPlans/AnalyticsAufsetzungPreise";
-import MarketingRessourcenPreise from "../pages/PricingPlans/MarketingRessourcenPreise";
-import SeaBasis from "../pages/DetailPages/SEA/SeaBasis";
-import SeaStandard from "../pages/DetailPages/SEA/SeaStandard";
-import SeaPremium from "../pages/DetailPages/SEA/SeaPremium";
-import SocialMediaAdsBasis from "../pages/DetailPages/SocialMediaAds/SocialMediaAdsBasis";
-import SocialMediaAdsStandard from "../pages/DetailPages/SocialMediaAds/SocialMediaStandard";
-import SocialMediaAdsPremium from "../pages/DetailPages/SocialMediaAds/SocialMediaAdsPremium";
-import EmailMarketingBasis from "../pages/DetailPages/EmailMarketing/EmailMarketingBasis";
-import EmailMarketingStandard from "../pages/DetailPages/EmailMarketing/EmailMarketingStandard";
-import EmailMarketingPremium from "../pages/DetailPages/EmailMarketing/EmailMarketingPremium";
-import WFunnelBasis from "../pages/DetailPages/WFunnel/WFunnelBasis";
-import WFunnelStandard from "../pages/DetailPages/WFunnel/WFunnelStandard";
-import WFunnelPremium from "../pages/DetailPages/WFunnel/WFunnelPremium";
-import UnternehmenslistungPremium from "../pages/DetailPages/Unternehmenslistung/UnternehmenslistungPremium";
-import FotoUndVideographieBasis from "../pages/DetailPages/FotoUndVideographie/FotoUndVideographieBasis";
-import FotoUndVideographieStandard from "../pages/DetailPages/FotoUndVideographie/FotoUndVideographieStandard";
-import FotoUndVideographiePremium from "../pages/DetailPages/FotoUndVideographie/FotoUndVideographiePremium";
-import AnalyticsAufsetzungBasis from "../pages/DetailPages/AnalyticsAufsetzung/AnalyticsAufsetzungBasis";
-import AnalyticsAufsetzungStandard from "../pages/DetailPages/AnalyticsAufsetzung/AnalyticsAufsetzungStandard";
-import AnalyticsAufsetzungPremium from "../pages/DetailPages/AnalyticsAufsetzung/AnalyticsAufsetzungPremium";
-import MarketingRessourcenBasis from "../pages/DetailPages/MarketingRessourcen/MarketingRessourcenBasis";
-import MarketingRessourcenStandard from "../pages/DetailPages/MarketingRessourcen/MarketingRessourcenStandard";
-import MarketingRessourcenPremium from "../pages/DetailPages/MarketingRessourcen/MarketingRessourcenPremium";
-import SeoBasis from "../pages/DetailPages/SEO/SeoBasis";
-import SeoStandard from "../pages/DetailPages/SEO/SeoStandard";
-import SeoPremium from "../pages/DetailPages/SEO/SeoPremium";
 
-
-// Dinamik olarak yüklenen bileşenler
-// const HomeV2 = React.lazy(() => import("../pages/HomeV2"));
 const NotFound = React.lazy(() => import("../pages/NotFound"));
 const Thankyou = React.lazy(() => import("../pages/Thankyou"));
 const TermAndConditions = React.lazy(() => import("../pages/TermAndConditions"));
 const Contact = React.lazy(() => import("../pages/Contact"));
 const Services = React.lazy(() => import("../pages/Services"));
 const Impressum = React.lazy(() => import("../pages/Impressum"));
+
+const SeaPreise = React.lazy(() => import("../pages/PricingPlans/SeaPreise"))
+const SeoPreise = React.lazy(() => import("../pages/PricingPlans/SeoPreise"))
+const SocialMediaAdsPreise = React.lazy(() => import("../pages/PricingPlans/SocialMediaAdsPreise"))
+const EmailMarketingPreise = React.lazy(() => import("../pages/PricingPlans/EmailMarketingPreise"))
+const WebsiteFunnelPreise = React.lazy(() => import("../pages/PricingPlans/WebsiteFunnelPreise"))
+const UnternehmenslistungPreise = React.lazy(() => import("../pages/PricingPlans/UnternehmenslistungPreise"))
+const FotoUndVideographiePreise = React.lazy(() => import("../pages/PricingPlans/FotoUndVideographiePreise"))
+const AnalyticsAufsetzungPreise = React.lazy(() => import("../pages/PricingPlans/AnalyticsAufsetzungPreise"))
+const MarketingRessourcenPreise = React.lazy(() => import("../pages/PricingPlans/MarketingRessourcenPreise"))
+
+const SeaBasis = React.lazy(() => import("../pages/DetailPages/SEA/SeaBasis"))
+const SeaStandard = React.lazy(() => import("../pages/DetailPages/SEA/SeaStandard"))
+const SeaPremium = React.lazy(() => import("../pages/DetailPages/SEA/SeaPremium"))
+
+const SeoBasis = React.lazy(() => import("../pages/DetailPages/SEO/SeoBasis"))
+const SeoStandard = React.lazy(() => import("../pages/DetailPages/SEO/SeoStandard"))
+const SeoPremium = React.lazy(() => import("../pages/DetailPages/SEO/SeoPremium"))
+
+const SocialMediaAdsBasis = React.lazy(() => import("../pages/DetailPages/SocialMediaAds/SocialMediaAdsBasis"))
+const SocialMediaAdsStandard = React.lazy(() => import("../pages/DetailPages/SocialMediaAds/SocialMediaStandard"))
+const SocialMediaAdsPremium = React.lazy(() => import("../pages/DetailPages/SocialMediaAds/SocialMediaAdsPremium"))
+
+const EmailMarketingBasis = React.lazy(() => import("../pages/DetailPages/EmailMarketing/EmailMarketingBasis"))
+const EmailMarketingStandard = React.lazy(() => import("../pages/DetailPages/EmailMarketing/EmailMarketingStandard"))
+const EmailMarketingPremium = React.lazy(() => import("../pages/DetailPages/EmailMarketing/EmailMarketingPremium"))
+
+const WFunnelBasis = React.lazy(() => import("../pages/DetailPages/WFunnel/WFunnelBasis"))
+const WFunnelStandard = React.lazy(() => import("../pages/DetailPages/WFunnel/WFunnelStandard"))
+const WFunnelPremium = React.lazy(() => import("../pages/DetailPages/WFunnel/WFunnelPremium"))
+
+const UnternehmenslistungPremium = React.lazy(() => import("../pages/DetailPages/Unternehmenslistung/UnternehmenslistungPremium"))
+
+const FotoUndVideographieBasis = React.lazy(() => import("../pages/DetailPages/FotoUndVideographie/FotoUndVideographieBasis"))
+const FotoUndVideographieStandard = React.lazy(() => import("../pages/DetailPages/FotoUndVideographie/FotoUndVideographieStandard"))
+const FotoUndVideographiePremium = React.lazy(() => import("../pages/DetailPages/FotoUndVideographie/FotoUndVideographiePremium"))
+
+const AnalyticsAufsetzungBasis = React.lazy(() => import("../pages/DetailPages/AnalyticsAufsetzung/AnalyticsAufsetzungBasis"))
+const AnalyticsAufsetzungStandard = React.lazy(() => import("../pages/DetailPages/AnalyticsAufsetzung/AnalyticsAufsetzungStandard"))
+const AnalyticsAufsetzungPremium = React.lazy(() => import("../pages/DetailPages/AnalyticsAufsetzung/AnalyticsAufsetzungPremium"))
+
+const MarketingRessourcenBasis = React.lazy(() => import("../pages/DetailPages/MarketingRessourcen/MarketingRessourcenBasis"))
+const MarketingRessourcenStandard = React.lazy(() => import("../pages/DetailPages/MarketingRessourcen/MarketingRessourcenStandard"))
+const MarketingRessourcenPremium = React.lazy(() => import("../pages/DetailPages/MarketingRessourcen/MarketingRessourcenPremium"))
+
 
 export const AppRoutes = () => {
 
