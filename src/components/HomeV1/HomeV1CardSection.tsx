@@ -15,7 +15,7 @@ const HomeV1CardSection = () => {
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,
-            y: 10
+            y: 20
         },
         animate: {
             opacity: 1,

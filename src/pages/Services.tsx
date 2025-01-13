@@ -66,7 +66,7 @@ const Services = () => {
                         initial="initial"
                         whileInView="animate"
                         viewport={{ once: true }}
-                        transition={{ delay: 0.4, duration: 0.3 }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
                         className="text-center text-[18px] tb-medium">Unsere Dienstleistungen auf einen Blick:
                     </motion.div>
                     {/* <div className="text-center text-[18px] leading-[30.006px] tb-medium">Lorem ipsum dolor sit amet consectetur adipiscing elit feugiat nun eget massa velit eros etiam nunc.</div> */}
@@ -78,7 +78,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 top-0 size-[205px] bg-primary 3xl:visible invisible">
                     <div className="relative w-full h-full rounded-full bg-secondary2"></div>
                 </motion.div>
@@ -87,7 +87,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 top-[205px] size-[264px] 3xl:visible invisible">
                     <div className="relative w-full h-full">
                         <div className="absolute right-0 h-full w-1/2 rounded-r-full bg-secondary4"></div>
@@ -98,7 +98,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     style={{ clipPath: "polygon(0 100%, 100% 100%, 0 0)" }}
                     className="absolute left-0 top-0 size-[205px] bg-secondary4 3xl:visible invisible">
                 </motion.div>
@@ -107,7 +107,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute -left-[104px] top-[205px] size-[264px] rounded-full bg-secondary3 3xl:visible invisible">
                 </motion.div>
                 {/* 3xl / lg */}
@@ -116,7 +116,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 top-0 size-[170px] bg-primary 3xl:invisible  lg:visible invisible">
                     <div className="relative w-full h-full rounded-full bg-secondary2"></div>
                 </motion.div>
@@ -125,7 +125,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 top-[133px] size-[230px] 3xl:invisible lg:visible invisible">
                     <div className="relative w-full h-full">
                         <div className="absolute right-0 h-full w-1/2 rounded-r-full bg-secondary4"></div>
@@ -136,7 +136,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     style={{ clipPath: "polygon(0 100%, 100% 100%, 0 0)" }}
                     className="absolute left-0 top-0 size-[170px] bg-secondary4 3xl:invisible lg:visible invisible">
                 </motion.div>
@@ -145,7 +145,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute -left-[104px] bottom-0 size-[230px] rounded-full bg-secondary3 3xl:invisible lg:visible invisible">
                 </motion.div>
                 {/* lg / md */}
@@ -154,7 +154,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 top-0 size-[150px] bg-primary lg:invisible  md:visible invisible">
                     <div className="relative w-full h-full rounded-full bg-secondary2"></div>
                 </motion.div>
@@ -163,7 +163,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 top-[151.5px] size-[200px] lg:invisible  md:visible invisible">
                     <div className="relative w-full h-full">
                         <div className="absolute right-0 h-full w-1/2 rounded-r-full bg-secondary4"></div>
@@ -174,7 +174,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     style={{ clipPath: "polygon(0 100%, 100% 100%, 0 0)" }}
                     className="absolute left-0 top-0 size-[150px] bg-secondary4 lg:invisible  md:visible invisible">
                 </motion.div>
@@ -183,7 +183,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute -left-[104px] top-[151.5px] size-[200px] rounded-full bg-secondary3 lg:invisible  md:visible invisible">
                 </motion.div>
                 {/* md / xs */}
@@ -192,7 +192,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 -top-[64px] size-[120px] bg-primary md:invisible xs:visible invisible">
                     <div className="relative w-full h-full rounded-full bg-secondary2"></div>
                 </motion.div>
@@ -201,7 +201,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 top-[168px] size-[180px] md:invisible xs:visible invisible">
                     <div className="relative w-full h-full">
                         <div className="absolute right-0 h-full w-1/2 rounded-r-full bg-secondary4"></div>
@@ -212,7 +212,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     style={{ clipPath: "polygon(0 100%, 100% 100%, 0 0)" }}
                     className="absolute left-0 -top-[23px] size-[120px] bg-secondary4 md:invisible xs:visible invisible">
                 </motion.div>
@@ -221,7 +221,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute -left-[104px] top-[168px] size-[180px] rounded-full bg-secondary3 md:invisible xs:visible invisible">
                 </motion.div>
                 {/* xs / xs- */}
@@ -230,7 +230,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 -top-[75px] size-[120px] bg-primary xs:invisible visible">
                     <div className="relative w-full h-full rounded-full bg-secondary2"></div>
                 </motion.div>
@@ -239,7 +239,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute right-0 top-[184px] size-[180px] xs:invisible visible">
                     <div className="relative w-full h-full">
                         <div className="absolute right-0 h-full w-1/2 rounded-r-full bg-secondary4"></div>
@@ -250,7 +250,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     style={{ clipPath: "polygon(0 100%, 100% 100%, 0 0)" }}
                     className="absolute left-0 -top-[75px] size-[120px] bg-secondary4 xs:invisible visible">
                 </motion.div>
@@ -259,7 +259,7 @@ const Services = () => {
                     initial="initial"
                     whileInView="animate"
                     viewport={{ once: true }}
-                    transition={{ delay: 1, duration: 0.3 }}
+                    transition={{ delay: 0.6, duration: 0.3 }}
                     className="absolute -left-[104px] top-[159px] size-[180px] rounded-full bg-secondary3 xs:invisible visible">
                 </motion.div>
             </section>
@@ -547,7 +547,7 @@ const Services = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: 0.3 }}
+                                transition={{ delay: 0.6, duration: 0.3 }}
                                 className="w-full h-full  flex">
                                 <div className="w-1/2 bg-secondary1"></div>
                                 <div className="w-1/2">
@@ -559,7 +559,7 @@ const Services = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.5, duration: 0.3 }}
+                                transition={{ delay: 0.6, duration: 0.3 }}
                                 className="w-full h-full flex">
                                 <div className="w-1/2 flex items-end justify-end relative overflow-hidden">
                                     <div className="bg-secondary3  w-full rounded-l-full aspect-square absolute -right-1/2"></div>
@@ -576,7 +576,7 @@ const Services = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.7, duration: 0.3 }}
+                                transition={{ delay: 0.6, duration: 0.3 }}
                                 className="h-full flex">
                                 <div className="w-full bg-secondary1"></div>
                                 <div className="w-full flex items-center justify-end">
@@ -588,7 +588,7 @@ const Services = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.7, duration: 0.3 }}
+                                transition={{ delay: 0.6, duration: 0.3 }}
                                 className="h-[169.55px] flex">
                                 <div className="w-full h-full flex items-center justify-end relative overflow-hidden">
                                     <div className="absolute w-full h-full bg-secondary3 aspect-square rounded-l-full -right-[150px]"></div>
@@ -607,7 +607,7 @@ const Services = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.7, duration: 0.3 }}
+                                transition={{ delay: 0.6, duration: 0.3 }}
                                 className="w-full h-full flex">
                                 <div className="w-full bg-secondary1"></div>
                                 <div className="w-full flex items-start justify-end">
@@ -619,7 +619,7 @@ const Services = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.7, duration: 0.3 }}
+                                transition={{ delay: 0.6, duration: 0.3 }}
                                 className="w-full h-full flex">
                                 <div className="w-full flex items-end justify-end relative overflow-hidden">
                                     <div className="absolute -right-[130px] w-full h-[80%] rounded-l-full bg-secondary3">
@@ -640,7 +640,7 @@ const Services = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.7, duration: 0.3 }}
+                                transition={{ delay: 0.6, duration: 0.3 }}
                                 className="h-full flex">
                                 <div className="w-full bg-secondary1"></div>
                                 <div className="w-full  flex items-start justify-end">
@@ -652,7 +652,7 @@ const Services = () => {
                                 initial="initial"
                                 whileInView="animate"
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.7, duration: 0.3 }}
+                                transition={{ delay: 0.6, duration: 0.3 }}
                                 className="h-full flex">
                                 <div className="w-full  relative overflow-hidden flex items-end justify-end">
                                     <div className="absolute -right-[60%] w-full bg-secondary3 h-[80%] rounded-l-full aspect-square"></div>
