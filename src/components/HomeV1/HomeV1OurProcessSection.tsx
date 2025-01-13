@@ -1,5 +1,5 @@
 "use client";
-import Button from "../../components/Button";
+import Button from "../Button";
 import * as motion from "framer-motion/client";
 import blueCardImage from "../../assets/images/blue.webp"
 import yellowCardImage from "../../assets/images/yellow.webp"
@@ -7,7 +7,7 @@ import redCardImage from "../../assets/images/red.webp"
 import { NavLink } from "react-router-dom";
 
 
-const HomeV1SeventhSection = () => {
+const HomeV1OurProcessSection = () => {
 
     const fadeInAnimationVariant = {
         initial: {
@@ -34,14 +34,14 @@ const HomeV1SeventhSection = () => {
                     <div className="md:mb-[20px] xs:mb-[15px] mb-[10px] text-[16px] leading-[18px] uppercase tb-medium text-primary tracking-[1.6px]">Unser Prozess</div>
                     <h2 className="text-center md:text-[38px] text-[32px] leading-[42px] md:leading-[50px] tb-bold text-neutral-800">Ein einfacher, aber effektiver Drei-Schritte-Prozess</h2>
                 </motion.div>
-                <motion.div
-                    variants={fadeInAnimationVariant}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3, duration: 0.3 }}
-                    className="flex lg:flex-row flex-col w-full gap-[26px]">
-                    <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
+                <div className="flex lg:flex-row flex-col w-full gap-[26px]">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                         <div>
                             <img src={blueCardImage} alt="card" />
                         </div>
@@ -50,8 +50,14 @@ const HomeV1SeventhSection = () => {
                             <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir beginnen mit einem persönlichen Gespräch, um Ihre Bedürfnisse und Ziele zu verstehen.</p>
 
                         </div>
-                    </div>
-                    <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
+                    </motion.div>
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                         <div>
                             <img src={yellowCardImage} alt="card" />
                         </div>
@@ -60,8 +66,14 @@ const HomeV1SeventhSection = () => {
                             <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Wir entwickeln eine maßgeschneiderte Strategie für Ihren Erfolg.</p>
 
                         </div>
-                    </div>
-                    <div className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
+                    </motion.div>
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="bg-white lg:max-w-full max-w-[660px] lg:mx-0 mx-auto  flex flex-col rounded-[24px] overflow-hidden border border-gray-200/60 section-6-shadow">
                         <div>
                             <img src={redCardImage} alt="card" />
                         </div>
@@ -70,14 +82,24 @@ const HomeV1SeventhSection = () => {
                             <p className="leading-[30px] text-neutral-600 text-[18px] tb-medium">Unsere Experten setzen die Planung präzise und effizient um.</p>
 
                         </div>
-                    </div>
+                    </motion.div>
+                </div>
+                <motion.div
+                    className="mt-10"
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3, duration: 0.3 }}
+                >
+                    <NavLink aria-label="Open contact page" to="/kontakt">
+                        <Button className="tb-bold">Kontakt</Button>
+                    </NavLink>
                 </motion.div>
-                <NavLink aria-label="Open contact page" to="/kontakt" className="mt-10">
-                    <Button className="tb-bold">Kontakt</Button>
-                </NavLink>
+
             </div>
         </section>
     )
 }
 
-export default HomeV1SeventhSection
+export default HomeV1OurProcessSection

@@ -84,8 +84,7 @@ const FotoUndVideographieBasis = () => {
             Basis-Paket
           </h1>
           <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-            Das Basis-Paket bietet eine einfache, aber professionelle Lösung für kleine Projekte oder den Einstieg in die Content-Erstellung.
-            Es ist ideal für Unternehmen oder Einzelpersonen, die schnelle und hochwertige Inhalte benötigen.
+            Das Basis-Paket bietet eine einfache, aber professionelle Lösung für kleine Projekte, simple Kampagnen oder den Einstieg in die eigene Content-Erstellung.
           </div>
           <div className="flex flex-col gap-[15px] mb-10">
             <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>

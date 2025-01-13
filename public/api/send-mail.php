@@ -79,11 +79,11 @@ function verifyRecaptchaEnterpriseToken($token) {
     $verbose = curl_getinfo($ch);
     $error = curl_error($ch);
     
-    logDebug("reCAPTCHA API request details", [
+    logError("reCAPTCHA API request details", [
         'curl_info' => $verbose,
         'curl_error' => $error,
-        'verbose_log' => $response
-    ]);
+        'response' => $response
+    ], 'DEBUG');
 
     curl_close($ch);
 
@@ -282,3 +282,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "status" => 405
     ]);
 }
+
+
+   

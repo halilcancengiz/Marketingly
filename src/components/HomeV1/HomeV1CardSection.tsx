@@ -49,14 +49,15 @@ const HomeV1CardSection = () => {
                     </NavLink>
                 </div>
             </motion.div>
-            <motion.div
-                variants={fadeInAnimationVariant}
-                initial="initial"
-                whileInView="animate"
-                viewport={{ once: true }}
-                transition={{ delay: 0.4, duration: 0.3 }}
+            <div
                 className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[26px] max-w-[1176px] w-full mx-auto">
-                <div aria-label="Open sea-preise page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.3 }}
+                    aria-label="Open sea-preise page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                     <div className="flex items-center justify-center">
                         <img
                             className="object-contain size-[86px] rounded-[10px] mb-6"
@@ -74,9 +75,15 @@ const HomeV1CardSection = () => {
                             <Button className="tb-bold">Pläne</Button>
                         </NavLink>
                     </div>
-                </div>
+                </motion.div>
 
-                <div aria-label="Open seo-preise page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.3 }}
+                    aria-label="Open seo-preise page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                     <div className="flex items-center justify-center">
                         <img
                             className="object-contain size-[86px] rounded-[10px] mb-6"
@@ -94,9 +101,15 @@ const HomeV1CardSection = () => {
                             <Button className="tb-bold">Pläne</Button>
                         </NavLink>
                     </div>
-                </div>
+                </motion.div>
 
-                <div aria-label="Open social-media-ads-preise page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.3 }}
+                    aria-label="Open social-media-ads-preise page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                     <div className="flex items-center justify-center">
                         <img
                             className="object-contain size-[86px] rounded-[10px] mb-6"
@@ -114,9 +127,15 @@ const HomeV1CardSection = () => {
                             <Button className="tb-bold">Pläne</Button>
                         </NavLink>
                     </div>
-                </div>
+                </motion.div>
 
-                <div aria-label="Open email-marketing-preise page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.3 }}
+                    aria-label="Open email-marketing-preise page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                     <div className="flex items-center justify-center">
                         <img
                             className="object-contain size-[86px] rounded-[10px] mb-6"
@@ -133,9 +152,15 @@ const HomeV1CardSection = () => {
                             <Button className="tb-bold">Pläne</Button>
                         </NavLink>
                     </div>
-                </div>
+                </motion.div>
 
-                <div aria-label="Open unternehmenslistung-preis page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.3 }}
+                    aria-label="Open unternehmenslistung-preis page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                     <div className="flex items-center justify-center">
                         <img
                             className="object-contain size-[86px] rounded-[10px] mb-6"
@@ -154,9 +179,15 @@ const HomeV1CardSection = () => {
                             <Button className="tb-bold">Pläne</Button>
                         </NavLink>
                     </div>
-                </div>
+                </motion.div>
 
-                <div aria-label="Open kontakt page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                <motion.div
+                    variants={fadeInAnimationVariant}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.3 }}
+                    aria-label="Open kontakt page" className="col-span-1 rounded-[18px] group hover-up-md lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                     <div className="flex items-center justify-center">
                         <img
                             className="object-contain size-[86px] rounded-[10px] mb-6"
@@ -175,9 +206,9 @@ const HomeV1CardSection = () => {
                             <Button className="tb-bold">Kontakt</Button>
                         </NavLink>
                     </div>
-                </div>
+                </motion.div>
 
-            </motion.div>
+            </div>
         </section>
     )
 }

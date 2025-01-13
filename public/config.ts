@@ -107,8 +107,8 @@ const APP_CONFIG: AppConfig = {
     },
     prices: {
         SEA: {
-            basis: 349,
-            standard: 499,
+            basis: 499,
+            standard: 799,
             premium: "Preis auf Anfrage"
         },
         SEO: {
@@ -122,8 +122,8 @@ const APP_CONFIG: AppConfig = {
             premium: "Preis auf Anfrage"
         },
         Email_Marketing: {
-            basis: 400,
-            standard: 700,
+            basis: 399,
+            standard: 699,
             premium: "Preis auf Anfrage"
         },
         Website_Funnel: {
@@ -135,7 +135,7 @@ const APP_CONFIG: AppConfig = {
             premium: 299
         },
         Foto_Und_Videographie: {
-            basis: 399,
+            basis: 499,
             standard: 899,
             premium: "Preis auf Anfrage"
         },
@@ -154,12 +154,12 @@ const APP_CONFIG: AppConfig = {
     },
     campaign_limits: {
         SEA: {
-            basis: 1500,
-            standard: 3500
+            basis: 2500,
+            standard: 6000
         },
         Social_Media_Ads: {
-            basis: 1500,
-            standard: 3500
+            basis: 2500,
+            standard: 6000
         },
         Email_Marketing: {
             basis: 1000,

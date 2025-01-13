@@ -272,7 +272,7 @@ const SeaPreise = () => {
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und grundlegende Verwaltung von SEA-Kampagnen, beschränkt auf Google Ads</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und grundlegende Verwaltung von SEA-Kampagnen (beschränkt auf Google Ads)</div>
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -284,7 +284,7 @@ const SeaPreise = () => {
                             </div>
                             <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einfache Keyword-Recherche und Anzeigenerstellun</div>
+                                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einfache Keyword-Recherche und Anzeigenerstellung</div>
                             </div>
                             <br />
                         </div>
@@ -325,7 +325,7 @@ const SeaPreise = () => {
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Einrichtung und umfassende Verwaltung von SEA-Kampagnen für Google Ads und Bing Ads mit regelmäßigen Optimierungen</div>
                             </div>
-                            <div className="flex items-center gap-[13px]">
+                            <div className="flex items-start gap-[13px]">
                                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
                                 <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Detailliertes monatliches Reporting und Analyse der Kampagnenleistung</div>
                             </div>

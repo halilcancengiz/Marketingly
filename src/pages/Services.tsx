@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import analytics from "../assets/images/analytics.webp";
 import search from "../assets/images/search.webp";
 import emailImage from "../assets/images/email-image.webp";
@@ -16,7 +16,6 @@ import APP_CONFIG from '../../public/config.ts';
 import logo from "../assets/images/logo.webp"
 
 const Services = () => {
-    const navigate = useNavigate()
     const fadeInAnimationVariant = {
         initial: {
             opacity: 0,
@@ -266,16 +265,15 @@ const Services = () => {
             </section>
 
             <section className="3xl:-mt-[131px] lg:-mt-[105px] md:-mt-[84px] xs:-mt-[67px] -mt-[53px] z-[2] px-6">
-                <motion.div
-                    variants={fadeInAnimationVariant}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.7, duration: 0.3 }}
-                    className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center max-w-[1173px] gap-6 w-full mx-auto"
-                >
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 items-center max-w-[1173px] gap-6 w-full mx-auto" >
                     {/* sea */}
-                    <div onClick={() => navigate("/sea-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={analytics} alt="analytics" />
                         </div>
@@ -285,13 +283,19 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center">
                             <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open sea-preise page">
+                            <NavLink to="/sea-preise" aria-label="Open sea-preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </div>
+                            </NavLink>
                         </div>
-                    </div>
+                    </motion.div>
                     {/* seo */}
-                    <div onClick={() => navigate("/seo-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={search} alt="search" />
                         </div>
@@ -301,14 +305,20 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-primary h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open seo-preise page">
+                            <NavLink to="/seo-preise" aria-label="Open seo-preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </div>
+                            </NavLink>
                         </div>
 
-                    </div>
+                    </motion.div>
                     {/* social media */}
-                    <div onClick={() => navigate("/social-media-ads-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={likeImage} alt="system" />
 
@@ -319,14 +329,20 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open social-media-ads-preise page">
+                            <NavLink to="/social-media-ads-preise" aria-label="Open social-media-ads-preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </div>
+                            </NavLink>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* email marketing */}
-                    <div onClick={() => navigate("/email-marketing-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={emailImage} alt="system" />
                         </div>
@@ -336,14 +352,20 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open email-marketing-preise page" >
+                            <NavLink to="/email-marketing-preise" aria-label="Open email-marketing-preise page" >
                                 <Button className="tb-bold">Pläne</Button>
-                            </div>
+                            </NavLink>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* website funnels */}
-                    <div onClick={() => navigate("/websitefunnel-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={filterImage} alt="system" />
                         </div>
@@ -353,14 +375,20 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-primary h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open websitefunnel preise page">
+                            <NavLink to="/websitefunnel-preise" aria-label="Open websitefunnel preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </div>
+                            </NavLink>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Video- und Fotografie */}
-                    <div onClick={() => navigate("/foto-und-videographie-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={playImage} alt="system" />
                         </div>
@@ -370,14 +398,20 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open foto-und-videographie-preise page">
+                            <NavLink to="/foto-und-videographie-preise" aria-label="Open foto-und-videographie-preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </div>
+                            </NavLink>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Marketing-Ressourcen */}
-                    <div onClick={() => navigate("/marketing-ressourcen-preise")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={pcImage} alt="system" />
                         </div>
@@ -387,14 +421,20 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open marketing-ressourcen-preise page">
+                            <NavLink to="/marketing-ressourcen-preise" aria-label="Open marketing-ressourcen-preise page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </div>
+                            </NavLink>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Analytics-Tools und Tracking */}
-                    <div onClick={() => navigate("/analytics-aufsetzung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={settingsImage} alt="system" />
                         </div>
@@ -404,14 +444,20 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open analytics-aufsetzung-preis page">
+                            <NavLink to="/analytics-aufsetzung-preis" aria-label="Open analytics-aufsetzung-preis page">
                                 <Button className="tb-bold">Pläne</Button>
-                            </div>
+                            </NavLink>
                         </div>
-                    </div>
+                    </motion.div>
 
                     {/* Unternehmenslistung */}
-                    <div onClick={() => navigate("/unternehmenslistung-preis")} className="cursor-pointer group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={stairsImage} alt="system" />
                         </div>
@@ -421,33 +467,33 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary3 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open Unternehmenslistung preis page">
-                                <Button className="tb-bold">Pläne</Button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    {/* yer tutucu */}
-                    <div className="lg:invisible lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
-                        <div className="flex items-center justify-center">
-                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={playImage} alt="system" />
-                        </div>
-                        <div className="flex flex-1 flex-col">
-                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold mb-[10px]">Unternehmenslistung</h4>
-                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
-                        </div>
-                        <div className="flex flex-col items-center justify-center ">
-                            <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
+                            <NavLink to="/unternehmenslistung-preis" aria-label="Open Unternehmenslistung preis page">
                                 <Button className="tb-bold">Pläne</Button>
                             </NavLink>
                         </div>
-                    </div>
+                    </motion.div>
+
+
+                    {/* yer tutucu */}
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex-col items-center justify-center text-center h-full">
+                        <div className="size-32 bg-secondary3 homev1-card-shadow" style={{ clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)" }}></div>
+                    </motion.div>
                     {/* yer tutucu */}
 
                     {/* weitere marketinglösungen */}
-                    <div onClick={() => navigate("/kontakt")} className="cursor-pointer group mx-auto hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:max-w-[374px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="group mx-auto hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px] lg:max-w-[374px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
                         <div className="flex items-center justify-center">
                             <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={achievementImage} alt="system" />
                         </div>
@@ -457,31 +503,25 @@ const Services = () => {
                         </div>
                         <div className="flex flex-col items-center justify-center ">
                             <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <div aria-label="Open kontakt page">
+                            <NavLink to="/kontakt" aria-label="Open kontakt page">
                                 <Button className="tb-bold">Kontakt</Button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* yer tutucu */}
-                    <div className="lg:invisible lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex-col items-center justify-between text-center homev1-card-shadow border-[1px] border-neutral-300 h-full">
-                        <div className="flex items-center justify-center">
-                            <img loading="lazy" className="object-contain size-[86px] rounded-[10px] mb-6" src={playImage} alt="system" />
-                        </div>
-                        <div className="flex flex-1 flex-col">
-                            <h4 className="card-header md:text-[24px] text-[22px] tb-bold mb-[10px]">Unternehmenslistung</h4>
-                            <p className="second-card-description text-neutral-600 text-[18px] tb-medium leading-[30px] lg:line-clamp-3">Optimieren Sie Ihre Sichtbarkeit mit professioneller Google-Unternehmenslistung.</p>
-                        </div>
-                        <div className="flex flex-col items-center justify-center ">
-                            <div className="w-[109px] bg-secondary2 h-[2px] md:my-[34px] my-[30px]"></div>
-                            <NavLink aria-label="Open Unternehmenslistung page" to="/unternehmenslistung-plan">
-                                <Button className="tb-bold">Pläne</Button>
                             </NavLink>
                         </div>
-                    </div>
+                    </motion.div>
+
+                    {/* yer tutucu */}
+                    <motion.div
+                        variants={fadeInAnimationVariant}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.3 }}
+                        className="lg:flex hidden hover-up-md col-span-1 w-full bg-white md:rounded-[24px] xs:rounded-[20px] rounded-[15px]  lg:py-16 md:py-[44px] py-[38px] xs:px-[26px] px-[25px] flex-col items-center justify-center text-center h-full">
+                        <div className="size-32 bg-primary homev1-card-shadow" style={{ clipPath: "polygon(50% 100%, 0 0, 100% 0)" }}></div>
+                    </motion.div>
                     {/* yer tutucu */}
 
-                </motion.div>
+                </div>
             </section>
 
             <section className="3xl:pb-[160px] lg:pb-[128px] md:pb-[102px] xs:pb-[82px] pb-[66px] 3xl:mt-20 lg:mt-16 md:mt-[60px] md:pt-0 pt-[60px] px-6">

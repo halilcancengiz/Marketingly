@@ -43,7 +43,7 @@ const MarketingRessourcenPreise = () => {
     priceHeight: string | number,
     checklistHeight: string | number
   }
-  
+
   const [heights, setHeights] = useState<Hights>({
     headerHeight: 0,
     priceHeight: 0,
@@ -261,7 +261,7 @@ const MarketingRessourcenPreise = () => {
 
             <div style={{ height: heights.priceHeight }} className="flex flex-col lg:mt-[20px]">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Marketing_Ressourcen.basis} €</div>
-              <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
+              <div className="tb-medium text-neutral-600">einmalig (zzgl. MwSt.) <br /> (Auch als Abo möglich)</div>
             </div>
 
             <hr className="w-full my-[35px]" />
@@ -311,7 +311,7 @@ const MarketingRessourcenPreise = () => {
 
             <div style={{ height: heights.priceHeight }} className="flex flex-col lg:mt-[20px]">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Marketing_Ressourcen.standard} €</div>
-              <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
+              <div className="tb-medium text-neutral-600">einmalig (zzgl. MwSt.) <br /> (Auch als Abo möglich)</div>
             </div>
 
             <hr className="w-full my-[35px]" />

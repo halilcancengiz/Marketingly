@@ -222,7 +222,7 @@ const UnternehmenslistungPreise = () => {
 
             <div className="flex flex-col lg:mt-[20px]">
               <div className="tb-bold text-neutral-800 md:text-[24px] xs:text-[22px] text-[20px] md:leading-[34.008px] xs:leading-[31.174px] leading-[28.34px]">{APP_CONFIG.prices.Unternehmenslistung.premium} €</div>
-              <div className="tb-medium text-neutral-600">pro Monat (zzgl. Mwst.)</div>
+              <div className="tb-medium text-neutral-600">einmalig (zzgl. MwSt.)</div>
             </div>
 
             <hr className="w-full my-[35px]" />

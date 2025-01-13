@@ -1,11 +1,11 @@
 "use client";
-import Button from "../../components/Button";
+import Button from "../Button";
 import * as motion from "framer-motion/client";
 import { NavLink } from "react-router-dom";
 
 
 
-const HomeV1SixthSection = () => {
+const HomeV1WhyUsSection = () => {
 
     const fadeInAnimationVariant = {
         initial: {
@@ -101,4 +101,4 @@ const HomeV1SixthSection = () => {
     )
 }
 
-export default HomeV1SixthSection
+export default HomeV1WhyUsSection

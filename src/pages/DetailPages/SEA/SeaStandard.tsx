@@ -84,8 +84,7 @@ const SeaStandard = () => {
             Standard-Paket
           </h1>
           <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
-            Das Standard-Paket eignet sich für Unternehmen, die ihre Suchmaschinenwerbung auf mehrere Plattformen ausweiten und optimieren möchten.
-            Mit professioneller Verwaltung und erweiterten Analysen erzielen Sie nachhaltige Erfolge.
+            Das Standard-Paket ist die ideale Lösung für Unternehmen, die ihre Suchmaschinenwerbung auf das nächste Level heben möchten. Mit einem umfassenden Angebot, das mehrere Plattformen abdeckt, sowie einer erweiterten Palette an Dienstleistungen und Optimierungsstrategien, bietet es alles, was Sie für nachhaltigen Erfolg benötigen. Dank professioneller Betreuung und tiefgehender Analysen profitieren Sie von gezielten, messbaren Ergebnissen und langfristigem Wachstum.
           </div>
           <div className="flex flex-col gap-[15px] mb-10">
             <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>

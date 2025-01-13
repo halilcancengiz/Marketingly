@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { IoIosArrowDown, TbPointFilled } from "../assets/icons/icons";
+import { IoIosArrowDown } from "../assets/icons/icons";
 import { Logo } from "../assets/svg/Logo";
 import Button from "./Button";
 import { Squash as Hamburger } from "hamburger-react";
@@ -153,7 +153,7 @@ const Navbar = () => {
                                 <span>E-Mail-Marketing</span>
                             </NavLink>
                             <NavLink to="/websitefunnel-preise" className="hover:text-primary  transition-colors duration-300 flex items-start py-[15px] gap-3 tb-medium" aria-label="Go to the Funnel-Websites plan page"   >
-                                 <img className="size-5" src={websiteSVG} alt="" />
+                                <img className="size-5" src={websiteSVG} alt="" />
                                 <span>Funnel-Websites</span>
                             </NavLink>
                             <NavLink to="/foto-und-videographie-preise" className="hover:text-primary  transition-colors duration-300 flex items-start py-[15px] gap-3 tb-medium" aria-label="Go to the Video- und Fotografie plan page" >

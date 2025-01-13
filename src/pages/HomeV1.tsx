@@ -11,11 +11,11 @@ import { NavLink } from "react-router-dom";
 import splitStringUsingRegex from "../utils/splitStringUsingRegex.tsx";
 // import { useScroll, useSpring, useTransform } from "framer-motion";
 const HomeV1CardSection = lazy(() => import("../components/HomeV1/HomeV1CardSection.tsx"));
-const HomeV1ThirdSection = lazy(() => import("../components/HomeV1/HomeV1ThirdSection.tsx"));
-const HomeV1FourthSection = lazy(() => import("../components/HomeV1/HomeV1FourthSection.tsx"));
-const HomeV1FifthSection = lazy(() => import("../components/HomeV1/HomeV1FifthSection.tsx"));
-const HomeV1SixthSection = lazy(() => import("../components/HomeV1/HomeV1SixthSection.tsx"));
-const HomeV1SeventhSection = lazy(() => import("../components/HomeV1/HomeV1SeventhSection.tsx"));
+const HomeV1DigitalMarketingSolutions = lazy(() => import("../components/HomeV1/HomeV1DigitalMarketingSolutions.tsx"));
+const HomeV1BlueSection = lazy(() => import("../components/HomeV1/HomeV1BlueSection.tsx"));
+const HomeV1VideoSection = lazy(() => import("../components/HomeV1/HomeV1VideoSection.tsx"));
+const HomeV1WhyUsSection = lazy(() => import("../components/HomeV1/HomeV1WhyUsSection.tsx"));
+const HomeV1OurProcessSection = lazy(() => import("../components/HomeV1/HomeV1OurProcessSection.tsx"));
 const HomeV1ContactFormSection = lazy(() => import("../components/HomeV1/HomeV1ContactFormSection.tsx"));
 
 const HomeV1 = () => {
@@ -103,7 +103,7 @@ const HomeV1 = () => {
             </Helmet>
 
 
-            <section className="3xl:pt-[145px] 3xl:pb-[145px] lg:pt-[116px] lg:pb-[116px] md:pt-[60px] md:pb-[93px] xs:pt-[50px] xs:pb-[74px] pt-[40px] pb-[60px] relative">
+            <section className=" 3xl:pt-[145px] 3xl:pb-[145px] lg:pt-[116px] lg:pb-[116px] md:pt-[60px] md:pb-[93px] xs:pt-[50px] xs:pb-[74px] pt-[40px] pb-[60px] relative">
                 <div className="w-full h-full xs:px-6 px-4">
                     <div className="max-w-[1173px] w-full mx-auto lg:flex-row flex-col flex lg:items-center items-start justify-between z-[3]">
                         <div className="lg:mr-10 lg:mb-0 md:mb-[80px] xs:mb-[60px] mb-[50px] flex flex-col max-w-[547px] w-full mx-auto lg:text-start xs:text-center text-start">
@@ -174,7 +174,7 @@ const HomeV1 = () => {
                             <motion.img
                                 style={{
                                     boxShadow: "rgba(20, 20, 43, 0.07) 0px 18px 54px 0px",
-                                    
+
                                 }}
                                 className="border border-neutral-300 max:w-[502.844px] 3xl:w-[89%] lg:w-[87%] w-[87%]  lg:ml-auto xs:rounded-[18px] rounded-[10px]"
                                 src={chart}
@@ -184,7 +184,7 @@ const HomeV1 = () => {
                             <motion.img
                                 style={{
                                     boxShadow: "rgba(20, 20, 43, 0.07) 0px 18px 54px 0px",
-                                   
+
                                 }}
                                 className="absolute top-[50%] -translate-y-1/3 lg:left-0 right-0 hxl:w-[237px] lg:w-[43.627%] w-[42%] xs:rounded-[18px] rounded-[10px] border border-neutral-300"
                                 src={contactPeopleImage}
@@ -276,11 +276,11 @@ const HomeV1 = () => {
 
             <Suspense fallback={<div>loading...</div>}>
                 <HomeV1CardSection />
-                <HomeV1FifthSection />
-                <HomeV1SeventhSection />
-                <HomeV1FourthSection />
-                <HomeV1ThirdSection />
-                <HomeV1SixthSection />
+                <HomeV1VideoSection />
+                <HomeV1OurProcessSection />
+                <HomeV1BlueSection />
+                <HomeV1DigitalMarketingSolutions />
+                <HomeV1WhyUsSection />
                 <HomeV1ContactFormSection />
             </Suspense>
 

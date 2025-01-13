@@ -85,7 +85,8 @@ const SeaBasis = () => {
           </h1>
           <div className="leading-[30px] text-neutral-600 text-[18px] tb-medium mb-[28px]">
             Das Basis-Paket bietet Ihnen den idealen Einstieg in die Welt der Suchmaschinenwerbung.
-            Es eignet sich perfekt für kleine Unternehmen, die mit Google Ads erste Erfolge erzielen möchten.
+            Es eignet sich perfekt für kleine Unternehmen, die mit SEA und Google Ads erste Erfolge erzielen möchten.
+
           </div>
           <div className="flex flex-col gap-[15px] mb-10">
             <div className="lg:text-[24px] xs:text-[22px] text-[20px] tb-bold mb-[10px] text-neutral-800">Leistungen:</div>
@@ -96,7 +97,7 @@ const SeaBasis = () => {
             </div>
             <div className="flex items-start gap-[13px]">
               <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-              <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einrichtung und grundlegende Verwaltung von SEA-Kampagnen, beschränkt auf Google Ads</div>
+              <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Einrichtung und grundlegende Verwaltung von SEA-Kampagnen (beschränkt auf Google Ads)</div>
             </div>
             <div className="flex items-start gap-[13px]">
               <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -134,7 +135,7 @@ const SeaBasis = () => {
                 <BsDash className="text-neutral-600 mt-1" size={24} />
               </div>
               <p className="xs:text-[18px] text-base text-neutral-600 tb-medium leading-[30px] mb-2 flex items-start">
-                Flexibilität bei Anpassungen: Schnelle Reaktionen auf Veränderungen im Markt oder Ihrer Zielgruppe.
+                Hohe Flexibilität: Schnelle Reaktionen auf Veränderungen im Markt oder Ihrer Zielgruppe.
               </p>
             </div>
             <div className="flex gap-[13px]">
