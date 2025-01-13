@@ -2,7 +2,7 @@ import circlesImage from "../../../assets/images/circles.webp"
 import check from "../../../assets/images/check.webp";
 import { NavLink } from "react-router-dom";
 import Button from "../../../components/Button.tsx";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../../public/config.ts';
 import logo from "../../../assets/images/logo.webp"
@@ -100,7 +100,7 @@ const EmailMarketingStandard = () => {
             </div>
             <div className="flex items-center gap-[13px]">
               <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-              <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von bis zu 5.000 Kontakten</div>
+              <div className="leading-[20px] text-neutral-800 text-[18px] tb-medium">Verwaltung von bis zu {APP_CONFIG.campaign_limits.Email_Marketing.standard} Kontakten</div>
             </div>
             <div className="flex items-center gap-[13px]">
               <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />

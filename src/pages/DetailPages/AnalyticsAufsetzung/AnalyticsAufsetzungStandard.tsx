@@ -2,7 +2,7 @@ import circlesImage from "../../../assets/images/circles.webp"
 import check from "../../../assets/images/check.webp";
 import { NavLink } from "react-router-dom";
 import Button from "../../../components/Button.tsx";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../../public/config.ts';
 import logo from "../../../assets/images/logo.webp"

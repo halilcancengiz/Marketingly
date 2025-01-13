@@ -79,7 +79,7 @@ const HomeV1ContactFormSection = () => {
                 console.error("reCAPTCHA yüklenmedi.");
                 return;
             }
-            console.log("reCAPTCHA yüklendi:", window.grecaptcha);
+            // console.log("reCAPTCHA yüklendi:", window.grecaptcha);
     
             try {
                 setIsSubmitting(true);
@@ -94,7 +94,7 @@ const HomeV1ContactFormSection = () => {
                     console.error("reCAPTCHA Token alınamadı.");
                     return;
                 }
-                console.log("Alınan reCAPTCHA Token:", token);
+                // console.log("Alınan reCAPTCHA Token:", token);
     
                 // Form verilerini işleme
                 const formData = new FormData(form.current!); // Form'daki verileri al
@@ -127,8 +127,6 @@ const HomeV1ContactFormSection = () => {
                 });
     
                 if (response.ok) {
-                    const responseData = await response.json();
-                    console.log("Backend cevabı:", responseData);
                     navigate("/danke-seite", { replace: true }); // Başarılı işlem sonrası yönlendirme
                 } else {
                     const errorMessage = await response.text();

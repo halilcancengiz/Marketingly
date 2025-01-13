@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../public/config.ts';
 import { useEffect, useRef, useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import logo from "../../assets/images/logo.webp"
 
 const MarketingRessourcenPreise = () => {
@@ -268,7 +268,7 @@ const MarketingRessourcenPreise = () => {
             <div style={{ height: heights.checklistHeight }} className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung von bis zu 15 Grafiken</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung von bis zu {APP_CONFIG.campaign_limits.Marketing_Ressourcen.basis} Grafiken</div>
               </div>
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
@@ -318,7 +318,7 @@ const MarketingRessourcenPreise = () => {
             <div style={{ height: heights.checklistHeight }} className="flex flex-col gap-[16px] mb-10">
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />
-                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung von bis zu 40 Grafiken</div>
+                <div className="leading-[20px] text-neutral-600 text-[18px] tb-medium">Erstellung von bis zu {APP_CONFIG.campaign_limits.Marketing_Ressourcen.standard} Grafiken</div>
               </div>
               <div className="flex items-start gap-[13px]">
                 <img loading="lazy" className="size-6 rounded-full" src={check} alt="check" />

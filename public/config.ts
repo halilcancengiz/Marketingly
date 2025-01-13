@@ -69,21 +69,6 @@ interface AppConfig {
             basis: number;
             standard: number;
         };
-        Website_Funnel: {
-            basis: number;
-            standard: number;
-        };
-        Unternehmenslistung: {
-            premium: number;
-        };
-        Foto_Und_Videographie: {
-            basis: number;
-            standard: number;
-        };
-        Analytics_Aufsetzung: {
-            basis: number;
-            standard: number;
-        };
         Marketing_Ressourcen: {
             basis: number;
             standard: number;
@@ -163,26 +148,11 @@ const APP_CONFIG: AppConfig = {
         },
         Email_Marketing: {
             basis: 1000,
-            standard: 3500
-        },
-        Website_Funnel: {
-            basis: 1500,
-            standard: 3500
-        },
-        Unternehmenslistung: {
-            premium: 1500
-        },
-        Foto_Und_Videographie: {
-            basis: 1500,
-            standard: 3500
-        },
-        Analytics_Aufsetzung: {
-            basis: 1500,
-            standard: 3500
+            standard: 5000
         },
         Marketing_Ressourcen: {
-            basis: 1500,
-            standard: 3500
+            basis: 15,
+            standard: 40
         }
 
     },

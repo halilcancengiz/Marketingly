@@ -54,65 +54,69 @@ const MarketingRessourcenStandard = React.lazy(() => import("../pages/DetailPage
 const MarketingRessourcenPremium = React.lazy(() => import("../pages/DetailPages/MarketingRessourcen/MarketingRessourcenPremium"))
 
 
+
 export const AppRoutes = () => {
 
     return (
-        <React.Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-                <Route path="/" element={<HomeV1 />} />
-                {/* <Route path="/startseite-v2" element={<HomeV2 />} /> */}
-                <Route path="/danke-seite" element={<Thankyou />} />
-                <Route path="*" element={<NotFound />} />
-                <Route path="/datenschutz-und-agbs" element={<TermAndConditions />} />
-                <Route path="/impressum" element={<Impressum />} />
-                <Route path="/kontakt" element={<Contact />} />
-                <Route path="/dienstleistungen" element={<Services />} />
 
-                {/* services */}
-                <Route path="/sea-preise" element={<SeaPreise />} />
-                <Route path="/sea-basis" element={<SeaBasis />} />
-                <Route path="/sea-standard" element={<SeaStandard />} />
-                <Route path="/sea-premium" element={<SeaPremium />} />
+            <React.Suspense fallback={<div>Loading...</div>}>
+                <Routes>
+                    <Route path="/" element={<HomeV1 />} />
+                    {/* <Route path="/startseite-v2" element={<HomeV2 />} /> */}
+                    <Route path="/danke-seite" element={<Thankyou />} />
+                    <Route path="*" element={<NotFound />} />
+                    <Route path="/datenschutz-und-agbs" element={<TermAndConditions />} />
+                    <Route path="/impressum" element={<Impressum />} />
+                    <Route path="/kontakt" element={<Contact />} />
+                    <Route path="/dienstleistungen" element={<Services />} />
 
-                <Route path="/seo-preise" element={<SeoPreise />} />
-                <Route path="/seo-basis" element={<SeoBasis />} />
-                <Route path="/seo-standard" element={<SeoStandard />} />
-                <Route path="/seo-premium" element={<SeoPremium />} />
+                    {/* services */}
+                    <Route path="/sea-preise" element={<SeaPreise />} />
+                    <Route path="/sea-basis" element={<SeaBasis />} />
+                    <Route path="/sea-standard" element={<SeaStandard />} />
+                    <Route path="/sea-premium" element={<SeaPremium />} />
 
-                <Route path="/social-media-ads-preise" element={<SocialMediaAdsPreise />} />
-                <Route path="/social-media-ads-basis" element={<SocialMediaAdsBasis />} />
-                <Route path="/social-media-ads-standard" element={<SocialMediaAdsStandard />} />
-                <Route path="/social-media-ads-premium" element={<SocialMediaAdsPremium />} />
+                    <Route path="/seo-preise" element={<SeoPreise />} />
+                    <Route path="/seo-basis" element={<SeoBasis />} />
+                    <Route path="/seo-standard" element={<SeoStandard />} />
+                    <Route path="/seo-premium" element={<SeoPremium />} />
 
-                <Route path="/email-marketing-preise" element={<EmailMarketingPreise />} />
-                <Route path="/email-marketing-basis" element={<EmailMarketingBasis />} />
-                <Route path="/email-marketing-standard" element={<EmailMarketingStandard />} />
-                <Route path="/email-marketing-premium" element={<EmailMarketingPremium />} />
+                    <Route path="/social-media-ads-preise" element={<SocialMediaAdsPreise />} />
+                    <Route path="/social-media-ads-basis" element={<SocialMediaAdsBasis />} />
+                    <Route path="/social-media-ads-standard" element={<SocialMediaAdsStandard />} />
+                    <Route path="/social-media-ads-premium" element={<SocialMediaAdsPremium />} />
 
-                <Route path="/websitefunnel-preise" element={<WebsiteFunnelPreise />} />
-                <Route path="/websitefunnel-basis" element={<WFunnelBasis />} />
-                <Route path="/websitefunnel-standard" element={<WFunnelStandard />} />
-                <Route path="/websitefunnel-premium" element={<WFunnelPremium />} />
+                    <Route path="/email-marketing-preise" element={<EmailMarketingPreise />} />
+                    <Route path="/email-marketing-basis" element={<EmailMarketingBasis />} />
+                    <Route path="/email-marketing-standard" element={<EmailMarketingStandard />} />
+                    <Route path="/email-marketing-premium" element={<EmailMarketingPremium />} />
 
-                <Route path="/unternehmenslistung-preis" element={<UnternehmenslistungPreise />} />
-                <Route path="/unternehmenslistung-premium" element={<UnternehmenslistungPremium />} />
+                    <Route path="/websitefunnel-preise" element={<WebsiteFunnelPreise />} />
+                    <Route path="/websitefunnel-basis" element={<WFunnelBasis />} />
+                    <Route path="/websitefunnel-standard" element={<WFunnelStandard />} />
+                    <Route path="/websitefunnel-premium" element={<WFunnelPremium />} />
 
-                <Route path="/foto-und-videographie-preise" element={<FotoUndVideographiePreise />} />
-                <Route path="/foto-und-videographie-basis" element={<FotoUndVideographieBasis />} />
-                <Route path="/foto-und-videographie-standard" element={<FotoUndVideographieStandard />} />
-                <Route path="/foto-und-videographie-premium" element={<FotoUndVideographiePremium />} />
+                    <Route path="/unternehmenslistung-preis" element={<UnternehmenslistungPreise />} />
+                    <Route path="/unternehmenslistung-premium" element={<UnternehmenslistungPremium />} />
 
-                <Route path="/analytics-aufsetzung-preis" element={<AnalyticsAufsetzungPreise />} />
-                <Route path="/analytics-aufsetzung-basis" element={<AnalyticsAufsetzungBasis />} />
-                <Route path="/analytics-aufsetzung-standard" element={<AnalyticsAufsetzungStandard />} />
-                <Route path="/analytics-aufsetzung-premium" element={<AnalyticsAufsetzungPremium />} />
+                    <Route path="/foto-und-videographie-preise" element={<FotoUndVideographiePreise />} />
+                    <Route path="/foto-und-videographie-basis" element={<FotoUndVideographieBasis />} />
+                    <Route path="/foto-und-videographie-standard" element={<FotoUndVideographieStandard />} />
+                    <Route path="/foto-und-videographie-premium" element={<FotoUndVideographiePremium />} />
 
-                <Route path="/marketing-ressourcen-preise" element={<MarketingRessourcenPreise />} />
-                <Route path="/marketing-ressourcen-basis" element={<MarketingRessourcenBasis />} />
-                <Route path="/marketing-ressourcen-standard" element={<MarketingRessourcenStandard />} />
-                <Route path="/marketing-ressourcen-premium" element={<MarketingRessourcenPremium />} />
+                    <Route path="/analytics-aufsetzung-preis" element={<AnalyticsAufsetzungPreise />} />
+                    <Route path="/analytics-aufsetzung-basis" element={<AnalyticsAufsetzungBasis />} />
+                    <Route path="/analytics-aufsetzung-standard" element={<AnalyticsAufsetzungStandard />} />
+                    <Route path="/analytics-aufsetzung-premium" element={<AnalyticsAufsetzungPremium />} />
 
-            </Routes>
-        </React.Suspense>
+                    <Route path="/marketing-ressourcen-preise" element={<MarketingRessourcenPreise />} />
+                    <Route path="/marketing-ressourcen-basis" element={<MarketingRessourcenBasis />} />
+                    <Route path="/marketing-ressourcen-standard" element={<MarketingRessourcenStandard />} />
+                    <Route path="/marketing-ressourcen-premium" element={<MarketingRessourcenPremium />} />
+
+                </Routes>
+            </React.Suspense>
+
+
     );
 };

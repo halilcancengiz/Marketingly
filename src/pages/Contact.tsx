@@ -8,7 +8,7 @@ import Button from "../components/Button"
 // import whatsappIcon from "../assets/images/whatsapp.webp"
 import Accordion from "../components/Accordion"
 import { useEffect, useRef, useState } from "react"
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../public/config.ts';
 import logo from "../assets/images/logo.webp"
@@ -90,7 +90,7 @@ const Contact = () => {
             console.error("reCAPTCHA yüklenmedi.");
             return;
         }
-        console.log("reCAPTCHA yüklendi:", window.grecaptcha);
+        // console.log("reCAPTCHA yüklendi:", window.grecaptcha);
 
         try {
             setIsSubmitting(true);
@@ -105,7 +105,7 @@ const Contact = () => {
                 console.error("reCAPTCHA Token alınamadı.");
                 return;
             }
-            console.log("Alınan reCAPTCHA Token:", token);
+            // console.log("Alınan reCAPTCHA Token:", token);
 
             // Form verilerini işleme
             const formData = new FormData(form.current!); // Form'daki verileri al
@@ -131,17 +131,15 @@ const Contact = () => {
             }
 
             // Backend'e POST isteği gönder
-            console.log(formattedData)
+            // console.log(formattedData)
             const response = await fetch(`${backendUrl}/api/send-mail`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formattedData), // İşlenmiş verileri JSON olarak gönder
             });
-            console.log(response)
+            // console.log(response)
 
             if (response.ok) {
-                const responseData = await response.json();
-                console.log("Backend cevabı:", responseData);
                 navigate("/danke-seite", { replace: true }); // Başarılı işlem sonrası yönlendirme
             } else {
                 const errorMessage = await response.text();
