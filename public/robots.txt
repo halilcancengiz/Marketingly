@@ -3,6 +3,8 @@ Disallow: /private
 Disallow: /admin
 Disallow: /tmp
 Disallow: /test
-Disallow: /startseite-v2
+Disallow: /internal
+Disallow: /backup
+Disallow: /danke-seite
 Allow: /
 Sitemap: https://superagentur-marketing.de/sitemap.xml

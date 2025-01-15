@@ -415,9 +415,9 @@ const SocialMediaAdsPreise = () => {
         <div className="text-neutral-600 text-[18px] leading-[30.006px] mb-[40px] tb-medium">
           Wir freuen uns darauf, gemeinsam mit Ihnen Ihre Ziele zu erreichen.
         </div>
-        <div>
+        <NavLink aria-label="Open kontakt page" to="/kontakt">
           <Button className="tb-bold" variant="primary">Kontakt</Button>
-        </div>
+        </NavLink>
       </motion.section>
 
       <motion.section

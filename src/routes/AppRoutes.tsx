@@ -99,6 +99,7 @@ export const AppRoutes = () => {
                     <Route path="/unternehmenslistung-preis" element={<UnternehmenslistungPreise />} />
                     <Route path="/unternehmenslistung-premium" element={<UnternehmenslistungPremium />} />
 
+                    {/* buradan devam edilecek  */}
                     <Route path="/foto-und-videographie-preise" element={<FotoUndVideographiePreise />} />
                     <Route path="/foto-und-videographie-basis" element={<FotoUndVideographieBasis />} />
                     <Route path="/foto-und-videographie-standard" element={<FotoUndVideographieStandard />} />
