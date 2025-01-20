@@ -55,7 +55,7 @@ const SocialMediaAdsPremium = () => {
   };
   return (
     <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
-
+{/* 
       <Helmet>
         <title>Social Media Ads Premium Paket | Superagentur</title>
         <meta property="og:title" content="Social Media Ads Premium Paket | Superagentur" />
@@ -67,7 +67,7 @@ const SocialMediaAdsPremium = () => {
         <meta property="og:image" content={logo} />
         <link rel="canonical" href="https://superagentur-marketing.de/social-media-ads-premium" />
 
-      </Helmet>
+      </Helmet> */}
       <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
         <motion.div
           variants={fadeInAnimationVariant}

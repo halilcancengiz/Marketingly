@@ -54,7 +54,7 @@ const TermAndConditions = () => {
 
     return (
         <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] 3xl:pt-[123px] 3xl:pb-[123px] px-6 relative bg-[#F8F9FF]">
-            <Helmet>
+            {/* <Helmet>
                 <title>Impressum | Superagentur</title>
                 <meta property="og:title" content="Impressum | Superagentur" />
                 <meta name="description" content="Offizielle Informationen über Superagentur: Ansprechpartner, rechtliche Hinweise und Kontaktmöglichkeiten im Überblick." />
@@ -64,7 +64,7 @@ const TermAndConditions = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}impressum`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/impressum" />
-            </Helmet>
+            </Helmet> */}
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
 
                 <motion.div

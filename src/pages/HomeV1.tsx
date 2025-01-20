@@ -88,7 +88,7 @@ const HomeV1 = () => {
 
     return (
         <main className="flex flex-col overflow-x-hidden">
-            <Helmet>
+            {/* <Helmet>
                 <title>Superagentur – Ihr Partner für Online-Marketing und digitalen Erfolg!</title>
                 <meta property="og:title" content="Superagentur – Ihr Partner für Online-Marketing und digitalen Erfolg!" />
                 <meta name="description" content="Als All-in-One-Werbeagentur steigern wir Ihre Sichtbarkeit und Erfolge auf allen Online-Kanälen – mit Search Ads, SEO, Social Media Ads & mehr." />
@@ -100,7 +100,7 @@ const HomeV1 = () => {
                 <link rel="canonical" href="https://superagentur-marketing.de" />
                 <link rel="preload" as="image" href={contactPeopleImage} />
                 <link rel="preload" as="image" href={chart} />
-            </Helmet>
+            </Helmet> */}
 
 
             <section className=" 3xl:pt-[145px] 3xl:pb-[145px] lg:pt-[116px] lg:pb-[116px] md:pt-[60px] md:pb-[93px] xs:pt-[50px] xs:pb-[74px] pt-[40px] pb-[60px] relative">

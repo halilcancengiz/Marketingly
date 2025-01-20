@@ -40,7 +40,7 @@ const Services = () => {
 
     return (
         <div className="flex flex-col">
-            <Helmet>
+            {/* <Helmet>
                 <title>Übersicht Marketing Dienstleistungen | Superagentur</title>
                 <meta property="og:title" content="Übersicht Marketing Dienstleistungen | Superagentur" />
                 <meta name="description" content="Unsere Dienstleistungen im Überblick: SEO, Social Media Ads, E-Mail-Marketing und mehr – alles aus einer Hand." />
@@ -50,7 +50,7 @@ const Services = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}dienstleistungen`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/dienstleistungen" />
-            </Helmet>
+            </Helmet> */}
 
             <section className="relative overflow-hidden z-[1]  flex items-center justify-center bg-secondary1 w-full 3xl:pt-[142px] lg:pt-[114px] md:pt-[91px] xs:pt-[72px] pt-[58px] 3xl:pb-[196px]  lg:pb-[118px] md:pb-[140px] xs:pb-[88px] pb-[100px] px-6">
                 <div className="max-w-[540px] w-full flex flex-col text-white z-[3]">

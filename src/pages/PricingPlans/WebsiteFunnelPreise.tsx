@@ -80,7 +80,7 @@ const WebsiteFunnelPreise = () => {
   return (
     <div className="flex flex-col">
 
-      <Helmet>
+      {/* <Helmet>
         <title>Website-Funnel Preise | Superagentur</title>
         <meta property="og:title" content="Website-Funnel Preise | Superagentur" />
         <meta name="description" content="Klare Preise für optimierte Funnels, die Conversions steigern und Ihren Umsatz maximieren." />
@@ -90,7 +90,7 @@ const WebsiteFunnelPreise = () => {
         <meta property="og:url" content={`${APP_CONFIG.base_url}websitefunnel-preise`} />
         <meta property="og:image" content={logo} />
         <link rel="canonical" href="https://superagentur-marketing.de/websitefunnel-preise" />
-      </Helmet>
+      </Helmet> */}
 
       <div className="bg-secondary4 3xl:h-[642px] lg:h-[560px] md:h-[475px] h-[401px]  3xl:pt-[126px] lg:pt-[100px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[281px] lg:pb-[225px] md:pb-[200px] pb-[160px] relative overflow-hidden">
         <div className="flex flex-col items-center justify-center text-center text-white max-w-[481px] px-6 w-full mx-auto">

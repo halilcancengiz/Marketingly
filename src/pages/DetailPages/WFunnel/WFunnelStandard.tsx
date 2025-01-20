@@ -55,7 +55,7 @@ const WFunnelStandard = () => {
   };
   return (
     <section className="3xl:pt-[95px] lg:pt-[75px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[136px] lg:pb-[110px] md:pb-[88px] xs:pb-[70px] pb-[60px] px-6 flex items-center justify-center relative">
-
+{/* 
       <Helmet>
         <title>Website-Funnel Standard Paket | Superagentur</title>
         <meta property="og:title" content="Website-Funnel Standard Paket | Superagentur" />
@@ -66,7 +66,7 @@ const WFunnelStandard = () => {
         <meta property="og:url" content={`${APP_CONFIG.base_url}websitefunnel-standard`} />
         <meta property="og:image" content={logo} />
         <link rel="canonical" href="https://superagentur-marketing.de/websitefunnel-standard" />
-      </Helmet>
+      </Helmet> */}
 
       <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col lg:items-start items-center justify-between z-[2]">
         <motion.div

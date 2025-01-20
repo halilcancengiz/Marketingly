@@ -48,7 +48,7 @@ const Thankyou = () => {
 
     return (
         <div className='3xl:pt-[95px] lg:pt-[76px] md:pt-[60px] xs:pt-[50px] pt-10 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] bg-white flex flex-col items-center justify-center px-6 relative overflow-hidden'>
-            <Helmet>
+            {/* <Helmet>
                 <title>Danke für Ihre Anfrage | Superagentur</title>
                 <meta property="og:title" content="Danke für Ihre Anfrage | Superagentur" />
                 <meta name="description" content="Vielen Dank für Ihre Anfrage bei Superagentur! Entdecken Sie unsere Leistungen und starten Sie jetzt Ihren digitalen Erfolg." />
@@ -58,7 +58,7 @@ const Thankyou = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}danke-seite`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/danke-seite" />
-            </Helmet>
+            </Helmet> */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

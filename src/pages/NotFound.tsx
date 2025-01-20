@@ -28,7 +28,7 @@ const NotFound = () => {
     };
     return (
         <div className='3xl:pt-[186px] 3xl:pb-[198px] lg:pt-[148px] lg:pb-[158px] md:pt-[118px] md:pb-[126px] xs:pt-[94px] xs:pb-[100px] pt-[75px] pb-[80px] px-6 relative bg-secondary1 overflow-hidden'>
-            <Helmet>
+            {/* <Helmet>
                 <title>Seite nicht gefunden – Superagentur</title>
                 <meta name="description" content="Fehlerseite für nicht gefundene Inhalte." />
                 <meta name="keywords" content="404 Fehler, Seite nicht gefunden, Superagentur" />
@@ -39,7 +39,7 @@ const NotFound = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}404`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/404" />
-            </Helmet>
+            </Helmet> */}
             <div className='flex flex-col z-[10] max-w-[750px] w-full mx-auto'>
                 <motion.div
                     variants={fadeInAnimationVariant}

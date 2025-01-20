@@ -9,14 +9,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Superagentur - Ihre Marketingagentur für digitale Lösungen</title>
   <meta name="msvalidate.01" content="5BCBCA4A138B4C44F3C100A1D8B233DC" />
+  <meta property="og:image" content="/favicon-192x192.png" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
   <script
     src="https://www.google.com/recaptcha/enterprise.js?render=6Lduy6MqAAAAACGAIFuC4p5RmL8z1C166sydvTup&hl=de"></script>
 
-  <!-- Google Tag Manager (Delayed by 2 seconds) -->
   <script nonce="randomNonce">
 
     (function (w, d, s, l, i) {
@@ -34,7 +33,7 @@
     })(window, document, 'script', 'dataLayer', 'GTM-5C5X5R7V');
 
   </script>
-  <!-- End Google Tag Manager -->
+
   <style>
     #seo-h1 {
       visibility: hidden;
@@ -46,17 +45,300 @@
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
   <noscript>
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5C5X5R7V" height="0" width="0"
       style="display:none;visibility:hidden"></iframe>
   </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <!-- <h1 id="seo-h1">Superagentur - Marketing</h1> -->
+
   <div id="root"></div>
 
   <script nonce="randomNonce" type="text/typescript" src="./public/config.ts"></script>
   <script nonce="randomNonce" type="module" src="/src/main.tsx"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Meta tag'lerini güncelleyen fonksiyon
+      function updateMetaTags() {
+        const currentUrl = window.location.pathname;
+        let title = "Superagentur – Ihr Partner für Online-Marketing und digitalen Erfolg!";
+        let description = "Als All-in-One-Werbeagentur steigern wir Ihre Sichtbarkeit und Erfolge auf allen Online-Kanälen – mit Search Ads, SEO, Social Media Ads & mehr.";
+        let ogTitle = "Superagentur – Ihr Partner für Online-Marketing und digitalen Erfolg!";
+        let ogDescription = "Als All-in-One-Werbeagentur steigern wir Ihre Sichtbarkeit und Erfolge auf allen Online-Kanälen – mit Search Ads, SEO, Social Media Ads & mehr.";
+        let ogUrl = window.location.href;
+        let ogCanonical = window.location.href
+
+        // URL'lere göre meta bilgilerini ayarlayın
+        if (currentUrl === '/') {
+          title = "Superagentur – Ihr Partner für Online-Marketing und digitalen Erfolg!";
+          description = "Als All-in-One-Werbeagentur steigern wir Ihre Sichtbarkeit und Erfolge auf allen Online-Kanälen – mit Search Ads, SEO, Social Media Ads & mehr.";
+          ogTitle = "Superagentur – Ihr Partner für Online-Marketing und digitalen Erfolg!";
+          ogDescription = "Als All-in-One-Werbeagentur steigern wir Ihre Sichtbarkeit und Erfolge auf allen Online-Kanälen – mit Search Ads, SEO, Social Media Ads & mehr.";
+        } else if (currentUrl === '/danke-seite') {
+          title = "Danke für Ihre Anfrage | Superagentur";
+          description = "Vielen Dank für Ihre Anfrage bei Superagentur! Entdecken Sie unsere Leistungen und starten Sie jetzt Ihren digitalen Erfolg.";
+          ogTitle = "Danke für Ihre Anfrage | Superagentur";
+          ogDescription = "Vielen Dank für Ihre Anfrage bei Superagentur! Entdecken Sie unsere Leistungen und starten Sie jetzt Ihren digitalen Erfolg.";
+        } else if (currentUrl === '/datenschutz-und-agbs') {
+          title = "Datenschutz & AGBs | Superagentur";
+          description = "Erfahren Sie alles über unsere Datenschutzrichtlinien und AGBs – für eine transparente und vertrauensvolle Zusammenarbeit.";
+          ogTitle = "Datenschutz & AGBs | Superagentur";
+          ogDescription = "Erfahren Sie alles über unsere Datenschutzrichtlinien und AGBs – für eine transparente und vertrauensvolle Zusammenarbeit.";
+        } else if (currentUrl === '/impressum') {
+          title = "Impressum | Superagentur";
+          description = "Offizielle Informationen über Superagentur: Ansprechpartner, rechtliche Hinweise und Kontaktmöglichkeiten im Überblick.";
+          ogTitle = "Impressum | Superagentur";
+          ogDescription = "Offizielle Informationen über Superagentur: Ansprechpartner, rechtliche Hinweise und Kontaktmöglichkeiten im Überblick.";
+        } else if (currentUrl === '/kontakt') {
+          title = "Kontakt | Superagentur Marketing";
+          description = "Kontaktieren Sie uns noch heute – Ihr Partner für digitales Wachstum, Online-Marketing und Recruiting steht bereit.";
+          ogTitle = "Kontakt | Superagentur Marketing";
+          ogDescription = "Kontaktieren Sie uns noch heute – Ihr Partner für digitales Wachstum, Online-Marketing und Recruiting steht bereit.";
+        } else if (currentUrl === '/dienstleistungen') {
+          title = "Übersicht Marketing Dienstleistungen | Superagentur";
+          description = "Unsere Dienstleistungen im Überblick: SEO, Social Media Ads, E-Mail-Marketing und mehr – alles aus einer Hand.";
+          ogTitle = "Übersicht Marketing Dienstleistungen | Superagentur";
+          ogDescription = "Unsere Dienstleistungen im Überblick: SEO, Social Media Ads, E-Mail-Marketing und mehr – alles aus einer Hand.";
+        } else if (currentUrl === '/sea-preise') {
+          title = "SEA Preise | Superagentur";
+          description = "Transparente Preise für gezielte Suchmaschinenwerbung, die Ihre Marke optimal positioniert und für mehr Klicks sorgt.";
+          ogTitle = "SEA Preise | Superagentur";
+          ogDescription = "Transparente Preise für gezielte Suchmaschinenwerbung, die Ihre Marke optimal positioniert und für mehr Klicks sorgt.";
+        } else if (currentUrl === '/sea-basis') {
+          title = "SEA Basis Paket | Superagentur";
+          description = "Einstiegslösungen für effektive Suchmaschinenwerbung, ideal für kleine Budgets mit maximalem Effekt.";
+          ogTitle = "SEA Basis Paket | Superagentur";
+          ogDescription = "Einstiegslösungen für effektive Suchmaschinenwerbung, ideal für kleine Budgets mit maximalem Effekt.";
+        } else if (currentUrl === '/sea-standard') {
+          title = "SEA Standard Paket | Superagentur";
+          description = "Gezielte Suchmaschinenwerbung für mehr Reichweite, Klicks und Conversions – perfekt für wachsende Unternehmen.";
+          ogTitle = "SEA Standard Paket | Superagentur";
+          ogDescription = "Gezielte Suchmaschinenwerbung für mehr Reichweite, Klicks und Conversions – perfekt für wachsende Unternehmen.";
+        } else if (currentUrl === '/sea-premium') {
+          title = "SEA Premium Paket | Superagentur";
+          description = "High-End-Lösungen für Suchmaschinenwerbung, die Ihre Marke an die Spitze bringt und maximale Performance liefert.";
+          ogTitle = "SEA Premium Paket | Superagentur";
+          ogDescription = "High-End-Lösungen für Suchmaschinenwerbung, die Ihre Marke an die Spitze bringt und maximale Performance liefert.";
+        } else if (currentUrl === '/seo-preise') {
+          title = "SEO Preise | Superagentur";
+          description = "Unsere SEO-Preise bieten faire und transparente Lösungen für nachhaltigen Erfolg in den Suchmaschinen.";
+          ogTitle = "SEO Preise | Superagentur";
+          ogDescription = "Unsere SEO-Preise bieten faire und transparente Lösungen für nachhaltigen Erfolg in den Suchmaschinen.";
+        } else if (currentUrl === '/seo-basis') {
+          title = "SEO Basis Paket | Superagentur";
+          description = "Effektive Grundoptimierung für Ihre Website, um höhere Rankings und mehr Sichtbarkeit zu erzielen.";
+          ogTitle = "SEO Basis Paket | Superagentur";
+          ogDescription = "Effektive Grundoptimierung für Ihre Website, um höhere Rankings und mehr Sichtbarkeit zu erzielen.";
+        } else if (currentUrl === '/seo-standard') {
+          title = "SEO Standard Paket | Superagentur";
+          description = "Professionelle SEO-Dienstleistungen für kontinuierliches Wachstum und steigende Reichweiten.";
+          ogTitle = "SEO Standard Paket | Superagentur";
+          ogDescription = "Professionelle SEO-Dienstleistungen für kontinuierliches Wachstum und steigende Reichweiten.";
+        } else if (currentUrl === '/seo-premium') {
+          title = "SEO Premium Paket | Superagentur";
+          description = "Spitzenoptimierung für maximale Suchmaschinen-Rankings und eine starke Online-Präsenz.";
+          ogTitle = "SEO Premium Paket | Superagentur";
+          ogDescription = "Spitzenoptimierung für maximale Suchmaschinen-Rankings und eine starke Online-Präsenz.";
+        } else if (currentUrl === '/social-media-ads-preise') {
+          title = "Social Media Ads Preise | Superagentur";
+          description = "Transparente Preise für gezielte Social Media Werbung, die Ihre Zielgruppe erreicht und Ihre Reichweite effektiv steigert.";
+          ogTitle = "Social Media Ads Preise | Superagentur";
+          ogDescription = "Transparente Preise für gezielte Social Media Werbung, die Ihre Zielgruppe erreicht und Ihre Reichweite effektiv steigert.";
+        } else if (currentUrl === '/social-media-ads-basis') {
+          title = "Social Media Ads Basis Paket | Superagentur";
+          description = "Social Media Ads für Einsteiger mit kleinem Budget – effiziente Lösungen für gezielte Kampagnen mit klarem Fokus.";
+          ogTitle = "Social Media Ads Basis Paket | Superagentur";
+          ogDescription = "Social Media Ads für Einsteiger mit kleinem Budget – effiziente Lösungen für gezielte Kampagnen mit klarem Fokus.";
+        } else if (currentUrl === '/social-media-ads-standard') {
+          title = "Social Media Ads Standard Paket | Superagentur";
+          description = "Social Media Ads für professionelle Kampagnen – erzielen Sie messbare Erfolge auf Facebook, Instagram und mehr.";
+          ogTitle = "Social Media Ads Standard Paket | Superagentur";
+          ogDescription = "Social Media Ads für professionelle Kampagnen – erzielen Sie messbare Erfolge auf Facebook, Instagram und mehr.";
+        } else if (currentUrl === '/social-media-ads-premium') {
+          title = "Social Media Ads Premium Paket | Superagentur";
+          description = "Social Media Ads für maximale Performance – strategische Lösungen für hohe Reichweite und optimale Ergebnisse.";
+          ogTitle = "Social Media Ads Premium Paket | Superagentur";
+          ogDescription = "Social Media Ads für maximale Performance – strategische Lösungen für hohe Reichweite und optimale Ergebnisse.";
+        } else if (currentUrl === '/email-marketing-preise') {
+          title = "E-Mail-Marketing Preise | Superagentur";
+          description = "Transparente Preise für E-Mail-Marketing – effektive Lösungen für Kundenbindung und Umsatzsteigerung, passend für jedes Budget.";
+          ogTitle = "E-Mail-Marketing Preise | Superagentur";
+          ogDescription = "Transparente Preise für E-Mail-Marketing – effektive Lösungen für Kundenbindung und Umsatzsteigerung, passend für jedes Budget.";
+        } else if (currentUrl === '/email-marketing-basis') {
+          title = "E-Mail-Marketing Basis Paket | Superagentur";
+          description = "E-Mail-Marketing für Einsteiger – automatisierte Kampagnen für eine effektive und unkomplizierte Kundenkommunikation.";
+          ogTitle = "E-Mail-Marketing Basis Paket | Superagentur";
+          ogDescription = "E-Mail-Marketing für Einsteiger – automatisierte Kampagnen für eine effektive und unkomplizierte Kundenkommunikation.";
+        } else if (currentUrl === '/email-marketing-standard') {
+          title = "E-Mail-Marketing Standard Paket | Superagentur";
+          description = "E-Mail-Marketing für wachsendes Unternehmen – maßgeschneiderte Strategien, die Ihre Zielgruppe optimal erreichen.";
+          ogTitle = "E-Mail-Marketing Standard Paket | Superagentur";
+          ogDescription = "E-Mail-Marketing für wachsendes Unternehmen – maßgeschneiderte Strategien, die Ihre Zielgruppe optimal erreichen.";
+        } else if (currentUrl === '/email-marketing-premium') {
+          title = "E-Mail-Marketing Premium Paket | Superagentur";
+          description = "E-Mail-Marketing für maximale Performance – High-End-Lösungen mit vollständiger Automatisierung und Skalierbarkeit.";
+          ogTitle = "E-Mail-Marketing Premium Paket | Superagentur";
+          ogDescription = "E-Mail-Marketing für maximale Performance – High-End-Lösungen mit vollständiger Automatisierung und Skalierbarkeit.";
+        } else if (currentUrl === '/websitefunnel-preise') {
+          title = "Website-Funnel Preise | Superagentur";
+          description = "Klare Preise für optimierte Funnels, die Conversions steigern und Ihren Umsatz maximieren.";
+          ogTitle = "Website-Funnel Preise | Superagentur";
+          ogDescription = "Klare Preise für optimierte Funnels, die Conversions steigern und Ihren Umsatz maximieren.";
+        } else if (currentUrl === '/websitefunnel-basis') {
+          title = "Website-Funnel Basis Paket | Superagentur";
+          description = "Funnels für Einsteiger – funktionale Lösungen, die Ihre Leads in zahlende Kunden verwandeln.";
+          ogTitle = "Website-Funnel Basis Paket | Superagentur";
+          ogDescription = "Funnels für Einsteiger – funktionale Lösungen, die Ihre Leads in zahlende Kunden verwandeln.";
+        } else if (currentUrl === '/websitefunnel-standard') {
+          title = "Website-Funnel Standard Paket | Superagentur";
+          description = "Funnels für wachsende Unternehmen – effektive Strategien, um Conversions zu maximieren.";
+          ogTitle = "Website-Funnel Standard Paket | Superagentur";
+          ogDescription = "Funnels für wachsende Unternehmen – effektive Strategien, um Conversions zu maximieren.";
+        } else if (currentUrl === '/websitefunnel-premium') {
+          title = "Website-Funnel Premium Paket | Superagentur";
+          description = "Funnels für maximale Umsätze – individuelle High-End-Lösungen für optimale Ergebnisse.";
+          ogTitle = "Website-Funnel Premium Paket | Superagentur";
+          ogDescription = "Funnels für maximale Umsätze – individuelle High-End-Lösungen für optimale Ergebnisse.";
+        } else if (currentUrl === '/unternehmenslistung-preis') {
+          title = "Unternehmenslistung Preis | Superagentur";
+          description = "Google My Business Profile für maximale Sichtbarkeit – transparente Preise für Ihre Präsenz in relevanten Verzeichnissen.";
+          ogTitle = "Unternehmenslistung Preis | Superagentur";
+          ogDescription = "Google My Business Profile für maximale Sichtbarkeit – transparente Preise für Ihre Präsenz in relevanten Verzeichnissen.";
+        } else if (currentUrl === '/unternehmenslistung-premium') {
+          title = "Unternehmenslistung Premium Paket | Superagentur";
+          description = "Google My Business Premium – Optimierte Einträge für höchste Präsenz auf lokalen und globalen Plattformen.";
+          ogTitle = "Unternehmenslistung Premium Paket | Superagentur";
+          ogDescription = "Google My Business Premium – Optimierte Einträge für höchste Präsenz auf lokalen und globalen Plattformen.";
+        } else if (currentUrl === '/foto-und-videographie-preise') {
+          title = "Foto & Videographie Preise | Superagentur";
+          description = "Klare Preise für hochwertige Foto- und Videoproduktionen, die Ihre Marke zum Strahlen bringen.";
+          ogTitle = "Foto & Videographie Preise | Superagentur";
+          ogDescription = "Klare Preise für hochwertige Foto- und Videoproduktionen, die Ihre Marke zum Strahlen bringen.";
+        } else if (currentUrl === '/foto-und-videographie-basis') {
+          title = "Foto & Videographie Basis Paket | Superagentur";
+          description = "Perfekte Visuals für ansprechende und professionelle Markenauftritte – ideal für Einsteiger.";
+          ogTitle = "Foto & Videographie Basis Paket | Superagentur";
+          ogDescription = "Perfekte Visuals für ansprechende und professionelle Markenauftritte – ideal für Einsteiger.";
+        } else if (currentUrl === '/foto-und-videographie-standard') {
+          title = "Foto & Videographie Standard Paket | Superagentur";
+          description = "Hochwertige Medienproduktionen für Social Media, Websites und mehr – starke Inhalte für Ihr Marketing.";
+          ogTitle = "Foto & Videographie Standard Paket | Superagentur";
+          ogDescription = "Hochwertige Medienproduktionen für Social Media, Websites und mehr – starke Inhalte für Ihr Marketing.";
+        } else if (currentUrl === '/foto-und-videographie-premium') {
+          title = "Foto & Videographie Premium Paket | Superagentur";
+          description = "Premium-Medienproduktionen für beeindruckende Markenauftritte und maximale Wirkung.";
+          ogTitle = "Foto & Videographie Premium Paket | Superagentur";
+          ogDescription = "Premium-Medienproduktionen für beeindruckende Markenauftritte und maximale Wirkung.";
+        } else if (currentUrl === '/analytics-aufsetzung-preis') {
+          title = "Analytics-Aufsetzung Preis | Superagentur";
+          description = "Transparente Preise für professionelle Analytics-Aufsetzung – Google Analytics, Tag Manager, Pixel und mehr.";
+          ogTitle = "Analytics-Aufsetzung Preis | Superagentur";
+          ogDescription = "Transparente Preise für professionelle Analytics-Aufsetzung – Google Analytics, Tag Manager, Pixel und mehr.";
+        } else if (currentUrl === '/analytics-aufsetzung-basis') {
+          title = "Analytics-Aufsetzung Basis Paket | Superagentur";
+          description = "Analytics-Aufsetzung für Einsteiger – Einrichtung von Google Analytics und Tag Manager für wichtige Einblicke.";
+          ogTitle = "Analytics-Aufsetzung Basis Paket | Superagentur";
+          ogDescription = "Analytics-Aufsetzung für Einsteiger – Einrichtung von Google Analytics und Tag Manager für wichtige Einblicke.";
+        } else if (currentUrl === '/analytics-aufsetzung-standard') {
+          title = "Analytics-Aufsetzung Standard Paket | Superagentur";
+          description = "Professionelle Analytics-Aufsetzung – Google Analytics, Tag Manager und Conversion-Tracking für datengesteuerte Entscheidungen.";
+          ogTitle = "Analytics-Aufsetzung Standard Paket | Superagentur";
+          ogDescription = "Professionelle Analytics-Aufsetzung – Google Analytics, Tag Manager und Conversion-Tracking für datengesteuerte Entscheidungen.";
+        } else if (currentUrl === '/analytics-aufsetzung-premium') {
+          title = "Analytics-Aufsetzung Premium Paket | Superagentur";
+          description = "High-End-Analytics – Tiefgehende Einrichtung von Google Analytics, Tag Manager und erweitertes Conversion-Tracking für maximale Einblicke.";
+          ogTitle = "Analytics-Aufsetzung Premium Paket | Superagentur";
+          ogDescription = "High-End-Analytics – Tiefgehende Einrichtung von Google Analytics, Tag Manager und erweitertes Conversion-Tracking für maximale Einblicke.";
+        } else if (currentUrl === '/marketing-ressourcen-preise') {
+          title = "Marketing-Ressourcen Preise | Superagentur";
+          description = "Klare Preise für Marketing-Ressourcen – professionelle Grafiken für erfolgreiche Kampagnen.";
+          ogTitle = "Marketing-Ressourcen Preise | Superagentur";
+          ogDescription = "Klare Preise für Marketing-Ressourcen – professionelle Grafiken für erfolgreiche Kampagnen.";
+        } else if (currentUrl === '/marketing-ressourcen-basis') {
+          title = "Marketing-Ressourcen Basis Paket | Superagentur";
+          description = "Marketing-Ressourcen für den Start – effektive Grafiken und Inhalte für Ihre erste erfolgreiche Strategie.";
+          ogTitle = "Marketing-Ressourcen Basis Paket | Superagentur";
+          ogDescription = "Marketing-Ressourcen für den Start – effektive Grafiken und Inhalte für Ihre erste erfolgreiche Strategie.";
+        } else if (currentUrl === '/marketing-ressourcen-standard') {
+          title = "Marketing-Ressourcen Standard Paket | Superagentur";
+          description = "Marketing-Ressourcen für Unternehmen – umfassende Lösungen für effiziente Kampagnen und Ergebnisse.";
+          ogTitle = "Marketing-Ressourcen Standard Paket | Superagentur";
+          ogDescription = "Marketing-Ressourcen für Unternehmen – umfassende Lösungen für effiziente Kampagnen und Ergebnisse.";
+        } else if (currentUrl === '/marketing-ressourcen-premium') {
+          title = "Marketing-Ressourcen Premium Paket | Superagentur";
+          description = "Premium-Marketing-Ressourcen – hochwertige Grafiken, die Ihre Kampagnen auf das nächste Level bringen.";
+          ogTitle = "Marketing-Ressourcen Premium Paket | Superagentur";
+          ogDescription = "Premium-Marketing-Ressourcen – hochwertige Grafiken, die Ihre Kampagnen auf das nächste Level bringen.";
+        }
+
+        // Meta title, description, og:title, og:description, og:url güncelleme
+        document.title = title;
+        let metaDescription = document.querySelector('meta[name="description"]');
+        if (!metaDescription) {
+          metaDescription = document.createElement('meta');
+          metaDescription.setAttribute('name', 'description');
+          document.head.appendChild(metaDescription);
+        }
+        metaDescription.setAttribute('content', description);
+
+        let ogTitleTag = document.querySelector('meta[property="og:title"]');
+        if (!ogTitleTag) {
+          ogTitleTag = document.createElement('meta');
+          ogTitleTag.setAttribute('property', 'og:title');
+          document.head.appendChild(ogTitleTag);
+        }
+        ogTitleTag.setAttribute('content', ogTitle);
+
+        let ogDescriptionTag = document.querySelector('meta[property="og:description"]');
+        if (!ogDescriptionTag) {
+          ogDescriptionTag = document.createElement('meta');
+          ogDescriptionTag.setAttribute('property', 'og:description');
+          document.head.appendChild(ogDescriptionTag);
+        }
+        ogDescriptionTag.setAttribute('content', ogDescription);
+
+        let ogUrlTag = document.querySelector('meta[property="og:url"]');
+        if (!ogUrlTag) {
+          ogUrlTag = document.createElement('meta');
+          ogUrlTag.setAttribute('property', 'og:url');
+          document.head.appendChild(ogUrlTag);
+        }
+        ogUrlTag.setAttribute('content', ogUrl);
+
+        let canonicalTag = document.querySelector('link[rel="canonical"]');
+        if (!canonicalTag) {
+          canonicalTag = document.createElement('link');
+          canonicalTag.setAttribute('rel', 'canonical');
+          document.head.appendChild(canonicalTag);
+        }
+        canonicalTag.setAttribute('href', ogCanonical);
+      }
+
+      // İlk başta meta tag'lerini güncelle
+      updateMetaTags();
+
+      // URL değiştiğinde meta tag'lerini güncellemek için popstate ve pushstate event listener'ları ekle
+      window.addEventListener('popstate', function () {
+        updateMetaTags();
+      });
+
+      // PushState ve ReplaceState için yeni bir method ekliyoruz
+      const pushState = history.pushState;
+      history.pushState = function () {
+        pushState.apply(history, arguments);
+        updateMetaTags();
+      };
+
+      const replaceState = history.replaceState;
+      history.replaceState = function () {
+        replaceState.apply(history, arguments);
+        updateMetaTags();
+      };
+    });
+  </script>
+
+
+
+
 </body>
 
 </html>

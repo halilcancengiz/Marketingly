@@ -73,7 +73,7 @@ const TermAndConditions = () => {
 
         <section className="pt-[40px] xs:pt-[50px] pb-[60px] md:pt-[60px] md:pb-[79px] lg:pt-[98px] lg:pb-[98px] 3xl:pt-[123px] 3xl:pb-[123px] px-6 relative bg-[#F8F9FF]">
 
-            <Helmet>
+            {/* <Helmet>
                 <title>Datenschutz & AGBs | Superagentur</title>
                 <meta property="og:title" content="Datenschutz & AGBs | Superagentur" />
                 <meta name="description" content="Erfahren Sie alles über unsere Datenschutzrichtlinien und AGBs – für eine transparente und vertrauensvolle Zusammenarbeit." />
@@ -83,7 +83,7 @@ const TermAndConditions = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}datenschutz-und-agbs`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/datenschutz-und-agbs" />
-            </Helmet>
+            </Helmet> */}
             <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col relative">
 
                 <motion.div

@@ -178,7 +178,7 @@ const Contact = () => {
 
     return (
         <div className="flex flex-col">
-            <Helmet>
+            {/* <Helmet>
                 <title>Kontakt | Superagentur Marketing</title>
                 <meta property="og:title" content="Kontakt | Superagentur Marketing" />
                 <meta name="description" content="Kontaktieren Sie uns noch heute – Ihr Partner für digitales Wachstum, Online-Marketing und Recruiting steht bereit." />
@@ -188,7 +188,7 @@ const Contact = () => {
                 <meta property="og:url" content={`${APP_CONFIG.base_url}kontakt`} />
                 <meta property="og:image" content={logo} />
                 <link rel="canonical" href="https://superagentur-marketing.de/kontakt" />
-            </Helmet>
+            </Helmet> */}
             <section className="3xl:pt-[120px] lg:pt-[96px] md:pt-[60px] xs:pt-[50px] pt-[40px] 3xl:pb-[220px] lg:pb-[176px] md:pb-[140px] xs:pb-[113px] pb-[90px] px-6  overflow-hidden flex items-center justify-center relative">
                 <div className="max-w-[1173px] w-full mx-auto flex lg:flex-row flex-col items-start  justify-between">
                     <motion.div
