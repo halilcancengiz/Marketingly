@@ -2,9 +2,9 @@
 import { lazy, Suspense, useEffect } from "react";
 import contactPeopleImage from "../assets/images/homeV1-hero-section-small.webp";
 import chart from "../assets/images/chart.webp";
-import { Helmet } from "react-helmet-async";
-import APP_CONFIG from '../../public/config.ts';
-import logo from "../assets/images/logo.webp"
+// import { Helmet } from "react-helmet-async";
+// import APP_CONFIG from '../../public/config.ts';
+// import logo from "../assets/images/logo.webp"
 import Button from "../components/Button.tsx";
 import * as motion from "framer-motion/client";
 import { NavLink } from "react-router-dom";

@@ -10,10 +10,10 @@ import pcImage from "../assets/images/pcIcon.webp";
 import playImage from "../assets/images/playicon.webp";
 import filterImage from "../assets/images/filter-icon.webp";
 import Button from "../components/Button";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion"
-import APP_CONFIG from '../../public/config.ts';
-import logo from "../assets/images/logo.webp"
+// import APP_CONFIG from '../../public/config.ts';
+// import logo from "../assets/images/logo.webp"
 
 const Services = () => {
     const fadeInAnimationVariant = {

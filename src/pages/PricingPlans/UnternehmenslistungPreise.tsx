@@ -6,8 +6,8 @@ import Button from "../../components/Button";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../public/config.ts';
-import { Helmet } from "react-helmet-async";
-import logo from "../../assets/images/logo.webp"
+// import { Helmet } from "react-helmet-async";
+// import logo from "../../assets/images/logo.webp"
 
 
 const UnternehmenslistungPreise = () => {

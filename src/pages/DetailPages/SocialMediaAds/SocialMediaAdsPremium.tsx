@@ -2,10 +2,10 @@ import trianglesImage from "../../../assets/images/triangles.webp"
 import check from "../../../assets/images/check.webp";
 import { NavLink } from "react-router-dom";
 import Button from "../../../components/Button.tsx";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion"
 import APP_CONFIG from '../../../../public/config.ts';
-import logo from "../../../assets/images/logo.webp"
+// import logo from "../../../assets/images/logo.webp"
 import rocketImage from "../../../assets/images/rocket.webp"
 import handshakeImage from "../../../assets/images/handshake.webp"
 import { BsDash } from "../../../assets/icons/icons.tsx"
