@@ -52,6 +52,7 @@
 
   <div id="root"></div>
 
+  <script src="schema.js"></script>
   <script nonce="randomNonce" type="text/typescript" src="./public/config.ts"></script>
   <script nonce="randomNonce" type="module" src="/src/main.tsx"></script>
 
@@ -333,6 +334,61 @@
         replaceState.apply(history, arguments);
         updateMetaTags();
       };
+    });
+  </script>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // URL'yi almak
+      const pathname = window.location.pathname;
+
+      // Schema verisini almak
+      const schemaData = getSchemaForPage(pathname);
+
+      // Schema varsa, HTML'ye eklemek
+      if (schemaData) {
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.innerHTML = JSON.stringify(schemaData);
+        document.head.appendChild(script);
+      }
+
+      // URL değiştiğinde schema verisini güncellemek için popstate ve pushstate event listener'ları ekle
+      window.addEventListener('popstate', function () {
+        updateSchema();
+      });
+
+      // PushState ve ReplaceState için yeni bir method ekliyoruz
+      const pushState = history.pushState;
+      history.pushState = function () {
+        pushState.apply(history, arguments);
+        updateSchema();
+      };
+
+      const replaceState = history.replaceState;
+      history.replaceState = function () {
+        replaceState.apply(history, arguments);
+        updateSchema();
+      };
+
+      function updateSchema() {
+        const pathname = window.location.pathname;
+        const schemaData = getSchemaForPage(pathname);
+
+        // Önceki schema verisini kaldır
+        const existingSchema = document.querySelector('script[type="application/ld+json"]');
+        if (existingSchema) {
+          existingSchema.remove();
+        }
+
+        // Yeni schema verisini ekle
+        if (schemaData) {
+          const script = document.createElement('script');
+          script.type = 'application/ld+json';
+          script.innerHTML = JSON.stringify(schemaData);
+          document.head.appendChild(script);
+        }
+      }
     });
   </script>
 

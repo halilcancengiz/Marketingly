@@ -332,22 +332,6 @@ const Contact = () => {
                                 <input id="location" name="location" placeholder="Musterstadt" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
                             </div>
 
-                            <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <input readOnly id="pn" name="pn" value="Contact Page" placeholder="contact" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
-                            </div>
-
-                            <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
-                                <input
-                                    readOnly
-                                    id="dt"
-                                    name="dt"
-                                    placeholder="dt"
-                                    value={formattedDate} // Nokta ile ayrılmış tarih formatını ekle
-                                    className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium"
-                                    type="text"
-                                />
-                            </div>
-
                             <div className="col-span-2 flex flex-col gap-3">
                                 <label htmlFor="message" className="xs:text-[18px] text-base tb-bold">Nachricht<span className="tb-medium text-neutral-600 ml-1">(optional)</span></label>
                                 <textarea id="message" name="message" placeholder="Nachricht" className="bplaceholder placeholder:text-neutral-600 text-neutral-800 focus:outline-none border rounded-[10px] py-[17px] h-28 px-5 xs:text-[18px] text-base resize-none hover:border-primary focus:border-primary transition-colors duration-300 tb-medium"></textarea>
@@ -382,6 +366,21 @@ const Contact = () => {
                                     )}
                                     {isSubmitting ? "Wird gesendet..." : "Absenden"}
                                 </Button>
+                            </div>
+                            <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
+                                <input readOnly id="pn" name="pn" value="Contact Page" placeholder="contact" className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium" type="text" />
+                            </div>
+
+                            <div className="sr-only md:col-span-1 col-span-2 flex flex-col gap-3">
+                                <input
+                                    readOnly
+                                    id="dt"
+                                    name="dt"
+                                    placeholder="dt"
+                                    value={formattedDate} // Nokta ile ayrılmış tarih formatını ekle
+                                    className="placeholder:text-neutral-600 text-neutral-800 py-2 px-5 h-[62px] border rounded-[10px] hover:border-primary transition-colors duration-300 focus:border-primary focus:outline-none xs:text-[18px] text-base tb-medium"
+                                    type="text"
+                                />
                             </div>
                         </form>
                         <motion.div
